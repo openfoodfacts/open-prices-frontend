@@ -941,7 +941,7 @@
 		},
 		"Validate": {
 			"Title": "Validar",
-			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. Unreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
+			"Help": "Tras unos segundos, la información de las etiquetas de precio se extrae automáticamente de las imágenes subidas, pero se necesita ayuda para validar su exactitud. Esto es un esfuerzo comunitario.\n\nPara cada etiqueta de precio mostrada, comprueba que el precio, el código de barras o la categoría sean correctos, corrígelos si es necesario y confirma. Los precios ilegibles o no válidos se pueden marcar como errores. Si no estás seguro, puedes ignorar el precio y dejar que otro colaborador lo revise."
 		},
 		"ValidatePrices": {
 			"Title": "Validar precios"
