@@ -11,7 +11,9 @@
       <v-divider />
 
       <v-card-text>
-        {{ text }}
+        <p class="text-pre-line">
+          {{ text }}
+        </p>
       </v-card-text>
     </v-card>
   </v-dialog>
