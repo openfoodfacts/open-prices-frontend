@@ -261,6 +261,7 @@
 		"Languages": "言語",
 		"LatestPrices": "最新価格",
 		"LatestProofs": "最新の証拠",
+		"LearnMore": "詳細",
 		"LoadMore": "もっと読み込む",
 		"Location": "位置",
 		"Locations": "場所：",
@@ -822,6 +823,9 @@
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
 		},
+		"Explore": {
+			"Title": "探検する"
+		},
 		"Locations": {
 			"Title": "場所："
 		},
@@ -868,7 +872,8 @@
 			"Title": "実験"
 		},
 		"Home": {
-			"Title": "ホーム"
+			"Title": "ホーム",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "ダッシュボード"
@@ -924,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "プルーフ値札アシスタント"
 		},
-		"PriceValidationAssistant": {
-			"Title": "価格検証アシスタント"
-		},
 		"ReceiptAssistant": {
 			"Title": "領収書アシスタント"
 		},
@@ -934,14 +936,15 @@
 			"Title": "チャレンジ"
 		},
 		"Challenges": {
-			"Title": "課題"
+			"Title": "課題",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "コミュニティチャレンジ"
 		},
 		"Validate": {
 			"Title": "検証",
-			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. Unreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "価格を検証する"
