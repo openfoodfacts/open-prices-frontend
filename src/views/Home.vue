@@ -3,16 +3,12 @@
     {{ $t('Common.TaglineAlt1') }} {{ APP_HOME_ICONS }}
   </h2>
   
+  
   <v-row>
     <v-col>
-      <i18n-t keypath="Router.Home.Intro" tag="p">
+      <i18n-t keypath="Router.Home.Help" tag="p" class="text-primary text-pre-line">
         <template #op_name>
           {{ APP_NAME }}
-        </template>
-        <template #learn_more_url>
-          <router-link to="/about">
-            {{ $t('Common.LearnMore') }}
-          </router-link>
         </template>
       </i18n-t>
     </v-col>

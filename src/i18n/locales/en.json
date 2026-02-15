@@ -873,7 +873,7 @@
 		},
 		"Home": {
 			"Title": "Home",
-			"Intro": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {learn_more_url}."
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -931,7 +931,7 @@
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant",
-			"Intro": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price below, check that the price, barcode or category are correct, fix them if needed and confirm. Unreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price below, check that the price, barcode or category are correct, fix them if needed and confirm. Unreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
@@ -941,7 +941,7 @@
 		},
 		"Challenges": {
 			"Title": "Challenges",
-			"Intro": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\nCheck the ongoing challenges below to participate, or visit the past challenges archives."
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
