@@ -822,6 +822,9 @@
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
 		},
+		"Explore": {
+			"Title": "Explore"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
