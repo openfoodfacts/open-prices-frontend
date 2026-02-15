@@ -8,9 +8,9 @@
         <span v-if="ENV !== 'prod'" class="text-caption text-error">{{ ENV }}</span>
       </span>
     </v-app-bar-title>
-    <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')" />
-    <v-btn v-else prepend-icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')">
-      {{ $t('Common.Search') }}
+    <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-magnify-expand" to="/explore" :aria-label="$t('Common.Explore')" />
+    <v-btn v-else prepend-icon="mdi-magnify-expand" to="/explore" :aria-label="$t('Common.Explore')">
+      {{ $t('Common.Explore') }}
     </v-btn>
     <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-tag-plus-outline" to="/contribute" :aria-label="$t('Common.Contribute')" />
     <v-btn v-else prepend-icon="mdi-tag-plus-outline" to="/contribute" :aria-label="$t('Common.Contribute')">
