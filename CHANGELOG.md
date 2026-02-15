@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.157.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.156.0...v1.157.0) (2026-02-15)
+
+
+### Features
+
+* new Explore page ([#2034](https://github.com/openfoodfacts/open-prices-frontend/issues/2034)) ([dc88348](https://github.com/openfoodfacts/open-prices-frontend/commit/dc8834884088233674465c73e03b34c31a2b5239))
+* **UX:** Intro text in Home, help text in Challenges ([#2030](https://github.com/openfoodfacts/open-prices-frontend/issues/2030)) ([cba4349](https://github.com/openfoodfacts/open-prices-frontend/commit/cba4349f742c4a18852ac5d38949d5b9c77c4fe4))
+* **UX:** new HelpDialog components to display help info + add info text on Validate page ([#2035](https://github.com/openfoodfacts/open-prices-frontend/issues/2035)) ([70c0a0d](https://github.com/openfoodfacts/open-prices-frontend/commit/70c0a0d5b5fcaadd1b408a3b1c606e8236156396))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#2032](https://github.com/openfoodfacts/open-prices-frontend/issues/2032)) ([6ca09c3](https://github.com/openfoodfacts/open-prices-frontend/commit/6ca09c3e596c5b56fc230b85b3d9ce623e9c5bd1))
+
 ## [1.156.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.155.1...v1.156.0) (2026-02-07)
 
 
