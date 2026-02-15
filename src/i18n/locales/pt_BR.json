@@ -261,6 +261,7 @@
 		"Languages": "Línguas",
 		"LatestPrices": "Preços mais recentes",
 		"LatestProofs": "Últimas demonstrações",
+		"LearnMore": "Saiba mais",
 		"LoadMore": "Carregar mais",
 		"Location": "Localização",
 		"Locations": "Localizações",
@@ -822,6 +823,9 @@
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
 		},
+		"Explore": {
+			"Title": "Explorar"
+		},
 		"Locations": {
 			"Title": "Localizações"
 		},
@@ -868,7 +872,8 @@
 			"Title": "Experimentos"
 		},
 		"Home": {
-			"Title": "Início"
+			"Title": "Início",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Painel de controle"
@@ -924,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Assistente de etiqueta de preço de prova"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Assistente de validação de preço"
-		},
 		"ReceiptAssistant": {
 			"Title": "Assistente de recibos"
 		},
@@ -934,13 +936,15 @@
 			"Title": "Desafio"
 		},
 		"Challenges": {
-			"Title": "Desafios"
+			"Title": "Desafios",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Desafio da comunidade"
 		},
 		"Validate": {
-			"Title": "Validar"
+			"Title": "Validar",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validar preços"

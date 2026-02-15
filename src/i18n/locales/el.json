@@ -6,11 +6,11 @@
 		"HowTitle": "Πώς λειτουργεί το {op_name};",
 		"HowAnswer1": "Προμηθεύουμε ένα σύνολο δεδομένων ανοιχτού κώδικα τιμών. Οι τιμές μπορούν να προστεθούν από τους χρήστες μέσω αυτής της εφαρμογής ιστού ή μέσω της επίσημης εφαρμογής για κινητά {off_url}. Οι έμποροι λιανικής ή οι εφαρμογές τρίτων μπορούν επίσης να συνεισφέρουν χρησιμοποιώντας το δικό μας {op_api_url}.",
 		"HowAnswer2": "Το {op_name} δεν προορίζεται μόνο για την αποθήκευση μεμονωμένων τιμών, αλλά και των καλαθιών αγορών, δηλαδή της λίστας των προϊόντων που αγοράζουν οι άνθρωποι σε μια μόνο βόλτα για ψώνια. Αυτά τα δεδομένα είναι εξαιρετικά ενδιαφέροντα για τους ερευνητές ώστε να αναλύσουν τις συνήθειες κατανάλωσης τροφίμων.",
-		"HowAnswer3": "Όταν είναι δυνατόν, ζητάμε από τους συνεισφέροντες να παράσχουν μια απόδειξη της τιμής, με τη μορφή φωτογραφίας της ετικέτας τιμής ή της απόδειξης. Αυτό γίνεται για να διασφαλιστεί η ποιότητα των δεδομένων.",
-		"HowAnswer4": "Εάν παρέχετε μια απόδειξη ως αποδεικτική εικόνα, σημαίνει ότι συμφωνείτε να υποβάλετε το καλάθι αγορών σας στο {op_name}. Θα καταστήσουμε ανώνυμη την απόδειξη και θα τη δημοσιοποιήσουμε, ώστε να μπορεί να χρησιμοποιηθεί για ερευνητικούς σκοπούς. Εάν δεν θέλετε να κοινοποιήσετε δημόσια την απόδειξή σας, μπορείτε να συνεισφέρετε τραβώντας μια φωτογραφία της τιμής.",
+		"HowAnswer3": "Όταν είναι δυνατόν, ζητάμε από τους συνεισφέροντες να παράσχουν ένα πειστήριο τιμής, με τη μορφή φωτογραφίας της ετικέτας τιμής ή της απόδειξης. Αυτό γίνεται για να διασφαλιστεί η ποιότητα των δεδομένων.",
+		"HowAnswer4": "Εάν παρέχετε μια απόδειξη ως πειστήρια εικόνα, σημαίνει ότι συμφωνείτε να υποβάλετε το καλάθι αγορών σας στο {op_name}. Θα καταστήσουμε ανώνυμη την απόδειξη και θα τη δημοσιοποιήσουμε, ώστε να μπορεί να χρησιμοποιηθεί για ερευνητικούς σκοπούς. Εάν δεν θέλετε να κοινοποιήσετε δημόσια την απόδειξή σας, μπορείτε να συνεισφέρετε τραβώντας μια φωτογραφία της τιμής.",
 		"LicenseTitle": "Άδεια",
 		"LicenseAnswer1": "Το σύνολο δεδομένων τιμών έχει αδειοδοτηθεί στο πλαίσιο του {odbl_url}, που σημαίνει ότι μπορεί να χρησιμοποιηθεί για οποιοδήποτε σκοπό, εφόσον δίνετε εύσημα το {op_name} και μοιραστείτε τυχόν τροποποιήσεις που κάνετε στο σύνολο δεδομένων.",
-		"LicenseAnswer2": "Οι εικόνες που υποβάλλονται ως απόδειξη αδειοδοτούνται με την άδεια {ccbysa_url}.",
+		"LicenseAnswer2": "Οι εικόνες που υποβάλλονται ως πειστήριο αδειοδοτούνται με την άδεια {ccbysa_url}.",
 		"WhatTitle": "Τι είναι το {op_name};",
 		"WhatOFFTitle": "Τι είναι το {off_name};",
 		"WhatOFFAnswer": "Το {off_url} είναι ένας μη κερδοσκοπικός οργανισμός που συλλέγει και μοιράζεται πληροφορίες για τρόφιμα από όλο τον κόσμο. Πρόκειται για ένα συνεργατικό έργο που βασίζεται σε εθελοντές για τη συλλογή δεδομένων. Το {off_url} είναι η μεγαλύτερη ανοιχτή βάση δεδομένων τροφίμων στον κόσμο, με πάνω από 4 εκατομμύρια προϊόντα σε 200 χώρες.",
@@ -56,7 +56,7 @@
 			"ExistingProductFound": "Διπλότυπο; Αυτό το προϊόν έχει ήδη προστεθεί για αυτήν την απόδειξη",
 			"NewPrice": "Νέα τιμή",
 			"PriceUploaded": "Η τιμή δημιουργήθηκε!",
-			"Upload": "Ανέβασμα"
+			"Upload": "Ανάρτηση"
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Οι αποδείξεις ενδέχεται να περιέχουν προσωπικά στοιχεία, γι' αυτό συνιστούμε να τις αποκρύψετε (να τις επεξεργαστείτε, να τις διπλώσετε...) πριν τραβήξετε τη φωτογραφία.",
@@ -93,7 +93,7 @@
 			"ScanBarcode": "Σάρωση ενός γραμμωτού κώδικα",
 			"ScanBarcodeShort": "Σάρωση",
 			"Type": "Τύπος",
-			"TypeBarcode": "Εισάγετε ραβδωτό κώδικα",
+			"TypeBarcode": "Πληκτρολογήστε γραμμωτό κωδικό",
 			"TypeBarcodeShort": "Τύπος",
 			"SetProduct": "Ορισμός ενός προϊόντος",
 			"Title": "Πληροφορίες προϊόντος"
@@ -123,7 +123,7 @@
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Γραμμικός κωδικός",
-		"Title": "Εισάγετε ραβδωτό κώδικα"
+		"Title": "Πληκτρολογήστε γραμμωτό κωδικό"
 	},
 	"Challenge": {
 		"Title": "Πρόκληση κοινότητας",
@@ -150,24 +150,24 @@
 		"ChallengeCount": "{count} προκλήσεις | {count} πρόκληση | {count} προκλήσεις",
 		"ChallengeStatuses": {
 			"DRAFT": "Προσχέδιο",
-			"UPCOMING": "Ανερχόμενος",
+			"UPCOMING": "Επερχόμενες",
 			"ONGOING": "Σε εξέλιξη",
-			"COMPLETED": "Ολοκληρώθηκε το"
+			"COMPLETED": "Ολοκληρώθηκε"
 		},
 		"NoChallengeCurrentlyOngoing": "Δεν υπάρχει καμία πρόκληση σε εξέλιξη αυτήν τη στιγμή, επιστρέψτε αργότερα!",
-		"PastOrFutureChallenges": "Προκλήσεις του παρελθόντος ή του μέλλοντος",
-		"OngoingChallenges": "Συνεχείς προκλήσεις",
+		"PastOrFutureChallenges": "Προηγούμενες ή μελλοντικές προκλήσεις",
+		"OngoingChallenges": "Προκλήσεις σε εξέλιξη",
 		"PastChallenges": "Προηγούμενες προκλήσεις",
 		"UpcomingChallenges": "Επερχόμενες προκλήσεις",
 		"StatsAndRankings": "Στατιστικά & κατατάξεις",
-		"MostPicturesAdded": "Οι περισσότερες εικόνες προστέθηκαν",
-		"MostPricesAdded": "Οι περισσότερες τιμές που προστέθηκαν",
-		"MostPricesFromPicturesAdded": "Οι περισσότερες τιμές από εικόνες προστέθηκαν",
+		"MostPicturesAdded": "Περισσότερες εικόνες που προστέθηκαν",
+		"MostPricesAdded": "Περισσότερες τιμές που προστέθηκαν",
+		"MostPricesFromPicturesAdded": "Περισσότερες τιμές από εικόνες που προστέθηκαν",
 		"AlertNew": "Έχετε κάποια ιδέα για μια νέα πρόκληση; Πείτε μας {url}!"
 	},
 	"Common": {
 		"About": "Σχετικά",
-		"Action": "Δράση",
+		"Action": "Ενέργεια",
 		"Actions": "Δράσεις",
 		"AddComment": "Προσθήκη σχολίου",
 		"AddPrice": "Προσθήκη μίας τιμής",
@@ -188,7 +188,7 @@
 		"Barcodes": "Γραμμωτοί κώδικες",
 		"BarcodeScan": "Σάρωση ενός γραμμωτού κώδικα",
 		"BarcodeScanShort": "Σάρωση",
-		"BarcodeType": "Εισάγετε ραβδωτό κώδικα",
+		"BarcodeType": "Πληκτρολογήστε γραμμωτό κωδικό",
 		"BarcodeTypeShort": "Τύπος",
 		"BarcodeInvalid": "Μη έγκυρος γραμμικός κώδικας",
 		"Brand": "Μάρκα",
@@ -210,7 +210,7 @@
 		"Challenge": "Πρόκληση",
 		"Challenges": "Προκλήσεις",
 		"ChallengeCurrent": "Τρέχουσα πρόκληση",
-		"ChallengeOngoing": "Συνεχής πρόκληση",
+		"ChallengeOngoing": "Εν εξελίξει πρόκληση",
 		"ChallengeCount": "{count} προκλήσεις | {count} πρόκληση | {count} προκλήσεις",
 		"Chart": "Διάγραμμα",
 		"Clear": "Εκκαθάριση",
@@ -218,7 +218,7 @@
 		"Comment": "Σχόλιο",
 		"Community": "Κοινότητα",
 		"CommunityPrices": "Τιμές κοινότητας",
-		"CommunityProofs": "Αποδείξεις κοινότητας",
+		"CommunityProofs": "Πειστήρια κοινότητας",
 		"Consumption": "Κατανάλωση",
 		"ConsumptionPrices": "Τιμές κατανάλωσης",
 		"ConsumptionProofs": "Αποδείξεις κατανάλωσης",
@@ -261,6 +261,7 @@
 		"Languages": "Γλώσσες",
 		"LatestPrices": "Τελευταίες τιμές",
 		"LatestProofs": "Τελευταίες αποδείξεις",
+		"LearnMore": "Μάθετε περισσότερα",
 		"LoadMore": "Φόρτωση περισσοτέρων",
 		"Location": "Τοποθεσία",
 		"Locations": "Τοποθεσίες",
@@ -472,7 +473,7 @@
 		"Text": "Κείμενο",
 		"Thanks": "Ευχαριστώ",
 		"Theme": "Θέμα",
-		"ThemeLight": "Ανοιχτόχρωμο",
+		"ThemeLight": "Φωτεινό",
 		"ThemeDark": "Σκούρο",
 		"TopContributors": "Κορυφαίοι συντελεστές",
 		"TopLocations": "Κορυφαίες τοποθεσίες",
@@ -494,7 +495,7 @@
 		"UnitMililitre": "ml",
 		"UnitLitre": "μεγάλο",
 		"Unreadable": "Δυσανάγνωστος",
-		"Upload": "Ανέβασμα",
+		"Upload": "Ανάρτηση",
 		"UploadMultipleImages": "Μεταφόρτωση {count} εικόνας | Μεταφόρτωση {count} εικόνων",
 		"UploadMultiplePictures": "Μεταφόρτωση {count} εικόνας | Μεταφόρτωση {count} εικόνων",
 		"UploadMultipleProofs": "Μεταφόρτωση {count} αποδείξεων | Μεταφόρτωση {count} αποδείξεων",
@@ -822,6 +823,9 @@
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
 		},
+		"Explore": {
+			"Title": "Εξερευνώ"
+		},
 		"Locations": {
 			"Title": "Τοποθεσίες"
 		},
@@ -868,7 +872,8 @@
 			"Title": "Πειράματα"
 		},
 		"Home": {
-			"Title": "Αρχική"
+			"Title": "Αρχική",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Ταμπλό"
@@ -924,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Βοηθός Ετικέτας Τιμής Απόδειξης"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Βοηθός Επικύρωσης Τιμών"
-		},
 		"ReceiptAssistant": {
 			"Title": "Βοηθός Παραλαβής"
 		},
@@ -934,13 +936,15 @@
 			"Title": "Πρόκληση"
 		},
 		"Challenges": {
-			"Title": "Προκλήσεις"
+			"Title": "Προκλήσεις",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Πρόκληση κοινότητας"
 		},
 		"Validate": {
-			"Title": "Επικύρωση"
+			"Title": "Επικύρωση",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Επικύρωση τιμών"

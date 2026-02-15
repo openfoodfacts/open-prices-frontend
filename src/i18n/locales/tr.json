@@ -222,7 +222,7 @@
 		"Consumption": "Tüketim",
 		"ConsumptionPrices": "Tüketim fiyatları",
 		"ConsumptionProofs": "Tüketim kanıtları",
-		"Contribute": "Destekleyebilirsiniz",
+		"Contribute": "Katkıda bulunun",
 		"Contributors": "Katkıda bulunanlar",
 		"Contributions": "Katkıda Bulunulanlar",
 		"Confirm": "Onayla",
@@ -261,6 +261,7 @@
 		"Languages": "Diller",
 		"LatestPrices": "Son fiyatlar",
 		"LatestProofs": "En son bedeller",
+		"LearnMore": "Daha fazla bilgi edin",
 		"LoadMore": "Daha fazla yükle",
 		"Location": "Konum",
 		"Locations": "Konumlar",
@@ -822,6 +823,9 @@
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
 		},
+		"Explore": {
+			"Title": "Keşfetmek"
+		},
 		"Locations": {
 			"Title": "Konumlar"
 		},
@@ -856,7 +860,7 @@
 			"Title": "Topluluk"
 		},
 		"Contribute": {
-			"Title": "Destekleyebilirsiniz"
+			"Title": "Katkıda bulunun"
 		},
 		"Countries": {
 			"Title": "Ülkeler"
@@ -868,7 +872,8 @@
 			"Title": "Deneyler"
 		},
 		"Home": {
-			"Title": "Ana Sayfa"
+			"Title": "Ana Sayfa",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Gösterge paneli"
@@ -924,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Kanıt Fiyat Etiketi Asistanı"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Fiyat Doğrulama Asistanı"
-		},
 		"ReceiptAssistant": {
 			"Title": "Fiş Asistanı"
 		},
@@ -934,13 +936,15 @@
 			"Title": "Meydan Okuma"
 		},
 		"Challenges": {
-			"Title": "Meydan Okumalar"
+			"Title": "Meydan Okumalar",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Topluluk Görevi"
 		},
 		"Validate": {
-			"Title": "Geçerlilik"
+			"Title": "Geçerlilik",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Fiyatları doğrula"

@@ -261,6 +261,7 @@
 		"Languages": "Talen",
 		"LatestPrices": "Nieuwste prijzen",
 		"LatestProofs": "Nieuwste bewijzen",
+		"LearnMore": "Meer informatie",
 		"LoadMore": "Meer laden",
 		"Location": "Locatie",
 		"Locations": "Locaties",
@@ -268,7 +269,7 @@
 		"LocationFindShop": "Zoek de winkellocatie",
 		"LocationMissing": "Locatie ontbreekt",
 		"LocationSearchByName": "Zoek op naam en stad",
-		"LocationsCompare": "Compare 2 locations",
+		"LocationsCompare": "2 locaties vergelijken",
 		"Date": "Datum",
 		"DateMissing": "Datum ontbreekt",
 		"DateProofHelpText": "Datum van de foto.",
@@ -391,8 +392,8 @@
 		"PicturesAddedByYou": "Door jou toegevoegde foto's",
 		"PRICE_TAG": "Prijskaartje",
 		"PriceTags": "Prijskaartjes",
-		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
-		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
+		"PriceTagsBoundingBoxesDisplay": "Begrenzingskaders voor prijskaartjes weergeven",
+		"PriceTagsBoundingBoxesHide": "Begrenzingskaders voor prijskaartjes verbergen",
 		"PriceCount": "{count} prijzen | {count} prijs | {count} prijzen",
 		"PriceAddedCount": "{count} prijzen toegevoegd | {count} prijs toegevoegd | {count} prijzen toegevoegd",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
@@ -596,7 +597,7 @@
 		"ProofNumberOfOutProofs": "Bewijs ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Winkels waar verkocht",
 		"UseCropModeToAddImage": "Om een productafbeelding toe te voegen, schakelt u de bijsnijdmodus onder de proefafbeelding in en tekent u een rechthoek rond het product.",
-		"ProductMissingPromoBanner": "Experiment: creëer dit product met behulp van gegevens van Open Prices."
+		"ProductMissingPromoBanner": "Experiment: maak dit product met behulp van gegevens uit Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecteer een van uw recente bewijzen"
@@ -814,13 +815,16 @@
 			"Title": "Meerdere bewijzen toevoegen"
 		},
 		"AddProofReceipt": {
-			"Title": "Voeg bewijs (bon) toe"
+			"Title": "Bewijs toevoegen (bon)"
 		},
 		"AddProofsPriceTags": {
 			"Title": "Bewijzen toevoegen (prijskaartjes)"
 		},
 		"CompareLocations": {
-			"Title": "Compare 2 locations"
+			"Title": "2 locaties vergelijken"
+		},
+		"Explore": {
+			"Title": "Ontdekken"
 		},
 		"Locations": {
 			"Title": "Locaties"
@@ -868,7 +872,8 @@
 			"Title": "Experimenten"
 		},
 		"Home": {
-			"Title": "Hoofdmenu"
+			"Title": "Hoofdmenu",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -924,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Assistent voor het bewijzen van de prijs"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Prijsvalidatie-assistent"
-		},
 		"ReceiptAssistant": {
 			"Title": "Ontvangstbewijs assistent"
 		},
@@ -934,13 +936,15 @@
 			"Title": "Uitdaging"
 		},
 		"Challenges": {
-			"Title": "Uitdagingen"
+			"Title": "Uitdagingen",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Uitdaging voor de gemeenschap"
 		},
 		"Validate": {
-			"Title": "Bevestigen"
+			"Title": "Bevestigen",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Prijzen valideren"
@@ -1017,7 +1021,7 @@
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Weergave",
 		"BarcodeScanner": "Streepjescodescanner",
-		"BarcodeScannerLibrary": "Barcode scanner library",
+		"BarcodeScannerLibrary": "Bibliotheek Barcodescanner",
 		"DefaultMode": "Standaardmodus",
 		"FavoriteCurrencies": "Favoriete valuta",
 		"CurrencyRequired": "Er is minimaal één valuta vereist",
