@@ -1,6 +1,18 @@
 <template>
   <v-row>
     <v-col cols="12" md="6">
+      <v-row v-if="keycloak">
+        <v-col>
+          <v-btn
+            type="button"
+            class="float-left"
+            color="primary"
+            @click="keycloak.login()"
+          >
+            {{ $t('SignIn.SignInWithOpenFoodFactsAuth') }}
+          </v-btn>
+        </v-col>
+      </v-row>
       <v-form @submit.prevent="signIn">
         <v-row>
           <v-col>
@@ -66,6 +78,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import openPricesApi from '../services/openPricesApi'
+import keycloakService from '../services/keycloakService'
 
 export default {
   components: {
@@ -79,6 +92,7 @@ export default {
       },
       passwordVisible: false,
       loading: false,
+      keycloak: null,
     };
   },
   computed: {
@@ -87,25 +101,44 @@ export default {
       return Object.values(this.signinForm).every(x => !!x)
     }
   },
+  mounted() {
+    keycloakService.init((keycloak) => {
+      if (keycloak !== null) {
+        this.keycloak = keycloak
+        if (keycloak.authenticated) {
+          this.signInWithKeycloak(keycloak.token)
+        }
+      }
+    })
+  },
   methods: {
+    handleAuthResponse(data) {
+      this.loading = false
+      if (data['access_token']) {
+        this.appStore.signIn(data)
+        this.done()
+      } else {
+        alert(this.$t('SignIn.WrongCredentials'))
+      }
+    },
+    handleAuthError(error) {
+      alert(this.$t('Common.ServerError'))
+      console.log(error)
+      this.loading = false
+    },
     signIn() {
       this.loading = true
       openPricesApi
         .signIn(this.signinForm.username.toLowerCase().trim(), this.signinForm.password)
-        .then((data) => {
-          this.loading = false
-          if (data['access_token']) {
-            this.appStore.signIn(data)
-            this.done()
-          } else {
-            alert(this.$t('SignIn.WrongCredentials'))
-          }
-        })
-        .catch((error) => {
-          alert(this.$t('Common.ServerError'))
-          console.log(error)
-          this.loading = false
-        })
+        .then(this.handleAuthResponse)
+        .catch(this.handleAuthError)
+    },
+    signInWithKeycloak(access_token) {
+      this.loading = true
+      openPricesApi
+        .signInWithKeycloak(access_token)
+        .then(this.handleAuthResponse)
+        .catch(this.handleAuthError)
     },
     done() {
       const path = this.$route.query.next || '/dashboard'

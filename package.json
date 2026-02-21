@@ -32,6 +32,7 @@
     "compressorjs": "^1.2.1",
     "exifreader": "^4.36.1",
     "html5-qrcode": "^2.3.8",
+    "keycloak-js": "^26.2.3",
     "leaflet": "^1.9.4",
     "pinia": "^2.3.1",
     "pinia-plugin-persistedstate": "^3.2.3",
