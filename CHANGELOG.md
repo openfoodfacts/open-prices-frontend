@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.157.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.157.0...v1.157.1) (2026-02-22)
+
+
+### Bug Fixes
+
+* **Footer:** keep the same height across the app ([#2038](https://github.com/openfoodfacts/open-prices-frontend/issues/2038)) ([7065672](https://github.com/openfoodfacts/open-prices-frontend/commit/7065672f159b6a7b03fa3682914a53b8b2721456))
+
+
+### Technical
+
+* **Locations:** plug the location compare to the new backend API ([#2037](https://github.com/openfoodfacts/open-prices-frontend/issues/2037)) ([578da03](https://github.com/openfoodfacts/open-prices-frontend/commit/578da03acc19f2f7c9a9e2991cff78710f9f216e))
+
 ## [1.157.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.156.0...v1.157.0) (2026-02-15)
 
 
