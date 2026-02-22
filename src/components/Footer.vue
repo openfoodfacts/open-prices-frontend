@@ -1,7 +1,7 @@
 <template>
   <v-footer class="bg-footer py-4 w-100 flex-grow-0">
-    <v-row no-gutters justify="center" align="center">
-      <v-col cols="12" md="6" class="text-center">
+    <v-row no-gutters>
+      <v-col cols="12" md="6" align="center">
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-chart-box-outline" to="/stats">
           {{ $t('Common.Stats') }}
         </v-btn>
@@ -15,7 +15,7 @@
           {{ GITHUB_NAME }}
         </v-btn>
       </v-col>
-      <v-col cols="12" md="6" class="text-center">
+      <v-col cols="12" md="6" align="center">
         <i18n-t keypath="Footer.TagLine" tag="span" class="mb-1">
           <template #name>
             {{ APP_NAME }}
