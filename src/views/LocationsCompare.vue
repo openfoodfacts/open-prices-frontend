@@ -74,6 +74,12 @@
       </v-btn>
     </v-col>
   </v-row>
+
+  <v-row v-if="loading">
+    <v-col align="center">
+      <v-progress-circular indeterminate :size="30" />
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -190,6 +196,10 @@ export default {
 
       openPricesApi.getLocationsCompare(this.selectedLocationA.id, this.selectedLocationB.id).then((response) => {
         this.loading = false
+        if (!response.shared_products || response.shared_products.length === 0) {
+          this.productsList = []
+          return
+        }
         this.productsList = response.shared_products.map(product => {
           return {
             product_name: product.product_name,
@@ -204,6 +214,7 @@ export default {
     },
     // Step 4: reset comparison = clear query params
     resetComparison() {
+      this.productsList = null
       this.$router.push({ name: 'locations-compare' })
     }
   },
