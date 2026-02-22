@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="bg-footer py-4 w-100 flex-grow-0">
+  <v-footer class="bg-footer py-4 flex-grow-0">
     <v-row no-gutters>
       <v-col cols="12" md="6" align="center">
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-chart-box-outline" to="/stats">
