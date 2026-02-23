@@ -5,16 +5,23 @@
         {{ $t('Common.CountryCount', { count: countryList.length }) }}
       </v-chip>
       <template v-if="!loading">
-        <LoadedCountChip :loadedCount="countryList.length" :totalCount="countryTotal" />
+        <LoadedCountChip :loadedCount="filteredCountryTotal" :totalCount="countryTotal" />
         <FilterMenu kind="country" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
         <OrderMenu kind="country" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
       </template>
     </v-col>
+
+    <v-col cols="12" sm="4">
+      <SearchBar v-model="searchQuery" kind="countries" />
+    </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="country in countryList" :key="country" cols="12" sm="6" md="4" xl="3">
+    <v-col v-for="country in filteredCountryList" :key="country" cols="12" sm="6" md="4" xl="3">
       <CountryCard :country="country.name" :priceCount="country.price_count" :locationCount="country.location_count" height="100%" @click="goToCountry(country)" />
+    </v-col>
+    <v-col v-if="!loading && filteredCountryList.length === 0" align="center">
+      <p>{{ $t('Common.SearchBar.NoResult') }}</p>
     </v-col>
   </v-row>
 
@@ -37,6 +44,7 @@ export default {
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     CountryCard: defineAsyncComponent(() => import('../components/CountryCard.vue')),
+    SearchBar: defineAsyncComponent(() => import('../components/SearchBar.vue')),
   },
   data() {
     return {
@@ -47,6 +55,22 @@ export default {
       // filter & order
       currentFilterList: [],
       currentOrder: constants.LOCATION_COUNTRY_ORDER_LIST[1].key,  // price_count
+      // search
+      searchQuery: '',
+    }
+  },
+  computed: {
+    filteredCountryList() {
+      if (!this.searchQuery.trim()) {
+        return this.countryList
+      }
+      const query = this.searchQuery.trim().toLowerCase()
+      return this.countryList.filter(country =>
+        country.nameLower.includes(query)
+      )
+    },
+    filteredCountryTotal() {
+      return this.filteredCountryList.length
     }
   },
   watch: {
@@ -86,7 +110,13 @@ export default {
           } else if (this.currentOrder === '-location_count') {
             data.sort((a, b) => b.location_count - a.location_count)
           }
-          this.countryList = data
+
+          // convert name to lowercase to optimize the search
+          this.countryList = data.map(country => ({
+            ...country,
+            nameLower: country.name.toLowerCase(),
+          }))
+
           this.loading = false
         })
     },
