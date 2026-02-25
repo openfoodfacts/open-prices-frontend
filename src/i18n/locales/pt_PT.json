@@ -269,7 +269,7 @@
 		"LocationFindShop": "Pesquisar o local da loja",
 		"LocationMissing": "Falta a localização",
 		"LocationSearchByName": "Pesquisar por nome e cidade",
-		"LocationsCompare": "Compare 2 locations",
+		"LocationsCompare": "Compare 2 localizações",
 		"Date": "Data",
 		"DateMissing": "Falta a data",
 		"DateProofHelpText": "Data da foto.",
@@ -821,7 +821,7 @@
 			"Title": "Adicionar comprovativos (etiquetas de preço)"
 		},
 		"CompareLocations": {
-			"Title": "Compare 2 locations"
+			"Title": "Compare 2 localizações"
 		},
 		"Explore": {
 			"Title": "Explorar"
@@ -873,7 +873,7 @@
 		},
 		"Home": {
 			"Title": "Início",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "é um projeto de "
 		},
 		"Dashboard": {
 			"Title": "Painel de controlo"
