@@ -269,7 +269,7 @@
 		"LocationFindShop": "Najděte umístění obchodu",
 		"LocationMissing": "Chybí poloha",
 		"LocationSearchByName": "Hledat podle jména a města",
-		"LocationsCompare": "Compare 2 locations",
+		"LocationsCompare": "Porovnejte 2 lokality",
 		"Date": "Datum",
 		"DateMissing": "Chybí datum",
 		"DateProofHelpText": "Datum pořízení obrázku.",
@@ -818,10 +818,10 @@
 			"Title": "Přidat doklad (účtenku)"
 		},
 		"AddProofsPriceTags": {
-			"Title": "Add proofs (price tags)"
+			"Title": "Přidání dokladů (cenovky)"
 		},
 		"CompareLocations": {
-			"Title": "Compare 2 locations"
+			"Title": "Porovnejte 2 lokality"
 		},
 		"Explore": {
 			"Title": "Prozkoumat"
@@ -873,7 +873,7 @@
 		},
 		"Home": {
 			"Title": "Úvod",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "{op_name} je projekt, jehož cílem je shromažďovat a sdílet ceny produktů po celém světě. Jedná se o veřejně dostupnou datovou sadu, kterou lze použít pro výzkum, analýzu a další účely!"
 		},
 		"Dashboard": {
 			"Title": "Nástěnka"
@@ -937,14 +937,14 @@
 		},
 		"Challenges": {
 			"Title": "Výzvy",
-			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
+			"Help": "Výzvy jsou způsobem, jak může komunita soustředit své úsilí a shromažďovat informace o cenách konkrétních produktů. Obvykle trvají měsíc a přispěvatelé jsou seřazeni podle svého příspěvku.\n\nChcete-li se zapojit, podívejte se na níže uvedené probíhající výzvy nebo si prohlédněte data o minulých výzvách."
 		},
 		"CommunityChallenge": {
 			"Title": "Komunitní výzva"
 		},
 		"Validate": {
 			"Title": "Ověřit",
-			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
+			"Help": "Po několika sekundách se informace o cenovkách automaticky extrahují z nahraných obrázků, ale k ověření jejich přesnosti je stále potřeba pomoc. Děje se tak v rámci komunitní snahy.\n\nU každé zobrazené cenovky zkontrolujte, zda je cena, čárový kód nebo kategorie správná, v případě potřeby je opravte a potvrďte. Po potvrzení ceny se cena přidá do veřejné databáze a sdílí se s komunitou.\n\nNečitelné nebo neplatné ceny lze označit jako chyby. Pokud si nejste jisti, můžete cenu ignorovat a nechat ji zkusit opravit jiným přispěvatelem."
 		},
 		"ValidatePrices": {
 			"Title": "Potvrďte ceny"
@@ -1021,7 +1021,7 @@
 		"CurrencyLabel": "Měna",
 		"DisplayTitle": "Zobrazit",
 		"BarcodeScanner": "Skener čárového kódu",
-		"BarcodeScannerLibrary": "Barcode scanner library",
+		"BarcodeScannerLibrary": "Knihovna skenování čárového kódu",
 		"DefaultMode": "Výchozí vzhled",
 		"FavoriteCurrencies": "Oblíbené měny",
 		"CurrencyRequired": "Je vyžadována alespoň jedna měna",
