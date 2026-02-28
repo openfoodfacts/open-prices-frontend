@@ -193,7 +193,7 @@
 		"BarcodeInvalid": "Neplatný čárový kód",
 		"Brand": "Značka",
 		"Brands": "Značky",
-		"BrandTotal": "{count} brands | {count} brand | {count} brands",
+		"BrandTotal": "{count} značky | {count} značka | {count} značky",
 		"Price": "Cena",
 		"Prices": "Ceny",
 		"PRODUCT": "Produkt",
