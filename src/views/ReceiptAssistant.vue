@@ -274,8 +274,10 @@ export default {
           price: receiptItems[i].price || receiptItems[i].predicted_data.price,
           product_name: receiptItems[i].product_name || receiptItems[i].predicted_data.product_name
         }
-        if (receiptItems[i].price_id) {
-          openPricesApi.updatePrice(receiptItems[i].price_id, priceData).then((price) => {
+        // Check and use an exisiting price with the same product code to avoid duplicates
+        const priceId = receiptItems[i].price_id || this.proofPriceExistingList.find(exisitingPrice => exisitingPrice.product_code === priceData.product_code)?.id
+        if (priceId) {
+          openPricesApi.updatePrice(priceId, priceData).then((price) => {
             this.numberOfPricesAdded += 1
             this.updateOrAddReceiptItem(receiptItems[i].id, price.id)
           })
