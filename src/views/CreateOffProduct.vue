@@ -3,11 +3,25 @@
     <v-col cols="12">
       <v-stepper v-model="step" hide-actions editable>
         <v-stepper-header>
-          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" />
+          <v-stepper-item
+            :title="stepItemList[0].title"
+            :value="stepItemList[0].value"
+            :complete="step > 1"
+          />
           <v-divider />
-          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" :disabled="step < 2" />
+          <v-stepper-item
+            :title="stepItemList[1].title"
+            :value="stepItemList[1].value"
+            :complete="step > 2"
+            :disabled="step < 2"
+          />
           <v-divider />
-          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" :disabled="step < 3" />
+          <v-stepper-item
+            :title="stepItemList[2].title"
+            :value="stepItemList[2].value"
+            :complete="step > 3"
+            :disabled="step < 3"
+          />
         </v-stepper-header>
       </v-stepper>
     </v-col>
@@ -25,14 +39,15 @@
           <v-divider />
           <v-card-text>
             <div class="text-body-2">
-              {{ $t('AddPriceSingle.ProductInfo.ProductBarcode') }}
+              {{ $t("AddPriceSingle.ProductInfo.ProductBarcode") }}
             </div>
             <v-text-field
               v-model="productForm.product_code"
               density="compact"
               variant="outlined"
               type="text"
-              inputmode="decimal"
+              inputmode="numeric"
+              :rules="[barcodeRule]"
               persistent-hint
             />
           </v-card-text>
@@ -46,7 +61,7 @@
                   variant="flat"
                   type="submit"
                 >
-                  {{ $t('Common.Select') }}
+                  {{ $t("Common.Select") }}
                 </v-btn>
               </v-col>
             </v-row>
@@ -64,8 +79,19 @@
         <v-divider />
         <v-card-text>
           <v-row class="mt-0">
-            <v-col v-for="missingProduct in missingProductsWithPrices" :key="missingProduct" cols="12" sm="6">
-              <ProductCard :product="missingProduct" elevation="1" height="100%" readonly @click="missingProductClicked(missingProduct)" />
+            <v-col
+              v-for="missingProduct in missingProductsWithPrices"
+              :key="missingProduct"
+              cols="12"
+              sm="6"
+            >
+              <ProductCard
+                :product="missingProduct"
+                elevation="1"
+                height="100%"
+                readonly
+                @click="missingProductClicked(missingProduct)"
+              />
             </v-col>
           </v-row>
         </v-card-text>
@@ -85,11 +111,16 @@
         >
           <v-divider />
           <v-card-text>
-            <v-alert v-if="productExists" type="warning" variant="outlined" density="compact">
-              {{ $t('CreateOffProduct.ProductAlreadyExists') }}
+            <v-alert
+              v-if="productExists"
+              type="warning"
+              variant="outlined"
+              density="compact"
+            >
+              {{ $t("CreateOffProduct.ProductAlreadyExists") }}
             </v-alert>
             <div class="text-body-2">
-              {{ $t('Common.Barcode') }}
+              {{ $t("Common.Barcode") }}
             </div>
             <v-text-field
               v-model="productForm.product_code"
@@ -100,7 +131,7 @@
               inputmode="decimal"
             />
             <div class="text-body-2">
-              {{ $t('CreateOffProduct.Flavor') }}
+              {{ $t("CreateOffProduct.Flavor") }}
             </div>
             <v-select
               v-model="productForm.flavor"
@@ -112,7 +143,7 @@
               required
             />
             <div class="text-body-2">
-              {{ $t('CreateOffProduct.ProductLanguage') }}
+              {{ $t("CreateOffProduct.ProductLanguage") }}
             </div>
             <v-autocomplete
               v-model="productForm.product_language"
@@ -124,7 +155,7 @@
             />
 
             <div class="text-body-2">
-              {{ $t('Common.ProductName') }}
+              {{ $t("Common.ProductName") }}
             </div>
             <v-text-field
               v-model="productForm.product_name"
@@ -133,7 +164,7 @@
               type="text"
             />
             <div class="text-body-2">
-              {{ $t('Common.Brands') }}
+              {{ $t("Common.Brands") }}
             </div>
             <v-combobox
               v-model="productForm.brands"
@@ -152,7 +183,7 @@
               </template>
             </v-combobox>
             <div class="text-body-2">
-              {{ $t('Common.Quantity') }}
+              {{ $t("Common.Quantity") }}
             </div>
             <v-text-field
               v-model="productForm.quantity"
@@ -162,7 +193,7 @@
             />
             <div v-if="!productExists">
               <div class="text-body-2">
-                {{ $t('CreateOffProduct.CountriesWhereSold') }}
+                {{ $t("CreateOffProduct.CountriesWhereSold") }}
               </div>
               <v-autocomplete
                 v-model="productForm.countries"
@@ -177,7 +208,7 @@
                 multiple
               />
               <div class="text-body-2">
-                {{ $t('CreateOffProduct.StoresWhereSold') }}
+                {{ $t("CreateOffProduct.StoresWhereSold") }}
               </div>
               <v-combobox
                 v-model="productForm.stores"
@@ -197,7 +228,7 @@
               </v-combobox>
             </div>
             <div class="text-body-2">
-              {{ $t('Common.Categories') }}
+              {{ $t("Common.Categories") }}
             </div>
             <v-combobox
               v-model="productForm.categories"
@@ -218,11 +249,22 @@
 
             <div v-if="!productExists">
               <div class="text-body-2">
-                {{ $t('Common.Image') }}
+                {{ $t("Common.Image") }}
               </div>
-              <v-img v-if="drawnImageSrc" :src="drawnImageSrc" max-height="200px" />
-              <v-alert v-else class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
-                {{ $t('CreateOffProduct.UseCropModeToAddImage') }}
+              <v-img
+                v-if="drawnImageSrc"
+                :src="drawnImageSrc"
+                max-height="200px"
+              />
+              <v-alert
+                v-else
+                class="mb-2"
+                color="primary"
+                variant="outlined"
+                density="compact"
+                icon="mdi-information"
+              >
+                {{ $t("CreateOffProduct.UseCropModeToAddImage") }}
               </v-alert>
             </div>
           </v-card-text>
@@ -236,7 +278,7 @@
                   variant="flat"
                   type="submit"
                 >
-                  {{ $t('CreateOffProduct.CreateProduct') }}
+                  {{ $t("CreateOffProduct.CreateProduct") }}
                 </v-btn>
               </v-col>
             </v-row>
@@ -247,15 +289,33 @@
     <v-col v-if="priceList.length" cols="12" md="6">
       <v-card
         class="mb-4"
-        :title="$t('CreateOffProduct.ProofNumberOfOutProofs', {numberOfOutProofs: shownProofIndex + 1, totalNumberOfProofs: priceList.length})"
+        :title="
+          $t('CreateOffProduct.ProofNumberOfOutProofs', {
+            numberOfOutProofs: shownProofIndex + 1,
+            totalNumberOfProofs: priceList.length,
+          })
+        "
         prepend-icon="mdi-image"
         height="100%"
       >
         <v-divider />
         <v-card-text>
-          <VueZoomable v-if="proofImageSrc" v-model:zoom="zoomLevel" v-model:pan="panLevel" :maxZoom="10" :panEnabled="!imageEditMode" selector="#content">
-            <div id="content" style="width: 100%;">
-              <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :imageSrc="proofImageSrc" :boundingBoxesFromServer="boundingBoxesFromServer" :preventDrawing="!imageEditMode" @extractedLabels="onProductImageDraw($event)" />
+          <VueZoomable
+            v-if="proofImageSrc"
+            v-model:zoom="zoomLevel"
+            v-model:pan="panLevel"
+            :maxZoom="10"
+            :panEnabled="!imageEditMode"
+            selector="#content"
+          >
+            <div id="content" style="width: 100%">
+              <ContributionAssistantDrawCanvas
+                ref="ContributionAssistantDrawCanvas"
+                :imageSrc="proofImageSrc"
+                :boundingBoxesFromServer="boundingBoxesFromServer"
+                :preventDrawing="!imageEditMode"
+                @extractedLabels="onProductImageDraw($event)"
+              />
             </div>
           </VueZoomable>
         </v-card-text>
@@ -270,7 +330,7 @@
                 :disabled="shownProofIndex === 0"
                 @click="previousProof()"
               >
-                {{ $t('CreateOffProduct.PreviousProof') }}
+                {{ $t("CreateOffProduct.PreviousProof") }}
               </v-btn>
             </v-col>
             <v-col>
@@ -291,7 +351,7 @@
                 :disabled="shownProofIndex === priceList.length - 1"
                 @click="nextProof()"
               >
-                {{ $t('CreateOffProduct.NextProof') }}
+                {{ $t("CreateOffProduct.NextProof") }}
               </v-btn>
             </v-col>
           </v-row>
@@ -325,12 +385,8 @@
         <v-card-actions>
           <v-row>
             <v-col>
-              <v-btn
-                color="primary"
-                variant="flat"
-                @click="reloadPage"
-              >
-                {{ $t('CreateOffProduct.CreateNewProduct') }}
+              <v-btn color="primary" variant="flat" @click="reloadPage">
+                {{ $t("CreateOffProduct.CreateNewProduct") }}
               </v-btn>
             </v-col>
           </v-row>
@@ -341,22 +397,26 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
-import proof_utils from '../utils/proof.js'
-import utils from '../utils'
-import Languages from '../i18n/data/languages.json'
-import Countries from '../i18n/data/countries.json'
-import "vue-zoomable/dist/style.css"
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
+import proof_utils from "../utils/proof.js";
+import utils from "../utils";
+import Languages from "../i18n/data/languages.json";
+import Countries from "../i18n/data/countries.json";
+import "vue-zoomable/dist/style.css";
 
 export default {
   components: {
-    ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
-    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    VueZoomable: defineAsyncComponent(() => import('vue-zoomable')),
+    ContributionAssistantDrawCanvas: defineAsyncComponent(
+      () => import("../components/ContributionAssistantDrawCanvas.vue"),
+    ),
+    ProductCard: defineAsyncComponent(
+      () => import("../components/ProductCard.vue"),
+    ),
+    VueZoomable: defineAsyncComponent(() => import("vue-zoomable")),
   },
   data() {
     return {
@@ -375,94 +435,121 @@ export default {
       productExists: false,
       zoomLevel: 1,
       loading: false,
-      panLevel: {x: 0, y: 0},
+      panLevel: { x: 0, y: 0 },
       Languages,
-      Countries
-    }
+      Countries,
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     stepItemList() {
       return [
         {
-          title: this.$t('CreateOffProduct.SelectUnknownProduct'),
-          value: 1
+          title: this.$t("CreateOffProduct.SelectUnknownProduct"),
+          value: 1,
         },
         {
-          title: this.$t('AddPriceSingle.ProductInfo.Title'),
-          value: 2
+          title: this.$t("AddPriceSingle.ProductInfo.Title"),
+          value: 2,
         },
         {
-          title: this.$t('Common.Done'),
-          value: 3
+          title: this.$t("Common.Done"),
+          value: 3,
         },
-      ]
+      ];
     },
     flavors() {
-      return constants.PRODUCT_SOURCE_LIST.map(source => source.value)
-    }
+      return constants.PRODUCT_SOURCE_LIST.map((source) => source.value);
+    },
   },
   watch: {
-    '$route.query.product_code'(newVal) {
+    "$route.query.product_code"(newVal) {
       if (!newVal) {
-        this.getMissingProductsWithPrices()
-        this.step = 1
+        this.getMissingProductsWithPrices();
+        this.step = 1;
       }
-    }
+    },
   },
   mounted() {
     if (this.$route.query.flavor) {
-      this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === this.$route.query.flavor).value
+      this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(
+        (source) => source.key === this.$route.query.flavor,
+      ).value;
     }
     if (this.$route.query.product_code) {
-      this.productForm.product_code = this.$route.query.product_code
-      this.loadProductInfo()
+      this.productForm.product_code = this.$route.query.product_code;
+      this.loadProductInfo();
     }
-    this.getMissingProductsWithPrices()
+    this.getMissingProductsWithPrices();
   },
   methods: {
+    barcodeRule(v) {
+      if (!v) return true;
+      return /^[0-9]+$/.test(v) || "Barcode must contain only digits";
+    },
     fieldRequired(v) {
-      return !!v || this.$t('Common.FieldIsRequired')
+      return !!v || this.$t("Common.FieldIsRequired");
     },
     loadProductInfo() {
-      this.$router.push({ query: { product_code: this.productForm.product_code } })
-      this.step = 2
+      this.$router.push({
+        query: { product_code: this.productForm.product_code },
+      });
+      this.step = 2;
       this.getProduct((product) => {
         if (product.source) {
-          this.productExists = true
+          this.productExists = true;
         } else {
-          this.productExists = false
+          this.productExists = false;
         }
-        this.getPrices(product)
-      })
-      this.getChallenges()
+        this.getPrices(product);
+      });
+      this.getChallenges();
     },
     getProduct(callback) {
-      return openPricesApi.getProductByCode(this.productForm.product_code)
+      return openPricesApi
+        .getProductByCode(this.productForm.product_code)
         .then((product) => {
-          this.product = product
-          if(callback) callback(product)
-        })
+          this.product = product;
+          if (callback) callback(product);
+        });
     },
     getPrices(product) {
-      return openPricesApi.getPrices({product_code: this.productForm.product_code, order_by: constants.PRICE_ORDER_LIST[2].key })
+      return openPricesApi
+        .getPrices({
+          product_code: this.productForm.product_code,
+          order_by: constants.PRICE_ORDER_LIST[2].key,
+        })
         .then((data) => {
-          this.priceList = data.items
+          this.priceList = data.items;
           if (this.priceList.length) {
-            const stores = Array.from(new Set(this.priceList.map(price => price.location.osm_name)))
-            const countries = Array.from(new Set(this.priceList.map(price => price.location.osm_address_country_code.toUpperCase()).flat()))
-            const lastPrice = this.priceList[0]
+            const stores = Array.from(
+              new Set(this.priceList.map((price) => price.location.osm_name)),
+            );
+            const countries = Array.from(
+              new Set(
+                this.priceList
+                  .map((price) =>
+                    price.location.osm_address_country_code.toUpperCase(),
+                  )
+                  .flat(),
+              ),
+            );
+            const lastPrice = this.priceList[0];
             this.productForm = {
               ...this.productForm,
-              product_name: lastPrice.product_name ? utils.toTitleCase(lastPrice.product_name) : null,
+              product_name: lastPrice.product_name
+                ? utils.toTitleCase(lastPrice.product_name)
+                : null,
               stores: stores,
               countries: countries,
-              product_language: lastPrice.location.osm_address_country_code.toLowerCase() || "en",
+              product_language:
+                lastPrice.location.osm_address_country_code.toLowerCase() ||
+                "en",
               quantity: "",
               brands: [],
               categories: [],
-            }
-            this.setShownProof()
+            };
+            this.setShownProof();
           } else {
             this.productForm = {
               ...this.productForm,
@@ -473,130 +560,154 @@ export default {
               quantity: "",
               brands: [],
               categories: [],
-            }
+            };
           }
           if (this.productExists) {
-            this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === product.source).value
-            this.productForm.product_name = product.product_name
-            this.productForm.quantity = product.product_quantity + product.product_quantity_unit
-            this.productForm.categories = product.categories_tags
-            this.productForm.brands = product.brands_tags
-            this.productForm.stores = null
-            this.productForm.countries= null
+            this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(
+              (source) => source.key === product.source,
+            ).value;
+            this.productForm.product_name = product.product_name;
+            this.productForm.quantity =
+              product.product_quantity + product.product_quantity_unit;
+            this.productForm.categories = product.categories_tags;
+            this.productForm.brands = product.brands_tags;
+            this.productForm.stores = null;
+            this.productForm.countries = null;
           }
-        })
+        });
     },
     getChallenges() {
-      return openPricesApi.getChallenges({ order_by: '-created' })
+      return openPricesApi
+        .getChallenges({ order_by: "-created" })
         .then((data) => {
-          const challenges = data.items
-          const challengeCategories = challenges.map(challenge => challenge.categories) // Array of arrays
-          this.suggestedCategories = Array.from(new Set(challengeCategories.flat())) // unique categories
-        })
+          const challenges = data.items;
+          const challengeCategories = challenges.map(
+            (challenge) => challenge.categories,
+          ); // Array of arrays
+          this.suggestedCategories = Array.from(
+            new Set(challengeCategories.flat()),
+          ); // unique categories
+        });
     },
     getMissingProductsWithPrices() {
-      return openPricesApi.getProducts({ price_count__gte: 1, source__isnull: true, order_by: '-proof_count' })
-        .then((data) => {
-          this.missingProductsWithPrices = data.items
+      return openPricesApi
+        .getProducts({
+          price_count__gte: 1,
+          source__isnull: true,
+          order_by: "-proof_count",
         })
+        .then((data) => {
+          this.missingProductsWithPrices = data.items;
+        });
     },
     missingProductClicked(product) {
-      this.productForm.product_code = product.code
-      this.loadProductInfo()
+      this.productForm.product_code = product.code;
+      this.loadProductInfo();
     },
     createProduct() {
       if (!this.productForm.flavor) {
-        return
+        return;
       }
-      const flavorkey = constants.PRODUCT_SOURCE_LIST.find(source => source.value === this.productForm.flavor).key
+      const flavorkey = constants.PRODUCT_SOURCE_LIST.find(
+        (source) => source.value === this.productForm.flavor,
+      ).key;
       let inputData = {
         update_params: {
           ...this.productForm,
-          categories: this.productForm.categories.join(','),
-          stores: this.productForm.stores.join(','),
-          countries: this.productForm.countries.map(c=>c.toLowerCase()).join(','),
+          categories: this.productForm.categories.join(","),
+          stores: this.productForm.stores.join(","),
+          countries: this.productForm.countries
+            .map((c) => c.toLowerCase())
+            .join(","),
         },
         flavor: flavorkey,
-        product_language_code: this.productForm.product_language
-      }
-      this.step = 3
-      this.loading = true
+        product_language_code: this.productForm.product_language,
+      };
+      this.step = 3;
+      this.loading = true;
       openPricesApi
         .updateOffProduct(this.productForm.product_code, inputData)
         .then(() => {
           if (this.drawnImageSrc) {
-            const drawnImageBase64 = this.drawnImageSrc.split(';base64,')[1]
+            const drawnImageBase64 = this.drawnImageSrc.split(";base64,")[1];
             inputData = {
               image_data_base64: drawnImageBase64,
               flavor: flavorkey,
-              product_language_code: this.productForm.product_language
-            }
-            openPricesApi.updateOffProductImage(this.productForm.product_code, inputData)
+              product_language_code: this.productForm.product_language,
+            };
+            openPricesApi
+              .updateOffProductImage(this.productForm.product_code, inputData)
               .then(() => {
-                this.loading = false
-                this.getProduct()
+                this.loading = false;
+                this.getProduct();
               })
               .catch((error) => {
-                console.log(error)
-                this.loading = false
-              })
+                console.log(error);
+                this.loading = false;
+              });
           } else {
-            this.loading = false
-            this.getProduct()
+            this.loading = false;
+            this.getProduct();
           }
         })
         .catch((error) => {
-          console.log(error)
-          this.loading = false
-        })
-      
-
+          console.log(error);
+          this.loading = false;
+        });
     },
     loadPriceTags(priceId) {
-      openPricesApi.getPriceTags({price_id: priceId}).then(data => {
-        const priceTags = data.items
+      openPricesApi.getPriceTags({ price_id: priceId }).then((data) => {
+        const priceTags = data.items;
         if (priceTags.length) {
           this.boundingBoxesFromServer = [
             {
-              boundingBox: priceTags[0].bounding_box, 
+              boundingBox: priceTags[0].bounding_box,
               id: priceTags[0].id,
-              status: priceTags[0].status
-            }
-          ]
+              status: priceTags[0].status,
+            },
+          ];
         }
-      })
+      });
     },
     onProductImageDraw(extractedLabels) {
       if (!extractedLabels.length) {
-        return
+        return;
       }
-      const latestDrawnLabel = extractedLabels[extractedLabels.length - 1]
+      const latestDrawnLabel = extractedLabels[extractedLabels.length - 1];
       if (latestDrawnLabel.id === null) {
         // No id means the label box was just drawn
-        this.drawnImageSrc = extractedLabels[extractedLabels.length - 1].imageSrc
+        this.drawnImageSrc =
+          extractedLabels[extractedLabels.length - 1].imageSrc;
         // Remove the box straight away, we don't want it to show as a price tag on the picture
-        this.$refs.ContributionAssistantDrawCanvas.removeBoundingBox(extractedLabels.length - 1)
+        this.$refs.ContributionAssistantDrawCanvas.removeBoundingBox(
+          extractedLabels.length - 1,
+        );
       }
     },
     setShownProof() {
-      this.shownProof = this.priceList[this.shownProofIndex].proof
-      this.boundingBoxesFromServer = []
-      this.proofImageSrc = proof_utils.getImageFullUrl(this.shownProof.file_path)
-      this.zoomLevel = 1
-      this.panLevel = {x: 0, y: 0}
-      this.loadPriceTags(this.priceList[this.shownProofIndex].id)
+      this.shownProof = this.priceList[this.shownProofIndex].proof;
+      this.boundingBoxesFromServer = [];
+      this.proofImageSrc = proof_utils.getImageFullUrl(
+        this.shownProof.file_path,
+      );
+      this.zoomLevel = 1;
+      this.panLevel = { x: 0, y: 0 };
+      this.loadPriceTags(this.priceList[this.shownProofIndex].id);
     },
     previousProof() {
-      this.shownProofIndex = Math.max(this.shownProofIndex - 1, 0)
-      this.setShownProof()
+      this.shownProofIndex = Math.max(this.shownProofIndex - 1, 0);
+      this.setShownProof();
     },
     nextProof() {
-      this.shownProofIndex = Math.min(this.shownProofIndex + 1, this.priceList.length - 1)
-      this.setShownProof()
+      this.shownProofIndex = Math.min(
+        this.shownProofIndex + 1,
+        this.priceList.length - 1,
+      );
+      this.setShownProof();
     },
     reloadPage() {
-      window.location = window.location.pathname
+      window.location = window.location.pathname;
     },
-  }
-}
+  },
+};
 </script>
