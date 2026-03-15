@@ -162,7 +162,8 @@ export default {
       // item.productFound means the product was explicitly selected by the user
       if (!this.receiptItems) return []
       const isProductValid = item => this.itemIsCategory(item) ? item.category_tag : item.product_code
-      return this.receiptItems.filter(item => item.price && isProductValid(item))
+      const isSamePriceAsDiscounted = item => item.price_is_discounted && Number(item.price) === Number(item.price_without_discount)
+      return this.receiptItems.filter(item => item.price && isProductValid(item) && !isSamePriceAsDiscounted(item))
     },
     validNewReceiptItems() {
       return this.validReceiptItems.filter(item => !item.price_id)
