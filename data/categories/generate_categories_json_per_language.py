@@ -1,9 +1,9 @@
 """
 See parent README.md for more details.
 
-Stats as of 2026-02-06:
-- Input: Taxonomy: total number of nodes: 14299
-- Output: 2980 categories
+Stats as of 2026-03-17:
+- Input: Taxonomy: total number of nodes: 14331
+- Output: 3070 categories
 """
 
 import json
@@ -35,6 +35,7 @@ PARENT_NODE_ID_LIST = [
     { "id": "en:breads", "keep_node": False },  # 116
     { "id": "en:flours", "keep_node": False },  # 113
     { "id": "en:aromatic-plants", "keep_node": False },  # 108
+    { "id": "en:cakes", "keep_node": False },  # 98
     { "id": "en:sausages", "keep_node": True },  # 87
     { "id": "en:pastries", "keep_node": False },  # 73 (parent: en:desserts)
     { "id": "en:mushrooms", "keep_node": True },  # 67
@@ -62,7 +63,7 @@ EXTRA_NODE_ID_LIST = [
     "en:acar",
 ]
 
-EXCLUDE_LIST = ["Cooked", "Fresh", "Frozen", "Canned", "Prepacked", "Packaged"]
+EXCLUDE_LIST = ["Cooked", "Fresh", "Frozen", "Canned", "Prepacked", "Packaged", "Bakery", "Artisanal"]
 
 EXCLUDE_NODE_ID_LIST = [
     "en:vegetables-from-germany",
@@ -116,6 +117,7 @@ def get_all_descendants_for_node_list(
     all_descendants = []
     for node_parent in node_parent_list:
         node_parent_descendants = get_all_descendants_for_node(taxonomy, node_parent)
+        print(f"Parent node {node_parent.id} has {len(node_parent_descendants)} descendants")
         if node_parent.id in parent_node_id_list_to_keep:
             all_descendants.append(node_parent)
         all_descendants.extend(node_parent_descendants)
