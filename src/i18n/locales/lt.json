@@ -453,7 +453,7 @@
 		"Select": "Pasirinkti",
 		"Send": "Siųsti",
 		"Settings": "Nustatymai",
-		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Prisijungta!",
 		"SignIn": "Prisijungti",
 		"SignOut": "Atsijungti",
@@ -964,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Prisijungti",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Vartotojo vardas",
 		"WrongCredentials": "Klaida: neteisingi kredencialai"
 	},
