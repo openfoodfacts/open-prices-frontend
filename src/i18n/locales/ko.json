@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "전송",
 		"Settings": "설정",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "가입하기",
 		"SignOut": "로그아웃",
@@ -964,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "가입하기",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
