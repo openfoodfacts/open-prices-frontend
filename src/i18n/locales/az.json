@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "Göndər",
 		"Settings": "Tənzimləmələr",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Daxil ol",
 		"SignOut": "Çıxış",
@@ -964,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Daxil ol",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
