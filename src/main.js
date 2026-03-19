@@ -8,6 +8,8 @@ import router from './router.js'
 import { vuetify } from './plugins/vuetify.js'
 import i18n from './i18n'
 import localeManager from './i18n/localeManager.js'
+import * as Sentry from "@sentry/vue";
+
 const app = createApp(App)
 
 const pinia = createPinia()
@@ -23,8 +25,17 @@ app.use(VueMatomo, {
 })
 const locale = localeManager.guessDefaultLocale()
 localeManager.changeLanguage(locale)
-app.mount('#app')
 
+// Sentry Initialisation
+if(import.meta.env.DEV){
+  Sentry.init({
+    app,
+    dsn: import.meta.env.VITE_SENTRY_DSN,
+    sendDefualtPii: false,
+  })
+}
+
+app.mount('#app')
 // Matomo
 window._paq.push(['trackPageView'])
 window._paq.push(['enableLinkTracking'])
