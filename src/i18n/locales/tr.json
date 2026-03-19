@@ -453,7 +453,7 @@
 		"Select": "Seçiniz",
 		"Send": "Gönder",
 		"Settings": "Ayarlar",
-		"SignInOFFAccount": "{url} hesabınızla oturum açın",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Giriş yapıldı!",
 		"SignIn": "Giriş Yap",
 		"SignOut": "Çıkış yap",
@@ -964,6 +964,7 @@
 		"ServerError": "Hata: sunucu hatası",
 		"Title": "Giriş Yap",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Kullanıcı adı",
 		"WrongCredentials": "Hata: yanlış kimlik bilgileri"
 	},
