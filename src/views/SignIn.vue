@@ -1,18 +1,6 @@
 <template>
   <v-row>
     <v-col cols="12" md="6">
-      <v-row v-if="keycloak">
-        <v-col>
-          <v-btn
-            type="button"
-            class="float-left"
-            color="primary"
-            @click="keycloak.login()"
-          >
-            {{ $t('SignIn.SignInWithOpenFoodFactsAuth') }}
-          </v-btn>
-        </v-col>
-      </v-row>
       <v-form @submit.prevent="signIn">
         <v-row>
           <v-col>
@@ -70,6 +58,34 @@
         </v-row>
       </v-form>
     </v-col>
+    <v-divider v-if="keycloak" class="d-none d-md-flex" vertical />
+    <v-divider v-if="keycloak" class="d-flex d-md-none" />
+    <v-col v-if="keycloak" cols="12" md="6">
+      <v-row>
+        <v-col>
+          <v-alert
+            color="primary"
+            variant="outlined"
+            density="compact"
+            icon="mdi-information"
+          >
+            {{ $t('SignIn.SignInWithOpenFoodFactsAuth', { off_name: OFF_NAME }) }}
+          </v-alert>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <v-btn
+            type="button"
+            block
+            color="primary"
+            @click="keycloak.login()"
+          >
+            {{ $t('SignIn.Button') }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-col>
   </v-row>
 </template>
 
@@ -77,6 +93,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 import openPricesApi from '../services/openPricesApi'
 import keycloakService from '../services/keycloakService'
 
@@ -93,6 +110,7 @@ export default {
       passwordVisible: false,
       loading: false,
       keycloak: null,
+      OFF_NAME: constants.OFF_NAME
     };
   },
   computed: {
