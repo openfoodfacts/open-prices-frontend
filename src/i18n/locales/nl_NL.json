@@ -453,7 +453,7 @@
 		"Select": "Selecteren",
 		"Send": "Verzenden",
 		"Settings": "Instellingen",
-		"SignInOFFAccount": "Meld u aan met uw {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Ingelogd!",
 		"SignIn": "Inloggen",
 		"SignOut": "Uitloggen",
@@ -964,6 +964,7 @@
 		"ServerError": "Fout: serverfout",
 		"Title": "Inloggen",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Gebruikersnaam",
 		"WrongCredentials": "Fout: verkeerde inloggegevens"
 	},
