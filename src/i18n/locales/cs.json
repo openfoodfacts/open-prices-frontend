@@ -453,7 +453,7 @@
 		"Select": "Vybrat",
 		"Send": "Odeslat",
 		"Settings": "Nastavení",
-		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Přihlášeno!",
 		"SignIn": "Přihlásit se",
 		"SignOut": "Odhlásit",
@@ -964,6 +964,7 @@
 		"ServerError": "Chyba: chyba serveru",
 		"Title": "Přihlásit se",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Uživatelské jméno",
 		"WrongCredentials": "Chyba: nesprávné přihlašovací údaje"
 	},
