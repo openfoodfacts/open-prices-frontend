@@ -453,7 +453,7 @@
 		"Select": "Επιλέγω",
 		"Send": "Αποστολή",
 		"Settings": "Ρυθμίσεις",
-		"SignInOFFAccount": "Συνδεθείτε με τον λογαριασμό σας {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Συνδεδεμένος/η!",
 		"SignIn": "Σύνδεση",
 		"SignOut": "Αποσύνδεση",
@@ -964,6 +964,7 @@
 		"ServerError": "Σφάλμα: σφάλμα διακομιστή",
 		"Title": "Σύνδεση",
 		"SignInOFFAccount": "Συνδεθείτε με τον λογαριασμό σας {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Όνομα χρήστη",
 		"WrongCredentials": "Σφάλμα: λανθασμένα διαπιστευτήρια"
 	},
