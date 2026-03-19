@@ -453,7 +453,7 @@
 		"Select": "Auswählen",
 		"Send": "Senden",
 		"Settings": "Einstellungen",
-		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Angemeldet!",
 		"SignIn": "Anmelden",
 		"SignOut": "Abmelden",
@@ -964,6 +964,7 @@
 		"ServerError": "Fehler: Serverfehler",
 		"Title": "Anmelden",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Benutzername",
 		"WrongCredentials": "Fehler: üngültige Anmeldeinformationen"
 	},
