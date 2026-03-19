@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "Voye",
 		"Settings": "Paramèt",
-		"SignInOFFAccount": "Konekte ak kont {url} ou",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Sign in",
 		"SignOut": "Sign out",
@@ -964,6 +964,7 @@
 		"ServerError": "Erè: erè sèvè",
 		"Title": "Sign in",
 		"SignInOFFAccount": "Konekte ak kont {url} ou",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Non itilizatè",
 		"WrongCredentials": "Error: wrong credentials"
 	},
