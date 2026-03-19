@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "Wyślij",
 		"Settings": "Ustawienia",
-		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Zalogowano!",
 		"SignIn": "Zaloguj się",
 		"SignOut": "Wyloguj się",
@@ -964,6 +964,7 @@
 		"ServerError": "Błąd: błąd serwera",
 		"Title": "Zaloguj się",
 		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Nazwa użytkownika",
 		"WrongCredentials": "Błąd: nieprawidłowe dane logowania"
 	},
