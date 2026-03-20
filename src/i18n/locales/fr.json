@@ -453,7 +453,7 @@
 		"Select": "Sélectionner",
 		"Send": "Envoyer",
 		"Settings": "Paramètres",
-		"SignInOFFAccount": "Sign in with your {url} credentials",
+		"SignInOFFAccount": "Connectez-vous avec vos identifiants {url}",
 		"SignedIn": "Connecté !",
 		"SignIn": "Se connecter",
 		"SignOut": "Se déconnecter",
@@ -964,7 +964,7 @@
 		"ServerError": "Erreur : erreur serveur",
 		"Title": "Se connecter",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
-		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
+		"SignInWithOpenFoodFactsAuth": "Connectez-vous avec l'authentification {off_name}",
 		"UsernameLabel": "Identifiant",
 		"WrongCredentials": "Erreur : Problème d'identifiant"
 	},
