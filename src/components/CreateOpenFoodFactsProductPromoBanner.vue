@@ -1,19 +1,22 @@
 <template>
-  <v-banner
-    icon="mdi-draw"
-    bg-color="primary"
-    rounded
-    density="compact"
-    @click="$router.push(url)"
+  <v-btn 
+    block
+    variant="outlined"
+    color="#f57c00"
+    :to="url"
+    class="create-prices-btn"
+    size="large"
   >
-    <v-banner-text>
-      {{ $t('CreateOffProduct.ProductMissingPromoBanner') }}
-    </v-banner-text>
-    <v-spacer /><!-- needed to push v-banner-actions to the right on big screens -->
-    <v-banner-actions>
-      <v-btn icon="mdi-arrow-right" :aria-label="$t('Common.TryItOut')" :to="url" />
-    </v-banner-actions>
-  </v-banner>
+    <template #prepend>
+      <v-icon icon="mdi-chart-line" />
+    </template>
+
+    {{ $t('create_with_open_prices') }}
+
+    <template #append>
+      <v-icon icon="mdi-arrow-right" size="small" />
+    </template>
+  </v-btn>
 </template>
 
 <script>
@@ -21,7 +24,7 @@ export default {
   props: {
     productCode: {
       type: String,
-      default: '',
+      default: ''
     },
   },
   data() {
@@ -31,3 +34,17 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.create-prices-btn {
+  text-transform: none;
+  font-weight: 600;
+  border-radius: 12px;
+  border-width: 2px;
+}
+
+.create-prices-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(245, 124, 0, 0.04);
+}
+</style>

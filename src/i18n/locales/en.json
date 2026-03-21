@@ -1039,5 +1039,17 @@
 		"Title": "Settings",
 		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Help us translate more languages"
-	}
+	},
+	"product_not_found": "Product Not Found",
+	"barcode_not_found": "Barcode {id} isn't in our database yet",
+	"add_to_open_food_facts": "Add to Open Food Facts",
+	"recommended": "RECOMMENDED",
+	"or": "OR",
+	"create_with_open_prices": "Create with Open Prices",
+	"experiment": "EXPERIMENT",
+	"add_full_product_details": "Add complete product information (ingredients, nutrition, packaging) to the main Open Food Facts database. Best for contributing full product details.",
+	"quick_price_tracking": "Quickly add price data without entering full product details. Perfect for price tracking when you only need cost information.",
+	"no_prices_available": "No prices available for this product yet",
+	"add_product_to_off": "Add Product to Open Food Facts"
+
 }
