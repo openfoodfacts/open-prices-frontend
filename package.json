@@ -51,7 +51,7 @@
     "@intlify/eslint-plugin-vue-i18n": "^3.2.0",
     "@mdi/font": "^7.4.47",
     "@vitejs/plugin-vue": "^5.2.4",
-    "@vue/compiler-sfc": "^3.5.27",
+    "@vue/compiler-sfc": "^3.5.29",
     "autoprefixer": "^10.4.24",
     "cross-env": "^7.0.3",
     "cypress": "^13.17.0",
