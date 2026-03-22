@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.158.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.157.1...v1.158.0) (2026-03-22)
+
+
+### Features
+
+* **Auth:** Enable keycloak login in production ([#2083](https://github.com/openfoodfacts/open-prices-frontend/issues/2083)) ([58246cf](https://github.com/openfoodfacts/open-prices-frontend/commit/58246cfc163fca27d526692b9af970588b39f85f))
+* **Auth:** Sign in with Keycloak ([#2039](https://github.com/openfoodfacts/open-prices-frontend/issues/2039)) ([0080d15](https://github.com/openfoodfacts/open-prices-frontend/commit/0080d15a977f5c5c4ae1a7ef269118c0a5817b32))
+
+
+### Bug Fixes
+
+* **CreateOffProduct:** vertical crop mode text in mobile view ([#2074](https://github.com/openfoodfacts/open-prices-frontend/issues/2074)) ([5ecb92f](https://github.com/openfoodfacts/open-prices-frontend/commit/5ecb92fa757dfa52310d037326d12d6e6919d8be))
+
+
+### Technical
+
+* **Data:** add new parent category 'cakes' ([#2081](https://github.com/openfoodfacts/open-prices-frontend/issues/2081)) ([330f9ea](https://github.com/openfoodfacts/open-prices-frontend/commit/330f9eac9efb2b9b08d52d249d3fe3176cbe3c1d))
+* **l10n:** New Crowdin translations to review and merge ([#2040](https://github.com/openfoodfacts/open-prices-frontend/issues/2040)) ([105ed5f](https://github.com/openfoodfacts/open-prices-frontend/commit/105ed5f5cdfbb330b39a2f7f1c00fb055291e845))
+
 ## [1.157.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.157.0...v1.157.1) (2026-02-22)
 
 
