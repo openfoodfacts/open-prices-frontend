@@ -128,7 +128,7 @@ export default {
         })
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
-      if (utils.getDocumentScrollPercentage() > 90) {
+      if (utils.getDocumentScrollPercentage() > 90 &&!this.loading) {
         this.getChallenges()
       }
     }
