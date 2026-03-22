@@ -269,7 +269,7 @@
 		"LocationFindShop": "Pesquisar o local da loja",
 		"LocationMissing": "Falta a localização",
 		"LocationSearchByName": "Pesquisar por nome e cidade",
-		"LocationsCompare": "Compare 2 locations",
+		"LocationsCompare": "Compare 2 localizações",
 		"Date": "Data",
 		"DateMissing": "Falta a data",
 		"DateProofHelpText": "Data da foto.",
@@ -453,7 +453,7 @@
 		"Select": "Selecionar",
 		"Send": "Enviar",
 		"Settings": "Definições",
-		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Sessão iniciada!",
 		"SignIn": "Iniciar sessão",
 		"SignOut": "Terminar sessão",
@@ -821,7 +821,7 @@
 			"Title": "Adicionar comprovativos (etiquetas de preço)"
 		},
 		"CompareLocations": {
-			"Title": "Compare 2 locations"
+			"Title": "Compare 2 localizações"
 		},
 		"Explore": {
 			"Title": "Explorar"
@@ -873,7 +873,7 @@
 		},
 		"Home": {
 			"Title": "Início",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "é um projeto de "
 		},
 		"Dashboard": {
 			"Title": "Painel de controlo"
@@ -964,6 +964,7 @@
 		"ServerError": "Erro: erro do servidor",
 		"Title": "Iniciar sessão",
 		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Nome de utilizador",
 		"WrongCredentials": "Erro: credenciais incorrectas"
 	},

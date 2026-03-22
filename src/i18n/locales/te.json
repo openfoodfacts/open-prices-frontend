@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "అమరికలు",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "సైన్ ఇన్ చేయండి",
 		"SignOut": "సైన్ అవుట్ చేయండి",
@@ -964,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "సైన్ ఇన్ చేయండి",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

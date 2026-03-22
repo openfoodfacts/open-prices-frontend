@@ -453,7 +453,7 @@
 		"Select": "選択",
 		"Send": "送信",
 		"Settings": "設定",
-		"SignInOFFAccount": "Google アカウントでログイン",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "サインインしました！",
 		"SignIn": "サインイン",
 		"SignOut": "サインアウト",
@@ -964,6 +964,7 @@
 		"ServerError": "エラー: サーバーエラー",
 		"Title": "サインイン",
 		"SignInOFFAccount": "Google アカウントでログイン",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "ユーザー名",
 		"WrongCredentials": "エラー: 資格情報が間違っています"
 	},

@@ -453,7 +453,7 @@
 		"Select": "Seleccionar",
 		"Send": "Enviar",
 		"Settings": "Configuración",
-		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "¡Sesión iniciada!",
 		"SignIn": "Iniciar sesión",
 		"SignOut": "Cerrar sesión",
@@ -964,6 +964,7 @@
 		"ServerError": "Error: error del servidor",
 		"Title": "Iniciar sesión",
 		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Nombre de usuario",
 		"WrongCredentials": "Error: credenciales incorrectas"
 	},

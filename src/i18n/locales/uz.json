@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "Sozlamalar",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "tizimga kirish",
 		"SignOut": "tizimdan chiqish",
@@ -964,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "tizimga kirish",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

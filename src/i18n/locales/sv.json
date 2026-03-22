@@ -453,7 +453,7 @@
 		"Select": "Välj",
 		"Send": "Skicka",
 		"Settings": "Inställningar",
-		"SignInOFFAccount": "Logga in med ditt {url} -konto",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Inloggad!",
 		"SignIn": "Logga in",
 		"SignOut": "Logga ut",
@@ -964,6 +964,7 @@
 		"ServerError": "Fel: serverfel",
 		"Title": "Logga in",
 		"SignInOFFAccount": "Logga in med ditt {url} -konto",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Användarnamn",
 		"WrongCredentials": "Error: wrong credentials"
 	},

@@ -453,7 +453,7 @@
 		"Select": "בחירה",
 		"Send": "שליחה",
 		"Settings": "הגדרות",
-		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "נכנסת!",
 		"SignIn": "כניסה",
 		"SignOut": "יציאה",
@@ -964,6 +964,7 @@
 		"ServerError": "שגיאה: שגיאת שרת",
 		"Title": "כניסה",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "שם משתמש",
 		"WrongCredentials": "שגיאה: פרטי גישה שגויים"
 	},

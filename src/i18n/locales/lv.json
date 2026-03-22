@@ -453,7 +453,7 @@
 		"Select": "Atlasīt",
 		"Send": "Sūtīt",
 		"Settings": "Iestatījumi",
-		"SignInOFFAccount": "Pierakstieties ar savu {url} kontu",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Pierakstījies!",
 		"SignIn": "Ieiet",
 		"SignOut": "Izrakstīties",
@@ -964,6 +964,7 @@
 		"ServerError": "Kļūda: servera kļūda",
 		"Title": "Ieiet",
 		"SignInOFFAccount": "Pierakstieties ar savu {url} kontu",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Lietotājvārds",
 		"WrongCredentials": "Kļūda: nepareizi akreditācijas dati"
 	},

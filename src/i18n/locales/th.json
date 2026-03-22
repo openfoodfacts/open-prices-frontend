@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "ส่ง",
 		"Settings": "ตั้งค่า",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "เข้าสู่ระบบ",
 		"SignOut": "ล๊อคเอ้าท์",
@@ -964,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "เข้าสู่ระบบ",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

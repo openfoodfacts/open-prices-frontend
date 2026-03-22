@@ -453,7 +453,7 @@
 		"Select": "يختار",
 		"Send": "إرسال",
 		"Settings": "الإعدادات",
-		"SignInOFFAccount": "سجّل الدخول باستخدام حسابك {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "تم تسجيل الدخول!",
 		"SignIn": "تسجيل الدخول",
 		"SignOut": "تسجيل الخروج",
@@ -964,6 +964,7 @@
 		"ServerError": "خطأ: خطأ في الخادم",
 		"Title": "تسجيل الدخول",
 		"SignInOFFAccount": "سجّل الدخول باستخدام حسابك {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "اسم المستخدم",
 		"WrongCredentials": "خطأ: بيانات اعتماد خاطئة"
 	},

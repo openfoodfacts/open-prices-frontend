@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "发送",
 		"Settings": "设置",
-		"SignInOFFAccount": "使用您的 {url} 帐户登录",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "登录",
 		"SignIn": "登录",
 		"SignOut": "登出",
@@ -964,6 +964,7 @@
 		"ServerError": "错误：服务器错误",
 		"Title": "登录",
 		"SignInOFFAccount": "使用您的 {url} 帐户登录",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "用户名",
 		"WrongCredentials": "错误：凭据错误"
 	},

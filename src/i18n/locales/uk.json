@@ -453,7 +453,7 @@
 		"Select": "Обрати",
 		"Send": "Надіслати",
 		"Settings": "Налаштування",
-		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Ви ввійшли!",
 		"SignIn": "Увійти",
 		"SignOut": "Вийти",
@@ -964,6 +964,7 @@
 		"ServerError": "Помилка: помилка сервера",
 		"Title": "Увійти",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Ім'я користувача",
 		"WrongCredentials": "Помилка: неправильні облікові дані"
 	},
