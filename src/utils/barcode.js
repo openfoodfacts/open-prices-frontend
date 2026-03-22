@@ -36,8 +36,18 @@ function cleanBarcode(value) {
   return value
 }
 
+function normaliseBarcode(value) {
+  // Normalises the barcode according to the documentation
+  if (value.length >= 9 && value.length <= 12) {
+    return value.padStart(13, '0')
+  }
+
+  return value
+}
+
 export default {
     isBarcodeValid,
     isBarcodeTooLong,
-    cleanBarcode
+    cleanBarcode,
+    normaliseBarcode,
 }
