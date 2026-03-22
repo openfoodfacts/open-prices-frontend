@@ -30,7 +30,7 @@
     "@vueuse/integrations": "^11.3.0",
     "@webcomponents/webcomponentsjs": "^2.8.0",
     "compressorjs": "^1.2.1",
-    "exifreader": "^4.36.1",
+    "exifreader": "^4.37.0",
     "html5-qrcode": "^2.3.8",
     "keycloak-js": "^26.2.3",
     "leaflet": "^1.9.4",
