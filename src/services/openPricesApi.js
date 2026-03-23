@@ -554,7 +554,8 @@ export default {
   },
 
   getChallenges(params = {}) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/challenges?${buildURLParams({...params})}`
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE, order_by: '-id'}
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/challenges?${buildURLParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
