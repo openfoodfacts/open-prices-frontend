@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.158.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.158.0...v1.158.1) (2026-03-23)
+
+
+### Bug Fixes
+
+* **Auth:** show old login form in local & staging envs (fallback) ([#2090](https://github.com/openfoodfacts/open-prices-frontend/issues/2090)) ([f53ae86](https://github.com/openfoodfacts/open-prices-frontend/commit/f53ae86a57236ecb7182df5cce8b48632ecee614))
+
+
+### Technical
+
+* **Challenge List:** load 25 challenges. order by id desc ([#2087](https://github.com/openfoodfacts/open-prices-frontend/issues/2087)) ([683570e](https://github.com/openfoodfacts/open-prices-frontend/commit/683570e8a9d4256bc93b654ae8485ea3fddeb64d))
+
 ## [1.158.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.157.1...v1.158.0) (2026-03-23)
 
 
