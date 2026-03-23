@@ -82,12 +82,11 @@ export default {
       challengeTotal: null,
       challengePage: 0,
       loading: false,
-      currentOrder: 'id',
     }
   },
   computed: {
     getChallengesParams() {
-      let defaultParams = { order_by: this.currentOrder, page: this.challengePage }
+      let defaultParams = { page: this.challengePage }
       return defaultParams
     },
     ongoingChallenges() {
