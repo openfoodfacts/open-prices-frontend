@@ -5,7 +5,7 @@ export default {
     const url = import.meta.env.VITE_KEYCLOAK_URL
     if (!url) {
       // keycloak is not configured
-      return callback(null)
+      return callback(null, 'Keycloak: URL is not configured')
     }
     const keycloak = new Keycloak({
       url: url,
@@ -15,10 +15,11 @@ export default {
     
     keycloak.init()
       .then(() => {
-        callback(keycloak)
+        callback(keycloak, null)
       })
       .catch((error) => {
-        console.error('Failed to initialize keycloak adapter:', error)
+        console.error('Keycloak: Failed to initialize adapter:', error)
+        callback(null, 'Keycloak: Failed to initialize adapter')
       })
   }
 }
