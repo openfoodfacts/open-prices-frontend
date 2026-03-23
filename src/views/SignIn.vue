@@ -1,34 +1,5 @@
 <template>
-  <v-row v-if="keycloak">
-    <v-col cols="12" md="6">
-      <v-row>
-        <v-col>
-          <v-alert
-            color="primary"
-            variant="outlined"
-            density="compact"
-            icon="mdi-information"
-          >
-            {{ $t('SignIn.SignInWithOpenFoodFactsAuth', { off_name: OFF_NAME }) }}
-          </v-alert>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
-          <v-btn
-            type="button"
-            block
-            color="primary"
-            @click="keycloak.login()"
-          >
-            {{ $t('SignIn.Button') }}
-          </v-btn>
-        </v-col>
-      </v-row>
-    </v-col>
-  </v-row>
-
-  <v-row style="display:none;">
+  <v-row v-if="ENV !== 'prod'">
     <v-col cols="12" md="6">
       <v-form @submit.prevent="signIn">
         <v-row>
@@ -89,6 +60,35 @@
     </v-col>
   </v-row>
 
+  <v-row v-if="keycloak">
+    <v-col cols="12" md="6">
+      <v-row>
+        <v-col>
+          <v-alert
+            color="primary"
+            variant="outlined"
+            density="compact"
+            icon="mdi-information"
+          >
+            {{ $t('SignIn.SignInWithOpenFoodFactsAuth', { off_name: OFF_NAME }) }}
+          </v-alert>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <v-btn
+            type="button"
+            block
+            color="primary"
+            @click="keycloak.login()"
+          >
+            {{ $t('SignIn.Button') }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-col>
+  </v-row>
+
   <v-row v-if="loading">
     <v-col align="center">
       <v-progress-circular indeterminate :size="30" />
@@ -117,6 +117,7 @@ export default {
       passwordVisible: false,
       loading: false,
       keycloak: null,
+      ENV: import.meta.env.VITE_OPEN_PRICES_ENV,
       OFF_NAME: constants.OFF_NAME
     }
   },
