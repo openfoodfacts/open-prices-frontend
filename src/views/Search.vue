@@ -104,8 +104,8 @@ export default {
         this.productList = []
         this.productTotal = null
         this.loading = true
-        // Normalises UPC barcode to EAN 13 barcode
-        const code = barcodeUtils.normaliseBarcode(this.productSearchForm.q)
+        // Normalizes UPC barcode to EAN 13 barcode
+        const code = barcodeUtils.normalizeBarcode(this.productSearchForm.q)
         return openPricesApi.getProducts({ code: code })
           .then((data) => {
             this.productList.push(...data.items)
