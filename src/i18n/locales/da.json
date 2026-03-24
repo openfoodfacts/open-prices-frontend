@@ -453,7 +453,7 @@
 		"Select": "Vælg",
 		"Send": "Indsend",
 		"Settings": "Indstillinger",
-		"SignInOFFAccount": "Log på med din {url} konto",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Logget ind!",
 		"SignIn": "Log ind",
 		"SignOut": "Log ud",
@@ -964,6 +964,7 @@
 		"ServerError": "Fejl: serverfejl",
 		"Title": "Log ind",
 		"SignInOFFAccount": "Log på med din {url} konto",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Brugernavn",
 		"WrongCredentials": "Fejl: forkerte loginoplysninger"
 	},

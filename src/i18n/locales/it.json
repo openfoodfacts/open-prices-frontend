@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "Invia",
 		"Settings": "Impostazioni",
-		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Registrato in!",
 		"SignIn": "Accedi",
 		"SignOut": "Esci",
@@ -964,6 +964,7 @@
 		"ServerError": "Errore: errore del server",
 		"Title": "Accedi",
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Nome utente",
 		"WrongCredentials": "Errore: credenziali errate"
 	},

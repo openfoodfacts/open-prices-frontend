@@ -224,7 +224,7 @@
 		"ConsumptionProofs": "Consumption proofs",
 		"Contribute": "Osallistu",
 		"Contributors": "Osallistujat",
-		"Contributions": "Osallistumiset",
+		"Contributions": "Muokkaukset",
 		"Confirm": "Vahvista",
 		"Count": "Määrä",
 		"Country": "Maa",
@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "Lähetä",
 		"Settings": "Asetukset",
-		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Kirjautunut sisään!",
 		"SignIn": "Kirjaudu sisään",
 		"SignOut": "Kirjaudu ulos",
@@ -716,7 +716,7 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Tuotteen määrä puuttuu",
 		"QuantityMissing": "Määrä puuttuu",
-		"UnknownProduct": "Tuntematon tuotenimi"
+		"UnknownProduct": "Tuotenimi ei tiedossa"
 	},
 	"ProductDetail": {
 		"AddPrice": "Lisää hinta",
@@ -964,6 +964,7 @@
 		"ServerError": "Virhe: palvelinvirhe",
 		"Title": "Kirjaudu sisään",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Käyttäjänimi",
 		"WrongCredentials": "Virhe: väärät tunnistetiedot"
 	},

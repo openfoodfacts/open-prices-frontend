@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "Gửi",
 		"Settings": "Cài đặt",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Đăng nhập",
 		"SignOut": "Thoát",
@@ -964,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Đăng nhập",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

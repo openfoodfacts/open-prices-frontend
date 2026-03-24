@@ -453,7 +453,7 @@
 		"Select": "Pilih",
 		"Send": "Kirim",
 		"Settings": "Pengaturan",
-		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Masuk!",
 		"SignIn": "Masuk",
 		"SignOut": "Keluar",
@@ -964,6 +964,7 @@
 		"ServerError": "Kesalahan: kesalahan server",
 		"Title": "Masuk",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Nama pengguna",
 		"WrongCredentials": "Kesalahan: kredensial salah"
 	},

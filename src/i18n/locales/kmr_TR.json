@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "Ligorî",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Niştin vegır",
 		"SignOut": "Sign out",
@@ -964,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Niştin vegır",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

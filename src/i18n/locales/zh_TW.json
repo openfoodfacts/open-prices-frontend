@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "發送",
 		"Settings": "設定",
-		"SignInOFFAccount": "使用您的 {url} 帳號登入",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "已登入！",
 		"SignIn": "登入",
 		"SignOut": "登出",
@@ -964,6 +964,7 @@
 		"ServerError": "錯誤：伺服器錯誤",
 		"Title": "登入",
 		"SignInOFFAccount": "使用您的 {url} 帳號登入",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "使用者名稱",
 		"WrongCredentials": "錯誤：憑證錯誤"
 	},

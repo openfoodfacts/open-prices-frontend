@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "भेजें",
 		"Settings": "सेटिंग्स",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "साइन इन किया!",
 		"SignIn": "साइन इन करें",
 		"SignOut": "साइन आउट",
@@ -964,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "साइन इन करें",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

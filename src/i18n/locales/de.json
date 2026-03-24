@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Die als Nachweis eingereichten Bilder sind unter der Lizenz {ccbysa_url} lizenziert.",
 		"WhatTitle": "Was ist {op_name}?",
 		"WhatOFFTitle": "Was ist {off_name}?",
-		"WhatOFFAnswer": "{off_url} ist eine gemeinnützige Organisation, die Informationen zu Lebensmitteln aus aller Welt sammelt und teilt. Es handelt sich um ein Gemeinschaftsprojekt, das auf freiwilliger Basis Daten sammelt. {off_url} ist die weltweit größte offene Lebensmitteldatenbank mit über 4 Millionen Produkten aus 200 Ländern.",
+		"WhatOFFAnswer": "{off_url} ist eine gemeinnützige Organisation, die Informationen zu Lebensmitteln aus aller Welt sammelt und weitergibt. Es handelt sich um ein Gemeinschaftsprojekt, das sich auf Freiwillige stützt, um Daten zu sammeln. {off_url} ist die weltweit größte offene Datenbank für Lebensmittel mit über 4 Millionen Produkten aus 200 Ländern.",
 		"WhyOFFTitle": "Warum macht {off_name} das?",
 		"WhyOFFAnswer": "Preisinformationen sind für das Verständnis von Lebensmittelsystemen von größter Bedeutung. Sie sind ein Schlüsselfaktor für das Verständnis der Kosten von Lebensmitteln und für die Förderung einer gesünderen Ernährung. Die Freigabe von Preisdaten erleichtert es Forschern, Journalisten und Bürgern, besser zu verstehen, wie die Lebensmittelpreise geografisch und zeitlich variieren.",
 		"HowContribute": "Wie kann ich mitwirken?",
@@ -162,8 +162,8 @@
 		"StatsAndRankings": "Statistiken & Ranglisten",
 		"MostPicturesAdded": "Die meisten Bilder hinzugefügt",
 		"MostPricesAdded": "Die meisten Preise hinzugefügt",
-		"MostPricesFromPicturesAdded": "Die meisten Preise aus Bildern hinzugefügt",
-		"AlertNew": "Du hast eine Idee für eine neue Herausforderung? Lass es uns wissen {url}!"
+		"MostPricesFromPicturesAdded": "Die meisten Preise aus den hinzugefügten Bildern",
+		"AlertNew": "Haben Sie eine Idee für eine neue Herausforderung? Teilen Sie uns diese mit {url}!"
 	},
 	"Common": {
 		"About": "Über",
@@ -179,7 +179,7 @@
 		"AddNewProof": "Neuen Nachweis hinzufügen",
 		"AddNewProofs": "Neue Nachweise hinzufügen",
 		"AddNewProofPriceTags": "Neue Preisschilder hinzufügen",
-		"AddNewProofReceipt": "Neuen Beleg hinzufügen",
+		"AddNewProofReceipt": "Neue Quittung hinzufügen",
 		"AddToOFF": "Zu {name} hinzufügen",
 		"Added": "Hinzugefügt",
 		"AdditionalInfo": "Zusätzliche Informationen",
@@ -249,9 +249,9 @@
 		"Error": "Fehler",
 		"Experiment": "Experiment",
 		"Experiments": "Experimente",
-		"Explore": "Erkunden",
-		"FromPriceTag": "Anhand eines Preisschildes",
-		"FromReceipt": "Von einer Quittung",
+		"Explore": "Entdecken",
+		"FromPriceTag": "Vom Preisschild",
+		"FromReceipt": "Aus einer Quittung",
 		"GoToProof": "Nachweise öffnen",
 		"Join": "Beitreten",
 		"Label": "Kennzeichnung",
@@ -269,12 +269,12 @@
 		"LocationFindShop": "Standort des Geschäfts finden",
 		"LocationMissing": "Ort fehlt",
 		"LocationSearchByName": "Suchen nach Name und Stadt",
-		"LocationsCompare": "Compare 2 locations",
+		"LocationsCompare": "2 Standorte vergleichen",
 		"Date": "Datum",
 		"DateMissing": "Datum fehlt",
-		"DateProofHelpText": "Aufnahmedatum.",
-		"DateProofHelpTextExif": "Standardmäßig versuchen wir, die Information aus den EXIF-Metadaten des Bildes zu extrahieren.",
-		"DateProofHelpTextReceipt": "Bei Belegen sollte das Kaufdatum als Speicherort festgelegt werden.",
+		"DateProofHelpText": "Datum des Bildes.",
+		"DateProofHelpTextExif": "Standardmäßig versuchen wir, diese aus den EXIF-Metadaten des Bildes zu extrahieren.",
+		"DateProofHelpTextReceipt": "Für Quittungen stellen Sie es auf das Kaufdatum ein.",
 		"Details": "Details",
 		"Delete": "Löschen",
 		"DeveloperMode": "Entwicklermodus",
@@ -297,7 +297,7 @@
 		"Edit": "Bearbeiten",
 		"End": "Ende",
 		"ErrorServer": "Fehler: Serverfehler",
-		"FieldIsRequired": "Feld ist erforderlich",
+		"FieldIsRequired": "Dieses Feld ist erforderlich",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Alle Herausforderungen anzeigen",
 		"FilterWithPriceCount": "Mit Preisen",
@@ -308,7 +308,7 @@
 		"FilterPriceMoreThan30DaysHide": "Preise ausblenden, die älter als 30 Tage sind",
 		"FilterProofWithPriceCountHide": "Nachweise mit Preisen ausblenden",
 		"FilterPriceTagWithProofOwner": "Nur eigene Nachweise zeigen",
-		"FilterPriceTagWithProofUserCountry": "Zeige nur Belege aus meinem Land",
+		"FilterPriceTagWithProofUserCountry": "Nur Beweise aus meinem Land anzeigen",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Mit einem gültigen Barcode",
 		"FilterPriceTagWithTagPredictionProductExists": "Mit einem gültigen Produkt",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Mit einem gültigen Kategorie-Tag",
@@ -336,9 +336,9 @@
 		"Map": "Karte",
 		"Miscellaneous": "Verschiedenes",
 		"MobileApp": "App für mobile Geräte",
-		"Moderation": "Mäßigung",
+		"Moderation": "Moderation",
 		"ModerationFlagReasonWrongType": "Falscher Typ",
-		"ModerationFlagReasonWrongPriceValue": "Falscher Preis",
+		"ModerationFlagReasonWrongPriceValue": "Falscher Preiswert",
 		"ModerationFlagReasonWrongCurrency": "Falsche Währung",
 		"ModerationFlagReasonWrongProduct": "Falsches Produkt",
 		"ModerationFlagReasonWrongLocation": "Falscher Standort",
@@ -392,8 +392,8 @@
 		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
 		"PRICE_TAG": "Preisschild",
 		"PriceTags": "Preisschilder",
-		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
-		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
+		"PriceTagsBoundingBoxesDisplay": "Preisschild-Begrenzungsrahmen anzeigen",
+		"PriceTagsBoundingBoxesHide": "Preisauszeichnungsrahmen ausblenden",
 		"PriceCount": "{count} Preise | {count} Preis | {count} Preise",
 		"PriceAddedCount": "{count} Preise hinzugefügt | {count} Preis hinzugefügt | {count} Preise hinzugefügt",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} Preise hinzugefügt",
@@ -402,7 +402,7 @@
 		"PriceMissing": "Preis fehlt",
 		"PricePerMissing": "Preis pro fehlendem",
 		"PriceAlreadyUploaded": "Preis bereits hochgeladen",
-		"PriceReadyToBeUploaded": "Preis kann hochgeladen werden",
+		"PriceReadyToBeUploaded": "Preis bereit zum Hochladen",
 		"PricesAlreadyUploaded": "Preise bereits hochgeladen",
 		"PricesAll": "Alle Preise",
 		"PricesMore": "Weitere Preise",
@@ -425,7 +425,7 @@
 		"ProofSelected": "Nachweis ausgewählt!",
 		"ProofSelectedCount": "{count} Nachweise ausgewählt | {count} Nachweise ausgewählt | {count} Nachweise ausgewählt",
 		"ProofUploadedCount": "{count} Nachweise hochgeladen | {count} Nachweis hochgeladen | {count} Nachweise hochgeladen",
-		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} hochgeladene Beweise",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} Korrekturfahnen hochgeladen",
 		"ProofsAddedToday": "Heute hinzugefügte Nachweise",
 		"ProofsToday": "Aktuelle Nachweise",
 		"ProofNotFound": "Nachweis nicht gefunden",
@@ -453,7 +453,7 @@
 		"Select": "Auswählen",
 		"Send": "Senden",
 		"Settings": "Einstellungen",
-		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Angemeldet!",
 		"SignIn": "Anmelden",
 		"SignOut": "Abmelden",
@@ -478,14 +478,14 @@
 		"TopContributors": "Aktivste Mitwirkende",
 		"TopLocations": "Top-Standorte",
 		"TopProducts": "Top-Produkte",
-		"TopCities": "Topstädte",
+		"TopCities": "Top-Städte",
 		"TopCountries": "Top-Länder",
 		"Today": "Heute",
 		"Top": "Top",
 		"Total": "Gesamt",
 		"Truncate": "Kürzen",
 		"Truncated": "Gekürzt",
-		"TryItOut": "Probieren Sie es aus",
+		"TryItOut": "Versuche es",
 		"Type": "Art",
 		"UnknownProduct": "Unbekanntes Produkt",
 		"UnknownProductSource": "Unbekannte Herkunft des Produkts",
@@ -506,18 +506,18 @@
 		"Users": "Benutzer",
 		"UserCount": "{count} Benutzer | {count} Benutzer | {count} Benutzer",
 		"UserContributorCount": "{count} Mitwirkende | {count} Mitwirkende | {count} Mitwirkende",
-		"UserIsModerator": "You are a moderator",
-		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
-		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
-		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
-		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
-		"UserIsNotPriceOwner": "You are not the price owner",
-		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserIsModerator": "Sie sind Moderator",
+		"UserIsModeratorCanEditPrice": "Sie können diesen Preis bearbeiten, da Sie Moderator sind",
+		"UserIsModeratorCanDeletePrice": "Sie können diesen Preis löschen, da Sie Moderator sind",
+		"UserIsModeratorCanEditProof": "Sie können diesen Beweis bearbeiten, da Sie Moderator sind",
+		"UserIsModeratorCanDeleteProof": "Sie können diesen Beweis löschen, da Sie Moderator sind",
+		"UserIsNotPriceOwner": "Sie sind nicht der Eigentümer des Preises",
+		"UserIsNotProofOwner": "Sie sind nicht der eingetragene Eigentümer",
 		"UserNotFound": "Benutzer nicht gefunden",
 		"Validate": "Bestätigen",
 		"ValidatePrices": "Preise prüfen",
 		"ValidatePricesWithAI": "Preise mit KI prüfen",
-		"ValidatePricesFromCommunity": "Preise aus der Community überprüfen",
+		"ValidatePricesFromCommunity": "Preise aus der Community validieren",
 		"View": "Anzeigen",
 		"Website": "Website",
 		"WithAPrice": "Mit einem Preis",
@@ -583,21 +583,21 @@
 		"Select": "{currency_code} auswählen"
 	},
 	"CreateOffProduct": {
-		"SelectUnknownProduct": "Select unknown product",
-		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"SelectUnknownProduct": "Unbekanntes Produkt auswählen",
+		"SelectUnknownProductGuide": "Oder wählen Sie ein unbekanntes Produkt aus, um es hinzuzufügen",
 		"CountriesWhereSold": "Vertriebsländer",
 		"CreateNewProduct": "Neues Produkt erstellen",
-		"CreateProduct": "Produkt erstellen",
-		"EnableCropMode": "Zuschneidemodus aktivieren",
+		"CreateProduct": "Produkt anlegen",
+		"EnableCropMode": "Crop-Modus aktivieren",
 		"Flavor": "Wählen Sie das Projekt aus, in dem das Produkt erstellt werden soll",
 		"NextProof": "Nächster Nachweis",
 		"PreviousProof": "Vorheriger Beweis",
 		"ProductAlreadyExists": "Produkt existiert bereits",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "Produktsprache",
 		"ProofNumberOfOutProofs": "Beweis ({numberOfOutProofs}/{totalNumberOfProofs})",
-		"StoresWhereSold": "Geschäfte, in denen verkauft wird",
-		"UseCropModeToAddImage": "Um ein Produktbild hinzuzufügen, aktivieren Sie den Zuschneidemodus unter dem Proofbild und zeichnen Sie ein Rechteck um das Produkt.",
-		"ProductMissingPromoBanner": "Experiment: Erstellen Sie dieses Produkt anhand von Daten aus Open Prices."
+		"StoresWhereSold": "Geschäfte, in denen verkauft wurde",
+		"UseCropModeToAddImage": "Um ein Produktbild hinzuzufügen, aktivieren Sie den Zuschneidemodus unterhalb des Korrekturabzugs und zeichnen Sie ein Rechteck um das Produkt.",
+		"ProductMissingPromoBanner": "Experiment: Erstellen Sie dieses Produkt unter Verwendung von Daten aus Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Wählen Sie einen Ihrer aktuellen Nachweise"
@@ -638,8 +638,8 @@
 	"LocationSelector": {
 		"Clear": "Leeren",
 		"NoResult": "Keine Ergebnisse gefunden",
-		"NoResultHelpKeywords": "Sie können Ihr Geschäft nicht finden? Versuchen Sie es mit Schlüsselwörtern anstelle der vollständigen Adresse (z. B. „Carrefour 75013 Paris“ oder „Walmart San Francisco“).",
-		"NoResultHelpOSM": "Sie können Ihren Shop immer noch nicht finden? Möglicherweise ist er noch nicht in {osm_name} . Sie können ihn zunächst in {osm_url} hinzufügen.",
+		"NoResultHelpKeywords": "Sie können Ihr Geschäft nicht finden? Versuchen Sie es mit Stichwörtern anstelle der vollständigen Adresse (z. B. „Carrefour 75013 Paris” oder „Walmart San Francisco”).",
+		"NoResultHelpOSM": "Sie können Ihren Shop immer noch nicht finden? Möglicherweise ist er noch nicht in {osm_name} aufgeführt. Sie können ihn zunächst unter {osm_url} hinzufügen.",
 		"PoweredBy": {
 			"text": "Bereitgestellt von {url}"
 		},
@@ -733,8 +733,8 @@
 		"PriceTagAIWarning": "KI prüft Ihre Nachweise, um Preise zu ermitteln.",
 		"ReceiptAllowAI": "Erlauben Sie der KI auf Ihrem Kassenbeleg, Preise zu ermitteln",
 		"ReceiptAIWarning": "KI prüft Ihren Kassenbeleg, um die Preise zu ermitteln.",
-		"PromoProofPriceTagAddMultiple": "Um mehrere Preisschilder hochzuladen (gleicher Ladenstandort und Datum), klicken Sie hier!",
-		"PromoReceiptAssistant": "Experimentieren Sie: Probieren Sie den neuen Belegassistenten aus, um Preise automatisch aus Ihren Belegen zu extrahieren!"
+		"PromoProofPriceTagAddMultiple": "Um mehrere Preisschilder hochzuladen (gleicher Shop-Standort und Datum), klicken Sie hier!",
+		"PromoReceiptAssistant": "Experiment: Probieren Sie den neuen Belegassistenten aus, um Preise automatisch aus Ihren Belegen zu extrahieren!"
 	},
 	"ProofCard": {
 		"Proof": "Nachweis",
@@ -770,10 +770,10 @@
 	"ReceiptAssistant": {
 		"AddNewItem": "Neuen Eintrag hinzufügen",
 		"NoItemsFound": "Es konnten keine Artikel aus dem Kassenzettel extrahiert werden. Bitte versuchen Sie es erneut.",
-		"PriceAlreadyCreated": "Price already created",
+		"PriceAlreadyCreated": "Preis bereits erstellt",
 		"PriceAlreadyCreatedForItem": "Preis bereits für Artikel erstellt",
 		"PriceReadyToBeAdded": "Preis kann hinzugefügt werden",
-		"ReceiptItems": "Belegartikel",
+		"ReceiptItems": "Belegpositionen",
 		"ReceiptItemsCheck": "Belegpositionen prüfen und korrigieren",
 		"UploadOnlyNewPrices": "Nur neue Preise ({nbPrices}) hochladen",
 		"UploadOrUpdateAllValidPrices": "Alle gültigen Preise ({nbPrices}) hochladen oder aktualisieren",
@@ -815,16 +815,16 @@
 			"Title": "Mehrere Nachweise hinzufügen"
 		},
 		"AddProofReceipt": {
-			"Title": "Fügen Sie einen Beleg (Quittung) hinzu."
+			"Title": "Beweis hinzufügen (Quittung)"
 		},
 		"AddProofsPriceTags": {
-			"Title": "Add proofs (price tags)"
+			"Title": "Beweise hinzufügen (Preisschilder)"
 		},
 		"CompareLocations": {
-			"Title": "Compare 2 locations"
+			"Title": "2 Standorte vergleichen"
 		},
 		"Explore": {
-			"Title": "Erkunden"
+			"Title": "Entdecken"
 		},
 		"Locations": {
 			"Title": "Orte"
@@ -866,14 +866,14 @@
 			"Title": "Länder"
 		},
 		"CreateOffProduct": {
-			"Title": "Create Product"
+			"Title": "Produkt erstellen"
 		},
 		"Experiments": {
 			"Title": "Experimente"
 		},
 		"Home": {
 			"Title": "Startseite",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "{op_name} ist ein Projekt zum Sammeln und Teilen von Produktpreisen aus aller Welt. Es handelt sich um einen öffentlich zugänglichen Datensatz, der für Forschungszwecke, Analysen und vieles mehr genutzt werden kann!"
 		},
 		"Dashboard": {
 			"Title": "Übersicht"
@@ -885,7 +885,7 @@
 			"Title": "Letzte Belege"
 		},
 		"Moderation": {
-			"Title": "Mäßigung"
+			"Title": "Moderation"
 		},
 		"MyPrices": {
 			"Title": "Mein Preise"
@@ -927,7 +927,7 @@
 			"Title": "Mitwirkungsassistent"
 		},
 		"ProofPriceTagAssistant": {
-			"Title": "Proof-Preisschild-Assistent"
+			"Title": "Proof Preis-Tag-Assistent"
 		},
 		"ReceiptAssistant": {
 			"Title": "Belegassistent"
@@ -937,14 +937,14 @@
 		},
 		"Challenges": {
 			"Title": "Herausforderungen",
-			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
+			"Help": "Herausforderungen sind eine Möglichkeit für die Community, ihre Bemühungen zu bündeln und Preise für bestimmte Produkte zu sammeln. Sie dauern in der Regel einen Monat, und die Teilnehmer werden nach ihrem Beitrag bewertet. Sehen Sie sich die laufenden Herausforderungen unten an, um teilzunehmen, oder besuchen Sie die Daten zu vergangenen Herausforderungen."
 		},
 		"CommunityChallenge": {
 			"Title": "Gemeinschaftliche Herausforderung"
 		},
 		"Validate": {
 			"Title": "Bestätigen",
-			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
+			"Help": "Nach wenigen Sekunden werden die Preisinformationen automatisch aus den hochgeladenen Bildern extrahiert, aber es ist weiterhin Hilfe erforderlich, um deren Richtigkeit zu überprüfen. Dies geschieht im Rahmen einer Gemeinschaftsaktion.\n\nÜberprüfen Sie für jedes angezeigte Preisschild, ob der Preis, der Barcode oder die Kategorie korrekt sind, korrigieren Sie sie gegebenenfalls und bestätigen Sie sie. Wenn Sie einen Preis bestätigen, wird er zur öffentlichen Datenbank hinzugefügt und mit der Community geteilt. Unlesbare oder ungültige Preise können als Fehler markiert werden. Wenn Sie sich nicht sicher sind, können Sie den Preis ignorieren und einen anderen Mitwirkenden daran arbeiten lassen."
 		},
 		"ValidatePrices": {
 			"Title": "Preise prüfen"
@@ -964,6 +964,7 @@
 		"ServerError": "Fehler: Serverfehler",
 		"Title": "Anmelden",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Benutzername",
 		"WrongCredentials": "Fehler: üngültige Anmeldeinformationen"
 	},
@@ -988,7 +989,7 @@
 		"WithBarcode": "Mit einem Strichcode",
 		"WithCategory": "Mit einer Kategorie",
 		"PricesPerSource": "Preise pro Quelle",
-		"ProofsPerSource": "Belege pro Quelle",
+		"ProofsPerSource": "Beweise pro Quelle",
 		"PricesProofsPerSource": "Preise und Nachweise je Quelle",
 		"LastUpdated": "Zuletzt aktualisiert am {date}"
 	},
@@ -1021,7 +1022,7 @@
 		"CurrencyLabel": "Währung",
 		"DisplayTitle": "Anzeigen",
 		"BarcodeScanner": "Strichcode-Lesegerät",
-		"BarcodeScannerLibrary": "Barcode scanner library",
+		"BarcodeScannerLibrary": "Barcode-Scanner-Bibliothek",
 		"DefaultMode": "Standardmodus",
 		"FavoriteCurrencies": "Bevorzugte Währungen",
 		"CurrencyRequired": "Es ist mindestens eine Währung erforderlich",

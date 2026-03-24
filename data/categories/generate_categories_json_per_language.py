@@ -1,9 +1,9 @@
 """
 See parent README.md for more details.
 
-Stats as of 2026-02-06:
-- Input: Taxonomy: total number of nodes: 14299
-- Output: 2980 categories
+Stats as of 2026-03-17:
+- Input: Taxonomy: total number of nodes: 14331
+- Output: 3070 categories
 """
 
 import json
@@ -35,6 +35,7 @@ PARENT_NODE_ID_LIST = [
     { "id": "en:breads", "keep_node": False },  # 116
     { "id": "en:flours", "keep_node": False },  # 113
     { "id": "en:aromatic-plants", "keep_node": False },  # 108
+    { "id": "en:cakes", "keep_node": False },  # 98
     { "id": "en:sausages", "keep_node": True },  # 87
     { "id": "en:pastries", "keep_node": False },  # 73 (parent: en:desserts)
     { "id": "en:mushrooms", "keep_node": True },  # 67
@@ -62,7 +63,15 @@ EXTRA_NODE_ID_LIST = [
     "en:acar",
 ]
 
-EXCLUDE_LIST = ["Cooked", "Fresh", "Frozen", "Canned", "Prepacked", "Packaged"]
+EXCLUDE_LIST = [
+    "Frozen",  # 310 nodes removed
+    "Cooked",  # 163
+    "Fresh",  # 153
+    "Canned",  # 87
+    "Bakery",  # 5
+    "Prepacked",  # 2
+    "Packaged",  # 1
+]
 
 EXCLUDE_NODE_ID_LIST = [
     "en:vegetables-from-germany",
@@ -116,6 +125,7 @@ def get_all_descendants_for_node_list(
     all_descendants = []
     for node_parent in node_parent_list:
         node_parent_descendants = get_all_descendants_for_node(taxonomy, node_parent)
+        print(f"Parent node {node_parent.id} has {len(node_parent_descendants)} descendants")
         if node_parent.id in parent_node_id_list_to_keep:
             all_descendants.append(node_parent)
         all_descendants.extend(node_parent_descendants)
@@ -125,18 +135,18 @@ def get_all_descendants_for_node_list(
 def filter_node_list_by_exclude_string_list(
     node_list: list[TaxonomyNode], exclude_string_list: list[str]
 ) -> list[TaxonomyNode]:
-    return [
-        node
-        for node in node_list
-        if not any(
-            re.search(
-                r"\b{}\b".format(exclude_string),
-                node.get_localized_name("en"),
-                flags=re.IGNORECASE,
-            )
-            for exclude_string in exclude_string_list
-        )
-    ]
+    node_to_exclude = set()
+
+    # intermediate step to allow printing stats
+    for exclude_string in exclude_string_list:
+        temp_node_to_exclude = set()
+        for node in node_list:
+            if re.search(r"\b{}\b".format(exclude_string), node.get_localized_name("en"), flags=re.IGNORECASE):
+                temp_node_to_exclude.add(node.id)
+        print(f"Exclude {len(temp_node_to_exclude)} nodes containing '{exclude_string}'")
+        node_to_exclude.update(temp_node_to_exclude)
+
+    return [node for node in node_list if node.id not in node_to_exclude]
 
 
 def write_categories_to_files(
@@ -203,31 +213,31 @@ def compare_new_categories_with_old_categories():
 
 
 if __name__ == "__main__":
-    # Step 1a: get the full taxonomy
+    print("Step 1a: get the full taxonomy")
     TAXONOMY_FULL: Taxonomy = get_taxonomy(
         OFF_TAXONOMY_NAME, force_download=True, download_newer=True
     )
     print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
 
-    # Step 1b: get all the parent nodes
+    print("Step 1b: get all the parent nodes")
     PARENT_NODES: list[TaxonomyNode] = get_taxonomy_node_list_by_id_list(
         TAXONOMY_FULL, [node["id"] for node in PARENT_NODE_ID_LIST]
     )
     print(f"Filter on {len(PARENT_NODES)} parent nodes")
 
-    # Step 2: filter
-    # Step 2a: get all descendants for the parent categories
+    print("Step 2: filter")
+    print("Step 2a: get all descendants for the parent categories")
     categories_filtered: list[TaxonomyNode] = get_all_descendants_for_node_list(
         TAXONOMY_FULL, PARENT_NODES, parent_node_id_list_to_keep=[node["id"] for node in PARENT_NODE_ID_LIST if node["keep_node"]]
     )
-    # Step 2b: add extra nodes
-    print(f"Add {len(EXTRA_NODE_ID_LIST)} extra nodes")
+    print("Step 2b: add extra nodes")
+    print(f"Add {len(EXTRA_NODE_ID_LIST)} extra nodes: {EXTRA_NODE_ID_LIST}")
     categories_filtered.extend(
         get_taxonomy_node_list_by_id_list(TAXONOMY_FULL, EXTRA_NODE_ID_LIST)
     )
-    # Step 2c: exclude
-    # - remove nodes in EXCLUDE_NODE_ID_LIST
-    # - remove nodes containing some strings in EXCLUDE_LIST
+    print("Step 2c: exclude")
+    print(" - remove nodes in EXCLUDE_NODE_ID_LIST")
+    print(" - remove nodes containing some strings in EXCLUDE_LIST")
 
     # We don't filter anymore node IDs that don't start with "en:", as some
     # categories don't have translations in English (e.g. "fr:merguez")
@@ -239,7 +249,7 @@ if __name__ == "__main__":
     )
     print("Finished filtering:", len(categories_filtered))
 
-    # Step 3: deduplicate
+    print("Step 3: deduplicate")
     categories_filtered_deduped = []
     seen = set()
     for category in categories_filtered:
@@ -248,12 +258,12 @@ if __name__ == "__main__":
             seen.add(category.id)
     print("Finished deduplicating:", len(categories_filtered_deduped))
 
-    # Step 4: transform to dict list
+    print("Step 4: transform to dict list")
     categories_filtered_to_dict_list = [
         {"id": node.id, **node.to_dict()} for node in categories_filtered_deduped
     ]
 
-    # Step 5: write to files (1 per language)
+    print("Step 5: write to files (1 per language)")
     OP_LANGUAGES = read_json(repo_path / OP_LANGUAGES_FILE)
     write_categories_to_files(categories_filtered_to_dict_list, OP_LANGUAGES, delete_parents=True)
     print(f"Wrote to {len(OP_LANGUAGES)} language files")

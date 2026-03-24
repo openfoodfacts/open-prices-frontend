@@ -453,7 +453,7 @@
 		"Select": "Select",
 		"Send": "Odoslať",
 		"Settings": "Nastavenia",
-		"SignInOFFAccount": "Prihláste sa pomocou svojho účtu {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Prihlásený!",
 		"SignIn": "Prihlásiť sa",
 		"SignOut": "Odhlásiť sa",
@@ -964,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Prihlásiť sa",
 		"SignInOFFAccount": "Prihláste sa pomocou svojho účtu {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
