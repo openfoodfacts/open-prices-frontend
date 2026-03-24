@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Stats & filaharana",
 		"MostPicturesAdded": "Nampiana ny ankamaroan'ny sary",
 		"MostPricesAdded": "Niampy ny ankamaroan'ny vidiny",
-		"MostPricesFromPicturesAdded": "Ny ankamaroan'ny vidiny avy amin'ny sary nampiana"
+		"MostPricesFromPicturesAdded": "Ny ankamaroan'ny vidiny avy amin'ny sary nampiana",
+		"AlertNew": "Manana hevitra momba ny fanamby vaovao ve ianao? Ampahafantaro anay {url}!"
 	},
 	"Common": {
 		"About": "About",
@@ -177,8 +178,12 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Ampio marika vidiny vaovao",
+		"AddNewProofReceipt": "Ampio rosia vaovao",
 		"AddToOFF": "Add to {name}",
+		"Added": "nanampy",
 		"AdditionalInfo": "Additional information",
+		"All": "Rehetra",
 		"Barcode": "Kaody bara",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
+		"Close": "Akaiky",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -220,6 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
+		"Count": "Manisa",
 		"Country": "Firenena",
 		"Countries": "Firenena",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -229,6 +236,7 @@
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "Azonao atao ny manampy vola ao amin'ny fikiranao.",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
@@ -241,6 +249,9 @@
 		"Error": "Error",
 		"Experiment": "andrana",
 		"Experiments": "Experiments",
+		"Explore": "hijery",
+		"FromPriceTag": "Avy amin'ny vidin'ny vidiny",
+		"FromReceipt": "Avy amin'ny rosia",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Etikety",
@@ -250,6 +261,7 @@
 		"Languages": "Fiteny",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Learn more",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -257,8 +269,12 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Date",
 		"DateMissing": "Date missing",
+		"DateProofHelpText": "Datin'ny sary.",
+		"DateProofHelpTextExif": "Amin'ny ankapobeny, miezaka maka azy avy amin'ny metadata EXIF-n'ny sary isika.",
+		"DateProofHelpTextReceipt": "Ho an'ny rosia, apetraho amin'ny datin'ny fividianana izany.",
 		"Details": "Details",
 		"Delete": "Delete",
 		"DeveloperMode": "Developer mode",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Ovaina",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Ilaina ny saha",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Miaraka amin'ny vidiny",
+		"FilterWithLocationCount": "Miaraka amin'ny toerana",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Asehoy fotsiny ireo porofo avy amin'ny fireneko",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Miaraka amin'ny barcode manan-kery",
 		"FilterPriceTagWithTagPredictionProductExists": "Miaraka amin'ny vokatra manan-kery",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Miaraka amin'ny marika sokajy manan-kery",
@@ -299,6 +320,7 @@
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
 		"Help": "Help",
+		"Here": "Eto",
 		"History": "History",
 		"Image": "Image",
 		"ImageSelect": "Select an image",
@@ -314,19 +336,33 @@
 		"Map": "Map",
 		"Miscellaneous": "Miscellaneous",
 		"MobileApp": "Mobile app",
+		"Moderation": "fandaminana",
+		"ModerationFlagReasonWrongType": "Karazana diso",
+		"ModerationFlagReasonWrongPriceValue": "Sanda vidy diso",
+		"ModerationFlagReasonWrongCurrency": "Vola diso",
+		"ModerationFlagReasonWrongProduct": "Vokatra diso",
+		"ModerationFlagReasonWrongLocation": "Diso toerana",
+		"ModerationFlagReasonWrongDate": "Diso daty",
+		"ModerationFlagReasonOther": "Other",
+		"ModerationFlagCreateSuccess": "Misaotra tamin'ny tatitrao!",
+		"ModerationFlagStatusOpen": "Misokatra",
+		"ModerationFlagStatusClosed": "mihidy",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"MyStats": "My stats",
+		"New": "Vaovao",
 		"NextProof": "Next proof",
 		"NoBarcode": "Tsy misy barcode",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Misokatra",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "Name",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -356,12 +392,19 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
 		"PriceTags": "Vidim-bidy",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Vidy tsy hita",
+		"PricePerMissing": "Vidiny isaky ny tsy hita",
+		"PriceAlreadyUploaded": "Vidiny efa nampidirina",
+		"PriceReadyToBeUploaded": "Vidiny efa vonona hampiakarina",
 		"PricesAlreadyUploaded": "Vidy efa nampidirina",
+		"PricesAll": "Ny vidiny rehetra",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -382,6 +425,7 @@
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} porofo nampidirina",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,6 +433,8 @@
 		"Quantity": "Habetsahana",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "laharana",
+		"Reason": "Reason",
 		"RECEIPT": "Receipt",
 		"Receipt": "Receipt",
 		"Receipts": "Receipts",
@@ -397,12 +443,17 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "re-misokatra",
+		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
+		"Resolved": "tapa-kevitra",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Karoka",
 		"Select": "Select",
+		"Send": "Alefaso",
 		"Settings": "Fikiràna",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Sign in",
 		"SignOut": "Sign out",
@@ -412,12 +463,14 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "Barcode soso-kevitra:",
 		"Summary": "Summary",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "Text",
 		"Thanks": "Thanks",
 		"Theme": "Theme",
 		"ThemeLight": "Light",
@@ -453,11 +506,22 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Tsy hita ny mpampiasa",
 		"Validate": "Hanamafy",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "Hamarino ny vidiny avy amin'ny fiarahamonina",
 		"View": "Jery",
 		"Website": "Website",
+		"WithAPrice": "With a price",
+		"WithoutAPrice": "Tsy misy vidiny",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Eny",
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Firenana ivarotana",
+		"CreateNewProduct": "Mamorona vokatra vaovao",
+		"CreateProduct": "Mamorona vokatra",
+		"EnableCropMode": "Alefaso ny fomba famafazana",
+		"Flavor": "Safidio ny tetikasa tokony hamoronana ny vokatra",
+		"NextProof": "Next proof",
+		"PreviousProof": "Porofo teo aloha",
+		"ProductAlreadyExists": "Efa misy ny vokatra",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Porofo ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Fivarotana amidy",
+		"UseCropModeToAddImage": "Raha te hampiditra sary vokatra, ampio ny fomba famafazana eo ambanin'ny sary porofo ary manaova mahitsizoro manodidina ny vokatra.",
+		"ProductMissingPromoBanner": "Andrana: mamorona ity vokatra ity amin'ny fampiasana angon-drakitra avy amin'ny Open Prices"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Tsy mahita ny fivarotanao? Andramo mampiasa teny fanalahidy fa tsy ny adiresy feno (oh 'Carrefour 75013 Paris' na 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Mbola tsy mahita ny fivarotanao? Mety mbola tsy ao amin'ny {osm_name} . Azonao ampiana amin'ny {osm_url} aloha.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt entana",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Hanampy"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +814,18 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Ampio porofo (rosia)"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "hijery"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,11 +841,20 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Vidim-bidy"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
+		},
+		"Cities": {
+			"Title": "Tanàna"
 		},
 		"Community": {
 			"Title": "Community"
@@ -755,11 +862,18 @@
 		"Contribute": {
 			"Title": "Contribute"
 		},
+		"Countries": {
+			"Title": "Firenena"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Home",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -769,6 +883,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "fandaminana"
 		},
 		"MyPrices": {
 			"Title": "My prices"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Proof Price Tag Assistant"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Hanamafy",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Sign in",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Vidiny isaky ny loharano",
+		"ProofsPerSource": "Porofo isaky ny loharano",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

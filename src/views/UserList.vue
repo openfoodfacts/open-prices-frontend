@@ -1,11 +1,14 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-account">
         {{ $t('UserList.UserTotal', { count: userTotal }) }}
       </v-chip>
-      <FilterMenu kind="user" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
-      <OrderMenu kind="user" :currentOrder="currentOrder" @update:currentOrder="selectUserOrder($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="userList.length" :totalCount="userTotal" />
+        <FilterMenu kind="user" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
+        <OrderMenu kind="user" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      </template>
     </v-col>
   </v-row>
 
@@ -25,11 +28,12 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import utils from '../utils.js'
 
 export default {
   components: {
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     UserCard: defineAsyncComponent(() => import('../components/UserCard.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
@@ -83,7 +87,7 @@ export default {
       if ((this.userTotal != null) && (this.userList.length >= this.userTotal)) return
       this.loading = true
       this.userPage += 1
-      return api.getUsers(this.getUsersParams)
+      return openPricesApi.getUsers(this.getUsersParams)
         .then((data) => {
           this.userList.push(...data.items)
           this.userTotal = data.total
@@ -95,7 +99,7 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initUserList() will be called in watch $route
     },
-    selectUserOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })

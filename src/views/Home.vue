@@ -2,7 +2,17 @@
   <h2 class="text-h6 pb-4">
     {{ $t('Common.TaglineAlt1') }} {{ APP_HOME_ICONS }}
   </h2>
-
+  
+  
+  <v-row>
+    <v-col>
+      <i18n-t keypath="Router.Home.Help" tag="p" class="text-primary text-pre-line">
+        <template #op_name>
+          {{ APP_NAME }}
+        </template>
+      </i18n-t>
+    </v-col>
+  </v-row>
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="todayPriceCount" :subtitle="$t('Common.Today')" />
@@ -14,7 +24,7 @@
 
   <br v-if="currentChallenge">
 
-  <ChallengeBanner v-if="currentChallenge" :challenge="currentChallenge" />
+  <ChallengeCurrentPromoBanner v-if="currentChallenge" :challenge="currentChallenge" />
 
   <br>
 
@@ -42,14 +52,14 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
 
 export default {
   components: {
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
-    ChallengeBanner: defineAsyncComponent(() => import('../components/ChallengeBanner.vue')),
+    ChallengeCurrentPromoBanner: defineAsyncComponent(() => import('../components/ChallengeCurrentPromoBanner.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
@@ -81,14 +91,14 @@ export default {
   },
   methods: {
     getCurrentChallenge() {
-      api.getChallenges({ status: "ONGOING", size: 1 })
+      openPricesApi.getChallenges({ status: 'ONGOING', order_by: '-created', size: 1 })
       .then((data) => {
         this.currentChallenge = data.items[0]
       })
     },
     getPrices() {
       this.loading = true
-      return api.getPrices({ size: this.getApiSize })
+      return openPricesApi.getPrices({ size: this.getApiSize })
         .then((data) => {
           this.latestPriceList = data.items
           this.totalPriceCount = data.total
@@ -97,7 +107,7 @@ export default {
     },
     getTodayPriceCount() {
       this.loading = true
-      return api.getPrices({ created__gte: date_utils.currentStartOfDay(), size: 1 })
+      return openPricesApi.getPrices({ created__gte: date_utils.currentStartOfDay(), size: 1 })
         .then((data) => {
           this.todayPriceCount = data.total
           this.loading = false

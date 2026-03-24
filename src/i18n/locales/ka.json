@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "ქვითარი"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "შექმნა",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,20 +66,20 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "შექმნა",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "ფასი",
+			"LabelDiscounted": "ფასდაკლებული ფასი",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "მტკიცებულება",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"Picture": "Picture",
-			"TakePicture": "Take a picture",
+			"TakePicture": "სურათის გადაღება",
 			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery",
 			"RecentProof": "Recent proof",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "თარიღი",
+			"DateLabel": "თარიღი",
 			"Find": "Find",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -162,14 +162,15 @@
 		"StatsAndRankings": "სტატისტიკა და რეიტინგები",
 		"MostPicturesAdded": "ყველაზე მეტი სურათი დამატებულია",
 		"MostPricesAdded": "დამატებული ფასების უმეტესობა",
-		"MostPricesFromPicturesAdded": "სურათებიდან მიღებული ფასების უმეტესობა დამატებულია"
+		"MostPricesFromPicturesAdded": "სურათებიდან მიღებული ფასების უმეტესობა დამატებულია",
+		"AlertNew": "გაქვთ იდეა ახალი გამოწვევისთვის? შეგვატყობინეთ {url}!"
 	},
 	"Common": {
 		"About": "About",
 		"Action": "მოქმედება",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "ფასის დამატება",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -177,25 +178,29 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "დაამატეთ ახალი ფასების ეტიკეტები",
+		"AddNewProofReceipt": "ახალი ქვითრის დამატება",
 		"AddToOFF": "Add to {name}",
+		"Added": "დამატებულია",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
 		"BarcodeScanShort": "სკანირება",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "არასწორი შტრიხკოდია, რომელიც არასწორია. შტრიხკოდი არასწორია.",
 		"Brand": "ბრენდი",
 		"Brands": "ბრენდები",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "ფასი",
+		"Prices": "ფასები",
 		"PRODUCT": "Product",
 		"Product": "Product",
 		"ProductName": "Product name",
-		"Products": "Products",
-		"Proof": "Proof",
+		"Products": "პროდუქტები",
+		"Proof": "მტკიცებულება",
 		"Proofs": "Proofs",
 		"CATEGORY": "Category",
 		"Category": "Category",
@@ -208,39 +213,45 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
-		"Clear": "Clear",
+		"Clear": "გასუფთავება",
+		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
 		"CommunityProofs": "Community proofs",
-		"Consumption": "Consumption",
+		"Consumption": "მოხმარება",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
 		"Contribute": "Contribute",
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
+		"Confirm": "დადასტურება",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "ვალუტა",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "ვალუტის დამატება შეგიძლიათ თქვენს პარამეტრებში.",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
-		"DisplayMap": "Map",
-		"DisplayPriceMap": "Map",
+		"DisplayMap": "რუკა",
+		"DisplayPriceMap": "რუკა",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
-		"Error": "Error",
+		"Done": "დასრულებულია",
+		"Error": "შეცდომა",
 		"Experiment": "ექსპერიმენტი",
 		"Experiments": "Experiments",
+		"Explore": "დათვალიერება",
+		"FromPriceTag": "ფასიდან",
+		"FromReceipt": "ქვითრიდან",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Label",
@@ -250,6 +261,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "შეიტყვეთ მეტი",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -257,10 +269,14 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "თარიღი",
 		"DateMissing": "Date missing",
-		"Details": "Details",
-		"Delete": "Delete",
+		"DateProofHelpText": "სურათის გადაღების თარიღი.",
+		"DateProofHelpTextExif": "ნაგულისხმევად, ჩვენ ვცდილობთ მის ამოღებას სურათის EXIF მეტამონაცემებიდან.",
+		"DateProofHelpTextReceipt": "ქვითრებისთვის, დააყენეთ შეძენის თარიღი.",
+		"Details": "დეტალები",
+		"Delete": "წაშლა",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
 		"DiscountType": "Discount type",
@@ -271,36 +287,42 @@
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
 		"DiscountTypeSecondHand": "Second hand",
-		"DiscountTypeOther": "Other",
+		"DiscountTypeOther": "სხვა",
 		"Example": "Example",
 		"Examples": "Examples",
-		"ExampleWithColon": "Example:",
+		"ExampleWithColon": "მაგალითი:",
 		"ExampleWithColonAndValue": "Example: {value}",
-		"ExamplesWithColon": "Examples:",
+		"ExamplesWithColon": "მაგალითები:",
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
-		"Filter": "Filter",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "ველი სავალდებულოა",
+		"Filter": "ფილტრი",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "ფასებით",
+		"FilterWithLocationCount": "მდებარეობებით",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "მხოლოდ ჩემი ქვეყნიდან მიღებული მტკიცებულებების ჩვენება",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "მოქმედი შტრიხკოდით",
 		"FilterPriceTagWithTagPredictionProductExists": "მოქმედი პროდუქტით",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "სწორი კატეგორიის თეგით",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
-		"FrequentlyAskedQuestions": "Frequently asked questions",
+		"FAQ": "ხშირად დასმული კითხვები",
+		"FrequentlyAskedQuestions": "ხშირად დასმული კითხვები",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
-		"History": "History",
-		"Image": "Image",
+		"Help": "დახმარება",
+		"Here": "აქ",
+		"History": "ისტორია",
+		"Image": "სურათი",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -311,27 +333,41 @@
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
-		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Map": "რუკა",
+		"Miscellaneous": "სხვადასხვა",
 		"MobileApp": "Mobile app",
+		"Moderation": "მოდერაცია",
+		"ModerationFlagReasonWrongType": "არასწორი ტიპი",
+		"ModerationFlagReasonWrongPriceValue": "არასწორი ფასი",
+		"ModerationFlagReasonWrongCurrency": "არასწორი ვალუტა",
+		"ModerationFlagReasonWrongProduct": "არასწორი პროდუქტი",
+		"ModerationFlagReasonWrongLocation": "არასწორი მდებარეობა",
+		"ModerationFlagReasonWrongDate": "არასწორი თარიღი",
+		"ModerationFlagReasonOther": "სხვა",
+		"ModerationFlagCreateSuccess": "გმადლობთ თქვენი ანგარიშისთვის!",
+		"ModerationFlagStatusOpen": "გახსნა",
+		"ModerationFlagStatusClosed": "დახურულია",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "ჩემი ფასები",
+		"MyProofs": "ჩემი მტკიცებულებები",
 		"MyStats": "My stats",
+		"New": "ახალი",
 		"NextProof": "Next proof",
 		"NoBarcode": "შტრიხკოდი არ არის.",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "გახსნა",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "სახელი",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "ფასი",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -339,7 +375,7 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
-		"Other": "Other",
+		"Other": "სხვა",
 		"OtherContributions": "Other contributions",
 		"PageNotMaintainedAnymore": "ეს გვერდი აღარ არის შენახული.",
 		"PersonalInfo": "Personal information",
@@ -354,14 +390,21 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "ფასი",
 		"PriceTags": "ფასების ეტიკეტები",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "ფასი აკლია",
+		"PricePerMissing": "ფასი ერთ ნაკლად",
+		"PriceAlreadyUploaded": "ფასი უკვე ატვირთულია",
+		"PriceReadyToBeUploaded": "ფასი მზადაა ასატვირთად",
 		"PricesAlreadyUploaded": "ფასები უკვე ატვირთულია",
+		"PricesAll": "ყველა ფასი",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -369,7 +412,7 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "თქვენს მიერ დამატებული ფასები",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "კონფიდენციალურობა",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProductMissing": "პროდუქტი აკლია",
@@ -377,11 +420,12 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "აირჩიეთ მტკიცებულება",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} ატვირთულია მტკიცებულებები",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,39 +433,48 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "რანგი",
+		"Reason": "მიზეზი",
+		"RECEIPT": "ქვითარი",
+		"Receipt": "ქვითარი",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "ხელახლა გახსნა",
+		"ReportProblem": "პრობლემის შესახებ შეტყობინება",
+		"Reset": "Reset",
+		"Resolved": "გადაწყვეტილია",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "ძებნა",
 		"Select": "Select",
+		"Send": "Send",
 		"Settings": "Settings",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out",
+		"SignIn": "შესვლა",
+		"SignOut": "გასვლა",
 		"SideMenu": "Side menu",
-		"Share": "Share",
-		"Source": "Source",
+		"Share": "გაზიარება",
+		"Source": "წყარო",
 		"SourceCode": "Source code",
-		"Start": "Start",
+		"Start": "დაწყება",
 		"Stats": "Stats",
+		"Status": "სტატუსი",
 		"SuggestedBarcode": "რეკომენდებული შტრიხკოდი:",
 		"Summary": "Summary",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "ტექსტი",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "თემა",
+		"ThemeLight": "სინათლე",
+		"ThemeDark": "მუქი",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -429,12 +482,12 @@
 		"TopCountries": "საუკეთესო ქვეყნები",
 		"Today": "Today",
 		"Top": "Top",
-		"Total": "Total",
+		"Total": "სულ",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"TryItOut": "სცადეთ",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "უცნობი პროდუქტი",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -453,18 +506,29 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "მომხმარებელი ვერ მოიძებნა",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "ფასების დადასტურება საზოგადოებისგან",
 		"View": "View",
-		"Website": "Website",
+		"Website": "ვებსაიტი",
+		"WithAPrice": "With a price",
+		"WithoutAPrice": "ფასის გარეშე",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "დიახ",
 		"No": "No",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Food": "საკვები",
+		"PetFood": "შინაური ცხოველების საკვები",
+		"Beauty": "სილამაზე"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -513,10 +577,27 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "ვალუტა",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
+	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "შექმენით ახალი პროდუქტი",
+		"CreateProduct": "პროდუქტის შექმნა",
+		"EnableCropMode": "ჩამოჭრის რეჟიმის ჩართვა",
+		"Flavor": "აირჩიეთ პროექტი, რომელშიც პროდუქტი უნდა შეიქმნას",
+		"NextProof": "Next proof",
+		"PreviousProof": "წინა მტკიცებულება",
+		"ProductAlreadyExists": "პროდუქტი უკვე არსებობს",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "დამტკიცება ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "მაღაზიები, სადაც იყიდება",
+		"UseCropModeToAddImage": "პროდუქტის სურათის დასამატებლად, ჩართეთ ჩამოჭრის რეჟიმი სურათის ქვემოთ და შემოხაზეთ მართკუთხედი პროდუქტს.",
+		"ProductMissingPromoBanner": "ექსპერიმენტი: შექმენით ეს პროდუქტი ღია ფასების მონაცემების გამოყენებით"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -529,18 +610,18 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Settings",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out"
+		"SignIn": "შესვლა",
+		"SignOut": "გასვლა"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "ფასის დამატება",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "პროდუქტის ძიება",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -555,8 +636,10 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
-		"Clear": "Clear",
+		"Clear": "გასუფთავება",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "ვერ პოულობთ თქვენს მაღაზიას? სცადეთ სრული მისამართის ნაცვლად გამოიყენოთ საკვანძო სიტყვები (მაგ. „Carrefour 75013 Paris“ ან „Walmart San Francisco“).",
+		"NoResultHelpOSM": "ჯერ კიდევ ვერ პოულობთ თქვენს მაღაზიას? შესაძლოა, ის ჯერ არ იყოს {osm_name} -ში. შეგიძლიათ ჯერ დაამატოთ ის {osm_url} -ზე.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -576,13 +659,13 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "მტკიცებულება",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "უცნობი პროდუქტი"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
-		"Delete": "Delete",
+		"Delete": "წაშლა",
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
@@ -593,8 +676,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "ფასი",
+		"LabelDiscounted": "ფასდაკლებული ფასი",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -616,14 +699,14 @@
 		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Categories",
-		"CategoriesLower": "categories",
+		"CategoriesLower": "კატეგორიები",
 		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Labels",
-		"LabelsLower": "labels",
+		"LabelsLower": "ეტიკეტები",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "არასწორი შტრიხკოდია, რომელიც არასწორია. შტრიხკოდი არასწორია.",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -633,10 +716,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "უცნობი პროდუქტის სახელი"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "ფასის დამატება",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -654,30 +737,30 @@
 		"PromoReceiptAssistant": "ექსპერიმენტი: სცადეთ ახალი ქვითრების ასისტენტი, რათა ავტომატურად ამოიღოთ ფასები თქვენი ქვითრებიდან!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "მტკიცებულება",
+		"PRICE_TAG": "ფასი",
+		"RECEIPT": "ქვითარი",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "აირჩიეთ მტკიცებულება",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
-		"Delete": "Delete",
+		"Delete": "წაშლა",
 		"Title": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "ფასები",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "კონფიდენციალურობა"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "ქვითრის ნივთები",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -704,8 +787,11 @@
 		"About": {
 			"Title": "About"
 		},
+		"Add": {
+			"Title": "დამატება"
+		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "ფასის დამატება"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -728,11 +814,23 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "დაამატეთ დამადასტურებელი საბუთი (ქვითარი)"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "დათვალიერება"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "ფასის დამატება"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -741,7 +839,10 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "ფასები"
+		},
+		"PriceTags": {
+			"Title": "ფასების ეტიკეტები"
 		},
 		"Proofs": {
 			"Title": "Proofs"
@@ -749,17 +850,30 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "ქვითარი"
+		},
+		"Cities": {
+			"Title": "ქალაქები"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
 		},
+		"Countries": {
+			"Title": "Countries"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Home",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -770,11 +884,14 @@
 		"LatestProofs": {
 			"Title": "Latest proofs"
 		},
+		"Moderation": {
+			"Title": "მოდერაცია"
+		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "ჩემი ფასები"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "ჩემი მტკიცებულებები"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -789,7 +906,7 @@
 			"Title": "Settings"
 		},
 		"SignIn": {
-			"Title": "Sign in"
+			"Title": "შესვლა"
 		},
 		"Stats": {
 			"Title": "Stats"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "ფასის დადასტურების ასისტენტი"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -837,29 +956,30 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "Share"
+		"Title": "გაზიარება"
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "შესვლა",
+		"Password": "პაროლი",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "შესვლა",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "ფასები",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "პროდუქტები",
 		"Locations": "Locations",
 		"Users": "Users",
-		"Total": "Total",
+		"Total": "სულ",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "ფასები წყაროს მიხედვით",
+		"ProofsPerSource": "მტკიცებულებები წყაროს მიხედვით",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -876,8 +998,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "ჩემი ფასები",
+		"MyProofs": "ჩემი მტკიცებულებები",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Settings",
 		"Title": "Dashboard",
@@ -897,9 +1019,10 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "ვალუტა",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

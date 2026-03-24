@@ -162,12 +162,13 @@
 		"StatsAndRankings": "Статистика и рейтинги",
 		"MostPicturesAdded": "Большинство добавленных фотографий",
 		"MostPricesAdded": "Большинство цен добавлено",
-		"MostPricesFromPicturesAdded": "Большинство цен с добавленных изображений"
+		"MostPricesFromPicturesAdded": "Большинство цен с добавленных изображений",
+		"AlertNew": "Есть идея для нового испытания? Дайте нам знать {url}!"
 	},
 	"Common": {
 		"About": "О приложении",
 		"Action": "Действие",
-		"Actions": "Actions",
+		"Actions": "Действия",
 		"AddComment": "Добавить комментарий",
 		"AddPrice": "Добавить цену",
 		"AddPrices": "Добавить цены",
@@ -177,8 +178,12 @@
 		"AddProofs": "Добавить доказательства",
 		"AddNewProof": "Добавить новое доказательство",
 		"AddNewProofs": "Добавить новые доказательства",
+		"AddNewProofPriceTags": "Добавить новые ценники",
+		"AddNewProofReceipt": "Добавить новый чек",
 		"AddToOFF": "Добавить в {name}",
+		"Added": "Добавлен",
 		"AdditionalInfo": "Дополнительная информация",
+		"All": "Все",
 		"Barcode": "Штрих-код",
 		"Barcodes": "Штрих-коды",
 		"BarcodeScan": "Сканировать штрихкод",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} вызовы | {count} вызов | {count} вызовы",
 		"Chart": "Диаграмма",
 		"Clear": "Очистить",
+		"Close": "Закрыть",
 		"Comment": "Комментарий",
 		"Community": "Сообщество",
 		"CommunityPrices": "Цены сообщества",
@@ -220,6 +226,7 @@
 		"Contributors": "Участники",
 		"Contributions": "Вклад",
 		"Confirm": "Подтвердить",
+		"Count": "Кол-во",
 		"Country": "Страна",
 		"Countries": "Страны",
 		"CountryCount": "{count} страны | {count} страна | {count} страны",
@@ -229,6 +236,7 @@
 		"Currencies": "Валюты",
 		"CurrencyMissing": "Валюта отсутствует",
 		"CurrencyCount": "{count} валюты | {count} валюты | {count} валюты",
+		"CurrencyProofHelpTextSettings": "Вы можете добавить валюты в настройках.",
 		"Dashboard": "Панель инструментов",
 		"Display": "Показать",
 		"DisplayList": "Список",
@@ -241,6 +249,9 @@
 		"Error": "Ошибка",
 		"Experiment": "Эксперимент",
 		"Experiments": "Эксперименты",
+		"Explore": "Исследовать",
+		"FromPriceTag": "С ценника",
+		"FromReceipt": "Из квитанции",
 		"GoToProof": "Go to proof",
 		"Join": "Вступить",
 		"Label": "Маркировка",
@@ -250,6 +261,7 @@
 		"Languages": "Языки",
 		"LatestPrices": "Последние цены",
 		"LatestProofs": "Последние доказательства",
+		"LearnMore": "Узнать больше",
 		"LoadMore": "Загрузить ещё",
 		"Location": "Местоположение",
 		"Locations": "Места",
@@ -257,8 +269,12 @@
 		"LocationFindShop": "Найти местоположение магазина",
 		"LocationMissing": "Местоположение отсутствует",
 		"LocationSearchByName": "Поиск по имени и городу",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Дата",
 		"DateMissing": "Дата отсутствует",
+		"DateProofHelpText": "Дата фотографии.",
+		"DateProofHelpTextExif": "По умолчанию мы пытаемся извлечь эту информацию из EXIF-метаданных изображения.",
+		"DateProofHelpTextReceipt": "Для чеков укажите дату покупки.",
 		"Details": "Подробности",
 		"Delete": "Удалить",
 		"DeveloperMode": "Режим разработчика",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "Примеры: {value}",
 		"Edit": "Редактировать",
 		"End": "Конец",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Поле обязательно для заполнения",
 		"Filter": "Фильтр",
 		"FilterChallengesShowAllStatus": "Показать все испытания",
+		"FilterWithPriceCount": "С ценами",
+		"FilterWithLocationCount": "С местоположениями",
 		"FilterProductWithPriceCount": "С ценой",
 		"FilterProductWithPriceCountHide": "Скрыть продукты с ценами",
 		"FilterProductWithoutPriceCount": "Без цен",
 		"FilterPriceMoreThan30DaysHide": "Скрыть цены старше 30 дней",
 		"FilterProofWithPriceCountHide": "Скрыть доказательства с ценами",
 		"FilterPriceTagWithProofOwner": "Показывать только мои доказательства",
+		"FilterPriceTagWithProofUserCountry": "Покажите только доказательства из моей страны.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "С действительным штрихкодом",
 		"FilterPriceTagWithTagPredictionProductExists": "С действительным продуктом",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "С действительным тегом категории",
@@ -299,6 +320,7 @@
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Группа",
 		"Help": "Помощь",
+		"Here": "Здесь",
 		"History": "История",
 		"Image": "Изображение",
 		"ImageSelect": "Выберите изображение",
@@ -314,19 +336,33 @@
 		"Map": "Карта",
 		"Miscellaneous": "Прочее",
 		"MobileApp": "Мобильное приложение",
+		"Moderation": "Модерация",
+		"ModerationFlagReasonWrongType": "Неправильный тип",
+		"ModerationFlagReasonWrongPriceValue": "Неправильное значение цены",
+		"ModerationFlagReasonWrongCurrency": "Не та валюта",
+		"ModerationFlagReasonWrongProduct": "Не тот продукт",
+		"ModerationFlagReasonWrongLocation": "Неправильное местоположение",
+		"ModerationFlagReasonWrongDate": "Неправильная дата",
+		"ModerationFlagReasonOther": "Прочее",
+		"ModerationFlagCreateSuccess": "Спасибо за ваш отчет!",
+		"ModerationFlagStatusOpen": "Открыть",
+		"ModerationFlagStatusClosed": "Закрыто",
 		"MyConsumption": "Мое потребление",
 		"MyDashboard": "Моя панель инструментов",
 		"MyPrices": "Мои цены",
 		"MyProofs": "Мои доказательства",
 		"MyStats": "Моя статистика",
+		"New": "Новый",
 		"NextProof": "Next proof",
 		"NoBarcode": "Нет штрихкода",
 		"NotAnError": "Не ошибка",
 		"NotAPrice": "Не цена",
 		"Offline": "Офлайн",
 		"Online": "Онлайн",
+		"Open": "Открыть",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Заказ",
+		"OrderNameASC": "Название",
 		"OrderLocationCountDESC": "Количество мест",
 		"OrderProductUniqueScansDESC": "Количество сканирований",
 		"OrderProductPriceCountDESC": "Количество цен",
@@ -356,12 +392,19 @@
 		"PicturesAddedByYou": "Фотографии добавлены вами",
 		"PRICE_TAG": "Ценник",
 		"PriceTags": "Ценники",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} цены | {count} цены | {count} цены",
 		"PriceAddedCount": "{count} цены добавлены | {count} цены добавлены | {count} цены добавлены",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} цены для проверки | {count} цены для проверки | {count} цены для проверки",
 		"PriceCreated": "Цена создана!",
 		"PriceMissing": "Цена отсутствует",
+		"PricePerMissing": "Цена за отсутствующий",
+		"PriceAlreadyUploaded": "Цена уже загружена",
+		"PriceReadyToBeUploaded": "Цена готова к загрузке",
 		"PricesAlreadyUploaded": "Цены уже загружены",
+		"PricesAll": "Все цены",
 		"PricesMore": "Больше цен",
 		"PricesAdded": "Цены добавлены",
 		"PricesAddedToday": "Цены добавлены сегодня",
@@ -382,6 +425,7 @@
 		"ProofSelected": "Доказательство выбрано!",
 		"ProofSelectedCount": "{count} выбрано доказательств | {count} выбрано доказательств | {count} выбрано доказательств",
 		"ProofUploadedCount": "{count} доказательств загружено | {count} доказательств загружено | {count} доказательств загружено",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} доказательств загружено",
 		"ProofsAddedToday": "Доказательства добавлены сегодня",
 		"ProofsToday": "Доказательства сегодня",
 		"ProofNotFound": "Доказательства не найдены",
@@ -389,46 +433,55 @@
 		"Quantity": "Количество",
 		"QuantityBought": "Количество купленных",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Классифицировать",
+		"Reason": "Причина",
 		"RECEIPT": "Чек",
 		"Receipt": "Чек",
-		"Receipts": "Receipts",
+		"Receipts": "Квитанции",
 		"ReceiptPriceCount": "Количество цен",
-		"ReceiptPriceTotal": "Total amount",
+		"ReceiptPriceTotal": "Общая сумма",
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
-		"ReceiptOnlineDeliveryCosts": "Delivery costs",
-		"Recent": "Recent",
+		"ReceiptOnlineDeliveryCosts": "Стоимость доставки",
+		"Recent": "Недавние",
+		"Re-open": "Повторно открыть",
+		"ReportProblem": "Сообщить о проблеме",
+		"Reset": "Сбросить",
+		"Resolved": "Решено",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Поиск",
-		"Select": "Select",
+		"Select": "Выбрать",
+		"Send": "Отправить",
 		"Settings": "Настройки",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Вход выполнен!",
 		"SignIn": "Войти",
 		"SignOut": "Выйти",
-		"SideMenu": "Side menu",
+		"SideMenu": "Боковое меню",
 		"Share": "Поделиться",
 		"Source": "Источник",
-		"SourceCode": "Source code",
+		"SourceCode": "Исходный код",
 		"Start": "Начать",
 		"Stats": "Статистика",
+		"Status": "Статус",
 		"SuggestedBarcode": "Предлагаемый штрих-код:",
 		"Summary": "Резюме",
-		"TaglineOriginal": "An open crowdsourced database of food prices",
-		"TaglineAlt1": "The open crowdsourced database of prices",
-		"TaglineAlt2": "The open crowdsourced database of food and product prices",
-		"TaglineAlt3": "Prices should be free",
+		"TaglineOriginal": "Открытая краудсорсинговая база данных цен на еду",
+		"TaglineAlt1": "Открытая краудсорсинговая база данных цен",
+		"TaglineAlt2": "Открытая краудсорсинговая база данных цен на еду и товары",
+		"TaglineAlt3": "Цены должны быть бесплатными",
+		"Text": "Текст",
 		"Thanks": "Спасибо",
 		"Theme": "Тема",
 		"ThemeLight": "Дневной режим",
 		"ThemeDark": "Ночной режим",
-		"TopContributors": "Top contributors",
-		"TopLocations": "Top locations",
-		"TopProducts": "Top products",
+		"TopContributors": "Топ участников",
+		"TopLocations": "Лучшие локации",
+		"TopProducts": "Лучшие продукты",
 		"TopCities": "Лучшие города",
 		"TopCountries": "Лучшие страны",
 		"Today": "Сегодня",
-		"Top": "Top",
+		"Top": "Лучшие",
 		"Total": "Всего",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
@@ -453,11 +506,22 @@
 		"Users": "Пользователи",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Пользователь не найден",
 		"Validate": "Подтвердить",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "Проверить цены от сообщества",
 		"View": "Вид",
 		"Website": "Веб-сайт",
+		"WithAPrice": "С ценой",
+		"WithoutAPrice": "Без цены",
 		"Year": "Год",
 		"Years": "Годы",
 		"Yes": "Да",
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Страны продажи",
+		"CreateNewProduct": "Создать новый продукт",
+		"CreateProduct": "Создать продукт",
+		"EnableCropMode": "Включить режим обрезки",
+		"Flavor": "Выберите проект, в котором будет создан продукт.",
+		"NextProof": "Next proof",
+		"PreviousProof": "Предыдущее доказательство",
+		"ProductAlreadyExists": "Продукт уже существует",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Доказательство ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Магазины, где продается",
+		"UseCropModeToAddImage": "Чтобы добавить изображение продукта, включите режим кадрирования под пробным изображением и нарисуйте прямоугольник вокруг продукта.",
+		"ProductMissingPromoBanner": "Эксперимент: создать этот продукт, используя данные из Open Prices."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -556,7 +637,9 @@
 	},
 	"LocationSelector": {
 		"Clear": "Очистить",
-		"NoResult": "No results found",
+		"NoResult": "Результаты не найдены",
+		"NoResultHelpKeywords": "Не можете найти свой магазин? Попробуйте использовать ключевые слова вместо полного адреса (например, «Carrefour 75013 Paris» или «Walmart San Francisco»).",
+		"NoResultHelpOSM": "Всё ещё не можете найти свой магазин? Возможно, его пока нет в {osm_name} . Сначала добавьте его в {osm_url} .",
 		"PoweredBy": {
 			"text": "работает на {url}"
 		},
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Квитанции о получении",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "О приложении"
+		},
+		"Add": {
+			"Title": "Добавить"
 		},
 		"AddPrice": {
 			"Title": "Добавить цену"
@@ -728,6 +814,18 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Приложите подтверждение (чек)."
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "Исследовать"
+		},
 		"Locations": {
 			"Title": "Места"
 		},
@@ -743,11 +841,20 @@
 		"Prices": {
 			"Title": "Цены"
 		},
+		"PriceTags": {
+			"Title": "Ценники"
+		},
 		"Proofs": {
 			"Title": "Доказательства"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Чек"
+		},
+		"Cities": {
+			"Title": "Города"
 		},
 		"Community": {
 			"Title": "Сообщество"
@@ -755,11 +862,18 @@
 		"Contribute": {
 			"Title": "Способствовать"
 		},
+		"Countries": {
+			"Title": "Страны"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Эксперименты"
 		},
 		"Home": {
-			"Title": "Главная"
+			"Title": "Главная",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Панель инструментов"
@@ -769,6 +883,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Последние доказательства"
+		},
+		"Moderation": {
+			"Title": "Модерация"
 		},
 		"MyPrices": {
 			"Title": "Мои цены"
@@ -795,13 +912,13 @@
 			"Title": "Статистика"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "Топ участников"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "Лучшие локации"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Лучшие продукты"
 		},
 		"Users": {
 			"Title": "Пользователи"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Помощник по проверке ценников"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Вызов"
 		},
 		"Challenges": {
-			"Title": "Вызовы"
+			"Title": "Вызовы",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Вызов сообществу"
+		},
+		"Validate": {
+			"Title": "Подтвердить",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Войти",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Цены за источник",
+		"ProofsPerSource": "Доказательства по источникам",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -890,7 +1012,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Загрузить ещё",
-		"Title": "Top contributors",
+		"Title": "Топ участников",
 		"UserTotal": "{count} contributors"
 	},
 	"UserSettings": {
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показать",
 		"BarcodeScanner": "Сканер штрихкодов",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Режим по умолчанию",
 		"FavoriteCurrencies": "Любимые валюты",
 		"CurrencyRequired": "Требуется хотя бы одна валюта",

@@ -9,7 +9,7 @@
         <v-divider />
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
         <OpenStreetMapLink v-if="isTypeOSM" :location="location" display="list-item" />
-        <v-list-item v-if="isTypeONLINE" append-icon="mdi-open-in-new" :href="location.website_url" target="_blank" rel="noopener noreferrer">
+        <v-list-item v-if="isTypeONLINE" :prepend-icon="LOCATION_TYPE_ONLINE_ICON" append-icon="mdi-open-in-new" :href="location.website_url" target="_blank" rel="noopener noreferrer">
           {{ $t('Common.Website') }}
         </v-list-item>
       </v-list>
@@ -38,7 +38,8 @@ export default {
   },
   data() {
     return {
-      ACTION_MENU_ICON: constants.ACTION_MENU_ICON
+      ACTION_MENU_ICON: constants.ACTION_MENU_ICON,
+      LOCATION_TYPE_ONLINE_ICON: constants.LOCATION_TYPE_ONLINE_ICON
     }
   },
   computed: {

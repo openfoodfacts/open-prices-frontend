@@ -5,14 +5,16 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.TopProducts') }}
       </h2>
-      <LoadedCountChip :loadedCount="categoryProductList.length" :totalCount="categoryProductTotal" />
-      <FilterMenu kind="product" :currentFilterList="currentFilterList" :hideSource="true" @update:currentFilterList="updateFilterList($event)" />
-      <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="categoryProductList.length" :totalCount="categoryProductTotal" />
+        <FilterMenu kind="product" :currentFilterList="currentFilterList" :hideSource="true" @update:currentFilterList="updateFilterList($event)" />
+        <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      </template>
     </v-col>
   </v-row>
 
@@ -32,7 +34,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import utils from '../utils.js'
 
 export default {
@@ -99,7 +101,7 @@ export default {
       if ((this.categoryProductTotal != null) && (this.categoryProductList.length >= this.categoryProductTotal)) return
       this.loading = true
       this.categoryProductPage += 1
-      return api.getProducts(this.getProductsParams)
+      return openPricesApi.getProducts(this.getProductsParams)
         .then((data) => {
           this.categoryProductList.push(...data.items)
           this.categoryProductTotal = data.total
@@ -111,7 +113,7 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initCategory() will be called in watch $route
     },
-    selectProductOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })

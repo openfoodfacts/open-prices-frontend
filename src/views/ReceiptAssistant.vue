@@ -1,111 +1,119 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <v-stepper v-model="step" hide-actions editable>
+      <v-stepper v-model="step" hide-actions disabled>
         <v-stepper-header>
           <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" />
           <v-divider />
           <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step === 3" />
+          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
   </v-row>
 
-  <v-row v-if="step === 1">
-    <v-col cols="12" md="6">
-      <ProofUploadCard :typeReceiptOnly="true" :assistedByAI="true" @proof="onProofUploaded($event)" />
-    </v-col>
-  </v-row>
+  <!-- Step 1: proof upload -->
+  <template v-if="step === 1">
+    <v-row>
+      <v-col cols="12" md="6">
+        <ProofUploadCard :typeReceiptOnly="true" :assistedByAI="true" @proof="onProofUploaded($event)" />
+      </v-col>
+    </v-row>
+  </template>
   
-  <v-row v-if="step === 2">
-    <v-col v-if="loadingPredictions" cols="12">
-      <v-alert class="mb-2" type="info" variant="outlined">
-        {{ $t('ReceiptAssistant.WaitForExtraction') }}
-        <v-progress-circular indeterminate />
-      </v-alert>
-    </v-col>
-    <v-col v-else-if="!proofHasReceiptPredictionItems" cols="12">
-      <v-alert class="mb-2" type="warning" variant="outlined">
-        {{ $t('ReceiptAssistant.NoItemsFound') }}
-      </v-alert>
-    </v-col>
-    <v-col cols="12" lg="4">
-      <ProofCard mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
-    </v-col>
-    <v-col cols="12" lg="8">
-      <ReceiptTableCard :proof="proofObject" :receiptItems="receiptItems" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
-      <v-row>
-        <v-col>
-          <v-btn v-if="validNewReceiptItems.length !== validReceiptItems.length" class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
-            {{ $t('ReceiptAssistant.UploadOnlyNewPrices', { nbPrices: validNewReceiptItems.length }) }}
-          </v-btn>
-          <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validReceiptItems)">
-            {{ $t('ReceiptAssistant.UploadOrUpdateAllValidPrices', { nbPrices: validReceiptItems.length }) }}
-          </v-btn>
-        </v-col>
-      </v-row>
-    </v-col>
-  </v-row>
+  <template v-if="step === 2">
+    <v-row>
+      <v-col v-if="loadingPredictions" cols="12">
+        <v-alert class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
+          {{ $t('ReceiptAssistant.WaitForExtraction') }}
+          <v-progress-circular indeterminate />
+        </v-alert>
+      </v-col>
+      <v-col v-else-if="!proofHasReceiptPredictionItems" cols="12">
+        <v-alert class="mb-2" type="warning" variant="outlined" density="compact">
+          {{ $t('ReceiptAssistant.NoItemsFound') }}
+        </v-alert>
+      </v-col>
+      <v-col cols="12" lg="4">
+        <ProofCard mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
+      </v-col>
+      <v-col v-if="!loadingPredictions" cols="12" lg="8">
+        <ReceiptTableCard :proof="proofObject" :receiptItems="receiptItems" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
+        <v-row>
+          <v-col>
+            <v-btn v-if="validNewReceiptItems.length !== validReceiptItems.length" class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
+              {{ $t('ReceiptAssistant.UploadOnlyNewPrices', { nbPrices: validNewReceiptItems.length }) }}
+            </v-btn>
+            <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validReceiptItems)">
+              {{ $t('ReceiptAssistant.UploadOrUpdateAllValidPrices', { nbPrices: validReceiptItems.length }) }}
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+  </template>
 
-  <v-row v-if="step === 3">
-    <v-col>
-      <v-row>
-        <v-col cols="12">
-          <v-progress-linear
-            v-if="!finishedUploading"
-            v-model="numberOfPricesAdded"
-            :max="totalNumberOfPricesToAdd"
-            :color="totalNumberOfPricesToAdd === numberOfPricesAdded ? 'success' : 'primary'"
-            height="25"
-            :striped="totalNumberOfPricesToAdd !== numberOfPricesAdded"
-            rounded
-          />
-          <v-alert
-            v-if="finishedUploading"
-            type="success"
-            variant="outlined"
-            density="compact"
-            :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
-          />
-        </v-col>
-      </v-row>
-      <v-row v-if="finishedUploading">
-        <v-col cols="12" sm="6" lg="4">
-          <v-card
-            :title="$t('Common.AddNewProof')"
-            prepend-icon="mdi-image-plus"
-            append-icon="mdi-arrow-right"
-            @click="reloadPage"
-          />
-        </v-col>
-        <v-col cols="12" sm="6" lg="4">
-          <v-card
-            :title="$t('Common.GoToProof')"
-            prepend-icon="mdi-image"
-            append-icon="mdi-arrow-right"
-            :to="'/proofs/' + proofObject.id"
-          />
-        </v-col>
-        <v-col cols="12" sm="6" lg="4">
-          <v-card
-            :title="$t('Common.MyDashboard')"
-            prepend-icon="mdi-account-circle"
-            append-icon="mdi-arrow-right"
-            :to="getUserDashboardUrl"
-          />
-        </v-col>
-      </v-row>
-    </v-col>
-  </v-row>
+  <!-- Step 3: actions -->
+  <template v-if="step === 3">
+    <v-row>
+      <v-col>
+        <v-row>
+          <v-col cols="12">
+            <v-progress-linear
+              v-if="!finishedUploading"
+              v-model="numberOfPricesAdded"
+              :max="totalNumberOfPricesToAdd"
+              :color="totalNumberOfPricesToAdd === numberOfPricesAdded ? 'success' : 'primary'"
+              height="25"
+              :striped="totalNumberOfPricesToAdd !== numberOfPricesAdded"
+              rounded
+            />
+            <v-alert
+              v-if="finishedUploading"
+              type="success"
+              variant="outlined"
+              density="compact"
+              :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
+            />
+          </v-col>
+        </v-row>
+        <v-row v-if="finishedUploading">
+          <v-col cols="12" sm="6" lg="4">
+            <v-card
+              :title="$t('Common.AddNewProof')"
+              prepend-icon="mdi-image-plus"
+              append-icon="mdi-arrow-right"
+              @click="reloadPage"
+            />
+          </v-col>
+          <v-col cols="12" sm="6" lg="4">
+            <v-card
+              :title="$t('Common.GoToProof')"
+              prepend-icon="mdi-image"
+              append-icon="mdi-arrow-right"
+              :to="'/proofs/' + proofObject.id"
+            />
+          </v-col>
+          <v-col cols="12" sm="6" lg="4">
+            <v-card
+              :title="$t('Common.MyDashboard')"
+              prepend-icon="mdi-account-circle"
+              append-icon="mdi-arrow-right"
+              :to="getUserDashboardUrl"
+            />
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+  </template>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 
 export default {
@@ -153,7 +161,7 @@ export default {
       // item.product_code means any typed product_code would work, including ones with no product associated
       // item.productFound means the product was explicitly selected by the user
       if (!this.receiptItems) return []
-      const isProductValid = item => item.isCategory ? item.category_tag : item.product_code
+      const isProductValid = item => this.itemIsCategory(item) ? item.category_tag : item.product_code
       return this.receiptItems.filter(item => item.price && isProductValid(item))
     },
     validNewReceiptItems() {
@@ -179,7 +187,10 @@ export default {
   methods: {
     initWithProofIds(proofIds) {
       if (proofIds.length) {
-        api.getProofById(proofIds[0]).then(proof => {
+        // move to step 2
+        this.step = 2
+        // fetch the proof & AI predictions
+        openPricesApi.getProofById(proofIds[0]).then(proof => {
           this.onProofUploaded(proof)
         })
       }
@@ -193,7 +204,7 @@ export default {
       this.loadingPredictions = true
       this.loadProofWithReceiptItems(receiptItems => {
         this.receiptItems = receiptItems
-        api.getPrices({proof_id: this.proofObject.id}).then(data => {
+        openPricesApi.getPrices({proof_id: this.proofObject.id}).then(data => {
           this.loadingPredictions = false
           this.proofPriceExistingList = data.items
         })
@@ -211,7 +222,7 @@ export default {
         if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
           maxTries = 1
         }
-        api.getReceiptItems({proof_id: this.proofObject.id}).then(data => {
+        openPricesApi.getReceiptItems({proof_id: this.proofObject.id, size: 100}).then(data => {
           const receiptItems = data.items
           if (receiptItems.length) {
             callback(receiptItems)
@@ -227,6 +238,9 @@ export default {
       }
       load()
     },
+    itemIsCategory(item) {
+      return item.type === constants.PRICE_TYPE_CATEGORY
+    },
     receiptItemsUpdated(newReceiptItems) {
       this.receiptItems = newReceiptItems
     },
@@ -236,11 +250,11 @@ export default {
         price_id: priceId
       }
       if (receiptItemId != null) {
-        api.updateReceiptItem(receiptItemId, receiptItemData)
+        openPricesApi.updateReceiptItem(receiptItemId, receiptItemData)
       } else {
         receiptItemData.proof_id = this.proofObject.id
         receiptItemData.order = 0
-        api.createReceiptItem(receiptItemData)
+        openPricesApi.createReceiptItem(receiptItemData)
       }
     },
     addPrices(receiptItems) {
@@ -260,20 +274,13 @@ export default {
           price: receiptItems[i].price || receiptItems[i].predicted_data.price,
           product_name: receiptItems[i].product_name || receiptItems[i].predicted_data.product_name
         }
-        // cleanup for API
-        if (receiptItems[i].isCategory) {
-          delete priceData.product_code
-        } else {
-          delete priceData.category_tag
-          delete priceData.price_per
-        }
         if (receiptItems[i].price_id) {
-          api.updatePrice(receiptItems[i].price_id, priceData).then((price) => {
+          openPricesApi.updatePrice(receiptItems[i].price_id, priceData).then((price) => {
             this.numberOfPricesAdded += 1
             this.updateOrAddReceiptItem(receiptItems[i].id, price.id)
           })
         } else {
-          api.createPrice(priceData, this.$route.path).then((price) => {
+          openPricesApi.createPrice(priceData, this.$route.path).then((price) => {
             this.numberOfPricesAdded += 1
             this.updateOrAddReceiptItem(receiptItems[i].id, price.id)
           })

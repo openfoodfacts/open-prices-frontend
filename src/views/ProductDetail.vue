@@ -8,19 +8,9 @@
 
   <v-row v-if="productOrCategoryNotFound" class="mt-0">
     <v-col cols="12" sm="6">
-      <v-alert v-if="productNotFound" data-name="product-not-found-alert" type="error" variant="outlined">
-        <p>
-          <i18n-t keypath="ProductDetail.ProductNotFound" tag="i">
-            <template #name>
-              {{ OFF_NAME }}
-            </template>
-          </i18n-t>
-        </p>
-        <OpenFoodFactsAddMenu :productCode="productId" />
-      </v-alert>
-      <v-alert v-else-if="categoryNotFound" data-name="category-not-found-alert" type="error" variant="outlined">
-        <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
-      </v-alert>
+      <ProductNotFoundAlert v-if="productNotFound" :productCode="productId" />
+      <CreateOpenFoodFactsProductPromoBanner v-if="productNotFound && priceTotal" class="mt-3" :productCode="productId" />
+      <CategoryNotFoundAlert v-else-if="categoryNotFound" :categoryTag="productId" />
     </v-col>
   </v-row>
 
@@ -29,10 +19,12 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
       </h2>
-      <LoadedCountChip v-if="!loading" :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <FilterMenu kind="price" :hideType="true" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
-      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
-      <DisplayMenu kind="price" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
+        <FilterMenu kind="price" :hideType="true" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
+        <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+        <DisplayMenu :show="['list', 'table', 'map', 'chart']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      </template>
     </v-col>
   </v-row>
 
@@ -40,7 +32,7 @@
     <v-window-item value="list">
       <v-row class="mt-0 mb-1">
         <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
-          <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductTitle="true" :hideProductDetails="productIsCategory ? false : true" elevation="1" height="100%" />
+          <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductTitle="true" :hideProductDetailsRow="productIsCategory ? false : true" elevation="1" height="100%" />
         </v-col>
       </v-row>
     </v-window-item>
@@ -74,14 +66,18 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
+import date_utils from '../utils/date.js'
 import utils from '../utils.js'
 
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
+    ProductNotFoundAlert: defineAsyncComponent(() => import('../components/ProductNotFoundAlert.vue')),
+    CategoryNotFoundAlert: defineAsyncComponent(() => import('../components/CategoryNotFoundAlert.vue')),
+    CreateOpenFoodFactsProductPromoBanner: defineAsyncComponent(() => import('../components/CreateOpenFoodFactsProductPromoBanner.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
@@ -90,11 +86,9 @@ export default {
     PriceTable: defineAsyncComponent(() => import('../components/PriceTable.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
     PriceChart: defineAsyncComponent(() => import('../components/PriceChart.vue')),
-    OpenFoodFactsAddMenu: defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),
   },
   data() {
     return {
-      OFF_NAME: constants.OFF_NAME,
       productId: this.$route.params.id,  // product_code or product_category
       // data
       product: null,
@@ -109,7 +103,7 @@ export default {
       // filter, order & display
       currentFilterList: [],
       currentOrder: constants.PRICE_ORDER_LIST[2].key,  // date
-      currentDisplay: constants.PRICE_DISPLAY_LIST[0].key,
+      currentDisplay: constants.DISPLAY_LIST[0].key,
     }
   },
   computed: {
@@ -132,9 +126,7 @@ export default {
     getPricesParams() {
       let defaultParams = { [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, order_by: `${this.currentOrder}`, page: this.pricePage }
       if (this.currentFilterList.includes('show_last_month')) {
-        let oneMonthAgo = new Date()
-        oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
-        defaultParams['date__gte'] = oneMonthAgo.toISOString().substring(0, 10)
+        defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
       }
       return defaultParams
     },
@@ -180,11 +172,12 @@ export default {
           this.category = category
         })
       } else {
-        return api.getProductByCode(this.productId)
+        return openPricesApi.getProductByCode(this.productId)
           .then((data) => {
             if (data.id) {
               this.product = data
             } else {
+              // product not found: set a minimal product to display the ProductCard
               this.product = { code: this.productId, price_count: this.priceTotal }
             }
           })
@@ -194,8 +187,11 @@ export default {
       if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
       this.pricePage += 1
-      return api.getPrices(this.getPricesParams)
+      return openPricesApi.getPrices(this.getPricesParams)
         .then((data) => {
+          this.loading = false
+          // product not found: the API will return an empty list
+          // if (!data.items) return
           this.priceList.push(...data.items)
           this.priceTotal = data.total
           data.items.forEach((price) => {
@@ -203,7 +199,6 @@ export default {
               utils.addObjectToArray(this.priceLocationList, price.location)
             }
           })
-          this.loading = false
         })
     },
     updateFilterList(newFilterList) {
@@ -211,14 +206,14 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initPrices() will be called in watch $route
     },
-    selectPriceOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initPrices() will be called in watch $route
       }
     },
-    selectPriceDisplay(displayKey) {
+    updateDisplay(displayKey) {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
       // this.initPrices() will NOT be called in watch $route

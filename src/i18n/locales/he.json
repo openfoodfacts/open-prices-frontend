@@ -162,7 +162,8 @@
 		"StatsAndRankings": "סטטיסטיקות ודירוגים",
 		"MostPicturesAdded": "רוב התמונות נוספו",
 		"MostPricesAdded": "רוב המחירים נוספו",
-		"MostPricesFromPicturesAdded": "רוב המחירים מהתמונות נוספו"
+		"MostPricesFromPicturesAdded": "רוב המחירים מהתמונות נוספו",
+		"AlertNew": "יש לך רעיון לאתגר חדש? ספר לנו {url}!"
 	},
 	"Common": {
 		"About": "על אודות",
@@ -177,8 +178,12 @@
 		"AddProofs": "הוספת הוכחות",
 		"AddNewProof": "הוספת הוכחה חדשה",
 		"AddNewProofs": "הוספת הוכחות חדשות",
+		"AddNewProofPriceTags": "הוסף תגי מחיר חדשים",
+		"AddNewProofReceipt": "הוסף קבלה חדשה",
 		"AddToOFF": "הוספה אל {name}",
+		"Added": "נוסף",
 		"AdditionalInfo": "מידע נוסף",
+		"All": "הכול",
 		"Barcode": "ברקוד",
 		"Barcodes": "ברקודים",
 		"BarcodeScan": "סריקת ברקוד",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} אתגרים | אתגר | {count} אתגרים",
 		"Chart": "תרשים",
 		"Clear": "פינוי",
+		"Close": "סגירה",
 		"Comment": "הערה",
 		"Community": "קהילה",
 		"CommunityPrices": "מחירי הקהילה",
@@ -220,6 +226,7 @@
 		"Contributors": "תורמים",
 		"Contributions": "תרומות",
 		"Confirm": "אישור",
+		"Count": "ספירה",
 		"Country": "מדינה",
 		"Countries": "מדינות",
 		"CountryCount": "{count} מדינות | מדינה | {count} מדינות",
@@ -229,6 +236,7 @@
 		"Currencies": "מטבעות",
 		"CurrencyMissing": "חסר מטבע",
 		"CurrencyCount": "{count} מטבעות | מטבע | {count} מטבעות",
+		"CurrencyProofHelpTextSettings": "ניתן להוסיף מטבעות בהגדרות שלך.",
 		"Dashboard": "לוח בקרה",
 		"Display": "תצוגה",
 		"DisplayList": "רשימה",
@@ -241,6 +249,9 @@
 		"Error": "שגיאה",
 		"Experiment": "לְנַסוֹת",
 		"Experiments": "ניסויים",
+		"Explore": "לַחקוֹר",
+		"FromPriceTag": "מתוך תג מחיר",
+		"FromReceipt": "מתוך קבלה",
 		"GoToProof": "מעבר להוכחה",
 		"Join": "הצטרפות",
 		"Label": "תווית",
@@ -250,6 +261,7 @@
 		"Languages": "שפות",
 		"LatestPrices": "מחירים עדכניים",
 		"LatestProofs": "ההוכחות העדכניות ביותר",
+		"LearnMore": "מידע נוסף",
 		"LoadMore": "לטעון עוד",
 		"Location": "מקום",
 		"Locations": "מקומות",
@@ -257,8 +269,12 @@
 		"LocationFindShop": "איתור מקום החנות",
 		"LocationMissing": "חסר מקום",
 		"LocationSearchByName": "חיפוש לפי שם ועיר",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "תאריך",
 		"DateMissing": "חסר תאריך",
+		"DateProofHelpText": "תאריך התמונה.",
+		"DateProofHelpTextExif": "כברירת מחדל, אנו מנסים לחלץ אותו ממטא-דאטה של ה-EXIF של התמונה.",
+		"DateProofHelpTextReceipt": "עבור קבלות, הגדר אותו לתאריך הרכישה.",
 		"Details": "פרטים",
 		"Delete": "מחיקה",
 		"DeveloperMode": "מצב פיתוח",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "דוגמאות: {value}",
 		"Edit": "עריכה",
 		"End": "סוף",
+		"ErrorServer": "שגיאה: שגיאת שרת",
+		"FieldIsRequired": "שדה חובה",
 		"Filter": "סינון",
 		"FilterChallengesShowAllStatus": "הצגת כל האתגרים",
+		"FilterWithPriceCount": "עם מחירים",
+		"FilterWithLocationCount": "עם מיקומים",
 		"FilterProductWithPriceCount": "עם מחיר",
 		"FilterProductWithPriceCountHide": "הסתרת מוצרים עם מחירים",
 		"FilterProductWithoutPriceCount": "בלי מחירים",
 		"FilterPriceMoreThan30DaysHide": "הסתרת מחירים ישנים מ־30 יום",
 		"FilterProofWithPriceCountHide": "הסתרת הוכחות עם מחירים",
 		"FilterPriceTagWithProofOwner": "הצגת ההוכחות שלי בלבד",
+		"FilterPriceTagWithProofUserCountry": "הצגת הוכחות מהמדינה שלי בלבד",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "עם ברקוד תקף",
 		"FilterPriceTagWithTagPredictionProductExists": "עם מוצר תקין",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "עם תגית קטגוריה תקינה",
@@ -299,6 +320,7 @@
 		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)",
 		"Group": "קבוצה",
 		"Help": "עזרה",
+		"Here": "כָּאן",
 		"History": "היסטוריה",
 		"Image": "תמונה",
 		"ImageSelect": "בחירת תמונה",
@@ -314,19 +336,33 @@
 		"Map": "מפה",
 		"Miscellaneous": "שונות",
 		"MobileApp": "יישומון לניידים",
+		"Moderation": "מְתִינוּת",
+		"ModerationFlagReasonWrongType": "סוג שגוי",
+		"ModerationFlagReasonWrongPriceValue": "ערך מחיר שגוי",
+		"ModerationFlagReasonWrongCurrency": "מטבע שגוי",
+		"ModerationFlagReasonWrongProduct": "מוצר שגוי",
+		"ModerationFlagReasonWrongLocation": "מקום שגוי",
+		"ModerationFlagReasonWrongDate": "תאריך שגוי",
+		"ModerationFlagReasonOther": "אחר",
+		"ModerationFlagCreateSuccess": "תודה על הדיווח שלך!",
+		"ModerationFlagStatusOpen": "פתיחה",
+		"ModerationFlagStatusClosed": "סגירה",
 		"MyConsumption": "הצריכה שלי",
 		"MyDashboard": "לוח המחוונים שלי",
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
 		"MyStats": "הסטטיסטיקה שלי",
+		"New": "חָדָשׁ",
 		"NextProof": "ההוכחה הבאה",
 		"NoBarcode": "אין ברקוד",
 		"NotAnError": "לא שגיאה",
 		"NotAPrice": "לא מחיר",
 		"Offline": "לא מקוון",
 		"Online": "מקוון",
+		"Open": "פתיחה",
 		"OpenWithTheAssistant": "פתיחה עם המסייע",
 		"Order": "סדר",
+		"OrderNameASC": "שם",
 		"OrderLocationCountDESC": "כמות מקומות",
 		"OrderProductUniqueScansDESC": "מספר הסריקות",
 		"OrderProductPriceCountDESC": "מספר המחירים",
@@ -356,12 +392,19 @@
 		"PicturesAddedByYou": "תמונות שהעלית",
 		"PRICE_TAG": "תווית מחיר",
 		"PriceTags": "תגי מחיר",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} מחירים | מחיר | {count} מחירים",
 		"PriceAddedCount": "נוספו {count} מחירים | נוסף מחיר | נוספו {count} מחירים",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} מחירים נוספו",
 		"PriceToValidateCount": "{count} מחירים לאימות | מחיר לאימות | {count} מחירים לאימות",
 		"PriceCreated": "המחיר נוצר!",
 		"PriceMissing": "מחיר חסר",
+		"PricePerMissing": "מחיר לכל חסר",
+		"PriceAlreadyUploaded": "המחיר כבר הועלה",
+		"PriceReadyToBeUploaded": "המחיר מוכן להעלאה",
 		"PricesAlreadyUploaded": "המחירים כבר הועלו",
+		"PricesAll": "כל המחירים",
 		"PricesMore": "מחירים נוספים",
 		"PricesAdded": "נוספו מחירים",
 		"PricesAddedToday": "מחירים שנוספו היום",
@@ -382,6 +425,7 @@
 		"ProofSelected": "נבחרה הוכחה!",
 		"ProofSelectedCount": "{count} הוכחות נבחרו | הוכחה נבחרה | {count} הוכחות נבחרו",
 		"ProofUploadedCount": "{count} הוכחות נשלחו | הוכחה נשלחה | {count} הוכחות נשלחו",
+		"ProofUploadProgress": "הוכחות הועלו {numberOfProofsUploaded} / {totalNumberOfProofs}",
 		"ProofsAddedToday": "הוכחות שנוספו היום",
 		"ProofsToday": "הוכחות היום",
 		"ProofNotFound": "ההוכחה לא נמצאה",
@@ -389,6 +433,8 @@
 		"Quantity": "כמות",
 		"QuantityBought": "כמות שנרכשה",
 		"QuantityMissing": "חסרה כמות",
+		"Rank": "דַרגָה",
+		"Reason": "סיבה",
 		"RECEIPT": "קבלה",
 		"Receipt": "קבלה",
 		"Receipts": "קבלות",
@@ -397,12 +443,17 @@
 		"ReceiptOwnerConsumption": "מעקב בלוח הצריכה שלי",
 		"ReceiptOnlineDeliveryCosts": "עלויות משלוח",
 		"Recent": "אחרונים",
+		"Re-open": "פתיחה מחדש",
+		"ReportProblem": "דיווח על תקלה",
+		"Reset": "איפוס",
+		"Resolved": "נפתר",
 		"Reuses": "גזירות",
 		"ReusesKnown": "נגזרות ידועות",
 		"Search": "חיפוש",
 		"Select": "בחירה",
+		"Send": "שליחה",
 		"Settings": "הגדרות",
-		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "נכנסת!",
 		"SignIn": "כניסה",
 		"SignOut": "יציאה",
@@ -412,12 +463,14 @@
 		"SourceCode": "קוד מקור",
 		"Start": "התחלה",
 		"Stats": "סטטיסטיקה",
+		"Status": "מצב",
 		"SuggestedBarcode": "ברקוד מומלץ:",
 		"Summary": "תקציר",
 		"TaglineOriginal": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים",
 		"TaglineAlt1": "מסד הנתונים הפתוח למחירים במיקור המונים",
 		"TaglineAlt2": "מסד הנתונים הפתוח למחירי מוצרי מזון ומוצרים במיקור המונים",
 		"TaglineAlt3": "המחירים אמורים להיות חופשיים",
+		"Text": "טֶקסט",
 		"Thanks": "תודה",
 		"Theme": "ערכת עיצוב",
 		"ThemeLight": "בהיר",
@@ -453,11 +506,22 @@
 		"Users": "משתמשים",
 		"UserCount": "{count} משתמשים | משתמש | {count} משתמשים",
 		"UserContributorCount": "{count} תרמו | תורם/ת | {count} תרמו",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "המשתמש לא נמצא",
 		"Validate": "אימות",
 		"ValidatePrices": "אימות מחירים",
 		"ValidatePricesWithAI": "אימות מחירים עם בינה מלאכותית",
+		"ValidatePricesFromCommunity": "אימות מחירים מהקהילה",
 		"View": "הצגה",
 		"Website": "אתר",
+		"WithAPrice": "עם מחיר",
+		"WithoutAPrice": "בלי מחיר",
 		"Year": "שנה",
 		"Years": "שנים",
 		"Yes": "כן",
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "תתבצע הפניה לעמוד ההגדרות אך המידע שמילאת בדף הזה יאבד.",
 		"Select": "בחירה ב{currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "ארצות בהן נמכר",
+		"CreateNewProduct": "יצירת מוצר חדש",
+		"CreateProduct": "יצירת מוצר",
+		"EnableCropMode": "הפעלת מצב חיתוך",
+		"Flavor": "בחר את הפרויקט שבו יש ליצור את המוצר",
+		"NextProof": "ההוכחה הבאה",
+		"PreviousProof": "הוכחה קודמת",
+		"ProductAlreadyExists": "המוצר כבר קיים",
+		"ProductLanguage": "שפת המוצר",
+		"ProofNumberOfOutProofs": "הוכחה ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "חנויות בהן נמכר",
+		"UseCropModeToAddImage": "כדי להוסיף תמונת מוצר, הפעל את מצב החיתוך מתחת לתמונת ההוכחה וצייר מלבן סביב המוצר.",
+		"ProductMissingPromoBanner": "ניסוי: צור מוצר זה באמצעות נתונים מ-Open Prices"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "נא לבחור אחת מההוכחות העדכניות שלך"
 	},
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "פינוי",
 		"NoResult": "לא נמצאו תוצאות",
+		"NoResultHelpKeywords": "החנות שלך לא נמצאת? כדאי לנסות להשתמש במילות מפתח במקום בכתובת המלאה (למשל ‚Carrefour 75013 Paris’ או ‚Walmart San Francisco’).",
+		"NoResultHelpOSM": "עדיין לא מצאת את החנות שלך? ייתכן שהיא עדיין לא נמצאת ב־{osm_name}. ניתן להוסיף אותה קודם דרך {osm_url}.",
 		"PoweredBy": {
 			"text": "מופעל על גבי {url}"
 		},
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "הוספת פריט חדש",
-		"MissingPrice": "חסר מחיר",
-		"MissingProduct": "חסר מוצר",
 		"NoItemsFound": "לא ניתן לחלץ פריטים מהקבלה, נא לנסות שוב.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "כבר נוצר מחיר לפריט",
 		"PriceReadyToBeAdded": "המחיר מוכן להוספה",
+		"ReceiptItems": "פריטי קבלה",
 		"ReceiptItemsCheck": "פריטים בקבלה, בדיקה ותיקון",
 		"UploadOnlyNewPrices": "להעלות מחירים חדשים בלבד ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "להעלות או לעדכן את כל המחירים התקפים ({nbPrices})",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "על אודות"
+		},
+		"Add": {
+			"Title": "הוספה"
 		},
 		"AddPrice": {
 			"Title": "הוספת מחיר"
@@ -728,6 +814,18 @@
 		"AddProofMultiple": {
 			"Title": "הוספת מגוון הוכחות"
 		},
+		"AddProofReceipt": {
+			"Title": "הוסף הוכחה (קבלה)"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "לַחקוֹר"
+		},
 		"Locations": {
 			"Title": "מקומות"
 		},
@@ -743,11 +841,20 @@
 		"Prices": {
 			"Title": "מחירים"
 		},
+		"PriceTags": {
+			"Title": "תגי מחיר"
+		},
 		"Proofs": {
 			"Title": "הוכחות"
 		},
 		"ProofAddSingle": {
 			"Title": "הוספת הוכחה יחידה"
+		},
+		"Receipt": {
+			"Title": "קבלה"
+		},
+		"Cities": {
+			"Title": "ערים"
 		},
 		"Community": {
 			"Title": "קהילה"
@@ -755,11 +862,18 @@
 		"Contribute": {
 			"Title": "לתרום"
 		},
+		"Countries": {
+			"Title": "מדינות"
+		},
+		"CreateOffProduct": {
+			"Title": "יצירת מוצר"
+		},
 		"Experiments": {
 			"Title": "ניסויים"
 		},
 		"Home": {
-			"Title": "ראשי"
+			"Title": "ראשי",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "לוח בקרה"
@@ -769,6 +883,9 @@
 		},
 		"LatestProofs": {
 			"Title": "ההוכחות העדכניות ביותר"
+		},
+		"Moderation": {
+			"Title": "מְתִינוּת"
 		},
 		"MyPrices": {
 			"Title": "המחירים שלי"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "עוזר תג מחיר הוכחה"
 		},
-		"PriceValidationAssistant": {
-			"Title": "מסייע אימות מחירים"
-		},
 		"ReceiptAssistant": {
 			"Title": "מסייע קבלות"
 		},
@@ -822,10 +936,15 @@
 			"Title": "אתגר"
 		},
 		"Challenges": {
-			"Title": "אתגרים"
+			"Title": "אתגרים",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "אתגר הקהילה"
+		},
+		"Validate": {
+			"Title": "אימות",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "אימות מחירים"
@@ -845,6 +964,7 @@
 		"ServerError": "שגיאה: שגיאת שרת",
 		"Title": "כניסה",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "שם משתמש",
 		"WrongCredentials": "שגיאה: פרטי גישה שגויים"
 	},
@@ -868,6 +988,8 @@
 		"WithoutProduct": "בלי מוצר",
 		"WithBarcode": "עם ברקוד",
 		"WithCategory": "עם קטגוריה",
+		"PricesPerSource": "מחירים לפי מקור",
+		"ProofsPerSource": "הוכחות לכל מקור",
 		"PricesProofsPerSource": "מחירים והוכחות לפי מקור",
 		"LastUpdated": "עדכון אחרון ב־{date}"
 	},
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "מטבע",
 		"DisplayTitle": "תצוגה",
 		"BarcodeScanner": "סורק ברקודים",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "מצב ברירת מחדל",
 		"FavoriteCurrencies": "מטבעות מועדפים",
 		"CurrencyRequired": "חובה לציין לפחות מטבע אחד",

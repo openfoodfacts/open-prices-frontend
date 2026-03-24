@@ -1,38 +1,38 @@
 {
 	"About": {
-		"WhyTitle": "Why {op_name}?",
-		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
-		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
-		"HowTitle": "How does {op_name} work?",
-		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
-		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
-		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
-		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
-		"LicenseTitle": "License",
-		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
-		"WhatTitle": "What is {op_name}?",
-		"WhatOFFTitle": "What is {off_name}?",
+		"WhyTitle": "なぜ {op_name}?",
+		"WhyAnswer1": "{op_name} は、世界中の商品の価格を収集・共有するプロジェクトです。これは、研究や分析などに利用できる公開データセットです。 {op_name} は {off_url}によって開発・保守されています。",
+		"WhyAnswer2": "現在、バーコードレベルの商品価格に関する大規模なデータベースを保有している企業はほとんどありません。これらの価格は自由に利用できるわけではなく、民間企業、研究者、その他の購入可能な組織に高額で販売されています。",
+		"HowTitle": "{op_name} はどのように機能しますか?",
+		"HowAnswer1": "価格に関するオープンソースデータセットをクラウドソーシングしています。ユーザーは、このウェブアプリまたは公式モバイルアプリ {off_url} から価格を追加できます。小売業者やサードパーティ製アプリも、 {op_api_url}を使用することで価格データセットに貢献できます。",
+		"HowAnswer2": "{op_name} は個々の価格だけでなく、消費バスケット、つまり人々が一度の買い物で購入する商品のリストも保存することを目的としています。このデータは、食品の消費習慣を分析する研究者にとって非常に興味深いものです。",
+		"HowAnswer3": "データの品質確保のため、可能な限り、値札やレシートの写真など、価格の証明となるものをご提供いただくようお願いしております。",
+		"HowAnswer4": "証明画像としてレシートをご提供いただく場合、消費履歴を {op_name}に送信することに同意したものとみなされます。レシートは匿名化され、研究目的で公開されます。レシートを公開したくない場合は、値札の写真を撮ることでもご協力いただけます。",
+		"LicenseTitle": "ライセンス",
+		"LicenseAnswer1": "価格データセットは {odbl_url}のライセンスに基づいており、 {op_name} をクレジットし、データセットに加えた変更を共有する限り、あらゆる目的に使用できます。",
+		"LicenseAnswer2": "証拠として提出された画像は、 {ccbysa_url}の下でライセンスされます。",
+		"WhatTitle": "{op_name}とは何ですか?",
+		"WhatOFFTitle": "{off_name}とは何ですか?",
 		"WhatOFFAnswer": "{off_url} は、世界中の食品に関する情報を収集・共有する非営利団体です。データ収集はボランティアの協力によって行われています。 {off_url} は、世界最大のオープン食品データベースであり、200か国以上の400万点以上の製品が登録されています。",
-		"WhyOFFTitle": "Why is {off_name} doing this?",
-		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
-		"HowContribute": "How can I contribute?",
-		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
-		"HowUseData": "How can I use the data?",
-		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
-		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
-		"HowContact": "How can I get in touch?",
-		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
-		"HowSupport": "How can I support {op_name}?",
-		"HowSupportAnswer": "You can support {op_name} by contributing to the project, by sharing it with your friends and family, and by donating to {off_url}.",
-		"WhyOSM": "Why do you ask for an {osm_name} ID when I add a price?",
-		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
-		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
-		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
-		"WhyNoScraping": "Do you consider scraping prices from retailers' websites?",
-		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
-		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
+		"WhyOFFTitle": "{off_name} はなぜこれをするのでしょうか?",
+		"WhyOFFAnswer": "価格情報は、食料システムを理解する上で極めて重要です。食品のコストを理解し、より健康的な食生活を促進する上で重要な要素です。価格データを公開することで、研究者、ジャーナリスト、そして一般市民は、食品価格が地域や時間によってどのように変動するかをより深く理解しやすくなります。",
+		"HowContribute": "どうすれば貢献できますか?",
+		"HowContributeAnswer": "データセットに価格を追加することで貢献できます。ウェブアプリまたは公式モバイルアプリから追加できます。 {op_api_url} は、 {op_name} をアプリに統合する場合にもご利用いただけます。貢献するには {off_url} アカウントが必要です。",
+		"HowUseData": "データはどのように使用すればいいですか?",
+		"HowUseDataAnswer1": "データは {odbl_url}で利用可能であり、つまり、 {op_name} をクレジットし、データセットに加えた変更を共有する限り、あらゆる目的に使用できます。",
+		"HowUseDataAnswer2": "{op_api_url} はデータに簡単にアクセスする方法を提供します。",
+		"HowUseDataAnswer3": "データは、3 つの gzip 圧縮された JSONL ダンプとしても利用できます: {op_dumb_prices_url}、 {op_dumb_proofs_url}、 {op_dumb_locations_url}。",
+		"HowContact": "どうすれば連絡が取れますか？",
+		"HowContactAnswer": "{off_contact_email_url}までメールを送信してご連絡ください。",
+		"HowSupport": "{op_name}をサポートするにはどうすればよいですか?",
+		"HowSupportAnswer": "プロジェクトに貢献したり、友人や家族と共有したり、 {off_url}に寄付したりすることで、 {op_name} をサポートすることができます。",
+		"WhyOSM": "価格を追加するときになぜ {osm_name} ID を要求されるのですか?",
+		"WhyOSMAnswer": "価格を特定の店舗にリンクさせるため、 {osm_url} ID を要求します。これは、地図上に価格を表示したり、地域や小売店間の価格差を分析したりするのに役立ちます。",
+		"HowRetailer": "私は小売業者です。価格設定に貢献したいのですが、どうすればよいですか？",
+		"HowRetailerAnswer": "{op_api_url}を使って価格情報を提供できます。大規模な価格情報を提供したい場合は、 {off_contact_email_url}までご連絡ください。",
+		"WhyNoScraping": "小売業者のウェブサイトから価格をスクレイピングすることを検討していますか?",
+		"WhyNoScrapingAnswer1": "法的および技術的な理由により、小売業者のウェブサイトから価格をスクレイピングすることは、 {op_name}への貢献方法としては有効ではないと考えています。収集する価格が正確かつ最新のものであることを保証したいと考えており、貢献者からスクレイピングされた価格を受け取ることでは、それが不可能となります。",
+		"WhyNoScrapingAnswer2": "価格スクレイピングは、 {op_name}の将来のバージョンでは検討中のオプションですが、HTML ページに基づいて価格の証明が得られるように、 {op_name} 自身によって実行されることになります。"
 	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
@@ -52,10 +52,10 @@
 		"ProductPriceDetails": {
 			"Add": "新しい価格を追加",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 価格はすでにアップロードされています | {priceAlreadyUploadedNumber} 価格がすでにアップロードされています",
-			"Create": "Create",
-			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
+			"Create": "作成する",
+			"ExistingProductFound": "重複していますか？この製品は既にこのプルーフに追加されています",
 			"NewPrice": "新しい価格",
-			"PriceUploaded": "Price created!",
+			"PriceUploaded": "価格を作成しました！",
 			"Upload": "アップロード"
 		},
 		"ProofDetails": {
@@ -66,18 +66,18 @@
 		"Title": "複数の価格を追加する"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "作成する",
 		"PriceDetails": {
 			"Discount": "ディスカウント",
-			"Label": "Price",
+			"Label": "価格",
 			"LabelDiscounted": "割引価格",
 			"LabelFull": "正規価格",
-			"Proof": "Proof",
+			"Proof": "証拠",
 			"ProofDateChanged": "更新された日付",
 			"ProofSelected": "証明が選択されました！",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
+			"ProofUploaded": "証拠をアップロードしました!",
+			"Title": "価格の詳細",
+			"UploadProof": "証明をアップロードする",
 			"Picture": "画像",
 			"TakePicture": "画像を撮る",
 			"Gallery": "デバイスギャラリー",
@@ -87,16 +87,16 @@
 		},
 		"ProductInfo": {
 			"CategoryLabel": "カテゴリー",
-			"OriginLabel": "Origin",
+			"OriginLabel": "起源",
 			"ProductBarcode": "製品バーコード",
 			"Scan": "スキャン",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "バーコードをスキャンする",
 			"ScanBarcodeShort": "スキャン",
 			"Type": "種別",
 			"TypeBarcode": "バーコード入力",
 			"TypeBarcodeShort": "種別",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"SetProduct": "製品を設定する",
+			"Title": "製品情報"
 		},
 		"ProductModeList": {
 			"Barcode": "バーコード",
@@ -106,19 +106,19 @@
 			"PerKg": "1kgあたりの価格",
 			"PerUnit": "単位あたりの価格"
 		},
-		"Title": "Add a single price",
+		"Title": "単一の価格を追加する",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "日付",
+			"DateLabel": "日付",
 			"Find": "検索",
 			"Location": "ショップ所在地",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"SelectLocation": "場所を選択してください",
+			"Title": "いつ、どこで？"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "{url}によって提供"
 		}
 	},
 	"BarcodeManualInput": {
@@ -126,459 +126,542 @@
 		"Title": "バーコード入力"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "コミュニティチャレンジ",
+		"Subtitle": "他の食品価格愛好家と一緒に、 {challenge_title} {challenge_subtitle}についての情報を収集しましょう。",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"Title": "店内の値札の写真を撮る",
+			"line1": "写真には1つまたは複数の値札を含めることができます。バーコードは読み取り可能なものでなければなりません。例：",
+			"line2": "準備ができたら、ショップを見つけて、下のボタンを使用して写真をアップロードしてください。",
+			"AddPictures": "写真を追加する"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"Title": "検出された価格をAIで検証する",
+			"line1": "値札は自動的に検出されますが、ロボットがそれを検証するにはユーザーの協力が必要です。",
+			"line2": "下のボタンを使用して価格検証ページにアクセスし、必要に応じてバーコードと価格を編集して検証してください。",
+			"line3": "ラベルが読みにくい場合は、判読不能としてマークします。",
+			"line4": "これは共同作業です。写真を送信しなかった場合でも、検証することで他の人を助けることができます。"
 		},
-		"PicturesAddedByYou": "Pictures added by you",
-		"Prices": "{challenge_title} prices",
-		"PricesAdded": "{challenge_title} prices added",
-		"PricesByYou": "{challenge_title} prices by you",
+		"PicturesAddedByYou": "あなたが追加した写真",
+		"Prices": "{challenge_title} 価格",
+		"PricesAdded": "{challenge_title} 価格が追加されました",
+		"PricesByYou": "{challenge_title} あなたによる価格",
 		"PricesAddedByYou": "あなたが追加した価格",
-		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"MostRecentContributions": "最近の投稿",
+		"ChallengeCount": "{count} 課題 | {count} 課題 | {count} 課題",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
-			"UPCOMING": "Upcoming",
-			"ONGOING": "Ongoing",
-			"COMPLETED": "Completed"
+			"DRAFT": "下書き",
+			"UPCOMING": "今後の予定",
+			"ONGOING": "進行中",
+			"COMPLETED": "完了"
 		},
-		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
-		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges",
+		"NoChallengeCurrentlyOngoing": "現在進行中のチャレンジはありません。後ほどまたお越しください。",
+		"PastOrFutureChallenges": "過去または将来の課題",
+		"OngoingChallenges": "継続的な課題",
 		"PastChallenges": "過去の課題",
 		"UpcomingChallenges": "今後の課題",
 		"StatsAndRankings": "統計とランキング",
 		"MostPicturesAdded": "追加された写真が最も多い",
 		"MostPricesAdded": "最も多くの価格が追加された",
-		"MostPricesFromPicturesAdded": "写真からほとんどの価格を追加しました"
+		"MostPricesFromPicturesAdded": "写真からほとんどの価格を追加しました",
+		"AlertNew": "新しいチャレンジのアイデアはありますか？ぜひ教えてください {url}！"
 	},
 	"Common": {
 		"About": "アプリについて",
 		"Action": "アクション",
-		"Actions": "Actions",
-		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
-		"AddPrices": "Add prices",
+		"Actions": "アクション",
+		"AddComment": "コメントを追加",
+		"AddPrice": "価格を追加する",
+		"AddPrices": "価格を追加する",
 		"AddNewPrice": "新しい価格を追加",
-		"AddNewPrices": "Add new prices",
-		"AddProof": "Add a proof",
-		"AddProofs": "Add proofs",
-		"AddNewProof": "Add a new proof",
-		"AddNewProofs": "Add new proofs",
+		"AddNewPrices": "新しい価格を追加する",
+		"AddProof": "証明を追加する",
+		"AddProofs": "証明を追加する",
+		"AddNewProof": "新しい証明を追加する",
+		"AddNewProofs": "新しい証明を追加する",
+		"AddNewProofPriceTags": "新しい値札を追加する",
+		"AddNewProofReceipt": "新しい領収書を追加する",
 		"AddToOFF": "{name} に追加",
-		"AdditionalInfo": "Additional information",
+		"Added": "追加した",
+		"AdditionalInfo": "追加情報",
+		"All": "全て",
 		"Barcode": "バーコード",
-		"Barcodes": "Barcodes",
-		"BarcodeScan": "Scan a barcode",
+		"Barcodes": "バーコード",
+		"BarcodeScan": "バーコードをスキャンする",
 		"BarcodeScanShort": "スキャン",
 		"BarcodeType": "バーコード入力",
 		"BarcodeTypeShort": "種別",
 		"BarcodeInvalid": "無効なバーコード",
 		"Brand": "ブランド（会社名）",
 		"Brands": "ブランド",
-		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"BrandTotal": "{count} ブランド | {count} ブランド | {count} ブランド",
+		"Price": "価格",
+		"Prices": "価格",
 		"PRODUCT": "製品",
 		"Product": "製品",
 		"ProductName": "製品名",
 		"Products": "製品",
-		"Proof": "Proof",
-		"Proofs": "Proofs",
+		"Proof": "証拠",
+		"Proofs": "証明",
 		"CATEGORY": "カテゴリー",
 		"Category": "カテゴリー",
 		"Categories": "カテゴリー",
 		"CategoryMissing": "カテゴリが見つかりません",
-		"CategoryTotal": "{count} categories | {count} category | {count} categories",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
-		"Chart": "Chart",
+		"CategoryTotal": "{count} カテゴリ | {count} カテゴリ | {count} カテゴリ",
+		"Challenge": "チャレンジ",
+		"Challenges": "課題",
+		"ChallengeCurrent": "現在の課題",
+		"ChallengeOngoing": "継続的な挑戦",
+		"ChallengeCount": "{count} 課題 | {count} 課題 | {count} 課題",
+		"Chart": "チャート",
 		"Clear": "クリア",
-		"Comment": "Comment",
-		"Community": "Community",
-		"CommunityPrices": "Community prices",
-		"CommunityProofs": "Community proofs",
+		"Close": "閉じる",
+		"Comment": "コメント",
+		"Community": "コミュニティ",
+		"CommunityPrices": "コミュニティ価格",
+		"CommunityProofs": "コミュニティの証明",
 		"Consumption": "消費",
-		"ConsumptionPrices": "Consumption prices",
-		"ConsumptionProofs": "Consumption proofs",
+		"ConsumptionPrices": "消費価格",
+		"ConsumptionProofs": "消費証明",
 		"Contribute": "貢献する",
 		"Contributors": "貢献者",
 		"Contributions": "貢献",
 		"Confirm": "確定",
+		"Count": "カウント",
 		"Country": "国",
 		"Countries": "国",
-		"CountryCount": "{count} countries | {count} country | {count} countries",
-		"Crop": "Crop",
-		"Cropped": "Cropped",
-		"Currency": "Currency",
-		"Currencies": "Currencies",
-		"CurrencyMissing": "Currency missing",
-		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
-		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"CountryCount": "{count} か国 | {count} か国 | {count} か国",
+		"Crop": "作物",
+		"Cropped": "切り取り線",
+		"Currency": "通貨",
+		"Currencies": "通貨",
+		"CurrencyMissing": "通貨が見つかりません",
+		"CurrencyCount": "{count} 通貨 | {count} 通貨 | {count} 通貨",
+		"CurrencyProofHelpTextSettings": "設定で通貨を追加できます。",
+		"Dashboard": "ダッシュボード",
+		"Display": "画面",
 		"DisplayList": "リスト",
 		"DisplayPriceList": "リスト",
-		"DisplayTable": "Table",
+		"DisplayTable": "テーブル",
 		"DisplayMap": "地図",
 		"DisplayPriceMap": "地図",
-		"DisplayPriceChart": "Chart",
+		"DisplayPriceChart": "チャート",
 		"Done": "完了",
 		"Error": "エラー",
 		"Experiment": "実験",
-		"Experiments": "Experiments",
-		"GoToProof": "Go to proof",
-		"Join": "Join",
+		"Experiments": "実験",
+		"Explore": "探検する",
+		"FromPriceTag": "値札から",
+		"FromReceipt": "領収書から",
+		"GoToProof": "証明へ進む",
+		"Join": "参加する",
 		"Label": "ラベル",
 		"Labels": "ラベル",
-		"LabelTotal": "{count} labels | {count} label | {count} labels",
+		"LabelTotal": "{count} ラベル | {count} ラベル | {count} ラベル",
 		"Language": "言語",
 		"Languages": "言語",
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "最新価格",
 		"LatestProofs": "最新の証拠",
+		"LearnMore": "詳細",
 		"LoadMore": "もっと読み込む",
-		"Location": "Location",
+		"Location": "位置",
 		"Locations": "場所：",
-		"LocationSelected": "Location selected",
-		"LocationFindShop": "Find the shop location",
-		"LocationMissing": "Location missing",
-		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
-		"DateMissing": "Date missing",
-		"Details": "Details",
+		"LocationSelected": "場所を選択しました",
+		"LocationFindShop": "お店の場所を探す",
+		"LocationMissing": "場所が見つかりません",
+		"LocationSearchByName": "名前と都市で検索",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "日付",
+		"DateMissing": "日付がありません",
+		"DateProofHelpText": "写真の日付。",
+		"DateProofHelpTextExif": "デフォルトでは、写真の EXIF メタデータから抽出しようとします。",
+		"DateProofHelpTextReceipt": "領収書の場合は購入日に設定してください。",
+		"Details": "詳細",
 		"Delete": "削除",
-		"DeveloperMode": "Developer mode",
+		"DeveloperMode": "開発者モード",
 		"Discount": "ディスカウント",
-		"DiscountType": "Discount type",
+		"DiscountType": "割引の種類",
 		"DiscountTypeQuantity": "数量",
-		"DiscountTypeSale": "Sale",
-		"DiscountTypeSeasonal": "Seasonal",
-		"DiscountTypeLoyaltyProgram": "Loyalty program",
-		"DiscountTypeExpiresSoon": "Expires soon",
-		"DiscountTypePickItYourself": "Pick it yourself",
-		"DiscountTypeSecondHand": "Second hand",
+		"DiscountTypeSale": "販売",
+		"DiscountTypeSeasonal": "季節限定",
+		"DiscountTypeLoyaltyProgram": "ロイヤルティプログラム",
+		"DiscountTypeExpiresSoon": "まもなく期限切れ",
+		"DiscountTypePickItYourself": "自分で選んで",
+		"DiscountTypeSecondHand": "中古",
 		"DiscountTypeOther": "その他",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "例",
+		"Examples": "例",
 		"ExampleWithColon": "例:",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "例: {value}",
 		"ExamplesWithColon": "例:",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "例: {value}",
 		"Edit": "編集",
-		"End": "End",
+		"End": "終わり",
+		"ErrorServer": "エラー: サーバーエラー",
+		"FieldIsRequired": "このフィールドは必須です",
 		"Filter": "フィルタ",
-		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterChallengesShowAllStatus": "すべてのチャレンジを表示",
+		"FilterWithPriceCount": "価格付き",
+		"FilterWithLocationCount": "場所付き",
 		"FilterProductWithPriceCount": "価格付き",
-		"FilterProductWithPriceCountHide": "Hide products with prices",
-		"FilterProductWithoutPriceCount": "Without prices",
+		"FilterProductWithPriceCountHide": "価格付きの商品を非表示にする",
+		"FilterProductWithoutPriceCount": "価格なし",
 		"FilterPriceMoreThan30DaysHide": "30日以上経過した価格を非表示にする",
-		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterProofWithPriceCountHide": "価格の証明を隠す",
+		"FilterPriceTagWithProofOwner": "私の証明のみを表示",
+		"FilterPriceTagWithProofUserCountry": "私の国からの証明のみを表示する",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "有効なバーコード付き",
 		"FilterPriceTagWithTagPredictionProductExists": "有効な製品",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "有効なカテゴリタグ付き",
-		"FilterLocationWithPriceCountHide": "Hide locations with prices",
-		"FilterUserWithPriceCountHide": "Hide contributors with prices",
-		"Fix": "Fix",
+		"FilterLocationWithPriceCountHide": "価格付きの場所を非表示にする",
+		"FilterUserWithPriceCountHide": "価格付きの貢献者を非表示にする",
+		"Fix": "修理",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "よくある質問",
 		"GDPR_REQUEST": "GDPR リクエスト",
-		"Group": "Group",
-		"Help": "Help",
+		"Group": "グループ",
+		"Help": "ヘルプ",
+		"Here": "ここ",
 		"History": "履歴",
 		"Image": "画像",
-		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
+		"ImageSelect": "画像を選択",
+		"ImageSelectMultiple": "画像を選択",
 		"ImageSelected": "画像が選ばれました！",
-		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
-		"Images": "Images",
-		"ImageFull": "Full-size image",
-		"Latest": "Latest",
+		"ImageSelectedCount": "{count} 枚の画像が選択されました | {count} 枚の画像が選択されました | {count} 枚の画像が選択されました",
+		"Images": "画像",
+		"ImageFull": "フルサイズ画像",
+		"Latest": "最新",
 		"LinkCopySuccess": "リンクをコピーしました",
-		"LocationCount": "{count} locations | {count} location | {count} locations",
+		"LocationCount": "{count} か所 | {count} か所 | {count} か所",
 		"LocationNotFound": "場所が見つかりません",
 		"Map": "地図",
 		"Miscellaneous": "その他",
-		"MobileApp": "Mobile app",
-		"MyConsumption": "My consumption",
-		"MyDashboard": "My dashboard",
+		"MobileApp": "モバイルアプリ",
+		"Moderation": "節度",
+		"ModerationFlagReasonWrongType": "間違ったタイプ",
+		"ModerationFlagReasonWrongPriceValue": "価格が間違っています",
+		"ModerationFlagReasonWrongCurrency": "通貨が間違っています",
+		"ModerationFlagReasonWrongProduct": "間違った商品",
+		"ModerationFlagReasonWrongLocation": "場所が間違っています",
+		"ModerationFlagReasonWrongDate": "日付が間違っています",
+		"ModerationFlagReasonOther": "その他",
+		"ModerationFlagCreateSuccess": "ご報告ありがとうございます！",
+		"ModerationFlagStatusOpen": "開ける",
+		"ModerationFlagStatusClosed": "閉鎖",
+		"MyConsumption": "私の消費",
+		"MyDashboard": "私のダッシュボード",
 		"MyPrices": "私の価格",
 		"MyProofs": "自分の証拠",
-		"MyStats": "My stats",
-		"NextProof": "Next proof",
+		"MyStats": "私の統計",
+		"New": "新しい",
+		"NextProof": "次の証明",
 		"NoBarcode": "バーコードなし",
-		"NotAnError": "Not an error",
-		"NotAPrice": "Not a price",
-		"Offline": "Offline",
-		"Online": "Online",
-		"OpenWithTheAssistant": "Open with the assistant",
+		"NotAnError": "エラーではありません",
+		"NotAPrice": "価格ではない",
+		"Offline": "オフライン",
+		"Online": "オンライン",
+		"Open": "開ける",
+		"OpenWithTheAssistant": "アシスタントで開く",
 		"Order": "注文品",
-		"OrderLocationCountDESC": "Location count",
+		"OrderNameASC": "名前",
+		"OrderLocationCountDESC": "場所数",
 		"OrderProductUniqueScansDESC": "スキャンの数:",
 		"OrderProductPriceCountDESC": "価格の数",
-		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceCountDESC": "価格カウント",
+		"OrderPriceASC": "価格",
 		"OrderPriceCreatedDESC": "追加日",
 		"OrderPriceDateDESC": "価格日",
-		"OrderProductCountDESC": "Product count",
-		"OrderProofCountDESC": "Proof count",
+		"OrderProductCountDESC": "商品数",
+		"OrderProofCountDESC": "証明数",
 		"OrderProofCreatedDESC": "追加日",
-		"OrderProofDateDESC": "Proof date",
-		"OrderUserCountDESC": "User count",
+		"OrderProofDateDESC": "証明日",
+		"OrderUserCountDESC": "ユーザー数",
 		"Other": "その他",
-		"OtherContributions": "Other contributions",
+		"OtherContributions": "その他の貢献",
 		"PageNotMaintainedAnymore": "このページはもうメンテナンスされていません。",
-		"PersonalInfo": "Personal information",
-		"Physical": "Physical",
+		"PersonalInfo": "個人情報",
+		"Physical": "物理的な",
 		"Picture": "画像",
-		"Pictures": "Pictures",
-		"PictureSelect": "Select a picture",
-		"PictureSelectMultiple": "Select pictures",
-		"PictureSelected": "Picture selected!",
-		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
-		"PictureFull": "Full-size picture",
-		"PicturesByYou": "Pictures by you",
-		"PicturesAdded": "Pictures added",
-		"PicturesAddedByYou": "Pictures added by you",
+		"Pictures": "写真",
+		"PictureSelect": "画像を選択",
+		"PictureSelectMultiple": "写真を選択",
+		"PictureSelected": "写真を選択しました!",
+		"PictureSelectedCount": "{count} 枚の画像が選択されました | {count} 枚の画像が選択されました | {count} 枚の画像が選択されました",
+		"PictureFull": "フルサイズ画像",
+		"PicturesByYou": "あなたが撮った写真",
+		"PicturesAdded": "写真を追加しました",
+		"PicturesAddedByYou": "あなたが追加した写真",
 		"PRICE_TAG": "値札",
 		"PriceTags": "値札",
-		"PriceCount": "{count} prices | {count} price | {count} prices",
-		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
-		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
-		"PriceCreated": "Price created!",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
+		"PriceCount": "{count} 価格 | {count} 価格 | {count} 価格",
+		"PriceAddedCount": "{count} 価格を追加しました | {count} 価格を追加しました | {count} 価格を追加しました",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} 件の価格が追加されました",
+		"PriceToValidateCount": "{count} 検証する価格 | {count} 検証する価格 | {count} 検証する価格",
+		"PriceCreated": "価格を作成しました！",
 		"PriceMissing": "価格がありません",
+		"PricePerMissing": "紛失品1個あたりの価格",
+		"PriceAlreadyUploaded": "価格はすでにアップロードされています",
+		"PriceReadyToBeUploaded": "価格はアップロード準備完了です",
 		"PricesAlreadyUploaded": "価格はすでにアップロードされています",
-		"PricesMore": "More prices",
-		"PricesAdded": "Prices added",
-		"PricesAddedToday": "Prices added today",
-		"PricesToday": "Prices today",
-		"PriceNotFound": "Price not found",
+		"PricesAll": "すべての価格",
+		"PricesMore": "その他の価格",
+		"PricesAdded": "価格が追加されました",
+		"PricesAddedToday": "本日追加された価格",
+		"PricesToday": "今日の価格",
+		"PriceNotFound": "価格が見つかりません",
 		"PricesAddedByYou": "あなたが追加した価格",
 		"Private": "非公開",
 		"Privacy": "プライバシー",
-		"ProductCount": "{count} products | {count} product | {count} products",
-		"ProductFind": "Find the product",
+		"ProductCount": "{count} 製品 | {count} 製品 | {count} 製品",
+		"ProductFind": "製品を探す",
 		"ProductMissing": "商品が見つかりません",
 		"ProductOrCategoryMissing": "商品またはカテゴリが見つかりません",
-		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"ProofCount": "{count} 証明 | {count} 証明 | {count} 証明",
 		"ProofDetails": "証明の詳細",
-		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
-		"ProofSelectMultiple": "Select proofs",
+		"ProofMissing": "証拠がない",
+		"ProofSelect": "証明を選択",
+		"ProofSelectMultiple": "プルーフを選択",
 		"ProofSelected": "証明が選択されました！",
-		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
-		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
-		"ProofsAddedToday": "Proofs added today",
-		"ProofsToday": "Proofs today",
-		"ProofNotFound": "Proof not found",
+		"ProofSelectedCount": "{count} 件の校正が選択されました | {count} 件の校正が選択されました | {count} 件の校正が選択されました",
+		"ProofUploadedCount": "{count} 個の校正がアップロードされました | {count} 個の校正がアップロードされました | {count} 個の校正がアップロードされました",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} 件の校正をアップロードしました",
+		"ProofsAddedToday": "本日追加された証明",
+		"ProofsToday": "今日の証明",
+		"ProofNotFound": "証拠は見つかりませんでした",
 		"Public": "公開",
 		"Quantity": "数量",
-		"QuantityBought": "Quantity bought",
+		"QuantityBought": "購入数量",
 		"QuantityMissing": "数量が不足しています",
+		"Rank": "ランク",
+		"Reason": "原因",
 		"RECEIPT": "領収書",
 		"Receipt": "領収書",
-		"Receipts": "Receipts",
+		"Receipts": "領収書",
 		"ReceiptPriceCount": "価格の数",
-		"ReceiptPriceTotal": "Total amount",
-		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
-		"ReceiptOnlineDeliveryCosts": "Delivery costs",
-		"Recent": "Recent",
-		"Reuses": "Reuses",
-		"ReusesKnown": "Known reuses",
+		"ReceiptPriceTotal": "合計金額",
+		"ReceiptOwnerConsumption": "消費ダッシュボードで追跡",
+		"ReceiptOnlineDeliveryCosts": "配送料",
+		"Recent": "最近の",
+		"Re-open": "再開",
+		"ReportProblem": "問題を報告する",
+		"Reset": "リセット",
+		"Resolved": "解決済み",
+		"Reuses": "再利用",
+		"ReusesKnown": "既知の再利用",
 		"Search": "検索",
-		"Select": "Select",
+		"Select": "選択",
+		"Send": "送信",
 		"Settings": "設定",
-		"SignInOFFAccount": "Google アカウントでログイン",
-		"SignedIn": "Signed in!",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
+		"SignedIn": "サインインしました！",
 		"SignIn": "サインイン",
 		"SignOut": "サインアウト",
-		"SideMenu": "Side menu",
+		"SideMenu": "サイドメニュー",
 		"Share": "共有",
 		"Source": "情報源",
-		"SourceCode": "Source code",
+		"SourceCode": "ソースコード",
 		"Start": "開始",
-		"Stats": "Stats",
+		"Stats": "統計",
+		"Status": "状態",
 		"SuggestedBarcode": "推奨バーコード:",
 		"Summary": "サマリー",
-		"TaglineOriginal": "An open crowdsourced database of food prices",
-		"TaglineAlt1": "The open crowdsourced database of prices",
-		"TaglineAlt2": "The open crowdsourced database of food and product prices",
-		"TaglineAlt3": "Prices should be free",
+		"TaglineOriginal": "食品価格のオープンクラウドソースデータベース",
+		"TaglineAlt1": "オープンクラウドソーシング価格データベース",
+		"TaglineAlt2": "食品と製品の価格に関するオープンクラウドソースデータベース",
+		"TaglineAlt3": "価格は無料であるべきだ",
+		"Text": "文章",
 		"Thanks": "ありがとうございます",
 		"Theme": "テーマ",
 		"ThemeLight": "ライト",
 		"ThemeDark": "ダーク",
 		"TopContributors": "上位貢献者:",
 		"TopLocations": "上位の場所",
-		"TopProducts": "Top products",
+		"TopProducts": "トップ製品",
 		"TopCities": "主要都市",
 		"TopCountries": "上位の国",
-		"Today": "Today",
-		"Top": "Top",
+		"Today": "今日",
+		"Top": "トップ",
 		"Total": "合計",
-		"Truncate": "Truncate",
-		"Truncated": "Truncated",
+		"Truncate": "切り捨て",
+		"Truncated": "切り捨て",
 		"TryItOut": "試してみる",
 		"Type": "種別",
-		"UnknownProduct": "Unknown product",
-		"UnknownProductSource": "Unknown product source",
-		"UnknownSource": "Unknown source",
+		"UnknownProduct": "不明な製品",
+		"UnknownProductSource": "製品の出所不明",
+		"UnknownSource": "出典不明",
 		"UnitGram": "g",
 		"UnitKilogram": "kg",
 		"UnitMililitre": "mL",
 		"UnitLitre": "L",
-		"Unreadable": "Unreadable",
+		"Unreadable": "読めない",
 		"Upload": "アップロード",
-		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
-		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
-		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
-		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
+		"UploadMultipleImages": "{count} 枚の画像をアップロード | {count} 枚の画像をアップロード",
+		"UploadMultiplePictures": "{count} 枚の写真をアップロード | {count} 枚の写真をアップロード",
+		"UploadMultipleProofs": "{count} 個の証明をアップロード | {count} 個の証明をアップロード",
+		"UploadMultiplePrices": "アップロード {count} 価格 | アップロード {count} 価格",
 		"URL": "URL",
-		"URLInvalid": "Invalid URL",
+		"URLInvalid": "無効なURL",
 		"User": "ユーザー",
 		"Users": "ユーザー",
-		"UserCount": "{count} users | {count} user | {count} users",
-		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserCount": "{count} ユーザー | {count} ユーザー | {count} ユーザー",
+		"UserContributorCount": "{count} 人の貢献者 | {count} 人の貢献者 | {count} 人の貢献者",
+		"UserIsModerator": "あなたはモデレーターです",
+		"UserIsModeratorCanEditPrice": "あなたはモデレーターなので、この価格を編集できます",
+		"UserIsModeratorCanDeletePrice": "あなたはモデレーターなので、この価格を削除できます",
+		"UserIsModeratorCanEditProof": "あなたはモデレーターなので、この証明を編集できます",
+		"UserIsModeratorCanDeleteProof": "あなたはモデレーターなので、この証明を削除できます",
+		"UserIsNotPriceOwner": "あなたは価格の所有者ではありません",
+		"UserIsNotProofOwner": "あなたは証明の所有者ではありません",
+		"UserNotFound": "ユーザーが見つかりません",
 		"Validate": "検証",
-		"ValidatePrices": "Validate prices",
-		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePrices": "価格を検証する",
+		"ValidatePricesWithAI": "AIで価格を検証",
+		"ValidatePricesFromCommunity": "コミュニティからの価格を検証する",
 		"View": "表示",
 		"Website": "ウェブサイト",
-		"Year": "Year",
-		"Years": "Years",
+		"WithAPrice": "価格付き",
+		"WithoutAPrice": "価格なしで",
+		"Year": "年",
+		"Years": "年",
 		"Yes": "はい",
 		"No": "いいえ",
 		"Food": "食べ物",
 		"PetFood": "ペットフード",
-		"Beauty": "Beauty"
+		"Beauty": "美しさ"
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. 証明の選択",
+			"LabelsExtraction": "2. ラベル抽出",
+			"Cleanup": "3. クリーンアップ",
+			"Summary": "4. まとめ"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
-		"FindBoundingBoxes": "Automatically find labels",
-		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"BoundingBoxesFromServerWarning": "ラベルを自動検出できませんでした。ラベルの周囲に手動で四角形を描いてください。",
+		"FindBoundingBoxes": "ラベルを自動的に見つける",
+		"FindBoundingBoxesRunning": "自動ラベル検出を実行しています。お待ちください...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
-			"SendLabelsButton": "Send labels"
+			"DrawBoundingBoxes": "1. ラベルの周りに四角形を描く",
+			"CheckLabels": "2. ラベルの読みやすさを確認する",
+			"SendLabels": "3. ラベルを自動処理に送信する",
+			"SendLabelsButton": "ラベルを送信"
 		},
-		"PricesAlreadyAdded": "Prices already added",
+		"PricesAlreadyAdded": "価格はすでに追加されています",
 		"PricesWithoutProductOrCategory": "製品やカテゴリのない価格",
-		"PricesMarkedAsError": "Prices marked as error",
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
-		"WaitForUpload": "Please wait for upload",
-		"GoToProof": "Go to proof",
-		"NextProof": "Next proof",
-		"ChooseNextProof": "Choose another proof to handle",
-		"AutomaticBoundingBoxSource": "automatic",
-		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
+		"PricesMarkedAsError": "価格はエラーとしてマークされています",
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} の価格が {date} の既存の証明に {locationName}で追加されます",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} 件の価格が追加されました",
+		"WaitForUpload": "アップロードをお待ちください",
+		"GoToProof": "証明へ進む",
+		"NextProof": "次の証明",
+		"ChooseNextProof": "処理する別の証明を選択してください",
+		"AutomaticBoundingBoxSource": "自動",
+		"ManualBoundingBoxSource": "マニュアル",
+		"DetectedBarcode": "検出されたバーコード: {barcode}",
+		"LabelProcessingErrorMessage": "エラー: ラベルの自動処理に失敗しました",
 		"PriceTagLabels": {
-			"PriceTagWithoutPrice": "Price tag without a price",
-			"PriceTagWithPrice": "Price tag with a price",
-			"PriceTagTruncated": "Price tag marked as truncated",
-			"PriceTagUnreadable": "Price tag marked as unreadable",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagWithoutPrice": "価格のない値札",
+			"PriceTagWithPrice": "価格の付いた値札",
+			"PriceTagTruncated": "切り捨てられた値札",
+			"PriceTagUnreadable": "判読不能と表示された値札",
+			"PriceTagNotAPrice": "価格タグに価格ではないと記載されている",
 			"PriceTagNoBarcode": "バーコードなしと表示された値札",
 			"PriceTagOther": "その他と表示されている値札",
-			"NewPriceTag": "New price tag"
+			"NewPriceTag": "新しい値札"
 		},
-		"OpenWithTheAssistant": "Open with the assistant"
+		"OpenWithTheAssistant": "アシスタントで開く"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "参加しませんか！",
+		"HowToUseTheData": "データを活用する"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "お気に入りの通貨を 1 つ選択してください",
-		"Currency": "Currency",
+		"Currency": "通貨",
 		"AddCurrencies": "設定で通貨を追加する",
 		"AddCurrenciesWarning": "[設定] ページにリダイレクトされますが、このページに入力した情報はすべて失われます。",
-		"Select": "Select {currency_code}"
+		"Select": "{currency_code}を選択"
+	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "不明な製品を選択",
+		"SelectUnknownProductGuide": "または、追加する不明な製品を選択してください",
+		"CountriesWhereSold": "販売の国",
+		"CreateNewProduct": "新しい製品を作成する",
+		"CreateProduct": "製品を作成する",
+		"EnableCropMode": "クロップモードを有効にする",
+		"Flavor": "製品を作成するプロジェクトを選択します",
+		"NextProof": "次の証明",
+		"PreviousProof": "以前の証明",
+		"ProductAlreadyExists": "製品はすでに存在します",
+		"ProductLanguage": "製品言語",
+		"ProofNumberOfOutProofs": "証明 ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "販売店舗",
+		"UseCropModeToAddImage": "製品画像を追加するには、プルーフ写真の下の切り抜きモードを有効にし、製品の周囲に四角形を描きます。",
+		"ProductMissingPromoBanner": "実験: オープン価格のデータを使用してこの製品を作成します"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "最近の証明のいずれかを選択"
 	},
 	"Footer": {
 		"About": "アプリについて",
-		"Stats": "Stats",
+		"Stats": "統計",
 		"TagLine": "{name} {url} のプロジェクトです。"
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "ダッシュボード",
 		"Settings": "設定",
 		"SignIn": "サインイン",
 		"SignOut": "サインアウト"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "ライトモード",
+		"DarkMode": "ダークモード"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"LatestPrices": "Latest prices",
-		"ProofAdd": "Add a proof",
+		"AddPrice": "価格を追加する",
+		"LatestPrices": "最新価格",
+		"ProofAdd": "証明を追加する",
 		"SearchProduct": "商品を検索",
-		"SettingsUpdated": "Settings updated!",
+		"SettingsUpdated": "設定が更新されました!",
 		"TodayPriceStat": "今日は価格が追加されていません |本日追加された新しい価格は {todayPriceNumber} |本日、新たに {todayPriceNumber} 件の価格が追加されました！",
 		"Welcome": {
-			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
+			"Generic": "オープンなクラウドソーシングによる価格データベース🏷🍊💲",
+			"Subtitle": "食品価格のオープンクラウドソースデータベース🏷🍊💲",
 			"Title": "{name} へようこそ"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "最新価格",
 		"LoadMore": "もっと読み込む",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "OpenStreetMap に場所が見つかりません... 遠慮なく追加してください :)"
 	},
 	"LocationSelector": {
 		"Clear": "クリア",
-		"NoResult": "No results found",
+		"NoResult": "結果が見つかりませんでした",
+		"NoResultHelpKeywords": "お店が見つからない場合は、住所全体ではなくキーワード（例：「Carrefour 75013 Paris」または「Walmart San Francisco」）を使用して検索してみてください。",
+		"NoResultHelpOSM": "まだお店が見つかりませんか？まだ {osm_name} に載っていない可能性があります。まずは {osm_url} に追加してみてください。",
 		"PoweredBy": {
-			"text": "powered by {url}"
+			"text": "{url}によって提供"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
+		"RecentLocations": "最近の場所なし | 最近の場所 {recentLocationNumber}| 最近の場所 {recentLocationNumber}",
+		"Result": "結果 {resultNumber} | 結果 {resultNumber}",
 		"SearchByName": "名前と都市でショップを検索",
 		"Title": "ショップの場所を探す",
 		"Warning": "現在、お店を見つけるための検索エンジンの精度はあまり高くありません。{newline}結果を絞り込むために、迷わず通り名を追加してください。{newline}例: カルフール シティ 15e パリ ;セインズベリーズ カムデン ロンドン"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "要求されたページは存在しないようです...",
+		"Title": "見つかりません"
 	},
 	"PriceCard": {
 		"Discount": "ディスカウント",
-		"PriceDate": "on {date}",
+		"PriceDate": "{date}で",
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / 単位",
-		"Proof": "Proof",
+		"Proof": "証拠",
 		"FullPrice": "正規価格",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "不明な製品"
 	},
 	"PriceDelete": {
 		"Confirmation": "この価格を削除してもよろしいですか?",
@@ -589,28 +672,28 @@
 	"PriceEdit": {
 		"Save": "保存",
 		"Success": "価格を編集しました！",
-		"Title": "Edit a price"
+		"Title": "価格を編集する"
 	},
 	"PriceForm": {
 		"Discount": "ディスカウント",
-		"Label": "Price",
+		"Label": "価格",
 		"LabelDiscounted": "割引価格",
 		"LabelFull": "正規価格"
 	},
 	"PriceList": {
 		"LoadMore": "もっと読み込む",
-		"Title": "Latest prices"
+		"Title": "最新価格"
 	},
 	"PriceRules": {
 		"AmountRequired": "価格が必要です",
 		"NoSpaces": "スペースを使用しないでください",
-		"Number": "Input a number",
+		"Number": "数字を入力してください",
 		"Positive": "価格はマイナスではありません",
 		"TwoDecimals": "小数点以下2桁までしか使用できません",
-		"ThreeDecimals": "Only three decimals allowed"
+		"ThreeDecimals": "小数点は3桁までしか使えません"
 	},
 	"ProductCard": {
-		"BarcodeLength": "Barcode length: {length}",
+		"BarcodeLength": "バーコードの長さ: {length}",
 		"Brands": "ブランド",
 		"BrandLower": "ブランド",
 		"BrandMissing": "ブランドが見つかりません",
@@ -624,10 +707,10 @@
 		"LabelTotal": "{count} ラベル",
 		"LatestPrice": "最新価格",
 		"InvalidBarcode": "無効なバーコード",
-		"InvalidBarcodeLength": "Invalid barcode length",
+		"InvalidBarcodeLength": "バーコードの長さが無効です",
 		"ProductBrandMissing": "製品ブランドがありません",
 		"ProductCategoriesMissing": "製品カテゴリがありません",
-		"ProductQuantityGram": "{0} g",
+		"ProductQuantityGram": "{0} グラム",
 		"ProductQuantityKilogram": "{0}kg",
 		"ProductQuantityLitre": "{0} / L",
 		"ProductQuantityMililitre": "{0} mL",
@@ -636,139 +719,173 @@
 		"UnknownProduct": "不明な製品名"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"AddPrice": "価格を追加する",
+		"CategoryNotFound": "カテゴリが見つかりません...",
+		"LatestPrices": "最新価格",
 		"LoadMore": "もっと読み込む",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Open Food Facts に製品が見つかりません... 遠慮なく追加してください :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
-		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
-		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
-		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
-		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"HowToMultiple": "選択する値札の画像はすべて同じ店舗の場所にあり、同じ日に撮影されたものである必要があります。",
+		"HowToMultipleShort": "写真には同じ店舗の場所と日付が写っている必要があります。",
+		"PriceValidationAllow": "私の写真の価格をAIで抽出し、コミュニティで検証できるようにする",
+		"PriceTagAllowCommunityValidation": "AIによって抽出された価格をコミュニティが検証できるようにする",
+		"PriceTagAIWarning": "AI はあなたの証明に基づいて価格を抽出します。",
+		"ReceiptAllowAI": "レシートでAIを実行して価格を抽出できるようにする",
+		"ReceiptAIWarning": "AI がレシートに基づいて価格を抽出します。",
 		"PromoProofPriceTagAddMultiple": "複数の値札（同じ店舗の場所と日付）をアップロードするには、ここをクリックしてください。",
 		"PromoReceiptAssistant": "実験: 新しいレシート アシスタントを試して、レシートから価格を自動的に抽出してみましょう。"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
+		"Proof": "証拠",
 		"PRICE_TAG": "値札",
 		"RECEIPT": "領収書",
 		"GDPR_REQUEST": "GDPR リクエスト",
-		"SHOP_IMPORT": "Shop import"
+		"SHOP_IMPORT": "ショップインポート"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "証明を選択",
 		"ProofSelected": "証明が選択されました！",
-		"Success": "Proof created!"
+		"Success": "証明が作成されました!"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "この証明を削除してもよろしいですか?",
 		"Delete": "削除",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "証明を削除する",
+		"Success": "証明は削除されました!"
 	},
 	"ProofDetail": {
 		"LoadMore": "もっと読み込む",
-		"Prices": "Prices",
-		"ProofNotFound": "Proof not found",
+		"Prices": "価格",
+		"ProofNotFound": "証拠は見つかりませんでした",
 		"Public": "公開",
 		"Private": "非公開",
 		"Privacy": "プライバシー"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
+		"Title": "校正を編集する",
 		"Save": "保存",
-		"Success": "Proof edited!"
+		"Success": "校正編集しました！"
 	},
 	"ReceiptAssistant": {
-		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
-		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
-		"PriceAlreadyCreatedForItem": "Price already created for item",
-		"PriceReadyToBeAdded": "Price ready to be added",
-		"ReceiptItemsCheck": "Receipt items, check and fix",
-		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
-		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+		"AddNewItem": "新しいアイテムを追加",
+		"NoItemsFound": "領収書から項目を抽出できませんでした。もう一度お試しください。",
+		"PriceAlreadyCreated": "価格はすでに作成されています",
+		"PriceAlreadyCreatedForItem": "商品の価格はすでに作成されています",
+		"PriceReadyToBeAdded": "価格を追加する準備ができました",
+		"ReceiptItems": "領収書項目",
+		"ReceiptItemsCheck": "領収書の項目、確認と修正",
+		"UploadOnlyNewPrices": "新しい価格のみをアップロードする（{nbPrices}）",
+		"UploadOrUpdateAllValidPrices": "有効な価格をすべてアップロードまたは更新します（{nbPrices}）",
+		"WaitForExtraction": "領収書から項目を自動的に抽出しています。お待ちください..."
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "再利用が見つかりませんか？お知らせください {url}!",
+		"Here": "ここ"
 	},
 	"Router": {
 		"About": {
 			"Title": "アプリについて"
 		},
+		"Add": {
+			"Title": "追加"
+		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "価格を追加する"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "価格を追加する"
 		},
 		"AddPriceSingle": {
-			"Title": "Add a single price"
+			"Title": "単一の価格を追加する"
 		},
 		"AddPriceMultiple": {
 			"Title": "複数の価格を追加する"
 		},
 		"AddProof": {
-			"Title": "Add a proof"
+			"Title": "証明を追加する"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "証明を追加する"
 		},
 		"AddProofSingle": {
-			"Title": "Add a single proof"
+			"Title": "単一の証明を追加する"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "複数の証明を追加する"
+		},
+		"AddProofReceipt": {
+			"Title": "証明書（領収書）を追加する"
+		},
+		"AddProofsPriceTags": {
+			"Title": "証明書（値札）を追加する"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "探検する"
 		},
 		"Locations": {
 			"Title": "場所："
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "価格を追加する"
 		},
 		"PriceAddSingle": {
-			"Title": "Add a single price"
+			"Title": "単一の価格を追加する"
 		},
 		"PriceAddMultiple": {
 			"Title": "複数の価格を追加する"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "価格"
+		},
+		"PriceTags": {
+			"Title": "値札"
 		},
 		"Proofs": {
-			"Title": "Proofs"
+			"Title": "証明"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a single proof"
+			"Title": "単一の証明を追加する"
+		},
+		"Receipt": {
+			"Title": "領収書"
+		},
+		"Cities": {
+			"Title": "都市"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "コミュニティ"
 		},
 		"Contribute": {
 			"Title": "貢献する"
 		},
+		"Countries": {
+			"Title": "国"
+		},
+		"CreateOffProduct": {
+			"Title": "製品を作成する"
+		},
 		"Experiments": {
-			"Title": "Experiments"
+			"Title": "実験"
 		},
 		"Home": {
-			"Title": "ホーム"
+			"Title": "ホーム",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
-			"Title": "Dashboard"
+			"Title": "ダッシュボード"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "最新価格"
 		},
 		"LatestProofs": {
 			"Title": "最新の証拠"
+		},
+		"Moderation": {
+			"Title": "節度"
 		},
 		"MyPrices": {
 			"Title": "私の価格"
@@ -777,10 +894,10 @@
 			"Title": "自分の証拠"
 		},
 		"MyDashboard": {
-			"Title": "My dashboard"
+			"Title": "私のダッシュボード"
 		},
 		"Reuses": {
-			"Title": "Reuses"
+			"Title": "再利用"
 		},
 		"Search": {
 			"Title": "検索"
@@ -792,7 +909,7 @@
 			"Title": "サインイン"
 		},
 		"Stats": {
-			"Title": "Stats"
+			"Title": "統計"
 		},
 		"TopContributors": {
 			"Title": "上位貢献者:"
@@ -801,34 +918,36 @@
 			"Title": "上位の場所"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "トップ製品"
 		},
 		"Users": {
 			"Title": "ユーザー"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "貢献アシスタント"
 		},
 		"ProofPriceTagAssistant": {
 			"Title": "プルーフ値札アシスタント"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "領収書アシスタント"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "チャレンジ"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "課題",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
-			"Title": "Community challenge"
+			"Title": "コミュニティチャレンジ"
+		},
+		"Validate": {
+			"Title": "検証",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
-			"Title": "Validate prices"
+			"Title": "価格を検証する"
 		}
 	},
 	"Search": {
@@ -842,50 +961,53 @@
 	"SignIn": {
 		"Button": "サインイン",
 		"Password": "パスワード",
-		"ServerError": "Error: server error",
+		"ServerError": "エラー: サーバーエラー",
 		"Title": "サインイン",
 		"SignInOFFAccount": "Google アカウントでログイン",
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
+		"UsernameLabel": "ユーザー名",
+		"WrongCredentials": "エラー: 資格情報が間違っています"
 	},
 	"Stats": {
-		"AddedToday": "Added today",
-		"Prices": "Prices",
-		"PricesToday": "Prices added today",
-		"PricesTotal": "Total prices",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
-		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats",
+		"AddedToday": "本日追加",
+		"Prices": "価格",
+		"PricesToday": "本日追加された価格",
+		"PricesTotal": "合計金額",
+		"PricesLinkedToPriceTag": "値札にリンクされた価格",
+		"ProductsWithPrices": "価格付き商品",
+		"Title": "統計",
 		"Products": "製品",
 		"Locations": "場所：",
 		"Users": "ユーザー",
 		"Total": "合計",
 		"WithPrice": "価格付き",
 		"WithProduct": "製品付き",
-		"WithProductBarcode": "With a product barcode",
-		"WithProductCategory": "With a product category",
-		"WithDiscount": "With a discount",
+		"WithProductBarcode": "商品バーコード付き",
+		"WithProductCategory": "製品カテゴリー",
+		"WithDiscount": "割引あり",
 		"WithoutProduct": "製品なし",
-		"WithBarcode": "With a barcode",
-		"WithCategory": "With a category",
-		"PricesProofsPerSource": "Prices and proofs per source",
-		"LastUpdated": "Last updated on {date}"
+		"WithBarcode": "バーコード付き",
+		"WithCategory": "カテゴリー付き",
+		"PricesPerSource": "ソースごとの価格",
+		"ProofsPerSource": "情報源ごとの証明",
+		"PricesProofsPerSource": "ソースごとの価格と証明",
+		"LastUpdated": "最終更新日: {date}"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "最新価格",
 		"LatestProofs": "最新の証拠",
 		"LoadMore": "もっと読み込む",
-		"MyDashboard": "My dashboard",
+		"MyDashboard": "私のダッシュボード",
 		"MyPrices": "私の価格",
 		"MyProofs": "自分の証拠",
 		"ProofUpdated": "証拠が更新されました！",
 		"Settings": "設定",
-		"Title": "Dashboard",
+		"Title": "ダッシュボード",
 		"UserPriceTotal": "商品 {count} 個",
 		"UserProofTotal": "{count} 件の証明"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "最新価格",
 		"LoadMore": "もっと読み込む"
 	},
 	"UserList": {
@@ -894,24 +1016,25 @@
 		"UserTotal": "{count} 人の貢献者"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "価格を追加する",
 		"ChangeLanguage": "言語の変更",
 		"CountryLabel": "国",
-		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
-		"BarcodeScanner": "Barcode scanner",
-		"DefaultMode": "Default mode",
+		"CurrencyLabel": "通貨",
+		"DisplayTitle": "画面",
+		"BarcodeScanner": "バーコードスキャナー",
+		"BarcodeScannerLibrary": "Barcode scanner library",
+		"DefaultMode": "デフォルトモード",
 		"FavoriteCurrencies": "お気に入りの通貨",
 		"CurrencyRequired": "少なくとも 1 つの通貨が必要です",
 		"LanguageLabel": "言語",
-		"LocationFinder": "Location finder",
-		"LocationDisplayOSMID": "Display OSM ID",
-		"PriceListDisplay": "Price list diplay",
-		"PriceValidation": "Price validation",
+		"LocationFinder": "場所検索",
+		"LocationDisplayOSMID": "OSM IDを表示",
+		"PriceListDisplay": "価格表表示",
+		"PriceValidation": "価格検証",
 		"ProductDisplayBarcode": "バーコードを表示",
-		"ProductDisplayCategoryTag": "Display category tag",
-		"ProductDisplaySource": "Display source",
-		"SideMenuExperimentsDisplay": "Display 'Experiments'",
+		"ProductDisplayCategoryTag": "カテゴリタグを表示",
+		"ProductDisplaySource": "ソースを表示",
+		"SideMenuExperimentsDisplay": "「実験」を表示",
 		"Save": "保存",
 		"Title": "設定",
 		"TranslationCompletion": "翻訳は {completion}% 完了しています。",

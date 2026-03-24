@@ -1,11 +1,13 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-image">
         {{ $t('Common.ProofCount', { count: proofTotal }) }}
       </v-chip>
-      <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
-      <FilterMenu v-if="proofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
+        <FilterMenu kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
+      </template>
     </v-col>
   </v-row>
 
@@ -24,7 +26,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api.js'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants.js'
 import utils from '../utils.js'
 
@@ -88,7 +90,7 @@ export default {
       if ((this.proofTotal != null) && (this.proofList.length >= this.proofTotal)) return
       this.loading = true
       this.proofPage += 1
-      return api.getProofs(this.getProofsParams)
+      return openPricesApi.getProofs(this.getProofsParams)
         .then((data) => {
           this.proofList.push(...data.items)
           this.proofTotal = data.total

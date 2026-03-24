@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Tilastot ja sijoitukset",
 		"MostPicturesAdded": "Eniten kuvia lisätty",
 		"MostPricesAdded": "Useimmat hinnat lisätty",
-		"MostPricesFromPicturesAdded": "Useimmat kuvista lisätyt hinnat"
+		"MostPricesFromPicturesAdded": "Useimmat kuvista lisätyt hinnat",
+		"AlertNew": "Onko sinulla idea uudelle haasteelle? Kerro meille {url}!"
 	},
 	"Common": {
 		"About": "Tietoja",
@@ -177,8 +178,12 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Lisää uusia hintalappuja",
+		"AddNewProofReceipt": "Lisää uusi kuitti",
 		"AddToOFF": "Lisää kohtaan {name}",
+		"Added": "Lisätty",
 		"AdditionalInfo": "Additional information",
+		"All": "Kaikki",
 		"Barcode": "Viivakoodi",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Skannaa viivakoodi",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Tyhjennä",
+		"Close": "Sulje",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,8 +224,9 @@
 		"ConsumptionProofs": "Consumption proofs",
 		"Contribute": "Osallistu",
 		"Contributors": "Osallistujat",
-		"Contributions": "Osallistumiset",
+		"Contributions": "Muokkaukset",
 		"Confirm": "Vahvista",
+		"Count": "Määrä",
 		"Country": "Maa",
 		"Countries": "Maat",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -229,6 +236,7 @@
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Valuutta puuttuu",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "Voit lisätä valuuttoja asetuksistasi.",
 		"Dashboard": "Kojelauta",
 		"Display": "Näytä",
 		"DisplayList": "List",
@@ -241,6 +249,9 @@
 		"Error": "Virhe",
 		"Experiment": "Kokeilu",
 		"Experiments": "Experiments",
+		"Explore": "Tutkia",
+		"FromPriceTag": "Hintalapusta alkaen",
+		"FromReceipt": "Kuitista",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Merkki",
@@ -250,6 +261,7 @@
 		"Languages": "Kielet",
 		"LatestPrices": "Viimeisimmät hinnat",
 		"LatestProofs": "Uusimmat todisteet",
+		"LearnMore": "Lue lisää",
 		"LoadMore": "Lataa enemmän",
 		"Location": "Sijainti",
 		"Locations": "Sijainnit",
@@ -257,8 +269,12 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Sijainti puuttuu",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Päivämäärä",
 		"DateMissing": "Päivämäärä puuttuu",
+		"DateProofHelpText": "Kuvan päivämäärä.",
+		"DateProofHelpTextExif": "Oletusarvoisesti yritämme poimia sen kuvan EXIF-metatiedoista.",
+		"DateProofHelpTextReceipt": "Kuittien kohdalla aseta se ostopäivämäärään.",
 		"Details": "Yksityiskohdat",
 		"Delete": "Poista",
 		"DeveloperMode": "Developer mode",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Muokkaa",
 		"End": "End",
+		"ErrorServer": "Virhe: palvelinvirhe",
+		"FieldIsRequired": "Kenttä on pakollinen",
 		"Filter": "Suodata",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Hintojen kanssa",
+		"FilterWithLocationCount": "Sijainnit",
 		"FilterProductWithPriceCount": "Hinnalla",
 		"FilterProductWithPriceCountHide": "Piilota tuotteet hinnoilla",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Piilota yli 30 päivää vanhat hinnat",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Näytä vain omasta maastani peräisin olevat todisteet",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Voimassa olevalla viivakoodilla",
 		"FilterPriceTagWithTagPredictionProductExists": "Kelvollisen tuotteen kanssa",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Kelvollinen kategoriatunniste",
@@ -299,6 +320,7 @@
 		"GDPR_REQUEST": "GDPR-pyyntö",
 		"Group": "Group",
 		"Help": "Ohje",
+		"Here": "Tässä",
 		"History": "Historia",
 		"Image": "Kuva",
 		"ImageSelect": "Select an image",
@@ -314,19 +336,33 @@
 		"Map": "Kartta",
 		"Miscellaneous": "Sekalaiset",
 		"MobileApp": "Mobile app",
+		"Moderation": "Moderointi",
+		"ModerationFlagReasonWrongType": "Väärä tyyppi",
+		"ModerationFlagReasonWrongPriceValue": "Väärä hinta-arvo",
+		"ModerationFlagReasonWrongCurrency": "Väärä valuutta",
+		"ModerationFlagReasonWrongProduct": "Väärä tuote",
+		"ModerationFlagReasonWrongLocation": "Väärä sijainti",
+		"ModerationFlagReasonWrongDate": "Väärä päivämäärä",
+		"ModerationFlagReasonOther": "Muu",
+		"ModerationFlagCreateSuccess": "Kiitos raportistasi!",
+		"ModerationFlagStatusOpen": "Avata",
+		"ModerationFlagStatusClosed": "Suljettu",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "Minun hinnat",
-		"MyProofs": "Minun todisteeni",
+		"MyPrices": "Lisäämäni hinnat",
+		"MyProofs": "Lisäämäni todisteet",
 		"MyStats": "My stats",
+		"New": "Uusi",
 		"NextProof": "Next proof",
 		"NoBarcode": "Ei viivakoodia",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Avata",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Järjestys",
+		"OrderNameASC": "Nimi",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Skannausten määrä",
 		"OrderProductPriceCountDESC": "Hintojen määrä",
@@ -356,14 +392,21 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Hintalappu",
 		"PriceTags": "Hintalaput",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Hinta luotu!",
 		"PriceMissing": "Hinta puuttuu",
+		"PricePerMissing": "Hinta per puuttuva",
+		"PriceAlreadyUploaded": "Hinta on jo ladattu",
+		"PriceReadyToBeUploaded": "Hinta ladattavissa",
 		"PricesAlreadyUploaded": "Hinnat on jo ladattu",
+		"PricesAll": "Kaikki hinnat",
 		"PricesMore": "More prices",
-		"PricesAdded": "Prices added",
+		"PricesAdded": "Lisätyt hinnat",
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
@@ -382,6 +425,7 @@
 		"ProofSelected": "Todiste valittu!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} vedokset ladattu",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,6 +433,8 @@
 		"Quantity": "Määrä",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Määrä puuttuu",
+		"Rank": "Sijoitus",
+		"Reason": "Syy",
 		"RECEIPT": "Kuitti",
 		"Receipt": "Kuitti",
 		"Receipts": "Receipts",
@@ -397,12 +443,17 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Avaa uudelleen",
+		"ReportProblem": "Ilmoita ongelmasta",
+		"Reset": "Reset",
+		"Resolved": "Ratkaistu",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Etsi",
 		"Select": "Select",
+		"Send": "Lähetä",
 		"Settings": "Asetukset",
-		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Kirjautunut sisään!",
 		"SignIn": "Kirjaudu sisään",
 		"SignOut": "Kirjaudu ulos",
@@ -412,12 +463,14 @@
 		"SourceCode": "Source code",
 		"Start": "Aloita",
 		"Stats": "Tilastot",
+		"Status": "Tila",
 		"SuggestedBarcode": "Ehdotettu viivakoodi:",
 		"Summary": "Yhteenveto",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "Teksti",
 		"Thanks": "Kiitos",
 		"Theme": "Teema",
 		"ThemeLight": "Vaalea",
@@ -447,17 +500,28 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "URL-osoite",
 		"URLInvalid": "Invalid URL",
 		"User": "Käyttäjä",
 		"Users": "Käyttäjät",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Käyttäjää ei löydy",
 		"Validate": "Vahvista",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "Vahvista hinnat yhteisöltä",
 		"View": "Näytä",
 		"Website": "Nettisivusto",
+		"WithAPrice": "Hinnalla",
+		"WithoutAPrice": "Ilman hintaa",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Kyllä",
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "Sinut ohjataan Asetukset-sivulle, mutta menetät kaikki tälle sivulle antamasi tiedot.",
 		"Select": "Valitse {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Maat, joissa myynnissä",
+		"CreateNewProduct": "Luo uusi tuote",
+		"CreateProduct": "Luo tuote",
+		"EnableCropMode": "Ota rajaustila käyttöön",
+		"Flavor": "Valitse projekti, jossa tuote luodaan",
+		"NextProof": "Next proof",
+		"PreviousProof": "Edellinen todiste",
+		"ProductAlreadyExists": "Tuote on jo olemassa",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Todiste ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Myymälät, joissa myydään",
+		"UseCropModeToAddImage": "Lisätäksesi tuotekuvan, ota käyttöön rajaustila vedoskuvan alapuolella ja piirrä suorakulmio tuotteen ympärille.",
+		"ProductMissingPromoBanner": "Kokeilu: luo tämä tuote käyttämällä Open Prices -tietoja"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Valitse jokin viimeaikaisista todisteistasi"
 	},
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "Tyhjennä",
 		"NoResult": "Ei tuloksia",
+		"NoResultHelpKeywords": "Etkö löydä liikettäsi? Kokeile avainsanoja koko osoitteen sijaan (esim. 'Carrefour 75013 Pariisi' tai 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Etkö vieläkään löydä kauppaasi? Se ei ehkä ole vielä {osm_name} -alueella. Voit lisätä sen ensin {osm_url} -alueella.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -633,7 +716,7 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Tuotteen määrä puuttuu",
 		"QuantityMissing": "Määrä puuttuu",
-		"UnknownProduct": "Tuntematon tuotenimi"
+		"UnknownProduct": "Tuotenimi ei tiedossa"
 	},
 	"ProductDetail": {
 		"AddPrice": "Lisää hinta",
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Kuittikohteet",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "Tietoja"
+		},
+		"Add": {
+			"Title": "Lisää"
 		},
 		"AddPrice": {
 			"Title": "Lisää hinta"
@@ -726,7 +812,19 @@
 			"Title": "Add a single proof"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "Lisää monta todistetta kerralla"
+		},
+		"AddProofReceipt": {
+			"Title": "Lisää todiste (kuitti)"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "Tutkia"
 		},
 		"Locations": {
 			"Title": "Sijainnit"
@@ -743,11 +841,20 @@
 		"Prices": {
 			"Title": "Hinnat"
 		},
+		"PriceTags": {
+			"Title": "Hintalaput"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Kuitti"
+		},
+		"Cities": {
+			"Title": "Kaupungit"
 		},
 		"Community": {
 			"Title": "Community"
@@ -755,11 +862,18 @@
 		"Contribute": {
 			"Title": "Osallistu"
 		},
+		"Countries": {
+			"Title": "Maat"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Koti"
+			"Title": "Koti",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Kojelauta"
@@ -770,11 +884,14 @@
 		"LatestProofs": {
 			"Title": "Uusimmat todisteet"
 		},
+		"Moderation": {
+			"Title": "Moderointi"
+		},
 		"MyPrices": {
-			"Title": "Minun hinnat"
+			"Title": "Lisäämäni hinnat"
 		},
 		"MyProofs": {
-			"Title": "Minun todisteeni"
+			"Title": "Lisäämäni todisteet"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Todistehinta-avustaja"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Vahvista",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,7 +964,8 @@
 		"ServerError": "Virhe: palvelinvirhe",
 		"Title": "Kirjaudu sisään",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
-		"UsernameLabel": "Käyttäjätunnus",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
+		"UsernameLabel": "Käyttäjänimi",
 		"WrongCredentials": "Virhe: väärät tunnistetiedot"
 	},
 	"Stats": {
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Ilman tuotetta",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Hinnat lähteittäin",
+		"ProofsPerSource": "Todisteet lähteen mukaan",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -876,8 +998,8 @@
 		"LatestProofs": "Uusimmat todisteet",
 		"LoadMore": "Lataa enemmän",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "Minun hinnat",
-		"MyProofs": "Minun todisteeni",
+		"MyPrices": "Lisäämäni hinnat",
+		"MyProofs": "Lisäämäni todisteet",
 		"ProofUpdated": "Todiste päivitetty!",
 		"Settings": "Asetukset",
 		"Title": "Kojelauta",
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "Valuutta",
 		"DisplayTitle": "Näytä",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Suosikki valuutat",
 		"CurrencyRequired": "Vähintään yksi valuutta vaaditaan",

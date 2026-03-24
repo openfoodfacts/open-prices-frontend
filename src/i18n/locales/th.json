@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "ใบเสร็จ"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "สร้าง",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "สร้าง",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "ราคา",
+			"LabelDiscounted": "ราคาลดพิเศษ",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "การพิสูจน์",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "วันที่",
+			"DateLabel": "วันที่",
 			"Find": "ค้นหา",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -162,14 +162,15 @@
 		"StatsAndRankings": "สถิติและอันดับ",
 		"MostPicturesAdded": "เพิ่มรูปภาพส่วนใหญ่",
 		"MostPricesAdded": "ราคาส่วนใหญ่เพิ่ม",
-		"MostPricesFromPicturesAdded": "ราคาส่วนใหญ่จากภาพที่เพิ่มเข้ามา"
+		"MostPricesFromPicturesAdded": "ราคาส่วนใหญ่จากภาพที่เพิ่มเข้ามา",
+		"AlertNew": "คุณมีไอเดียสำหรับความท้าทายใหม่ ๆ ไหม? บอกเราหน่อยสิ {url}!"
 	},
 	"Common": {
 		"About": "About",
 		"Action": "การกระทำ",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "เพิ่มราคา",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -177,25 +178,29 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "เพิ่มป้ายราคาใหม่",
+		"AddNewProofReceipt": "เพิ่มใบเสร็จใหม่",
 		"AddToOFF": "Add to {name}",
+		"Added": "เพิ่ม",
 		"AdditionalInfo": "Additional information",
+		"All": "ทั้งหมด",
 		"Barcode": "บาร์โค้ด",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
 		"BarcodeScanShort": "สแกน",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "ประเภท",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "บาร์โค้ดไม่ถูกต้อง",
 		"Brand": "ยี่ห้อ",
 		"Brands": "ยี่ห้อสินค้า",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "ราคา",
+		"Prices": "ราคา",
 		"PRODUCT": "สินค้า",
 		"Product": "สินค้า",
 		"ProductName": "ชื่อสินค้า",
 		"Products": "ผลิตภัณฑ์",
-		"Proof": "Proof",
+		"Proof": "การพิสูจน์",
 		"Proofs": "Proofs",
 		"CATEGORY": "หมวดหมู่:",
 		"Category": "หมวดหมู่:",
@@ -209,38 +214,44 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "ล้างข้อมูล",
+		"Close": "ปิด",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
 		"CommunityProofs": "Community proofs",
-		"Consumption": "Consumption",
+		"Consumption": "การบริโภค",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
 		"Contribute": "ร่วมสนับสนุน",
 		"Contributors": "Contributors",
 		"Contributions": "การมีส่วนร่วม",
 		"Confirm": "ยืนยัน",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "ประเทศ",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "สกุลเงิน",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "คุณสามารถเพิ่มสกุลเงินได้ในการตั้งค่าของคุณ",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
-		"DisplayMap": "Map",
-		"DisplayPriceMap": "Map",
+		"DisplayMap": "แผนที่",
+		"DisplayPriceMap": "แผนที่",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
-		"Error": "Error",
+		"Done": "เสร็จแล้ว",
+		"Error": "ข้อผิดพลาด",
 		"Experiment": "การทดลอง",
 		"Experiments": "Experiments",
+		"Explore": "สำรวจ",
+		"FromPriceTag": "จากป้ายราคา",
+		"FromReceipt": "จากใบเสร็จรับเงิน",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Label",
@@ -250,6 +261,7 @@
 		"Languages": "ภาษา",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "ดูเพิ่มเติม",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -257,9 +269,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "วันที่",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateProofHelpText": "วันที่ถ่ายภาพ",
+		"DateProofHelpTextExif": "โดยปกติแล้ว เราจะพยายามดึงข้อมูลนั้นจากข้อมูล EXIF ของรูปภาพ",
+		"DateProofHelpTextReceipt": "สำหรับใบเสร็จรับเงิน ให้ตั้งค่าเป็นวันที่ซื้อสินค้า",
+		"Details": "รายละเอียด",
 		"Delete": "ลบ",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -271,7 +287,7 @@
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
 		"DiscountTypeSecondHand": "Second hand",
-		"DiscountTypeOther": "Other",
+		"DiscountTypeOther": "อื่น",
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "ตัวอย่าง:",
@@ -280,25 +296,31 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "แก้ไข",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "ฟิลด์นี้จำเป็นต้องกรอก",
 		"Filter": "กรอง",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "พร้อมราคา",
+		"FilterWithLocationCount": "พร้อมสถานที่ตั้ง",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "แสดงเฉพาะหลักฐานจากประเทศของฉันเท่านั้น",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "มีบาร์โค้ดที่ถูกต้อง",
 		"FilterPriceTagWithTagPredictionProductExists": "ด้วยผลิตภัณฑ์ที่ถูกต้อง",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "มีแท็กหมวดหมู่ที่ถูกต้อง",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "คำถามที่พบบ่อย",
 		"FrequentlyAskedQuestions": "คำถามที่พบบ่อย",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "ช่วย",
+		"Here": "ที่นี่",
 		"History": "ประวัติการเข้าใช้",
 		"Image": "รูปภาพ",
 		"ImageSelect": "Select an image",
@@ -311,27 +333,41 @@
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
-		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Map": "แผนที่",
+		"Miscellaneous": "เบ็ดเตล็ด",
 		"MobileApp": "Mobile app",
+		"Moderation": "ความพอประมาณ",
+		"ModerationFlagReasonWrongType": "ประเภทผิด",
+		"ModerationFlagReasonWrongPriceValue": "ราคาค่าผิด",
+		"ModerationFlagReasonWrongCurrency": "สกุลเงินผิด",
+		"ModerationFlagReasonWrongProduct": "สินค้าผิด",
+		"ModerationFlagReasonWrongLocation": "ตำแหน่งผิด",
+		"ModerationFlagReasonWrongDate": "วันที่ผิด",
+		"ModerationFlagReasonOther": "อื่น",
+		"ModerationFlagCreateSuccess": "ขอบคุณสำหรับการรายงานของคุณ!",
+		"ModerationFlagStatusOpen": "เปิด",
+		"ModerationFlagStatusClosed": "ปิด",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "ราคาของฉัน",
+		"MyProofs": "หลักฐานของฉัน",
 		"MyStats": "My stats",
+		"New": "ใหม่",
 		"NextProof": "Next proof",
 		"NoBarcode": "ไม่มีบาร์โค้ด",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "เปิด",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "ชื่อ",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "ราคา",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -339,7 +375,7 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
-		"Other": "Other",
+		"Other": "อื่น",
 		"OtherContributions": "Other contributions",
 		"PageNotMaintainedAnymore": "หน้านี้ไม่ได้รับการดูแลอีกต่อไป",
 		"PersonalInfo": "Personal information",
@@ -354,14 +390,21 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "ป้ายราคา",
 		"PriceTags": "ป้ายราคา",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "ราคาหายไป",
+		"PricePerMissing": "ราคาต่อส่วนที่ขาดหาย",
+		"PriceAlreadyUploaded": "ราคาอัพโหลดเรียบร้อยแล้ว",
+		"PriceReadyToBeUploaded": "ราคาพร้อมอัพโหลด",
 		"PricesAlreadyUploaded": "ราคาอัพโหลดเรียบร้อยแล้ว",
+		"PricesAll": "ราคาทั้งหมด",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -377,11 +420,12 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "เลือกหลักฐาน",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} อัพโหลดหลักฐานแล้ว",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,35 +433,44 @@
 		"Quantity": "ปริมาณ",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "อันดับ",
+		"Reason": "สาเหตุ",
+		"RECEIPT": "ใบเสร็จ",
+		"Receipt": "ใบเสร็จ",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "เปิดใหม่อีกครั้ง",
+		"ReportProblem": "รายงานปัญหา",
+		"Reset": "Reset",
+		"Resolved": "ได้รับการแก้ไขแล้ว",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "ค้นหา",
 		"Select": "Select",
+		"Send": "ส่ง",
 		"Settings": "ตั้งค่า",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "เข้าสู่ระบบ",
 		"SignOut": "ล๊อคเอ้าท์",
 		"SideMenu": "Side menu",
-		"Share": "Share",
-		"Source": "Source",
+		"Share": "แบ่งปัน",
+		"Source": "แหล่งที่มา",
 		"SourceCode": "Source code",
-		"Start": "Start",
+		"Start": "เริ่ม",
 		"Stats": "Stats",
+		"Status": "สถานะ",
 		"SuggestedBarcode": "บาร์โค้ดที่แนะนำ:",
 		"Summary": "ภาพรวม",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "ข้อความ",
 		"Thanks": "Thanks",
 		"Theme": "ธีม",
 		"ThemeLight": "สว่าง",
@@ -429,12 +482,12 @@
 		"TopCountries": "ประเทศยอดนิยม",
 		"Today": "Today",
 		"Top": "Top",
-		"Total": "Total",
+		"Total": "ทั้งหมด",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"TryItOut": "ลองดูสิ",
 		"Type": "ประเภท",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "ผลิตภัณฑ์ไม่ทราบชนิด",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -453,18 +506,29 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "ไม่พบผู้ใช้",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "ตรวจสอบราคาจากชุมชน",
 		"View": "View",
-		"Website": "Website",
+		"Website": "เว็บไซต์",
+		"WithAPrice": "With a price",
+		"WithoutAPrice": "ไม่มีราคา",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "ถูกต้อง",
 		"No": "ไม่ใช่",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Food": "อาหาร",
+		"PetFood": "อาหารสัตว์เลี้ยง",
+		"Beauty": "ความงาม"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -513,10 +577,27 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "สกุลเงิน",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
+	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "ประเทศที่ขาย",
+		"CreateNewProduct": "สร้างผลิตภัณฑ์ใหม่",
+		"CreateProduct": "สร้างผลิตภัณฑ์",
+		"EnableCropMode": "เปิดใช้งานโหมดครอบตัด",
+		"Flavor": "เลือกโครงการที่จะสร้างผลิตภัณฑ์",
+		"NextProof": "Next proof",
+		"PreviousProof": "หลักฐานก่อนหน้า",
+		"ProductAlreadyExists": "สินค้ามีอยู่แล้ว",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "พิสูจน์ ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "ร้านค้าที่จำหน่าย",
+		"UseCropModeToAddImage": "หากต้องการเพิ่มรูปภาพผลิตภัณฑ์ ให้เปิดใช้งานโหมดครอบตัดใต้ภาพตัวอย่าง และวาดสี่เหลี่ยมผืนผ้ารอบ ๆ ผลิตภัณฑ์",
+		"ProductMissingPromoBanner": "การทดลอง: สร้างผลิตภัณฑ์นี้โดยใช้ข้อมูลจาก Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -537,10 +618,10 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "เพิ่มราคา",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "ค้นหาสินค้า",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "ล้างข้อมูล",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "หาร้านของคุณไม่เจอใช่ไหม? ลองใช้คำสำคัญแทนที่อยู่เต็ม (เช่น 'Carrefour 75013 Paris' หรือ 'Walmart San Francisco')",
+		"NoResultHelpOSM": "ยังหาร้านของคุณไม่เจอเหรอ? ร้านอาจจะยังไม่อยู่ใน {osm_name} คุณสามารถเพิ่มร้านใน {osm_url} ก่อนก็ได้นะ",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -576,9 +659,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "การพิสูจน์",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "ผลิตภัณฑ์ไม่ทราบชนิด"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -593,8 +676,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "ราคา",
+		"LabelDiscounted": "ราคาลดพิเศษ",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -623,7 +706,7 @@
 		"LabelsLower": "ฉลาก",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "บาร์โค้ดไม่ถูกต้อง",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -636,7 +719,7 @@
 		"UnknownProduct": "ผลิตภัณฑ์ที่ไม่รู้จัก"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "เพิ่มราคา",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -654,14 +737,14 @@
 		"PromoReceiptAssistant": "ทดลอง: ทดลองใช้ระบบช่วยรับใบเสร็จใหม่เพื่อดึงราคาจากใบเสร็จของคุณโดยอัตโนมัติ!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "การพิสูจน์",
+		"PRICE_TAG": "ป้ายราคา",
+		"RECEIPT": "ใบเสร็จ",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "เลือกหลักฐาน",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -673,7 +756,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "ราคา",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "รายการใบเสร็จรับเงิน",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -704,8 +787,11 @@
 		"About": {
 			"Title": "About"
 		},
+		"Add": {
+			"Title": "เพิ่ม"
+		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "เพิ่มราคา"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -728,11 +814,23 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "แนบหลักฐาน (ใบเสร็จรับเงิน)"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "สำรวจ"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "เพิ่มราคา"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -741,7 +839,10 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "ราคา"
+		},
+		"PriceTags": {
+			"Title": "ป้ายราคา"
 		},
 		"Proofs": {
 			"Title": "Proofs"
@@ -749,17 +850,30 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "ใบเสร็จ"
+		},
+		"Cities": {
+			"Title": "เมืองต่างๆ"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "ร่วมสนับสนุน"
 		},
+		"Countries": {
+			"Title": "ประเทศ"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "หน้าหลัก"
+			"Title": "หน้าหลัก",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -770,11 +884,14 @@
 		"LatestProofs": {
 			"Title": "Latest proofs"
 		},
+		"Moderation": {
+			"Title": "ความพอประมาณ"
+		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "ราคาของฉัน"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "หลักฐานของฉัน"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "ตัวช่วยพิสูจน์ราคาป้าย"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -837,7 +956,7 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "Share"
+		"Title": "แบ่งปัน"
 	},
 	"SignIn": {
 		"Button": "เข้าสู่ระบบ",
@@ -845,12 +964,13 @@
 		"ServerError": "Error: server error",
 		"Title": "เข้าสู่ระบบ",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "ราคา",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -859,7 +979,7 @@
 		"Products": "ผลิตภัณฑ์",
 		"Locations": "Locations",
 		"Users": "Users",
-		"Total": "Total",
+		"Total": "ทั้งหมด",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "ราคาต่อแหล่ง",
+		"ProofsPerSource": "หลักฐานต่อแหล่งที่มา",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -876,8 +998,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "ราคาของฉัน",
+		"MyProofs": "หลักฐานของฉัน",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "ตั้งค่า",
 		"Title": "Dashboard",
@@ -897,9 +1019,10 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "สกุลเงิน",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

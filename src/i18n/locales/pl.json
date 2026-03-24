@@ -162,12 +162,13 @@
 		"StatsAndRankings": "Statystyki i rankingi",
 		"MostPicturesAdded": "Najwięcej dodanych zdjęć",
 		"MostPricesAdded": "Większość cen dodana",
-		"MostPricesFromPicturesAdded": "Większość cen pochodzi ze zdjęć dodanych"
+		"MostPricesFromPicturesAdded": "Większość cen pochodzi ze zdjęć dodanych",
+		"AlertNew": "Masz pomysł na nowe wyzwanie? Daj nam znać {url}!"
 	},
 	"Common": {
 		"About": "Na temat",
 		"Action": "Działanie",
-		"Actions": "Actions",
+		"Actions": "Akcje",
 		"AddComment": "Add a comment",
 		"AddPrice": "Dodaj cenę",
 		"AddPrices": "Add prices",
@@ -177,8 +178,12 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Dodaj nowe metki cenowe",
+		"AddNewProofReceipt": "Dodaj nowy paragon",
 		"AddToOFF": "Add to {name}",
+		"Added": "W dodatku",
 		"AdditionalInfo": "Additional information",
+		"All": "Wszystkie",
 		"Barcode": "Kod kreskowy",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Zeskanuj kod kreskowy",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Wyczyść",
+		"Close": "Zamknij",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -220,6 +226,7 @@
 		"Contributors": "Współtwórcy",
 		"Contributions": "Wkład",
 		"Confirm": "Potwierdź",
+		"Count": "Licznik",
 		"Country": "Kraj",
 		"Countries": "Kraje",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -229,6 +236,7 @@
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "Waluty możesz dodać w ustawieniach.",
 		"Dashboard": "Panel",
 		"Display": "Wyświetl",
 		"DisplayList": "List",
@@ -241,6 +249,9 @@
 		"Error": "Błąd",
 		"Experiment": "Eksperyment",
 		"Experiments": "Experiments",
+		"Explore": "Badać",
+		"FromPriceTag": "Od ceny",
+		"FromReceipt": "Z paragonu",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Etykieta",
@@ -250,6 +261,7 @@
 		"Languages": "Języki",
 		"LatestPrices": "Najnowsze ceny",
 		"LatestProofs": "Najnowsze dowody",
+		"LearnMore": "Dowiedz się więcej",
 		"LoadMore": "Załaduj więcej",
 		"Location": "Location",
 		"Locations": "Lokalizacje",
@@ -257,9 +269,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Data",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateProofHelpText": "Data wykonania zdjęcia.",
+		"DateProofHelpTextExif": "Domyślnie próbujemy wyodrębnić je z metadanych EXIF zdjęcia.",
+		"DateProofHelpTextReceipt": "W przypadku paragonów ustaw datę zakupu.",
+		"Details": "Bliższe dane",
 		"Delete": "Usuń",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Promocja",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edytuj",
 		"End": "End",
+		"ErrorServer": "Błąd: błąd serwera",
+		"FieldIsRequired": "Pole jest wymagane",
 		"Filter": "Filtr",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Z cenami",
+		"FilterWithLocationCount": "Z lokalizacjami",
 		"FilterProductWithPriceCount": "Z ceną",
 		"FilterProductWithPriceCountHide": "Ukryj produkty z cenami",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Pokaż tylko dowody z mojego kraju",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Z ważnym kodem kreskowym",
 		"FilterPriceTagWithTagPredictionProductExists": "Z ważnym produktem",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Z prawidłowym tagiem kategorii",
@@ -298,7 +319,8 @@
 		"FrequentlyAskedQuestions": "Często Zadawane Pytania",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Pomoc",
+		"Here": "Tutaj",
 		"History": "Historia",
 		"Image": "Zdjęcie",
 		"ImageSelect": "Select an image",
@@ -314,19 +336,33 @@
 		"Map": "Mapa",
 		"Miscellaneous": "Inne",
 		"MobileApp": "Mobile app",
+		"Moderation": "Umiar",
+		"ModerationFlagReasonWrongType": "Zły typ",
+		"ModerationFlagReasonWrongPriceValue": "Błędna wartość ceny",
+		"ModerationFlagReasonWrongCurrency": "Zła waluta",
+		"ModerationFlagReasonWrongProduct": "Zły produkt",
+		"ModerationFlagReasonWrongLocation": "Zła lokalizacja",
+		"ModerationFlagReasonWrongDate": "Zła data",
+		"ModerationFlagReasonOther": "Inne",
+		"ModerationFlagCreateSuccess": "Dziękujemy za zgłoszenie!",
+		"ModerationFlagStatusOpen": "Otwarte",
+		"ModerationFlagStatusClosed": "Zamknięte",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje dowody",
 		"MyStats": "My stats",
+		"New": "Nowy",
 		"NextProof": "Next proof",
 		"NoBarcode": "Brak kodu kreskowego",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Otwarte",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "Nazwa",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -356,12 +392,19 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Cenówka",
 		"PriceTags": "Metki cenowe",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Cena utworzona!",
 		"PriceMissing": "Brak ceny",
+		"PricePerMissing": "Cena za brakujące",
+		"PriceAlreadyUploaded": "Cena już przesłana",
+		"PriceReadyToBeUploaded": "Cena gotowa do przesłania",
 		"PricesAlreadyUploaded": "Ceny już załadowane",
+		"PricesAll": "Wszystkie ceny",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -377,11 +420,12 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Szczegóły dowodu",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Wybierz próbkę",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} dowodów przesłanych",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,6 +433,8 @@
 		"Quantity": "Ilość",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Stopień",
+		"Reason": "Powód",
 		"RECEIPT": "Rachunek",
 		"Receipt": "Rachunek",
 		"Receipts": "Receipts",
@@ -397,12 +443,17 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Otworzyć na nowo",
+		"ReportProblem": "Zgłoś problem",
+		"Reset": "Reset",
+		"Resolved": "Rozwiązany",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Wyszukiwanie",
 		"Select": "Select",
+		"Send": "Wyślij",
 		"Settings": "Ustawienia",
-		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Zalogowano!",
 		"SignIn": "Zaloguj się",
 		"SignOut": "Wyloguj się",
@@ -412,12 +463,14 @@
 		"SourceCode": "Source code",
 		"Start": "Rozpocznij",
 		"Stats": "Statystyki",
+		"Status": "Status",
 		"SuggestedBarcode": "Sugerowany kod kreskowy:",
 		"Summary": "Podsumowanie",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "Tekst",
 		"Thanks": "Dziękujemy",
 		"Theme": "Motyw",
 		"ThemeLight": "Tryb jasny",
@@ -447,24 +500,35 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "Adres URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Użytkownik",
 		"Users": "Użytkownicy",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Użytkownik nie został znaleziony",
 		"Validate": "Zweryfikuj",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "Sprawdź ceny ze społeczności",
 		"View": "Zobacz",
 		"Website": "Strona",
+		"WithAPrice": "Z ceną",
+		"WithoutAPrice": "Bez ceny",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Tak",
 		"No": "Nie",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Food": "Żywność",
+		"PetFood": "Karma dla zwierząt",
+		"Beauty": "Uroda"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Kraje sprzedaży",
+		"CreateNewProduct": "Utwórz nowy produkt",
+		"CreateProduct": "Utwórz produkt",
+		"EnableCropMode": "Włącz tryb przycinania",
+		"Flavor": "Wybierz projekt, w którym produkt ma zostać utworzony",
+		"NextProof": "Next proof",
+		"PreviousProof": "Poprzedni dowód",
+		"ProductAlreadyExists": "Produkt już istnieje",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Dowód ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Sklepy, w których sprzedawano",
+		"UseCropModeToAddImage": "Aby dodać zdjęcie produktu, włącz tryb przycinania pod zdjęciem próbnym i narysuj prostokąt wokół produktu.",
+		"ProductMissingPromoBanner": "Eksperyment: utwórz ten produkt, korzystając z danych z Open Prices"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "Wyczyść",
 		"NoResult": "Nie znaleziono wyników",
+		"NoResultHelpKeywords": "Nie możesz znaleźć swojego sklepu? Spróbuj użyć słów kluczowych zamiast pełnego adresu (np. „Carrefour 75013 Paryż” lub „Walmart San Francisco”).",
+		"NoResultHelpOSM": "Nadal nie możesz znaleźć swojego sklepu? Być może nie ma go jeszcze w {osm_name} . Możesz go najpierw dodać w {osm_url} .",
 		"PoweredBy": {
 			"text": "używa {url}"
 		},
@@ -661,7 +744,7 @@
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Wybierz próbkę",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Pozycje paragonu",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "Na temat"
+		},
+		"Add": {
+			"Title": "Dodaj"
 		},
 		"AddPrice": {
 			"Title": "Dodaj cenę"
@@ -728,6 +814,18 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Dodaj dowód (paragon)"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "Badać"
+		},
 		"Locations": {
 			"Title": "Lokalizacje"
 		},
@@ -743,11 +841,20 @@
 		"Prices": {
 			"Title": "Ceny"
 		},
+		"PriceTags": {
+			"Title": "Metki cenowe"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Rachunek"
+		},
+		"Cities": {
+			"Title": "Miasta"
 		},
 		"Community": {
 			"Title": "Community"
@@ -755,11 +862,18 @@
 		"Contribute": {
 			"Title": "Wnieś wkład"
 		},
+		"Countries": {
+			"Title": "Kraje"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Strona główna"
+			"Title": "Strona główna",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Panel"
@@ -769,6 +883,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Najnowsze dowody"
+		},
+		"Moderation": {
+			"Title": "Umiar"
 		},
 		"MyPrices": {
 			"Title": "Moje ceny"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Asystent metki cenowej"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Zweryfikuj",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,6 +964,7 @@
 		"ServerError": "Błąd: błąd serwera",
 		"Title": "Zaloguj się",
 		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Nazwa użytkownika",
 		"WrongCredentials": "Błąd: nieprawidłowe dane logowania"
 	},
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Bez produktu",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Ceny według źródła",
+		"ProofsPerSource": "Dowody według źródła",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "Waluta",
 		"DisplayTitle": "Wyświetl",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

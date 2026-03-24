@@ -19,6 +19,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'openfoodfacts'
     strategy:
       matrix:
         env:
@@ -27,8 +28,8 @@ jobs:
     environment: ${{ matrix.env }}
     concurrency: ${{ matrix.env }}
     steps:
-    - uses: actions/checkout@v5
-    - uses: actions/setup-node@v4
+    - uses: actions/checkout@v6
+    - uses: actions/setup-node@v6
       with:
         node-version: 20
         cache: "yarn"

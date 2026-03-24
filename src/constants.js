@@ -19,6 +19,14 @@ const PROOF_TYPE_RECEIPT = 'RECEIPT'
 const PROOF_TYPE_RECEIPT_ICON = 'mdi-receipt-text-outline'
 const PROOF_TYPE_GDPR_REQUEST = 'GDPR_REQUEST'
 const PROOF_TYPE_GDPR_REQUEST_ICON = 'mdi-email-open-outline'
+const PRICE_TAG_STATUS_NEW = {key: -1, color: 'red', icon: '', textSmallScreen: 'Common.New', text: 'ContributionAssistant.PriceTagLabels.NewPriceTag'}
+const PRICE_TAG_STATUS_EMPTY = {key: null, color: 'blue', icon: '', textSmallScreen: 'Common.WithoutAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagWithoutPrice'}
+const PRICE_TAG_STATUS_WITH_PRICE = {key: 1, color: 'green', icon: '', textSmallScreen: 'Common.WithAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagWithPrice'}
+const PRICE_TAG_STATUS_UNREADABLE = {key: 2, color: 'orange', icon: 'mdi-eye-off-outline', textSmallScreen: 'Common.Unreadable', text: 'ContributionAssistant.PriceTagLabels.PriceTagUnreadable'}
+const PRICE_TAG_STATUS_TRUNCATED = {key: 3, color: '#883c1e', icon: 'mdi-crop', textSmallScreen: 'Common.Truncated', text: 'ContributionAssistant.PriceTagLabels.PriceTagTruncated'}
+const PRICE_TAG_STATUS_NOT_A_PRICE = {key: 4, color: '#88631e', icon: 'mdi-currency-usd-off', textSmallScreen: 'Common.NotAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagNotAPrice'}
+const PRICE_TAG_STATUS_NO_BARCODE = {key: 5, color: 'yellow', icon: 'mdi-barcode-off', textSmallScreen: 'Common.NoBarcode', text: 'ContributionAssistant.PriceTagLabels.PriceTagNoBarcode'}
+const PRICE_TAG_STATUS_OTHER = {key: 6, color: 'grey', icon: '', textSmallScreen: 'Common.Other', text: 'ContributionAssistant.PriceTagLabels.PriceTagOther'}
 const LOCATION_TYPE_OSM = 'OSM'
 const LOCATION_TYPE_OSM_ICON = 'mdi-map-marker-outline'
 const LOCATION_TYPE_ONLINE = 'ONLINE'
@@ -40,6 +48,7 @@ export default {
   APP_GITHUB_BACKEND_URL: 'https://github.com/openfoodfacts/open-prices',
   APP_GITHUB_FRONTEND_URL: 'https://github.com/openfoodfacts/open-prices-frontend',
   APP_GITHUB_REUSE_DISCUSSION_URL: 'https://github.com/openfoodfacts/open-prices/discussions/562',
+  APP_GITHUB_CHALLENGE_DISCUSSION_URL: 'https://github.com/openfoodfacts/open-prices/discussions/509',
   APP_HUGGING_FACE_URL: 'https://huggingface.co/datasets/openfoodfacts/open-prices',
   APP_DATA_GOUV_URL: 'https://www.data.gouv.fr/fr/datasets/open-prices/',
   // OFF
@@ -101,13 +110,32 @@ export default {
     { key: USER_CONSUMPTION, value: 'Consumption', icon: USER_CONSUMPTION_ICON },
     { key: USER_COMMUNITY, value: 'Contributions', icon: 'mdi-account-group' },
   ],
-  PRICE_TAG_STATUS_WITH_PRICE: 1,
-  PRICE_TAG_STATUS_UNREADABLE: 2,
-  PRICE_TAG_STATUS_TRUNCATED: 3,
-  PRICE_TAG_STATUS_NOT_A_PRICE: 4,
-  PRICE_TAG_STATUS_NO_BARCODE: 5,
-  PRICE_TAG_STATUS_OTHER: 10,
-  PRODUCT_IMAGE_DEFAULT_URL: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
+  PRICE_TAG_STATUS_NEW: PRICE_TAG_STATUS_NEW,
+  PRICE_TAG_STATUS_EMPTY: PRICE_TAG_STATUS_EMPTY,
+  PRICE_TAG_STATUS_WITH_PRICE: PRICE_TAG_STATUS_WITH_PRICE,
+  PRICE_TAG_STATUS_UNREADABLE: PRICE_TAG_STATUS_UNREADABLE,
+  PRICE_TAG_STATUS_TRUNCATED: PRICE_TAG_STATUS_TRUNCATED,
+  PRICE_TAG_STATUS_NOT_A_PRICE: PRICE_TAG_STATUS_NOT_A_PRICE,
+  PRICE_TAG_STATUS_NO_BARCODE: PRICE_TAG_STATUS_NO_BARCODE,
+  PRICE_TAG_STATUS_OTHER: PRICE_TAG_STATUS_OTHER,
+  PRICE_TAG_STATUS_ERROR_LIST: [
+    PRICE_TAG_STATUS_UNREADABLE,
+    PRICE_TAG_STATUS_TRUNCATED,
+    PRICE_TAG_STATUS_NOT_A_PRICE,
+    PRICE_TAG_STATUS_NO_BARCODE,
+    // PRICE_TAG_STATUS_OTHER,
+  ],
+  PRICE_TAG_STATUS_LIST: [
+    PRICE_TAG_STATUS_NEW,
+    PRICE_TAG_STATUS_EMPTY,
+    PRICE_TAG_STATUS_WITH_PRICE,
+    PRICE_TAG_STATUS_UNREADABLE,
+    PRICE_TAG_STATUS_TRUNCATED,
+    PRICE_TAG_STATUS_NOT_A_PRICE,
+    PRICE_TAG_STATUS_NO_BARCODE,
+    PRICE_TAG_STATUS_OTHER,
+  ],
+  PRODUCT_IMAGE_DEFAULT_URL: '/icon-off-packaging.svg',
   PRODUCT_CATEGORY_LABEL_ORGANIC: PRODUCT_CATEGORY_LABEL_ORGANIC,
   PRODUCT_QUANTITY_UNIT_G: 'g',
   PRODUCT_QUANTITY_UNIT_ML: 'ml',
@@ -134,6 +162,7 @@ export default {
     {key: PROOF_TYPE_GDPR_REQUEST, value: PROOF_TYPE_GDPR_REQUEST, icon: PROOF_TYPE_GDPR_REQUEST_ICON},
   ],
   PROOF_TYPE_USER_EDITABLE_LIST: [PROOF_TYPE_PRICE_TAG, PROOF_TYPE_RECEIPT],
+  LOCATION_IMAGE_DEFAULT_URL: '/icon-mdi-map-marker-outline.svg',
   LOCATION_TYPE_OSM: LOCATION_TYPE_OSM,
   LOCATION_TYPE_OSM_ICON: LOCATION_TYPE_OSM_ICON,
   LOCATION_TYPE_ONLINE: LOCATION_TYPE_ONLINE,
@@ -143,13 +172,14 @@ export default {
     {key: LOCATION_TYPE_OSM, value: LOCATION_TYPE_OSM, icon: LOCATION_TYPE_OSM_ICON},
     {key: LOCATION_TYPE_ONLINE, value: LOCATION_TYPE_ONLINE, icon: LOCATION_TYPE_ONLINE_ICON},
   ],
+  USER_IMAGE_DEFAULT_URL: '/icon-account-outline.svg',
   USER_CONSUMPTION: USER_CONSUMPTION,
   USER_CONSUMPTION_ICON: USER_CONSUMPTION_ICON,
   USER_COMMUNITY: USER_COMMUNITY,
   USER_COMMENT_ICON: 'mdi-comment-text-outline',
   // filter
   PRODUCT_FILTER_LIST: [
-    { key: 'price_count_gte_1', value: 'FilterProductWithPriceCount' },
+    { key: 'price_count_gte_1', value: 'FilterWithPriceCount' },
     { key: 'price_count_0', value: 'FilterProductWithoutPriceCount' },
   ],
   PRICE_FILTER_LIST: [
@@ -160,12 +190,17 @@ export default {
   ],
   PRICE_TAG_FILTER_LIST: [
     { key: 'proof__owner', value: 'FilterPriceTagWithProofOwner' },
+    { key: 'proof_user_country', value: 'FilterPriceTagWithProofUserCountry' },
     // { key: 'tag_prediction_barcode_valid', value: 'FilterPriceTagWithTagPredictionBarcodeValid' },
     { key: 'tag_prediction_product_exists', value: 'FilterPriceTagWithTagPredictionProductExists' },
     // { key: 'tag_prediction_category_tag_valid', value: 'FilterPriceTagWithTagPredictionCategoryTagValid' },
   ],
   LOCATION_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterLocationWithPriceCountHide' },
+  ],
+  LOCATION_COUNTRY_FILTER_LIST: [
+    { key: 'price_count_gte_1', value: 'FilterWithPriceCount' },
+    { key: 'location_count_gte_1', value: 'FilterWithLocationCount' },
   ],
   USER_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterUserWithPriceCountHide' },
@@ -193,6 +228,11 @@ export default {
     { key: '-product_count', value: 'OrderProductCountDESC', icon: 'mdi-database-outline' },
     { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
   ],
+  LOCATION_COUNTRY_ORDER_LIST: [
+    { key: 'name', value: 'OrderNameASC', icon: 'mdi-alphabetical' },
+    { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
+    { key: '-location_count', value: 'OrderLocationCountDESC', icon: 'mdi-map-marker-outline' },
+  ],
   USER_ORDER_LIST: [
     // same order as UserCard chips
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
@@ -201,15 +241,11 @@ export default {
     { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
   ],
   // display
-  PRICE_DISPLAY_LIST: [
+  DISPLAY_LIST: [
     { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
     { key: 'table', value: 'DisplayTable', icon: 'mdi-table' },
     { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },
     { key: 'chart', value: 'DisplayPriceChart', icon: 'mdi-chart-line' },
-  ],
-  LOCATION_DISPLAY_LIST: [
-    { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
-    { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },
   ],
   LOCATION_SEARCH_PROVIDER_LIST: [
     { key: 'nominatim' },
@@ -230,13 +266,25 @@ export default {
     { key: 'off-barcode-scanner', value: 'Off Barcode Scanner', valueSmallScreen: 'Off Scanner', icon: 'mdi-barcode-scan' },
     { key: 'html5-qrcode', value: 'Html5-Qrcode', valueSmallScreen: 'Html5-Qrcode', icon: 'mdi-barcode-scan' },
   ],
-  PRICE_FORM_DISPLAY_LIST: [
-    { key: 'display', value: 'Display', icon: 'mdi-eye-outline' },
-    { key: 'edit', value: 'Edit', icon: 'mdi-pencil' },
-  ],
   USER_DASHBOARD_TAB_LIST: [
+    { key: 'all', value: 'All', icon: 'mdi-home' },
     { key: USER_CONSUMPTION.toLowerCase(), value: 'MyConsumption', icon: USER_CONSUMPTION_ICON },
     { key: USER_COMMUNITY.toLowerCase(), value: 'OtherContributions', icon: 'mdi-account-group' },
+  ],
+  // moderation
+  // see https://github.com/openfoodfacts/open-prices/blob/main/open_prices/moderation/models.py for reasons
+  MODERATION_FLAG_REASON_LIST: [
+    { key: 'WRONG_TYPE', value: 'ModerationFlagReasonWrongType', restrictTo: null },
+    { key: 'WRONG_PRICE_VALUE', value: 'ModerationFlagReasonWrongPriceValue', restrictTo: ['price'] },
+    { key: 'WRONG_CURRENCY', value: 'ModerationFlagReasonWrongCurrency' },
+    { key: 'WRONG_PRODUCT', value: 'ModerationFlagReasonWrongProduct', restrictTo: ['price'] },
+    { key: 'WRONG_LOCATION', value: 'ModerationFlagReasonWrongLocation' },
+    { key: 'WRONG_DATE', value: 'ModerationFlagReasonWrongDate' },
+    { key: 'OTHER', value: 'ModerationFlagReasonOther' },
+  ],
+  MODERATION_FLAG_STATUS_LIST: [
+    { key: 'OPEN', value: 'ModerationFlagStatusOpen', color: 'warning' },
+    { key: 'CLOSED', value: 'ModerationFlagStatusClosed', color: 'success' }
   ],
   // date regex
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,

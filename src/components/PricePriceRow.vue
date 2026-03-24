@@ -2,16 +2,9 @@
   <v-row>
     <v-col cols="12" class="pt-2 pb-2">
       <span class="mr-1">{{ getPriceValueDisplay(price.price) }}</span>
-      <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerUnit(price.price) }})</span>
-      <span v-if="price.price_is_discounted">
-        <v-chip class="ml-1 mr-1" color="red" variant="outlined" size="small" density="comfortable">
-          {{ $t('PriceCard.Discount') }}
-          <v-tooltip v-if="price.price_without_discount" activator="parent" open-on-click location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(price.price_without_discount) }}</v-tooltip>
-        </v-chip>
-      </span>
-      <span v-if="!hidePriceReceiptQuantity && price.receipt_quantity" class="mr-1">
-        <PriceQuantityPurchasedChip :priceQuantityPurchased="price.receipt_quantity" />
-      </span>
+      <span v-if="showPriceProductPerUnit" class="mr-1">({{ getPricePerUnit(price.price) }})</span>
+      <PriceDiscountChip v-if="hasDiscount" class="ml-1 mr-1" :price="price" />
+      <PriceQuantityPurchasedChip v-if="showReceiptQuantity" class="ml-1" :priceQuantityPurchased="price.receipt_quantity" />
     </v-col>
   </v-row>
 </template>
@@ -19,11 +12,11 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
-import date_utils from '../utils/date.js'
 import price_utils from '../utils/price.js'
 
 export default {
   components: {
+    PriceDiscountChip: defineAsyncComponent(() => import('../components/PriceDiscountChip.vue')),
     PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
   },
   props: {
@@ -44,24 +37,15 @@ export default {
       default: true
     },
   },
-  data() {
-    return {}
-  },
   computed: {
-    categoryTag() {
-      return this.price.category_tag
+    showPriceProductPerUnit() {
+      return this.price && this.productQuantity
     },
-    hasCategoryTag() {
-      return !!this.categoryTag
+    hasDiscount() {
+      return this.price && this.price.price_is_discounted
     },
-    hasProductQuantity() {
-      return !!this.productQuantity
-    },
-    priceCurrency() {
-      return this.price.currency
-    },
-    pricePricePer() {
-      return this.price.price_per
+    showReceiptQuantity() {
+      return this.price && this.price.receipt_quantity && !this.hidePriceReceiptQuantity
     },
   },
   methods: {
@@ -69,31 +53,19 @@ export default {
       return price_utils.prettyPrice(priceValue, priceCurrency)
     },
     getPricePerUnit(price) {
-      price = parseFloat(price)
-      if (this.hasCategoryTag) {
-        if (this.pricePricePer === 'UNIT') {
-          return this.$t('PriceCard.PriceValueDisplayUnit', [this.getPriceValue(price, this.priceCurrency)])
-        }
-        // default to 'KILOGRAM'
-        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(price, this.priceCurrency)])
+      if (this.price.category_tag) {
+        return price_utils.priceCategoryPerUnit(price, this.price.currency, this.price.price_per)
       }
-      if (this.hasProductQuantity) {
-        const pricePerUnit = (price / this.productQuantity) * 1000
-        if (this.productQuantityUnit === constants.PRODUCT_QUANTITY_UNIT_ML) {
-          return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerUnit, this.priceCurrency)])
-        }
-        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerUnit, this.priceCurrency)])
+      if (this.productQuantity) {
+        return price_utils.priceProductPerUnit(price, this.price.currency, this.productQuantity, this.productQuantityUnit)
       }
     },
     getPriceValueDisplay(price) {
       price = parseFloat(price)
-      if (this.hasCategoryTag) {
+      if (this.price.category_tag) {
         return this.getPricePerUnit(price)
       }
-      return this.getPriceValue(price, this.priceCurrency)
-    },
-    getDateFormatted(dateString) {
-      return date_utils.prettyDate(dateString)
+      return this.getPriceValue(price, this.price.currency)
     },
   }
 }

@@ -10,16 +10,33 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
       </h2>
-      <LoadedCountChip v-if="!loading" :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
+        <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+        <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      </template>
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
-    <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
-      <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
-    </v-col>
-  </v-row>
+  <v-window v-model="currentDisplay" disabled>
+    <v-window-item value="list">
+      <v-row class="mt-0 mb-1">
+        <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
+          <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+        </v-col>
+      </v-row>
+    </v-window-item>
+    <v-window-item value="table">
+      <PriceTable class="mt-3 mb-3" :priceList="priceList" source="date" />
+    </v-window-item>
+    <v-window-item value="map">
+      <v-row class="mt-0 mb-1">
+        <v-col style="height:400px">
+          <LeafletMap :locations="priceLocationList" />
+        </v-col>
+      </v-row>
+    </v-window-item>
+  </v-window>
 
   <v-row v-if="loading">
     <v-col align="center">
@@ -30,7 +47,9 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
 import utils from '../utils.js'
@@ -40,7 +59,10 @@ export default {
     DateCard: defineAsyncComponent(() => import('../components/DateCard.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
+    DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    PriceTable: defineAsyncComponent(() => import('../components/PriceTable.vue')),
+    LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
   },
   data() {
     return {
@@ -49,12 +71,15 @@ export default {
       priceList: [],
       priceTotal: null,
       pricePage: 0,
+      priceLocationList: [],
       loading: false,
-      // filter & order
+      // filter, order & display
       currentOrder: constants.PRICE_ORDER_LIST[2].key,  // date
+      currentDisplay: constants.DISPLAY_LIST[0].key,  // list
     }
   },
   computed: {
+    ...mapStores(useAppStore),
     dateType() {
       return date_utils.dateType(this.date)
     },
@@ -84,6 +109,7 @@ export default {
   },
   mounted() {
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
+    this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.appStore.user.price_list_display_default_mode || this.currentDisplay
     this.initDate()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
@@ -98,25 +124,36 @@ export default {
       this.priceList = []
       this.priceTotal = null
       this.pricePage = 0
+      this.priceLocationList = []
       this.getPrices()
     },
     getPrices() {
       if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
       this.pricePage += 1
-      return api.getPrices(this.getPricesParams)
+      return openPricesApi.getPrices(this.getPricesParams)
         .then((data) => {
           this.priceList.push(...data.items)
           this.priceTotal = data.total
+          data.items.forEach((price) => {
+            if (price.location) {
+              utils.addObjectToArray(this.priceLocationList, price.location)
+            }
+          })
           this.loading = false
         })
     },
-    selectPriceOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initDate() will be called in watch $route
       }
+    },
+    updateDisplay(displayKey) {
+      this.currentDisplay = displayKey
+      this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
+      // this.initDate() will NOT be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {

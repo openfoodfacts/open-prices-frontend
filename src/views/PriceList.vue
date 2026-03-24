@@ -1,11 +1,13 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-tag-outline">
         {{ $t('Common.PriceCount', { count: priceTotal }) }}
       </v-chip>
-      <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="togglePriceType($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
+        <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="togglePriceType($event)" />
+      </template>
     </v-col>
   </v-row>
 
@@ -24,8 +26,9 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
+import date_utils from '../utils/date.js'
 import utils from '../utils.js'
 
 export default {
@@ -50,9 +53,7 @@ export default {
     getPricesParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.pricePage }
       if (this.currentFilterList.includes('show_last_month')) {
-        let oneMonthAgo = new Date()
-        oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
-        defaultParams['date__gte'] = oneMonthAgo.toISOString().substring(0, 10)
+        defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
       }
       if (this.currentType) {
         defaultParams[constants.TYPE_PARAM] = this.currentType
@@ -89,7 +90,7 @@ export default {
       if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
       this.pricePage += 1
-      return api.getPrices(this.getPricesParams)
+      return openPricesApi.getPrices(this.getPricesParams)
         .then((data) => {
           this.priceList.push(...data.items)
           this.priceTotal = data.total

@@ -1,9 +1,9 @@
 <template>
-  <span v-if="priceCategory">
-    <v-chip class="mr-1" label size="small" density="comfortable">
+  <template v-if="priceCategory">
+    <v-chip label size="small" density="comfortable">
       {{ getPriceCategoryTagName(priceCategory) }}
     </v-chip>
-  </span>
+  </template>
 </template>
 
 <script>

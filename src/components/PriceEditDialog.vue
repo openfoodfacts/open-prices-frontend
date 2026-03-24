@@ -13,13 +13,20 @@
             <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="false" :hideActionMenuButton="true" :readonly="true" />
           </v-col>
         </v-row>
-      </v-card-text>
-
-      <v-divider />
-
-      <v-card-text>
-        <ProductInputRow v-if="productIsTypeCategory" :productForm="updatePriceForm" :hideBarcodeMode="true" />
-        <PriceInputRow :priceForm="updatePriceForm" :product="price.product" :proofType="price.proof ? price.proof.type : null" :hideCurrencyChoice="true" />
+        <!-- moderator-only alerts -->
+        <v-row v-if="!userIsPriceOwner && userIsModerator">
+          <v-col cols="12">
+            <ModerationAlert source="price" />
+          </v-col>
+        </v-row>
+        <v-row v-if="!userIsPriceOwner && userIsModerator">
+          <v-col cols="12">
+            <ModerationAlert source="price" action="edit" />
+          </v-col>
+        </v-row>
+        <!-- form -->
+        <ProductInputRow :productForm="updatePriceForm" :hideProductTypeInput="true" />
+        <PriceInputRow :priceForm="updatePriceForm" :product="price.product" :proofType="price.proof ? price.proof.type : null" />
       </v-card-text>
 
       <v-divider />
@@ -42,12 +49,14 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
-import constants from '../constants'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
+import openPricesApi from '../services/openPricesApi'
 
 export default {
   components: {
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    ModerationAlert: defineAsyncComponent(() => import('../components/ModerationAlert.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
   },
@@ -65,7 +74,7 @@ export default {
         product: null,
         product_code: '',
         category_tag: null,
-        origins_tags: '',
+        origins_tags: [],
         labels_tags: [],
         price: null,
         price_per: null,
@@ -82,14 +91,21 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
+    username() {
+      return this.appStore.user.username
+    },
+    userIsPriceOwner() {
+      return this.username && this.price && this.price.owner === this.username
+    },
+    userIsModerator() {
+      return this.username && this.appStore.user.is_moderator
+    },
     dialogHeight() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
     dialogWidth() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
-    },
-    productIsTypeCategory() {
-      return this.updatePriceForm && this.updatePriceForm.type === constants.PRICE_TYPE_CATEGORY
     },
   },
   mounted() {
@@ -103,8 +119,7 @@ export default {
       })
     },
     updatePrice() {
-      // update price
-      api
+      openPricesApi
         .updatePrice(this.price.id, this.updatePriceForm)
         .then((response) => {
           // if response.status == 204

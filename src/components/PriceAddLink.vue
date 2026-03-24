@@ -2,9 +2,6 @@
   <a v-if="display === 'link'" :to="getUrl" :disabled="disabled">
     {{ getText }}
   </a>
-  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="getIcon" :to="getUrl" :disabled="disabled">
-    {{ getText }}
-  </v-list-item>
   <v-btn
     v-else-if="display === 'button'"
     size="small"
@@ -15,6 +12,9 @@
   >
     {{ getText }}
   </v-btn>
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="getIcon" :to="getUrl" :disabled="disabled">
+    {{ getText }}
+  </v-list-item>
 </template>
 
 <script>
@@ -31,7 +31,7 @@ export default {
     display: {
       type: String,
       default: 'link',
-      examples: ['link', 'list-item', 'button']
+      examples: ['link', 'button', 'list-item']
     },
     target: {
       type: String,

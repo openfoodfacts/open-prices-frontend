@@ -17,7 +17,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 
 export default {
   components: {
@@ -38,7 +38,7 @@ export default {
   methods: {
     getPrice() {
       this.loading = true
-      return api.getPriceById(this.priceId)
+      return openPricesApi.getPriceById(this.priceId)
         .then((data) => {
           if (data.id) {
             this.price = data

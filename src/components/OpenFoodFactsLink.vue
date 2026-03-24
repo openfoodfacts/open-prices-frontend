@@ -2,12 +2,12 @@
   <a v-if="display === 'link'" :href="getUrl" target="_blank" :disabled="disabled">
     {{ getSourceName }}
   </a>
-  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank" :disabled="disabled">
-    {{ getSourceName }}
-  </v-list-item>
   <v-btn v-else-if="display === 'button'" size="small" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank" :disabled="disabled">
     {{ getSourceName }}
   </v-btn>
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank" :disabled="disabled">
+    {{ getSourceName }}
+  </v-list-item>
 </template>
 
 <script>
@@ -34,7 +34,7 @@ export default {
     display: {
       type: String,
       default: 'link',
-      examples: ['link', 'list-item', 'button']
+      examples: ['link', 'button', 'list-item']
     },
     disabled: {
       type: Boolean,

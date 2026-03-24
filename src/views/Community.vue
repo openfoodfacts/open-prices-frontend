@@ -6,8 +6,10 @@
       </h2>
     </v-col>
     <v-col>
-      <p><a :href="APP_GITHUB_BACKEND_URL" target="_blank">Github</a></p>
-      <p><a :href="OFF_SLACK_URL" target="_blank">Open Food Facts Slack (#prices)</a></p>
+      <ul class="pl-4">
+        <li><a :href="APP_GITHUB_BACKEND_URL" target="_blank">Github</a></li>
+        <li><a :href="OFF_SLACK_URL" target="_blank">Open Food Facts Slack (#prices)</a></li>
+      </ul>
     </v-col>
   </v-row>
 
@@ -18,12 +20,12 @@
       </h2>
     </v-col>
     <v-col>
-      <p><a :href="APP_API_URL" target="_blank">API</a></p>
-      <p><a :href="APP_HUGGING_FACE_URL" target="_blank">Hugging Face</a></p>
-      <p><a :href="APP_DATA_GOUV_URL" target="_blank">data.gouv</a></p>
-      <p>
-        <a :href="APP_DUMP_PRICES_URL" target="_blank">prices.jsonl.gz</a> | <a :href="APP_DUMP_PROOFS_URL" target="_blank">proofs.jsonl.gz</a> | <a :href="APP_DUMP_LOCATIONS_URL" target="_blank">locations.jsonl.gz</a>
-      </p>
+      <ul class="pl-4">
+        <li><a :href="APP_API_URL" target="_blank">API</a></li>
+        <li><a :href="APP_HUGGING_FACE_URL" target="_blank">Hugging Face</a></li>
+        <li><a :href="APP_DATA_GOUV_URL" target="_blank">data.gouv</a></li>
+        <li><a :href="APP_DUMP_PRICES_URL" target="_blank">prices.jsonl.gz</a> | <a :href="APP_DUMP_PROOFS_URL" target="_blank">proofs.jsonl.gz</a> | <a :href="APP_DUMP_LOCATIONS_URL" target="_blank">locations.jsonl.gz</a></li>
+      </ul>
     </v-col>
   </v-row>
 
@@ -40,17 +42,7 @@
 
   <v-row>
     <v-col>
-      <v-alert
-        class="mb-2"
-        type="info"
-        variant="outlined"
-      >
-        <i18n-t keypath="Reuses.AlertNew" tag="span">
-          <template #url>
-            <a :href="APP_GITHUB_REUSE_DISCUSSION_URL" target="_blank">{{ $t('Reuses.Here') }}</a>
-          </template>
-        </i18n-t>
-      </v-alert>
+      <ReuseNewFormAlert />
     </v-col>
   </v-row>
 </template>
@@ -63,6 +55,7 @@ import constants from '../constants'
 export default {
   components: {
     ReuseCard: defineAsyncComponent(() => import('../components/ReuseCard.vue')),
+    ReuseNewFormAlert: defineAsyncComponent(() => import('../components/ReuseNewFormAlert.vue')),
   },
   data() {
     return {
@@ -74,7 +67,6 @@ export default {
       APP_DUMP_PRICES_URL: constants.APP_DUMP_PRICES_URL,
       APP_DUMP_PROOFS_URL: constants.APP_DUMP_PROOFS_URL,
       APP_DUMP_LOCATIONS_URL: constants.APP_DUMP_LOCATIONS_URL,
-      APP_GITHUB_REUSE_DISCUSSION_URL: constants.APP_GITHUB_REUSE_DISCUSSION_URL,
     }
   },
   computed: {

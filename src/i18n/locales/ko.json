@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "영수증"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -69,10 +69,10 @@
 		"Create": "만들기",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "가격",
+			"LabelDiscounted": "할인된 가격",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "증거",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "날짜",
+			"DateLabel": "날짜",
 			"Find": "찾기",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -162,14 +162,15 @@
 		"StatsAndRankings": "통계 및 순위",
 		"MostPicturesAdded": "가장 많은 사진이 추가되었습니다",
 		"MostPricesAdded": "대부분의 가격이 추가되었습니다",
-		"MostPricesFromPicturesAdded": "사진 추가된 가격 대부분"
+		"MostPricesFromPicturesAdded": "사진 추가된 가격 대부분",
+		"AlertNew": "새로운 도전 아이디어가 있으신가요? 알려주세요 {url}!"
 	},
 	"Common": {
 		"About": "정보",
 		"Action": "행동",
-		"Actions": "Actions",
+		"Actions": "행위",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "가격 추가",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -177,8 +178,12 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "새 가격표를 추가하세요",
+		"AddNewProofReceipt": "새 영수증을 추가하세요",
 		"AddToOFF": "Add to {name}",
+		"Added": "추가됨",
 		"AdditionalInfo": "Additional information",
+		"All": "모두",
 		"Barcode": "바코드",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -189,13 +194,13 @@
 		"Brand": "브랜드",
 		"Brands": "브랜드",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "가격",
+		"Prices": "물가",
 		"PRODUCT": "생성물",
 		"Product": "생성물",
 		"ProductName": "제품 이름",
 		"Products": "제품",
-		"Proof": "Proof",
+		"Proof": "증거",
 		"Proofs": "Proofs",
 		"CATEGORY": "카테고리",
 		"Category": "카테고리",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "지우기",
+		"Close": "닫기",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -220,15 +226,17 @@
 		"Contributors": "기여자",
 		"Contributions": "기여",
 		"Confirm": "확인",
+		"Count": "수량",
 		"Country": "국가",
 		"Countries": "국가",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "통화",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "설정에서 통화를 추가할 수 있습니다.",
 		"Dashboard": "Dashboard",
 		"Display": "화면",
 		"DisplayList": "List",
@@ -241,6 +249,9 @@
 		"Error": "오류",
 		"Experiment": "실험",
 		"Experiments": "Experiments",
+		"Explore": "탐구하다",
+		"FromPriceTag": "가격표에서",
+		"FromReceipt": "영수증에서",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "상표",
@@ -250,6 +261,7 @@
 		"Languages": "언어",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "더보기",
 		"LoadMore": "더 불러오기",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -257,9 +269,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "날짜",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateProofHelpText": "사진 촬영 날짜.",
+		"DateProofHelpTextExif": "기본적으로 이미지의 EXIF 메타데이터에서 해당 정보를 추출하려고 시도합니다.",
+		"DateProofHelpTextReceipt": "영수증의 경우, 구매일자로 설정하세요.",
+		"Details": "세부",
 		"Delete": "삭제",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -280,25 +296,31 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "수정",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "필수 입력 항목입니다",
 		"Filter": "필터",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "가격 포함",
+		"FilterWithLocationCount": "위치와 함께",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "내 나라에서 발급된 증거만 보여주세요",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "유효한 바코드를 사용하여",
 		"FilterPriceTagWithTagPredictionProductExists": "유효한 상품으로",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "유효한 카테고리 태그가 있는 경우",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "자주 묻는 질문",
 		"FrequentlyAskedQuestions": "자주 묻는 질문",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "돕다",
+		"Here": "여기",
 		"History": "최근 기록",
 		"Image": "이미지",
 		"ImageSelect": "Select an image",
@@ -314,24 +336,38 @@
 		"Map": "지도",
 		"Miscellaneous": "기타",
 		"MobileApp": "Mobile app",
+		"Moderation": "절도",
+		"ModerationFlagReasonWrongType": "잘못된 유형",
+		"ModerationFlagReasonWrongPriceValue": "잘못된 가격 값",
+		"ModerationFlagReasonWrongCurrency": "잘못된 통화",
+		"ModerationFlagReasonWrongProduct": "잘못된 제품",
+		"ModerationFlagReasonWrongLocation": "잘못된 위치",
+		"ModerationFlagReasonWrongDate": "잘못된 날짜",
+		"ModerationFlagReasonOther": "기타",
+		"ModerationFlagCreateSuccess": "귀하의 보고에 감사드립니다!",
+		"ModerationFlagStatusOpen": "열려 있는",
+		"ModerationFlagStatusClosed": "닫은",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "내 가격",
+		"MyProofs": "내 증거",
 		"MyStats": "My stats",
+		"New": "새로운",
 		"NextProof": "Next proof",
 		"NoBarcode": "바코드 없음",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "열려 있는",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "이름",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "가격",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -354,14 +390,21 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "가격표",
 		"PriceTags": "가격표",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "가격이 누락되었습니다",
+		"PricePerMissing": "누락된 개당 가격",
+		"PriceAlreadyUploaded": "가격이 이미 업로드되었습니다",
+		"PriceReadyToBeUploaded": "가격 업로드 준비 완료",
 		"PricesAlreadyUploaded": "가격이 이미 업로드되었습니다",
+		"PricesAll": "모든 가격은",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -369,7 +412,7 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "귀하가 추가한 가격",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "은둔",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProductMissing": "제품이 누락되었습니다",
@@ -377,11 +420,12 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "증거를 선택하세요",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} 개의 교정본이 업로드되었습니다.",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,20 +433,27 @@
 		"Quantity": "양",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "계급",
+		"Reason": "사유",
+		"RECEIPT": "영수증",
+		"Receipt": "영수증",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "다시 열다",
+		"ReportProblem": "문제 신고하기",
+		"Reset": "Reset",
+		"Resolved": "해결됨",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "검색",
 		"Select": "Select",
+		"Send": "전송",
 		"Settings": "설정",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "가입하기",
 		"SignOut": "로그아웃",
@@ -412,14 +463,16 @@
 		"SourceCode": "Source code",
 		"Start": "시작하기",
 		"Stats": "Stats",
+		"Status": "상태",
 		"SuggestedBarcode": "제안된 바코드:",
 		"Summary": "요약",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "텍스트",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
+		"Theme": "주제",
 		"ThemeLight": "밝게",
 		"ThemeDark": "어둡게",
 		"TopContributors": "Top contributors",
@@ -429,12 +482,12 @@
 		"TopCountries": "상위 국가",
 		"Today": "Today",
 		"Top": "Top",
-		"Total": "Total",
+		"Total": "총",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"TryItOut": "시도해 보세요",
 		"Type": "종류",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "알 수 없는 제품",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -453,18 +506,29 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "사용자를 찾을 수 없습니다",
 		"Validate": "검사",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "커뮤니티에서 가격 검증",
 		"View": "뷰",
 		"Website": "웹사이트",
+		"WithAPrice": "With a price",
+		"WithoutAPrice": "가격 없이",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "예",
 		"No": "아니요",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Food": "음식",
+		"PetFood": "반려동물 사료",
+		"Beauty": "아름다움"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -513,10 +577,27 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "통화",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
+	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "판매의 나라",
+		"CreateNewProduct": "새로운 제품을 만드세요",
+		"CreateProduct": "제품 만들기",
+		"EnableCropMode": "자르기 모드 활성화",
+		"Flavor": "제품을 생성해야 하는 프로젝트를 선택하세요",
+		"NextProof": "Next proof",
+		"PreviousProof": "이전 증거",
+		"ProductAlreadyExists": "제품이 이미 존재합니다",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "증명 ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "판매된 매장",
+		"UseCropModeToAddImage": "제품 이미지를 추가하려면 교정 사진 아래의 자르기 모드를 활성화하고 제품 주위에 사각형을 그립니다.",
+		"ProductMissingPromoBanner": "실험: Open Prices의 데이터를 사용하여 이 제품을 생성해 보세요."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -537,10 +618,10 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "가격 추가",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "제품 검색",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "지우기",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "매장을 찾을 수 없나요? 전체 주소 대신 키워드를 사용해 보세요(예: 'Carrefour 75013 Paris' 또는 'Walmart San Francisco').",
+		"NoResultHelpOSM": "아직도 원하는 상점을 찾을 수 없나요? 아직 {osm_name} 에 없을 수도 있습니다. 먼저 {osm_url} 에 추가해 보세요.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -576,9 +659,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "증거",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "알 수 없는 제품"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -593,8 +676,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "가격",
+		"LabelDiscounted": "할인된 가격",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -636,7 +719,7 @@
 		"UnknownProduct": "알 수 없는 상품명"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "가격 추가",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "더 불러오기",
@@ -654,14 +737,14 @@
 		"PromoReceiptAssistant": "실험해 보세요: 새로운 영수증 도우미를 사용해 영수증에서 자동으로 가격을 추출해 보세요!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "증거",
+		"PRICE_TAG": "가격표",
+		"RECEIPT": "영수증",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "증거를 선택하세요",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -673,11 +756,11 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "더 불러오기",
-		"Prices": "Prices",
+		"Prices": "물가",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "은둔"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "영수증 항목",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -704,8 +787,11 @@
 		"About": {
 			"Title": "정보"
 		},
+		"Add": {
+			"Title": "추가하기"
+		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "가격 추가"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -728,11 +814,23 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "증빙 자료(영수증)를 첨부해 주세요."
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "탐구하다"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "가격 추가"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -741,7 +839,10 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "물가"
+		},
+		"PriceTags": {
+			"Title": "가격표"
 		},
 		"Proofs": {
 			"Title": "Proofs"
@@ -749,17 +850,30 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "영수증"
+		},
+		"Cities": {
+			"Title": "도시들"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "기여하기"
 		},
+		"Countries": {
+			"Title": "국가"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "홈"
+			"Title": "홈",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -770,11 +884,14 @@
 		"LatestProofs": {
 			"Title": "Latest proofs"
 		},
+		"Moderation": {
+			"Title": "절도"
+		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "내 가격"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "내 증거"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "증명 가격표 도우미"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "검사",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,12 +964,13 @@
 		"ServerError": "Error: server error",
 		"Title": "가입하기",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "물가",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -859,7 +979,7 @@
 		"Products": "제품",
 		"Locations": "Locations",
 		"Users": "Users",
-		"Total": "Total",
+		"Total": "총",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "소스별 가격",
+		"ProofsPerSource": "소스별 증명",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -876,8 +998,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "더 불러오기",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "내 가격",
+		"MyProofs": "내 증거",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "설정",
 		"Title": "Dashboard",
@@ -897,9 +1019,10 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "언어 변경",
 		"CountryLabel": "국가",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "통화",
 		"DisplayTitle": "화면",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

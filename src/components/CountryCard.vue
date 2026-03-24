@@ -1,13 +1,11 @@
 <template>
   <v-card :title="getCityCountryTitle" prepend-icon="mdi-map-marker-outline" data-name="country-card">
     <v-card-text>
-      <LocationCountChip :count="locationCount" :withLabel="true" />
-      <v-chip
-        v-if="countryUrl"
-        label size="small" density="comfortable" class="mr-1" @click="$router.push(countryUrl)"
-      >
-        {{ country }}
-      </v-chip>
+      <span class="chip-group">
+        <PriceCountChip v-if="showPriceCountChip" :count="priceCount" :withLabel="true" />
+        <LocationCountChip v-if="showLocationCountChip" :count="locationCount" :withLabel="true" />
+        <CountryCityChip v-if="city" type="country" :country="country" />
+      </span>
     </v-card-text>
   </v-card>
 </template>
@@ -17,7 +15,9 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    LocationCountChip: defineAsyncComponent(() => import('../components/LocationCountChip.vue'))
+    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    LocationCountChip: defineAsyncComponent(() => import('../components/LocationCountChip.vue')),
+    CountryCityChip: defineAsyncComponent(() => import('../components/CountryCityChip.vue')),
   },
   props: {
     country: {
@@ -28,18 +28,25 @@ export default {
       type: String,
       default: null
     },
+    priceCount: {
+      type: Number,
+      default: null
+    },
     locationCount: {
       type: Number,
-      default: 0
-    }
+      default: null
+    },
   },
   computed: {
     getCityCountryTitle() {
       return this.city ? `${this.city}, ${this.country}` : this.country
     },
-    countryUrl() {
-      return this.city ? `/countries/${this.country}` : null
-    }
+    showPriceCountChip() {
+      return this.priceCount !== null && this.priceCount !== undefined
+    },
+    showLocationCountChip() {
+      return this.locationCount !== null && this.locationCount !== undefined
+    },
   }
 }
 </script>

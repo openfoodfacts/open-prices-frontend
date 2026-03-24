@@ -1,15 +1,16 @@
-import CountriesWithEmoji from '../data/countries-with-emoji.json'
 import constants from '../constants'
 
 
-function getCountryEmojiFromName(countryString) {
-  const country = CountriesWithEmoji.find(c => c.name === countryString || (c.name_original && c.name_original.length && c.name_original.includes(countryString)))
-  return country ? country.emoji : null
-}
-
+/**
+ * /**
+ * Get the flag emoji for the country
+ * @link https://dev.to/jorik/country-code-to-flag-emoji-a21
+ * @param  {String} countryCode The country code
+ * @return {String}             The flag emoji
+ */
 function getCountryEmojiFromCode(countryCode) {
-  const country = CountriesWithEmoji.find(c => c.code === countryCode)
-  return country ? country.emoji : null
+  let codePoints = countryCode.toUpperCase().split('').map(char =>  127397 + char.charCodeAt())
+	return String.fromCodePoint(...codePoints)
 }
 
 function getLocationName(locationObject) {
@@ -35,6 +36,23 @@ function getLocationRoad(locationObject) {
     return locationRoad
   }
   // OP
+  // return everything from osm_display_name between locationName & locationCity
+  else if (locationObject.osm_display_name) {
+    const locationName = getLocationName(locationObject)
+    const locationCity = getLocationCity(locationObject)
+    let startIndex = locationObject.osm_display_name.indexOf(locationName)
+    if (startIndex !== -1) {
+      startIndex += locationName.length
+      let endIndex = locationObject.osm_display_name.indexOf(locationCity, startIndex)
+      if (endIndex === -1) {
+        endIndex = locationObject.osm_display_name.length
+      }
+      let locationRoad = locationObject.osm_display_name.substring(startIndex, endIndex).trim()
+      // remove leading and trailing commas
+      locationRoad = locationRoad.replace(/^,|,$/g, '').trim()
+      return locationRoad
+    }
+  }
   return ''
 }
 
@@ -64,6 +82,19 @@ function getLocationCountry(locationObject) {
   return locationObject.osm_address_country || ''
 }
 
+function getLocationCountryCode(locationObject) {
+  // Nominatim
+  if (locationObject.address) {
+    return locationObject.address.country_code || ''
+  }
+  // Photon
+  else if (locationObject.properties) {
+    return locationObject.properties.countrycode || ''
+  }
+  // OP
+  return locationObject.osm_address_country_code || ''
+}
+
 /**
  * input: {"geometry":{"coordinates":[2.3548062,48.8301752],"type":"Point"},"type":"Feature","properties":{"osm_id":11112946989,"country":"France","city":"Paris","countrycode":"FR","postcode":"75013","locality":"Quartier de la Maison-Blanche","type":"house","osm_type":"N","osm_key":"shop","housenumber":"30","street":"Avenue d'Italie","district":"Paris","osm_value":"department_store","name":"HEMA","state":"Ile-de-France"}}
  * output: HEMA ; 30, Avenue d'Italie, Paris
@@ -73,7 +104,7 @@ function getLocationOSMTitle(locationObject, withName=true, withRoad=false, with
   if (withName) {
     locationTitle += `${getLocationName(locationObject)}`
   }
-  if (withRoad && (locationObject.address || locationObject.properties)) {
+  if (withRoad && (locationObject.address || locationObject.properties || locationObject.osm_display_name)) {
     locationTitle += locationTitle ? ', ' : ''
     locationTitle += getLocationRoad(locationObject)
   }
@@ -86,8 +117,7 @@ function getLocationOSMTitle(locationObject, withName=true, withRoad=false, with
     locationTitle += getLocationCountry(locationObject)
   }
   if (withEmoji) {
-    // locationTitle += ` ${getCountryEmojiFromName(locationObject.osm_address_country) || ''}`
-    locationTitle += ` ${getCountryEmojiFromCode(locationObject.osm_address_country_code) || ''}`
+    locationTitle += ` ${getCountryEmojiFromCode(getLocationCountryCode(locationObject)) || ''}`
   }
   if (!locationTitle) {
     locationTitle = locationObject.id
@@ -152,6 +182,25 @@ function getLocationLatLng(locationObject) {
   return [locationObject.osm_lat, locationObject.osm_lon]
 }
 
+function getLocationBrandLogo(locationObject) {
+  const BRAND_URL_PREFIX = 'https://raw.githubusercontent.com/openfoodfacts/brand-images/refs/heads/main/xx/stores/'
+  // Photon
+  if (locationObject.properties && locationObject.properties.name) {
+    const nameCleaned = locationObject.properties.name.replace(' ', '-')
+    return `${BRAND_URL_PREFIX}${nameCleaned}.svg`
+  }
+  // Nominatim
+  else if (locationObject.address && locationObject.name) {
+    const nameCleaned = locationObject.name.replace(' ', '-')
+    return `${BRAND_URL_PREFIX}${nameCleaned}.svg`
+  }
+  // OP
+  else if (locationObject.osm_brand) {
+    const nameCleaned = locationObject.osm_brand.replace(' ', '-')
+    return `${BRAND_URL_PREFIX}${nameCleaned}.svg`
+  }
+}
+
 function getMapBounds(results) {
   if (results.length > 0) {
     // Nominatim
@@ -189,9 +238,17 @@ function getLocationONLINETitle(locationObject) {
   return locationObject.website_url
 }
 
-// OP location
 function getLocationIcon(locationObject) {
-  if (locationObject) {
+  // Photon location
+  if (locationObject.properties) {
+    return constants.LOCATION_TYPE_OSM_ICON
+  }
+  // Nominatim location
+  else if (locationObject.address) {
+    return constants.LOCATION_TYPE_OSM_ICON
+  }
+  // OP location
+  else if (locationObject.type) {
     return constants[`LOCATION_TYPE_${locationObject.type}_ICON`] || constants.LOCATION_UNKNOWN_ICON
   }
   return constants.LOCATION_UNKNOWN_ICON
@@ -199,8 +256,8 @@ function getLocationIcon(locationObject) {
 
 
 export default {
-  getCountryEmojiFromName,
   getCountryEmojiFromCode,
+  getLocationCountryCode,
   getLocationName,
   getLocationRoad,
   getLocationCity,
@@ -211,6 +268,7 @@ export default {
   getLocationUniqueID,
   getLocationTag,
   getLocationLatLng,
+  getLocationBrandLogo,
   getMapBounds,
   getMapCenter,
   getLocationONLINETitle,

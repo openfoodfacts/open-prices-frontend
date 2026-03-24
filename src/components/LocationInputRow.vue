@@ -1,27 +1,22 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-btn size="small" :prepend-icon="LOCATION_TYPE_OSM_ICON" :class="selectedLocation ? 'border-success' : 'border-error'" @click="locationSelectorDialog = true">
-        <span v-if="selectedLocation">{{ $t('Common.LocationSelected') }}</span>
-        <span v-else>{{ $t('Common.LocationFindShop') }}</span>
+    <v-col>
+      <div class="text-body-2 required">
+        {{ $t('Common.Location') }}
+      </div>
+      <LocationCard v-if="selectedLocation" :location="selectedLocation" :isSelected="true" :hideLocationFooterRow="true" :readonly="true" elevation="1" @editLocation="showLocationSelectorDialog" />
+      <v-btn v-else class="text-body-2" block spaced="end" :prepend-icon="LOCATION_TYPE_OSM_ICON" :class="selectedLocation ? 'border-success' : 'border-error'" @click="showLocationSelectorDialog">
+        {{ $t('Common.LocationFindShop') }}
       </v-btn>
+
+      <LocationSelectorDialog
+        v-if="locationSelectorDialog"
+        v-model="locationSelectorDialog"
+        @location="setLocationData($event)"
+        @close="locationSelectorDialog = false"
+      />
     </v-col>
   </v-row>
-
-  <v-row v-if="selectedLocation" class="mt-0">
-    <v-col cols="12">
-      <v-chip v-if="selectedLocation" label density="comfortable">
-        {{ getLocationTitle }}
-      </v-chip>
-    </v-col>
-  </v-row>
-
-  <LocationSelectorDialog
-    v-if="locationSelectorDialog"
-    v-model="locationSelectorDialog"
-    @location="setLocationData($event)"
-    @close="locationSelectorDialog = false"
-  />
 </template>
 
 <script>
@@ -33,6 +28,7 @@ import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
+    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
     LocationSelectorDialog: defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
   },
   props: {
@@ -43,6 +39,10 @@ export default {
         location_osm_id: null,
         location_osm_type: null
       })
+    },
+    existingLocation: {
+      type: Object,
+      default: null
     },
   },
   emits: ['location'],
@@ -70,12 +70,12 @@ export default {
     },
   },
   mounted() {
-    // this.initLocationForm()
+    this.initLocationForm()
   },
   methods: {
     initLocationForm() {
-      if (this.recentLocations.length) {
-        this.setLocationData(this.recentLocations[0])
+      if (this.existingLocation) {
+        this.selectedLocation = this.existingLocation
       }
     },
     showLocationSelectorDialog() {

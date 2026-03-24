@@ -1,17 +1,20 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-map-marker-outline">
         {{ $t('Common.LocationCount', { count: locationTotal }) }}
       </v-chip>
-      <FilterMenu kind="location" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleLocationType($event)" />
-      <OrderMenu kind="location" :currentOrder="currentOrder" @update:currentOrder="selectLocationOrder($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="locationList.length" :totalCount="locationTotal" />
+        <FilterMenu kind="location" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleLocationType($event)" />
+        <OrderMenu kind="location" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      </template>
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
     <v-col v-for="location in locationList" :key="location" cols="12" sm="6" md="4" xl="3">
-      <LocationCard :location="location" :hideLocationOSMID="true" height="100%" />
+      <LocationCard :location="location" height="100%" />
     </v-col>
   </v-row>
 
@@ -24,15 +27,16 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
   components: {
-    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
+    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
   },
   data() {
     return {
@@ -88,7 +92,7 @@ export default {
       if ((this.locationTotal != null) && (this.locationList.length >= this.locationTotal)) return
       this.loading = true
       this.locationPage += 1
-      return api.getLocations(this.getLocationsParams)
+      return openPricesApi.getLocations(this.getLocationsParams)
         .then((data) => {
           this.locationList.push(...data.items)
           this.locationTotal = data.total
@@ -105,7 +109,7 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
       // this.initProductList() will be called in watch $route
     },
-    selectLocationOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })

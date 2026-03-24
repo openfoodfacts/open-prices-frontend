@@ -32,7 +32,7 @@
         variant="flat"
         :block="!$vuetify.display.smAndUp"
         prepend-icon="mdi-checkbox-marked-circle-plus-outline"
-        to="/experiments/price-validation-assistant"
+        to="/prices/add/validate"
       >
         {{ $t('Common.ValidatePrices') }}
       </v-btn>

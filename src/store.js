@@ -7,6 +7,7 @@ export const useAppStore = defineStore('app', {
     user: {
       username: null,
       token: null,
+      is_moderator: false,
       last_product_type_used: constants.PRICE_TYPE_PRODUCT,  // or 'BARCODE'
       last_currency_used: import.meta.env.VITE_DEFAULT_CURRENCY,  // 'EUR'
       recent_locations: [],
@@ -21,11 +22,10 @@ export const useAppStore = defineStore('app', {
       location_display_osm_id: false,
       drawer_display_experiments: true,
       preferedTheme: null,
-      price_list_display_default_mode: constants.PRICE_DISPLAY_LIST[0].key,
+      price_list_display_default_mode: constants.DISPLAY_LIST[0].key,
       location_finder_default_mode: constants.LOCATION_SELECTOR_DISPLAY_LIST[1].key,
       barcode_scanner_default_mode: constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key,
-      barcode_scanner_library: constants.BARCODE_SCANNER_DISPLAY_LIST[0].key,
-      price_form_default_mode: constants.PRICE_FORM_DISPLAY_LIST[0].key
+      barcode_scanner_library: constants.BARCODE_SCANNER_DISPLAY_LIST[0].key
     },
   }),
   getters: {
@@ -57,9 +57,10 @@ export const useAppStore = defineStore('app', {
     }
   },
   actions: {
-    signIn(token) {
-      this.user.username = utils.getOFFUsernameFromAuthToken(token)
-      this.user.token = token
+    signIn(data) {
+      this.user.username = data['user_id']
+      this.user.token = data['access_token']
+      this.user.is_moderator = data['is_moderator'] || false
     },
     signOut() {
       this.user.username = null

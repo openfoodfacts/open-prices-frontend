@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Admháil"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "Cruthaigh",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Cruthaigh",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Praghas",
+			"LabelDiscounted": "Praghas lascainithe",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Cruthúnas",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -89,9 +89,9 @@
 			"CategoryLabel": "Category",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
-			"Scan": "Scan",
+			"Scan": "Scanadh",
 			"ScanBarcode": "Scan a barcode",
-			"ScanBarcodeShort": "Scan",
+			"ScanBarcodeShort": "Scanadh",
 			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"TypeBarcodeShort": "Type",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Dáta",
+			"DateLabel": "Dáta",
 			"Find": "Aimsigh",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -162,14 +162,15 @@
 		"StatsAndRankings": "Staitisticí & rátálacha",
 		"MostPicturesAdded": "An chuid is mó de na pictiúir curtha leis",
 		"MostPricesAdded": "An chuid is mó de na praghsanna curtha leis",
-		"MostPricesFromPicturesAdded": "An chuid is mó de na praghsanna ó phictiúir curtha leis"
+		"MostPricesFromPicturesAdded": "An chuid is mó de na praghsanna ó phictiúir curtha leis",
+		"AlertNew": "An bhfuil smaoineamh agat le haghaidh dúshlán nua? Cuir in iúl dúinn {url}!"
 	},
 	"Common": {
 		"About": "Faoi",
 		"Action": "Gníomh",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Cuir praghas leis",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -177,25 +178,29 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Cuir clibeanna praghais nua leis",
+		"AddNewProofReceipt": "Cuir admháil nua leis",
 		"AddToOFF": "Add to {name}",
+		"Added": "Cuireadh leis",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
-		"BarcodeScanShort": "Scan",
+		"BarcodeScanShort": "Scanadh",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "Barra cód neamhbhailí",
 		"Brand": "Brand",
 		"Brands": "Brandaí",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Praghas",
+		"Prices": "Praghsanna",
 		"PRODUCT": "Táirge",
 		"Product": "Táirge",
 		"ProductName": "Ainm táirge",
 		"Products": "Táirgí",
-		"Proof": "Proof",
+		"Proof": "Cruthúnas",
 		"Proofs": "Proofs",
 		"CATEGORY": "Category",
 		"Category": "Category",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Glan",
+		"Close": "Dún",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -219,16 +225,18 @@
 		"Contribute": "Cur",
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
+		"Confirm": "Deimhnigh",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Airgeadra",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "Is féidir leat airgeadraí a chur leis i do shocruithe.",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
@@ -237,10 +245,13 @@
 		"DisplayMap": "Léarscáil",
 		"DisplayPriceMap": "Léarscáil",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
+		"Done": "Déanta",
 		"Error": "Earráid",
 		"Experiment": "Turgnamh",
 		"Experiments": "Experiments",
+		"Explore": "Taiscéal",
+		"FromPriceTag": "Ó chlib phraghais",
+		"FromReceipt": "Ó admháil",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Label",
@@ -250,6 +261,7 @@
 		"Languages": "Teangacha",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Foghlaim níos mó",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -257,10 +269,14 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "Dáta",
 		"DateMissing": "Date missing",
-		"Details": "Details",
-		"Delete": "Delete",
+		"DateProofHelpText": "Dáta an phictiúir.",
+		"DateProofHelpTextExif": "De réir réamhshocraithe, déanaimid iarracht é a bhaint as meiteashonraí EXIF an phictiúir.",
+		"DateProofHelpTextReceipt": "I gcás admhálacha, socraigh é go dtí an dáta ceannaigh.",
+		"Details": "Sonraí",
+		"Delete": "Scrios",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
 		"DiscountType": "Discount type",
@@ -280,27 +296,33 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
-		"Filter": "Filter",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Tá réimse riachtanach",
+		"Filter": "Scagaire",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Le praghsanna",
+		"FilterWithLocationCount": "Le suíomhanna",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Taispeáin cruthúnais ó mo thír féin amháin",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Le cód barra bailí",
 		"FilterPriceTagWithTagPredictionProductExists": "Le táirge bailí",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Le clib chatagóire bailí",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "Ceisteanna Coitianta",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Cabhair",
+		"Here": "Anseo",
 		"History": "Stair",
-		"Image": "Image",
+		"Image": "Íomhá",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -312,26 +334,40 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Léarscáil",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "Ilghnéitheach",
 		"MobileApp": "Mobile app",
+		"Moderation": "Modhnóireacht",
+		"ModerationFlagReasonWrongType": "Cineál mícheart",
+		"ModerationFlagReasonWrongPriceValue": "Luach praghais mícheart",
+		"ModerationFlagReasonWrongCurrency": "Airgeadra mícheart",
+		"ModerationFlagReasonWrongProduct": "Táirge mícheart",
+		"ModerationFlagReasonWrongLocation": "Suíomh mícheart",
+		"ModerationFlagReasonWrongDate": "Dáta mícheart",
+		"ModerationFlagReasonOther": "Other",
+		"ModerationFlagCreateSuccess": "Go raibh maith agat as do thuairisc!",
+		"ModerationFlagStatusOpen": "Oscail",
+		"ModerationFlagStatusClosed": "Dúnta",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Mo phraghsanna",
+		"MyProofs": "Mo chruthúnais",
 		"MyStats": "My stats",
+		"New": "Nua",
 		"NextProof": "Next proof",
 		"NoBarcode": "Gan aon chód barra",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Oscail",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "Ainm",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Praghas",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -354,14 +390,21 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Clib praghais",
 		"PriceTags": "Clibeanna praghais",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Praghas ar iarraidh",
+		"PricePerMissing": "Praghas in aghaidh an easnaimh",
+		"PriceAlreadyUploaded": "Praghas uaslódáilte cheana féin",
+		"PriceReadyToBeUploaded": "Praghas réidh le huaslódáil",
 		"PricesAlreadyUploaded": "Praghsanna uaslódáilte cheana féin",
+		"PricesAll": "Gach praghas",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -377,11 +420,12 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Roghnaigh cruthúnas",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "cruthúnais {numberOfProofsUploaded} / {totalNumberOfProofs} uaslódáilte",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,39 +433,48 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "Céim",
+		"Reason": "Cúis",
+		"RECEIPT": "Admháil",
+		"Receipt": "Admháil",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Athoscail",
+		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
+		"Resolved": "Réitithe",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Cuardaigh",
 		"Select": "Select",
+		"Send": "Send",
 		"Settings": "Socruithe",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Sínigh isteach",
-		"SignOut": "Sign out",
+		"SignOut": "Sínigh amach",
 		"SideMenu": "Side menu",
 		"Share": "Comhroinn",
 		"Source": "Source",
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "Cód barra molta:",
 		"Summary": "Summary",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "Téacs",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "Téama",
+		"ThemeLight": "Solas",
+		"ThemeDark": "Dorcha",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -434,7 +487,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Bain triail as",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Táirge anaithnid",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -453,17 +506,28 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Níor aimsíodh an t-úsáideoir",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "Bailíochtú praghsanna ón bpobal",
 		"View": "View",
-		"Website": "Website",
+		"Website": "Suíomh Gréasáin",
+		"WithAPrice": "With a price",
+		"WithoutAPrice": "Gan phraghas",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Tá",
 		"No": "Níl",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Bia",
+		"PetFood": "Bia peataí",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -513,10 +577,27 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Airgeadra",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
+	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Cruthaigh táirge nua",
+		"CreateProduct": "Cruthaigh táirge",
+		"EnableCropMode": "Cumasaigh mód barra",
+		"Flavor": "Roghnaigh an tionscadal ar cheart an táirge a chruthú ann",
+		"NextProof": "Next proof",
+		"PreviousProof": "Cruthúnas roimhe seo",
+		"ProductAlreadyExists": "Tá an táirge ann cheana féin",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Cruthúnas ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Siopaí inar díoladh iad",
+		"UseCropModeToAddImage": "Chun íomhá táirge a chur leis, cumasaigh mód bearrtha faoin bpictiúr cruthúnais agus tarraing dronuilleog timpeall an táirge.",
+		"ProductMissingPromoBanner": "Turgnamh: cruthaigh an táirge seo ag baint úsáide as sonraí ó Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -530,17 +611,17 @@
 		"Dashboard": "Dashboard",
 		"Settings": "Socruithe",
 		"SignIn": "Sínigh isteach",
-		"SignOut": "Sign out"
+		"SignOut": "Sínigh amach"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Cuir praghas leis",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Cuardaigh táirge",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "Glan",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nach bhfuil tú in ann do shiopa a aimsiú? Bain triail as eochairfhocail a úsáid in ionad an seoladh iomláin (m.sh. 'Carrefour 75013 Paris' nó 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Ní féidir leat do shiopa a aimsiú fós? B’fhéidir nach bhfuil sé i {osm_name} fós. Is féidir leat é a chur leis ar {osm_url} ar dtús.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -576,13 +659,13 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Cruthúnas",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Táirge anaithnid"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
-		"Delete": "Delete",
+		"Delete": "Scrios",
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
@@ -593,8 +676,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Praghas",
+		"LabelDiscounted": "Praghas lascainithe",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -623,7 +706,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "Barra cód neamhbhailí",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -633,10 +716,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Ainm táirge anaithnid"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Cuir praghas leis",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -654,26 +737,26 @@
 		"PromoReceiptAssistant": "Turgnamh: bain triail as an gcúntóir admhála nua chun praghsanna a bhaint go huathoibríoch as d’admhálacha!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Cruthúnas",
+		"PRICE_TAG": "Clib praghais",
+		"RECEIPT": "Admháil",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Roghnaigh cruthúnas",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
-		"Delete": "Delete",
+		"Delete": "Scrios",
 		"Title": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "Praghsanna",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Míreanna admhála",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -704,8 +787,11 @@
 		"About": {
 			"Title": "Faoi"
 		},
+		"Add": {
+			"Title": "Cuir leis"
+		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Cuir praghas leis"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -728,11 +814,23 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Cuir cruthúnas (admháil) leis"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "Taiscéal"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Cuir praghas leis"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -741,7 +839,10 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Praghsanna"
+		},
+		"PriceTags": {
+			"Title": "Clibeanna praghais"
 		},
 		"Proofs": {
 			"Title": "Proofs"
@@ -749,17 +850,30 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "Admháil"
+		},
+		"Cities": {
+			"Title": "Cathracha"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Cur"
 		},
+		"Countries": {
+			"Title": "Countries"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Baile"
+			"Title": "Baile",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -770,11 +884,14 @@
 		"LatestProofs": {
 			"Title": "Latest proofs"
 		},
+		"Moderation": {
+			"Title": "Modhnóireacht"
+		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Mo phraghsanna"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Mo chruthúnais"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Cúntóir Clibeanna Praghsanna Cruthúnais"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,12 +964,13 @@
 		"ServerError": "Error: server error",
 		"Title": "Sínigh isteach",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Praghsanna",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Praghsanna in aghaidh an fhoinse",
+		"ProofsPerSource": "Cruthúnais in aghaidh an fhoinse",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -876,8 +998,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Mo phraghsanna",
+		"MyProofs": "Mo chruthúnais",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Socruithe",
 		"Title": "Dashboard",
@@ -897,9 +1019,10 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Athraigh an teanga",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Airgeadra",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

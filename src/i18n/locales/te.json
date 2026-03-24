@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "రసీదు"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "సృష్టించు",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "సృష్టించు",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "ధర",
+			"LabelDiscounted": "తగ్గింపు ధర",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "రుజువు",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -89,9 +89,9 @@
 			"CategoryLabel": "విభాగాలు",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
-			"Scan": "Scan",
+			"Scan": "స్కాన్ చేయండి",
 			"ScanBarcode": "Scan a barcode",
-			"ScanBarcodeShort": "Scan",
+			"ScanBarcodeShort": "స్కాన్ చేయండి",
 			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"TypeBarcodeShort": "Type",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "తేదీ",
+			"DateLabel": "తేదీ",
 			"Find": "కనుగొనండి",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -162,14 +162,15 @@
 		"StatsAndRankings": "గణాంకాలు & ర్యాంకింగ్‌లు",
 		"MostPicturesAdded": "చాలా చిత్రాలు జోడించబడ్డాయి",
 		"MostPricesAdded": "చాలా ధరలు జోడించబడ్డాయి",
-		"MostPricesFromPicturesAdded": "చిత్రాల నుండి చాలా ధరలు జోడించబడ్డాయి"
+		"MostPricesFromPicturesAdded": "చిత్రాల నుండి చాలా ధరలు జోడించబడ్డాయి",
+		"AlertNew": "కొత్త సవాలు కోసం మీకు ఏదైనా ఆలోచన ఉందా? మాకు తెలియజేయండి {url}!"
 	},
 	"Common": {
 		"About": "గురించి",
 		"Action": "యాక్షన్",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "ధరను జోడించండి",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -177,25 +178,29 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "కొత్త ధర ట్యాగ్‌లను జోడించండి",
+		"AddNewProofReceipt": "కొత్త రసీదును జోడించండి",
 		"AddToOFF": "Add to {name}",
+		"Added": "జోడించబడింది",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
-		"BarcodeScanShort": "Scan",
+		"BarcodeScanShort": "స్కాన్ చేయండి",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "చెల్లని బార్‌కోడ్",
 		"Brand": "బ్రాండ్",
 		"Brands": "Brands",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "ధర",
+		"Prices": "ధరలు",
 		"PRODUCT": "Product",
 		"Product": "Product",
 		"ProductName": "Product name",
-		"Products": "Products",
-		"Proof": "Proof",
+		"Products": "ఉత్పత్తులు",
+		"Proof": "రుజువు",
 		"Proofs": "Proofs",
 		"CATEGORY": "విభాగాలు",
 		"Category": "విభాగాలు",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "తొలగింపు పూర్తయింది",
+		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -219,16 +225,18 @@
 		"Contribute": "Contribute",
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
+		"Confirm": "నిర్ధారించండి",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "కరెన్సీ",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "మీరు మీ సెట్టింగ్‌లలో కరెన్సీలను జోడించవచ్చు.",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
@@ -237,10 +245,13 @@
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
-		"Error": "Error",
+		"Done": "పూర్తయింది",
+		"Error": "లోపం",
 		"Experiment": "ప్రయోగం",
 		"Experiments": "Experiments",
+		"Explore": "అన్వేషించండి",
+		"FromPriceTag": "ధర ట్యాగ్ నుండి",
+		"FromReceipt": "రసీదు నుండి",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "లేబుల్",
@@ -250,6 +261,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "మరింత తెలుసుకోండి",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -257,9 +269,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "తేదీ",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateProofHelpText": "చిత్రం తేదీ.",
+		"DateProofHelpTextExif": "డిఫాల్ట్‌గా, మేము దానిని చిత్రం యొక్క EXIF మెటాడేటా నుండి సంగ్రహించడానికి ప్రయత్నిస్తాము.",
+		"DateProofHelpTextReceipt": "రసీదుల కోసం, దానిని కొనుగోలు తేదీకి సెట్ చేయండి.",
+		"Details": "వివరాలు",
 		"Delete": "తొలగించు",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -280,27 +296,33 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "మార్చు",
 		"End": "End",
-		"Filter": "Filter",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "ఫీల్డ్ తప్పనిసరి",
+		"Filter": "ఫిల్టర్",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "ధరలతో",
+		"FilterWithLocationCount": "స్థానాలతో",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "నా దేశం నుండి రుజువులను మాత్రమే చూపించు.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "చెల్లుబాటు అయ్యే బార్‌కోడ్‌తో",
 		"FilterPriceTagWithTagPredictionProductExists": "చెల్లుబాటు అయ్యే ఉత్పత్తితో",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "చెల్లుబాటు అయ్యే కేటగిరీ ట్యాగ్‌తో",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "ఎఫ్ ఎ క్యూ",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "సహాయం",
+		"Here": "ఇక్కడ",
 		"History": "చరిత్ర",
-		"Image": "Image",
+		"Image": "చిత్రం",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -312,26 +334,40 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "ఇతరాలు",
 		"MobileApp": "Mobile app",
+		"Moderation": "నియంత్రణ",
+		"ModerationFlagReasonWrongType": "తప్పు రకం",
+		"ModerationFlagReasonWrongPriceValue": "తప్పు ధర విలువ",
+		"ModerationFlagReasonWrongCurrency": "తప్పు కరెన్సీ",
+		"ModerationFlagReasonWrongProduct": "తప్పు ఉత్పత్తి",
+		"ModerationFlagReasonWrongLocation": "తప్పు స్థానం",
+		"ModerationFlagReasonWrongDate": "తప్పు తేదీ",
+		"ModerationFlagReasonOther": "Other",
+		"ModerationFlagCreateSuccess": "మీ నివేదికకు ధన్యవాదాలు!",
+		"ModerationFlagStatusOpen": "ఓపెన్",
+		"ModerationFlagStatusClosed": "మూసివేయబడింది",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "నా ధరలు",
+		"MyProofs": "నా ఆధారాలు",
 		"MyStats": "My stats",
+		"New": "కొత్తది",
 		"NextProof": "Next proof",
 		"NoBarcode": "బార్‌కోడ్ లేదు",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "ఓపెన్",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "పేరు",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "ధర",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -354,14 +390,21 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "ధర ట్యాగ్",
 		"PriceTags": "ధర ట్యాగ్‌లు",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "ధర లేదు",
+		"PricePerMissing": "తప్పిపోయిన ప్రతి దానికి ధర",
+		"PriceAlreadyUploaded": "ధర ఇప్పటికే అప్‌లోడ్ చేయబడింది",
+		"PriceReadyToBeUploaded": "ధర అప్‌లోడ్ చేయడానికి సిద్ధంగా ఉంది",
 		"PricesAlreadyUploaded": "ధరలు ఇప్పటికే అప్‌లోడ్ చేయబడ్డాయి",
+		"PricesAll": "అన్ని ధరలు",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -377,11 +420,12 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "రుజువును ఎంచుకోండి",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} రుజువులు అప్‌లోడ్ చేయబడ్డాయి",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,39 +433,48 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "రాంక్",
+		"Reason": "కారణం",
+		"RECEIPT": "రసీదు",
+		"Receipt": "రసీదు",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "మళ్ళీ తెరువు",
+		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
+		"Resolved": "పరిష్కరించబడింది",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Search",
 		"Select": "Select",
+		"Send": "Send",
 		"Settings": "అమరికలు",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "సైన్ ఇన్ చేయండి",
-		"SignOut": "Sign out",
+		"SignOut": "సైన్ అవుట్ చేయండి",
 		"SideMenu": "Side menu",
-		"Share": "Share",
+		"Share": "షేర్ చేయి",
 		"Source": "Source",
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "సూచించబడిన బార్‌కోడ్:",
 		"Summary": "సారాంశం",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "టెక్స్ట్",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "థీమ్",
+		"ThemeLight": "కాంతి",
+		"ThemeDark": "చీకటి",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -434,7 +487,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "దీన్ని ప్రయత్నించండి",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "తెలియని ఉత్పత్తి",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -453,17 +506,28 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "వినియోగదారు కనుగొనబడలేదు",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "సంఘం నుండి ధరలను ధృవీకరించండి",
 		"View": "View",
-		"Website": "Website",
+		"Website": "వెబ్‌సైట్",
+		"WithAPrice": "With a price",
+		"WithoutAPrice": "ధర లేకుండా.",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "అవును",
 		"No": "నో",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "ఆహారం",
+		"PetFood": "పెంపుడు జంతువుల ఆహారం",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -513,10 +577,27 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "కరెన్సీ",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
+	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "కొత్త ఉత్పత్తిని సృష్టించండి",
+		"CreateProduct": "ఉత్పత్తిని సృష్టించండి",
+		"EnableCropMode": "క్రాప్ మోడ్‌ను ప్రారంభించండి",
+		"Flavor": "ఉత్పత్తిని సృష్టించాల్సిన ప్రాజెక్ట్‌ను ఎంచుకోండి",
+		"NextProof": "Next proof",
+		"PreviousProof": "మునుపటి రుజువు",
+		"ProductAlreadyExists": "ఉత్పత్తి ఇప్పటికే ఉంది",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "రుజువు ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "అమ్మకానికి ఉన్న దుకాణాలు",
+		"UseCropModeToAddImage": "ఉత్పత్తి చిత్రాన్ని జోడించడానికి, ప్రూఫ్ చిత్రం క్రింద క్రాప్ మోడ్‌ను ప్రారంభించండి మరియు ఉత్పత్తి చుట్టూ దీర్ఘచతురస్రాన్ని గీయండి.",
+		"ProductMissingPromoBanner": "ప్రయోగం: ఓపెన్ ధరల నుండి డేటాను ఉపయోగించి ఈ ఉత్పత్తిని సృష్టించండి."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -530,17 +611,17 @@
 		"Dashboard": "Dashboard",
 		"Settings": "అమరికలు",
 		"SignIn": "సైన్ ఇన్ చేయండి",
-		"SignOut": "Sign out"
+		"SignOut": "సైన్ అవుట్ చేయండి"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "ధరను జోడించండి",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "ఉత్పత్తి కోసం శోధించండి",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "తొలగింపు పూర్తయింది",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "మీ దుకాణం దొరకలేదా? పూర్తి చిరునామాకు బదులుగా కీలకపదాలను ఉపయోగించి ప్రయత్నించండి (ఉదా. 'Carrefour 75013 Paris' లేదా 'Walmart San Francisco').",
+		"NoResultHelpOSM": "ఇంకా మీ దుకాణం దొరకలేదా? అది ఇంకా {osm_name} లో ఉండకపోవచ్చు. మీరు ముందుగా దానిని {osm_url} లో జోడించవచ్చు.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -576,9 +659,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "రుజువు",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "తెలియని ఉత్పత్తి"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -593,8 +676,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "ధర",
+		"LabelDiscounted": "తగ్గింపు ధర",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -623,7 +706,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "చెల్లని బార్‌కోడ్",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -633,10 +716,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "తెలియని ఉత్పత్తి పేరు"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "ధరను జోడించండి",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -654,14 +737,14 @@
 		"PromoReceiptAssistant": "ప్రయోగం: మీ రసీదుల నుండి ధరలను స్వయంచాలకంగా సంగ్రహించడానికి కొత్త రసీదు సహాయకాన్ని ప్రయత్నించండి!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "రుజువు",
+		"PRICE_TAG": "ధర ట్యాగ్",
+		"RECEIPT": "రసీదు",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "రుజువును ఎంచుకోండి",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -673,7 +756,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "ధరలు",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "రసీదు వస్తువులు",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -704,8 +787,11 @@
 		"About": {
 			"Title": "గురించి"
 		},
+		"Add": {
+			"Title": "చేర్చు"
+		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "ధరను జోడించండి"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -728,11 +814,23 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "రుజువును జోడించండి (రసీదు)"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "అన్వేషించండి"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "ధరను జోడించండి"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -741,7 +839,10 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "ధరలు"
+		},
+		"PriceTags": {
+			"Title": "ధర ట్యాగ్‌లు"
 		},
 		"Proofs": {
 			"Title": "Proofs"
@@ -749,17 +850,30 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "రసీదు"
+		},
+		"Cities": {
+			"Title": "నగరాలు"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
 		},
+		"Countries": {
+			"Title": "Countries"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "ముంగిలి"
+			"Title": "ముంగిలి",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -770,11 +884,14 @@
 		"LatestProofs": {
 			"Title": "Latest proofs"
 		},
+		"Moderation": {
+			"Title": "నియంత్రణ"
+		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "నా ధరలు"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "నా ఆధారాలు"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "ప్రూఫ్ ప్రైస్ ట్యాగ్ అసిస్టెంట్"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -837,26 +956,27 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "Share"
+		"Title": "షేర్ చేయి"
 	},
 	"SignIn": {
 		"Button": "సైన్ ఇన్ చేయండి",
-		"Password": "Password",
+		"Password": "పాస్‌వర్డ్",
 		"ServerError": "Error: server error",
 		"Title": "సైన్ ఇన్ చేయండి",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "ధరలు",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "ఉత్పత్తులు",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "మూలానికి ధరలు",
+		"ProofsPerSource": "మూలాధారాల ప్రకారం ఆధారాలు",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -876,8 +998,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "నా ధరలు",
+		"MyProofs": "నా ఆధారాలు",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "అమరికలు",
 		"Title": "Dashboard",
@@ -897,9 +1019,10 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "కరెన్సీ",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

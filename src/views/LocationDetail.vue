@@ -1,37 +1,44 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <LocationCard :location="location" readonly />
-      <p v-if="!loading && !location" class="text-red">
-        {{ $t('Common.LocationNotFound') }}
-      </p>
+      <LocationCard v-if="location" :location="location" readonly />
     </v-col>
   </v-row>
 
-  <v-row v-if="!locationFound" class="mt-0">
+  <v-row v-if="!location && !loading" class="mt-0">
     <v-col cols="12">
-      <v-alert v-if="!loading" type="error" variant="outlined">
-        <i>{{ $t('LocationDetail.LocationNotFound') }}</i>
+      <v-alert data-name="location-not-found-alert" type="error" variant="outlined" density="compact">
+        {{ $t('Common.LocationNotFound') }}
       </v-alert>
     </v-col>
   </v-row>
 
-  <v-row v-if="!loading">
+  <v-row v-if="location">
     <v-col>
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
       </h2>
-      <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <FilterMenu kind="price" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
-      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
+        <FilterMenu kind="price" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
+        <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+        <DisplayMenu :show="['list', 'table']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      </template>
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
-    <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
-      <PriceCard :price="price" :product="price.product" :hidePriceLocation="true" elevation="1" height="100%" />
-    </v-col>
-  </v-row>
+  <v-window v-model="currentDisplay" disabled>
+    <v-window-item value="list">
+      <v-row class="mt-0 mb-1">
+        <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
+          <PriceCard :price="price" :product="price.product" :hideProductLocation="true" elevation="1" height="100%" />
+        </v-col>
+      </v-row>
+    </v-window-item>
+    <v-window-item value="table">
+      <PriceTable class="mt-3 mb-3" :priceList="priceList" source="location" />
+    </v-window-item>
+  </v-window>
 
   <v-row v-if="loading">
     <v-col align="center">
@@ -42,8 +49,11 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
+import date_utils from '../utils/date.js'
 import utils from '../utils.js'
 
 export default {
@@ -52,7 +62,9 @@ export default {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
+    DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    PriceTable: defineAsyncComponent(() => import('../components/PriceTable.vue')),
   },
   data() {
     return {
@@ -63,21 +75,18 @@ export default {
       priceTotal: null,
       pricePage: 0,
       loading: false,
-      // filter & order
+      // filter, order & display
       currentFilterList: [],
       currentOrder: constants.PRICE_ORDER_LIST[2].key,  // date
+      currentDisplay: constants.DISPLAY_LIST[0].key,  // list
     }
   },
   computed: {
-    locationFound() {
-      return this.location && (this.location.osm_id || this.location.website_url)
-    },
+    ...mapStores(useAppStore),
     getPricesParams() {
       let defaultParams = { location_id: this.locationId, order_by: this.currentOrder, page: this.pricePage }
       if (this.currentFilterList.includes('show_last_month')) {
-        let oneMonthAgo = new Date()
-        oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
-        defaultParams['date__gte'] = oneMonthAgo.toISOString().substring(0, 10)
+        defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
       }
       return defaultParams
     },
@@ -92,6 +101,7 @@ export default {
   mounted() {
     this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
+    this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.appStore.user.price_list_display_default_mode || this.currentDisplay
     this.getLocation()
     this.getPrices()
     // load more
@@ -110,7 +120,7 @@ export default {
       this.getPrices()
     },
     getLocation() {
-      return api.getLocationById(this.locationId)
+      return openPricesApi.getLocationById(this.locationId)
         .then((data) => {
           if (data.id) {
             this.location = data
@@ -121,11 +131,12 @@ export default {
       if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
       this.pricePage += 1
-      return api.getPrices(this.getPricesParams)
+      return openPricesApi.getPrices(this.getPricesParams)
         .then((data) => {
+          this.loading = false
+          if (!data.items) return
           this.priceList.push(...data.items)
           this.priceTotal = data.total
-          this.loading = false
         })
     },
     updateFilterList(newFilterList) {
@@ -133,12 +144,17 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initPrices() will be called in watch $route
     },
-    selectPriceOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initPrices() will be called in watch $route
       }
+    },
+    updateDisplay(displayKey) {
+      this.currentDisplay = displayKey
+      this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
+      // this.initPrices() will NOT be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {

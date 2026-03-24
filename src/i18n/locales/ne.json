@@ -162,7 +162,8 @@
 		"StatsAndRankings": "तथ्याङ्क र श्रेणीकरण",
 		"MostPicturesAdded": "धेरैजसो तस्बिरहरू थपिएका छन्",
 		"MostPricesAdded": "धेरैजसो मूल्यहरू थपिएका छन्",
-		"MostPricesFromPicturesAdded": "तस्बिरहरूबाट थपिएका धेरैजसो मूल्यहरू"
+		"MostPricesFromPicturesAdded": "तस्बिरहरूबाट थपिएका धेरैजसो मूल्यहरू",
+		"AlertNew": "के तपाईंसँग नयाँ चुनौतीको लागि कुनै विचार छ? हामीलाई थाहा दिनुहोस् {url}!"
 	},
 	"Common": {
 		"About": "बारेमा",
@@ -177,8 +178,12 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "नयाँ मूल्य ट्यागहरू थप्नुहोस्",
+		"AddNewProofReceipt": "नयाँ रसिद थप्नुहोस्",
 		"AddToOFF": "Add to {name}",
+		"Added": "थपियो",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "बारकोड",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
+		"Close": "बन्द गर्नुहोस्",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -220,6 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -229,6 +236,7 @@
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "तपाईं आफ्नो सेटिङहरूमा मुद्राहरू थप्न सक्नुहुन्छ।",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
@@ -241,6 +249,9 @@
 		"Error": "Error",
 		"Experiment": "प्रयोग",
 		"Experiments": "Experiments",
+		"Explore": "अन्वेषण गर्नुहोस्",
+		"FromPriceTag": "मूल्य ट्यागबाट",
+		"FromReceipt": "रसिदबाट",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Label",
@@ -250,6 +261,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Learn more",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -257,8 +269,12 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Date",
 		"DateMissing": "Date missing",
+		"DateProofHelpText": "तस्वीरको मिति।",
+		"DateProofHelpTextExif": "पूर्वनिर्धारित रूपमा, हामी यसलाई तस्वीरको EXIF मेटाडेटाबाट निकाल्ने प्रयास गर्छौं।",
+		"DateProofHelpTextReceipt": "रसिदहरूको लागि, यसलाई खरिद मितिमा सेट गर्नुहोस्।",
 		"Details": "Details",
 		"Delete": "Delete",
 		"DeveloperMode": "Developer mode",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "क्षेत्र आवश्यक छ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "मूल्यहरू सहित",
+		"FilterWithLocationCount": "स्थानहरू सहित",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "मेरो देशबाट मात्र प्रमाणहरू देखाउनुहोस्।",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "मान्य बारकोड भएको",
 		"FilterPriceTagWithTagPredictionProductExists": "मान्य उत्पादनको साथ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "मान्य कोटी ट्याग भएको",
@@ -299,6 +320,7 @@
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
 		"Help": "Help",
+		"Here": "यहाँ",
 		"History": "History",
 		"Image": "Image",
 		"ImageSelect": "Select an image",
@@ -314,19 +336,33 @@
 		"Map": "Map",
 		"Miscellaneous": "Miscellaneous",
 		"MobileApp": "Mobile app",
+		"Moderation": "मध्यस्थता",
+		"ModerationFlagReasonWrongType": "गलत प्रकार",
+		"ModerationFlagReasonWrongPriceValue": "गलत मूल्य मान",
+		"ModerationFlagReasonWrongCurrency": "गलत मुद्रा",
+		"ModerationFlagReasonWrongProduct": "गलत उत्पादन",
+		"ModerationFlagReasonWrongLocation": "गलत स्थान",
+		"ModerationFlagReasonWrongDate": "गलत मिति",
+		"ModerationFlagReasonOther": "Other",
+		"ModerationFlagCreateSuccess": "तपाईंको रिपोर्टको लागि धन्यवाद!",
+		"ModerationFlagStatusOpen": "खुला",
+		"ModerationFlagStatusClosed": "बन्द",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"MyStats": "My stats",
+		"New": "नयाँ",
 		"NextProof": "Next proof",
 		"NoBarcode": "बारकोड छैन",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "खुला",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "Name",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -356,12 +392,19 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
 		"PriceTags": "मूल्य ट्यागहरू",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "मूल्य छुटेको छ",
+		"PricePerMissing": "छुटेको वस्तुको मूल्य",
+		"PriceAlreadyUploaded": "मूल्य पहिले नै अपलोड गरिएको छ।",
+		"PriceReadyToBeUploaded": "मूल्य अपलोड गर्न तयार छ।",
 		"PricesAlreadyUploaded": "मूल्यहरू पहिले नै अपलोड गरिसकिएका छन्।",
+		"PricesAll": "सबै मूल्यहरू",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -382,6 +425,7 @@
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} अपलोड गरिएका प्रमाणहरू",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,6 +433,8 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "श्रेणी",
+		"Reason": "Reason",
 		"RECEIPT": "Receipt",
 		"Receipt": "Receipt",
 		"Receipts": "Receipts",
@@ -397,12 +443,17 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "पुन: खोल्नुहोस्",
+		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
+		"Resolved": "समाधान गरियो",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "खोज्नुहोस्",
 		"Select": "Select",
+		"Send": "Send",
 		"Settings": "सेटिङ्हरू",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Sign in",
 		"SignOut": "Sign out",
@@ -412,12 +463,14 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "सुझाव गरिएको बारकोड:",
 		"Summary": "सारांश",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "पाठ",
 		"Thanks": "Thanks",
 		"Theme": "Theme",
 		"ThemeLight": "Light",
@@ -453,11 +506,22 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "प्रयोगकर्ता फेला परेन",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "समुदायबाट मूल्यहरू प्रमाणित गर्नुहोस्",
 		"View": "View",
 		"Website": "Website",
+		"WithAPrice": "With a price",
+		"WithoutAPrice": "मूल्य बिना",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "हाे",
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "नयाँ उत्पादन सिर्जना गर्नुहोस्",
+		"CreateProduct": "उत्पादन सिर्जना गर्नुहोस्",
+		"EnableCropMode": "क्रप मोड सक्षम पार्नुहोस्",
+		"Flavor": "उत्पादन सिर्जना गर्नुपर्ने परियोजना चयन गर्नुहोस्",
+		"NextProof": "Next proof",
+		"PreviousProof": "अघिल्लो प्रमाण",
+		"ProductAlreadyExists": "उत्पादन पहिले नै अवस्थित छ",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "प्रमाण ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "बिक्री भएका पसलहरू",
+		"UseCropModeToAddImage": "उत्पादनको छवि थप्नको लागि, प्रुफ तस्वीर मुनि क्रप मोड सक्षम गर्नुहोस् र उत्पादनको वरिपरि आयत कोर्नुहोस्।",
+		"ProductMissingPromoBanner": "प्रयोग: ओपन प्राइसबाट डेटा प्रयोग गरेर यो उत्पादन सिर्जना गर्नुहोस्"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "आफ्नो पसल फेला पार्न सक्नुभएन? पूरा ठेगानाको सट्टा किवर्डहरू प्रयोग गर्ने प्रयास गर्नुहोस् (जस्तै 'Carrefour 75013 Paris' वा 'Walmart San Francisco')।",
+		"NoResultHelpOSM": "अझै पनि आफ्नो पसल फेला पार्न सक्नुहुन्न? यो अझै {osm_name} मा नहुन सक्छ। तपाईंले पहिले यसलाई {osm_url} मा थप्न सक्नुहुन्छ।",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "रसिद वस्तुहरू",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "बारेमा"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +814,18 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "प्रमाण (रसिद) थप्नुहोस्"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "अन्वेषण गर्नुहोस्"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,11 +841,20 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "मूल्य ट्यागहरू"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
+		},
+		"Cities": {
+			"Title": "शहरहरू"
 		},
 		"Community": {
 			"Title": "Community"
@@ -755,11 +862,18 @@
 		"Contribute": {
 			"Title": "Contribute"
 		},
+		"Countries": {
+			"Title": "Countries"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Home",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -769,6 +883,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "मध्यस्थता"
 		},
 		"MyPrices": {
 			"Title": "My prices"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "प्रमाण मूल्य ट्याग सहायक"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Sign in",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "प्रति स्रोत मूल्यहरू",
+		"ProofsPerSource": "प्रति स्रोत प्रमाणहरू",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

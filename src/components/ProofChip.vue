@@ -1,6 +1,6 @@
 <template>
   <v-chip
-    :class="class"
+    v-bind="$attrs"
     :style="getStyle"
     label
     size="small"
@@ -40,10 +40,6 @@ export default {
     readonly: {
       type: Boolean,
       default: false,
-    },
-    class: {
-      type: String,
-      default: ''
     },
     style: {
       type: String,

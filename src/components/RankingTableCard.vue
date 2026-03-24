@@ -5,7 +5,7 @@
     </template>
   
     <v-card-text>
-      <v-data-table :headers="headers" :items="itemsDisplayed" hide-default-header hide-default-footer items-per-page="100">
+      <v-data-table :headers="headers" :items="itemsDisplayed" :items-per-page="tablePageLimit" hide-default-header hide-default-footer>
         <template #[`item.rank`]="{ index }">
           {{ index + 1 }}
         </template>
@@ -53,6 +53,11 @@ export default {
     hideRank: {
       type: Boolean,
       default: false
+    }
+  },
+  data() {
+    return {
+      tablePageLimit: -1,  // all items
     }
   },
   computed: {

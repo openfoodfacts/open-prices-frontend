@@ -2,15 +2,15 @@
   <v-app-bar class="bg-header">
     <v-app-bar-nav-icon @click.stop="showDrawerMenu = !showDrawerMenu" />
     <v-app-bar-title>
-      <span style="cursor:pointer" @click="$router.push('/')">
-        <img src="/favicon.svg" height="28" width="28" style="vertical-align:bottom">
+      <span style="cursor:pointer" role="link" tabindex="0" @click="$router.push('/')" @keydown.enter="$router.push('/')">
+        <img src="/favicon.svg" height="28" width="28" alt="Open Prices logo" style="vertical-align:bottom">
         {{ APP_NAME }}
         <span v-if="ENV !== 'prod'" class="text-caption text-error">{{ ENV }}</span>
       </span>
     </v-app-bar-title>
-    <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')" />
-    <v-btn v-else prepend-icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')">
-      {{ $t('Common.Search') }}
+    <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-magnify-expand" to="/explore" :aria-label="$t('Common.Explore')" />
+    <v-btn v-else prepend-icon="mdi-magnify-expand" to="/explore" :aria-label="$t('Common.Explore')">
+      {{ $t('Common.Explore') }}
     </v-btn>
     <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-tag-plus-outline" to="/contribute" :aria-label="$t('Common.Contribute')" />
     <v-btn v-else prepend-icon="mdi-tag-plus-outline" to="/contribute" :aria-label="$t('Common.Contribute')">
@@ -72,10 +72,15 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    userIsModerator() {
+      return this.appStore.user.is_moderator
+    },
     getDrawerMenuItems() {
       return this.$router.options.routes
         .filter(r => r.meta && r.meta.drawerMenu)
-        .filter(r => this.username ? r.meta.requiresAuth !== false : !r.meta.requiresAuth)
+        .filter(r => r.meta.requiresAnonymous !== true || !this.username)
+        .filter(r => r.meta.requiresAuth !== true || this.username)
+        .filter(r => r.meta.requiresModerator !== true || this.userIsModerator)
         .filter(r => !r.meta.drawerMenuConditionalDisplay || this.appStore.user[r.meta.drawerMenuConditionalDisplay])
         .map((r => ({ title: this.$t(`Router.${r.meta.title}.Title`), props: { 'prepend-icon': r.meta.icon, to: r.path }})))
     }

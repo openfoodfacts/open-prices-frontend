@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="bg-footer py-4">
+  <v-footer class="bg-footer py-4 flex-grow-0">
     <v-row no-gutters>
       <v-col cols="12" md="6" align="center">
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-chart-box-outline" to="/stats">
@@ -88,7 +88,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     themeInfo() {
-      if (this.theme.global.name === "light") {
+      if (this.theme.global.name.value === "light") {
         return {
           icon: 'mdi-white-balance-sunny',
           label: 'Theme.LightMode' 
@@ -102,9 +102,9 @@ export default {
   },
   methods: {
     swapTheme() {
-      const newTheme = this.theme.global.name === "light" ? 'dark' : 'light'
+      const newTheme = this.theme.global.name.value === "light" ? 'dark' : 'light'
       this.appStore.user.preferedTheme = newTheme
-      this.theme.global.name = newTheme
+      this.theme.change(newTheme)
     }
   }
 }

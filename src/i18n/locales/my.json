@@ -162,7 +162,8 @@
 		"StatsAndRankings": "ကိန်းဂဏန်းများနှင့် အဆင့်သတ်မှတ်ချက်များ",
 		"MostPicturesAdded": "ပုံအများစုကို ထည့်ထားပါတယ်။",
 		"MostPricesAdded": "စျေးနှုန်းအများစုကို ထည့်သွင်းထားသည်။",
-		"MostPricesFromPicturesAdded": "ပုံများတွင် စျေးနှုန်းအများစုကို ထည့်သွင်းထားသည်။"
+		"MostPricesFromPicturesAdded": "ပုံများတွင် စျေးနှုန်းအများစုကို ထည့်သွင်းထားသည်။",
+		"AlertNew": "စိန်ခေါ်မှုအသစ်အတွက် စိတ်ကူးရှိပါသလား။ {url}!"
 	},
 	"Common": {
 		"About": "အကြောင်း",
@@ -177,8 +178,12 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "ဈေးနှုန်းအသစ်များထည့်ပါ",
+		"AddNewProofReceipt": "ပြေစာအသစ်ထည့်ပါ",
 		"AddToOFF": "Add to {name}",
+		"Added": "ထပ်ပြောပါသည်။",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "ဘားကုုဒ္",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "ရှင်းလင်းမည်",
+		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -220,6 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -229,6 +236,7 @@
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "သင်၏ဆက်တင်များတွင် ငွေကြေးများကို ထည့်သွင်းနိုင်သည်။",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
@@ -241,6 +249,9 @@
 		"Error": "Error",
 		"Experiment": "စမ်းသပ်မှု",
 		"Experiments": "Experiments",
+		"Explore": "စူးစမ်းပါ။",
+		"FromPriceTag": "စျေးနှုန်းတံဆိပ်တစ်ခုမှ",
+		"FromReceipt": "ပြေစာတစ်ခုမှ",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Label",
@@ -250,6 +261,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Learn more",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -257,8 +269,12 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Date",
 		"DateMissing": "Date missing",
+		"DateProofHelpText": "ပုံရဲ့ ရက်စွဲ။",
+		"DateProofHelpTextExif": "ပုံမှန်အားဖြင့်၊ ကျွန်ုပ်တို့သည် ၎င်းကို ပုံ၏ EXIF metadata မှ ထုတ်ယူရန် ကြိုးစားပါသည်။",
+		"DateProofHelpTextReceipt": "ပြေစာများအတွက် ဝယ်ယူသည့်ရက်စွဲသို့ သတ်မှတ်ပါ။",
 		"Details": "Details",
 		"Delete": "ဖ်က္မည္",
 		"DeveloperMode": "Developer mode",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "အကွက်လိုအပ်သည်။",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "ဈေးနှုန်းများဖြင့်",
+		"FilterWithLocationCount": "နေရာများနှင့်အတူ",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "ကျွန်တော့်နိုင်ငံက အထောက်အထားတွေကိုပဲ ပြပါ။",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "မှန်ကန်သော ဘားကုဒ်ဖြင့်",
 		"FilterPriceTagWithTagPredictionProductExists": "တရားဝင်ထုတ်ကုန်တစ်ခုနှင့်အတူ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "မှန်ကန်သော အမျိုးအစား တဂ်ဖြင့်",
@@ -299,6 +320,7 @@
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
 		"Help": "Help",
+		"Here": "ဒီမှာ",
 		"History": "မှတ်တမ်း",
 		"Image": "Image",
 		"ImageSelect": "Select an image",
@@ -314,19 +336,33 @@
 		"Map": "Map",
 		"Miscellaneous": "Miscellaneous",
 		"MobileApp": "Mobile app",
+		"Moderation": "ထိန်းညှိပေးသည်။",
+		"ModerationFlagReasonWrongType": "အမျိုးအစားမှား",
+		"ModerationFlagReasonWrongPriceValue": "စျေးနှုန်းမှား",
+		"ModerationFlagReasonWrongCurrency": "မှားသောငွေကြေး",
+		"ModerationFlagReasonWrongProduct": "မှားနေပြီထင်ပါရဲ့",
+		"ModerationFlagReasonWrongLocation": "နေရာမှား",
+		"ModerationFlagReasonWrongDate": "ရက်စွဲမှား",
+		"ModerationFlagReasonOther": "Other",
+		"ModerationFlagCreateSuccess": "သင့်အစီရင်ခံစာအတွက် ကျေးဇူးတင်ပါသည်။",
+		"ModerationFlagStatusOpen": "ဖွင့်သည်။",
+		"ModerationFlagStatusClosed": "ပိတ်ထားသည်။",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"MyStats": "My stats",
+		"New": "အသစ်",
 		"NextProof": "Next proof",
 		"NoBarcode": "ဘားကုဒ်မရှိပါ။",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "ဖွင့်သည်။",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "အမည္",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -356,12 +392,19 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
 		"PriceTags": "စျေးတက်ဂ်",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "ဈေးပျောက်နေသည်။",
+		"PricePerMissing": "တစ်ထည်ချင်း ပျောက်နေသည်။",
+		"PriceAlreadyUploaded": "ဈေးတင်ပြီးပြီ။",
+		"PriceReadyToBeUploaded": "စျေးနှုန်းတင်ရန် အဆင်သင့်ဖြစ်နေပါပြီ။",
 		"PricesAlreadyUploaded": "စျေးနှုန်းများ တင်ပြီးဖြစ်ပါသည်။",
+		"PricesAll": "ဈေးနှုန်းအားလုံး",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -382,6 +425,7 @@
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} အထောက်အထားများ အပ်လုဒ်လုပ်ထားသည်။",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,6 +433,8 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "အဆင့်",
+		"Reason": "Reason",
 		"RECEIPT": "Receipt",
 		"Receipt": "Receipt",
 		"Receipts": "Receipts",
@@ -397,12 +443,17 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "ပြန်ဖွင့်တယ်။",
+		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
+		"Resolved": "ပြေလည်ပါတယ်။",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "ရွာေဖြမည္",
 		"Select": "Select",
+		"Send": "Send",
 		"Settings": "အပြင်​အဆင်​များ",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Sign in",
 		"SignOut": "Sign out",
@@ -412,12 +463,14 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "အကြံပြုထားသော ဘားကုဒ်-",
 		"Summary": "အက်ဥ္းခ်ဳပ္",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "စာသား",
 		"Thanks": "Thanks",
 		"Theme": "Theme",
 		"ThemeLight": "Light",
@@ -453,11 +506,22 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "အသုံးပြုသူကို ရှာမတွေ့ပါ",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "အသိုင်းအဝိုင်းထံမှစျေးနှုန်းများကိုအတည်ပြုပါ။",
 		"View": "View",
 		"Website": "Website",
+		"WithAPrice": "With a price",
+		"WithoutAPrice": "အဘိုးမရှိဘဲ",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "ဟုတ္",
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "ထုတ်ကုန်အသစ်ဖန်တီးပါ။",
+		"CreateProduct": "ထုတ်ကုန်ဖန်တီးပါ။",
+		"EnableCropMode": "ဖြတ်တောက်မှုမုဒ်ကို ဖွင့်ပါ။",
+		"Flavor": "ထုတ်ကုန်တွင် ဖန်တီးသင့်သည့် ပရောဂျက်ကို ရွေးချယ်ပါ။",
+		"NextProof": "Next proof",
+		"PreviousProof": "ယခင်သက်သေ",
+		"ProductAlreadyExists": "ထုတ်ကုန် ရှိနှင့်ပြီးဖြစ်သည်။",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "သက်သေ ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "ရောင်းချသည့်ဆိုင်များ",
+		"UseCropModeToAddImage": "ထုတ်ကုန်ပုံတစ်ပုံထည့်ရန်၊ အထောက်အထားပုံအောက်တွင် ဖြတ်တောက်ခြင်းမုဒ်ကို ဖွင့်ပြီး ထုတ်ကုန်တစ်ဝိုက်တွင် စတုဂံပုံဆွဲပါ။",
+		"ProductMissingPromoBanner": "စမ်းသပ်ချက်- Open Prices မှဒေတာကို အသုံးပြု၍ ဤထုတ်ကုန်ကို ဖန်တီးပါ"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "ရှင်းလင်းမည်",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "သင့်ဆိုင်ကို ရှာမတွေ့ဘူးလား။ လိပ်စာအပြည့်အစုံအစား အဓိကစကားလုံးများကို အသုံးပြုကြည့်ပါ (ဥပမာ 'Carrefour 75013 Paris' သို့မဟုတ် 'Walmart San Francisco')။",
+		"NoResultHelpOSM": "မင်းဆိုင်ကို ရှာမတွေ့သေးဘူးလား။ ၎င်းသည် {osm_name} တွင်မဟုတ်သေးပါ။ {osm_url} တွင် ဦးစွာထည့်နိုင်သည်။",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "ပြေစာများ",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "အကြောင်း"
+		},
+		"Add": {
+			"Title": "ပေါင်းထည့်သည်/ပါ။"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +814,18 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "အထောက်အထား (ပြေစာ) ထည့်ပါ"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "စူးစမ်းပါ။"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,11 +841,20 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "စျေးတက်ဂ်"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
+		},
+		"Cities": {
+			"Title": "မြို့များ"
 		},
 		"Community": {
 			"Title": "Community"
@@ -755,11 +862,18 @@
 		"Contribute": {
 			"Title": "Contribute"
 		},
+		"Countries": {
+			"Title": "Countries"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "ပင္မစာမ်က္ႏွာ"
+			"Title": "ပင္မစာမ်က္ႏွာ",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -769,6 +883,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "ထိန်းညှိပေးသည်။"
 		},
 		"MyPrices": {
 			"Title": "My prices"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "သက်သေစျေးနှုန်း Tag Assistant"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Sign in",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "အရင်းအမြစ်အလိုက် ဈေးနှုန်းများ",
+		"ProofsPerSource": "အရင်းအမြစ်အလိုက် အထောက်အထားများ",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

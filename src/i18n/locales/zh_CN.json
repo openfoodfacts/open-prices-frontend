@@ -162,7 +162,8 @@
 		"StatsAndRankings": "统计数据和排名",
 		"MostPicturesAdded": "添加的图片最多",
 		"MostPricesAdded": "大部分价格已添加",
-		"MostPricesFromPicturesAdded": "大部分价格来自已添加的图片"
+		"MostPricesFromPicturesAdded": "大部分价格来自已添加的图片",
+		"AlertNew": "你有新的挑战想法吗？告诉我们 {url}！"
 	},
 	"Common": {
 		"About": "关于",
@@ -177,8 +178,12 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "添加新的价格标签",
+		"AddNewProofReceipt": "添加新收据",
 		"AddToOFF": "添加到 {name}",
+		"Added": "额外",
 		"AdditionalInfo": "Additional information",
+		"All": "全部",
 		"Barcode": "条形码",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "扫描条形码",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "清除",
+		"Close": "關閉",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -220,6 +226,7 @@
 		"Contributors": "贡献者",
 		"Contributions": "贡献",
 		"Confirm": "确认",
+		"Count": "次數",
 		"Country": "国家/地区",
 		"Countries": "国家/地区",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -229,6 +236,7 @@
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "您可以在设置中添加货币。",
 		"Dashboard": "仪表板",
 		"Display": "显示",
 		"DisplayList": "List",
@@ -241,6 +249,9 @@
 		"Error": "错误",
 		"Experiment": "实验",
 		"Experiments": "Experiments",
+		"Explore": "探索",
+		"FromPriceTag": "从价格标签来看",
+		"FromReceipt": "从收据上",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "标签",
@@ -250,6 +261,7 @@
 		"Languages": "语言",
 		"LatestPrices": "最新价格",
 		"LatestProofs": "最新样张",
+		"LearnMore": "更多信息",
 		"LoadMore": "显示更多",
 		"Location": "Location",
 		"Locations": "地点",
@@ -257,9 +269,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "日期",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateProofHelpText": "照片拍摄日期。",
+		"DateProofHelpTextExif": "默认情况下，我们会尝试从图片的 EXIF 元数据中提取它。",
+		"DateProofHelpTextReceipt": "对于收据，请设置为购买日期。",
+		"Details": "细节",
 		"Delete": "删除",
 		"DeveloperMode": "Developer mode",
 		"Discount": "折扣",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "编辑",
 		"End": "End",
+		"ErrorServer": "错误：服务器错误",
+		"FieldIsRequired": "必填字段",
 		"Filter": "筛选",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "价格",
+		"FilterWithLocationCount": "地点",
 		"FilterProductWithPriceCount": "有价格",
 		"FilterProductWithPriceCountHide": "隐藏带有价格的产品",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "隐藏 30 天前的价格",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "仅显示来自我国的证据",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "带有有效条形码",
 		"FilterPriceTagWithTagPredictionProductExists": "持有有效产品",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "具有有效的类别标签",
@@ -299,6 +320,7 @@
 		"GDPR_REQUEST": "GDPR 要求",
 		"Group": "Group",
 		"Help": "帮助",
+		"Here": "这里",
 		"History": "历史记录",
 		"Image": "图片",
 		"ImageSelect": "Select an image",
@@ -314,19 +336,33 @@
 		"Map": "地图",
 		"Miscellaneous": "其他",
 		"MobileApp": "Mobile app",
+		"Moderation": "适度",
+		"ModerationFlagReasonWrongType": "类型错误",
+		"ModerationFlagReasonWrongPriceValue": "价格错误",
+		"ModerationFlagReasonWrongCurrency": "货币错误",
+		"ModerationFlagReasonWrongProduct": "产品错误",
+		"ModerationFlagReasonWrongLocation": "位置错误",
+		"ModerationFlagReasonWrongDate": "日期错误",
+		"ModerationFlagReasonOther": "其他",
+		"ModerationFlagCreateSuccess": "感谢您的报告！",
+		"ModerationFlagStatusOpen": "打开",
+		"ModerationFlagStatusClosed": "关闭",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "我的价格",
 		"MyProofs": "我的样张",
 		"MyStats": "My stats",
+		"New": "新的",
 		"NextProof": "Next proof",
 		"NoBarcode": "无条形码",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "打开",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "命令",
+		"OrderNameASC": "名称",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "扫描次数",
 		"OrderProductPriceCountDESC": "价格数量",
@@ -356,12 +392,19 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "价格标签",
 		"PriceTags": "价格标签",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "价格已创建！",
 		"PriceMissing": "缺少价格",
+		"PricePerMissing": "每缺失的价格",
+		"PriceAlreadyUploaded": "价格已上传。",
+		"PriceReadyToBeUploaded": "价格信息已准备好上传。",
 		"PricesAlreadyUploaded": "价格已上传",
+		"PricesAll": "所有价格",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -377,11 +420,12 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "证明细节",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "证明",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "证明已选！",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} 已上传证明",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,6 +433,8 @@
 		"Quantity": "数量",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "缺失数量",
+		"Rank": "秩",
+		"Reason": "原因",
 		"RECEIPT": "收据",
 		"Receipt": "收据",
 		"Receipts": "Receipts",
@@ -397,12 +443,17 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "重新开放",
+		"ReportProblem": "公布一项问题",
+		"Reset": "Reset",
+		"Resolved": "已解决",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "搜索",
 		"Select": "Select",
+		"Send": "发送",
 		"Settings": "设置",
-		"SignInOFFAccount": "使用您的 {url} 帐户登录",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "登录",
 		"SignIn": "登录",
 		"SignOut": "登出",
@@ -412,12 +463,14 @@
 		"SourceCode": "Source code",
 		"Start": "开始",
 		"Stats": "统计数据",
+		"Status": "状态",
 		"SuggestedBarcode": "建议条形码：",
 		"Summary": "摘要",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "文本",
 		"Thanks": "谢谢",
 		"Theme": "主题",
 		"ThemeLight": "浅色",
@@ -453,17 +506,28 @@
 		"Users": "用户",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "用户未找到",
 		"Validate": "验证",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "验证社区价格",
 		"View": "查看",
 		"Website": "网站",
+		"WithAPrice": "有价格",
+		"WithoutAPrice": "没有价格",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "是",
 		"No": "否",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "食物",
+		"PetFood": "宠物食品",
 		"Beauty": "美丽"
 	},
 	"ContributionAssistant": {
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "您将被重定向到“设置”页面，但会丢失您在此页面上输入的所有信息。",
 		"Select": "选择 {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "可出售的国家",
+		"CreateNewProduct": "创建新产品",
+		"CreateProduct": "创建产品",
+		"EnableCropMode": "启用裁剪模式",
+		"Flavor": "选择要创建产品的项目",
+		"NextProof": "Next proof",
+		"PreviousProof": "先前的证明",
+		"ProductAlreadyExists": "产品已存在",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "证明（{numberOfOutProofs}/{totalNumberOfProofs}）",
+		"StoresWhereSold": "销售商店",
+		"UseCropModeToAddImage": "要添加产品图片，请在校样图片下方启用裁剪模式并在产品周围绘制一个矩形。",
+		"ProductMissingPromoBanner": "实验：使用 Open Prices 的数据创建此产品。"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "选择您最近的一个校样"
 	},
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "清除",
 		"NoResult": "未找到结果",
+		"NoResultHelpKeywords": "找不到您的店铺？请尝试使用关键词代替完整地址（例如“Carrefour 75013 Paris”或“Walmart San Francisco”）。",
+		"NoResultHelpOSM": "还是找不到你的店铺？它可能还不在 {osm_name} 中。你可以先在 {osm_url} 上添加。",
 		"PoweredBy": {
 			"text": "由 {url} 供电"
 		},
@@ -661,7 +744,7 @@
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "证明",
 		"ProofSelected": "证明已选！",
 		"Success": "Proof created!"
 	},
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "收据项目",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "关于"
+		},
+		"Add": {
+			"Title": "加入产品"
 		},
 		"AddPrice": {
 			"Title": "添加价格"
@@ -728,6 +814,18 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "添加凭证（收据）"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "探索"
+		},
 		"Locations": {
 			"Title": "地点"
 		},
@@ -743,11 +841,20 @@
 		"Prices": {
 			"Title": "价格"
 		},
+		"PriceTags": {
+			"Title": "价格标签"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "收据"
+		},
+		"Cities": {
+			"Title": "城市"
 		},
 		"Community": {
 			"Title": "Community"
@@ -755,11 +862,18 @@
 		"Contribute": {
 			"Title": "贡献"
 		},
+		"Countries": {
+			"Title": "国家/地区"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "主页"
+			"Title": "主页",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "仪表板"
@@ -769,6 +883,9 @@
 		},
 		"LatestProofs": {
 			"Title": "最新样张"
+		},
+		"Moderation": {
+			"Title": "适度"
 		},
 		"MyPrices": {
 			"Title": "我的价格"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "证明价格标签助手"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "验证",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,6 +964,7 @@
 		"ServerError": "错误：服务器错误",
 		"Title": "登录",
 		"SignInOFFAccount": "使用您的 {url} 帐户登录",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "用户名",
 		"WrongCredentials": "错误：凭据错误"
 	},
@@ -868,6 +988,8 @@
 		"WithoutProduct": "无产品",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "价格来源",
+		"ProofsPerSource": "每个来源的证据",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "货币",
 		"DisplayTitle": "显示",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "最喜欢的货币",
 		"CurrencyRequired": "至少需要一种货币",

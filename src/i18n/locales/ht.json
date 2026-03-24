@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Estatistik ak klasman",
 		"MostPicturesAdded": "Pifò foto yo te ajoute",
 		"MostPricesAdded": "Pifò pri yo te ajoute",
-		"MostPricesFromPicturesAdded": "Pifò pri ki soti nan foto yo te ajoute"
+		"MostPricesFromPicturesAdded": "Pifò pri ki soti nan foto yo te ajoute",
+		"AlertNew": "Ou gen yon lide pou yon nouvo defi? Fè nou konnen {url}!"
 	},
 	"Common": {
 		"About": "About",
@@ -177,8 +178,12 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Ajoute nouvo etikèt pri",
+		"AddNewProofReceipt": "Ajoute yon nouvo resi",
 		"AddToOFF": "Ajoute nan {name}",
+		"Added": "Ajoute",
 		"AdditionalInfo": "Additional information",
+		"All": "Tout",
 		"Barcode": "Kòd ba",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Eskane yon kòd ba",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Tablo",
 		"Clear": "Clear",
+		"Close": "Fèmen",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -220,6 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
+		"Count": "Count",
 		"Country": "Peyi",
 		"Countries": "Peyi",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -229,6 +236,7 @@
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Lajan ki manke",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "Ou ka ajoute lajan nan paramèt ou yo.",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "Lis",
@@ -241,6 +249,9 @@
 		"Error": "Error",
 		"Experiment": "Eksperyans",
 		"Experiments": "Experiments",
+		"Explore": "Eksplore",
+		"FromPriceTag": "Soti nan yon etikèt pri",
+		"FromReceipt": "Soti nan yon resi",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Etikèt",
@@ -250,6 +261,7 @@
 		"Languages": "Lang",
 		"LatestPrices": "Dènye pri",
 		"LatestProofs": "Dènye prèv",
+		"LearnMore": "Learn more",
 		"LoadMore": "Chaje plis",
 		"Location": "Zòn",
 		"Locations": "Zòn",
@@ -257,8 +269,12 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Zòn ki manke",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Dat",
 		"DateMissing": "Dat ki manke",
+		"DateProofHelpText": "Dat foto a.",
+		"DateProofHelpTextExif": "Pa default, nou eseye ekstrè li nan metadone EXIF foto a.",
+		"DateProofHelpTextReceipt": "Pou resi yo, mete l sou dat acha a.",
 		"Details": "Detay yo",
 		"Delete": "Delete",
 		"DeveloperMode": "Developer mode",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Modifye",
 		"End": "End",
+		"ErrorServer": "Erè: erè sèvè",
+		"FieldIsRequired": "Chan sa a obligatwa",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Avèk pri yo",
+		"FilterWithLocationCount": "Avèk kote yo ye a",
 		"FilterProductWithPriceCount": "Ak yon pri",
 		"FilterProductWithPriceCountHide": "Kache pwodwi ak pri",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Kache pri ki gen plis pase 30 jou",
 		"FilterProofWithPriceCountHide": "Kache prèv ak pri",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Montre sèlman prèv ki soti nan peyi mwen an",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Avèk yon kòd bar ki valab",
 		"FilterPriceTagWithTagPredictionProductExists": "Avèk yon pwodwi ki valab",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Avèk yon etikèt kategori ki valab",
@@ -299,6 +320,7 @@
 		"GDPR_REQUEST": "Demann GDPR",
 		"Group": "Group",
 		"Help": "Èd",
+		"Here": "Isit la",
 		"History": "History",
 		"Image": "Image",
 		"ImageSelect": "Select an image",
@@ -314,19 +336,33 @@
 		"Map": "Map",
 		"Miscellaneous": "Miscellaneous",
 		"MobileApp": "Mobile app",
+		"Moderation": "Moderasyon",
+		"ModerationFlagReasonWrongType": "Move kalite",
+		"ModerationFlagReasonWrongPriceValue": "Valè pri ki pa kòrèk",
+		"ModerationFlagReasonWrongCurrency": "Lajan ki pa kòrèk",
+		"ModerationFlagReasonWrongProduct": "Pwodwi ki pa kòrèk la",
+		"ModerationFlagReasonWrongLocation": "Move kote",
+		"ModerationFlagReasonWrongDate": "Dat ki pa kòrèk",
+		"ModerationFlagReasonOther": "Other",
+		"ModerationFlagCreateSuccess": "Mèsi pou rapò ou a!",
+		"ModerationFlagStatusOpen": "Ouvri",
+		"ModerationFlagStatusClosed": "Fèmen",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Pri mwen yo",
 		"MyProofs": "Prèv mwen yo",
 		"MyStats": "My stats",
+		"New": "Nouvo",
 		"NextProof": "Next proof",
 		"NoBarcode": "Pa gen kòd bar.",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Ouvri",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "Name",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Kantite skanè",
 		"OrderProductPriceCountDESC": "Kantite pri",
@@ -356,12 +392,19 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Pri tag",
 		"PriceTags": "Etikèt pri",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Pri kreye!",
 		"PriceMissing": "Pri a manke",
+		"PricePerMissing": "Pri pou chak moun ki manke",
+		"PriceAlreadyUploaded": "Pri a deja telechaje",
+		"PriceReadyToBeUploaded": "Pri a pare pou telechaje",
 		"PricesAlreadyUploaded": "Pri yo deja telechaje",
+		"PricesAll": "Tout pri yo",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -382,6 +425,7 @@
 		"ProofSelected": "Prèv chwazi!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} prèv telechaje",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,6 +433,8 @@
 		"Quantity": "Kantite",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Kantite ki manke",
+		"Rank": "Ran",
+		"Reason": "Reason",
 		"RECEIPT": "Resi",
 		"Receipt": "Resi",
 		"Receipts": "Receipts",
@@ -397,12 +443,17 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Relouvri",
+		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
+		"Resolved": "Rezoud",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Rechèch",
 		"Select": "Select",
+		"Send": "Voye",
 		"Settings": "Paramèt",
-		"SignInOFFAccount": "Konekte ak kont {url} ou",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Sign in",
 		"SignOut": "Sign out",
@@ -412,12 +463,14 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "Kòd bar sijere:",
 		"Summary": "Summary",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "Tèks",
 		"Thanks": "Mèsi",
 		"Theme": "Theme",
 		"ThemeLight": "Light",
@@ -453,11 +506,22 @@
 		"Users": "Itilizatè yo",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Pa jwenn itilizatè a",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "Valide pri yo nan kominote a",
 		"View": "View",
 		"Website": "Website",
+		"WithAPrice": "Ak yon pri",
+		"WithoutAPrice": "San pri",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Wi",
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Chwazi {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Kreye yon nouvo pwodwi",
+		"CreateProduct": "Kreye pwodwi",
+		"EnableCropMode": "Aktive mòd rekòt la",
+		"Flavor": "Chwazi pwojè kote pwodwi a ta dwe kreye a",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prèv anvan an",
+		"ProductAlreadyExists": "Pwodwi a deja egziste",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Prèv ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Magazen kote yo vann",
+		"UseCropModeToAddImage": "Pou ajoute yon imaj pwodwi, aktive mòd koupe anba foto prèv la epi trase yon rektang otou pwodwi a.",
+		"ProductMissingPromoBanner": "Eksperyans: kreye pwodui sa a lè l sèvi avèk done ki soti nan Open Prices yo"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "Pa gen rezilta yo jwenn",
+		"NoResultHelpKeywords": "Ou pa jwenn magazen ou an? Eseye itilize mo kle olye adrès konplè a (pa egzanp 'Carrefour 75013 Paris' oswa 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Ou toujou pa ka jwenn boutik ou a? Li ka poko nan {osm_name} . Ou ka ajoute l sou {osm_url} anvan.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Atik resi yo",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Ajoute yon pri"
@@ -728,6 +814,18 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Ajoute prèv (resi)"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "Eksplore"
+		},
 		"Locations": {
 			"Title": "Zòn"
 		},
@@ -743,11 +841,20 @@
 		"Prices": {
 			"Title": "Pri"
 		},
+		"PriceTags": {
+			"Title": "Etikèt pri"
+		},
 		"Proofs": {
 			"Title": "Prèv"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Resi"
+		},
+		"Cities": {
+			"Title": "Vil yo"
 		},
 		"Community": {
 			"Title": "Community"
@@ -755,11 +862,18 @@
 		"Contribute": {
 			"Title": "Contribute"
 		},
+		"Countries": {
+			"Title": "Peyi"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Home",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -769,6 +883,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Dènye prèv"
+		},
+		"Moderation": {
+			"Title": "Moderasyon"
 		},
 		"MyPrices": {
 			"Title": "Pri mwen yo"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Asistan Prèv Etikèt Pri"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,6 +964,7 @@
 		"ServerError": "Erè: erè sèvè",
 		"Title": "Sign in",
 		"SignInOFFAccount": "Konekte ak kont {url} ou",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Non itilizatè",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -868,6 +988,8 @@
 		"WithoutProduct": "San yon pwodwi",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Pri pou chak sous",
+		"ProofsPerSource": "Prèv pa sous",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "Lajan",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Lajan favori",
 		"CurrencyRequired": "Omwen yon lajan obligatwa",

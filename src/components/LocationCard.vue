@@ -1,43 +1,26 @@
 <template>
-  <v-card
-    :title="getLocationTitle"
-    :subtitle="getLocationSubtitle"
-    :prepend-icon="getLocationIcon"
-    data-name="location-card"
-    @click="goToLocation(location)"
-  >
-    <v-card-text v-if="location">
+  <v-card v-if="location" :id="'location_' + location.id" :class="isSelected ? 'border-success' : ''" data-name="location-card">
+    <v-card-text class="pa-2">
       <v-row>
-        <v-col :cols="isTypeOSM ? '12' : '11'">
-          <PriceCountChip class="mr-1" :count="location.price_count" :withLabel="true" />
-          <v-chip label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-account" />
-            <span id="user-count">{{ $t('Common.UserCount', { count: location.user_count }) }}</span>
-          </v-chip>
-          <ProductCountChip class="mr-1" :count="location.product_count" :withLabel="true" />
-          <ProofCountChip class="mr-1" :count="location.proof_count" :withLabel="true" :to="getLocationProofListUrl" />
+        <v-col class="pr-0" style="max-width:20%;">
+          <v-img v-if="getLocationBrandLogo" :src="getLocationBrandLogo" width="100px" />
+          <v-img v-else :src="locationImageDefault" width="100px" style="filter:invert(.9);" />
         </v-col>
-      </v-row>
-      <v-row v-if="isTypeOSM" class="mt-0">
-        <v-col cols="11">
-          <LocationOSMTagChip class="mr-1" :location="location" />
-          <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
-          <v-chip
-            v-if="!hideCountryCity && locationCountryCityUrl"
-            label size="small" density="comfortable" class="mr-1" :to="locationCountryCityUrl"
-          >
-            {{ location.osm_address_city }}
-          </v-chip>
-          <v-chip
-            v-if="!hideCountryCity && locationCountryUrl"
-            label size="small" density="comfortable" class="mr-1" :to="locationCountryUrl"
-          >
-            {{ location.osm_address_country }}
-          </v-chip>
+        <v-col style="max-width:80%;">
+          <v-row>
+            <v-col :cols="!isSelected ? '12' : '10'" @click="clickLocation()">
+              <h3>{{ getLocationTitle }}</h3>
+              <p>{{ getLocationSubtitle }}</p>
+              <LocationDetailsRow v-if="showLocationDetailsRow" class="mt-0" :location="location" :hideLocationOSMID="hideLocationOSMID" :hideCountryCity="hideCountryCity" />
+            </v-col>
+            <v-col v-if="isSelected" cols="2" class="pl-0">
+              <v-btn class="float-right" icon="mdi-pencil" size="x-small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickLocation()" />
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
 
-      <LocationActionMenuButton v-if="!hideActionMenuButton" :location="location" />
+      <LocationFooterRow v-if="showLocationFooterRow" class="mt-0" :location="location" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
     </v-card-text>
   </v-card>
 </template>
@@ -51,23 +34,27 @@ import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
-    ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
-    LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
-    LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
-    LocationActionMenuButton: defineAsyncComponent(() => import('../components/LocationActionMenuButton.vue')),
+    LocationDetailsRow: defineAsyncComponent(() => import('../components/LocationDetailsRow.vue')),
+    LocationFooterRow: defineAsyncComponent(() => import('../components/LocationFooterRow.vue')),
   },
   props: {
     location: {
-      type: [Object, null],
+      type: Object,
       required: true
+    },
+    isSelected: {
+      type: Boolean,
+      default: false
     },
     hideLocationOSMID: {
       type: Boolean,
       default: false
     },
     hideCountryCity: {
+      type: Boolean,
+      default: false
+    },
+    hideLocationFooterRow: {
       type: Boolean,
       default: false
     },
@@ -78,49 +65,52 @@ export default {
     readonly: {
       type: Boolean,
       default: false
+    },
+  },
+  emits: ['editLocation'],
+  data() {
+    return {
+      locationImageDefault: constants.LOCATION_IMAGE_DEFAULT_URL,
     }
   },
   computed: {
     ...mapStores(useAppStore),
-    isTypeOSM() {
-      return this.location && this.location.type === constants.LOCATION_TYPE_OSM
+    isTypeONLINE() {
+      return this.location && this.location.type === constants.LOCATION_TYPE_ONLINE
     },
     getLocationTitle() {
-      if (this.location) {
-        if (this.location.type === constants.LOCATION_TYPE_OSM) {
-          return geo_utils.getLocationOSMTitle(this.location, true, false, true, false, true)
-        } else if (this.location.type === constants.LOCATION_TYPE_ONLINE) {
-          return geo_utils.getLocationONLINETitle(this.location)
-        }
+      if (this.isTypeONLINE) {
+        return geo_utils.getLocationONLINETitle(this.location)
       }
-      return this.$route.params.id
+      return geo_utils.getLocationOSMTitle(this.location, true, false, true, false, true)
     },
     getLocationSubtitle() {
-      return this.location && this.isTypeOSM ? this.location.osm_display_name : ''
+      if (this.isTypeONLINE) {
+        return ''
+      }
+      return geo_utils.getLocationOSMTitle(this.location, false, true, false, false, false)
     },
-    getLocationIcon() {
-      return geo_utils.getLocationIcon(this.location)
+    getLocationBrandLogo() {
+      return geo_utils.getLocationBrandLogo(this.location)
     },
-    showLocationOSMID() {
-      return !this.hideLocationOSMID && this.appStore.user.username && this.appStore.user.location_display_osm_id
+    showLocationDetailsRow() {
+      return !this.isTypeONLINE
     },
-    getLocationProofListUrl() {
-      return `/locations/${this.location.id}/proofs`
-    },
-    locationCountryUrl() {
-      return this.location && this.location.osm_address_country ? `/countries/${this.location.osm_address_country}` : null
-    },
-    locationCountryCityUrl() {
-      return this.locationCountryUrl && this.location.osm_address_city ? `${this.locationCountryUrl}/cities/${this.location.osm_address_city}` : null
+    showLocationFooterRow() {
+      return !this.hideLocationFooterRow
     }
   },
   methods: {
-    goToLocation(location) {
+    clickLocation() {
+      if (this.isSelected) {
+        this.$emit('editLocation', this.location)
+        return
+      }
       if (this.readonly) {
         return
       }
-      this.$router.push({ path: `/locations/${location.id}` })
-    },
+      this.$router.push({ path: `/locations/${this.location.id}` })
+    }
   }
 }
 </script>

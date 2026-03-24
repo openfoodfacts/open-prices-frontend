@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Faturë"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "Krijo",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Krijo",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Çmimi",
+			"LabelDiscounted": "Çmim i zbritur",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Provë",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -89,9 +89,9 @@
 			"CategoryLabel": "Category",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
-			"Scan": "Scan",
+			"Scan": "Skano",
 			"ScanBarcode": "Scan a barcode",
-			"ScanBarcodeShort": "Scan",
+			"ScanBarcodeShort": "Skano",
 			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"TypeBarcodeShort": "Type",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Data",
+			"DateLabel": "Data",
 			"Find": "Gjej",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -162,14 +162,15 @@
 		"StatsAndRankings": "Statistikat dhe renditjet",
 		"MostPicturesAdded": "Shumica e fotografive të shtuara",
 		"MostPricesAdded": "Shumica e çmimeve të shtuara",
-		"MostPricesFromPicturesAdded": "Shumica e çmimeve nga fotografitë u shtuan"
+		"MostPricesFromPicturesAdded": "Shumica e çmimeve nga fotografitë u shtuan",
+		"AlertNew": "Ke ndonjë ide për një sfidë të re? Na trego {url}!"
 	},
 	"Common": {
 		"About": "About",
 		"Action": "Veprim",
-		"Actions": "Actions",
+		"Actions": "Veprime",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Shto një çmim",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -177,25 +178,29 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Shtoni etiketa të reja çmimesh",
+		"AddNewProofReceipt": "Shto një faturë të re",
 		"AddToOFF": "Add to {name}",
+		"Added": "Shtuar",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
-		"BarcodeScanShort": "Scan",
+		"BarcodeScanShort": "Skano",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "Barkod i pavlefshëm i barkodit.",
 		"Brand": "Brand",
 		"Brands": "Brands",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Çmimi",
+		"Prices": "Çmimet",
 		"PRODUCT": "Product",
 		"Product": "Product",
 		"ProductName": "Product name",
-		"Products": "Products",
-		"Proof": "Proof",
+		"Products": "Produkte",
+		"Proof": "Provë",
 		"Proofs": "Proofs",
 		"CATEGORY": "Category",
 		"Category": "Category",
@@ -208,7 +213,8 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
-		"Clear": "Clear",
+		"Clear": "Pastro",
+		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -219,16 +225,18 @@
 		"Contribute": "Contribute",
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
+		"Confirm": "Konfirmo",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Valuta",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "Mund të shtoni monedha në cilësimet tuaja.",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
@@ -237,10 +245,13 @@
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
-		"Error": "Error",
+		"Done": "U krye",
+		"Error": "Gabim",
 		"Experiment": "Eksperiment",
 		"Experiments": "Experiments",
+		"Explore": "Eksploro",
+		"FromPriceTag": "Nga një çmim",
+		"FromReceipt": "Nga një faturë",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Label",
@@ -250,6 +261,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Mëso më shumë",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -257,10 +269,14 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "Data",
 		"DateMissing": "Date missing",
-		"Details": "Details",
-		"Delete": "Delete",
+		"DateProofHelpText": "Data e fotografisë.",
+		"DateProofHelpTextExif": "Si parazgjedhje, ne përpiqemi ta nxjerrim atë nga meta të dhënat EXIF të figurës.",
+		"DateProofHelpTextReceipt": "Për faturat, caktoni datën e blerjes.",
+		"Details": "Detajet",
+		"Delete": "Fshij",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
 		"DiscountType": "Discount type",
@@ -280,26 +296,32 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Fusha është e detyrueshme",
 		"Filter": "Filtro",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Me çmime",
+		"FilterWithLocationCount": "Me vendndodhje",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Trego vetëm prova nga vendi im",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Me një barkod të vlefshëm",
 		"FilterPriceTagWithTagPredictionProductExists": "Me një produkt të vlefshëm",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Me një etiketë kategorie të vlefshme",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "Pyetje të shpeshta",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
-		"History": "History",
+		"Help": "Ndihmë",
+		"Here": "Këtu",
+		"History": "Histori",
 		"Image": "Figura, imazhi",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
@@ -312,26 +334,40 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "Të ndryshme",
 		"MobileApp": "Mobile app",
+		"Moderation": "Moderim",
+		"ModerationFlagReasonWrongType": "Lloj i gabuar",
+		"ModerationFlagReasonWrongPriceValue": "Vlerë e gabuar çmimi",
+		"ModerationFlagReasonWrongCurrency": "Monedhë e gabuar",
+		"ModerationFlagReasonWrongProduct": "Produkt i gabuar",
+		"ModerationFlagReasonWrongLocation": "Vendndodhje e gabuar",
+		"ModerationFlagReasonWrongDate": "Datë e gabuar",
+		"ModerationFlagReasonOther": "Other",
+		"ModerationFlagCreateSuccess": "Faleminderit për raportin tuaj!",
+		"ModerationFlagStatusOpen": "Hap",
+		"ModerationFlagStatusClosed": "Mbyllur",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Çmimet e mia",
+		"MyProofs": "Provat e mia",
 		"MyStats": "My stats",
+		"New": "E re",
 		"NextProof": "Next proof",
 		"NoBarcode": "Pa barkod pa barkod",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Hap",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "Emri",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Çmimi",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -354,14 +390,21 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Çmimi",
 		"PriceTags": "Etiketat e çmimeve",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Çmimi mungon",
+		"PricePerMissing": "Çmimi për person të zhdukur",
+		"PriceAlreadyUploaded": "Çmimi është ngarkuar tashmë",
+		"PriceReadyToBeUploaded": "Çmimi gati për t'u ngarkuar",
 		"PricesAlreadyUploaded": "Çmimet janë ngarkuar tashmë.",
+		"PricesAll": "Të gjitha çmimet",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -377,11 +420,12 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Zgjidhni një provë",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} prova të ngarkuara",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,38 +433,47 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "Renditja",
+		"Reason": "Arsyeja",
+		"RECEIPT": "Faturë",
+		"Receipt": "Faturë",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Rihap",
+		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
+		"Resolved": "Zgjidhur",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Search",
 		"Select": "Select",
+		"Send": "Send",
 		"Settings": "Settings",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
-		"SignIn": "Sign in",
+		"SignIn": "Hyr",
 		"SignOut": "Dilni",
 		"SideMenu": "Side menu",
-		"Share": "Share",
+		"Share": "Ndaj",
 		"Source": "Source",
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "Barkodi i sugjeruar:",
 		"Summary": "Summary",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "Tekst",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
+		"Theme": "Tema",
+		"ThemeLight": "Dritë",
 		"ThemeDark": "I erret.",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
@@ -434,7 +487,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Provoje",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Produkt i panjohur",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -447,23 +500,34 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "URL-ja",
 		"URLInvalid": "Invalid URL",
 		"User": "User",
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Përdoruesi nuk u gjet",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "Validoni çmimet nga komuniteti",
 		"View": "View",
-		"Website": "Website",
+		"Website": "Uebfaqe",
+		"WithAPrice": "With a price",
+		"WithoutAPrice": "Pa një çmim",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Po ",
 		"No": "Jo",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Ushqim",
+		"PetFood": "Ushqim për kafshë shtëpiake",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -513,10 +577,27 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Valuta",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
+	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Krijo një produkt të ri",
+		"CreateProduct": "Krijo produktin",
+		"EnableCropMode": "Aktivizo modalitetin e prerjes",
+		"Flavor": "Zgjidhni projektin në të cilin duhet të krijohet produkti",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prova e mëparshme",
+		"ProductAlreadyExists": "Produkti ekziston tashmë",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Provë ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Dyqanet ku shiten",
+		"UseCropModeToAddImage": "Për të shtuar një imazh produkti, aktivizoni modalitetin e prerjes së figurës poshtë provës dhe vizatoni një drejtkëndësh rreth produktit.",
+		"ProductMissingPromoBanner": "Eksperiment: krijoni këtë produkt duke përdorur të dhëna nga Çmimet e Hapura"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -529,7 +610,7 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Settings",
-		"SignIn": "Sign in",
+		"SignIn": "Hyr",
 		"SignOut": "Dilni"
 	},
 	"Theme": {
@@ -537,10 +618,10 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Shto një çmim",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Kërko për një produkt",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -555,8 +636,10 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
-		"Clear": "Clear",
+		"Clear": "Pastro",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nuk e gjen dot dyqanin tënd? Provo të përdorësh fjalë kyçe në vend të adresës së plotë (p.sh. 'Carrefour 75013 Paris' ose 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Ende nuk mund ta gjesh dyqanin tënd? Mund të mos jetë ende në {osm_name} . Mund ta shtosh fillimisht në {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -576,13 +659,13 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Provë",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Produkt i panjohur"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
-		"Delete": "Delete",
+		"Delete": "Fshij",
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
@@ -593,8 +676,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Çmimi",
+		"LabelDiscounted": "Çmim i zbritur",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -623,7 +706,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "Barkod i pavlefshëm i barkodit.",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -636,7 +719,7 @@
 		"UnknownProduct": "Emer i panjohur produkti."
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Shto një çmim",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -654,26 +737,26 @@
 		"PromoReceiptAssistant": "Eksperiment: provoni asistentin e ri të faturave për të nxjerrë automatikisht çmimet nga faturat tuaja!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Provë",
+		"PRICE_TAG": "Çmimi",
+		"RECEIPT": "Faturë",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Zgjidhni një provë",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
-		"Delete": "Delete",
+		"Delete": "Fshij",
 		"Title": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "Çmimet",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Artikuj faturash",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -704,8 +787,11 @@
 		"About": {
 			"Title": "About"
 		},
+		"Add": {
+			"Title": "Shto"
+		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Shto një çmim"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -728,11 +814,23 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Shto provë (faturë)"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "Eksploro"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Shto një çmim"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -741,7 +839,10 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Çmimet"
+		},
+		"PriceTags": {
+			"Title": "Etiketat e çmimeve"
 		},
 		"Proofs": {
 			"Title": "Proofs"
@@ -749,17 +850,30 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "Faturë"
+		},
+		"Cities": {
+			"Title": "Qytetet"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
 		},
+		"Countries": {
+			"Title": "Countries"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Home",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -770,11 +884,14 @@
 		"LatestProofs": {
 			"Title": "Latest proofs"
 		},
+		"Moderation": {
+			"Title": "Moderim"
+		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Çmimet e mia"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Provat e mia"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -789,7 +906,7 @@
 			"Title": "Settings"
 		},
 		"SignIn": {
-			"Title": "Sign in"
+			"Title": "Hyr"
 		},
 		"Stats": {
 			"Title": "Stats"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Asistent për Provën e Etiketës së Çmimit"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -837,26 +956,27 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "Share"
+		"Title": "Ndaj"
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "Hyr",
+		"Password": "Fjalëkalimi",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "Hyr",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Çmimet",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "Produkte",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Çmimet për burim",
+		"ProofsPerSource": "Provat për burim",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -876,8 +998,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Çmimet e mia",
+		"MyProofs": "Provat e mia",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Settings",
 		"Title": "Dashboard",
@@ -897,9 +1019,10 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

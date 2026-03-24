@@ -1,5 +1,5 @@
 <template>
-  <v-btn :style="style" icon size="small" density="comfortable" variant="text">
+  <v-btn v-bind="$attrs" :style="style" icon size="small" density="comfortable" variant="text">
     <v-icon :icon="ACTION_MENU_ICON" />
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
@@ -12,7 +12,12 @@
           <v-list-item v-if="price.product || price.category_tag" :slim="true" prepend-icon="mdi-eye-outline" :to="getProductOrCategoryDetailUrl">
             {{ $t('Common.Details') }}
           </v-list-item>
-          <OpenFoodFactsLink v-if="price.product" :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
+          <v-sheet v-if="price.product">
+            <OpenFoodFactsLink v-if="price.product.source" :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
+            <v-list-item v-else :slim="true" prepend-icon="mdi-plus" :to="getCreateProductUrl">
+              {{ $t('CreateOffProduct.CreateProduct') }}
+            </v-list-item>
+          </v-sheet>
           <OpenFoodFactsLink v-else-if="price.category_tag" facet="category" :value="price.category_tag" display="list-item" />
         </v-sheet>
         <!-- Price actions -->
@@ -25,12 +30,14 @@
           <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getPriceDetailUrl">
             {{ $t('Common.Details') }}
           </v-list-item>
-          <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
-            {{ $t('Common.Edit') }}
-          </v-list-item>
-          <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
-            {{ $t('Common.Delete') }}
-          </v-list-item>
+          <v-sheet v-if="userCanEditPrice">
+            <v-list-item :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
+              {{ $t('Common.Edit') }}
+            </v-list-item>
+            <v-list-item :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
+              {{ $t('Common.Delete') }}
+            </v-list-item>
+          </v-sheet>
         </v-sheet>
         <!-- Proof actions -->
         <v-sheet v-if="!hideProofActions">
@@ -40,6 +47,16 @@
           <v-divider />
           <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
             {{ $t('Common.Details') }}
+          </v-list-item>
+        </v-sheet>
+        <!-- Moderation -->
+        <v-sheet v-if="userIsLoggedIn">
+          <v-list-subheader class="text-uppercase" :slim="true" disabled>
+            {{ $t('Common.Moderation') }}
+          </v-list-subheader>
+          <v-divider />
+          <v-list-item :slim="true" prepend-icon="mdi-flag" @click="moderationFlagCreateDialog = true">
+            {{ $t('Common.ReportProblem') }}
           </v-list-item>
         </v-sheet>
       </v-list>
@@ -62,6 +79,14 @@
     @close="closeDeleteConfirmationDialog"
   />
 
+  <ModerationFlagCreateDialog
+    v-if="moderationFlagCreateDialog"
+    v-model="moderationFlagCreateDialog"
+    :price="price"
+    @flag="showModerationFlagSuccessMessage = true"
+    @close="moderationFlagCreateDialog = false"
+  />
+
   <v-snackbar
     v-model="editSuccessMessage"
     color="success"
@@ -76,6 +101,13 @@
   >
     {{ $t('PriceDelete.Success') }}
   </v-snackbar>
+  <v-snackbar
+    v-model="showModerationFlagSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >
+    {{ $t('Common.ModerationFlagCreateSuccess') }}
+  </v-snackbar>
 </template>
 
 <script>
@@ -89,7 +121,8 @@ export default {
     OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
     PriceEditDialog: defineAsyncComponent(() => import('../components/PriceEditDialog.vue')),
-    PriceDeleteConfirmationDialog: defineAsyncComponent(() => import('../components/PriceDeleteConfirmationDialog.vue'))
+    PriceDeleteConfirmationDialog: defineAsyncComponent(() => import('../components/PriceDeleteConfirmationDialog.vue')),
+    ModerationFlagCreateDialog: defineAsyncComponent(() => import('../components/ModerationFlagCreateDialog.vue'))
   },
   props: {
     price: {
@@ -121,7 +154,9 @@ export default {
       editDialog: false,
       editSuccessMessage: false,
       deleteConfirmationDialog: false,
-      deleteSuccessMessage: false
+      deleteSuccessMessage: false,
+      moderationFlagCreateDialog: false,
+      showModerationFlagSuccessMessage: false
     }
   },
   computed: {
@@ -143,14 +178,26 @@ export default {
     getProofDetailUrl() {
       return `/proofs/${this.price.proof.id}`
     },
+    getCreateProductUrl() {
+      return `/experiments/create-off-product?product_code=${this.price.product.code}`
+    },
     showPriceShare() {
       return this.$route.path === this.getPriceDetailUrl
     },
     getShareLinkUrl() {
       return this.getPriceDetailUrl
     },
+    userIsLoggedIn() {
+      return !!this.username
+    },
     userIsPriceOwner() {
-      return this.username && (this.price.owner === this.username)
+      return this.userIsLoggedIn && this.price && this.price.owner === this.username
+    },
+    userIsModerator() {
+      return this.userIsLoggedIn && this.appStore.user.is_moderator
+    },
+    userCanEditPrice() {
+      return this.userIsPriceOwner || this.userIsModerator
     }
   },
   methods: {
@@ -171,7 +218,7 @@ export default {
     },
     showDeleteSuccessMessage() {
       this.deleteSuccessMessage = true
-    }
+    },
   }
 }
 </script>

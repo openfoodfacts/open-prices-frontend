@@ -1,5 +1,30 @@
 <template>
   <v-row>
+    <v-col>
+      <h2 class="text-h6">
+        {{ $t('Common.Explore') }}
+      </h2>
+    </v-col>
+  </v-row>
+  <v-row class="mt-0">
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('Common.LocationsCompare')"
+        prepend-icon="mdi-map-marker-distance"
+        append-icon="mdi-arrow-right"
+        to="/locations/compare"
+      />
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col>
+      <h2 class="text-h6">
+        {{ $t('Common.Contribute') }}
+      </h2>
+    </v-col>
+  </v-row>
+  <v-row>
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Router.ProofPriceTagAssistant.Title')"
@@ -10,26 +35,19 @@
     </v-col>
     <v-col cols="12" sm="6" lg="4">
       <v-card
-        :title="$t('Router.ReceiptAssistant.Title')"
-        prepend-icon="mdi-receipt-text-outline"
+        :title="$t('Router.CreateOffProduct.Title')"
+        prepend-icon="mdi-plus"
         append-icon="mdi-arrow-right"
-        to="/experiments/receipt-assistant"
+        to="/experiments/create-off-product"
       />
     </v-col>
   </v-row>
 
-  <br>
-
-  <v-row>
-    <v-col cols="12" sm="6" lg="4">
-      <v-card
-        :title="$t('Router.PriceValidationAssistant.Title')"
-        prepend-icon="mdi-checkbox-marked-circle-plus-outline"
-        append-icon="mdi-arrow-right"
-        to="/experiments/price-validation-assistant"
-      />
-    </v-col>
-  </v-row>
+  <!--
+    OLD experiments
+    /experiments/challenge (moved to /challenge)
+    /experiments/price-validation-assistant (moved to /prices/add/validate)
+  -->
 </template>
 
 <script>

@@ -12,20 +12,22 @@
     <v-divider v-if="!hideHeader" />
     <v-card-text>
       <v-sheet v-if="step === 1">
-        <ProofTypeInputRow :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
-        <v-alert
-          v-if="typePriceTagOnly && multiple"
-          class="mt-4 mb-4"
-          type="warning"
-          variant="outlined"
-          density="compact"
-          :text="$t('ProofAdd.HowToMultipleShort')"
-        />
-        <ProofPriceTagAddMultiplePromoBanner v-if="proofIsTypePriceTag && !multiple" class="mt-4 mb-4" />
-        <ReceiptAssistantPromoBanner v-if="proofIsTypeReceipt && !assistedByAI" class="mt-4 mb-4" />
-        <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
-        <ProofImageInputRow :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
-        <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
+        <v-row v-if="showTopAlertOrBanner">
+          <v-col>
+            <template v-if="proofIsTypePriceTag">
+              <ProofPriceTagAddMultiplePromoBanner v-if="!multiple" />
+              <ProofPriceTagMultipleAlert v-else />
+            </template>
+            <template v-else-if="proofIsTypeReceipt">
+              <ReceiptAssistantPromoBanner v-if="!assistedByAI" class="mb-3" />
+              <ProofReceiptWarningAlert />
+            </template>
+          </v-col>
+        </v-row>
+        <ProofTypeInputRow :class="showTopAlertOrBanner ? 'mt-0' : ''" :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
+        <LocationInputRow class="mt-0" :locationForm="proofForm" @location="locationObject = $event" />
+        <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
+        <ProofMetadataInputRow class="mt-0" :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
       </v-sheet>
       <v-sheet v-else-if="step === 2">
         <v-progress-linear
@@ -36,7 +38,9 @@
           :indeterminate="proofObjectList.length ? false : true"
           :striped="proofImageList.length !== proofObjectList.length"
           rounded
-        />
+        >
+          <strong>{{ $t('Common.ProofUploadProgress', { numberOfProofsUploaded: proofObjectList.length, totalNumberOfProofs: proofImageList.length }) }}</strong>
+        </v-progress-linear>
       </v-sheet>
     </v-card-text>
     <v-divider v-if="step === 1" />
@@ -83,7 +87,7 @@ import ExifReader from 'exifreader'
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
 
@@ -97,9 +101,11 @@ Compressor.setDefaults({
 
 export default {
   components: {
-    ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
     ProofPriceTagAddMultiplePromoBanner: defineAsyncComponent(() => import('../components/ProofPriceTagAddMultiplePromoBanner.vue')),
+    ProofPriceTagMultipleAlert: defineAsyncComponent(() => import('../components/ProofPriceTagMultipleAlert.vue')),
     ReceiptAssistantPromoBanner: defineAsyncComponent(() => import('../components/ReceiptAssistantPromoBanner.vue')),
+    ProofReceiptWarningAlert: defineAsyncComponent(() => import('../components/ProofReceiptWarningAlert.vue')),
+    ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
     ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
@@ -178,6 +184,9 @@ export default {
     proofIsTypeReceipt() {
       return this.proofTypeFormFilled && (this.proofForm.type === constants.PROOF_TYPE_RECEIPT)
     },
+    showTopAlertOrBanner() {
+      return this.proofIsTypePriceTag || this.proofIsTypeReceipt
+    },
     proofImageFormFilled() {
       return !!this.proofImageList.length
     },
@@ -202,7 +211,11 @@ export default {
       this.handleProofImageList()
     },
     proofObjectList(newProofObjectList, oldProofObjectList) {  // eslint-disable-line no-unused-vars
+      // proof uploaded
       this.$emit('proof', newProofObjectList[0])
+      this.proofForm.proof_id = newProofObjectList[0].id
+      this.proofForm.location_id = newProofObjectList[0].location_id
+      // all proofs uploaded
       if (this.proofObjectList.length === this.proofImageList.length) {
         this.step = 3
         this.$emit('done', this.proofObjectList.length)
@@ -271,48 +284,61 @@ export default {
         })
       }
     },
-    uploadProofList() {
-      this.step = 2
-      // loop on images
-      for (let proofImage of this.proofImageList) {
-        this.uploadProof(proofImage)
-      }
-    },
-    uploadProof(proofImage) {
-      this.loading = true
-      new Promise((resolve, reject) => {
+    compressProof(proofImage) {
+      return new Promise((resolve, reject) => {
         new Compressor(proofImage, {
           success: resolve,
           error: reject
         })
       })
-      .then((proofImageCompressed) => {
-        api
-          .createProof(proofImageCompressed, this.proofForm, this.$route.path)
-          .then((data) => {
-            this.loading = false
-            if (data.id) {
-              this.proofForm.proof_id = data.id
-              this.proofForm.location_id = data.location_id
-              this.proofObjectList = this.proofObjectList.concat(data)
-            } else {
-              alert('Error: server error when creating proof')
-              console.log(data)
-            }
-          })
-          .catch((error) => {
-            alert('Error: server error when creating proof')
-            console.log(error)
-            this.loading = false
-          })
-      })
       .catch((error) => {
         alert('Error: compression')
-        console.log(error)
+        console.log(JSON.stringify(error))
       })
-      // .finally(() => {
-      //   console.log('Compress complete')
-      // })
+    },
+    uploadProofList() {
+      this.step = 2
+      // chain uploads sequentially
+      this.proofImageList.reduce((promise, proofImage) => {
+        return promise.then(() =>
+          this.uploadProof(proofImage)
+            .then((data) => {
+              if (data.id) {
+                this.proofObjectList = this.proofObjectList.concat(data)
+              }
+            })
+            .catch((error) => {
+              console.log(JSON.stringify(error))
+            })
+        )
+      }, Promise.resolve())
+    },
+    uploadProof(proofImage) {
+      this.loading = true
+      return new Promise((resolve, reject) => {  // eslint-disable-line no-unused-vars
+        this.compressProof(proofImage)
+          .then((proofImageCompressed) => {
+            openPricesApi
+              .createProof(proofImageCompressed, this.proofForm, this.$route.path)
+              .then((data) => {
+                this.loading = false
+                if (data.id) {
+                  resolve(data)
+                } else {
+                  alert(`Error: ${JSON.stringify(data)}`)
+                  console.log(JSON.stringify(data))
+                }
+              })
+              .catch((error) => {
+                alert(`Error: ${JSON.stringify(error)}`)
+                console.log(JSON.stringify(error))
+                this.loading = false
+              })
+          })
+          // .finally(() => {
+          //   console.log('Compress complete')
+          // })
+      })
     },
   }
 }

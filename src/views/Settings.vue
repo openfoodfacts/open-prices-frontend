@@ -87,7 +87,7 @@
             v-model="appStore.user.favorite_currencies"
             :label="$t('UserSettings.CurrencyLabel')"
             :items="currencyList"
-            :rules="[v => !!(v && v.length) || $t('UserSettings.CurrencyRequired')]"
+            :rules="[value => !!(value && value.length) || $t('UserSettings.CurrencyRequired')]"
             chips
             closable-chips
             multiple
@@ -125,18 +125,6 @@
             :item-value="item => item.key"
             hide-details="auto"
           />
-          <!-- Price Validation -->
-          <h3 class="mt-4 mb-1">
-            {{ $t('UserSettings.PriceValidation') }}
-          </h3>
-          <v-select
-            v-model="appStore.user.price_form_default_mode"
-            :label="$t('UserSettings.DefaultMode')"
-            :items="priceFormDisplayList"
-            :item-title="item => $t('Common.' + item.value)"
-            :item-value="item => item.key"
-            hide-details="auto"
-          />
         </v-card-text>
       </v-card>
     </v-col>
@@ -145,17 +133,6 @@
       <v-card :title="$t('Common.DeveloperMode')" prepend-icon="mdi-test-tube">
         <v-divider />
         <v-card-text>
-          <!-- Side menu -->
-          <h3 class="mb-1">
-            {{ $t('Common.SideMenu') }}
-          </h3>
-          <v-switch
-            v-model="appStore.user.drawer_display_experiments"
-            color="success"
-            :label="$t('UserSettings.SideMenuExperimentsDisplay')"
-            density="compact"
-            hide-details="auto"
-          />
           <!-- Products -->
           <h3 class="mt-4 mb-1">
             {{ $t('Common.Products') }}
@@ -202,6 +179,17 @@
             persistent-hint
             hide-details="auto"
           />
+          <!-- Proofs -->
+          <h3 class="mt-4 mb-1">
+            {{ $t('Common.Proofs') }}
+          </h3>
+          <v-switch
+            v-model="appStore.user.display_price_tags_bounding_boxes"
+            color="success"
+            :label="$t('Common.PriceTagsBoundingBoxesDisplay')"
+            density="compact"
+            hide-details="auto"
+          />
         </v-card-text>
       </v-card>
     </v-col>
@@ -225,11 +213,10 @@ export default {
       countryList,
       languageList,
       // currencyList,
-      priceListDisplayList: constants.PRICE_DISPLAY_LIST,
+      priceListDisplayList: constants.DISPLAY_LIST,
       locationSelectorDisplayList: constants.LOCATION_SELECTOR_DISPLAY_LIST,
       productSelectorDisplayList: constants.PRODUCT_SELECTOR_DISPLAY_LIST,
       barcodeScannerDisplayList: constants.BARCODE_SCANNER_DISPLAY_LIST,
-      priceFormDisplayList: constants.PRICE_FORM_DISPLAY_LIST
     }
   },
   computed: {
@@ -246,7 +233,7 @@ export default {
       localeManager.changeLanguage(newLanguage)
     },
     'appStore.user.preferedTheme': function (newTheme, oldTheme) {  // eslint-disable-line no-unused-vars
-      this.theme.global.name = newTheme
+      this.theme.change(newTheme)
     }
   },
   methods: {

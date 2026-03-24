@@ -1,12 +1,14 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-tag-multiple-outline">
         {{ $t('Common.PriceCount', { count: priceTotal }) }}
       </v-chip>
-      <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="togglePriceType($event)" @update:currentKind="togglePriceKind($event)" />
-      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
+        <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="togglePriceType($event)" @update:currentKind="togglePriceKind($event)" />
+        <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      </template>
     </v-col>
   </v-row>
 
@@ -25,8 +27,9 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
+import date_utils from '../utils/date.js'
 import utils from '../utils.js'
 
 export default {
@@ -55,9 +58,7 @@ export default {
     getPricesParams() {
       let defaultParams = { tags__contains: `challenge-${this.challengeId}`, order_by: this.currentOrder, page: this.pricePage }
       if (this.currentFilterList.includes('show_last_month')) {
-        let oneMonthAgo = new Date()
-        oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
-        defaultParams['date__gte'] = oneMonthAgo.toISOString().substring(0, 10)
+        defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
       }
       if (this.currentType) {
         defaultParams[constants.TYPE_PARAM] = this.currentType
@@ -71,7 +72,7 @@ export default {
   watch: {
     $route (newRoute, oldRoute) {  // only called when query changes to avoid having an API call when the path changes
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initPrices()
+        this.initPriceList()
       }
     }
   },
@@ -89,7 +90,7 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    initPrices() {
+    initPriceList() {
       this.priceList = []
       this.priceTotal = null
       this.pricePage = 0
@@ -99,7 +100,7 @@ export default {
       if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
       this.pricePage += 1
-      return api.getPrices(this.getPricesParams)
+      return openPricesApi.getPrices(this.getPricesParams)
         .then((data) => {
           this.priceList.push(...data.items)
           this.priceTotal = data.total
@@ -109,23 +110,23 @@ export default {
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
-      // this.initPrices() will be called in watch $route
+      // this.initPriceList() will be called in watch $route
     },
     togglePriceType(sourceKey) {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
-      // this.initPrices() will be called in watch $route
+      // this.initPriceList() will be called in watch $route
     },
     togglePriceKind(kindKey) {
       this.currentKind = (this.currentKind !== kindKey) ? kindKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.KIND_PARAM]: this.currentKind } })
-      // this.initPrices() will be called in watch $route
+      // this.initPriceList() will be called in watch $route
     },
-    selectPriceOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
-        // this.initPrices() will be called in watch $route
+        // this.initPriceList() will be called in watch $route
       }
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars

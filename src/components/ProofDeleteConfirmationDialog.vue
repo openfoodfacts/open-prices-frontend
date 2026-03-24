@@ -8,10 +8,30 @@
       <v-divider />
 
       <v-card-text>
-        <p class="mb-1">
-          {{ $t('ProofDelete.Confirmation') }}
-        </p>
-        <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />
+        <v-row>
+          <v-col cols="12">
+            <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />
+          </v-col>
+        </v-row>
+        <!-- moderator-only alerts -->
+        <v-row v-if="!userIsProofOwner && userIsModerator">
+          <v-col cols="12">
+            <ModerationAlert source="proof" />
+          </v-col>
+        </v-row>
+        <v-row v-if="!userIsProofOwner && userIsModerator">
+          <v-col cols="12">
+            <ModerationAlert source="proof" action="delete" />
+          </v-col>
+        </v-row>
+        <!-- confirmation message -->
+        <v-row>
+          <v-col cols="12">
+            <p>
+              {{ $t('ProofDelete.Confirmation') }}
+            </p>
+          </v-col>
+        </v-row>
       </v-card-text>
 
       <v-divider />
@@ -35,11 +55,14 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
+import openPricesApi from '../services/openPricesApi'
 
 export default {
   components: {
-    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue'))
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    ModerationAlert: defineAsyncComponent(() => import('../components/ModerationAlert.vue')),
   },
   props: {
     proof: {
@@ -54,6 +77,16 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
+    username() {
+      return this.appStore.user.username
+    },
+    userIsProofOwner() {
+      return this.username && this.proof && this.proof.owner === this.username
+    },
+    userIsModerator() {
+      return this.username && this.appStore.user.is_moderator
+    },
     dialogHeight() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
@@ -64,7 +97,7 @@ export default {
   methods: {
     deleteProof() {
       this.loading = true
-      api
+      openPricesApi
         .deleteProof(this.proof.id)
         .then((response) => {  // eslint-disable-line no-unused-vars
           // if response.status == 204

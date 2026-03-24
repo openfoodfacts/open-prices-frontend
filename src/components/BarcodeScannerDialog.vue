@@ -10,7 +10,7 @@
       <v-card-text>
         <v-img
           v-if="barcodeManualInputCroppedImage"
-          :src="barcodeManualInputCroppedImage"
+          :src="getImageFullUrl"
           contain
           max-height="50%"
         />
@@ -94,8 +94,10 @@ import { Html5Qrcode, Html5QrcodeScanType } from 'html5-qrcode'
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
+import openFoodFactsApi from '../services/openFoodFactsApi'
 import constants from '../constants'
+import proof_utils from '../utils/proof.js'
 
 const config = {
   fps: 10,
@@ -164,6 +166,9 @@ export default {
         return constants.PRODUCT_SELECTOR_DISPLAY_LIST.filter(item => item.key !== constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key)
       }
       return constants.PRODUCT_SELECTOR_DISPLAY_LIST
+    },
+    getImageFullUrl() {
+      return proof_utils.getImageFullUrl(this.barcodeManualInputCroppedImage)
     },
     barcodeManualInputLength() {
       if (!this.barcodeManualForm.barcode) return '0'
@@ -244,7 +249,7 @@ export default {
       } else {
         this.productSuggestionResultDict = {}
       }
-      api
+      openPricesApi
         .getProductByCode(code)
         .then((data) => {
           const product = data.id ? data : {'code': code, 'price_count': 0}
@@ -254,13 +259,14 @@ export default {
             this.productSuggestionResultDict[code] = product
           }
         })
-        .catch((error) => {  // eslint-disable-line no-unused-vars
-          alert("Error: Open Prices server error")
+        .catch((error) => {
+          alert(this.$t('Common.ServerError'))
+          console.log(error)
         })
     },
     searchProduct(code) {
       this.productSearchResultList = []
-      api
+      openFoodFactsApi
         .searchaliciousProductSearch(code)
         .then((data) => {
           for (let product of data['hits']) {
@@ -275,8 +281,9 @@ export default {
             }
           }
         })
-        .catch((error) => {  // eslint-disable-line no-unused-vars
-          alert("Error: Open Prices server error")
+        .catch((error) => {
+          alert(this.$t('Common.ServerError'))
+          console.log(error)
         })
     },
     barcodeSend(barcode) {

@@ -126,27 +126,27 @@
 		"Title": "Введіть штрих-код"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "Випробування спільноти",
+		"Subtitle": "Приєднуйтесь до інших ентузіастів цін на продукти харчування, збираючи інформацію про {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"Title": "Фотографуйте цінники в магазинах",
+			"line1": "На фотографіях може бути один або кілька цінників. Штрих-коди повинні бути читабельними. Наприклад:",
+			"line2": "Коли все буде готово, знайдіть свій магазин і завантажте фотографії за допомогою кнопки нижче.",
+			"AddPictures": "Додати зображення"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"Title": "Перевірте виявлені ціни за допомогою штучного інтелекту",
+			"line1": "Цінники виявляються автоматично, але роботам все одно потрібна ваша допомога для їх перевірки.",
+			"line2": "Відвідайте сторінку підтвердження ціни, натиснувши кнопку нижче, за потреби відредагуйте штрих-код і ціну та підтвердьте!",
+			"line3": "Якщо у вас виникають проблеми з читанням етикетки, позначте її як нечитабельну.",
+			"line4": "Це спільна робота, навіть якщо ви не надсилали фотографії, ви все одно можете допомогти іншим, підтвердивши їх."
 		},
-		"PicturesAddedByYou": "Pictures added by you",
+		"PicturesAddedByYou": "Зображення, додані вами",
 		"Prices": "{challenge_title} ціни",
-		"PricesAdded": "{challenge_title} prices added",
+		"PricesAdded": "{challenge_title} ціни додано",
 		"PricesByYou": "{challenge_title} ціни від вас",
 		"PricesAddedByYou": "Ціни, додані вами",
-		"MostRecentContributions": "Most recent contributions",
+		"MostRecentContributions": "Найновіші внески",
 		"ChallengeCount": "{count} виклики | {count} виклик | {count} виклики",
 		"ChallengeStatuses": {
 			"DRAFT": "Чернетка",
@@ -162,12 +162,13 @@
 		"StatsAndRankings": "Статистика та рейтинги",
 		"MostPicturesAdded": "Найбільше додано фотографій",
 		"MostPricesAdded": "Більшість цін додано",
-		"MostPricesFromPicturesAdded": "Більшість цін із зображень додано"
+		"MostPricesFromPicturesAdded": "Більшість цін із зображень додано",
+		"AlertNew": "Маєте ідею для нового челенджу? Повідомте нам {url}!"
 	},
 	"Common": {
 		"About": "Про додаток",
 		"Action": "Дія",
-		"Actions": "Actions",
+		"Actions": "Дії",
 		"AddComment": "Додати коментар",
 		"AddPrice": "Додати ціну",
 		"AddPrices": "Додати ціни",
@@ -177,8 +178,12 @@
 		"AddProofs": "Додайте докази",
 		"AddNewProof": "Додати нове підтвердження",
 		"AddNewProofs": "Додайте нові докази",
+		"AddNewProofPriceTags": "Додати нові цінники",
+		"AddNewProofReceipt": "Додати новий чек",
 		"AddToOFF": "Додати до {name}",
+		"Added": "Додано",
 		"AdditionalInfo": "Додаткова інформація",
+		"All": "Усі",
 		"Barcode": "Код товару",
 		"Barcodes": "Штрих-коди",
 		"BarcodeScan": "Просканувати штрих-код",
@@ -202,13 +207,14 @@
 		"Categories": "Категорії",
 		"CategoryMissing": "Відсутня категорія",
 		"CategoryTotal": "{count} категорії | {count} категорія | {count} категорії",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
+		"Challenge": "Випробування",
+		"Challenges": "Випробування",
+		"ChallengeCurrent": "Поточне випробування",
+		"ChallengeOngoing": "Постійне випробування",
 		"ChallengeCount": "{count} виклики | {count} виклик | {count} виклики",
 		"Chart": "Графік",
 		"Clear": "Очистити",
+		"Close": "Закрити",
 		"Comment": "Коментар",
 		"Community": "Спільнота",
 		"CommunityPrices": "Соціальні ціни",
@@ -216,19 +222,21 @@
 		"Consumption": "Споживання",
 		"ConsumptionPrices": "Ціни споживання",
 		"ConsumptionProofs": "Докази споживання",
-		"Contribute": "Підтримати проєкт",
+		"Contribute": "Долучитись",
 		"Contributors": "Співучасники",
 		"Contributions": "Внески",
 		"Confirm": "Підтвердити",
+		"Count": "К-сть",
 		"Country": "Країна",
 		"Countries": "Країн",
 		"CountryCount": "{count} країни | {count} країна | {count} країни",
-		"Crop": "Crop",
-		"Cropped": "Cropped",
+		"Crop": "Кадрування",
+		"Cropped": "Кадровано",
 		"Currency": "Валюта",
 		"Currencies": "Валюти",
 		"CurrencyMissing": "Відсутня валюта",
 		"CurrencyCount": "{count} валют | {count} валюта | {count} валют",
+		"CurrencyProofHelpTextSettings": "Ви можете додати валюти в налаштуваннях.",
 		"Dashboard": "Панель приладів",
 		"Display": "Показати",
 		"DisplayList": "Список",
@@ -241,6 +249,9 @@
 		"Error": "Помилка",
 		"Experiment": "Експеримент",
 		"Experiments": "Експерименти",
+		"Explore": "Дослідити",
+		"FromPriceTag": "З цінника",
+		"FromReceipt": "З квитанції",
 		"GoToProof": "Перейти до доказу",
 		"Join": "Приєднатися",
 		"Label": "Мітка",
@@ -250,6 +261,7 @@
 		"Languages": "Мови",
 		"LatestPrices": "Остання ціна",
 		"LatestProofs": "Останні докази",
+		"LearnMore": "Докладніше",
 		"LoadMore": "Завантажити більше",
 		"Location": "Розташування",
 		"Locations": "Місцезнаходження",
@@ -257,8 +269,12 @@
 		"LocationFindShop": "Знайти місце розташування магазину",
 		"LocationMissing": "Розташування відсутнє",
 		"LocationSearchByName": "Пошук за назвою та містом",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Дата",
 		"DateMissing": "Відсутня дата",
+		"DateProofHelpText": "Дата знімка.",
+		"DateProofHelpTextExif": "За замовчуванням ми намагаємося витягти його з метаданих EXIF зображення.",
+		"DateProofHelpTextReceipt": "Для квитанцій встановіть дату покупки.",
 		"Details": "Подробиці",
 		"Delete": "Видалити",
 		"DeveloperMode": "Режим розробника",
@@ -270,7 +286,7 @@
 		"DiscountTypeLoyaltyProgram": "Програма лояльності",
 		"DiscountTypeExpiresSoon": "Спливає незабаром",
 		"DiscountTypePickItYourself": "Вибери сам",
-		"DiscountTypeSecondHand": "Second hand",
+		"DiscountTypeSecondHand": "Секонд-хенд",
 		"DiscountTypeOther": "Інше",
 		"Example": "Приклад",
 		"Examples": "Приклади",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "Приклади: {value}",
 		"Edit": "Редагувати",
 		"End": "Кінець",
+		"ErrorServer": "Помилка: помилка сервера",
+		"FieldIsRequired": "Поле обов'язкове для заповнення",
 		"Filter": "Фільтр",
 		"FilterChallengesShowAllStatus": "Показати всі виклики",
+		"FilterWithPriceCount": "З цінами",
+		"FilterWithLocationCount": "З локаціями",
 		"FilterProductWithPriceCount": "З ціною",
 		"FilterProductWithPriceCountHide": "Приховати товари з цінами",
 		"FilterProductWithoutPriceCount": "Без цін",
 		"FilterPriceMoreThan30DaysHide": "Приховати ціни старші за 30 днів",
 		"FilterProofWithPriceCountHide": "Сховати докази з цінами",
 		"FilterPriceTagWithProofOwner": "Показувати тільки мої докази",
+		"FilterPriceTagWithProofUserCountry": "Показувати лише докази з моєї країни",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "З дійсним штрих-кодом",
 		"FilterPriceTagWithTagPredictionProductExists": "З дійсним продуктом",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "З дійсним тегом категорії",
@@ -299,6 +320,7 @@
 		"GDPR_REQUEST": "Запит GDPR",
 		"Group": "Група",
 		"Help": "Допомога",
+		"Here": "Тут",
 		"History": "Історія",
 		"Image": "Зображення",
 		"ImageSelect": "Обрати зображення",
@@ -314,19 +336,33 @@
 		"Map": "Мапа",
 		"Miscellaneous": "Різне",
 		"MobileApp": "Мобільний додаток",
+		"Moderation": "Модерація",
+		"ModerationFlagReasonWrongType": "Неправильний тип",
+		"ModerationFlagReasonWrongPriceValue": "Неправильне значення ціни",
+		"ModerationFlagReasonWrongCurrency": "Неправильна валюта",
+		"ModerationFlagReasonWrongProduct": "Неправильний продукт",
+		"ModerationFlagReasonWrongLocation": "Неправильне місцезнаходження",
+		"ModerationFlagReasonWrongDate": "Неправильна дата",
+		"ModerationFlagReasonOther": "Інше",
+		"ModerationFlagCreateSuccess": "Дякую за ваш звіт!",
+		"ModerationFlagStatusOpen": "ВІДЧИНЕНО",
+		"ModerationFlagStatusClosed": "ЗАЧИНЕНО",
 		"MyConsumption": "Моє споживання",
 		"MyDashboard": "Моя панель",
 		"MyPrices": "Мої ціни",
 		"MyProofs": "Мої докази",
 		"MyStats": "Мої статистики",
+		"New": "Новий",
 		"NextProof": "Наступний доказ",
 		"NoBarcode": "Без штрих-коду",
 		"NotAnError": "Не помилка",
 		"NotAPrice": "Не ціна",
 		"Offline": "Офлайн",
 		"Online": "Онлайн",
+		"Open": "ВІДЧИНЕНО",
 		"OpenWithTheAssistant": "Відкрити за допомогою помічника",
 		"Order": "Замовлення",
+		"OrderNameASC": "Ім’я",
 		"OrderLocationCountDESC": "Кількість місць",
 		"OrderProductUniqueScansDESC": "Кількість сканувань",
 		"OrderProductPriceCountDESC": "Кількість цін",
@@ -345,25 +381,32 @@
 		"PersonalInfo": "Особиста інформація",
 		"Physical": "Фізичний",
 		"Picture": "Зображення",
-		"Pictures": "Pictures",
+		"Pictures": "Зображення",
 		"PictureSelect": "Виберіть картинку",
 		"PictureSelectMultiple": "Виберіть картинки",
 		"PictureSelected": "Картина вибрана!",
 		"PictureSelectedCount": "{count} вибраних зображень | {count} вибрано зображення | {count} вибрано зображення",
 		"PictureFull": "Повнорозмірна картинка",
 		"PicturesByYou": "Ваші малюнки",
-		"PicturesAdded": "Pictures added",
-		"PicturesAddedByYou": "Pictures added by you",
+		"PicturesAdded": "Зображення додано",
+		"PicturesAddedByYou": "Зображення, додані вами",
 		"PRICE_TAG": "Цінник",
 		"PriceTags": "Цінники",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} ціни | {count} ціна | {count} ціни",
 		"PriceAddedCount": "{count} додано ціни | {count} ціна додана | {count} ціни додано",
+		"PriceAddProgress": "Додано ціни {numberOfPricesAdded} / {totalNumberOfPrices}",
 		"PriceToValidateCount": "{count} ціни для перевірки | {count} ціна для перевірки | {count} ціни для перевірки",
 		"PriceCreated": "Ціна створена!",
 		"PriceMissing": "Ціна відсутня",
+		"PricePerMissing": "Ціна за пропуск",
+		"PriceAlreadyUploaded": "Ціну вже завантажено",
+		"PriceReadyToBeUploaded": "Ціна готова до завантаження",
 		"PricesAlreadyUploaded": "Ціни вже завантажено",
+		"PricesAll": "Всі ціни",
 		"PricesMore": "Більше цін",
-		"PricesAdded": "Prices added",
+		"PricesAdded": "Ціни додано",
 		"PricesAddedToday": "Ціни, додані сьогодні",
 		"PricesToday": "Ціни сьогодні",
 		"PriceNotFound": "Ціна не знайдена",
@@ -382,6 +425,7 @@
 		"ProofSelected": "Доказ вибрано!",
 		"ProofSelectedCount": "{count} вибрані докази | {count} доказ вибрано | {count} вибрані докази",
 		"ProofUploadedCount": "{count} доказів завантажено | {count} доказ завантажено | {count} доказів завантажено",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} завантажених доказів",
 		"ProofsAddedToday": "Докази додано сьогодні",
 		"ProofsToday": "Докази сьогодні",
 		"ProofNotFound": "Доказ не знайдено",
@@ -389,6 +433,8 @@
 		"Quantity": "Кількість",
 		"QuantityBought": "Куплена кількість",
 		"QuantityMissing": "Відсутня кількість",
+		"Rank": "Ранг",
+		"Reason": "Причина",
 		"RECEIPT": "Квитанція",
 		"Receipt": "Квитанція",
 		"Receipts": "Чеки",
@@ -397,12 +443,17 @@
 		"ReceiptOwnerConsumption": "Відстежуйте на панелі споживання",
 		"ReceiptOnlineDeliveryCosts": "Вартість доставки",
 		"Recent": "Недавні",
+		"Re-open": "Знову відкрити",
+		"ReportProblem": "Повідомити про проблему",
+		"Reset": "Скинути",
+		"Resolved": "Вирішено",
 		"Reuses": "Повторне використання",
 		"ReusesKnown": "Відомі повторні використання",
 		"Search": "Пошук",
 		"Select": "Обрати",
+		"Send": "Надіслати",
 		"Settings": "Налаштування",
-		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Ви ввійшли!",
 		"SignIn": "Увійти",
 		"SignOut": "Вийти",
@@ -412,12 +463,14 @@
 		"SourceCode": "Вихідний код",
 		"Start": "Старт",
 		"Stats": "Статистика",
+		"Status": "Стан",
 		"SuggestedBarcode": "Рекомендований штрих-код:",
 		"Summary": "Загальна інформація",
 		"TaglineOriginal": "Відкрита краудсорсингова база даних цін на продукти харчування",
 		"TaglineAlt1": "Відкрита краудсорсингова база даних цін",
 		"TaglineAlt2": "Відкрита краудсорсингова база даних цін на харчові продукти",
 		"TaglineAlt3": "Ціни мають бути вільними",
+		"Text": "Текст",
 		"Thanks": "Дякую",
 		"Theme": "Тема",
 		"ThemeLight": "Світла тема",
@@ -430,8 +483,8 @@
 		"Today": "Сьогодні",
 		"Top": "Верх",
 		"Total": "Усього",
-		"Truncate": "Truncate",
-		"Truncated": "Truncated",
+		"Truncate": "Обрізати",
+		"Truncated": "Обрізано",
 		"TryItOut": "Спробуйте",
 		"Type": "Тип",
 		"UnknownProduct": "Невідомий продукт",
@@ -439,8 +492,8 @@
 		"UnknownSource": "Невідоме джерело",
 		"UnitGram": "g",
 		"UnitKilogram": "kg",
-		"UnitMililitre": "mL",
-		"UnitLitre": "L",
+		"UnitMililitre": "мл.",
+		"UnitLitre": "л.",
 		"Unreadable": "Неможливо прочитати",
 		"Upload": "Завантажити",
 		"UploadMultipleImages": "Завантажити {count} зображення | Завантажити {count} зображеннь",
@@ -453,13 +506,24 @@
 		"Users": "Користувачі",
 		"UserCount": "{count} користувачів | {count} користувач | {count} користувачів",
 		"UserContributorCount": "{count} учасників | {count} учасник | {count} учасників",
+		"UserIsModerator": "Ви модератор",
+		"UserIsModeratorCanEditPrice": "Ви можете редагувати цю ціну, оскільки ви модератор",
+		"UserIsModeratorCanDeletePrice": "Ви можете видалити цю ціну, оскільки ви модератор",
+		"UserIsModeratorCanEditProof": "Ви можете редагувати цей доказ, оскільки ви модератор",
+		"UserIsModeratorCanDeleteProof": "Ви можете видалити цей доказ, оскільки ви модератор",
+		"UserIsNotPriceOwner": "Ви не є власником ціни",
+		"UserIsNotProofOwner": "Ви не є власником доказу",
+		"UserNotFound": "Користувача не знайдено",
 		"Validate": "Перевірити",
 		"ValidatePrices": "Перевірити ціни",
 		"ValidatePricesWithAI": "Перевірити ціни за допомогою ШІ",
+		"ValidatePricesFromCommunity": "Перевірте ціни від спільноти",
 		"View": "Переглянути",
 		"Website": "Сайт",
-		"Year": "Year",
-		"Years": "Years",
+		"WithAPrice": "З ціною",
+		"WithoutAPrice": "Без ціни",
+		"Year": "Рік",
+		"Years": "Роки",
 		"Yes": "Так",
 		"No": "Ні",
 		"Food": "Їжа",
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "Ви будете перенаправлені на сторінку налаштувань, але втратите всю інформацію, яку ви ввели на цій сторінці.",
 		"Select": "Вибрати {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Виберіть невідомий товар",
+		"SelectUnknownProductGuide": "Або виберіть невідомий продукт для додавання",
+		"CountriesWhereSold": "Країни, в яких продається:",
+		"CreateNewProduct": "Створити новий продукт",
+		"CreateProduct": "Створити продукт",
+		"EnableCropMode": "Увімкнути режим обрізання",
+		"Flavor": "Виберіть проєкт, у якому має бути створений продукт",
+		"NextProof": "Наступний доказ",
+		"PreviousProof": "Попередній доказ",
+		"ProductAlreadyExists": "Продукт вже існує",
+		"ProductLanguage": "Мова продукту: ",
+		"ProofNumberOfOutProofs": "Доказ ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Магазини, де продається",
+		"UseCropModeToAddImage": "Щоб додати зображення товару, увімкніть режим обрізання під пробним зображенням і намалюйте прямокутник навколо товару.",
+		"ProductMissingPromoBanner": "Експеримент: створіть цей продукт, використовуючи дані з Open Prices"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Виберіть один зі своїх останніх доказів"
 	},
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "Очистити",
 		"NoResult": "Результатів не знайдено",
+		"NoResultHelpKeywords": "Не можете знайти свій магазин? Спробуйте використати ключові слова замість повної адреси (наприклад, «Carrefour 75013 Париж» або «Walmart Сан-Франциско»).",
+		"NoResultHelpOSM": "Все ще не можете знайти свій магазин? Можливо, його ще немає в {osm_name} . Ви можете спочатку додати його в {osm_url} .",
 		"PoweredBy": {
 			"text": "на основі {url}"
 		},
@@ -686,15 +769,15 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Додати новий елемент",
-		"MissingPrice": "Відсутня ціна",
-		"MissingProduct": "Відсутній товар",
 		"NoItemsFound": "Жоден елемент не може бути видобутий із чеку, будь ласка, спробуйте ще раз.",
+		"PriceAlreadyCreated": "Ціна вже створена",
 		"PriceAlreadyCreatedForItem": "Ціна вже створена для товару",
 		"PriceReadyToBeAdded": "Ціна готова до додавання",
-		"ReceiptItemsCheck": "Receipt items, check and fix",
-		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
-		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+		"ReceiptItems": "Товари з чека",
+		"ReceiptItemsCheck": "Отримані товари, перевірка та виправлення",
+		"UploadOnlyNewPrices": "Завантажити лише нові ціни ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Завантажте або оновіть усі дійсні ціни ({nbPrices})",
+		"WaitForExtraction": "Автоматичне вилучення елементів з чека, зачекайте..."
 	},
 	"Reuses": {
 		"AlertNew": "Немає повторного використання? Дайте нам знати {url}!",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "Про додаток"
+		},
+		"Add": {
+			"Title": "Додати"
 		},
 		"AddPrice": {
 			"Title": "Додати ціну"
@@ -728,6 +814,18 @@
 		"AddProofMultiple": {
 			"Title": "Додайте кілька доказів"
 		},
+		"AddProofReceipt": {
+			"Title": "Додати підтвердження (квитанцію)"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Додати докази (цінники)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "Дослідити"
+		},
 		"Locations": {
 			"Title": "Місцезнаходження"
 		},
@@ -743,23 +841,39 @@
 		"Prices": {
 			"Title": "Ціни"
 		},
+		"PriceTags": {
+			"Title": "Цінники"
+		},
 		"Proofs": {
 			"Title": "Докази"
 		},
 		"ProofAddSingle": {
 			"Title": "Додати одне підтвердження"
 		},
+		"Receipt": {
+			"Title": "Квитанція"
+		},
+		"Cities": {
+			"Title": "Міста"
+		},
 		"Community": {
 			"Title": "Спільнота"
 		},
 		"Contribute": {
-			"Title": "Підтримати проєкт"
+			"Title": "Долучитись"
+		},
+		"Countries": {
+			"Title": "Країн"
+		},
+		"CreateOffProduct": {
+			"Title": "Створити Продукт"
 		},
 		"Experiments": {
 			"Title": "Експерименти"
 		},
 		"Home": {
-			"Title": "Головна"
+			"Title": "Головна",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Панель приладів"
@@ -769,6 +883,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Останні докази"
+		},
+		"Moderation": {
+			"Title": "Модерація"
 		},
 		"MyPrices": {
 			"Title": "Мої ціни"
@@ -812,20 +929,22 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Помічник із доказами цінників"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Помічник Перевірки Ціни"
-		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "Помічник з квитанцій"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "Випробування"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Випробування",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
-			"Title": "Community challenge"
+			"Title": "Випробування спільноти"
+		},
+		"Validate": {
+			"Title": "Перевірити",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Перевірити ціни"
@@ -845,6 +964,7 @@
 		"ServerError": "Помилка: помилка сервера",
 		"Title": "Увійти",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Ім'я користувача",
 		"WrongCredentials": "Помилка: неправильні облікові дані"
 	},
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Без продукту",
 		"WithBarcode": "Зі штрих-кодом",
 		"WithCategory": "З категорією",
+		"PricesPerSource": "Ціни за джерело",
+		"ProofsPerSource": "Докази для кожного джерела",
 		"PricesProofsPerSource": "Ціни та докази за джерелом",
 		"LastUpdated": "Оновлено {date}"
 	},
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показати",
 		"BarcodeScanner": "Сканер штрих-кодів",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Стандартний режим",
 		"FavoriteCurrencies": "Улюблені валюти",
 		"CurrencyRequired": "Потрібна принаймні одна валюта",

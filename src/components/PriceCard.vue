@@ -1,27 +1,27 @@
 <template>
   <v-card v-if="price" :id="'price_' + price.id" data-name="price-card">
-    <v-container class="pa-2">
+    <v-card-text class="pa-2">
       <v-row>
         <v-col v-if="!hideProductImage" class="pr-0" style="max-width:20%;">
-          <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;" @click="goToProduct()" />
-          <v-img v-else :src="productImageDefault" style="height:50px;width:50px;filter:invert(.9);" />
+          <v-img v-if="product && product.image_url" :src="product.image_url" max-height="100px" @click="goToProduct()" />
+          <v-img v-else :src="productImageDefault" width="100px" style="filter:invert(.9);" />
         </v-col>
         <v-col :style="hideProductImage ? '' : 'max-width:80%'">
-          <h3 v-if="!hideProductTitle" @click="goToProduct()">
+          <h3 v-if="!hideProductTitle" id="product-title" role="link" tabindex="0" @click="goToProduct()" @keydown.enter="goToProduct()">
             {{ productTitle }}
           </h3>
 
-          <p v-if="!hideProductDetails">
-            <ProductDetails v-if="hasProduct" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :readonly="readonly" />
-            <PriceCategoryDetails v-else :price="price" />
-          </p>
+          <template v-if="showProductDetailsRow">
+            <ProductDetailsRow v-if="hasProduct" class="mt-0" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="readonly" />
+            <PriceCategoryDetailsRow v-else class="mt-0" :price="price" />
+          </template>
 
-          <PricePriceRow v-if="price" class="mt-0" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
+          <PricePriceRow class="mt-0" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
         </v-col>
       </v-row>
 
-      <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceProof="hidePriceProof" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceCreated="hidePriceCreated" :hideProductDetails="hideProductDetails" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
-    </v-container>
+      <PriceFooterRow v-if="showPriceFooterRow" class="mt-0" :price="price" :hidePriceProof="hidePriceProof" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceCreated="hidePriceCreated" :hideProductDetailsRow="hideProductDetailsRow" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
+    </v-card-text>
   </v-card>
 </template>
 
@@ -34,8 +34,8 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    ProductDetails: defineAsyncComponent(() => import('../components/ProductDetails.vue')),
-    PriceCategoryDetails: defineAsyncComponent(() => import('../components/PriceCategoryDetails.vue')),
+    ProductDetailsRow: defineAsyncComponent(() => import('../components/ProductDetailsRow.vue')),
+    PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue'))
   },
@@ -56,7 +56,7 @@ export default {
       type: Boolean,
       default: false
     },
-    hideProductDetails: {
+    hideProductDetailsRow: {
       type: Boolean,
       default: false
     },
@@ -104,16 +104,16 @@ export default {
   data() {
     return {
       productTitle: null,  // see init
-      productImageDefault: constants.PRODUCT_IMAGE_DEFAULT_URL
+      productImageDefault: constants.PRODUCT_IMAGE_DEFAULT_URL,
     }
   },
   computed: {
     ...mapStores(useAppStore),
-    hasProduct() {
-      return !!this.product
-    },
     hasPrice() {
       return !!this.price
+    },
+    hasProduct() {
+      return !!this.product
     },
     hasCategoryTag() {
       return !!this.price.category_tag
@@ -124,6 +124,12 @@ export default {
     hasProductCode() {
       return this.hasProduct && !!this.product.code
     },
+    showProductDetailsRow() {
+      return !this.hideProductDetailsRow
+    },
+    showPriceFooterRow() {
+      return !this.hidePriceFooterRow
+    }
   },
   mounted() {
     this.getPriceProductTitle()

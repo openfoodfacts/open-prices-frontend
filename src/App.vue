@@ -2,7 +2,7 @@
   <v-app>
     <Header />
 
-    <v-main class="d-flex justify-center">
+    <v-main>
       <v-container>
         <Breadcrumbs />
         <router-view />
@@ -39,9 +39,9 @@ export default defineComponent({
   },
   mounted() {
     if (this.appStore.getUserPreferedTheme) {
-      this.theme.global.name = this.appStore.getUserPreferedTheme
+      this.theme.change(this.appStore.getUserPreferedTheme)
     } else {
-      this.theme.global.name = this.prefersDarkScheme.matches ? 'dark' : 'light'
+      this.theme.change(this.prefersDarkScheme.matches ? 'dark' : 'light')
     }
   }
 })

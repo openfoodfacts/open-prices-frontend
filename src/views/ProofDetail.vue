@@ -1,10 +1,15 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <ProofCard v-if="proof" :proof="proof" :hideProofHeader="true" :readonly="true" />
-      <p v-if="!loading && !proof" class="text-red">
+      <ProofCard v-if="proof" :proof="proof" :hideProofHeader="true" />
+    </v-col>
+  </v-row>
+
+  <v-row v-if="!proof && !loading" class="mt-0">
+    <v-col cols="12">
+      <v-alert data-name="proof-not-found-alert" type="error" variant="outlined" density="compact">
         {{ $t('Common.ProofNotFound') }}
-      </p>
+      </v-alert>
     </v-col>
   </v-row>
 
@@ -13,8 +18,10 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.Prices') }}
       </h2>
-      <LoadedCountChip v-if="!loading" :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <DisplayMenu kind="price" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
+        <DisplayMenu :show="['list', 'table']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      </template>
     </v-col>
   </v-row>
 
@@ -48,7 +55,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import utils from '../utils.js'
 
@@ -71,7 +78,7 @@ export default {
       pricePage: 0,
       loading: false,
       // display
-      currentDisplay: constants.PRICE_DISPLAY_LIST[0].key,
+      currentDisplay: constants.DISPLAY_LIST[0].key,
     }
   },
   computed: {
@@ -114,10 +121,13 @@ export default {
       this.getPrices()
     },
     getProof() {
-      return api.getProofById(this.proofId)
+      return openPricesApi.getProofById(this.proofId)
         .then((data) => {
           if (data.id) {
             this.proof = data
+            if (this.proof.type === constants.PROOF_TYPE_PRICE_TAG) {
+              this.getPriceTagsBoundingBoxes()
+            }
           }
         })
     },
@@ -125,14 +135,23 @@ export default {
       if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
       this.pricePage += 1
-      return api.getPrices(this.getPricesParams)
+      return openPricesApi.getPrices(this.getPricesParams)
         .then((data) => {
+          this.loading = false
+          if (!data.items) return
           this.priceList.push(...data.items)
           this.priceTotal = data.total
-          this.loading = false
         })
     },
-    selectPriceDisplay(displayKey) {
+    getPriceTagsBoundingBoxes() {
+      return openPricesApi.getPriceTags({proof_id: this.proofId, size: 100}).then(data => {
+        if (!data?.items?.length) return
+        this.proof.priceTagsBoundingBoxes = data.items.map(priceTag => {
+          return {boundingBox: priceTag.bounding_box, id: priceTag.id, status: priceTag.status, created_by: priceTag.created_by}
+        })
+      })
+    },
+    updateDisplay(displayKey) {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
       // this.initPrices() will NOT be called in watch $route

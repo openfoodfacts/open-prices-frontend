@@ -2,12 +2,7 @@
   <v-form @submit.prevent="createPrice">
     <v-row>
       <v-col cols="12">
-        <v-alert
-          type="warning"
-          variant="outlined"
-          density="compact"
-          :text="$t('Common.PageNotMaintainedAnymore')"
-        />
+        <DeprecatedAlert />
       </v-col>
       <!-- Step 1: product -->
       <v-col cols="12" md="6" lg="4">
@@ -35,17 +30,17 @@
       <!-- Step 3: price -->
       <v-col cols="12" md="6" lg="4">
         <v-card
-          :class="priceFormFilled ? 'border-success' : 'border-transparent'"
+          :class="pricePriceFormFilled ? 'border-success' : 'border-transparent'"
           :title="$t('AddPriceSingle.PriceDetails.Title')"
           prepend-icon="mdi-tag-plus-outline"
           height="100%"
         >
-          <template v-if="priceFormFilled" #append>
+          <template v-if="pricePriceFormFilled" #append>
             <v-icon icon="mdi-checkbox-marked-circle" color="success" />
           </template>
           <v-divider />
           <v-card-text>
-            <PriceInputRow :priceForm="addPriceSingleForm" :product="addPriceSingleForm.product" :hideCurrencyChoice="true" @filled="priceFormFilled = $event" />
+            <PriceInputRow :priceForm="addPriceSingleForm" :product="addPriceSingleForm.product" @filled="pricePriceFormFilled = $event" />
           </v-card-text>
         </v-card>
       </v-col>
@@ -71,11 +66,12 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import date_utils from '../utils/date.js'
 
 export default {
   components: {
+    DeprecatedAlert: defineAsyncComponent(() => import('../components/DeprecatedAlert.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     ProofUploadCard: defineAsyncComponent(() => import('../components/ProofUploadCard.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
@@ -88,7 +84,7 @@ export default {
         product: null,
         product_code: '',
         category_tag: null,
-        origins_tags: '',
+        origins_tags: [],
         labels_tags: [],
         price: null,
         price_per: null,
@@ -105,7 +101,7 @@ export default {
         proof_id: null,
       },
       productFormFilled: false,
-      priceFormFilled: false,
+      pricePriceFormFilled: false,
       loading: false,
     }
   },
@@ -116,7 +112,7 @@ export default {
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
     formFilled() {
-      return this.productFormFilled && this.proofFormFilled && this.priceFormFilled
+      return this.productFormFilled && this.proofFormFilled && this.pricePriceFormFilled
     },
   },
   methods: {
@@ -134,18 +130,19 @@ export default {
     },
     createPrice() {
       this.loading = true
-      api
+      openPricesApi
         .createPrice(this.addPriceSingleForm, this.$route.path)
         .then((data) => {
-          if (!data['id']) {
-            alert(`Form error: ${JSON.stringify(data)}`)
-          } else {
-            this.goToUserDashboard()
-          }
           this.loading = false
+          if (data.id) {
+            this.goToUserDashboard()
+          } else {
+            alert(`Error: ${JSON.stringify(data)}`)
+            console.log(JSON.stringify(data))
+          }
         })
         .catch((error) => {
-          alert('Error: server error')
+          alert(this.$t('Common.ServerError'))
           console.log(error)
           this.loading = false
         })

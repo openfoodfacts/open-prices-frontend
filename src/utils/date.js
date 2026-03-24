@@ -1,10 +1,19 @@
 import constants from '../constants'
 
+
+/**
+ * input: Date object
+ * output: '2023-12-25'
+ */
+function toDateString(date) {
+  return date.toISOString().substring(0, 10)
+}
+
 /**
  * output: '2023-12-25'
  */
 function currentDate() {
-  return new Date().toISOString().substring(0, 10)
+  return toDateString(new Date())
 }
 
 /**
@@ -41,6 +50,15 @@ function dateEndOfDay(dateString) {
   let date = new Date(dateString)
   date.setUTCHours(23, 59, 59, 999)
   return date.toISOString()
+}
+
+/**
+ * @returns '2023-11-25' if today is '2023-12-25'
+ */
+function oneMonthAgoDate() {
+  let date = new Date()
+  date.setMonth(date.getMonth() - 1)
+  return toDateString(date)
 }
 
 /**
@@ -126,15 +144,17 @@ function dateType(dateString) {
 }
 
 export default {
-    currentDate,
-    currentDateTime,
-    currentStartOfDay,
-    dateStartOfDay,
-    dateEndOfDay,
-    prettyDate,
-    prettyDateTime,
-    offDateTime,
-    prettyRelativeDateTime,
-    isBetweenTwoDates,
-    dateType,
+  toDateString,
+  currentDate,
+  currentDateTime,
+  currentStartOfDay,
+  dateStartOfDay,
+  dateEndOfDay,
+  oneMonthAgoDate,
+  prettyDate,
+  prettyDateTime,
+  offDateTime,
+  prettyRelativeDateTime,
+  isBetweenTwoDates,
+  dateType,
 }

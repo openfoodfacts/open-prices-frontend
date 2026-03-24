@@ -13,10 +13,12 @@
       </h2>
     </v-col>
     <v-col>
-      <p>You have a fidelty card? You can <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank">make a GDPR request and upload the list of prices</a></p>
-      <p><router-link to="/challenges">Participate in one of our challenges</router-link></p>
-      <p><router-link to="/community">Learn more about the Open Prices project and its community</router-link></p>
-      <p><a :href="OFF_CONTRIBUTE_URL" target="_blank">Contribute to Open Food Facts</a></p>
+      <ul class="pl-4">
+        <li>You have a fidelty card? You can <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank">make a GDPR request and upload the list of prices</a></li>
+        <li><router-link to="/challenges">Participate in one of our challenges</router-link></li>
+        <li><router-link to="/community">Learn more about the Open Prices project and its community</router-link></li>
+        <li><a :href="OFF_CONTRIBUTE_URL" target="_blank">Contribute to Open Food Facts</a></li>
+      </ul>
     </v-col>
   </v-row>
 </template>
@@ -33,24 +35,22 @@ export default {
     return {
       contributeCommonList: [
         {
-          name: 'From a price tag',
+          name: this.$t('Common.FromPriceTag'),
           description: '',
           background_image_url: constants.PROOF_TYPE_PRICE_TAG_IMAGE_THUMB_URL,
-          url: '/prices/add/multiple?proof_type=PRICE_TAG'
+          url: '/proofs/add/price-tags'
         },
         {
-          name: 'From a receipt',
+          name: this.$t('Common.FromReceipt'),
           description: '',
           background_image_url: constants.PROOF_TYPE_RECEIPT_IMAGE_THUMB_URL,
-          url: '/prices/add/multiple?proof_type=RECEIPT'
+          url: '/proofs/add/receipt'
         },
         {
-          name: 'Validate prices from the community',
+          name: this.$t('Common.ValidatePricesFromCommunity'),
           description: '',
           background_image_url: 'https://imgur.com/s0lenjt.png',
-          url: '/experiments/price-validation-assistant',
-          community: true,
-          experiment: true
+          url: '/prices/add/validate'
         }
       ],
       PROOF_TYPE_PRICE_TAG_ICON: constants.PROOF_TYPE_PRICE_TAG_ICON,

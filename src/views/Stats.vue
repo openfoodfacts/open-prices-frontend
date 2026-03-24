@@ -43,17 +43,17 @@
     </v-col>
   </v-row>
   <v-row>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_source_off_with_price_count.toString() + ' / ' + stats.product_source_off_count.toString()" :subtitle="$t('Common.Food')" />
+    <v-col cols="12" sm="4" md="3" lg="2">
+      <StatCard :value="stats.product_source_off_with_price_count.toString() + ' / ' + stats.product_source_off_count.toString()" :subtitle="$t('Common.Food')" :subtitle-prepend-icon="OFF_ICON" />
     </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_source_obf_with_price_count.toString() + ' / ' + stats.product_source_obf_count.toString()" :subtitle="$t('Common.Beauty')" />
+    <v-col cols="12" sm="4" md="3" lg="2">
+      <StatCard :value="stats.product_source_obf_with_price_count.toString() + ' / ' + stats.product_source_obf_count.toString()" :subtitle="$t('Common.Beauty')" :subtitle-prepend-icon="OBF_ICON" />
     </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_source_opf_with_price_count.toString() + ' / ' + stats.product_source_opf_count.toString()" :subtitle="$t('Common.Products')" />
+    <v-col cols="12" sm="4" md="3" lg="2">
+      <StatCard :value="stats.product_source_opf_with_price_count.toString() + ' / ' + stats.product_source_opf_count.toString()" :subtitle="$t('Common.Products')" :subtitle-prepend-icon="OPF_ICON" />
     </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_source_opff_with_price_count.toString() + ' / ' + stats.product_source_opff_count.toString()" :subtitle="$t('Common.PetFood')" />
+    <v-col cols="12" sm="4" md="3" lg="2">
+      <StatCard :value="stats.product_source_opff_with_price_count.toString() + ' / ' + stats.product_source_opff_count.toString()" :subtitle="$t('Common.PetFood')" :subtitle-prepend-icon="OPFF_ICON" />
     </v-col>
   </v-row>
 
@@ -74,7 +74,7 @@
       <StatCard :value="stats.location_type_online_count" :subtitle="$t('Common.Online')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_type_osm_country_count" :subtitle="$t('Common.Countries')" />
+      <StatCard :value="stats.location_type_osm_country_count" :subtitle="$t('Common.Countries')" to="/countries?filter=location_count_gte_1" />
     </v-col>
   </v-row>
 
@@ -151,20 +151,41 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-circle-small" />
-        {{ $t('Stats.PricesProofsPerSource') }}
+        {{ $t('Stats.PricesPerSource') }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_source_web_count.toString() + ' | ' + stats.proof_source_web_count.toString()" :subtitle="$t('Common.Website')" />
+      <StatCard :value="stats.price_source_web_count.toString()" :subtitle="$t('Common.Website')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_source_mobile_count.toString() + ' | ' + stats.proof_source_mobile_count.toString()" :subtitle="$t('Common.MobileApp')" />
+      <StatCard :value="stats.price_source_mobile_count.toString()" :subtitle="$t('Common.MobileApp')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_source_api_count.toString() + ' | ' + stats.proof_source_api_count.toString()" subtitle="API" />
+      <StatCard :value="stats.price_source_api_count.toString()" subtitle="API" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_source_other_count.toString() + ' | ' + stats.proof_source_other_count.toString()" :subtitle="$t('Common.Other')" />
+      <StatCard :value="stats.price_source_other_count.toString()" :subtitle="$t('Common.Other')" />
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-circle-small" />
+        {{ $t('Stats.ProofsPerSource') }}
+      </h2>
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_source_web_count.toString()" :subtitle="$t('Common.Website')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_source_mobile_count.toString()" :subtitle="$t('Common.MobileApp')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_source_api_count.toString()" subtitle="API" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_source_other_count.toString()" :subtitle="$t('Common.Other')" />
     </v-col>
   </v-row>
 
@@ -172,24 +193,20 @@
 
   <v-row>
     <v-col cols="12">
-      <i18n-t keypath="Stats.LastUpdated" tag="span" :title="getRelativeDateTimeFormatted(stats.updated)">
-        <template #date>
-          {{ getDateTimeFormatted(stats.updated) }}
-        </template>
-      </i18n-t>
+      <StatsLastUpdatedAlert v-if="stats" :lastUpdated="stats.updated" />
     </v-col>
   </v-row>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
-import date_utils from '../utils/date.js'
 
 export default {
   components: {
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
+    StatsLastUpdatedAlert: defineAsyncComponent(() => import('../components/StatsLastUpdatedAlert.vue')),
   },
   data() {
     return {
@@ -240,6 +257,10 @@ export default {
       },
       loading: false,
       OSM_NAME: constants.OSM_NAME,
+      OFF_ICON: constants.OFF_ICON,
+      OBF_ICON: constants.OBF_ICON,
+      OPF_ICON: constants.OPF_ICON,
+      OPFF_ICON: constants.OPFF_ICON,
     }
   },
   mounted() {
@@ -248,19 +269,13 @@ export default {
   methods: {
     getStats() {
       this.loading = true
-      return api.getStats()
+      return openPricesApi.getStats()
         .then((data) => {
           for (const key in this.stats) {
             this.stats[key] = (key in data) ? data[key] : this.stats[key]
           }
           this.loading = false
         })
-    },
-    getDateTimeFormatted(dateTimeString) {
-      return date_utils.offDateTime(dateTimeString)
-    },
-    getRelativeDateTimeFormatted(dateTimeString) {
-      return date_utils.prettyRelativeDateTime(dateTimeString, 'short')
     },
   }
 }

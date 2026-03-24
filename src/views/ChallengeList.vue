@@ -1,5 +1,5 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-trophy-variant">
         {{ $t('Challenge.ChallengeCount', { count: challengeTotal }) }}
@@ -24,7 +24,7 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="upcomingChallenges.length > 0">
+  <v-row>
     <v-col>
       <h2 class="text-h6">
         {{ $t('Challenge.UpcomingChallenges') }}
@@ -32,7 +32,7 @@
       </h2>
     </v-col>
   </v-row>
-  <v-row v-if="upcomingChallenges.length > 0" class="mt-0">
+  <v-row class="mt-0">
     <v-col v-for="challenge in upcomingChallenges" :key="challenge" cols="12" sm="6" md="4" xl="3">
       <ChallengeCard :challenge="challenge" />
     </v-col>
@@ -57,17 +57,24 @@
       <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
+
+  <v-row>
+    <v-col>
+      <ChallengeNewFormAlert />
+    </v-col>
+  </v-row>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import utils from '../utils.js'
 
 export default {
   components: {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     ChallengeCard: defineAsyncComponent(() => import('../components/ChallengeCard.vue')),
+    ChallengeNewFormAlert: defineAsyncComponent(() => import('../components/ChallengeNewFormAlert.vue')),
   },
   data() {
     return {
@@ -75,12 +82,11 @@ export default {
       challengeTotal: null,
       challengePage: 0,
       loading: false,
-      currentOrder: 'id',
     }
   },
   computed: {
     getChallengesParams() {
-      let defaultParams = { order_by: this.currentOrder, page: this.challengePage}
+      let defaultParams = { page: this.challengePage }
       return defaultParams
     },
     ongoingChallenges() {
@@ -113,7 +119,7 @@ export default {
       if ((this.challengeTotal != null) && (this.challengeList.length >= this.challengeTotal)) return
       this.loading = true
       this.challengePage += 1
-      return api.getChallenges(this.getChallengesParams)
+      return openPricesApi.getChallenges(this.getChallengesParams)
         .then((data) => {
           this.challengeList.push(...data.items)
           this.challengeTotal = data.total

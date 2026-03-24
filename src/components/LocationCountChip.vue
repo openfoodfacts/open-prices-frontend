@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable" class="mr-1">
+  <v-chip label size="small" density="comfortable">
     <v-icon start icon="mdi-map-marker-outline" />
     <span v-if="withLabel" id="location-count">{{ $t('Common.LocationCount', { count: count }) }}</span>
     <span v-else id="location-count">{{ count }}</span>

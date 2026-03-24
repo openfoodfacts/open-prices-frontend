@@ -72,7 +72,7 @@
 			"Label": "Pris",
 			"LabelDiscounted": "Rabatterat pris",
 			"LabelFull": "Fullt pris",
-			"Proof": "Proof",
+			"Proof": "Bevis",
 			"ProofDateChanged": "Datum uppdaterat!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistik och rankningar",
 		"MostPicturesAdded": "De flesta bilder tillagda",
 		"MostPricesAdded": "De flesta priser tillagda",
-		"MostPricesFromPicturesAdded": "De flesta priser från bilder tillagda"
+		"MostPricesFromPicturesAdded": "De flesta priser från bilder tillagda",
+		"AlertNew": "Har du en idé till en ny utmaning? Låt oss veta {url}!"
 	},
 	"Common": {
 		"About": "Om",
@@ -177,8 +178,12 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Lägg till nya bevis",
+		"AddNewProofPriceTags": "Lägg till nya prislappar",
+		"AddNewProofReceipt": "Lägg till ett nytt kvitto",
 		"AddToOFF": "Lägg till {name}",
+		"Added": "Tillagd",
 		"AdditionalInfo": "Ytterligare information",
+		"All": "Alla",
 		"Barcode": "Streckkod",
 		"Barcodes": "Streckkoder",
 		"BarcodeScan": "Skanna en streckkod",
@@ -195,7 +200,7 @@
 		"Product": "Produkt",
 		"ProductName": "Produktnamn",
 		"Products": "Produkter",
-		"Proof": "Proof",
+		"Proof": "Bevis",
 		"Proofs": "Bevis",
 		"CATEGORY": "Kategori",
 		"Category": "Kategori",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Diagram",
 		"Clear": "Rensa",
+		"Close": "Stäng",
 		"Comment": "Kommentar",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -220,6 +226,7 @@
 		"Contributors": "Bidragsgivare",
 		"Contributions": "Bidrag",
 		"Confirm": "Bekräfta",
+		"Count": "Antal",
 		"Country": "Land",
 		"Countries": "Länder",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -229,6 +236,7 @@
 		"Currencies": "Valutor",
 		"CurrencyMissing": "Valuta saknas",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "Du kan lägga till valutor i dina inställningar.",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
@@ -241,6 +249,9 @@
 		"Error": "Fel",
 		"Experiment": "Experimentera",
 		"Experiments": "Experiment",
+		"Explore": "Utforska",
+		"FromPriceTag": "Från en prislapp",
+		"FromReceipt": "Från ett kvitto",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Etikett",
@@ -250,6 +261,7 @@
 		"Languages": "Språk",
 		"LatestPrices": "Senaste priser",
 		"LatestProofs": "Senaste bevis",
+		"LearnMore": "Läs mer",
 		"LoadMore": "Ladda fler",
 		"Location": "Plats",
 		"Locations": "Platser",
@@ -257,8 +269,12 @@
 		"LocationFindShop": "Hitta butikens plats",
 		"LocationMissing": "Plats saknas",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Datum",
 		"DateMissing": "Datum saknas",
+		"DateProofHelpText": "Bildens datum.",
+		"DateProofHelpTextExif": "Som standard försöker vi extrahera den från bildens EXIF-metadata.",
+		"DateProofHelpTextReceipt": "För kvitton, sätt inköpsdatumet.",
 		"Details": "Detaljer",
 		"Delete": "Radera",
 		"DeveloperMode": "Utvecklarläge",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "Exempel: {value}",
 		"Edit": "Redigera",
 		"End": "End",
+		"ErrorServer": "Fel: serverfel",
+		"FieldIsRequired": "Fältet är obligatoriskt",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Visa alla utmaningar",
+		"FilterWithPriceCount": "Med priser",
+		"FilterWithLocationCount": "Med platser",
 		"FilterProductWithPriceCount": "Med ett pris",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Utan priser",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Visa bara mina bevis",
+		"FilterPriceTagWithProofUserCountry": "Visa endast bevis från mitt land",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Med en giltig streckkod",
 		"FilterPriceTagWithTagPredictionProductExists": "Med en giltig produkt",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Med en giltig kategoritagg",
@@ -299,6 +320,7 @@
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Grupp",
 		"Help": "Hjälp",
+		"Here": "Här",
 		"History": "Historik",
 		"Image": "Bild",
 		"ImageSelect": "Välj en bild",
@@ -314,19 +336,33 @@
 		"Map": "Karta",
 		"Miscellaneous": "Diverse",
 		"MobileApp": "Mobilapp",
+		"Moderation": "Måtta",
+		"ModerationFlagReasonWrongType": "Fel typ",
+		"ModerationFlagReasonWrongPriceValue": "Felaktigt prisvärde",
+		"ModerationFlagReasonWrongCurrency": "Fel valuta",
+		"ModerationFlagReasonWrongProduct": "Fel produkt",
+		"ModerationFlagReasonWrongLocation": "Fel plats",
+		"ModerationFlagReasonWrongDate": "Fel datum",
+		"ModerationFlagReasonOther": "Övrigt",
+		"ModerationFlagCreateSuccess": "Tack för din rapport!",
+		"ModerationFlagStatusOpen": "Öppna",
+		"ModerationFlagStatusClosed": "Stängd",
 		"MyConsumption": "Min förbrukning",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Mina priser",
-		"MyProofs": "My proofs",
+		"MyProofs": "Mina bevis",
 		"MyStats": "Min statistik",
+		"New": "Ny",
 		"NextProof": "Next proof",
 		"NoBarcode": "Ingen streckkod",
 		"NotAnError": "Inte ett fel",
 		"NotAPrice": "Inte ett pris",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Öppna",
 		"OpenWithTheAssistant": "Öppna med assistenten",
 		"Order": "Order",
+		"OrderNameASC": "Namn",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Antal priser",
@@ -356,12 +392,19 @@
 		"PicturesAddedByYou": "Bilder tillagda av dig",
 		"PRICE_TAG": "Prislapp",
 		"PriceTags": "Prislappar",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Pris skapat!",
 		"PriceMissing": "Pris saknas",
+		"PricePerMissing": "Pris per saknad",
+		"PriceAlreadyUploaded": "Priset har redan laddats upp",
+		"PriceReadyToBeUploaded": "Priset är klart att laddas upp",
 		"PricesAlreadyUploaded": "Priserna har redan laddats upp",
+		"PricesAll": "Alla priser",
 		"PricesMore": "Fler priser",
 		"PricesAdded": "Priser tillagda",
 		"PricesAddedToday": "Priser tillagda idag",
@@ -382,6 +425,7 @@
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} bevis uppladdade",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,6 +433,8 @@
 		"Quantity": "Kvantitet",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Rang",
+		"Reason": "Anledning",
 		"RECEIPT": "Kvitto",
 		"Receipt": "Kvitto",
 		"Receipts": "Kvitton",
@@ -397,12 +443,17 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Leveranskostnader",
 		"Recent": "Senaste",
+		"Re-open": "Öppna igen",
+		"ReportProblem": "Rapportera ett problem",
+		"Reset": "Återställ",
+		"Resolved": "Löst",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Sök",
 		"Select": "Välj",
+		"Send": "Skicka",
 		"Settings": "Inställningar",
-		"SignInOFFAccount": "Logga in med ditt {url} -konto",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Inloggad!",
 		"SignIn": "Logga in",
 		"SignOut": "Logga ut",
@@ -412,12 +463,14 @@
 		"SourceCode": "Källkod",
 		"Start": "Start",
 		"Stats": "Statistik",
+		"Status": "Status",
 		"SuggestedBarcode": "Föreslagen streckkod:",
 		"Summary": "Sammanfattning",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "Text",
 		"Thanks": "Tack",
 		"Theme": "Tema",
 		"ThemeLight": "Ljust",
@@ -453,11 +506,22 @@
 		"Users": "Användare",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Användaren hittades inte",
 		"Validate": "Validera",
 		"ValidatePrices": "Validera priser",
 		"ValidatePricesWithAI": "Validera priser med AI",
+		"ValidatePricesFromCommunity": "Validera priser från communityn",
 		"View": "Visa",
 		"Website": "Webbplats",
+		"WithAPrice": "Med ett pris",
+		"WithoutAPrice": "Utan pris",
 		"Year": "År",
 		"Years": "År",
 		"Yes": "Ja",
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Välj {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Länder där såld",
+		"CreateNewProduct": "Skapa en ny produkt",
+		"CreateProduct": "Skapa produkt",
+		"EnableCropMode": "Aktivera beskärningsläge",
+		"Flavor": "Välj det projekt där produkten ska skapas",
+		"NextProof": "Next proof",
+		"PreviousProof": "Tidigare bevis",
+		"ProductAlreadyExists": "Produkten finns redan",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Butiker där såldes",
+		"UseCropModeToAddImage": "För att lägga till en produktbild, aktivera beskärningsläget under korrekturbilden och rita en rektangel runt produkten.",
+		"ProductMissingPromoBanner": "Experiment: skapa den här produkten med hjälp av data från Open Prices"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "Rensa",
 		"NoResult": "Inga resultat hittades",
+		"NoResultHelpKeywords": "Hittar du inte din butik? Försök att använda nyckelord istället för den fullständiga adressen (t.ex. 'Carrefour 75013 Paris' eller 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Hittar du fortfarande inte din butik? Den kanske inte finns i {osm_name} ännu. Du kan lägga till den på {osm_url} först.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -576,7 +659,7 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Bevis",
 		"FullPrice": "Fullt pris",
 		"UnknownProduct": "Okänd produkt"
 	},
@@ -654,7 +737,7 @@
 		"PromoReceiptAssistant": "Experiment: prova den nya kvittoassistenten för att automatiskt extrahera priser från dina kvitton!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
+		"Proof": "Bevis",
 		"PRICE_TAG": "Prislapp",
 		"RECEIPT": "Kvitto",
 		"GDPR_REQUEST": "GDPR request",
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Pris saknas",
-		"MissingProduct": "Produkt saknas",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Kvittoartiklar",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "Om"
+		},
+		"Add": {
+			"Title": "Lägg till"
 		},
 		"AddPrice": {
 			"Title": "Lägg till ett pris"
@@ -728,6 +814,18 @@
 		"AddProofMultiple": {
 			"Title": "Lägg till flera bevis"
 		},
+		"AddProofReceipt": {
+			"Title": "Lägg till bevis (kvitto)"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "Utforska"
+		},
 		"Locations": {
 			"Title": "Platser"
 		},
@@ -743,11 +841,20 @@
 		"Prices": {
 			"Title": "Priser"
 		},
+		"PriceTags": {
+			"Title": "Prislappar"
+		},
 		"Proofs": {
 			"Title": "Bevis"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Kvitto"
+		},
+		"Cities": {
+			"Title": "Städer"
 		},
 		"Community": {
 			"Title": "Community"
@@ -755,11 +862,18 @@
 		"Contribute": {
 			"Title": "Bidra"
 		},
+		"Countries": {
+			"Title": "Länder"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiment"
 		},
 		"Home": {
-			"Title": "Hem"
+			"Title": "Hem",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -770,11 +884,14 @@
 		"LatestProofs": {
 			"Title": "Senaste bevis"
 		},
+		"Moderation": {
+			"Title": "Måtta"
+		},
 		"MyPrices": {
 			"Title": "Mina priser"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Mina bevis"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Assistent för bevisprislappar"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Utmaningar"
+			"Title": "Utmaningar",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validera",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validera priser"
@@ -845,6 +964,7 @@
 		"ServerError": "Fel: serverfel",
 		"Title": "Logga in",
 		"SignInOFFAccount": "Logga in med ditt {url} -konto",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Användarnamn",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Utan en produkt",
 		"WithBarcode": "Med en streckkod",
 		"WithCategory": "Med en kategori",
+		"PricesPerSource": "Priser per källa",
+		"ProofsPerSource": "Bevis per källa",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Senast uppdaterad {date}"
 	},
@@ -877,7 +999,7 @@
 		"LoadMore": "Ladda fler",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Mina priser",
-		"MyProofs": "My proofs",
+		"MyProofs": "Mina bevis",
 		"ProofUpdated": "Bevis uppdaterat!",
 		"Settings": "Inställningar",
 		"Title": "Dashboard",
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Streckkodsläsare",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Standardläge",
 		"FavoriteCurrencies": "Favoritvalutor",
 		"CurrencyRequired": "At least one currency is required",

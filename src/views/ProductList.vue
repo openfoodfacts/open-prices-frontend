@@ -1,11 +1,14 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-database-outline">
         {{ $t('Common.ProductCount', { count: productTotal }) }}
       </v-chip>
-      <FilterMenu kind="product" :currentFilterList="currentFilterList" :currentSource="currentSource" @update:currentFilterList="updateFilterList($event)" @update:currentSource="toggleProductSource($event)" />
-      <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="productList.length" :totalCount="productTotal" />
+        <FilterMenu kind="product" :currentFilterList="currentFilterList" :currentSource="currentSource" @update:currentFilterList="updateFilterList($event)" @update:currentSource="toggleProductSource($event)" />
+        <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      </template>
     </v-col>
   </v-row>
 
@@ -24,12 +27,13 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
   components: {
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
@@ -91,7 +95,7 @@ export default {
       if ((this.productTotal != null) && (this.productList.length >= this.productTotal)) return
       this.loading = true
       this.productPage += 1
-      return api.getProducts(this.getProductsParams)
+      return openPricesApi.getProducts(this.getProductsParams)
         .then((data) => {
           this.productList.push(...data.items)
           this.productTotal = data.total
@@ -108,7 +112,7 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.SOURCE_PARAM]: this.currentSource } })
       // this.initProductList() will be called in watch $route
     },
-    selectProductOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })

@@ -5,7 +5,7 @@
         {{ $t('Challenge.StepTakePictures.line1') }}
       </p>
       <a :href="challenge.example_proof_url" target="_blank">
-        <v-img :src="challenge.example_proof_url" style="max-height: 200px" />
+        <v-img :src="challenge.example_proof_url" max-height="200px" />
       </a>
       <p class="mb-2 mt-2">
         {{ $t('Challenge.StepTakePictures.line2') }}
@@ -29,7 +29,7 @@
         variant="flat"
         :block="!$vuetify.display.smAndUp"
         prepend-icon="mdi-image-plus"
-        to="/proofs/add/multiple"
+        to="/proofs/add/price-tags"
       >
         {{ $t('Challenge.StepTakePictures.AddPictures') }}
       </v-btn>

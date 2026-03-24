@@ -77,11 +77,7 @@
       </v-row>
     </v-col>
     <v-col cols="12">
-      <i18n-t keypath="Stats.LastUpdated" tag="span" :title="getRelativeDateTimeFormatted(challenge.stats.updated)">
-        <template #date>
-          {{ getDateTimeFormatted(challenge.stats.updated) }}
-        </template>
-      </i18n-t>
+      <StatsLastUpdatedAlert v-if="challenge.stats?.updated" :lastUpdated="challenge.stats.updated" />
     </v-col>
   </v-row>
 
@@ -91,8 +87,22 @@
         {{ $t('Challenge.MostRecentContributions') }}
       </h2>
     </v-col>
-    <v-col v-for="price in challenge.latestContributions.slice(0, 10)" :key="price" cols="12" sm="6" md="4" xl="3">
+    <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+    </v-col>
+    <v-col cols="12" sm="6" md="4" xl="3" align="center">
+      <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
+      <br v-if="$vuetify.display.smAndUp">
+      <v-btn
+        v-if="displayedPriceList.length"
+        color="primary"
+        :block="!$vuetify.display.smAndUp"
+        :to="getChallengePriceListUrl"
+        prepend-icon="mdi-tag-multiple-outline"
+        append-icon="mdi-arrow-right"
+      >
+        {{ $t('Common.PricesAll') }}
+      </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -101,8 +111,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api.js'
-import date_utils from '../utils/date.js'
+import openPricesApi from '../services/openPricesApi'
 
 export default {
   components: {
@@ -113,6 +122,7 @@ export default {
     ChallengeValidateCard: defineAsyncComponent(() => import('../components/ChallengeValidateCard.vue')),
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
     RankingTableCard: defineAsyncComponent(() => import('../components/RankingTableCard.vue')),
+    StatsLastUpdatedAlert: defineAsyncComponent(() => import('../components/StatsLastUpdatedAlert.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
   data() {
@@ -136,7 +146,10 @@ export default {
     },
     getChallengePriceListUrl() {
       return `/challenges/${this.challenge.id}/prices`
-    }
+    },
+    displayedPriceList() {
+      return this.challenge?.latestContributions.slice(0, 10) || []
+    },
   },
   mounted() {
     this.getChallenge()
@@ -149,9 +162,10 @@ export default {
         params.id = this.$route.params.id
       } else {
         // No id specified, get the current challenge
-        params.status = "ONGOING"
+        params.status = 'ONGOING'
+        params.order_by = '-created'
       }
-      api.getChallenges(params)
+      openPricesApi.getChallenges(params)
       .then((data) => {
         this.loading = false
         if (data.items.length) {
@@ -163,39 +177,33 @@ export default {
     },
     getStats() {
       this.loading = true
-      api.getPriceStats(this.defaultParams)
+      openPricesApi.getPriceStats(this.defaultParams)
       .then((data) => {
         this.challenge.numberOfContributions = data.price__count
         this.loading = false
       })
 
-      api.getProofs({ ...this.defaultParams, size: 1 })
+      openPricesApi.getProofs({ ...this.defaultParams, size: 1 })
       .then((data) => {
         this.challenge.numberOfProofs = data.total
       })
 
       if (this.username) {
-        api.getPriceStats({ ...this.defaultParams, owner: this.username })
+        openPricesApi.getPriceStats({ ...this.defaultParams, owner: this.username })
         .then((data) => {
           this.challenge.userContributions = data.price__count
         })
-        api.getProofs({ ...this.defaultParams, owner: this.username, size: 1 })
+        openPricesApi.getProofs({ ...this.defaultParams, owner: this.username, size: 1 })
         .then((data) => {
           this.challenge.userProofContributions = data.total
         })
       }
     },
     getLatestPrices() {
-      api.getPrices({ ...this.defaultParams, size: 10 })
+      openPricesApi.getPrices({ ...this.defaultParams, size: 10 })
       .then((data) => {
         this.challenge.latestContributions = data.items
       })
-    },
-    getDateTimeFormatted(dateTimeString) {
-      return date_utils.offDateTime(dateTimeString)
-    },
-    getRelativeDateTimeFormatted(dateTimeString) {
-      return date_utils.prettyRelativeDateTime(dateTimeString, 'short')
     },
   }
 }

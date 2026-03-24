@@ -8,12 +8,28 @@
       <v-divider />
 
       <v-card-text>
-        <p class="mb-1">
-          {{ $t('PriceDelete.Confirmation') }}
-        </p>
         <v-row>
-          <v-col cols="12" md="6">
-            <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="true" :readonly="true" />
+          <v-col cols="12">
+            <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="false" :hideActionMenuButton="true" :readonly="true" />
+          </v-col>
+        </v-row>
+        <!-- moderator-only alerts -->
+        <v-row v-if="!userIsPriceOwner && userIsModerator">
+          <v-col cols="12">
+            <ModerationAlert source="price" />
+          </v-col>
+        </v-row>
+        <v-row v-if="!userIsPriceOwner && userIsModerator">
+          <v-col cols="12">
+            <ModerationAlert source="price" action="delete" />
+          </v-col>
+        </v-row>
+        <!-- confirmation message -->
+        <v-row>
+          <v-col cols="12">
+            <p>
+              {{ $t('PriceDelete.Confirmation') }}
+            </p>
           </v-col>
         </v-row>
       </v-card-text>
@@ -39,11 +55,14 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
+import openPricesApi from '../services/openPricesApi'
 
 export default {
   components: {
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    ModerationAlert: defineAsyncComponent(() => import('../components/ModerationAlert.vue')),
   },
   props: {
     price: {
@@ -58,6 +77,16 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
+    username() {
+      return this.appStore.user.username
+    },
+    userIsPriceOwner() {
+      return this.username && this.price && this.price.owner === this.username
+    },
+    userIsModerator() {
+      return this.username && this.appStore.user.is_moderator
+    },
     dialogHeight() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
@@ -68,7 +97,7 @@ export default {
   methods: {
     deletePrice() {
       this.loading = true
-      api
+      openPricesApi
         .deletePrice(this.price.id)
         .then((response) => {  // eslint-disable-line no-unused-vars
           // if response.status == 204

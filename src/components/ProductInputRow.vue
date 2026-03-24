@@ -1,5 +1,5 @@
 <template>
-  <v-row v-if="mode === 'edit'">
+  <v-row v-if="!hideProductTypeInput">
     <v-col>
       <v-item-group v-model="productForm.type" class="d-inline" mandatory @update:modelValue="setType($event)">
         <v-item v-for="pt in productTypeDisplayList" :key="pt.key" v-slot="{ isSelected, toggle }" :value="pt.key">
@@ -12,17 +12,17 @@
       </v-item-group>
     </v-col>
   </v-row>
-  <v-row v-if="mode === 'edit' && !hideBarcodeMode && productIsTypeProduct" class="mt-0">
+  <v-row v-if="productIsTypeProduct" class="mt-0">
     <v-col>
-      <v-btn class="mb-2" size="small" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
+      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :isSelected="true" :readonly="true" elevation="1" @editProduct="showBarcodeScannerDialog" />
+      <v-btn v-else class="text-body-2 mb-2" block spaced="end" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
         {{ $t('Common.ProductFind') }}
       </v-btn>
-      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="true" elevation="1" />
     </v-col>
   </v-row>
-  <v-row v-else-if="mode === 'edit' && productIsTypeCategory" class="mt-0">
+  <v-row v-else-if="productIsTypeCategory" class="mt-0">
     <v-col cols="6">
-      <div class="text-subtitle-2 required">
+      <div class="text-body-2 required">
         {{ $t('AddPriceSingle.ProductInfo.CategoryLabel') }}
       </div>
       <v-autocomplete
@@ -37,7 +37,7 @@
       />
     </v-col>
     <v-col cols="6">
-      <div class="text-subtitle-2">
+      <div class="text-body-2">
         {{ $t('AddPriceSingle.ProductInfo.OriginLabel') }}
       </div>
       <v-autocomplete
@@ -48,6 +48,7 @@
         :item-title="item => item.name"
         :item-value="item => item.id"
         hide-details="auto"
+        @update:modelValue="newValue => productForm.origins_tags = replaceStringWithList(newValue)"
       />
     </v-col>
     <v-col class="pt-0" cols="6">
@@ -60,29 +61,8 @@
         :label="lt.name"
         :value="lt.id"
         hide-details="auto"
+        @update:modelValue="newValue => productForm.labels_tags = replaceStringWithList(newValue)"
       />
-    </v-col>
-  </v-row>
-
-  <v-row v-else-if="mode === 'display'">
-    <v-col v-if="productIsTypeProduct" cols="12">
-      <v-alert
-        class="mb-2"
-        icon="mdi-barcode"
-        density="compact"
-      >
-        {{ productForm.product_code }}
-      </v-alert>
-      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
-    </v-col>
-    <v-col v-else-if="productIsTypeCategory" cols="12">
-      <v-alert
-        icon="mdi-basket-outline"
-        density="compact"
-      >
-        <PriceCategoryChip :priceCategory="productForm.category_tag" />
-        <PriceCategoryDetails :price="productForm" />
-      </v-alert>
     </v-col>
   </v-row>
 
@@ -91,7 +71,7 @@
     v-model="barcodeScannerDialog"
     :hideBarcodeScannerTab="hideBarcodeScannerTab"
     :barcodeManualInputPrefillValue="productForm.product_code"
-    :barcodeManualInputCroppedImage="productForm.croppedImage"
+    :barcodeManualInputCroppedImage="productForm.image_path"
     :barcodeManualInputSimilarBarcodes="productForm.similar_barcodes"
     @barcode="setProductCode($event)"
     @close="barcodeScannerDialog = false"
@@ -102,15 +82,13 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
-    PriceCategoryDetails: defineAsyncComponent(() => import('../components/PriceCategoryDetails.vue')),
     BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
   },
   props: {
@@ -121,19 +99,16 @@ export default {
         product: null,
         product_code: '',
         category_tag: null,
-        origins_tags: '',
-        labels_tags: []
+        origins_tags: [],
+        labels_tags: [],
+        image_path: null,  // price tag cropped image URL
       })
-    },
-    mode: {
-      type: String,
-      default: constants.PRICE_FORM_DISPLAY_LIST[1].key,  // 'edit'
     },
     disableInitWhenSwitchingType: {
       type: Boolean,
       default: () => false
     },
-    hideBarcodeMode: {
+    hideProductTypeInput: {
       type: Boolean,
       default: false
     },
@@ -164,21 +139,18 @@ export default {
       return this.productForm && this.productForm.type === constants.PRICE_TYPE_CATEGORY
     },
     productTypeDisplayList() {
-      if (this.hideBarcodeMode) {
-        return constants.PRICE_TYPE_LIST.filter(pt => pt.key !== constants.PRICE_TYPE_PRODUCT)
-      }
       return constants.PRICE_TYPE_LIST
     },
-    productBarcodeFormFilled() {
+    productProductFormFilled() {
       let keys = ['product_code']
       return Object.keys(this.productForm).filter(k => keys.includes(k)).every(k => !!this.productForm[k])
     },
-    productCategoryFormFilled() {
+    categoryProductFormFilled() {
       let keys = ['category_tag']  // 'origins_tags'
       return Object.keys(this.productForm).filter(k => keys.includes(k)).every(k => !!this.productForm[k])
     },
     productFormFilled() {
-      return this.productBarcodeFormFilled || this.productCategoryFormFilled
+      return this.productIsTypeCategory ? this.categoryProductFormFilled : this.productProductFormFilled
     },
   },
   watch: {
@@ -222,7 +194,7 @@ export default {
       this.productForm.product = null
       this.productForm.product_code = ''
       this.productForm.category_tag = null
-      this.productForm.origins_tags = ''
+      this.productForm.origins_tags = []
       this.productForm.labels_tags = []
     },
     setType(type) {
@@ -237,15 +209,19 @@ export default {
     },
     getProduct(code) {
       this.productForm.product = null
-      api
+      openPricesApi
         .getProductByCode(code)
         .then((data) => {
           this.productForm.product = data.id ? data : {'code': code, 'price_count': 0}
         })
-        .catch((error) => {  // eslint-disable-line no-unused-vars
-          alert("Error: Open Prices server error")
+        .catch((error) => {
+          alert(this.$t('Common.ServerError'))
+          console.log(error)
         })
     },
+    replaceStringWithList(value) {
+      return utils.replaceStringWithList(value)
+    }
   }
 }
 </script>

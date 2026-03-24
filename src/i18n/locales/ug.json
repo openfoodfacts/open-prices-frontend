@@ -162,7 +162,8 @@
 		"StatsAndRankings": "سىتاستىكا ۋە رەت تەرتىپى",
 		"MostPicturesAdded": "كۆپىنچە رەسىملەر قوشۇلدى",
 		"MostPricesAdded": "كۆپىنچە باھا قوشۇلدى",
-		"MostPricesFromPicturesAdded": "رەسىملەرنىڭ كۆپىنچىسى قوشۇلدى"
+		"MostPricesFromPicturesAdded": "رەسىملەرنىڭ كۆپىنچىسى قوشۇلدى",
+		"AlertNew": "You have an idea for a new challenge? Let us know {url}!"
 	},
 	"Common": {
 		"About": "ھەققىدە",
@@ -177,8 +178,12 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "يېڭى باھا بەلگىلىرىنى قوشۇڭ",
+		"AddNewProofReceipt": "يېڭى تالون قوشۇش",
 		"AddToOFF": "Add to {name}",
+		"Added": "قوشۇلدى",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "تازىلاش",
+		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -220,6 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -229,6 +236,7 @@
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "تەڭشەكلىرىڭىزگە پۇللارنى قوشالايسىز.",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
@@ -241,6 +249,9 @@
 		"Error": "Error",
 		"Experiment": "تەجرىبە",
 		"Experiments": "Experiments",
+		"Explore": "ئىزدىنىش",
+		"FromPriceTag": "باھا بەلگىسىدىن",
+		"FromReceipt": "تالوندىن",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Label",
@@ -250,6 +261,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Learn more",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -257,8 +269,12 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Date",
 		"DateMissing": "Date missing",
+		"DateProofHelpText": "رەسىمنىڭ ۋاقتى.",
+		"DateProofHelpTextExif": "سۈكۈتتىكى ھالەتتە، بىز ئۇنى رەسىمنىڭ EXIF مېتا سانلىق مەلۇماتلىرىدىن چىقىرىشقا تىرىشىمىز.",
+		"DateProofHelpTextReceipt": "تالونلار ئۈچۈن، ئۇنى سېتىۋېلىش ۋاقتىغا تەڭشەڭ.",
 		"Details": "Details",
 		"Delete": "ئۆچۈرۈش",
 		"DeveloperMode": "Developer mode",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "مەيدان تەلەپ قىلىنىدۇ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "باھالار بىلەن",
+		"FilterWithLocationCount": "ئورۇنلىرى بىلەن",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "پەقەت مېنىڭ دۆلىتىمدىكى دەلىللەرنىلا كۆرسىتىڭ",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "ئىناۋەتلىك تاياقچە كودى بىلەن",
 		"FilterPriceTagWithTagPredictionProductExists": "ئۈنۈملۈك مەھسۇلات بىلەن",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "ئىناۋەتلىك سەھىپە بەلگىسى بىلەن",
@@ -299,6 +320,7 @@
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
 		"Help": "Help",
+		"Here": "بۇ يەردە",
 		"History": "تارىخ",
 		"Image": "Image",
 		"ImageSelect": "Select an image",
@@ -314,19 +336,33 @@
 		"Map": "Map",
 		"Miscellaneous": "Miscellaneous",
 		"MobileApp": "Mobile app",
+		"Moderation": "ئوتتۇراھال",
+		"ModerationFlagReasonWrongType": "خاتا تىپ",
+		"ModerationFlagReasonWrongPriceValue": "باھانىڭ خاتا",
+		"ModerationFlagReasonWrongCurrency": "خاتا پۇل",
+		"ModerationFlagReasonWrongProduct": "خاتا مەھسۇلات",
+		"ModerationFlagReasonWrongLocation": "ئورنى خاتا",
+		"ModerationFlagReasonWrongDate": "خاتا چېسلا",
+		"ModerationFlagReasonOther": "Other",
+		"ModerationFlagCreateSuccess": "دوكلاتىڭىزغا رەھمەت!",
+		"ModerationFlagStatusOpen": "ئېچىڭ",
+		"ModerationFlagStatusClosed": "تاقالدى",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"MyStats": "My stats",
+		"New": "يېڭى",
 		"NextProof": "Next proof",
 		"NoBarcode": "تاياقچە كودى يوق",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "ئېچىڭ",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "نامى",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -356,12 +392,19 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
 		"PriceTags": "باھا بەلگىسى",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "باھا يوقاپ كەتتى",
+		"PricePerMissing": "يوقاپ كەتكەنلەرنىڭ باھاسى",
+		"PriceAlreadyUploaded": "باھاسى ئاللىبۇرۇن يوللاندى",
+		"PriceReadyToBeUploaded": "يوللاشقا تەييار باھا",
 		"PricesAlreadyUploaded": "باھاسى ئاللىبۇرۇن يوللاندى",
+		"PricesAll": "بارلىق باھالار",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -382,6 +425,7 @@
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} يوللانغان ئىسپاتلار",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,6 +433,8 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "دەرىجە",
+		"Reason": "Reason",
 		"RECEIPT": "Receipt",
 		"Receipt": "Receipt",
 		"Receipts": "Receipts",
@@ -397,12 +443,17 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "قايتا ئېچىڭ",
+		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
+		"Resolved": "ھەل بولدى",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Search",
 		"Select": "Select",
+		"Send": "Send",
 		"Settings": "تەڭشەك",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "كىرىش",
 		"SignOut": "Sign out",
@@ -412,12 +463,14 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "تەكلىپ قىلىنغان تاياقچە كودى:",
 		"Summary": "قىسقىچە مەزمۇن",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "تېكىست",
 		"Thanks": "Thanks",
 		"Theme": "Theme",
 		"ThemeLight": "Light",
@@ -453,11 +506,22 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "ئىشلەتكۈچى تېپىلمىدى",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "جەمئىيەتتىن باھانى دەلىللەڭ",
 		"View": "View",
 		"Website": "Website",
+		"WithAPrice": "With a price",
+		"WithoutAPrice": "باھاسىز",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "ھەئە",
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "يېڭى مەھسۇلات يارىتىڭ",
+		"CreateProduct": "مەھسۇلات يارىتىش",
+		"EnableCropMode": "زىرائەت ھالىتىنى قوزغىتىڭ",
+		"Flavor": "مەھسۇلات قۇرماقچى بولغان تۈرنى تاللاڭ",
+		"NextProof": "Next proof",
+		"PreviousProof": "ئالدىنقى ئىسپات",
+		"ProductAlreadyExists": "مەھسۇلات ئاللىبۇرۇن مەۋجۇت",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Proof ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "سېتىلىدىغان دۇكانلار",
+		"UseCropModeToAddImage": "مەھسۇلات رەسىمىنى قوشۇش ئۈچۈن ، دەلىللەش رەسىمىنىڭ ئاستىدىكى زىرائەت ھالىتىنى قوزغىتىپ ، مەھسۇلاتنىڭ ئەتراپىغا تىك تۆت بۇلۇڭ سىزىڭ.",
+		"ProductMissingPromoBanner": "سىناق: ئوچۇق باھادىكى سانلىق مەلۇماتلارنى ئىشلىتىپ بۇ مەھسۇلاتنى يارىتىڭ"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "تازىلاش",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "دۇكىنىڭىزنى تاپالمىدىڭىزمۇ؟ تولۇق ئادرېسنىڭ ئورنىغا ئاچقۇچلۇق سۆزلەرنى ئىشلىتىپ بېقىڭ (مەسىلەن: «Carrefour 75013 پارى Paris» ياكى «Walmart San Francisco»).",
+		"NoResultHelpOSM": "Still can't find your shop? It might not be in {osm_name} yet. You can add it on {osm_url} first.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "مال تاپشۇرۇۋېلىش",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "ھەققىدە"
+		},
+		"Add": {
+			"Title": "قوشۇش"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +814,18 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "دەلىل (تالون) قوشۇڭ"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "ئىزدىنىش"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,11 +841,20 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "باھا بەلگىسى"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
+		},
+		"Cities": {
+			"Title": "شەھەرلەر"
 		},
 		"Community": {
 			"Title": "Community"
@@ -755,11 +862,18 @@
 		"Contribute": {
 			"Title": "Contribute"
 		},
+		"Countries": {
+			"Title": "Countries"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "باش بەت"
+			"Title": "باش بەت",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -769,6 +883,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "ئوتتۇراھال"
 		},
 		"MyPrices": {
 			"Title": "My prices"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "ئىسپات باھا بەلگىسى ياردەمچىسى"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "كىرىش",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "ھەر بىر مەنبەنىڭ باھاسى",
+		"ProofsPerSource": "ھەر بىر مەنبەنىڭ ئىسپاتى",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

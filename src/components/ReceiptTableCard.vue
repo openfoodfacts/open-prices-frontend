@@ -1,63 +1,78 @@
 <template>
   <v-card>
     <template #title>
-      {{ $t('ReceiptAssistant.ReceiptItemsCheck') }}
+      {{ $t('ReceiptAssistant.ReceiptItems') }}
     </template>
 
     <v-divider />
 
     <v-card-text>
-      <v-data-table :headers="headers" :items="items" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" items-per-page="100" :disable-sort="true">
+      <v-data-table :headers="headers" :items="items" :row-props="setTableRowClass" :items-per-page="tablePageLimit" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
+        <template #[`item.status`]="{ item }">
+          <v-sheet v-if="item.existingPrice">
+            <v-icon icon="mdi-tag-check-outline" :disabled="true" :title="$t('Common.PriceAlreadyUploaded')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-disabled ml-2">{{ $t('Common.PriceAlreadyUploaded') }}</span>
+          </v-sheet>
+          <v-sheet v-else-if="!item.price">
+            <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.PriceMissing')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.PriceMissing') }}</span>
+          </v-sheet>
+          <v-sheet v-else-if="itemIsCategory(item) ? !item.category_tag : !item.product_code">
+            <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.ProductMissing')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.ProductMissing') }}</span>
+          </v-sheet>
+          <v-sheet v-else>
+            <v-icon icon="mdi-tag-plus-outline" color="success" :title="$t('Common.PriceReadyToBeUploaded')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-success ml-2">{{ $t('Common.PriceReadyToBeUploaded') }}</span>
+          </v-sheet>
+        </template>
         <template #[`item.product_name`]="{ item }">
-          <v-text-field v-if="item.manuallyAdded" v-model="item.product_name" :hide-details="true" :rules="rules" />
+          <v-text-field
+            v-if="item.manuallyAdded"
+            v-model="item.product_name"
+            density="compact"
+            :rules="rules"
+            :hide-details="true"
+          />
           <p v-else>
             {{ item.product_name }}
           </p>
-          <p v-if="showInfoDetails">
-            <span v-if="item.existingPrice" class="text-caption text-warning">{{ $t('ReceiptAssistant.PriceAlreadyCreatedForItem') }}</span>
-            <span v-else-if="!item.price" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingPrice') }}</span>
-            <span v-else-if="item.isCategory ? !item.category_tag : !item.product_code" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingProduct') }}</span>
-            <span v-else class="text-caption text-success">{{ $t('ReceiptAssistant.PriceReadyToBeAdded') }}</span>
-          </p>
         </template>
         <template #[`item.product`]="{ item }">
-          <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
-          <v-container v-else-if="!item.productFound">
-            <v-text-field 
-              v-model="item.product_code"
-              :hide-details="true"
-              density="compact"
-              :rules="rules"
-              :append-inner-icon="item.product_code ? 'mdi-magnify' : 'mdi-barcode-scan'"
-              @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
-              @keydown.enter="findProduct(item)"
-            />
-            <div v-if="item.predicted_product_code" class="text-caption">
+          <template v-if="!itemIsCategory(item)">
+            <ProductCard v-if="item.existingPrice" :product="item.product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+            <ProductInputRow v-else :productForm="item" :hideProductTypeInput="true" :hideProductBarcode="false" />
+            <div v-if="showProductCodeSuggestion(item)" class="text-caption">
               {{ $t('Common.SuggestedBarcode') }}
-              <span
-                class="fake-link"
-                @click="handleClickProductCodeSuggestion(item)"
-              >
+              <a class="fake-link" role="link" tabindex="0" @click="handleClickProductCodeSuggestion(item)" @keydown.enter="handleClickProductCodeSuggestion(item)">
                 {{ item.predicted_product_code }}
-              </span>
+              </a>
             </div>
-          </v-container>
-          <ProductCard v-else :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+          </template>
+          <template v-else>
+            <PriceCategoryDetailsRow :price="item" :hideCategoryChip="false" />
+          </template>
         </template>
         <template #[`item.price`]="{ item }">
-          <v-text-field
-            v-model="item.price"
-            :suffix="itemPriceSuffix(item)"
-            :hide-details="true"
-            density="compact"
-            variant="outlined"
-            type="text"
-            inputmode="decimal"
-            :rules="rules"
-          />
+          <PricePriceRow v-if="item.existingPrice" :price="item" />
+          <template v-else>
+            <v-text-field
+              v-model="item.price"
+              :class="item.price ? 'outline-border-success' : 'outline-border-error'"
+              density="compact"
+              variant="outlined"
+              type="text"
+              inputmode="decimal"
+              :rules="priceRules"
+              :suffix="itemPriceSuffix(item)"
+              :hide-details="true"
+              @update:modelValue="newValue => item.price = replaceCommaWithDot(newValue)"
+            />
+            <PriceDiscountChip v-if="itemHasDiscount(item)" class="mt-1" :price="item" />
+          </template>
         </template>
         <template #[`item.receipt_quantity`]="{ item }">
-          {{ item.receipt_quantity }}
+          <PriceQuantityPurchasedChip :priceQuantityPurchased="item.receipt_quantity" />
         </template>
         <template #[`item.actions`]="{ item }">
           <v-row class="float-right">
@@ -102,33 +117,40 @@
       :hideUploadAction="false"
       :hidePriceTagStatusMenu="true"
       :isInDialog="true"
-      forceMode="edit"
       @validatePriceTag="confirmProduct($event)"
       @close="editProductDialog = false"
     />
   </v-dialog>
-  <BarcodeScannerDialog
-    v-if="barcodeScannerDialog"
-    v-model="barcodeScannerDialog"
-    @barcode="setProductCodeFromScanner($event)"
-    @close="barcodeScannerDialog = false"
-  />
 </template>
   
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import price_utils from '../utils/price.js'
+import utils from '../utils.js'
+
+const NEW_ITEM = {
+  type: constants.PRICE_TYPE_PRODUCT,
+  product: null,
+  product_name: '',
+  product_code: '',
+  category_tag: null,
+  price: null,
+  receipt_quantity: 1,
+}
 
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
+    ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
+    PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
+    PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
+    PriceDiscountChip: defineAsyncComponent(() => import('../components/PriceDiscountChip.vue')),
+    PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
     ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
     ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
     ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
-    BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
   },
   props: {
     proof: {
@@ -147,25 +169,35 @@ export default {
   emits: ['receiptItemsUpdated'],
   data() {
     return {
-      showInfoDetails: true,
       items: [],
       headers: [
-        { title: 'Product Name', key: 'product_name' },
-        { title: 'Product', key: 'product' },
-        { title: 'Price', key: 'price', minWidth: '150px' },
-        { title: 'Quantity', key: 'receipt_quantity' },
-        { title: 'Actions', key: 'actions' },
+        { title: this.$t('Common.Status'), key: 'status' },
+        { title: this.$t('Common.Text'), key: 'product_name', maxWidth: '150px' },
+        { title: this.$t('Common.Product'), key: 'product' },
+        { title: this.$t('Common.Price'), key: 'price', minWidth: '150px' },
+        { title: this.$t('Common.Quantity'), key: 'receipt_quantity' },
+        { title: this.$t('Common.Actions'), key: 'actions' },
       ],
+      tablePageLimit: -1,  // all items
+      showInfoDetails: true,
       editProductDialog: false,
       editProductItem: null,
-      barcodeScannerDialog: false,
-      barcodeScannerItem: null,
       rules: [
-        v => !!v || '',
+        value => !!value || '',
       ],
     }
   },
   computed: {
+    priceRules() {
+      return [
+        value => !!value && !!value.toString().trim() || this.$t('PriceRules.AmountRequired'),
+        value => !value.toString().trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
+        value => !isNaN(value) || this.$t('PriceRules.Number'),
+        value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
+        value => !value.toString().match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
+        value => !!value && !!this.proof.currency || this.$t('Common.CurrencyMissing'),
+      ]
+    },
     proofPriceListSum() {
       return price_utils.priceSum(this.items.map(item => {
         return {
@@ -173,7 +205,7 @@ export default {
           receipt_quantity: item.receipt_quantity
         }
       }))
-    }
+    },
   },
   watch: {
     items: {
@@ -198,57 +230,104 @@ export default {
       this.items = this.receiptItems.map((item) => {
         if (item.price_id) {
           item.existingPrice = this.proofPriceExistingList.find(price => price.id === item.price_id)
-          item.productFound = item.existingPrice.product
-          item.product_code = item.existingPrice.product?.code
-          item.category_tag = item.existingPrice.category_tag
-          item.isCategory = ![null, '', 'unknown', 'other'].includes(item.existingPrice.category_tag)
-          item.price_is_discounted = item.existingPrice.price_is_discounted
-          item.price_without_discount = item.existingPrice.price_without_discount
-          item.discount_type = item.existingPrice.discount_type
-          item.price_per = item.existingPrice.price_per
-          item.receipt_quantity = item.existingPrice.receipt_quantity
-          // predictions
-          item.price = item.existingPrice.price
-          if (!item.product_name) {
-            item.product_name = item.existingPrice.product_name
-          }
+          Object.assign(item, item.existingPrice)
         } else {
-          item.productFound = null
-          item.product_code = ""
-          item.price_is_discounted = false
-          item.price_without_discount = null
-          item.discount_type = null
-          item.receipt_quantity = 1
-          // predictions
-          const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
-          if (categoryPredicted) {
-            item.category_tag = item.predicted_data.product
-            item.price_per = "KILOGRAM"
-          }
-          item.price = item.predicted_data.price || null
-          item.product_name = item.predicted_data.product_name || ''
-          item.predicted_product_code = item.predicted_data.predicted_product_code || null
+          Object.assign(item, this.formatReceiptItem(item))
         }
         return item
       })
     },
+    formatReceiptItem(item) {
+      /// Format the AI prediction into a ReceiptItem ready to be edited/validated
+      const predictedData = item.predicted_data
+
+      // for backward compatibility with schema version 1.0
+      if (item.schema_version === "1.0") {
+        const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
+        return {
+          type: constants.PRICE_TYPE_PRODUCT,
+          product: null,
+          product_code: '',
+          receipt_quantity: 1,
+          manuallyAdded: false,
+          product_name: predictedData.product_name,
+          category_tag: categoryPredicted ? predictedData.product : null,
+          price: predictedData.price || null,
+          price_per: categoryPredicted ? "KILOGRAM" : null,
+          predicted_product_code: predictedData.predicted_product_code || null,
+          // extra fields
+          currency: this.proof.currency,
+        }
+      } else {
+        // assume schema version 2.0 and above
+        let pricePer = predictedData.price_per
+        if (predictedData.type === constants.PRICE_TYPE_CATEGORY && pricePer == 'LITER') {
+          // On Open Prices, we use KILOGRAM for category prices, even for liquids
+          pricePer = 'KILOGRAM'
+        }
+
+        let receipt_quantity = predictedData.quantity
+        if (receipt_quantity === undefined || receipt_quantity === null) {
+          receipt_quantity = 1
+        }
+        
+        // is predictedData.category_tag is other, set it to null (let the user choose)
+        let category_tag = predictedData.category_tag
+        if (category_tag === 'other') {
+          category_tag = null
+        }
+        return {
+          type: predictedData.type,
+          product: null,
+          product_code: '',
+          manuallyAdded: false,
+          product_name: predictedData.product_name,
+          category_tag: category_tag,
+          price: predictedData.price,
+          price_per: pricePer,
+          predicted_product_code: predictedData.predicted_product_code || null,
+          receipt_quantity: receipt_quantity,
+          price_is_discounted: predictedData.price_is_discounted || null,
+          price_without_discount: predictedData.price_without_discount || null,
+          discount_type: predictedData.discount_type || null,
+          // extra fields
+          currency: this.proof.currency,
+        }
+      }
+    },
+    setTableRowClass(item) {
+      // grey out existing prices
+      if (item.item.existingPrice) {
+        return { class: 'text-disabled' }
+      }
+      return { class: '' }
+    },
+    replaceCommaWithDot(input) {
+      return utils.replaceCommaWithDot(input)
+    },
+    itemIsCategory(item) {
+      return item.type === constants.PRICE_TYPE_CATEGORY
+    },
     itemPriceSuffix(item) {
       let suffix = this.proof.currency
-      if (item.isCategory && item.category_tag) {
+      if (this.itemIsCategory(item) && item.category_tag) {
         suffix += '/' + (item.price_per === 'UNIT' ? 'U' : 'KG')
       }
       return suffix
     },
+    itemHasDiscount(item) {
+      return item.price_is_discounted
+    },
     findProduct(item) {
-      api
+      openPricesApi
         .getProductByCode(item.product_code)
         .then((data) => {
           const product = data.id ? data : {'code': item.product_code, 'price_count': 0}
-          item.productFound = product
+          item.product = product
         })
         .catch((error) => {
           console.log(error)
-          item.productFound = null
+          item.product = null
         })
     },
     deleteItem(item) {
@@ -256,56 +335,27 @@ export default {
     },
     addItem() {
       this.items.push({
-        manuallyAdded: true,
-        product_code: '',
-        product_name: '',
-        price: null,
-        receipt_quantity: 1,
-        productFound: null,
-        isCategory: false,
-        category_tag: null,
-        predicted_data: {}
+        ...NEW_ITEM,
+        manuallyAdded: true
       })
     },
     showEditProductDialog(item) {
       this.editProductDialog = true
       this.editProductItem = {
         index: this.items.indexOf(item),
-        type: item.isCategory ? constants.PRICE_TYPE_CATEGORY : constants.PRICE_TYPE_PRODUCT,
-        category_tag: ![null, '', 'unknown', 'other'].includes(item.category_tag) ? item.category_tag : null,
-        origins_tags: [],
-        labels_tags: [],
-        price: item.price ? item.price.toString() : (item.predicted_data.price ? item.predicted_data.price.toString() : null),
-        price_per: item.price_per,
-        price_is_discounted: item.price_is_discounted,
-        price_without_discount: item.price_without_discount ? item.price_without_discount.toString() : null,
-        discount_type: item.discount_type,
+        ...item,
         currency: this.proof.currency,
-        receipt_quantity: item.receipt_quantity.toString(),
         proof: this.proof,
         proofImage: null,
-        croppedImage: null,
-        product_code: item.product_code,
-        detected_product_code: item.product_code,
-        product_name: item.product_name
+        croppedImage: null
       }
     },
     confirmProduct(product) {
       this.editProductDialog = false
-      this.items[this.editProductItem.index].productFound = product.product
-      this.items[this.editProductItem.index].isCategory = product.type === constants.PRICE_TYPE_CATEGORY
-      this.items[this.editProductItem.index].category_tag = product.type === constants.PRICE_TYPE_CATEGORY ? product.category_tag : null
       Object.assign(this.items[this.editProductItem.index], product)
-      // this.editProductItem = null
     },
-    launchBarcodeScanner(item) {
-      this.barcodeScannerDialog = true
-      this.barcodeScannerItem = item
-    },
-    setProductCodeFromScanner(code) {
-      this.barcodeScannerDialog = false
-      this.barcodeScannerItem.product_code = code
-      this.findProduct(this.barcodeScannerItem)
+    showProductCodeSuggestion(item) {
+      return item.predicted_product_code && !(item.existingPrice || item.product_code)
     },
     handleClickProductCodeSuggestion(item) {
       item.product_code = item.predicted_product_code
@@ -317,20 +367,36 @@ export default {
 
 <style>
 @media (max-width: 960px) {
-  .v-table__wrapper > table > tbody > tr > td:first-child {
-    padding-top: 40px !important;
+  /**
+   * first & last column padding fix
+   * 16? same as left & right padding
+   */
+  .v-table__wrapper > table > tbody > tr:first-child > td:first-child {
+    padding-top: 0 !important;
+  }
+  .v-table__wrapper > table > tbody > tr:not(:first-child) > td:first-child {
+    padding-top: 16px !important;
   }
   .v-table__wrapper > table > tbody > tr > td:last-child {
-    padding-bottom: 40px !important;
+    padding-bottom: 16px !important;
   }
+  /**
+   * last column (actions) height fix
+   */
   .v-table__wrapper > table > tbody > tr > td:last-child > div:first-child {
-    height: 56px !important;
+    height: 44px !important;
     align-content: center !important;
   }
   /**
-  * hide "sort by" on mobile
-  * https://stackoverflow.com/a/78435096
-  */
+   * grid: 1/3 label 2/3 value
+   */
+  .v-data-table__tr--mobile > td {
+    grid-template-columns: 1fr 2fr;
+  }
+  /**
+   * hide "sort by" on mobile
+   * https://stackoverflow.com/a/78435096
+   */
   .v-data-table-headers--mobile {
     display: none;
   }

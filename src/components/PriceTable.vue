@@ -1,11 +1,14 @@
 <template>
-  <v-data-table :headers="headers" :items="priceList" fixed-header hide-default-footer>
+  <v-data-table :headers="headers" :items="priceList" :items-per-page="tablePageLimit" fixed-header hide-default-footer>
     <template #[`item.product_name`]="{ item }">
-      {{ getPriceProductTitle(item) }}
+      <span v-if="item.product">
+        {{ getPriceProductTitle(item) }}
+      </span>
+      <PriceCategoryChip v-else :priceCategory="item.category_tag" />
     </template>
     <template #[`item.product_details`]="{ item }">
-      <ProductDetails v-if="item.product" :product="item.product" :readonly="true" />
-      <PriceCategoryDetails v-else :price="item" />
+      <ProductDetailsRow v-if="item.product" :product="item.product" :hideActionMenuButton="true" :readonly="true" />
+      <PriceCategoryDetailsRow v-else :price="item" />
     </template>
     <template #[`item.location`]="{ item }">
       <LocationChip :location="item.location" :locationId="item.location_id" :readonly="true" />
@@ -17,7 +20,7 @@
       <PricePriceRow :price="item" :productQuantity="item.product ? item.product.product_quantity : null" :productQuantityUnit="item.product ? item.product.product_quantity_unit : null" />
     </template>
     <template #[`item.receipt_quantity`]="{ item }">
-      {{ item.receipt_quantity }}
+      <PriceQuantityPurchasedChip :priceQuantityPurchased="item.receipt_quantity" />
     </template>
     <template #[`item.created`]="{ item }">
       <RelativeDateTimeChip :dateTime="item.created" />
@@ -33,11 +36,13 @@ import constants from '../constants'
 
 export default {
   components: {
-    ProductDetails: defineAsyncComponent(() => import('../components/ProductDetails.vue')),
-    PriceCategoryDetails: defineAsyncComponent(() => import('../components/PriceCategoryDetails.vue')),
+    PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
+    ProductDetailsRow: defineAsyncComponent(() => import('../components/ProductDetailsRow.vue')),
+    PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
     LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
     DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
+    PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
     RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
   },
   props: {
@@ -48,7 +53,7 @@ export default {
     source: {
       type: String,
       default: 'product',
-      examples: ['product', 'proof']
+      examples: ['product', 'proof', 'location', 'user', 'date']
     },
     proof: {
       type: Object,
@@ -57,27 +62,23 @@ export default {
   },
   data() {
     return {
-      productPriceHeaders: [
-        { title: 'Location', key: 'location' },
-        { title: 'Date', key: 'date'},
-        { title: 'Price', key: 'price' },
-        { title: 'Added', key: 'created' },
-        // { title: 'Actions', key: 'actions' },
-      ],
-      proofPriceHeaders: [
-        { title: 'Product', key: 'product_name' },
-        { title: 'Details', key: 'product_details' },
-        { title: 'Price', key: 'price' },
-        { title: 'Added', key: 'created' },
-        // { title: 'Actions', key: 'actions' },
+      tablePageLimit: -1,  // all items
+      defaultPriceHeaders: [
+        { title: this.$t('Common.Product'), key: 'product_name' },
+        { title: this.$t('Common.Details'), key: 'product_details', sortable: false },
+        { title: this.$t('Common.Location'), key: 'location', sortRaw (a, b) { return a.location_id - b.location_id } },
+        { title: this.$t('Common.Date'), key: 'date'},
+        { title: this.$t('Common.Price'), key: 'price' },
+        { title: this.$t('Common.Added'), key: 'created' },
+        // { title: this.$t('Common.Actions'), key: 'actions' },
       ],
       proofReceiptPriceOwnerHeaders: [
-        { title: 'Product', key: 'product_name' },
-        { title: 'Details', key: 'product_details' },
-        { title: 'Price', key: 'price' },
-        { title: 'Quantity', key: 'receipt_quantity' },
-        { title: 'Added', key: 'created' },
-        // { title: 'Actions', key: 'actions' },
+        { title: this.$t('Common.Product'), key: 'product_name' },
+        { title: this.$t('Common.Details'), key: 'product_details', sortable: false },
+        { title: this.$t('Common.Price'), key: 'price' },
+        { title: this.$t('Common.Quantity'), key: 'receipt_quantity' },
+        { title: this.$t('Common.Added'), key: 'created' },
+        // { title: this.$t('Common.Actions'), key: 'actions' },
       ],
     }
   },
@@ -98,20 +99,23 @@ export default {
     headers() {
       if (this.sourceIsProof && this.userIsProofOwner && this.proofIsTypeReceipt) {
         return this.proofReceiptPriceOwnerHeaders
+      } else if (this.source === 'product') {
+        return this.defaultPriceHeaders.filter(h => !['product_name', 'product_details'].includes(h.key))
+      } else if (this.source === 'location') {
+        return this.defaultPriceHeaders.filter(h => !['location'].includes(h.key))
+      } else if (this.source === 'proof') {
+        return this.defaultPriceHeaders.filter(h => !['location', 'date'].includes(h.key))
+      } else if (this.source === 'date') {
+        return this.defaultPriceHeaders.filter(h => !['date'].includes(h.key))
+      } else {
+        return this.defaultPriceHeaders
       }
-      return this[`${this.source}PriceHeaders`]
     }
   },
   methods: {
     getPriceProductTitle(price) {
       if (price.product && price.product.code) {
         return price.product.product_name || price.product_code
-      } else if (price.category_tag) {
-        return price.category_tag
-        // TODO: manage async
-        // return utils.getLocaleCategoryTag(this.appStore.getUserLanguage, price.category_tag).then((category) => {
-        //   return category.name
-        // })
       }
     },
   }

@@ -3,13 +3,16 @@
     <v-card-text>
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
-          <ProductCountChip v-if="sourceIsCategory" class="mr-1" :count="productCount" :withLabel="true" />
-          <PriceCountChip v-else-if="sourceIsProduct" class="mr-1" :count="priceCount" />
-          <CategoryTagChip v-if="showProductCategoryTag" class="mr-1" :category="category" :readonly="true" />
+          <span class="chip-group">
+            <ProductCountChip v-if="sourceIsCategory" :count="productCount" :withLabel="true" />
+            <PriceCountChip v-else-if="sourceIsProduct" :count="priceCount" />
+            <CategoryTagChip v-if="showProductCategoryTag" :category="category" :readonly="true" />
+          </span>
+        </v-col>
+        <v-col v-if="!hideActionMenuButton" cols="1">
+          <CategoryActionMenuButton :category="category" :source="source" />
         </v-col>
       </v-row>
-
-      <CategoryActionMenuButton v-if="!hideActionMenuButton" :category="category" :source="source" />
     </v-card-text>
   </v-card>
 </template>

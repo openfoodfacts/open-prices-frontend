@@ -162,7 +162,8 @@
 		"StatsAndRankings": "آمار و رتبه‌بندی‌ها",
 		"MostPicturesAdded": "بیشتر تصاویر اضافه شده",
 		"MostPricesAdded": "اکثر قیمت‌ها اضافه شدند",
-		"MostPricesFromPicturesAdded": "اکثر قیمت‌ها از تصاویر اضافه شده‌اند"
+		"MostPricesFromPicturesAdded": "اکثر قیمت‌ها از تصاویر اضافه شده‌اند",
+		"AlertNew": "ایده‌ای برای یک چالش جدید دارید؟ به ما اطلاع دهید {url}!"
 	},
 	"Common": {
 		"About": "درباره ما",
@@ -177,8 +178,12 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "اضافه کردن برچسب‌های قیمت جدید",
+		"AddNewProofReceipt": "رسید جدید اضافه کنید",
 		"AddToOFF": "Add to {name}",
+		"Added": "اضافه شد",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "بارکد",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -209,17 +214,19 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "پاک سازی",
+		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
 		"CommunityProofs": "Community proofs",
-		"Consumption": "Consumption",
+		"Consumption": "مصرف",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
 		"Contribute": "Contribute",
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -229,18 +236,22 @@
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "شما می‌توانید ارزها را در تنظیمات خود اضافه کنید.",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
-		"DisplayMap": "Map",
-		"DisplayPriceMap": "Map",
+		"DisplayMap": "نقشه",
+		"DisplayPriceMap": "نقشه",
 		"DisplayPriceChart": "Chart",
 		"Done": "Done",
 		"Error": "Error",
 		"Experiment": "آزمایش",
 		"Experiments": "Experiments",
+		"Explore": "کاوش",
+		"FromPriceTag": "از روی برچسب قیمت",
+		"FromReceipt": "از یک رسید",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Label",
@@ -250,6 +261,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "اطلاعات بیشتر",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -257,8 +269,12 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Date",
 		"DateMissing": "Date missing",
+		"DateProofHelpText": "تاریخ تصویر.",
+		"DateProofHelpTextExif": "به طور پیش‌فرض، ما سعی می‌کنیم آن را از فراداده EXIF تصویر استخراج کنیم.",
+		"DateProofHelpTextReceipt": "برای رسیدها، آن را روی تاریخ خرید تنظیم کنید.",
 		"Details": "Details",
 		"Delete": "Delet",
 		"DeveloperMode": "Developer mode",
@@ -271,23 +287,28 @@
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
 		"DiscountTypeSecondHand": "Second hand",
-		"DiscountTypeOther": "Other",
+		"DiscountTypeOther": "دیگر",
 		"Example": "Example",
 		"Examples": "Examples",
-		"ExampleWithColon": "Example:",
+		"ExampleWithColon": "مثال:",
 		"ExampleWithColonAndValue": "Example: {value}",
-		"ExamplesWithColon": "Examples:",
+		"ExamplesWithColon": "مثال‌ها:",
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "فیلد الزامی است",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "با قیمت‌ها",
+		"FilterWithLocationCount": "با مکان‌ها",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "فقط مدارک مربوط به کشورم را نشان بده",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "دارای بارکد معتبر",
 		"FilterPriceTagWithTagPredictionProductExists": "با محصول معتبر",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "با یک برچسب دسته‌بندی معتبر",
@@ -295,10 +316,11 @@
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
 		"FAQ": "FAQ",
-		"FrequentlyAskedQuestions": "Frequently asked questions",
+		"FrequentlyAskedQuestions": "سوالات متداول",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
 		"Help": "Help",
+		"Here": "اینجا",
 		"History": "تاریخچه",
 		"Image": "Image",
 		"ImageSelect": "Select an image",
@@ -311,22 +333,36 @@
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
-		"Map": "Map",
+		"Map": "نقشه",
 		"Miscellaneous": "Miscellaneous",
 		"MobileApp": "Mobile app",
+		"Moderation": "اعتدال",
+		"ModerationFlagReasonWrongType": "نوع اشتباه",
+		"ModerationFlagReasonWrongPriceValue": "ارزش قیمتی اشتباه",
+		"ModerationFlagReasonWrongCurrency": "واحد پول اشتباه",
+		"ModerationFlagReasonWrongProduct": "محصول اشتباه",
+		"ModerationFlagReasonWrongLocation": "مکان اشتباه",
+		"ModerationFlagReasonWrongDate": "تاریخ اشتباه",
+		"ModerationFlagReasonOther": "دیگر",
+		"ModerationFlagCreateSuccess": "ممنون از گزارشتون!",
+		"ModerationFlagStatusOpen": "باز",
+		"ModerationFlagStatusClosed": "بسته",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"MyStats": "My stats",
+		"New": "جدید",
 		"NextProof": "Next proof",
 		"NoBarcode": "بدون بارکد",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "باز",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "نام",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -339,7 +375,7 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
-		"Other": "Other",
+		"Other": "دیگر",
 		"OtherContributions": "Other contributions",
 		"PageNotMaintainedAnymore": "این صفحه دیگر نگهداری نمی‌شود.",
 		"PersonalInfo": "Personal information",
@@ -356,12 +392,19 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
 		"PriceTags": "برچسب‌های قیمت",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "قیمت موجود نیست",
+		"PricePerMissing": "قیمت به ازای هر عدد گمشده",
+		"PriceAlreadyUploaded": "قیمت قبلاً آپلود شده است",
+		"PriceReadyToBeUploaded": "قیمت آماده بارگذاری است",
 		"PricesAlreadyUploaded": "قیمت‌ها قبلاً بارگذاری شده‌اند",
+		"PricesAll": "همه قیمت‌ها",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -369,7 +412,7 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "قیمت‌های اضافه شده توسط شما",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "حریم خصوصی",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProductMissing": "محصول موجود نیست",
@@ -382,6 +425,7 @@
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} مدارک آپلود شدند",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,6 +433,8 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "رتبه",
+		"Reason": "Reason",
 		"RECEIPT": "Receipt",
 		"Receipt": "Receipt",
 		"Receipts": "Receipts",
@@ -397,27 +443,34 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "دوباره باز کنید",
+		"ReportProblem": "گزارش مشکل",
+		"Reset": "Reset",
+		"Resolved": "حل شد",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "جستجو",
 		"Select": "Select",
+		"Send": "Send",
 		"Settings": "تنظیمات",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "ورود به سیستم",
 		"SignOut": "Sign out",
 		"SideMenu": "Side menu",
 		"Share": "اشتراک",
-		"Source": "Source",
+		"Source": "منبع",
 		"SourceCode": "Source code",
-		"Start": "Start",
+		"Start": "شروع",
 		"Stats": "Stats",
+		"Status": "وضعیت",
 		"SuggestedBarcode": "بارکد پیشنهادی:",
 		"Summary": "چکیده",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "متن",
 		"Thanks": "Thanks",
 		"Theme": "Theme",
 		"ThemeLight": "Light",
@@ -429,7 +482,7 @@
 		"TopCountries": "کشورهای برتر",
 		"Today": "Today",
 		"Top": "Top",
-		"Total": "Total",
+		"Total": "مجموع",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"TryItOut": "امتحانش کن.",
@@ -453,18 +506,29 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "کاربر یافت نشد",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "قیمت‌ها را از انجمن اعتبارسنجی کنید",
 		"View": "View",
 		"Website": "Website",
+		"WithAPrice": "With a price",
+		"WithoutAPrice": "بدون قیمت",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "بلی",
 		"No": "خير",
 		"Food": "Food",
 		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Beauty": "زیبایی"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -518,6 +582,23 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "یک محصول جدید ایجاد کنید",
+		"CreateProduct": "ایجاد محصول",
+		"EnableCropMode": "حالت برش را فعال کنید",
+		"Flavor": "پروژه‌ای را که محصول باید در آن ایجاد شود، انتخاب کنید",
+		"NextProof": "Next proof",
+		"PreviousProof": "اثبات قبلی",
+		"ProductAlreadyExists": "محصول از قبل وجود دارد",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "اثبات ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "فروشگاه‌هایی که در آنها فروخته می‌شوند",
+		"UseCropModeToAddImage": "برای افزودن تصویر محصول، حالت برش را در زیر تصویر نمونه فعال کنید و یک مستطیل دور محصول بکشید.",
+		"ProductMissingPromoBanner": "آزمایش: این محصول را با استفاده از داده‌های Open Prices ایجاد کنید"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "پاک سازی",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "فروشگاه خود را پیدا نمی‌کنید؟ به جای آدرس کامل از کلمات کلیدی استفاده کنید (مثلاً «Carrefour 75013 Paris» یا «Walmart San Francisco»).",
+		"NoResultHelpOSM": "هنوز فروشگاه خود را پیدا نکرده‌اید؟ ممکن است هنوز در {osm_name} نباشد. می‌توانید ابتدا آن را در {osm_url} اضافه کنید.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -616,11 +699,11 @@
 		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "دسته‌‎بندی‎ها",
-		"CategoriesLower": "categories",
+		"CategoriesLower": "دسته‌ها",
 		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Labels",
-		"LabelsLower": "labels",
+		"LabelsLower": "برچسب‌ها",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
 		"InvalidBarcode": "Invalid barcode",
@@ -677,7 +760,7 @@
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "حریم خصوصی"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "اقلام رسید",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +786,9 @@
 	"Router": {
 		"About": {
 			"Title": "درباره ما"
+		},
+		"Add": {
+			"Title": "افزودن"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +814,18 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "مدرک (رسید) اضافه کنید"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "کاوش"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,11 +841,20 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "برچسب‌های قیمت"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
+		},
+		"Cities": {
+			"Title": "شهرها"
 		},
 		"Community": {
 			"Title": "Community"
@@ -755,11 +862,18 @@
 		"Contribute": {
 			"Title": "Contribute"
 		},
+		"Countries": {
+			"Title": "Countries"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "صفحه اصلی"
+			"Title": "صفحه اصلی",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -769,6 +883,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "اعتدال"
 		},
 		"MyPrices": {
 			"Title": "My prices"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "دستیار برچسب قیمت اثبات"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,6 +964,7 @@
 		"ServerError": "Error: server error",
 		"Title": "ورود به سیستم",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -859,7 +979,7 @@
 		"Products": "Products",
 		"Locations": "Locations",
 		"Users": "Users",
-		"Total": "Total",
+		"Total": "مجموع",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "قیمت‌ها به ازای هر منبع",
+		"ProofsPerSource": "اثبات‌ها به ازای هر منبع",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -900,6 +1022,7 @@
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

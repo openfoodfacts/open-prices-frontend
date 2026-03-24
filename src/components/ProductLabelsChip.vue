@@ -1,5 +1,5 @@
 <template>
-  <v-chip v-if="productLabels && productLabels.length" label size="small" density="comfortable" @click="showProductLabelsDialog">
+  <v-chip v-if="hasProductLabels" label size="small" density="comfortable" @click="showProductLabelsDialog">
     <i>{{ $t('ProductCard.LabelTotal', { count: productLabels.length }) }}</i>
     <ProductLabelsDialog
       v-if="productLabelsDialog"
@@ -30,6 +30,11 @@ export default {
   data() {
     return {
       productLabelsDialog: false
+    }
+  },
+  computed: {
+    hasProductLabels() {
+      return this.productLabels && this.productLabels.length
     }
   },
   methods: {

@@ -11,8 +11,10 @@
         <v-chip label variant="text" prepend-icon="mdi-image">
           {{ $t('Common.ProofCount', { count: userProofTotal }) }}
         </v-chip>
-        <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
-        <FilterMenu v-if="!hideFilterMenu && userProofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
+        <template v-if="!loading">
+          <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
+          <FilterMenu v-if="!hideFilterMenu" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
+        </template>
       </v-card-title>
 
       <v-divider />
@@ -39,7 +41,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 
 export default {
@@ -118,7 +120,7 @@ export default {
     getUserProofs() {
       this.loading = true
       this.userProofPage += 1
-      return api.getProofs(this.getProofParams)
+      return openPricesApi.getProofs(this.getProofParams)
         .then((data) => {
           this.userProofList.push(...data.items)
           this.userProofTotal = data.total

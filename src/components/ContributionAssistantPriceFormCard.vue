@@ -12,26 +12,30 @@
     </template>
     <v-divider v-if="isInDialog" />
     <v-card-text class="flex-grow-1">
-      <ProofImageCropped v-if="productPriceForm.proofImage" class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" @croppedImage="setCroppedImage($event)" />
+      <v-row>
+        <v-col cols="12" class="pt-2 pb-2">
+          <v-img v-if="productPriceForm.image_path" :src="getImageFullUrl" max-height="200px" contain />
+        </v-col>
+      </v-row>
       <v-row v-if="showProductNameField">
         <v-col>
           <v-text-field
             v-model="productPriceForm.product_name"
-            :label="$t('Common.ProductName')"
+            :label="$t('Common.Text')"
             type="text"
             hide-details="auto"
           />
         </v-col>
       </v-row>
-      <ProductInputRow :productForm="productPriceForm" :mode="mode" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="hideProductBarcodeScannerTab" @filled="productFormFilled = $event" />
-      <PriceInputRow :priceForm="productPriceForm" :mode="mode" :hideCurrencyChoice="true" :product="productPriceForm.product" :proofType="productPriceForm.proof ? productPriceForm.proof.type : null" @filled="pricePriceFormFilled = $event" />
+      <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="hideProductBarcodeScannerTab" @filled="productFormFilled = $event" />
+      <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :proofType="productPriceForm.proof ? productPriceForm.proof.type : null" @filled="pricePriceFormFilled = $event" />
       <v-alert
         v-if="!productPriceFormValid"
-        class="mt-4 mb-4"
+        class="mt-3 mb-3"
         type="warning"
         variant="outlined"
         density="compact"
-        :text="formInvalidAlertText"
+        :text="productPriceFormInvalidAlertText"
       />
     </v-card-text>
     <v-divider v-if="!hideProofDetails" />
@@ -51,34 +55,14 @@
             {{ $t('Common.NotAnError') }}
           </v-list-item>
           <v-divider v-if="productPriceForm.status > 1" class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-eye-off-outline" @click="updatePriceTagStatus(PRICE_TAG_STATUS_UNREADABLE)">
-            {{ $t('Common.Unreadable') }}
-          </v-list-item>
-          <v-divider class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-crop" @click="updatePriceTagStatus(PRICE_TAG_STATUS_TRUNCATED)">
-            {{ $t('Common.Truncated') }}
-          </v-list-item>
-          <v-divider class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-currency-usd-off" @click="updatePriceTagStatus(PRICE_TAG_STATUS_NOT_A_PRICE)">
-            {{ $t('Common.NotAPrice') }}
-          </v-list-item>
-          <v-divider class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-barcode-off" @click="updatePriceTagStatus(PRICE_TAG_STATUS_NO_BARCODE)">
-            {{ $t('Common.NoBarcode') }}
-          </v-list-item>
-          <!-- missing PRICE_TAG_STATUS_OTHER -->
+          <template v-for="(errorStatus, index) in PRICE_TAG_STATUS_ERROR_LIST" :key="errorStatus.key">
+            <v-list-item :slim="true" :prepend-icon="errorStatus.icon" @click="updatePriceTagStatus(errorStatus.key)">
+              {{ $t(errorStatus.textSmallScreen) }}
+            </v-list-item>
+            <v-divider v-if="index !== PRICE_TAG_STATUS_ERROR_LIST.length - 1" class="mt-2 mb-2" />
+          </template>
         </v-list>
       </v-menu>
-      <v-spacer />
-      <v-btn
-        v-if="mode === 'display'"
-        color="warning"
-        variant="outlined"
-        prepend-icon="mdi-pencil"
-        @click="mode = 'edit'"
-      >
-        {{ $t('Common.Fix') }}
-      </v-btn>
       <v-spacer />
       <v-btn
         v-if="!hideUploadAction"
@@ -108,10 +92,10 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
+import proof_utils from '../utils/proof.js'
 
 export default {
   components: {
-    ProofImageCropped: defineAsyncComponent(() => import('../components/ProofImageCropped.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
     ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),
@@ -122,8 +106,10 @@ export default {
       default: () => ({
         id: null,
         type: null,
+        product_name: null,
+        product_code: null,
         category_tag: null,
-        origins_tags: '',
+        origins_tags: [],
         labels_tags: [],
         price: null,
         price_per: null,
@@ -132,11 +118,9 @@ export default {
         discount_type: null,
         currency: null,
         receipt_quantity: null,
-        proofImage: null,
-        processed: null,
-        product_code: null,
+        proof: null,
         detected_product_code: null,
-        product_name: null,
+        image_path: null,
       })
     },
     showProductNameField: {
@@ -163,10 +147,6 @@ export default {
       type: Boolean,
       default: false
     },
-    forceMode: {
-      type: String,
-      default: null
-    },
     hidePriceTagStatusMenu: {
       type: Boolean,
       default: false
@@ -180,19 +160,17 @@ export default {
   emits: ['updatePriceTagStatus', 'validatePriceTag', 'close'],
   data() {
     return {
-      PRICE_TAG_STATUS_UNREADABLE: constants.PRICE_TAG_STATUS_UNREADABLE,
-      PRICE_TAG_STATUS_TRUNCATED: constants.PRICE_TAG_STATUS_TRUNCATED,
-      PRICE_TAG_STATUS_NOT_A_PRICE: constants.PRICE_TAG_STATUS_NOT_A_PRICE,
-      PRICE_TAG_STATUS_NO_BARCODE: constants.PRICE_TAG_STATUS_NO_BARCODE,
-      PRICE_TAG_STATUS_OTHER: constants.PRICE_TAG_STATUS_OTHER,
+      PRICE_TAG_STATUS_ERROR_LIST: constants.PRICE_TAG_STATUS_ERROR_LIST,
       // data
-      mode: null,  // 'display' or 'edit'  // see mounted
       productFormFilled: false,
       pricePriceFormFilled: false,
     }
   },
   computed: {
     ...mapStores(useAppStore),
+    getImageFullUrl() {
+      return proof_utils.getImageFullUrl(this.productPriceForm.image_path)
+    },
     priceTagIsTypeProduct() {
       return this.productPriceForm.type === constants.PRICE_TYPE_PRODUCT
     },
@@ -200,18 +178,18 @@ export default {
       return this.productPriceForm.type === constants.PRICE_TYPE_CATEGORY
     },
     productPriceFormValid() {
-      return this.productPriceForm &&
-             ((this.priceTagIsTypeProduct && this.productPriceForm.product_code) || (this.priceTagIsTypeCategory && this.productPriceForm.category_tag)) &&
-             this.productPriceForm.price
+      return this.productPriceForm && this.productFormFilled && this.pricePriceFormFilled
     },
     showOverlay() {
       return this.loading
     },
-    formInvalidAlertText() {
+    productPriceFormInvalidAlertText() {
       if (this.priceTagIsTypeProduct && !this.productPriceForm.product_code) {
         return this.$t('Common.ProductMissing')
       } else if (this.priceTagIsTypeCategory && !this.productPriceForm.category_tag) {
         return this.$t('Common.CategoryMissing')
+      } else if (this.priceTagIsTypeCategory && !this.productPriceForm.price_per) {
+        return this.$t('Common.PricePerMissing')
       } else if (!this.productPriceForm.price) {
         return this.$t('Common.PriceMissing')
       }
@@ -233,28 +211,12 @@ export default {
       }
     }
   },
-  mounted() {
-    this.resetMode()
-  },
-  unmounted() {
-    if (this.productPriceForm.croppedImage) {
-      URL.revokeObjectURL(this.productPriceForm.croppedImage)
-    }
-  },
   methods: {
-    resetMode() {
-      this.mode = this.forceMode || this.appStore.user.price_form_default_mode
-    },
-    setCroppedImage(croppedImage) {
-      this.productPriceForm.croppedImage = croppedImage
-    },
     updatePriceTagStatus(status=null) {
       this.$emit('updatePriceTagStatus', status)
-      this.resetMode()
     },
     validatePriceTag() {
       this.$emit('validatePriceTag', this.productPriceForm)
-      this.resetMode()
     },
     close() {
       this.$emit('close')

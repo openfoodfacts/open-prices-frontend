@@ -3,7 +3,7 @@
 		"WhyTitle": "Why {op_name}?",
 		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
 		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
-		"HowTitle": "How does {op_name} work?",
+		"HowTitle": "Cum funcționează {op_name}?",
 		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
 		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
 		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Chitanță"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -69,10 +69,10 @@
 		"Create": "Crează",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Preţ",
+			"LabelDiscounted": "Preț redus",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Dovadă",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Data",
+			"DateLabel": "Data",
 			"Find": "Căutare",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -162,14 +162,15 @@
 		"StatsAndRankings": "Statistici și clasamente",
 		"MostPicturesAdded": "Majoritatea imaginilor adăugate",
 		"MostPricesAdded": "Majoritatea prețurilor adăugate",
-		"MostPricesFromPicturesAdded": "Majoritatea prețurilor din imagini au fost adăugate"
+		"MostPricesFromPicturesAdded": "Majoritatea prețurilor din imagini au fost adăugate",
+		"AlertNew": "Ai o idee pentru o nouă provocare? Spune-ne {url}!"
 	},
 	"Common": {
 		"About": "Despre",
 		"Action": "Acţiune",
-		"Actions": "Actions",
+		"Actions": "Acțiuni",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Adăugați un preț",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -177,8 +178,12 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Adăugați noi etichete de preț",
+		"AddNewProofReceipt": "Adăugați o chitanță nouă",
 		"AddToOFF": "Add to {name}",
+		"Added": "Adăugat",
 		"AdditionalInfo": "Additional information",
+		"All": "Toate",
 		"Barcode": "Cod de bare",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -189,13 +194,13 @@
 		"Brand": "Marca",
 		"Brands": "Mărci",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Preţ",
+		"Prices": "Prețuri",
 		"PRODUCT": "Produs",
 		"Product": "Produs",
 		"ProductName": "Numele produsului",
 		"Products": "Produse",
-		"Proof": "Proof",
+		"Proof": "Dovadă",
 		"Proofs": "Proofs",
 		"CATEGORY": "Categorie",
 		"Category": "Categorie",
@@ -209,6 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Ștergeți",
+		"Close": "Închidere",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -220,15 +226,17 @@
 		"Contributors": "Colaboratori",
 		"Contributions": "Contribuții",
 		"Confirm": "Confirmați",
+		"Count": "Numară",
 		"Country": "Țară",
 		"Countries": "Țări",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Valută",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyProofHelpTextSettings": "Poți adăuga valute în setări.",
 		"Dashboard": "Dashboard",
 		"Display": "Afişare",
 		"DisplayList": "List",
@@ -241,6 +249,9 @@
 		"Error": "Eroare",
 		"Experiment": "Experiment",
 		"Experiments": "Experiments",
+		"Explore": "Explora",
+		"FromPriceTag": "De la o etichetă de preț",
+		"FromReceipt": "Dintr-o chitanță",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Eticheta",
@@ -250,6 +261,7 @@
 		"Languages": "Limbi",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Afla mai mult",
 		"LoadMore": "Încarcă mai mult",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -257,9 +269,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "Data",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateProofHelpText": "Data fotografiei.",
+		"DateProofHelpTextExif": "În mod implicit, încercăm să o extragem din metadatele EXIF ale imaginii.",
+		"DateProofHelpTextReceipt": "Pentru chitanțe, setați-o la data achiziției.",
+		"Details": "Detalii",
 		"Delete": "Ştergeţi",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -280,14 +296,19 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Modificare",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Câmpul este obligatoriu",
 		"Filter": "Filtrare",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Cu prețuri",
+		"FilterWithLocationCount": "Cu locații",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Afișează doar dovezi din țara mea",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Cu un cod de bare valid",
 		"FilterPriceTagWithTagPredictionProductExists": "Cu un produs valid",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Cu o etichetă de categorie validă",
@@ -298,7 +319,8 @@
 		"FrequentlyAskedQuestions": "Întrebări frecvente",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Ajutor",
+		"Here": "Aici",
 		"History": "Istoric",
 		"Image": "Imagine",
 		"ImageSelect": "Select an image",
@@ -314,24 +336,38 @@
 		"Map": "Hartă",
 		"Miscellaneous": "Diverse",
 		"MobileApp": "Mobile app",
+		"Moderation": "Moderare",
+		"ModerationFlagReasonWrongType": "Tip greșit",
+		"ModerationFlagReasonWrongPriceValue": "Valoare greșită a prețului",
+		"ModerationFlagReasonWrongCurrency": "Monedă greșită",
+		"ModerationFlagReasonWrongProduct": "Produs greșit",
+		"ModerationFlagReasonWrongLocation": "Locație greșită",
+		"ModerationFlagReasonWrongDate": "Dată greșită",
+		"ModerationFlagReasonOther": "Altele",
+		"ModerationFlagCreateSuccess": "Mulțumesc pentru raportul tău!",
+		"ModerationFlagStatusOpen": "Deschide",
+		"ModerationFlagStatusClosed": "Închis",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Prețurile mele",
+		"MyProofs": "Dovezile mele",
 		"MyStats": "My stats",
+		"New": "Nou",
 		"NextProof": "Next proof",
 		"NoBarcode": "Fără cod de bare",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Deschide",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "Nume",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Preţ",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -354,14 +390,21 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Etichetă de preț",
 		"PriceTags": "Etichete de preț",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Prețul lipsește",
+		"PricePerMissing": "Preț per persoană lipsă",
+		"PriceAlreadyUploaded": "Prețul este deja încărcat",
+		"PriceReadyToBeUploaded": "Prețul este gata de încărcat",
 		"PricesAlreadyUploaded": "Prețurile sunt deja încărcate",
+		"PricesAll": "Toate prețurile",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -369,7 +412,7 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "Prețuri adăugate de dvs.",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Confidențialitate",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Produs lipsă",
@@ -377,11 +420,12 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Selectați o dovadă",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} dovezi încărcate",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
@@ -389,20 +433,27 @@
 		"Quantity": "Cantitate",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "Rang",
+		"Reason": "Motiv",
+		"RECEIPT": "Chitanță",
+		"Receipt": "Chitanță",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Redeschide",
+		"ReportProblem": "Raportați o problemă",
+		"Reset": "Reset",
+		"Resolved": "Rezolvat",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Caută",
 		"Select": "Select",
+		"Send": "Trimite",
 		"Settings": "Configurări",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Conectare",
 		"SignOut": "Deconectare",
@@ -412,12 +463,14 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Stare",
 		"SuggestedBarcode": "Cod de bare sugerat:",
 		"Summary": "Continut",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "Text",
 		"Thanks": "Thanks",
 		"Theme": "Temă",
 		"ThemeLight": "Luminos",
@@ -434,7 +487,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Încearcă-l",
 		"Type": "Tip",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Produs necunoscut",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -447,24 +500,35 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "URL-ul",
 		"URLInvalid": "Invalid URL",
 		"User": "Utilizator",
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Utilizator negăsit",
 		"Validate": "Validați",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "Validați prețurile din comunitate",
 		"View": "Vizualizare",
 		"Website": "Site-ul web",
+		"WithAPrice": "With a price",
+		"WithoutAPrice": "Fără preț",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Da",
 		"No": "Nu",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Food": "Mâncare",
+		"PetFood": "Hrană pentru animale de companie",
+		"Beauty": "Frumuseţe"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -513,10 +577,27 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Valută",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
+	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Țările unde se vinde",
+		"CreateNewProduct": "Creați un produs nou",
+		"CreateProduct": "Creați produsul",
+		"EnableCropMode": "Activează modul de decupare",
+		"Flavor": "Selectați proiectul în care ar trebui creat produsul",
+		"NextProof": "Next proof",
+		"PreviousProof": "Dovada anterioară",
+		"ProductAlreadyExists": "Produsul există deja",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Dovadă ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Magazine unde se vând",
+		"UseCropModeToAddImage": "Pentru a adăuga o imagine a produsului, activați modul de decupare sub imaginea de probă și desenați un dreptunghi în jurul produsului.",
+		"ProductMissingPromoBanner": "Experiment: creați acest produs folosind datele de la Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -537,10 +618,10 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Adăugați un preț",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Căutați un produs",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -557,6 +638,8 @@
 	"LocationSelector": {
 		"Clear": "Ștergeți",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nu găsești magazinul tău? Încearcă să folosești cuvinte cheie în loc de adresa completă (de exemplu, „Carrefour 75013 Paris” sau „Walmart San Francisco”).",
+		"NoResultHelpOSM": "Încă nu găsești magazinul tău? S-ar putea să nu fie încă în {osm_name} . Îl poți adăuga mai întâi pe {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -576,9 +659,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Dovadă",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Produs necunoscut"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -593,8 +676,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Preţ",
+		"LabelDiscounted": "Preț redus",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -636,7 +719,7 @@
 		"UnknownProduct": "Produs cu nume necunoscut"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Adăugați un preț",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Încarcă mai mult",
@@ -654,14 +737,14 @@
 		"PromoReceiptAssistant": "Experiment: încearcă noul asistent de chitanțe pentru a extrage automat prețurile din chitanțe!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Dovadă",
+		"PRICE_TAG": "Etichetă de preț",
+		"RECEIPT": "Chitanță",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Selectați o dovadă",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -673,11 +756,11 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Încarcă mai mult",
-		"Prices": "Prices",
+		"Prices": "Prețuri",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Confidențialitate"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -686,11 +769,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Articole de chitanță",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -704,8 +787,11 @@
 		"About": {
 			"Title": "Despre"
 		},
+		"Add": {
+			"Title": "Adaugă"
+		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Adăugați un preț"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -728,11 +814,23 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Adăugați dovada (chitanță)"
+		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Explore": {
+			"Title": "Explora"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Adăugați un preț"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -741,7 +839,10 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Prețuri"
+		},
+		"PriceTags": {
+			"Title": "Etichete de preț"
 		},
 		"Proofs": {
 			"Title": "Proofs"
@@ -749,17 +850,30 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "Chitanță"
+		},
+		"Cities": {
+			"Title": "Orașe"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribuiți"
 		},
+		"Countries": {
+			"Title": "Țări"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
+		},
 		"Experiments": {
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Pagina de start"
+			"Title": "Pagina de start",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -770,11 +884,14 @@
 		"LatestProofs": {
 			"Title": "Latest proofs"
 		},
+		"Moderation": {
+			"Title": "Moderare"
+		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Prețurile mele"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Dovezile mele"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -812,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Asistent pentru etichete de preț doveditoare"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -822,10 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validați",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -845,12 +964,13 @@
 		"ServerError": "Error: server error",
 		"Title": "Conectare",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Prețuri",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -868,6 +988,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Prețuri per sursă",
+		"ProofsPerSource": "Dovezi pe sursă",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
@@ -876,8 +998,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Încarcă mai mult",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Prețurile mele",
+		"MyProofs": "Dovezile mele",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Configurări",
 		"Title": "Dashboard",
@@ -897,9 +1019,10 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Modificați limba",
 		"CountryLabel": "Țară",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Valută",
 		"DisplayTitle": "Afişare",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
