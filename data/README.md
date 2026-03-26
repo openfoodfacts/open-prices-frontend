@@ -1,5 +1,14 @@
 # Data scripts
 
+## Automation
+
+These scripts are run automatically by the GitHub Actions workflow
+`.github/workflows/update-data.yml`.
+
+- Schedule: weekly (Sunday, 03:00 UTC)
+- Manual run: available through `workflow_dispatch`
+- Output: a PR is opened/updated only when generated files changed
+
 ## Prerequisits
 
 Most of the scripts require the [openfoodfacts-python](https://github.com/openfoodfacts/openfoodfacts-python) library.

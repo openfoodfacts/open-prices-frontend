@@ -1,0 +1,71 @@
+name: Update Generated Data
+
+on:
+  schedule:
+    - cron: '0 3 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-generated-data
+  cancel-in-progress: true
+
+jobs:
+  update-generated-data:
+    if: github.repository_owner == 'openfoodfacts'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openfoodfacts
+
+      - name: Generate categories
+        run: python data/categories/generate_categories_json_per_language.py
+
+      - name: Generate countries
+        run: python data/countries/generate_countries_json_per_language.py
+
+      - name: Generate labels
+        run: python data/labels/generate_labels_json_per_language.py
+
+      - name: Generate languages
+        run: python data/languages/generate_languages.py
+
+      - name: Generate origins
+        run: python data/origins/generate_origins_json_per_language.py
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore(data): update generated files'
+          title: 'chore(data): update generated files'
+          body: |
+            This PR was created automatically by the scheduled `Update Generated Data` workflow.
+
+            Updated artifacts:
+            - `src/data/categories/*.json`
+            - `src/data/countries.json`
+            - `src/data/labels/*.json`
+            - `src/data/origins/*.json`
+            - `src/i18n/data/languages.json`
+          branch: chore/automated-data-updates
+          delete-branch: false
+          add-paths: |
+            src/data/**
+            src/i18n/data/languages.json
+          labels: |
+            data
+            automation
