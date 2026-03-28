@@ -35,13 +35,13 @@ jobs:
         run: python data/categories/generate_categories_json_per_language.py
 
       - name: Generate countries
-        run: python data/countries/generate_countries_json_per_language.py
+        run: python data/countries/generate_countries_json.py
 
       - name: Generate labels
         run: python data/labels/generate_labels_json_per_language.py
 
       - name: Generate languages
-        run: python data/languages/generate_languages.py
+        run: python data/languages/generate_languages_json.py
 
       - name: Generate origins
         run: python data/origins/generate_origins_json_per_language.py
