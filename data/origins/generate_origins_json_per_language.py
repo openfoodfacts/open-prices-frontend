@@ -78,6 +78,11 @@ def get_taxonomy_node_children_full_list(taxonomy, node_parent):
 
 
 def filter_origins(taxonomy):
+    """
+    Rules
+    - keep only countries (nodes with "country_code_2" property)
+    - add extra (non-country) nodes
+    """
     node_list = list()
     for node in taxonomy.iter_nodes():
         if "country_code_2" in node.properties:
