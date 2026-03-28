@@ -1,12 +1,15 @@
 """
 See parent README.md for more details.
 """
-
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import utils
 import json
 from typing import Any
 from pathlib import Path
 
-from openfoodfacts.taxonomy import Taxonomy, TaxonomyNode, get_taxonomy
+from openfoodfacts.taxonomy import Taxonomy, get_taxonomy
 
 OFF_TAXONOMY_NAME = "country"
 OP_LANGUAGES_FILE = "src/i18n/data/languages.json"
@@ -16,11 +19,6 @@ script_path = Path(__file__).parent
 repo_path = script_path.parent.parent
 
 OUTPUT_PATH = repo_path / "src/data/countries/"
-
-
-def read_json(filepath):
-    with open(filepath) as jsonfile:
-        return json.load(jsonfile)
 
 
 def filter_countries(taxonomy):
@@ -74,6 +72,6 @@ if __name__ == "__main__":
     print("countries remaining:", len(countries_filtered_to_dict_list))
 
     # Step 3: write to files (1 per language)
-    OP_LANGUAGES = read_json(repo_path / OP_LANGUAGES_FILE)
+    OP_LANGUAGES = utils.read_json(repo_path / OP_LANGUAGES_FILE)
     write_countries_to_files(countries_filtered_to_dict_list, OP_LANGUAGES)
     print(f"Wrote to {len(OP_LANGUAGES)} language files")
