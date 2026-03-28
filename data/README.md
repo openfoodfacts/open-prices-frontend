@@ -55,7 +55,7 @@ Found here: https://github.com/risan/country-flag-emoji-json
 ### Script
 
 ```sh
-python data/countries/generate_countries_json_per_language.py
+python data/countries/generate_countries_json.py
 ```
 
 What it does:
@@ -84,12 +84,12 @@ python data/labels/generate_labels_json_per_language.py
 
 ### Goal
 
-TODO
+Create a JSON file with the list of languages
 
 ### Script
 
 ```sh
-python data/languages/generate_languages.py
+python data/languages/generate_languages_json.py
 ```
 
 ## Origins
