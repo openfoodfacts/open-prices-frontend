@@ -261,6 +261,7 @@
 		"Languages": "Sprog",
 		"LatestPrices": "Seneste priser",
 		"LatestProofs": "Seneste beviser",
+		"LearnMore": "Få mere at vide",
 		"LoadMore": "Indlæs mere",
 		"Location": "Placering",
 		"Locations": "Placeringer",
@@ -452,7 +453,7 @@
 		"Select": "Vælg",
 		"Send": "Indsend",
 		"Settings": "Indstillinger",
-		"SignInOFFAccount": "Log på med din {url} konto",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Logget ind!",
 		"SignIn": "Log ind",
 		"SignOut": "Log ud",
@@ -822,6 +823,9 @@
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
 		},
+		"Explore": {
+			"Title": "Udforske"
+		},
 		"Locations": {
 			"Title": "Placeringer"
 		},
@@ -868,7 +872,8 @@
 			"Title": "Eksperimenter"
 		},
 		"Home": {
-			"Title": "Hjem"
+			"Title": "Hjem",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Oversigt"
@@ -924,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Assistent for bevisprisskilte"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Prisvalideringsassistent"
-		},
 		"ReceiptAssistant": {
 			"Title": "Kvitteringsassistent"
 		},
@@ -934,13 +936,15 @@
 			"Title": "Udfordring"
 		},
 		"Challenges": {
-			"Title": "Udfordringer"
+			"Title": "Udfordringer",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Fællesskabsudfordring"
 		},
 		"Validate": {
-			"Title": "Bekræftelse"
+			"Title": "Bekræftelse",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validér priser"
@@ -960,6 +964,7 @@
 		"ServerError": "Fejl: serverfejl",
 		"Title": "Log ind",
 		"SignInOFFAccount": "Log på med din {url} konto",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Brugernavn",
 		"WrongCredentials": "Fejl: forkerte loginoplysninger"
 	},

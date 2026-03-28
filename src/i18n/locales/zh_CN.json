@@ -261,6 +261,7 @@
 		"Languages": "语言",
 		"LatestPrices": "最新价格",
 		"LatestProofs": "最新样张",
+		"LearnMore": "更多信息",
 		"LoadMore": "显示更多",
 		"Location": "Location",
 		"Locations": "地点",
@@ -452,7 +453,7 @@
 		"Select": "Select",
 		"Send": "发送",
 		"Settings": "设置",
-		"SignInOFFAccount": "使用您的 {url} 帐户登录",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "登录",
 		"SignIn": "登录",
 		"SignOut": "登出",
@@ -822,6 +823,9 @@
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
 		},
+		"Explore": {
+			"Title": "探索"
+		},
 		"Locations": {
 			"Title": "地点"
 		},
@@ -868,7 +872,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "主页"
+			"Title": "主页",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "仪表板"
@@ -924,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "证明价格标签助手"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -934,13 +936,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "验证"
+			"Title": "验证",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -960,6 +964,7 @@
 		"ServerError": "错误：服务器错误",
 		"Title": "登录",
 		"SignInOFFAccount": "使用您的 {url} 帐户登录",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "用户名",
 		"WrongCredentials": "错误：凭据错误"
 	},

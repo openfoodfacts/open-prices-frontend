@@ -82,7 +82,17 @@ export default {
     })
     .then((response) => response.json())
   },
-
+  signInWithKeycloak(access_token) {
+    let formData = new FormData()
+    formData.append('access_token', access_token)
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/auth?${buildURLParams()}`
+    return fetch(url, {
+      method: 'POST',
+      body: formData,
+      headers: {}
+    })
+    .then((response) => response.json())
+  },
   getUsers(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/users?${buildURLParams({...defaultParams, ...params})}`
@@ -467,6 +477,15 @@ export default {
     .then((response) => response.json())
   },
 
+  getLocationsCompare(locationIdA, locationIdB, params = {}) {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/compare?${buildURLParams({'location_id_a': locationIdA, 'location_id_b': locationIdB, ...params})}`
+    return fetch(url, {
+      method: 'GET',
+      headers: OP_DEFAULT_HEADERS,
+    })
+    .then((response) => response.json())
+  },
+
   getCountries(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/osm/countries?${buildURLParams({...defaultParams, ...params})}`
@@ -535,7 +554,8 @@ export default {
   },
 
   getChallenges(params = {}) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/challenges?${buildURLParams({...params})}`
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE, order_by: '-id'}
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/challenges?${buildURLParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,

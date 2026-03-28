@@ -262,18 +262,31 @@
         <v-divider />
         <v-card-actions>
           <v-row>
-            <v-col>
+            <v-col cols="6">
               <v-btn
                 color="primary"
                 variant="flat"
                 type="submit"
                 :disabled="shownProofIndex === 0"
+                block
                 @click="previousProof()"
               >
                 {{ $t('CreateOffProduct.PreviousProof') }}
               </v-btn>
             </v-col>
-            <v-col>
+            <v-col cols="6">
+              <v-btn
+                color="primary"
+                variant="flat"
+                type="submit"
+                :disabled="shownProofIndex === priceList.length - 1"
+                block
+                @click="nextProof()"
+              >
+                {{ $t('CreateOffProduct.NextProof') }}
+              </v-btn>
+            </v-col>
+            <v-col cols="12" class="d-flex justify-center">
               <v-switch
                 v-model="imageEditMode"
                 density="compact"
@@ -282,17 +295,6 @@
                 :true-value="true"
                 hide-details="auto"
               />
-            </v-col>
-            <v-col>
-              <v-btn
-                color="primary"
-                variant="flat"
-                type="submit"
-                :disabled="shownProofIndex === priceList.length - 1"
-                @click="nextProof()"
-              >
-                {{ $t('CreateOffProduct.NextProof') }}
-              </v-btn>
             </v-col>
           </v-row>
         </v-card-actions>

@@ -1,5 +1,63 @@
 # Changelog
 
+## [1.158.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.158.0...v1.158.1) (2026-03-23)
+
+
+### Bug Fixes
+
+* **Auth:** show old login form in local & staging envs (fallback) ([#2090](https://github.com/openfoodfacts/open-prices-frontend/issues/2090)) ([f53ae86](https://github.com/openfoodfacts/open-prices-frontend/commit/f53ae86a57236ecb7182df5cce8b48632ecee614))
+
+
+### Technical
+
+* **Challenge List:** load 25 challenges. order by id desc ([#2087](https://github.com/openfoodfacts/open-prices-frontend/issues/2087)) ([683570e](https://github.com/openfoodfacts/open-prices-frontend/commit/683570e8a9d4256bc93b654ae8485ea3fddeb64d))
+
+## [1.158.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.157.1...v1.158.0) (2026-03-23)
+
+
+### Features
+
+* **Auth:** Enable keycloak login in production ([#2083](https://github.com/openfoodfacts/open-prices-frontend/issues/2083)) ([58246cf](https://github.com/openfoodfacts/open-prices-frontend/commit/58246cfc163fca27d526692b9af970588b39f85f))
+* **Auth:** Sign in with Keycloak ([#2039](https://github.com/openfoodfacts/open-prices-frontend/issues/2039)) ([0080d15](https://github.com/openfoodfacts/open-prices-frontend/commit/0080d15a977f5c5c4ae1a7ef269118c0a5817b32))
+
+
+### Bug Fixes
+
+* **CreateOffProduct:** vertical crop mode text in mobile view ([#2074](https://github.com/openfoodfacts/open-prices-frontend/issues/2074)) ([5ecb92f](https://github.com/openfoodfacts/open-prices-frontend/commit/5ecb92fa757dfa52310d037326d12d6e6919d8be))
+
+
+### Technical
+
+* **Auth:** make Keycloak login the unique login in prod. Return error if config not correctly set. Show old form only in local & staging ([#2088](https://github.com/openfoodfacts/open-prices-frontend/issues/2088)) ([e495fa6](https://github.com/openfoodfacts/open-prices-frontend/commit/e495fa65bee9209de4dbb94ab17764647fc313ec))
+* **Data:** add new parent category 'cakes' ([#2081](https://github.com/openfoodfacts/open-prices-frontend/issues/2081)) ([330f9ea](https://github.com/openfoodfacts/open-prices-frontend/commit/330f9eac9efb2b9b08d52d249d3fe3176cbe3c1d))
+* **l10n:** New Crowdin translations to review and merge ([#2040](https://github.com/openfoodfacts/open-prices-frontend/issues/2040)) ([105ed5f](https://github.com/openfoodfacts/open-prices-frontend/commit/105ed5f5cdfbb330b39a2f7f1c00fb055291e845))
+
+## [1.157.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.157.0...v1.157.1) (2026-02-22)
+
+
+### Bug Fixes
+
+* **Footer:** keep the same height across the app ([#2038](https://github.com/openfoodfacts/open-prices-frontend/issues/2038)) ([7065672](https://github.com/openfoodfacts/open-prices-frontend/commit/7065672f159b6a7b03fa3682914a53b8b2721456))
+
+
+### Technical
+
+* **Locations:** plug the location compare to the new backend API ([#2037](https://github.com/openfoodfacts/open-prices-frontend/issues/2037)) ([578da03](https://github.com/openfoodfacts/open-prices-frontend/commit/578da03acc19f2f7c9a9e2991cff78710f9f216e))
+
+## [1.157.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.156.0...v1.157.0) (2026-02-15)
+
+
+### Features
+
+* new Explore page ([#2034](https://github.com/openfoodfacts/open-prices-frontend/issues/2034)) ([dc88348](https://github.com/openfoodfacts/open-prices-frontend/commit/dc8834884088233674465c73e03b34c31a2b5239))
+* **UX:** Intro text in Home, help text in Challenges ([#2030](https://github.com/openfoodfacts/open-prices-frontend/issues/2030)) ([cba4349](https://github.com/openfoodfacts/open-prices-frontend/commit/cba4349f742c4a18852ac5d38949d5b9c77c4fe4))
+* **UX:** new HelpDialog components to display help info + add info text on Validate page ([#2035](https://github.com/openfoodfacts/open-prices-frontend/issues/2035)) ([70c0a0d](https://github.com/openfoodfacts/open-prices-frontend/commit/70c0a0d5b5fcaadd1b408a3b1c606e8236156396))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#2032](https://github.com/openfoodfacts/open-prices-frontend/issues/2032)) ([6ca09c3](https://github.com/openfoodfacts/open-prices-frontend/commit/6ca09c3e596c5b56fc230b85b3d9ce623e9c5bd1))
+
 ## [1.156.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.155.1...v1.156.0) (2026-02-07)
 
 

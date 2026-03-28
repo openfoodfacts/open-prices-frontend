@@ -261,6 +261,7 @@
 		"Languages": "Langue",
 		"LatestPrices": "Derniers prix",
 		"LatestProofs": "Dernières preuves",
+		"LearnMore": "En savoir plus",
 		"LoadMore": "Voir plus",
 		"Location": "Lieu",
 		"Locations": "Lieux",
@@ -391,8 +392,8 @@
 		"PicturesAddedByYou": "Images ajoutées par vous",
 		"PRICE_TAG": "Étiquette de prix",
 		"PriceTags": "Étiquettes de prix",
-		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
-		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
+		"PriceTagsBoundingBoxesDisplay": "Afficher les cadres de délimitation des étiquettes de prix",
+		"PriceTagsBoundingBoxesHide": "Masquer les cadres de délimitation des étiquettes de prix",
 		"PriceCount": "{count} prix | {count} prix | {count} prix",
 		"PriceAddedCount": "{count} prix ajoutés | {count} prix ajouté | {count} prix ajoutés",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prix ajoutés",
@@ -452,7 +453,7 @@
 		"Select": "Sélectionner",
 		"Send": "Envoyer",
 		"Settings": "Paramètres",
-		"SignInOFFAccount": "Se connecter avec votre compte {url}",
+		"SignInOFFAccount": "Connectez-vous avec vos identifiants {url}",
 		"SignedIn": "Connecté !",
 		"SignIn": "Se connecter",
 		"SignOut": "Se déconnecter",
@@ -822,6 +823,9 @@
 		"CompareLocations": {
 			"Title": "Comparer 2 lieux"
 		},
+		"Explore": {
+			"Title": "Explorer"
+		},
 		"Locations": {
 			"Title": "Lieux"
 		},
@@ -868,7 +872,8 @@
 			"Title": "Expérimentations"
 		},
 		"Home": {
-			"Title": "Accueil"
+			"Title": "Accueil",
+			"Help": "{op_name} est un projet de collecte et de partage des prix de produits du monde entier. Il s'agit d'un ensemble de données accessible au public, utilisable pour la recherche, l'analyse et bien plus encore !"
 		},
 		"Dashboard": {
 			"Title": "Tableau de bord"
@@ -924,9 +929,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Assistant d'étiquette de prix de preuve"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Assistant de validation de prix"
-		},
 		"ReceiptAssistant": {
 			"Title": "Assistant de réception"
 		},
@@ -934,13 +936,15 @@
 			"Title": "Défi"
 		},
 		"Challenges": {
-			"Title": "Défis"
+			"Title": "Défis",
+			"Help": "Les défis permettent à la communauté de concentrer ses efforts et de recueillir les prix de produits spécifiques. Ils durent généralement un mois, et les participants sont classés selon leur contribution.\n\nConsultez les défis en cours ci-dessous pour participer, ou consultez les données des défis précédents."
 		},
 		"CommunityChallenge": {
 			"Title": "Défi de la communauté"
 		},
 		"Validate": {
-			"Title": "Valider"
+			"Title": "Valider",
+			"Help": "Après quelques secondes, les informations des étiquettes de prix sont automatiquement extraites des photos téléchargées, mais votre aide est toujours nécessaire pour en vérifier l'exactitude. Ce travail est réalisé collectivement.\n\nPour chaque étiquette de prix affichée, vérifiez que le prix, le code-barres ou la catégorie sont corrects, corrigez-les si nécessaire et confirmez. Une fois un prix confirmé, il est ajouté à la base de données publique et partagé avec la communauté.\n\nLes prix illisibles ou invalides peuvent être signalés comme erreurs. En cas de doute, vous pouvez ignorer le prix et laisser un autre contributeur le vérifier."
 		},
 		"ValidatePrices": {
 			"Title": "Valider des prix"
@@ -960,6 +964,7 @@
 		"ServerError": "Erreur : erreur serveur",
 		"Title": "Se connecter",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
+		"SignInWithOpenFoodFactsAuth": "Connectez-vous avec l'authentification {off_name}",
 		"UsernameLabel": "Identifiant",
 		"WrongCredentials": "Erreur : Problème d'identifiant"
 	},

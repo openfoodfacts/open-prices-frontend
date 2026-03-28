@@ -36,8 +36,17 @@ function cleanBarcode(value) {
   return value
 }
 
+function normalizeBarcode(value) {
+  if (value.length >= 9 && value.length <= 12) {
+    return value.padStart(13, '0')
+  }
+
+  return value
+}
+
 export default {
     isBarcodeValid,
     isBarcodeTooLong,
-    cleanBarcode
+    cleanBarcode,
+    normalizeBarcode,
 }
