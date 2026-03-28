@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.159.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.158.1...v1.159.0) (2026-03-28)
+
+
+### Features
+
+* **Data:** run data generation scripts (from taxonomies) on a weekly basis + open a PR if changes ([#2096](https://github.com/openfoodfacts/open-prices-frontend/issues/2096)) ([af38c83](https://github.com/openfoodfacts/open-prices-frontend/commit/af38c8357870c03a2a33bcf59d3ece83c861151a))
+* **Search:** added UPC to EAN 13 normalisation when searching ([#2082](https://github.com/openfoodfacts/open-prices-frontend/issues/2082)) ([62895f7](https://github.com/openfoodfacts/open-prices-frontend/commit/62895f7b0513802e4a2060e0d4e177c38042aba3))
+
+
+### Technical
+
+* **Data:** clarify countries & languages script name ([#2101](https://github.com/openfoodfacts/open-prices-frontend/issues/2101)) ([fe58ff2](https://github.com/openfoodfacts/open-prices-frontend/commit/fe58ff254550a85f79a4faf4ae25c7e281a8447b))
+* **Locations:** Logos: Improve matching by slufigying osm_brand. Try both svg & png. ([#2099](https://github.com/openfoodfacts/open-prices-frontend/issues/2099)) ([4e6c048](https://github.com/openfoodfacts/open-prices-frontend/commit/4e6c048c137874755aae14a2f41ec26f197fe9d9))
+
 ## [1.158.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.158.0...v1.158.1) (2026-03-23)
 
 
