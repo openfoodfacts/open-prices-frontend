@@ -30,6 +30,18 @@ function toArray(value) {
   }
 }
 
+function slugify(value) {
+  return value.toString().toLowerCase()
+    .normalize('NFD')               // Decompose accented characters
+    .replace(/\p{Diacritic}/gu, '') // Remove diacritics (accents)
+    .replace(/'/g, '')              // Remove apostrophes like Django
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w-]+/g, '')        // Remove all non-word chars
+    .replace(/--+/g, '-')           // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '')             // Trim - from end of text
+}
+
 /**
  * https://stackoverflow.com/a/65528838
  * - valid: https://www.example.com, https://example.com, http://example.com, https://wwww.example.com/coucou
@@ -144,6 +156,7 @@ export default {
   getDocumentScrollPercentage,
   isNumber,
   toArray,
+  slugify,
   isURL,
   getURLOrigin,
   addObjectToArray,
