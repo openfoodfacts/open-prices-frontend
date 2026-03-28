@@ -183,23 +183,23 @@ function getLocationLatLng(locationObject) {
   return [locationObject.osm_lat, locationObject.osm_lon]
 }
 
-function getLocationBrandLogo(locationObject) {
-  const BRAND_URL_PREFIX = 'https://raw.githubusercontent.com/openfoodfacts/brand-images/refs/heads/raphodn/stores-rename-slugify/xx/stores/'
+function getLocationBrandLogoPathName(locationObject) {
+  const BRAND_URL_PREFIX = 'https://raw.githubusercontent.com/openfoodfacts/brand-images/refs/heads/main/xx/stores/'
   let nameCleaned = null
+  // Photon
   if (locationObject.properties && locationObject.properties.name) {
     nameCleaned = utils.slugify(locationObject.properties.name)
+  // Nominatim
   } else if (locationObject.address && locationObject.name) {
     nameCleaned = utils.slugify(locationObject.name)
+  // OP
   } else if (locationObject.osm_brand) {
     nameCleaned = utils.slugify(locationObject.osm_brand)
   }
   if (nameCleaned) {
-    return {
-      svg: `${BRAND_URL_PREFIX}${nameCleaned}.svg`,
-      png: `${BRAND_URL_PREFIX}${nameCleaned}.png`
-    }
+    nameCleaned = `${BRAND_URL_PREFIX}${nameCleaned}`
   }
-  return null
+  return nameCleaned
 }
 
 function getMapBounds(results) {
@@ -269,7 +269,7 @@ export default {
   getLocationUniqueID,
   getLocationTag,
   getLocationLatLng,
-  getLocationBrandLogo,
+  getLocationBrandLogoPathName,
   getMapBounds,
   getMapCenter,
   getLocationONLINETitle,

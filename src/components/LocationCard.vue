@@ -4,7 +4,7 @@
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
           <LocationBrandLogoImg
-            :logo="getLocationBrandLogo"
+            :logo="getLocationBrandLogoPathName"
             width="100px"
           />
         </v-col>
@@ -91,8 +91,8 @@ export default {
       }
       return geo_utils.getLocationOSMTitle(this.location, false, true, false, false, false)
     },
-    getLocationBrandLogo() {
-      return geo_utils.getLocationBrandLogo(this.location)
+    getLocationBrandLogoPathName() {
+      return geo_utils.getLocationBrandLogoPathName(this.location)
     },
     // Removed brandLogoSrc as it is no longer needed
     showLocationDetailsRow() {

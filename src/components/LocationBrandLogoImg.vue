@@ -22,7 +22,7 @@ export default {
   name: 'LocationBrandLogoImg',
   props: {
     logo: {
-      type: Object, // {svg: string, png: string}
+      type: String,
       default: null
     },
     width: {
@@ -43,14 +43,14 @@ export default {
   computed: {
     currentSrc() {
       if (!this.logo) return null
-      return this.triedPng ? this.logo.png : this.logo.svg
+      return this.triedPng ? `${this.logo}.png` : `${this.logo}.svg`
     }
   },
   methods: {
     onError(e) {
-      if (!this.triedPng && this.logo && this.logo.png) {
+      if (!this.triedPng && this.logo) {
         this.triedPng = true
-        e.target.src = this.logo.png
+        e.target.src = `${this.logo}.png`
       } else {
         e.target.src = this.locationImageDefault
       }
