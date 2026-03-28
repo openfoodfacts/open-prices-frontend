@@ -38,7 +38,7 @@ def filter_countries(taxonomy):
 def taxonomy_node_list_to_dict_list(node_list, delete_parents=False):
     node_dict_list = list()
     for node in node_list:
-        node_dict = { "id": node.id, **node.to_dict() }
+        node_dict = { "id": node.id, **node.to_dict(), **node.properties }
         if delete_parents:
             del node_dict["parents"]
         node_dict_list.append(node_dict)
@@ -49,10 +49,11 @@ def write_countries_to_files(countries, languages: list[dict[str, Any]]):
     for language in languages:
         language_code = language['code']
         language_countries = list()
-        # for each label, get translation (or default to en)
-        for label in countries:
-            language_label_name = label['name'][language_code] if (language_code in label['name']) else label['name']['en']
-            language_countries.append({"id": label['id'], "name": language_label_name, "country_code_2": label['properties']['country_code_2']["en"]})
+        # for each country, get translation (or default to en)
+        for country in countries:
+            language_country_name = country['name'][language_code] if (language_code in country['name']) else country['name']['en']
+            country_code_2 = country['country_code_2']["en"]
+            language_countries.append({"id": country['id'], "name": language_country_name, "country_code_2": country_code_2})
         # order by name
         language_countries = sorted(language_countries, key=lambda x: x['name'])
         # write to file
@@ -66,13 +67,6 @@ if __name__ == "__main__":
         OFF_TAXONOMY_NAME, force_download=True, download_newer=True
     )
     print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
-
-    print(next(TAXONOMY_FULL.iter_nodes()).id)
-    print(next(TAXONOMY_FULL.iter_nodes()).get_localized_name("en"))
-    print(next(TAXONOMY_FULL.iter_nodes()).get_synonyms("en"))
-    # print(next(TAXONOMY_FULL.iter_nodes()).to_dict())
-    # print(next(TAXONOMY_FULL.iter_nodes()).properties())
-    print(next(TAXONOMY_FULL.iter_nodes()).properties["country_code_2"]["en"])
 
     # Step 2: filter
     countries_filtered = filter_countries(TAXONOMY_FULL)
