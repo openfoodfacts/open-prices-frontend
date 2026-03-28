@@ -1,4 +1,5 @@
 import constants from '../constants'
+import utils from '../utils'
 
 
 /**
@@ -183,22 +184,22 @@ function getLocationLatLng(locationObject) {
 }
 
 function getLocationBrandLogo(locationObject) {
-  const BRAND_URL_PREFIX = 'https://raw.githubusercontent.com/openfoodfacts/brand-images/refs/heads/main/xx/stores/'
-  // Photon
+  const BRAND_URL_PREFIX = 'https://raw.githubusercontent.com/openfoodfacts/brand-images/refs/heads/raphodn/stores-rename-slugify/xx/stores/'
+  let nameCleaned = null
   if (locationObject.properties && locationObject.properties.name) {
-    const nameCleaned = locationObject.properties.name.replace(' ', '-')
-    return `${BRAND_URL_PREFIX}${nameCleaned}.svg`
+    nameCleaned = utils.slugify(locationObject.properties.name)
+  } else if (locationObject.address && locationObject.name) {
+    nameCleaned = utils.slugify(locationObject.name)
+  } else if (locationObject.osm_brand) {
+    nameCleaned = utils.slugify(locationObject.osm_brand)
   }
-  // Nominatim
-  else if (locationObject.address && locationObject.name) {
-    const nameCleaned = locationObject.name.replace(' ', '-')
-    return `${BRAND_URL_PREFIX}${nameCleaned}.svg`
+  if (nameCleaned) {
+    return {
+      svg: `${BRAND_URL_PREFIX}${nameCleaned}.svg`,
+      png: `${BRAND_URL_PREFIX}${nameCleaned}.png`
+    }
   }
-  // OP
-  else if (locationObject.osm_brand) {
-    const nameCleaned = locationObject.osm_brand.replace(' ', '-')
-    return `${BRAND_URL_PREFIX}${nameCleaned}.svg`
-  }
+  return null
 }
 
 function getMapBounds(results) {
