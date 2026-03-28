@@ -37,7 +37,7 @@
             v-model="appStore.user.country"
             :label="$t('Common.Country')"
             :items="countryList"
-            item-title="native"
+            item-title="name"
             item-value="code"
             hide-details="auto"
           />
@@ -210,9 +210,10 @@ export default {
     return {
       OFF_CROWDIN_URL: constants.OFF_CROWDIN_URL,
       theme: useTheme(),
-      countryList,
       languageList,
-      // currencyList,
+      countryList: [...countryList].sort((a, b) =>
+        a.name.localeCompare(b.name)
+      ),
       priceListDisplayList: constants.DISPLAY_LIST,
       locationSelectorDisplayList: constants.LOCATION_SELECTOR_DISPLAY_LIST,
       productSelectorDisplayList: constants.PRODUCT_SELECTOR_DISPLAY_LIST,
