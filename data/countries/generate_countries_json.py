@@ -7,7 +7,7 @@ import csv
 import os
 from pathlib import Path
 
-from openfoodfacts.taxonomy import Taxonomy, TaxonomyNode, get_taxonomy
+from openfoodfacts.taxonomy import Taxonomy, get_taxonomy
 
 OFF_TAXONOMY_NAME = "country"
 
@@ -23,20 +23,17 @@ def read_csv(filepath, delimiter=","):
         return list(reader)
 
 
-def get_all_root_nodes(taxonomy: Taxonomy) -> list[TaxonomyNode]:
-    return [node for node in taxonomy.iter_nodes() if not node.get_parents_hierarchy()]
-
-
-def filter_node_list_by_rules(node_list: list[TaxonomyNode]) -> list[TaxonomyNode]:
+def filter_countries(taxonomy):
     """
     Rules
-    - keep only nodes with "country_code_2" property
+    - keep only countries (nodes with "country_code_2" property)
     """
-    return [
-        node
-        for node in node_list
-        if "country_code_2" in node.properties
-    ]
+    node_list = list()
+    for node in taxonomy.iter_nodes():
+        if "country_code_2" in node.properties:
+            node_list.append(node)
+    return node_list
+
 
 def get_country_osm_name(osm_countries, country_code_2):
     for osm_country in osm_countries:
@@ -55,8 +52,8 @@ if __name__ == "__main__":
     # Step 1b: load additional data files
     OPENSTREETMAP_COUNTRIES = read_csv(os.path.join(script_path, "openstreetmap-countries-overpass-20260117.csv"))
 
-    # Step 2: filter countries
-    countries_filtered = filter_node_list_by_rules(get_all_root_nodes(TAXONOMY_FULL))
+    # Step 2: filter
+    countries_filtered = filter_countries(TAXONOMY_FULL)
     print("Total number of countries after filtering:", len(countries_filtered))
 
     # Step 3a: build countries list
