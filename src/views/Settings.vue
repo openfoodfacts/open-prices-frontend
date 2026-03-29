@@ -36,8 +36,8 @@
           <v-autocomplete
             v-model="appStore.user.country"
             :label="$t('Common.Country')"
-            :items="countryList"
-            item-title="name"
+            :items="localizedCountryList"
+            item-title="localizedName"
             item-value="code"
             hide-details="auto"
           />
@@ -48,7 +48,7 @@
           <v-autocomplete
             v-model="appStore.user.language"
             :label="$t('Common.Language')"
-            :items="languageList"
+            :items="sortedLanguageList" 
             item-title="native"
             item-value="code"
             hide-details="auto"
@@ -210,9 +210,6 @@ export default {
     return {
       OFF_CROWDIN_URL: constants.OFF_CROWDIN_URL,
       theme: useTheme(),
-      countryList: [...countryList].sort((a, b) =>
-        a.name.localeCompare(b.name)
-      ),
       languageList,
       // currencyList,
       priceListDisplayList: constants.DISPLAY_LIST,
@@ -223,8 +220,34 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+  localizedCountryList() {
+    const fullLocale = this.$i18n.locale
+    const baseLocale = fullLocale.split('-')[0] || 'en'
+
+    const regionNames = new Intl.DisplayNames([baseLocale], { type: 'region' })
+    const collator = new Intl.Collator(fullLocale)
+
+    return [...countryList]
+      .map(country => ({
+        ...country,
+        localizedName:
+          regionNames.of(country.code) || country.name
+      }))
+      .sort((a, b) =>
+        collator.compare(a.localizedName, b.localizedName)
+      )
+  },
+  sortedLanguageList() {
+    const collator = new Intl.Collator(undefined, {
+      sensitivity: 'base'
+    })
+
+    return [...languageList].sort((a, b) =>
+      collator.compare(a.native, b.native)
+    )
+  },
     currencyList() {
-      return [...new Set(this.countryList
+      return [...new Set(countryList
         .map(country => country.currency)
         .flat()
         .filter(currency => currency !== null && currency.length !== 0))]
