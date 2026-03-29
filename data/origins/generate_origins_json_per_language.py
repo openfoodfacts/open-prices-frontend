@@ -2,10 +2,14 @@
 See parent README.md for more details.
 """
 
-
+import sys
+import os
 import json
 from typing import Any
 from pathlib import Path
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import utils
 
 from openfoodfacts.taxonomy import get_taxonomy
 
@@ -40,43 +44,6 @@ repo_path = script_path.parent.parent
 OUTPUT_PATH = repo_path / "src/data/origins/"
 
 
-def read_json(filepath):
-    with open(filepath) as jsonfile:
-        return json.load(jsonfile)
-
-
-def get_taxonomy_node_by_id(taxonomy, node_id):
-    return next((node for node in taxonomy.iter_nodes() if node.id == node_id), None)
-
-
-def get_taxonomy_node_list_by_id_list(taxonomy, node_id_list):
-    node_list = list()
-    for node_id in node_id_list:
-        taxonomy_node = get_taxonomy_node_by_id(taxonomy, node_id)
-        if taxonomy_node:
-            node_list.append(taxonomy_node)
-    return node_list
-
-
-def taxonomy_node_list_to_dict_list(node_list, delete_parents=False):
-    node_dict_list = list()
-    for node in node_list:
-        node_dict = { "id": node.id, **node.to_dict() }
-        if delete_parents:
-            del node_dict["parents"]
-        node_dict_list.append(node_dict)
-    return node_dict_list
-
-
-def get_taxonomy_node_children_full_list(taxonomy, node_parent):
-    children_node_list = list()
-    for node in taxonomy.iter_nodes():
-        node_parents = node.get_parents_hierarchy()
-        if next((n for n in node_parents if n == node_parent), None):
-            children_node_list.append(node)
-    return children_node_list
-
-
 def filter_origins(taxonomy):
     """
     Rules
@@ -108,12 +75,10 @@ def write_origins_to_files(origins, languages: list[dict[str, Any]]):
 
 
 def compare_new_origins_with_old_origins():
-    with open("src/data/origins-tags.json") as f:
-        old_origins = json.load(f)
+    old_origins = utils.read_json("src/data/origins-tags.json")
     print("old_origins", len(old_origins))
 
-    with open("src/data/origins/en.json") as f:
-        new_origins = json.load(f)
+    new_origins = utils.read_json("src/data/origins/en.json")
     print("new_origins", len(new_origins))
 
     # check missing in new
@@ -141,11 +106,11 @@ if __name__ == "__main__":
 
     # Step 2: filter
     origins_filtered = filter_origins(TAXONOMY_FULL)
-    origins_filtered_to_dict_list = taxonomy_node_list_to_dict_list(list(origins_filtered), delete_parents=True)
+    origins_filtered_to_dict_list = utils.taxonomy_node_list_to_dict_list(list(origins_filtered), delete_parents=True)
     print("Origins remaining:", len(origins_filtered_to_dict_list))
 
     # Step 3: write to files (1 per language)
-    OP_LANGUAGES = read_json(repo_path / OP_LANGUAGES_FILE)
+    OP_LANGUAGES = utils.read_json(repo_path / OP_LANGUAGES_FILE)
     write_origins_to_files(origins_filtered_to_dict_list, OP_LANGUAGES)
     print(f"Wrote to {len(OP_LANGUAGES)} language files")
 

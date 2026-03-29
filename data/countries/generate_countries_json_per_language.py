@@ -1,13 +1,15 @@
 """
 See parent README.md for more details.
 """
+
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import utils
 import json
 from typing import Any
 from pathlib import Path
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import utils
 
 from openfoodfacts.taxonomy import Taxonomy, get_taxonomy
 
@@ -31,16 +33,6 @@ def filter_countries(taxonomy):
         if "country_code_2" in node.properties:
             node_list.append(node)
     return node_list
-
-
-def taxonomy_node_list_to_dict_list(node_list, delete_parents=False):
-    node_dict_list = list()
-    for node in node_list:
-        node_dict = { "id": node.id, **node.to_dict(), **node.properties }
-        if delete_parents:
-            del node_dict["parents"]
-        node_dict_list.append(node_dict)
-    return node_dict_list
 
 
 def write_countries_to_files(countries, languages: list[dict[str, Any]]):
@@ -68,7 +60,7 @@ if __name__ == "__main__":
 
     # Step 2: filter
     countries_filtered = filter_countries(TAXONOMY_FULL)
-    countries_filtered_to_dict_list = taxonomy_node_list_to_dict_list(list(countries_filtered), delete_parents=True)
+    countries_filtered_to_dict_list = utils.taxonomy_node_list_to_dict_list(list(countries_filtered), delete_parents=True)
     print("countries remaining:", len(countries_filtered_to_dict_list))
 
     # Step 3: write to files (1 per language)

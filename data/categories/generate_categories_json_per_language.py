@@ -6,10 +6,14 @@ Stats as of 2026-03-29:
 - Output: 3080 categories
 """
 
+import sys
+import os
 import json
-import re
 from typing import Any
 from pathlib import Path
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import utils
 
 from openfoodfacts.taxonomy import Taxonomy, TaxonomyNode, get_taxonomy
 
@@ -92,11 +96,6 @@ script_path = Path(__file__).parent
 repo_path = script_path.parent.parent
 
 OUTPUT_PATH = repo_path / "src/data/categories/"
-
-
-def read_json(filepath):
-    with open(filepath) as jsonfile:
-        return json.load(jsonfile)
 
 
 def get_taxonomy_node_list_by_id_list(
@@ -264,7 +263,7 @@ if __name__ == "__main__":
     ]
 
     print("Step 5: write to files (1 per language)")
-    OP_LANGUAGES = read_json(repo_path / OP_LANGUAGES_FILE)
+    OP_LANGUAGES = utils.read_json(repo_path / OP_LANGUAGES_FILE)
     write_categories_to_files(categories_filtered_to_dict_list, OP_LANGUAGES, delete_parents=True)
     print(f"Wrote to {len(OP_LANGUAGES)} language files")
 
