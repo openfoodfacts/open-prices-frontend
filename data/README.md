@@ -71,6 +71,10 @@ What it does:
 
 ### Stats
 
+- Last run: 2026-03-29
+- Input (Taxonomy): 268 countries
+- Output (JSON): 252 countries x 150 languages
+
 ## Countries
 
 ### Goal
@@ -128,6 +132,10 @@ What it does:
 
 ### Stats
 
+- Last run: 2026-03-29
+- Input (Taxonomy): 3021 labels
+- Output (JSON): 1 labels x 150 languages
+
 ## Languages
 
 ### Goal
@@ -163,3 +171,8 @@ What it does:
 3. the result is exported to `/src/data/origins` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
 
 ### Stats
+
+- Last run: 2026-03-29
+- Input (Taxonomy): 719 origins
+- Output (JSON): 264 origins x 150 languages
+

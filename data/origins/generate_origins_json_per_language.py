@@ -2,6 +2,7 @@
 See parent README.md for more details.
 """
 
+import datetime
 import sys
 import os
 import json
@@ -42,6 +43,9 @@ script_path = Path(__file__).parent
 repo_path = script_path.parent.parent
 
 OUTPUT_PATH = repo_path / "src/data/origins/"
+
+README_PATH = repo_path / "data/README.md"
+README_SECTION = "## Origins (with translations)"
 
 
 def filter_origins(taxonomy):
@@ -113,6 +117,18 @@ if __name__ == "__main__":
     OP_LANGUAGES = utils.read_json(repo_path / OP_LANGUAGES_FILE)
     write_origins_to_files(origins_filtered_to_dict_list, OP_LANGUAGES)
     print(f"Wrote to {len(OP_LANGUAGES)} language files")
+
+    # --- Update README.md Stats section ---
+    stats_lines = [
+        f"- Last run: {datetime.date.today()}",
+        f"- Input (Taxonomy): {len(TAXONOMY_FULL)} origins",
+        f"- Output (JSON): {len(origins_filtered)} origins x {len(OP_LANGUAGES)} languages"
+    ]
+    utils.update_readme_stats(
+        readme_path=README_PATH,
+        section_header=README_SECTION,
+        stats_lines=stats_lines
+    )
 
     print("Bonus: compare old & new")
     compare_new_origins_with_old_origins()

@@ -94,9 +94,8 @@ repo_path = script_path.parent.parent
 
 OUTPUT_PATH = repo_path / "src/data/categories/"
 
-readme_path = repo_path / "data/README.md"
-categories_section = "## Categories (with translations)"
-stats_section = "### Stats"
+README_PATH = repo_path / "data/README.md"
+README_SECTION = "## Categories (with translations)"
 
 
 def filter_categories(taxonomy):
@@ -193,8 +192,7 @@ if __name__ == "__main__":
     TAXONOMY_FULL: Taxonomy = get_taxonomy(
         OFF_TAXONOMY_NAME, force_download=True, download_newer=True
     )
-    taxonomy_node_count = len(TAXONOMY_FULL)
-    print("Taxonomy: total number of nodes:", taxonomy_node_count)
+    print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
 
     print("Step 2: filter")
     categories_filtered = filter_categories(TAXONOMY_FULL)
@@ -202,8 +200,7 @@ if __name__ == "__main__":
 
     print("Step 3: deduplicate")
     categories_filtered = utils.deduplicate_node_list(categories_filtered)
-    category_count = len(categories_filtered)
-    print("Finished deduplicating:", category_count)
+    print("Finished deduplicating:", len(categories_filtered))
 
     print("Step 4: transform to dict list & write to files (1 per language)")
     categories_filtered_to_dict_list = utils.taxonomy_node_list_to_dict_list(list(categories_filtered), delete_parents=True)
@@ -214,12 +211,12 @@ if __name__ == "__main__":
     # --- Update README.md Stats section ---
     stats_lines = [
         f"- Last run: {datetime.date.today()}",
-        f"- Input (Taxonomy): {taxonomy_node_count} categories",
-        f"- Output (JSON): {category_count} categories x {len(OP_LANGUAGES)} languages"
+        f"- Input (Taxonomy): {len(TAXONOMY_FULL)} categories",
+        f"- Output (JSON): {len(categories_filtered)} categories x {len(OP_LANGUAGES)} languages"
     ]
     utils.update_readme_stats(
-        readme_path=readme_path,
-        section_header=categories_section,
+        readme_path=README_PATH,
+        section_header=README_SECTION,
         stats_lines=stats_lines
     )
 
