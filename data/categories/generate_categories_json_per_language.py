@@ -9,6 +9,7 @@ Stats as of 2026-03-29:
 import sys
 import os
 import json
+import re
 from typing import Any
 from pathlib import Path
 
