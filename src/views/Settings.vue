@@ -221,11 +221,10 @@ export default {
   computed: {
     ...mapStores(useAppStore),
   localizedCountryList() {
-    const fullLocale = this.$i18n.locale
-    const baseLocale = fullLocale.split('-')[0] || 'en'
+    const locale = this.$i18n.locale || 'en'
 
-    const regionNames = new Intl.DisplayNames([baseLocale], { type: 'region' })
-    const collator = new Intl.Collator(fullLocale)
+    const regionNames = new Intl.DisplayNames([locale], { type: 'region' })
+    const collator = new Intl.Collator(locale)
 
     return [...countryList]
       .map(country => ({
@@ -238,7 +237,9 @@ export default {
       )
   },
   sortedLanguageList() {
-    const collator = new Intl.Collator(undefined, {
+    const locale = this.$i18n.locale || 'en'
+
+    const collator = new Intl.Collator(locale, {
       sensitivity: 'base'
     })
 
