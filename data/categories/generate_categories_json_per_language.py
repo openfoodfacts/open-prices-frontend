@@ -1,9 +1,9 @@
 """
 See parent README.md for more details.
 
-Stats as of 2026-03-17:
-- Input: Taxonomy: total number of nodes: 14331
-- Output: 3070 categories
+Stats as of 2026-03-29:
+- Input: Taxonomy: total number of nodes: 14353
+- Output: 3080 categories
 """
 
 import json
@@ -64,7 +64,7 @@ EXTRA_NODE_ID_LIST = [
 ]
 
 EXCLUDE_LIST = [
-    "Frozen",  # 310 nodes removed
+    "Frozen",  # 314 nodes removed
     "Cooked",  # 163
     "Fresh",  # 153
     "Canned",  # 87
