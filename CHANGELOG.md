@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.160.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.159.0...v1.160.0) (2026-03-28)
+
+
+### Features
+
+* **Data:** script to filter and generate countries (with translations) ([#2102](https://github.com/openfoodfacts/open-prices-frontend/issues/2102)) ([8971a1f](https://github.com/openfoodfacts/open-prices-frontend/commit/8971a1f331e790ff20e302b7528f56d7dc58a0a2))
+
 ## [1.159.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.158.1...v1.159.0) (2026-03-28)
 
 
