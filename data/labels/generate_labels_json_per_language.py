@@ -2,10 +2,14 @@
 See parent README.md for more details.
 """
 
-
+import sys
+import os
 import json
 from typing import Any
 from pathlib import Path
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import utils
 
 from openfoodfacts.taxonomy import get_taxonomy
 
@@ -25,44 +29,11 @@ repo_path = script_path.parent.parent
 OUTPUT_PATH = repo_path / "src/data/labels/"
 
 
-def read_json(filepath):
-    with open(filepath) as jsonfile:
-        return json.load(jsonfile)
-
-
-def get_taxonomy_node_by_id(taxonomy, node_id):
-    return next((node for node in taxonomy.iter_nodes() if node.id == node_id), None)
-
-
-def get_taxonomy_node_list_by_id_list(taxonomy, node_id_list):
-    node_list = list()
-    for node_id in node_id_list:
-        taxonomy_node = get_taxonomy_node_by_id(taxonomy, node_id)
-        if taxonomy_node:
-            node_list.append(taxonomy_node)
-    return node_list
-
-
-def taxonomy_node_list_to_dict_list(node_list, delete_parents=False):
-    node_dict_list = list()
-    for node in node_list:
-        node_dict = { "id": node.id, **node.to_dict() }
-        if delete_parents:
-            del node_dict["parents"]
-        node_dict_list.append(node_dict)
-    return node_dict_list
-
-
-def get_taxonomy_node_children_full_list(taxonomy, node_parent):
-    children_node_list = list()
-    for node in taxonomy.iter_nodes():
-        node_parents = node.get_parents_hierarchy()
-        if next((n for n in node_parents if n == node_parent), None):
-            children_node_list.append(node)
-    return children_node_list
-
-
 def filter_labels(taxonomy):
+    """
+    Rules:
+    - keep only nodes in KEEP_ONLY list
+    """
     node_list = list()
     for node in taxonomy.iter_nodes():
         if node.id in KEEP_ONLY:
@@ -86,12 +57,10 @@ def write_labels_to_files(labels, languages: list[dict[str, Any]]):
 
 
 def compare_new_labels_with_old_labels():
-    with open("src/data/labels-tags.json") as f:
-        old_labels = json.load(f)
+    old_labels = utils.read_json("src/data/labels-tags.json")
     print("old_labels", len(old_labels))
 
-    with open("src/data/labels/en.json") as f:
-        new_labels = json.load(f)
+    new_labels = utils.read_json("src/data/labels/en.json")
     print("new_labels", len(new_labels))
 
     # check missing in new
@@ -113,18 +82,19 @@ def compare_new_labels_with_old_labels():
 
 
 if __name__ == "__main__":
-    # Step 1: get the full taxonomy
+    print("Step 1: get the full taxonomy")
     TAXONOMY_FULL = get_taxonomy(OFF_TAXONOMY_NAME, force_download=True, download_newer=True)
     print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
 
-    # Step 2: filter
+    print("Step 2: filter")
     labels_filtered = filter_labels(TAXONOMY_FULL)
-    labels_filtered_to_dict_list = taxonomy_node_list_to_dict_list(list(labels_filtered), delete_parents=True)
-    print("Labels remaining:", len(labels_filtered_to_dict_list))
+    print("Labels remaining:", len(labels_filtered))
 
-    # Step 3: write to files (1 per language)
-    OP_LANGUAGES = read_json(repo_path / OP_LANGUAGES_FILE)
+    print("Step 3: transform to dict & write to files (1 per language)")
+    labels_filtered_to_dict_list = utils.taxonomy_node_list_to_dict_list(list(labels_filtered), delete_parents=True)
+    OP_LANGUAGES = utils.read_json(repo_path / OP_LANGUAGES_FILE)
     write_labels_to_files(labels_filtered_to_dict_list, OP_LANGUAGES)
     print(f"Wrote to {len(OP_LANGUAGES)} language files")
 
+    print("Bonus: compare old & new")
     compare_new_labels_with_old_labels()

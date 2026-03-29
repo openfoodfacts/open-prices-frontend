@@ -17,11 +17,12 @@ Most of the scripts require the [openfoodfacts-python](https://github.com/openfo
 pip install openfoodfacts
 ```
 
-## Categories
+## Categories (with translations)
 
 ### Goal
 
-Filter the full Open Food Facts categories taxonomy, to keep only categories relevant for Open Prices (a small subset of food categories)
+Filter the full Open Food Facts categories taxonomy, to keep only categories relevant for Open Prices (a small subset of food categories).
+These categories are displayed in the price add form ("raw category" mode).
 
 ### Open Food Facts taxonomy
 
@@ -40,6 +41,28 @@ What it does:
 2. keep only a small subset of categories (TODO: give more details)
 3. the result is exported to `/src/data/categories` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
 
+## Countries (with translations)
+
+### Goal
+
+Filter the full Open Food Facts countries taxonomy, to keep only countries relevant for Open Prices.
+These countries are displayed in the user settings form.
+
+### Open Food Facts taxonomy
+
+File viewable here: [taxonomies/countries](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/countries.txt)
+
+### Script
+
+```sh
+python data/countries/generate_countries_json_per_language.py
+```
+
+What it does:
+1. get the OFF country taxonomy
+2. keep only nodes with a `country_code_2:en:` property
+3. the result is exported to `/src/data/countries` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
+
 ## Countries
 
 ### Goal
@@ -48,7 +71,7 @@ Create a JSON file with the list of countries (enriched with OSM name)
 
 ### Open Food Facts taxonomy
 
-File viewable here: [taxonomies/countries](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/countries.txt).
+File viewable here: [taxonomies/countries](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/countries.txt)
 Useful node properties: `country_code_2:en:`, `country_code_3:en:`, `language_codes:en:`, `osm_relation:en:`, `wikidata:en:` (not all are filled)
 
 ### OpenStreetMap csv
@@ -73,11 +96,12 @@ What it does:
 3. enrich these countries with OSM name, and emoji
 4. the result is exported to `/src/data/countries.json`
 
-## Labels
+## Labels (with translations)
 
 ### Goal
 
-TODO
+Filter the full Open Food Facts labels taxonomy, to keep only labels relevant for Open Prices.
+These labels are displayed in the price add form ("raw category" mode).
 
 ### Open Food Facts taxonomy
 
@@ -88,6 +112,11 @@ File viewable here: [taxonomies/labels.txt](https://github.com/openfoodfacts/ope
 ```sh
 python data/labels/generate_labels_json_per_language.py
 ```
+
+What it does:
+1. get the OFF labels taxonomy
+2. keep only node the 'organic' label for now
+3. the result is exported to `/src/data/labels` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
 
 ## Languages
 
@@ -101,11 +130,12 @@ Create a JSON file with the list of languages
 python data/languages/generate_languages_json.py
 ```
 
-## Origins
+## Origins (with translations)
 
 ### Goal
 
-TODO
+Filter the full Open Food Facts origins taxonomy, to keep only origins relevant for Open Prices.
+These origins are displayed in the price add form ("raw category" mode).
 
 ### Open Food Facts taxonomy
 
@@ -116,3 +146,8 @@ File viewable here: [taxonomies/origins.txt](https://github.com/openfoodfacts/op
 ```sh
 python data/origins/generate_origins_json_per_language.py
 ```
+
+What it does:
+1. get the OFF origins taxonomy
+2. keep only nodes with a `country_code_2:en:` property, and add some extra (non-country) nodes
+3. the result is exported to `/src/data/origins` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
