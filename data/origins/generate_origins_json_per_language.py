@@ -100,16 +100,16 @@ def compare_new_origins_with_old_origins():
 
 
 if __name__ == "__main__":
-    # Step 1: get the full taxonomy
+    print("Step 1: get the full taxonomy")
     TAXONOMY_FULL = get_taxonomy(OFF_TAXONOMY_NAME, force_download=True, download_newer=True)
     print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
 
-    # Step 2: filter
+    print("Step 2: filter")
     origins_filtered = filter_origins(TAXONOMY_FULL)
-    origins_filtered_to_dict_list = utils.taxonomy_node_list_to_dict_list(list(origins_filtered), delete_parents=True)
-    print("Origins remaining:", len(origins_filtered_to_dict_list))
+    print("Origins remaining:", len(origins_filtered))
 
-    # Step 3: write to files (1 per language)
+    print("Step 3: transform to dict & write to files (1 per language)")
+    origins_filtered_to_dict_list = utils.taxonomy_node_list_to_dict_list(list(origins_filtered), delete_parents=True)
     OP_LANGUAGES = utils.read_json(repo_path / OP_LANGUAGES_FILE)
     write_origins_to_files(origins_filtered_to_dict_list, OP_LANGUAGES)
     print(f"Wrote to {len(OP_LANGUAGES)} language files")

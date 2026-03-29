@@ -52,18 +52,18 @@ def write_countries_to_files(countries, languages: list[dict[str, Any]]):
 
 
 if __name__ == "__main__":
-    # Step 1a: get the full taxonomy
+    print("Step 1: get the full taxonomy")
     TAXONOMY_FULL: Taxonomy = get_taxonomy(
         OFF_TAXONOMY_NAME, force_download=True, download_newer=True
     )
     print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
 
-    # Step 2: filter
+    print("Step 2: filter")
     countries_filtered = filter_countries(TAXONOMY_FULL)
-    countries_filtered_to_dict_list = utils.taxonomy_node_list_to_dict_list(list(countries_filtered), delete_parents=True)
-    print("countries remaining:", len(countries_filtered_to_dict_list))
+    print("Countries remaining:", len(countries_filtered))
 
-    # Step 3: write to files (1 per language)
+    print("Step 3: transform to dict & write to files (1 per language)")
+    countries_filtered_to_dict_list = utils.taxonomy_node_list_to_dict_list(list(countries_filtered), delete_parents=True)
     OP_LANGUAGES = utils.read_json(repo_path / OP_LANGUAGES_FILE)
     write_countries_to_files(countries_filtered_to_dict_list, OP_LANGUAGES)
     print(f"Wrote to {len(OP_LANGUAGES)} language files")

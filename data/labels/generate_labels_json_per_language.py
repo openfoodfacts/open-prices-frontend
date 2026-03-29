@@ -30,6 +30,10 @@ OUTPUT_PATH = repo_path / "src/data/labels/"
 
 
 def filter_labels(taxonomy):
+    """
+    Rules:
+    - keep only nodes in KEEP_ONLY list
+    """
     node_list = list()
     for node in taxonomy.iter_nodes():
         if node.id in KEEP_ONLY:
@@ -78,18 +82,19 @@ def compare_new_labels_with_old_labels():
 
 
 if __name__ == "__main__":
-    # Step 1: get the full taxonomy
+    print("Step 1: get the full taxonomy")
     TAXONOMY_FULL = get_taxonomy(OFF_TAXONOMY_NAME, force_download=True, download_newer=True)
     print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
 
-    # Step 2: filter
+    print("Step 2: filter")
     labels_filtered = filter_labels(TAXONOMY_FULL)
-    labels_filtered_to_dict_list = utils.taxonomy_node_list_to_dict_list(list(labels_filtered), delete_parents=True)
-    print("Labels remaining:", len(labels_filtered_to_dict_list))
+    print("Labels remaining:", len(labels_filtered))
 
-    # Step 3: write to files (1 per language)
+    print("Step 3: transform to dict & write to files (1 per language)")
+    labels_filtered_to_dict_list = utils.taxonomy_node_list_to_dict_list(list(labels_filtered), delete_parents=True)
     OP_LANGUAGES = utils.read_json(repo_path / OP_LANGUAGES_FILE)
     write_labels_to_files(labels_filtered_to_dict_list, OP_LANGUAGES)
     print(f"Wrote to {len(OP_LANGUAGES)} language files")
 
+    print("Bonus: compare old & new")
     compare_new_labels_with_old_labels()
