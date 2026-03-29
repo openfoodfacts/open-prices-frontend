@@ -1,11 +1,8 @@
 """
 See parent README.md for more details.
-
-Stats as of 2026-03-29:
-- Input: Taxonomy: total number of nodes: 14353
-- Output: 3080 categories
 """
 
+import datetime
 import sys
 import os
 import json
@@ -97,6 +94,9 @@ repo_path = script_path.parent.parent
 
 OUTPUT_PATH = repo_path / "src/data/categories/"
 
+README_PATH = repo_path / "data/README.md"
+README_SECTION = "## Categories (with translations)"
+
 
 def filter_categories(taxonomy):
     """
@@ -131,7 +131,7 @@ def filter_categories(taxonomy):
 
 
 def write_categories_to_files(
-    categories: list[dict[str, Any]], languages: list[dict[str, Any]], delete_parents: bool = False
+    categories: list[dict[str, Any]], languages: list[dict[str, Any]]
 ):
     for language in languages:
         language_code = language["code"]
@@ -205,8 +205,20 @@ if __name__ == "__main__":
     print("Step 4: transform to dict list & write to files (1 per language)")
     categories_filtered_to_dict_list = utils.taxonomy_node_list_to_dict_list(list(categories_filtered), delete_parents=True)
     OP_LANGUAGES = utils.read_json(repo_path / OP_LANGUAGES_FILE)
-    write_categories_to_files(categories_filtered_to_dict_list, OP_LANGUAGES, delete_parents=True)
+    write_categories_to_files(categories_filtered_to_dict_list, OP_LANGUAGES)
     print(f"Wrote to {len(OP_LANGUAGES)} language files")
+
+    # --- Update README.md Stats section ---
+    stats_lines = [
+        f"- Last run: {datetime.date.today()}",
+        f"- Input (Taxonomy): {len(TAXONOMY_FULL)} categories",
+        f"- Output (JSON): {len(categories_filtered)} categories x {len(OP_LANGUAGES)} languages"
+    ]
+    utils.update_readme_stats(
+        readme_path=README_PATH,
+        section_header=README_SECTION,
+        stats_lines=stats_lines
+    )
 
     # Extra
     # compare_new_categories_with_old_categories()
