@@ -41,6 +41,12 @@ What it does:
 2. keep only a small subset of categories (TODO: give more details)
 3. the result is exported to `/src/data/categories` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
 
+### Stats
+
+- Last run: 2026-03-29
+- Input (Taxonomy): 14353 categories
+- Output (JSON): 3080 categories x 150 languages
+
 ## Countries (with translations)
 
 ### Goal
@@ -62,6 +68,8 @@ What it does:
 1. get the OFF country taxonomy
 2. keep only nodes with a `country_code_2:en:` property
 3. the result is exported to `/src/data/countries` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
+
+### Stats
 
 ## Countries
 
@@ -118,6 +126,8 @@ What it does:
 2. keep only node the 'organic' label for now
 3. the result is exported to `/src/data/labels` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
 
+### Stats
+
 ## Languages
 
 ### Goal
@@ -151,3 +161,5 @@ What it does:
 1. get the OFF origins taxonomy
 2. keep only nodes with a `country_code_2:en:` property, and add some extra (non-country) nodes
 3. the result is exported to `/src/data/origins` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
+
+### Stats

@@ -114,4 +114,5 @@ if __name__ == "__main__":
     write_origins_to_files(origins_filtered_to_dict_list, OP_LANGUAGES)
     print(f"Wrote to {len(OP_LANGUAGES)} language files")
 
+    print("Bonus: compare old & new")
     compare_new_origins_with_old_origins()

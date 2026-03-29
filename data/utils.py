@@ -88,3 +88,55 @@ def deduplicate_node_list(node_list: list[TaxonomyNode]) -> list[TaxonomyNode]:
             deduped.append(node)
             seen.add(node.id)
     return deduped
+
+
+def update_readme_stats(
+    readme_path,
+    section_header,
+    stats_lines
+):
+    """
+    Update the stats section in the README file.
+    - section_header: e.g. '## Categories (with translations)'
+    - stats_lines: list of new stats lines (each should include a leading '-')
+    The stats header is always '### Stats'.
+    """
+    stats_header = '### Stats'
+    with open(readme_path, "r", encoding="utf-8") as f:
+        readme_lines = f.readlines()
+
+    new_readme_lines = []
+    i = 0
+    found_section = False
+    found_stats_header = False
+    while i < len(readme_lines):
+        line = readme_lines[i]
+        new_readme_lines.append(line)
+        if line.strip() == section_header:
+            found_section = True
+        if found_section and line.strip() == stats_header:
+            found_stats_header = True
+            i += 1
+            # Skip blank lines and bullet points after the header
+            while i < len(readme_lines) and (
+                readme_lines[i].strip() == '' or readme_lines[i].lstrip().startswith('- ')
+            ):
+                i += 1
+            # Insert new block
+            new_readme_lines.append("\n")
+            for stats_line in stats_lines:
+                new_readme_lines.append(stats_line.rstrip() + "\n")
+            new_readme_lines.append("\n")
+            # Copy the rest
+            while i < len(readme_lines):
+                new_readme_lines.append(readme_lines[i])
+                i += 1
+            break
+        i += 1
+
+    if not found_stats_header:
+        raise ValueError(f"Stats header '{stats_header}' not found in README after section '{section_header}'.")
+
+    with open(readme_path, "w", encoding="utf-8") as f:
+        f.writelines(new_readme_lines)
+    print(f"Updated stats in {readme_path}")
