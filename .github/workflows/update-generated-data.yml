@@ -60,15 +60,18 @@ jobs:
 
             Updated artifacts:
             - `src/data/categories/*.json`
-            - `src/data/countries.json`
+            - `src/data/countries/*.json`
             - `src/data/labels/*.json`
             - `src/data/origins/*.json`
             - `src/i18n/data/languages.json`
+            - `src/data/countries.json`
+            - `src/data/README.md`
           branch: chore/update-generated-data
           delete-branch: true
           add-paths: |
             src/data/**
             src/i18n/data/languages.json
+            src/data/README.md
           labels: |
             data
             automation
