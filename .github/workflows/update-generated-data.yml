@@ -5,6 +5,10 @@ on:
     - cron: '0 3 * * 0'
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+
 concurrency:
   group: update-generated-data
   cancel-in-progress: true
@@ -48,7 +52,7 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v8
         with:
-          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'chore(data): update generated files'
           title: 'chore(data): update generated files'
           body: |
