@@ -53,22 +53,24 @@ jobs:
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'chore(data): update generated files'
-          title: 'chore(data): update generated files'
+          commit-message: 'chore(Data): update generated data from taxonomies'
+          title: 'chore(Data): update generated data from taxonomies'
           body: |
             This PR was created automatically by the scheduled `Update Generated Data` workflow.
 
-            Updated artifacts:
+            Files potentially updated:
             - `src/data/categories/*.json`
-            - `src/data/countries.json`
+            - `src/data/countries/*.json`
             - `src/data/labels/*.json`
             - `src/data/origins/*.json`
             - `src/i18n/data/languages.json`
+            - `src/data/countries.json`
+            - `src/data/README.md`
           branch: chore/update-generated-data
           delete-branch: true
           add-paths: |
             src/data/**
             src/i18n/data/languages.json
+            src/data/README.md
           labels: |
-            data
-            automation
+            taxonomies
