@@ -59,18 +59,18 @@ jobs:
             This PR was created automatically by the scheduled `Update Generated Data` workflow.
 
             Files potentially updated:
+            - `data/README.md`
             - `src/data/categories/*.json`
             - `src/data/countries/*.json`
             - `src/data/labels/*.json`
             - `src/data/origins/*.json`
             - `src/i18n/data/languages.json`
             - `src/data/countries.json`
-            - `src/data/README.md`
           branch: chore/update-generated-data
           delete-branch: true
           add-paths: |
+            data/README.md
             src/data/**
             src/i18n/data/languages.json
-            src/data/README.md
           labels: |
             taxonomies
