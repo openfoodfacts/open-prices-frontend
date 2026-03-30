@@ -3,7 +3,7 @@
 ## Automation
 
 These scripts are run automatically by the GitHub Actions workflow
-`.github/workflows/update-data.yml`.
+`.github/workflows/update-generated-data.yml`.
 
 - Schedule: weekly (Sunday, 03:00 UTC)
 - Manual run: available through `workflow_dispatch`

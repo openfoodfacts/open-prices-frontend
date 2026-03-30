@@ -60,7 +60,7 @@ jobs:
             - `src/data/labels/*.json`
             - `src/data/origins/*.json`
             - `src/i18n/data/languages.json`
-          branch: chore/automated-data-updates
+          branch: chore/update-generated-data
           delete-branch: true
           add-paths: |
             src/data/**
