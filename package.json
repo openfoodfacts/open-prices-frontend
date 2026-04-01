@@ -55,7 +55,7 @@
     "autoprefixer": "^10.4.24",
     "cross-env": "^7.0.3",
     "cypress": "^13.17.0",
-    "eslint": "^9.39.2",
+    "eslint": "^10.1.0",
     "eslint-plugin-vue": "^9.33.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "husky": "^9.1.7",
