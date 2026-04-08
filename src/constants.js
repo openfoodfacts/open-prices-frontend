@@ -182,6 +182,9 @@ export default {
     { key: 'price_count_gte_1', value: 'FilterWithPriceCount' },
     { key: 'price_count_0', value: 'FilterProductWithoutPriceCount' },
   ],
+  PRODUCT_CREATE_FILTER_LIST: [
+    { key: 'price__owner', value: 'FilterProductWithPriceOwner' },
+  ],
   PRICE_FILTER_LIST: [
     { key: 'show_last_month', value: 'FilterPriceMoreThan30DaysHide' },
   ],
@@ -209,6 +212,10 @@ export default {
   PRODUCT_ORDER_LIST: [
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
     { key: '-unique_scans_n', value: 'OrderProductUniqueScansDESC', icon: 'mdi-barcode-scan' },
+  ],
+  PRODUCT_CREATE_ORDER_LIST: [
+    { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
+    { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
   ],
   PRICE_ORDER_LIST: [
     { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
