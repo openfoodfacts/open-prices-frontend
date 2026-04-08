@@ -59,8 +59,8 @@ jobs:
     - name: Set various variable for production deployment
       if: matrix.env == 'open-prices-org'
       run: |
-        echo "SSH_PROXY_HOST=ovh2.openfoodfacts.org" >> $GITHUB_ENV
-        echo "SSH_HOST=10.1.0.201" >> $GITHUB_ENV
+        echo "SSH_PROXY_HOST=scaleway-03.infra.openfoodfacts.org" >> $GITHUB_ENV
+        echo "SSH_HOST=10.13.1.201" >> $GITHUB_ENV
     - name: Copy dist via scp
       uses: appleboy/scp-action@master
       with:
