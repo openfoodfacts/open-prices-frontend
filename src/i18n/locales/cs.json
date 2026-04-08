@@ -774,7 +774,7 @@
 		"PriceAlreadyCreatedForItem": "Cena pro položku již byla vytvořena",
 		"PriceReadyToBeAdded": "Cena připravena k přidání",
 		"ReceiptItems": "Položky účtenky",
-		"ReceiptItemsCheck": "Receipt items, check and fix",
+		"ReceiptItemsCheck": "Položky účtenky, zkontrolujte a opravte",
 		"UploadOnlyNewPrices": "Nahrát pouze nové ceny ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Nahrajte nebo aktualizujte všechny platné ceny ({nbPrices})",
 		"WaitForExtraction": "Automatické extrahování položek z účtenky, čekejte prosím..."
