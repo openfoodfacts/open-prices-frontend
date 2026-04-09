@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-card :title="$t('Common.Display')" prepend-icon="mdi-laptop">
+      <v-card :title="$t('Common.DisplayNoun')" prepend-icon="mdi-laptop">
         <v-divider />
         <v-card-text>
           <!-- Theme -->
