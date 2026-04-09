@@ -201,7 +201,7 @@ import { useTheme } from 'vuetify'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import languageList from '../i18n/data/languages.json'
-import countryList from '../i18n/data/countries.json'
+import countryList from '../i18n/data/countries.json'  // still needed for currencies
 import localeManager from '../i18n/localeManager.js'
 import constants from '../constants'
 import data_utils from '../utils/data.js'
@@ -213,7 +213,6 @@ export default {
       languageList,
       OFF_CROWDIN_URL: constants.OFF_CROWDIN_URL,
       countryTags: [],  // list of country tags for autocomplete  // see mounted
-      countryList,  // still needed for currencies
       // currencyList,
       priceListDisplayList: constants.DISPLAY_LIST,
       locationSelectorDisplayList: constants.LOCATION_SELECTOR_DISPLAY_LIST,
@@ -224,7 +223,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     currencyList() {
-      return [...new Set(this.countryList
+      return [...new Set(countryList
         .map(country => country.currency)
         .flat()
         .filter(currency => currency !== null && currency.length !== 0))]
@@ -257,7 +256,7 @@ export default {
     },
     setCountryTags() {
       data_utils.getLocaleCountryTags(this.appStore.getUserLanguage).then((module) => {
-        this.countryTags = module.default
+        this.countryTags = module.default.sort((a, b) => a.name.localeCompare(b.name))
       })
     }
   },
