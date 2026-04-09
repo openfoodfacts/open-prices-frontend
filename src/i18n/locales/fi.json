@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "Sijainnit",
 		"FilterProductWithPriceCount": "Hinnalla",
 		"FilterProductWithPriceCountHide": "Piilota tuotteet hinnoilla",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Piilota yli 30 päivää vanhat hinnat",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
