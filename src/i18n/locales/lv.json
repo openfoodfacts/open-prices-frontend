@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "Ar atrašanās vietām",
 		"FilterProductWithPriceCount": "Ar cenu",
 		"FilterProductWithPriceCountHide": "Slēpt produktus ar cenām",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Bez cenām",
 		"FilterPriceMoreThan30DaysHide": "Slēpt cenas, kas vecākas par 30 dienām",
 		"FilterProofWithPriceCountHide": "Slēpt pierādījumus ar cenām",
