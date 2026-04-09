@@ -29,18 +29,6 @@
               <v-icon :icon="getThemeInfo('dark').icon" />
             </template>
           </v-switch>
-          <!-- Country -->
-          <h3 class="mt-4 mb-1">
-            {{ $t('Common.Country') }}
-          </h3>
-          <v-autocomplete
-            v-model="appStore.user.country"
-            :label="$t('Common.Country')"
-            :items="countryList"
-            item-title="native"
-            item-value="code"
-            hide-details="auto"
-          />
           <!-- Language -->
           <h3 class="mt-4 mb-1">
             {{ $t('Common.Language') }}
@@ -59,6 +47,18 @@
               <v-icon size="small" icon="mdi-open-in-new" />
             </a>
           </p>
+          <!-- Country -->
+          <h3 class="mt-4 mb-1">
+            {{ $t('Common.Country') }}
+          </h3>
+          <v-autocomplete
+            v-model="appStore.user.country"
+            :label="$t('Common.Country')"
+            :items="countryList"
+            item-title="native"
+            item-value="code"
+            hide-details="auto"
+          />
           <!-- Price list display -->
           <h3 class="mt-4 mb-1">
             {{ $t('UserSettings.PriceListDisplay') }}
@@ -200,18 +200,18 @@
 import { useTheme } from 'vuetify'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import countryList from '../i18n/data/countries.json'
 import languageList from '../i18n/data/languages.json'
+import countryList from '../i18n/data/countries.json'
 import localeManager from '../i18n/localeManager.js'
 import constants from '../constants'
 
 export default {
   data() {
     return {
-      OFF_CROWDIN_URL: constants.OFF_CROWDIN_URL,
       theme: useTheme(),
-      countryList,
       languageList,
+      OFF_CROWDIN_URL: constants.OFF_CROWDIN_URL,
+      countryList,
       // currencyList,
       priceListDisplayList: constants.DISPLAY_LIST,
       locationSelectorDisplayList: constants.LOCATION_SELECTOR_DISPLAY_LIST,
@@ -229,12 +229,12 @@ export default {
       }
   },
   watch: {
+    'appStore.user.preferedTheme': function (newTheme, oldTheme) {  // eslint-disable-line no-unused-vars
+      this.theme.change(newTheme)
+    },
     'appStore.user.language': function (newLanguage, oldLanguage) {  // eslint-disable-line no-unused-vars
       localeManager.changeLanguage(newLanguage)
     },
-    'appStore.user.preferedTheme': function (newTheme, oldTheme) {  // eslint-disable-line no-unused-vars
-      this.theme.change(newTheme)
-    }
   },
   methods: {
     getThemeInfo(themeName) {
