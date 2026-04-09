@@ -36,6 +36,7 @@ export default {
   data() {
     return {
       productOrderList: constants.PRODUCT_ORDER_LIST,
+      productCreateOrderList: constants.PRODUCT_CREATE_ORDER_LIST,
       priceOrderList: constants.PRICE_ORDER_LIST,
       proofOrderList: constants.PROOF_ORDER_LIST,
       locationOrderList: constants.LOCATION_ORDER_LIST,

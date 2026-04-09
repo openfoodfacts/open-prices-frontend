@@ -63,7 +63,16 @@
       >
         <v-divider />
         <v-card-text>
-          <v-row class="mt-0">
+          <v-row>
+            <v-col class="pt-0 pb-0">
+              <v-chip label variant="text" prepend-icon="mdi-database-outline">
+                {{ $t('Common.ProductCount', { count: productTotal }) }}
+              </v-chip>
+              <FilterMenu kind="productCreate" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
+              <OrderMenu v-if="!currentFilterList.includes('price__owner')" kind="productCreate" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+            </v-col>
+          </v-row>
+          <v-row>
             <v-col v-for="missingProduct in missingProductsWithPrices" :key="missingProduct" cols="12" sm="6">
               <ProductCard :product="missingProduct" elevation="1" height="100%" readonly @click="missingProductClicked(missingProduct)" />
             </v-col>
@@ -359,6 +368,8 @@ export default {
     ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     VueZoomable: defineAsyncComponent(() => import('vue-zoomable')),
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
   },
   data() {
     return {
@@ -379,7 +390,10 @@ export default {
       loading: false,
       panLevel: {x: 0, y: 0},
       Languages,
-      Countries
+      Countries,
+      currentOrder: '-created',
+      currentFilterList: [],
+      productTotal: 0
     }
   },
   computed: {
@@ -402,7 +416,14 @@ export default {
     },
     flavors() {
       return constants.PRODUCT_SOURCE_LIST.map(source => source.value)
-    }
+    },
+    getPricesParams() {
+      let defaultParams = { product__source__isnull: true, product_id__isnull: false, proof__type: constants.PROOF_TYPE_PRICE_TAG, order_by: '-created' }
+      if (this.currentFilterList.includes('price__owner')) {
+        defaultParams['owner'] = this.appStore.user.username
+      }
+      return defaultParams
+    },
   },
   watch: {
     '$route.query.product_code'(newVal) {
@@ -497,9 +518,26 @@ export default {
         })
     },
     getMissingProductsWithPrices() {
-      return openPricesApi.getProducts({ price_count__gte: 1, source__isnull: true, order_by: '-proof_count' })
+      if (this.currentFilterList.includes('price__owner') || this.currentOrder === '-created') {
+        // Using prices API lets us do finer filtering, typically limiting to price tags proofs
+        return openPricesApi.getPrices(this.getPricesParams)
+          .then((data) => {
+            const productMap = new Map()
+            data.items.forEach(price => {
+              if (price.product && !productMap.has(price.product.code)) {
+                productMap.set(price.product.code, price.product)
+              }
+            })
+            this.missingProductsWithPrices = Array.from(productMap.values())
+            this.productTotal = data.total // Only true if products have only one price, but it's good enough ..
+          })
+      }
+      // Default case, this.currentOrder is '-proof_count', which is only available in the product API
+      // this.productTotal is accurate, but it also includes other, less useful, proof types (receipt, gdpr_request, etc.)
+      return openPricesApi.getProducts({ price_count__gte: 1, source__isnull: true, order_by: this.currentOrder })
         .then((data) => {
           this.missingProductsWithPrices = data.items
+          this.productTotal = data.total
         })
     },
     missingProductClicked(product) {
@@ -598,6 +636,16 @@ export default {
     },
     reloadPage() {
       window.location = window.location.pathname
+    },
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.getMissingProductsWithPrices()
+    },
+    updateOrder(orderKey) {
+      if (this.currentOrder !== orderKey) {
+        this.currentOrder = orderKey
+        this.getMissingProductsWithPrices()
+      }
     },
   }
 }
