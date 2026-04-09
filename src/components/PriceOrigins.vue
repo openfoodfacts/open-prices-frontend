@@ -28,10 +28,10 @@ export default {
     ...mapStores(useAppStore),
   },
   mounted() {
-    this.getOriginTagLocalizedList(this.priceOrigins)
+    this.setPriceOriginsLocalized(this.priceOrigins)
   },
   methods: {
-    getOriginTagLocalizedList(originIds) {
+    setPriceOriginsLocalized(originIds) {
       originIds.forEach(originId => {
         data_utils.getLocaleOriginTag(this.appStore.getUserLanguage, originId).then((origin) => {
           this.priceOriginsLocalized.push(origin)

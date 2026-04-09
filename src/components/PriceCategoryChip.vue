@@ -28,10 +28,10 @@ export default {
     ...mapStores(useAppStore),
   },
   mounted() {
-    this.getCategoryTagLocalizedName(this.priceCategory)
+    this.setPriceCategoryLocalizedName(this.priceCategory)
   },
   methods: {
-    getCategoryTagLocalizedName(categoryId) {
+    setPriceCategoryLocalizedName(categoryId) {
       data_utils.getLocaleCategoryTagName(this.appStore.getUserLanguage, categoryId).then((categoryName) => {
         this.priceCategoryLocalizedName = categoryName
       })
