@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "S lokalitami",
 		"FilterProductWithPriceCount": "S cenou",
 		"FilterProductWithPriceCountHide": "Skrýt produkty s cenami",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Bez cen",
 		"FilterPriceMoreThan30DaysHide": "Skrýt ceny starší než 30 dní",
 		"FilterProofWithPriceCountHide": "Skrýt doklady s cenami",
