@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "Med platser",
 		"FilterProductWithPriceCount": "Med ett pris",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Utan priser",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
