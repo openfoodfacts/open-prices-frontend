@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "Dengan lokasi",
 		"FilterProductWithPriceCount": "Dengan harga",
 		"FilterProductWithPriceCountHide": "Sembunyikan produk dengan harga",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Tanpa harga",
 		"FilterPriceMoreThan30DaysHide": "Sembunyikan harga yang sudah lebih dari 30 hari",
 		"FilterProofWithPriceCountHide": "Sembunyikan bukti dengan harga",
