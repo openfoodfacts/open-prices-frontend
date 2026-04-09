@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "Με τοποθεσίες",
 		"FilterProductWithPriceCount": "Με τιμή",
 		"FilterProductWithPriceCountHide": "Απόκρυψη προϊόντων με τιμές",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Χωρίς τιμές",
 		"FilterPriceMoreThan30DaysHide": "Απόκρυψη τιμών παλαιότερων των 30 ημερών",
 		"FilterProofWithPriceCountHide": "Απόκρυψη αποδείξεων με τιμές",
