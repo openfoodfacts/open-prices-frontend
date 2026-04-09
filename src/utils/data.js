@@ -52,6 +52,13 @@ function getLocaleLabelTagName(locale, labelId) {
   })
 }
 
+/**
+ * Countries per locale
+ */
+function getLocaleCountryTags(locale) {
+  return import(`./data/countries/${locale}.json`)
+}
+
 export default {
   getLocaleCategoryTags,
   getLocaleCategoryTag,
@@ -59,4 +66,5 @@ export default {
   getLocaleOriginTags,
   getLocaleLabelTags,
   getLocaleLabelTagName,
+  getLocaleCountryTags,
 }
