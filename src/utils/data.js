@@ -2,7 +2,7 @@
  * Categories per locale
  */
 function getLocaleCategoryTags(locale) {
-  return import(`./data/categories/${locale}.json`)
+  return import(`@/data/categories/${locale}.json`)
 }
 
 /**
@@ -31,14 +31,14 @@ function getLocaleCategoryTagName(locale, categoryId) {
  * Origins per locale
  */
 function getLocaleOriginTags(locale) {
-  return import(`./data/origins/${locale}.json`)
+  return import(`@/data/origins/${locale}.json`)
 }
 
 /**
  * Labels per locale
  */
 function getLocaleLabelTags(locale) {
-  return import(`./data/labels/${locale}.json`)
+  return import(`@/data/labels/${locale}.json`)
 }
 
 /**
@@ -56,7 +56,7 @@ function getLocaleLabelTagName(locale, labelId) {
  * Countries per locale
  */
 function getLocaleCountryTags(locale) {
-  return import(`./data/countries/${locale}.json`)
+  return import(`@/data/countries/${locale}.json`)
 }
 
 export default {
