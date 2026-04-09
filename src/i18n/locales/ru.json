@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "С местоположениями",
 		"FilterProductWithPriceCount": "С ценой",
 		"FilterProductWithPriceCountHide": "Скрыть продукты с ценами",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Без цен",
 		"FilterPriceMoreThan30DaysHide": "Скрыть цены старше 30 дней",
 		"FilterProofWithPriceCountHide": "Скрыть доказательства с ценами",
