@@ -113,7 +113,9 @@
             </div>
             <v-select
               v-model="productForm.flavor"
-              :items="flavors"
+              :items="flavorList"
+              :item-title="item => item.value"
+              :item-value="item => item.key"
               :disabled="productExists"
               density="compact"
               variant="outlined"
@@ -389,6 +391,7 @@ export default {
       zoomLevel: 1,
       loading: false,
       panLevel: {x: 0, y: 0},
+      flavorList: constants.PRODUCT_SOURCE_LIST,
       languageList,
       countryTags: [],  // list of country tags for autocomplete  // see mounted
       currentOrder: '-created',
@@ -414,9 +417,6 @@ export default {
         },
       ]
     },
-    flavors() {
-      return constants.PRODUCT_SOURCE_LIST.map(source => source.value)
-    },
     getPricesParams() {
       let defaultParams = { product__source__isnull: true, product_id__isnull: false, proof__type: constants.PROOF_TYPE_PRICE_TAG, order_by: '-created' }
       if (this.currentFilterList.includes('price__owner')) {
@@ -435,7 +435,7 @@ export default {
   },
   mounted() {
     if (this.$route.query.flavor) {
-      this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === this.$route.query.flavor).value
+      this.productForm.flavor = this.$route.query.flavor
     }
     if (this.$route.query.product_code) {
       this.productForm.product_code = this.$route.query.product_code
@@ -505,7 +505,7 @@ export default {
             }
           }
           if (this.productExists) {
-            this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === product.source).value
+            this.productForm.flavor = product.source
             this.productForm.product_name = product.product_name
             this.productForm.quantity = product.product_quantity + product.product_quantity_unit
             this.productForm.categories = product.categories_tags
@@ -554,7 +554,6 @@ export default {
       if (!this.productForm.flavor) {
         return
       }
-      const flavorkey = constants.PRODUCT_SOURCE_LIST.find(source => source.value === this.productForm.flavor).key
       let inputData = {
         update_params: {
           ...this.productForm,
@@ -562,7 +561,6 @@ export default {
           stores: this.productForm.stores.join(','),
           countries: this.productForm.countries.map(c=>c.toLowerCase()).join(','),
         },
-        flavor: flavorkey,
         product_language_code: this.productForm.product_language
       }
       this.step = 3
@@ -574,7 +572,7 @@ export default {
             const drawnImageBase64 = this.drawnImageSrc.split(';base64,')[1]
             inputData = {
               image_data_base64: drawnImageBase64,
-              flavor: flavorkey,
+              flavor: this.productForm.flavor,
               product_language_code: this.productForm.product_language
             }
             openPricesApi.updateOffProductImage(this.productForm.product_code, inputData)
