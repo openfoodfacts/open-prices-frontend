@@ -9,7 +9,7 @@
 <script>
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import utils from '../utils.js'
+import data_utils from '../utils/data.js'
 
 export default {
   props: {
@@ -28,7 +28,7 @@ export default {
     ...mapStores(useAppStore),
   },
   mounted() {
-    utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
+    data_utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
       this.originTags = module.default
     })
   },

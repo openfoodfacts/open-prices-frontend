@@ -110,54 +110,6 @@ function getOFFUsernameFromAuthToken(token) {
   return token.split("__")[0]
 }
 
-/**
- * Categories
- */
-function getLocaleCategoryTags(locale) {
-  return import(`./data/categories/${locale}.json`)
-}
-
-function getLocaleCategoryTag(locale, categoryId) {
-  return getLocaleCategoryTags(locale).then((module) => {
-    let category = module.default.find(ct => ct.id === categoryId)
-    return category ? category : { 'id': categoryId, 'name': categoryId, 'status': 'unknown' }
-  })
-}
-
-function getLocaleCategoryTagName(locale, categoryId) {
-  return getLocaleCategoryTags(locale).then((module) => {
-    let category = module.default.find(ct => ct.id === categoryId)
-    return category ? category.name : categoryId
-  })
-}
-
-/**
- * Origins
- */
-function getLocaleOriginTags(locale) {
-  return import(`./data/origins/${locale}.json`)
-}
-
-/**
- * Labels
- */
-function getLocaleLabelTags(locale) {
-  return import(`./data/labels/${locale}.json`)
-}
-
-function getLocaleLabelTagName(locale, labelId) {
-  return getLocaleLabelTags(locale).then((module) => {
-    let label = module.default.find(ct => ct.id === labelId)
-    return label ? label.name : labelId
-  })
-}
-
-/**
- * Countries
- */
-function getLocaleCountryTags(locale) {
-  return import(`./data/countries/${locale}.json`)
-}
 
 export default {
   debounce,
@@ -173,11 +125,4 @@ export default {
   replaceCommaWithDot,
   replaceStringWithList,
   getOFFUsernameFromAuthToken,
-  getLocaleCategoryTags,
-  getLocaleCategoryTag,
-  getLocaleCategoryTagName,
-  getLocaleOriginTags,
-  getLocaleLabelTags,
-  getLocaleLabelTagName,
-  getLocaleCountryTags,
 }

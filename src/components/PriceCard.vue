@@ -30,7 +30,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
-import utils from '../utils.js'
+import data_utils from '../utils/data.js'
 
 export default {
   components: {
@@ -145,7 +145,7 @@ export default {
       if (this.hasProductCode) {
         this.productTitle = this.product.product_name || this.price.product_code
       } else if (this.hasPrice && this.hasCategoryTag) {
-        utils.getLocaleCategoryTag(this.appStore.getUserLanguage, this.price.category_tag).then((category) => {
+        data_utils.getLocaleCategoryTag(this.appStore.getUserLanguage, this.price.category_tag).then((category) => {
           this.productTitle = category.name
         })
       }
