@@ -176,9 +176,9 @@
               <v-autocomplete
                 v-model="productForm.countries"
                 density="compact"
-                :items="countryList"
-                item-title="native"
-                item-value="code"
+                :items="countryTags"
+                item-title="name"
+                item-value="country_code_2"
                 variant="outlined"
                 chips
                 clearable
@@ -356,11 +356,11 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import openPricesApi from '../services/openPricesApi'
+import languageList from '../i18n/data/languages.json'
 import constants from '../constants'
 import proof_utils from '../utils/proof.js'
 import utils from '../utils'
-import languageList from '../i18n/data/languages.json'
-import countryList from '../i18n/data/countries.json'
+import data_utils from '../utils/data.js'
 import "vue-zoomable/dist/style.css"
 
 export default {
@@ -390,7 +390,7 @@ export default {
       loading: false,
       panLevel: {x: 0, y: 0},
       languageList,
-      countryList,
+      countryTags: [],  // list of country tags for autocomplete  // see mounted
       currentOrder: '-created',
       currentFilterList: [],
       productTotal: 0
@@ -442,10 +442,16 @@ export default {
       this.loadProductInfo()
     }
     this.getMissingProductsWithPrices()
+    this.setCountryTags()
   },
   methods: {
     fieldRequired(v) {
       return !!v || this.$t('Common.FieldIsRequired')
+    },
+    setCountryTags() {
+      data_utils.getLocaleCountryTags(this.appStore.getUserLanguage).then((module) => {
+        this.countryTags = module.default.sort((a, b) => a.name.localeCompare(b.name))
+      })
     },
     loadProductInfo() {
       this.$router.push({ query: { product_code: this.productForm.product_code } })
