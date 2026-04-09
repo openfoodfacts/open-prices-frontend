@@ -29,10 +29,10 @@ export default {
     ...mapStores(useAppStore),
   },
   mounted() {
-    this.getLabelTagLocalizedList(this.priceLabels)
+    this.setPriceLabelsLocalized(this.priceLabels)
   },
   methods: {
-    getLabelTagLocalizedList(labelIds) {
+    setPriceLabelsLocalized(labelIds) {
       labelIds.forEach(labelId => {
         data_utils.getLocaleLabelTag(this.appStore.getUserLanguage, labelId).then((label) => {
           this.priceLabelsLocalized.push(label)

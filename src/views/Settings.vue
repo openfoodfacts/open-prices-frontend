@@ -54,9 +54,9 @@
           <v-autocomplete
             v-model="appStore.user.country"
             :label="$t('Common.Country')"
-            :items="countryList"
-            item-title="native"
-            item-value="code"
+            :items="countryTags"
+            item-title="name"
+            item-value="country_code_2"
             hide-details="auto"
           />
           <!-- Price list display -->
@@ -204,6 +204,7 @@ import languageList from '../i18n/data/languages.json'
 import countryList from '../i18n/data/countries.json'
 import localeManager from '../i18n/localeManager.js'
 import constants from '../constants'
+import data_utils from '../utils/data.js'
 
 export default {
   data() {
@@ -211,7 +212,8 @@ export default {
       theme: useTheme(),
       languageList,
       OFF_CROWDIN_URL: constants.OFF_CROWDIN_URL,
-      countryList,
+      countryTags: [],  // list of country tags for autocomplete  // see mounted
+      countryList,  // still needed for currencies
       // currencyList,
       priceListDisplayList: constants.DISPLAY_LIST,
       locationSelectorDisplayList: constants.LOCATION_SELECTOR_DISPLAY_LIST,
@@ -234,7 +236,11 @@ export default {
     },
     'appStore.user.language': function (newLanguage, oldLanguage) {  // eslint-disable-line no-unused-vars
       localeManager.changeLanguage(newLanguage)
+      this.setCountryTags()
     },
+  },
+  mounted() {
+    this.setCountryTags()
   },
   methods: {
     getThemeInfo(themeName) {
@@ -248,6 +254,11 @@ export default {
         icon: constants.THEME_DARK_ICON,
         label: this.$t('Common.ThemeDark')
       }
+    },
+    setCountryTags() {
+      data_utils.getLocaleCountryTags(this.appStore.getUserLanguage).then((module) => {
+        this.countryTags = module.default
+      })
     }
   },
 }
