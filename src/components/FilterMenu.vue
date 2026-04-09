@@ -2,13 +2,13 @@
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
       <v-btn v-bind="props" size="x-small" class="mr-2" prepend-icon="mdi-filter-variant" :append-icon="getCurrentFilterIcon" :active="hasCurrentFilter">
-        <span v-if="$vuetify.display.smAndUp">{{ $t('Common.Filter') }}</span>
+        <span v-if="$vuetify.display.smAndUp">{{ $t('Common.FilterNoun') }}</span>
       </v-btn>
     </template>
     <v-list>
       <!-- title -->
       <v-list-item class="d-sm-none text-uppercase" :slim="true" disabled>
-        {{ $t('Common.Filter') }}
+        {{ $t('Common.FilterNoun') }}
       </v-list-item>
       <v-divider class="d-sm-none" />
       <!-- default filters -->
