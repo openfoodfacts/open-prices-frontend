@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "مع مواقع",
 		"FilterProductWithPriceCount": "بثمن",
 		"FilterProductWithPriceCountHide": "إخفاء المنتجات مع الأسعار",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "بدون أسعار",
 		"FilterPriceMoreThan30DaysHide": "إخفاء الأسعار التي يزيد عمرها عن 30 يومًا",
 		"FilterProofWithPriceCountHide": "إخفاء الأدلة مع الأسعار",
