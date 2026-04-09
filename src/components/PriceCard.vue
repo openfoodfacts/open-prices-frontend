@@ -145,10 +145,13 @@ export default {
       if (this.hasProductCode) {
         this.productTitle = this.product.product_name || this.price.product_code
       } else if (this.hasPrice && this.hasCategoryTag) {
-        data_utils.getLocaleCategoryTag(this.appStore.getUserLanguage, this.price.category_tag).then((category) => {
-          this.productTitle = category.name
-        })
+        this.getPriceCategoryTagName(this.price.category_tag)
       }
+    },
+    getPriceCategoryTagName(categoryId) {
+      data_utils.getLocaleCategoryTag(this.appStore.getUserLanguage, categoryId).then((category) => {
+        this.productTitle = category.name
+      })
     },
     getPriceProductCode() {
       if (this.hasProduct) {
