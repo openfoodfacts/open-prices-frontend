@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "地點",
 		"FilterProductWithPriceCount": "有價格",
 		"FilterProductWithPriceCountHide": "隱藏有價格的產品",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "沒有價格",
 		"FilterPriceMoreThan30DaysHide": "隱藏 30 天前的價格",
 		"FilterProofWithPriceCountHide": "隱藏價格證明",
