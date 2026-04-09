@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "ከቦታዎች ጋር",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
