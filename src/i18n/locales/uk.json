@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "З локаціями",
 		"FilterProductWithPriceCount": "З ціною",
 		"FilterProductWithPriceCountHide": "Приховати товари з цінами",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Без цін",
 		"FilterPriceMoreThan30DaysHide": "Приховати ціни старші за 30 днів",
 		"FilterProofWithPriceCountHide": "Сховати докази з цінами",
