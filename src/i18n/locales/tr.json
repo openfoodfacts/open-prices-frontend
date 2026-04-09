@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "Konumlarla birlikte",
 		"FilterProductWithPriceCount": "Bir fiyat ile",
 		"FilterProductWithPriceCountHide": "Ürünleri fiyatlarıyla gizle",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Fiyatlar olmadan",
 		"FilterPriceMoreThan30DaysHide": "30 günden eski fiyatları gizle",
 		"FilterProofWithPriceCountHide": "Fiyatları olan kanıtları gizle",
