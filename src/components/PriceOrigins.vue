@@ -1,7 +1,7 @@
 <template>
   <template v-if="priceOrigins">
-    <v-chip v-for="origin in priceOrigins" :key="origin" label size="small" density="comfortable">
-      {{ getPriceOriginTagName(origin) }}
+    <v-chip v-for="origin in priceOriginsLocalized" :key="origin.id" label size="small" density="comfortable">
+      {{ origin.name }}
     </v-chip>
   </template>
 </template>
@@ -15,27 +15,28 @@ export default {
   props: {
     priceOrigins: {
       type: Array,
-      default: () => []
-    
+      default: () => [],
+      example: ['en:france']
     }
   },
   data() {
     return {
-      originTags: [],  // see mounted
+      priceOriginsLocalized: [],  // see mounted
     }
   },
   computed: {
     ...mapStores(useAppStore),
   },
   mounted() {
-    data_utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
-      this.originTags = module.default
-    })
+    this.getOriginTagLocalizedList(this.priceOrigins)
   },
   methods: {
-    getPriceOriginTagName(originId) {
-      if (this.originTags.length === 0) return ''
-      return this.originTags.find(ot => ot.id === originId).name
+    getOriginTagLocalizedList(originIds) {
+      originIds.forEach(originId => {
+        data_utils.getLocaleOriginTag(this.appStore.getUserLanguage, originId).then((origin) => {
+          this.priceOriginsLocalized.push(origin)
+        })
+      })
     }
   }
 }
