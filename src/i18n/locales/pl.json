@@ -304,6 +304,7 @@
 		"FilterWithLocationCount": "Z lokalizacjami",
 		"FilterProductWithPriceCount": "Z ceną",
 		"FilterProductWithPriceCountHide": "Ukryj produkty z cenami",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
