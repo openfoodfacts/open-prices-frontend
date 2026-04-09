@@ -416,7 +416,14 @@ export default {
     },
     flavors() {
       return constants.PRODUCT_SOURCE_LIST.map(source => source.value)
-    }
+    },
+    getPricesParams() {
+      let defaultParams = { product__source__isnull: true, product_id__isnull: false, proof__type: constants.PROOF_TYPE_PRICE_TAG, order_by: '-created' }
+      if (this.currentFilterList.includes('price__owner')) {
+        defaultParams['owner'] = this.appStore.user.username
+      }
+      return defaultParams
+    },
   },
   watch: {
     '$route.query.product_code'(newVal) {
@@ -511,32 +518,19 @@ export default {
         })
     },
     getMissingProductsWithPrices() {
-      if (this.currentFilterList.includes('price__owner')) {
-          return openPricesApi.getPrices({product__source__isnull: true, product_id__isnull: false, proof__type: constants.PROOF_TYPE_PRICE_TAG, owner: this.appStore.user.username, order_by: '-created'})
-            .then((data) => {
-              const productMap = new Map()
-              data.items.forEach(price => {
-                if (price.product && !productMap.has(price.product.code)) {
-                  productMap.set(price.product.code, price.product)
-                }
-              })
-              this.missingProductsWithPrices = Array.from(productMap.values())
-              this.productTotal = data.total // Only true if the user has only one price per product, but it's the closest we can get
-            })
-      }
-      if (this.currentOrder === '-created') {
+      if (this.currentFilterList.includes('price__owner') || this.currentOrder === '-created') {
         // Using prices API lets us do finer filtering, typically limiting to price tags proofs
-        return openPricesApi.getPrices({product__source__isnull: true, product_id__isnull: false, proof__type: constants.PROOF_TYPE_PRICE_TAG, order_by: this.currentOrder})
-              .then((data) => {
-                const productMap = new Map()
-                data.items.forEach(price => {
-                  if (price.product && !productMap.has(price.product.code)) {
-                    productMap.set(price.product.code, price.product)
-                  }
-                })
-                this.missingProductsWithPrices = Array.from(productMap.values())
-                this.productTotal = data.total // Only true if products have only one price, but it's good enough ..
-              })
+        return openPricesApi.getPrices(this.getPricesParams)
+          .then((data) => {
+            const productMap = new Map()
+            data.items.forEach(price => {
+              if (price.product && !productMap.has(price.product.code)) {
+                productMap.set(price.product.code, price.product)
+              }
+            })
+            this.missingProductsWithPrices = Array.from(productMap.values())
+            this.productTotal = data.total // Only true if products have only one price, but it's good enough ..
+          })
       }
       // Default case, this.currentOrder is '-proof_count', which is only available in the product API
       // this.productTotal is accurate, but it also includes other, less useful, proof types (receipt, gdpr_request, etc.)
