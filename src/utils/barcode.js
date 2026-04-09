@@ -45,8 +45,8 @@ function normalizeBarcode(value) {
 }
 
 export default {
-    isBarcodeValid,
-    isBarcodeTooLong,
-    cleanBarcode,
-    normalizeBarcode,
+  isBarcodeValid,
+  isBarcodeTooLong,
+  cleanBarcode,
+  normalizeBarcode,
 }

@@ -83,6 +83,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
+import data_utils from '../utils/data.js'
 import utils from '../utils.js'
 
 export default {
@@ -171,13 +172,13 @@ export default {
         this.productForm.product_code = this.$route.query.code
       }
     }
-    utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
+    data_utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
       this.categoryTags = module.default
     })
-    utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
+    data_utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
       this.originTags = module.default
     })
-    utils.getLocaleLabelTags(this.appStore.getUserLanguage).then((module) => {
+    data_utils.getLocaleLabelTags(this.appStore.getUserLanguage).then((module) => {
       this.labelTags = module.default
     })
     this.productForm.type = this.productForm.type ? this.productForm.type : (this.productForm.product_code ? constants.PRICE_TYPE_PRODUCT : this.appStore.user.last_product_product_used)

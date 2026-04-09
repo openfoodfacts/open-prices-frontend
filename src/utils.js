@@ -1,6 +1,3 @@
-import CategoryTags from './data/category-tags.json'
-
-
 function debounce(callback, wait) {
   let timeoutId = null;
   return (...args) => {
@@ -85,51 +82,6 @@ function removeObjectFromArray(arr, obj) {
   return arr
 }
 
-/**
- * OFF auth token format: 'username__uuid'
- */
-function getOFFUsernameFromAuthToken(token) {
-  return token.split("__")[0]
-}
-
-function getCategoryName(categoryId) {
-  let category = CategoryTags.find(ct => ct.id === categoryId)
-  return category ? category.name : categoryId
-}
-
-function getLocaleCategoryTags(locale) {
-  return import(`./data/categories/${locale}.json`)
-}
-
-function getLocaleCategoryTag(locale, categoryId) {
-  return getLocaleCategoryTags(locale).then((module) => {
-    let category = module.default.find(ct => ct.id === categoryId)
-    return category ? category : { 'id': categoryId, 'name': categoryId, 'status': 'unknown' }
-  })
-}
-
-function getLocaleCategoryTagName(locale, categoryId) {
-  return getLocaleCategoryTags(locale).then((module) => {
-    let category = module.default.find(ct => ct.id === categoryId)
-    return category ? category.name : categoryId
-  })
-}
-
-function getLocaleOriginTags(locale) {
-  return import(`./data/origins/${locale}.json`)
-}
-
-function getLocaleLabelTags(locale) {
-  return import(`./data/labels/${locale}.json`)
-}
-
-function getLocaleLabelTagName(locale, labelId) {
-  return getLocaleLabelTags(locale).then((module) => {
-    let label = module.default.find(ct => ct.id === labelId)
-    return label ? label.name : labelId
-  })
-}
-
 function toTitleCase(str) {
   return str.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(' ');
 }
@@ -151,6 +103,14 @@ function replaceStringWithList(value) {
   return value
 }
 
+/**
+ * OFF auth token format: 'username__uuid'
+ */
+function getOFFUsernameFromAuthToken(token) {
+  return token.split("__")[0]
+}
+
+
 export default {
   debounce,
   getDocumentScrollPercentage,
@@ -161,15 +121,8 @@ export default {
   getURLOrigin,
   addObjectToArray,
   removeObjectFromArray,
-  getOFFUsernameFromAuthToken,
-  getCategoryName,
-  getLocaleCategoryTags,
-  getLocaleCategoryTag,
-  getLocaleCategoryTagName,
-  getLocaleOriginTags,
-  getLocaleLabelTags,
-  getLocaleLabelTagName,
   toTitleCase,
   replaceCommaWithDot,
-  replaceStringWithList
+  replaceStringWithList,
+  getOFFUsernameFromAuthToken,
 }

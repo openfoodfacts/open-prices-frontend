@@ -68,6 +68,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
+import data_utils from '../utils/data.js'
 import date_utils from '../utils/date.js'
 import utils from '../utils.js'
 
@@ -168,7 +169,7 @@ export default {
     },
     getProduct() {
       if (this.productIsCategory) {
-        utils.getLocaleCategoryTag(this.appStore.getUserLanguage, this.productId).then((category) => {
+        data_utils.getLocaleCategoryTag(this.appStore.getUserLanguage, this.productId).then((category) => {
           this.category = category
         })
       } else {
