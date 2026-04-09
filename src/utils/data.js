@@ -35,6 +35,17 @@ function getLocaleOriginTags(locale) {
 }
 
 /**
+ * Input: locale & originId (e.g. "fr" & "en:france")
+ * Output: origin object (e.g. {"id": "en:france", "name": "France"})
+ */
+function getLocaleOriginTag(locale, originId) {
+  return getLocaleOriginTags(locale).then((module) => {
+    let origin = module.default.find(ot => ot.id === originId)
+    return origin ? origin : { 'id': originId, 'name': originId, 'status': 'unknown' }
+  })
+}
+
+/**
  * Labels per locale
  */
 function getLocaleLabelTags(locale) {
@@ -43,12 +54,12 @@ function getLocaleLabelTags(locale) {
 
 /**
  * Input: locale & labelId (e.g. "fr" & "en:organic")
- * Output: label name (e.g. "Bio")
+ * Output: label object (e.g. {"id": "en:organic", "name": "Bio"})
  */
-function getLocaleLabelTagName(locale, labelId) {
+function getLocaleLabelTag(locale, labelId) {
   return getLocaleLabelTags(locale).then((module) => {
     let label = module.default.find(ct => ct.id === labelId)
-    return label ? label.name : labelId
+    return label ? label : { 'id': labelId, 'name': labelId, 'status': 'unknown' }
   })
 }
 
@@ -64,7 +75,8 @@ export default {
   getLocaleCategoryTag,
   getLocaleCategoryTagName,
   getLocaleOriginTags,
+  getLocaleOriginTag,
   getLocaleLabelTags,
-  getLocaleLabelTagName,
+  getLocaleLabelTag,
   getLocaleCountryTags,
 }

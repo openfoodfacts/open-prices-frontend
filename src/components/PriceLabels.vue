@@ -1,8 +1,8 @@
 <template>
   <template v-if="priceLabels">
-    <v-chip v-for="label in priceLabels" :key="label" label size="small" density="comfortable">
-      {{ getPriceLabelTagName(label) }}
-      <v-icon v-if="label == 'en:organic'" icon="mdi-leaf-circle-outline" end />
+    <v-chip v-for="label in priceLabelsLocalized" :key="label.id" label size="small" density="comfortable">
+      {{ label.name }}
+      <v-icon v-if="label.id == 'en:organic'" icon="mdi-leaf-circle-outline" end />
     </v-chip>
   </template>
 </template>
@@ -16,26 +16,28 @@ export default {
   props: {
     priceLabels: {
       type: Array,
-      default: () => []
+      default: () => [],
+      example: ['en:organic']
     }
   },
   data() {
     return {
-      labelTags: [],  // see mounted
+      priceLabelsLocalized: [],  // see mounted
     }
   },
   computed: {
     ...mapStores(useAppStore),
   },
   mounted() {
-    data_utils.getLocaleLabelTags(this.appStore.getUserLanguage).then((module) => {
-      this.labelTags = module.default
-    })
+    this.getLabelTagLocalizedList(this.priceLabels)
   },
   methods: {
-    getPriceLabelTagName(labelId) {
-      if (this.labelTags.length === 0) return ''
-      return this.labelTags.find(lt => lt.id === labelId).name
+    getLabelTagLocalizedList(labelIds) {
+      labelIds.forEach(labelId => {
+        data_utils.getLocaleLabelTag(this.appStore.getUserLanguage, labelId).then((label) => {
+          this.priceLabelsLocalized.push(label)
+        })
+      })
     }
   }
 }

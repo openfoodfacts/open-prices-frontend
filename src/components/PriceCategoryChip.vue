@@ -1,7 +1,7 @@
 <template>
   <template v-if="priceCategory">
     <v-chip label size="small" density="comfortable">
-      {{ priceCategoryName }}
+      {{ priceCategoryLocalizedName }}
     </v-chip>
   </template>
 </template>
@@ -21,19 +21,19 @@ export default {
   },
   data() {
     return {
-      priceCategoryName: null,  // see mounted
+      priceCategoryLocalizedName: null,  // see mounted
     }
   },
   computed: {
     ...mapStores(useAppStore),
   },
   mounted() {
-    this.getPriceCategoryTagName(this.priceCategory)
+    this.getCategoryTagLocalizedName(this.priceCategory)
   },
   methods: {
-    getPriceCategoryTagName(categoryId) {
-      data_utils.getLocaleCategoryTag(this.appStore.getUserLanguage, categoryId).then((category) => {
-        this.priceCategoryName = category.name
+    getCategoryTagLocalizedName(categoryId) {
+      data_utils.getLocaleCategoryTagName(this.appStore.getUserLanguage, categoryId).then((categoryName) => {
+        this.priceCategoryLocalizedName = categoryName
       })
     }
   }
