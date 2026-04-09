@@ -125,7 +125,7 @@
             </div>
             <v-autocomplete
               v-model="productForm.product_language"
-              :items="Languages"
+              :items="languageList"
               item-title="native"
               item-value="code"
               density="compact"
@@ -176,7 +176,7 @@
               <v-autocomplete
                 v-model="productForm.countries"
                 density="compact"
-                :items="Countries"
+                :items="countryList"
                 item-title="native"
                 item-value="code"
                 variant="outlined"
@@ -359,8 +359,8 @@ import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import proof_utils from '../utils/proof.js'
 import utils from '../utils'
-import Languages from '../i18n/data/languages.json'
-import Countries from '../i18n/data/countries.json'
+import languageList from '../i18n/data/languages.json'
+import countryList from '../i18n/data/countries.json'
 import "vue-zoomable/dist/style.css"
 
 export default {
@@ -389,8 +389,8 @@ export default {
       zoomLevel: 1,
       loading: false,
       panLevel: {x: 0, y: 0},
-      Languages,
-      Countries,
+      languageList,
+      countryList,
       currentOrder: '-created',
       currentFilterList: [],
       productTotal: 0
