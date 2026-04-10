@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.161.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.161.0...v1.161.1) (2026-04-10)
+
+
+### Bug Fixes
+
+* **CI:** bump Node heap size limit to fix vite build ([#2132](https://github.com/openfoodfacts/open-prices-frontend/issues/2132)) ([1cb45fd](https://github.com/openfoodfacts/open-prices-frontend/commit/1cb45fd5e73bdc1d0f09cebec13087c9c31af64b))
+
+
+### Technical
+
+* **CI:** move unplugin-vue-i18n to devDependencies ([#2137](https://github.com/openfoodfacts/open-prices-frontend/issues/2137)) ([1ed21f4](https://github.com/openfoodfacts/open-prices-frontend/commit/1ed21f44c8da8bb6b65fd348d555064051b20c44))
+* **Release Please:** avoid having the component name in the release version ([#2138](https://github.com/openfoodfacts/open-prices-frontend/issues/2138)) ([ceac83d](https://github.com/openfoodfacts/open-prices-frontend/commit/ceac83d4d9637a6034b637e8ad54cded7283ac78))
+* **Release Please:** update package.json version on release ([#2135](https://github.com/openfoodfacts/open-prices-frontend/issues/2135)) ([4783364](https://github.com/openfoodfacts/open-prices-frontend/commit/47833647cac5238644244c4e239f20c8b6c086f4))
+
 ## [1.161.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.160.0...v1.161.0) (2026-04-10)
 
 
