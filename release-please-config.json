@@ -1,7 +1,8 @@
 {
     "packages": {
         ".": {
-            "release-type": "node"
+            "release-type": "node",
+            "include-component-in-tag": false
         }
     },
     "changelog-sections": [
