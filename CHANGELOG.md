@@ -1,5 +1,40 @@
 # Changelog
 
+## [1.161.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.160.0...v1.161.0) (2026-04-10)
+
+
+### Features
+
+* **CreateOffProduct:** Load new products from the prices API. Add filtering and ordering ([#2119](https://github.com/openfoodfacts/open-prices-frontend/issues/2119)) ([66bcbfd](https://github.com/openfoodfacts/open-prices-frontend/commit/66bcbfd595e0712f4369c950df2f3e2241dda93c))
+
+
+### Bug Fixes
+
+* **Action Menu:** fix link to category_tag detail page ([#2124](https://github.com/openfoodfacts/open-prices-frontend/issues/2124)) ([1ab3f4e](https://github.com/openfoodfacts/open-prices-frontend/commit/1ab3f4eb4f39ef9369bcd97197ed2468a1c41105))
+* **Data:** fix credentials for the weekly task to run ([#2108](https://github.com/openfoodfacts/open-prices-frontend/issues/2108)) ([718cbaf](https://github.com/openfoodfacts/open-prices-frontend/commit/718cbafae1bbfe57a0bc2d3b7471a633de87e301))
+* **Data:** fix peter-evans/create-pull-request config (add-paths) (again) ([#2111](https://github.com/openfoodfacts/open-prices-frontend/issues/2111)) ([f7e0827](https://github.com/openfoodfacts/open-prices-frontend/commit/f7e0827783dd6d191b54892c176b783dd04b6507))
+* **Data:** weekly task: bump peter-evans/create-pull-request version & revert credentials/permissions ([#2109](https://github.com/openfoodfacts/open-prices-frontend/issues/2109)) ([baa0c0a](https://github.com/openfoodfacts/open-prices-frontend/commit/baa0c0a74619caee212ad874245013b84ee2c9eb))
+* **Data:** weekly task: fix peter-evans/create-pull-request config (add-paths) ([#2110](https://github.com/openfoodfacts/open-prices-frontend/issues/2110)) ([e796a45](https://github.com/openfoodfacts/open-prices-frontend/commit/e796a45b6c9a63adbc2becddb5df0179fabf67cf))
+* **Utils:** fix path to data JSON following refactor in [#2120](https://github.com/openfoodfacts/open-prices-frontend/issues/2120) ([#2122](https://github.com/openfoodfacts/open-prices-frontend/issues/2122)) ([ca3df39](https://github.com/openfoodfacts/open-prices-frontend/commit/ca3df398cea5b01ae6e1dc5462abe9526c543d5a))
+
+
+### Technical
+
+* **CreateOffProduct:** for country input, use JSON localized data ([#2130](https://github.com/openfoodfacts/open-prices-frontend/issues/2130)) ([27c135d](https://github.com/openfoodfacts/open-prices-frontend/commit/27c135df4c576113a2470ec0a72b9426853999cc))
+* **CreateOffProduct:** simplify flavor input mgmt ([#2131](https://github.com/openfoodfacts/open-prices-frontend/issues/2131)) ([133fb6c](https://github.com/openfoodfacts/open-prices-frontend/commit/133fb6c8d7d690a558cace7ed92a45e7f15e2f66))
+* **Data:** move script generation shared logic to utils ([#2104](https://github.com/openfoodfacts/open-prices-frontend/issues/2104)) ([4b07890](https://github.com/openfoodfacts/open-prices-frontend/commit/4b07890274ab9847e508329c4cdb8469c374868c))
+* **Data:** new utils to fetch country JSON for the specified locale ([#2121](https://github.com/openfoodfacts/open-prices-frontend/issues/2121)) ([28df2ee](https://github.com/openfoodfacts/open-prices-frontend/commit/28df2ee0cf64231e8bf79da89c098a7fc9f0490b))
+* **Data:** on script generation run, compute & store basic stats in the README ([#2107](https://github.com/openfoodfacts/open-prices-frontend/issues/2107)) ([fbca9e7](https://github.com/openfoodfacts/open-prices-frontend/commit/fbca9e748b4d909ff939e0b7f401dcbf03643abb))
+* **Data:** update categories ([#2105](https://github.com/openfoodfacts/open-prices-frontend/issues/2105)) ([b5599fd](https://github.com/openfoodfacts/open-prices-frontend/commit/b5599fd8cc46e7e72dc8ace3ef32506ab97ee1c7))
+* **l10n:** improve translations for Filter, Order & Display (seperate noun, verb & plural) ([#2126](https://github.com/openfoodfacts/open-prices-frontend/issues/2126)) ([a54a860](https://github.com/openfoodfacts/open-prices-frontend/commit/a54a8604a7defab7bfe0390af154d297ece1e419))
+* **l10n:** New Crowdin translations to review and merge ([#2118](https://github.com/openfoodfacts/open-prices-frontend/issues/2118)) ([6426dbe](https://github.com/openfoodfacts/open-prices-frontend/commit/6426dbeba90b8a934f4b9bb1c5e537bace7b20b7))
+* org is now on scaleway-docker-prod-2 ([#2117](https://github.com/openfoodfacts/open-prices-frontend/issues/2117)) ([c22c8e2](https://github.com/openfoodfacts/open-prices-frontend/commit/c22c8e2c6ec2fd6aff5c3bd955fa902357d7be6c))
+* **Settings:** for country input, used JSON localized data ([#2128](https://github.com/openfoodfacts/open-prices-frontend/issues/2128)) ([0e7a11f](https://github.com/openfoodfacts/open-prices-frontend/commit/0e7a11fc1be34d4d38e21871094d38d87d3df320))
+* **Settings:** for localized country input, order alphabetically (instead of contry_code) ([#2129](https://github.com/openfoodfacts/open-prices-frontend/issues/2129)) ([539d384](https://github.com/openfoodfacts/open-prices-frontend/commit/539d38440ff71c8bbfc4087a0ece180ff49c81af))
+* **Settings:** move language input above country (more important) ([#2127](https://github.com/openfoodfacts/open-prices-frontend/issues/2127)) ([0e79656](https://github.com/openfoodfacts/open-prices-frontend/commit/0e79656820ae221b721974f7be5a969c97eb7688))
+* **Utils:** avoid fetching localized JSON data in components ([#2123](https://github.com/openfoodfacts/open-prices-frontend/issues/2123)) ([adfa160](https://github.com/openfoodfacts/open-prices-frontend/commit/adfa160e186136d0f96c84572b5c4b94a55b7f7a))
+* **Utils:** move data stuff to a dedicated file ([#2120](https://github.com/openfoodfacts/open-prices-frontend/issues/2120)) ([81ce1ab](https://github.com/openfoodfacts/open-prices-frontend/commit/81ce1ab33412ac68f825ee76f6c9d104ea6e86fc))
+
 ## [1.160.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.159.0...v1.160.0) (2026-03-28)
 
 
