@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.161.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.161.0...v1.161.1) (2026-04-10)
+
+
+### Bug Fixes
+
+* **CI:** bump Node heap size limit to fix vite build ([#2132](https://github.com/openfoodfacts/open-prices-frontend/issues/2132)) ([1cb45fd](https://github.com/openfoodfacts/open-prices-frontend/commit/1cb45fd5e73bdc1d0f09cebec13087c9c31af64b))
+
 ## [1.161.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.160.0...v1.161.0) (2026-04-10)
 
 
