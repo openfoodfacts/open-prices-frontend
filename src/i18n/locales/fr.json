@@ -432,7 +432,7 @@
 		"ProofSelected": "Preuve sélectionnée !",
 		"ProofSelectedCount": "{count} preuves sélectionnées | {count} preuve sélectionnée | {count} preuves sélectionnées",
 		"ProofUploadedCount": "{count} preuves téléversées | {count} preuve téléversée | {count} preuves téléversées",
-		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} preuves téléchargées",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} preuves téléversées",
 		"ProofsAddedToday": "Preuves ajoutées aujourd'hui",
 		"ProofsToday": "Preuves aujourd'hui",
 		"ProofNotFound": "Preuve non trouvée",
