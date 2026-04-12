@@ -555,13 +555,14 @@ export default {
         return
       }
       let inputData = {
+        flavor: this.productForm.flavor,
+        product_language_code: this.productForm.product_language,
         update_params: {
           ...this.productForm,
           categories: this.productForm.categories.join(','),
           stores: this.productForm.stores.join(','),
           countries: this.productForm.countries.map(c=>c.toLowerCase()).join(','),
         },
-        product_language_code: this.productForm.product_language
       }
       this.step = 3
       this.loading = true
