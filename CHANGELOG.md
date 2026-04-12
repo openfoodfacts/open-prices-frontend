@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.161.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.161.1...v1.161.2) (2026-04-12)
+
+
+### Bug Fixes
+
+* **CreateOffProduct:** fix flavor key missing from API call (following [#2131](https://github.com/openfoodfacts/open-prices-frontend/issues/2131)) ([#2141](https://github.com/openfoodfacts/open-prices-frontend/issues/2141)) ([d286645](https://github.com/openfoodfacts/open-prices-frontend/commit/d28664590eb11bb0a557e9595feddb053f25bad0))
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2112](https://github.com/openfoodfacts/open-prices-frontend/issues/2112)) ([f979452](https://github.com/openfoodfacts/open-prices-frontend/commit/f9794522ed50e8d57dae1c0649a1717f60392d83))
+* **l10n:** New Crowdin translations to review and merge ([#2139](https://github.com/openfoodfacts/open-prices-frontend/issues/2139)) ([124518c](https://github.com/openfoodfacts/open-prices-frontend/commit/124518c96d9be2c433481b15289ac465f186b53e))
+
 ## [1.161.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.161.0...v1.161.1) (2026-04-10)
 
 
