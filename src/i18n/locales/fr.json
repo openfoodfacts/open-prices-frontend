@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Défi de la communauté",
-		"Subtitle": "Rejoignez d’autres passionnés des prix des denrées alimentaires pour recueillir des informations sur  {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Prendre des photos des étiquettes de prix dans les magasins",
 			"line1": "Les photos peuvent inclure une ou plusieurs étiquettes de prix. Les codes-barres doivent être lisibles. Par exemple :",
