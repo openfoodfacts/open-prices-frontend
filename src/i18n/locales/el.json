@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Πρόκληση κοινότητας",
-		"Subtitle": "Συμμετέχετε μαζί με άλλους λάτρεις των τιμών των τροφίμων στη συλλογή πληροφοριών σχετικά με {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Βγάλτε φωτογραφίες από τις ετικέτες τιμών στα καταστήματα",
 			"line1": "Οι εικόνες μπορούν να περιλαμβάνουν μία ή περισσότερες ετικέτες τιμών. Οι γραμμωτοί κώδικες θα πρέπει να είναι ευανάγνωστοι. Για παράδειγμα:",
