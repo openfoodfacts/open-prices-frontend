@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Вызов сообществу",
-		"Subtitle": "Присоединяйтесь к другим энтузиастам цен на продукты питания в сборе информации о {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Фотографируйте ценники в магазинах",
 			"line1": "Фотографии могут включать один или несколько ценников. Штрихкоды должны быть читаемыми. Например:",
