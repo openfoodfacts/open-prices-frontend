@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Uitdaging voor de gemeenschap",
-		"Subtitle": "Sluit je aan bij andere voedselprijzen-enthousiastelingen en verzamel informatie over {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Maak foto's van prijskaartjes in winkels",
 			"line1": "Afbeeldingen kunnen een of meer prijskaartjes bevatten. Barcodes moeten leesbaar zijn. Bijvoorbeeld:",
