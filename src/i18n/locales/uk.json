@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Випробування спільноти",
-		"Subtitle": "Приєднуйтесь до інших ентузіастів цін на продукти харчування, збираючи інформацію про {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Фотографуйте цінники в магазинах",
 			"line1": "На фотографіях може бути один або кілька цінників. Штрих-коди повинні бути читабельними. Наприклад:",
