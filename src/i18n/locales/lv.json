@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Kopienas izaicinājums",
-		"Subtitle": "Pievienojieties citiem pārtikas cenu entuziastiem informācijas vākšanā par {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Fotografējiet cenu zīmes veikalos",
 			"line1": "Attēlos var būt iekļauta viena vai vairākas cenu zīmes. Svītrkodiem jābūt salasāmiem. Piemēram:",
