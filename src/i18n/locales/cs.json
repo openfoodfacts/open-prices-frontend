@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Komunitní výzva",
-		"Subtitle": "Připojte se k dalším nadšencům do cen potravin při shromažďování informací o {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Vyfoťte si cenovky v obchodech",
 			"line1": "Obrázky mohou obsahovat jednu nebo více cenovek. Čárové kódy by měly být čitelné. Například:",
