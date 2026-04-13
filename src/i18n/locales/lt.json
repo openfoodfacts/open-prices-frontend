@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Bendruomenės iššūkis",
-		"Subtitle": "Prisijunkite prie kitų maisto kainų entuziastų, renkačių informaciją apie {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Fotografuoti kainų etiketes parduotuvėse",
 			"line1": "Nuotraukose gali būti viena ar kelios kainų etiketės. Brūkšniniai kodai turi būti įskaitomi. Pavyzdžiui:",
