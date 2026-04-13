@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Tantangan komunitas",
-		"Subtitle": "Gabung dengan fans harga makanan lainnya dalam mengumpulkan informasi tentang {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Ambil foto label harga di toko",
 			"line1": "Foto dapat berisi satu atau beberapa label harga. Barcode harus dapat dibaca. Contohnya:",
