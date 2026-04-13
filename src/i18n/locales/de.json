@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Gemeinschaftliche Herausforderung",
-		"Subtitle": "Sammeln Sie gemeinsam mit anderen Lebensmittelpreis-Enthusiasten Informationen über {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Fotografieren Sie Preisschilder in Geschäften",
 			"line1": "Die Bilder können ein oder mehrere Preisschilder enthalten. Barcodes sollten lesbar sein. Zum Beispiel:",
