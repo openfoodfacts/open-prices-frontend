@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Fællesskabsudfordring",
-		"Subtitle": "Slut dig til andre madprisentusiaster for at samle information om {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Tag billeder af prisskilte i butikkerne",
 			"line1": "Billeder kan indeholde et eller flere prisskilte. Stregkoder skal kunne læses. For eksempel:",
