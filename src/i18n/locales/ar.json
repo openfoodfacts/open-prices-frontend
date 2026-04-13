@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "تحدي المجتمع",
-		"Subtitle": "انضم إلى المهتمين الآخرين بأسعار المواد الغذائية في جمع المعلومات حول {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "التقط صوراً لبطاقات الأسعار في المتاجر",
 			"line1": "يمكن أن تتضمن الصور بطاقة سعر واحدة أو أكثر. يجب أن تكون الرموز الشريطية قابلة للقراءة. على سبيل المثال:",
