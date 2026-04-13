@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Topluluk Görevi",
-		"Subtitle": "Diğer gıda fiyat meraklılarıyla birlikte {challenge_title} {challenge_subtitle}hakkında bilgi toplayın.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Mağazalardaki fiyat etiketlerinin fotoğraflarını çekin",
 			"line1": "Resimlerde bir veya daha fazla fiyat etiketi bulunabilir. Barkodlar okunaklı olmalıdır. Örneğin:",
