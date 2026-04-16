@@ -68,10 +68,20 @@ function extraPriceCreateOrUpdateFiltering(data) {
   return filteredData
 }
 
-
+/**
+ * Wrapper around fetch
+ * 1. to avoid repeating VITE_OPEN_PRICES_API_URL
+ * 2. to ensure cookies are not sent to the API. Why?
+ * - Open Prices API allows both cookie & token authentication
+ * - but Open Prices Frontend only uses token authentication
+ * - sending both can lead to issues (the cookie likely coming from another OFF domain or env)
+ */
 function fetchOpenPrices(endpointWithParams, options) {
   const URLWithParams = `${import.meta.env.VITE_OPEN_PRICES_API_URL}${endpointWithParams}`
-  return fetch(URLWithParams, options)
+  return fetch(URLWithParams, {
+    ...options,
+    credentials: 'omit'
+  })
 }
 
 
