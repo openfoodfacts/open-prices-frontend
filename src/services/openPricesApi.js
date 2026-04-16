@@ -74,7 +74,7 @@ function extraPriceCreateOrUpdateFiltering(data) {
  * 2. to ensure cookies are not sent to the API. Why?
  * - Open Prices backend API allows both cookie & token authentication
  * - but Open Prices frontend (this app) only uses token authentication
- * - sending both can lead to issues (the cookie likely coming from another OFF domain or env)
+ * - sending both can lead to issues (e.g. the cookie coming from Django admin)
  */
 function fetchOpenPrices(endpointWithParams, options) {
   const URLWithParams = `${import.meta.env.VITE_OPEN_PRICES_API_URL}${endpointWithParams}`
