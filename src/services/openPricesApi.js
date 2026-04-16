@@ -9,9 +9,6 @@ const PROOF_CREATE_FIELDS = PROOF_UPDATE_FIELDS.concat([])  // 'file'
 const LOCATION_ONLINE_CREATE_FIELDS = ['type', 'website_url']
 
 const OP_DEFAULT_PAGE_SIZE = 25  // 100 slows down the app
-const OP_DEFAULT_HEADERS = {
-  'Content-Type': 'application/json'
-}
 const OP_DEFAULT_PARAMS = {
   'app_name': constants.APP_USER_AGENT,
   // 'app_version'
@@ -70,16 +67,29 @@ function extraPriceCreateOrUpdateFiltering(data) {
 
 /**
  * Wrapper around fetch
- * 1. to avoid repeating VITE_OPEN_PRICES_API_URL
- * 2. to ensure cookies are not sent to the API. Why?
+ * 1. to avoid repeating the URL prefix (VITE_OPEN_PRICES_API_URL)
+ * 2. to avoid repeating headers (e.g. Authorization & Content-Type)
+ * 3. to ensure cookies are not sent to the API. Why?
  * - Open Prices backend API allows both cookie & token authentication
  * - but Open Prices frontend (this app) only uses token authentication
  * - sending both can lead to issues (e.g. the cookie coming from Django admin)
  */
-function fetchOpenPrices(endpointWithParams, options) {
+function fetchOpenPrices(endpointWithParams, options, withToken = false) {
+  // set URL
   const URLWithParams = `${import.meta.env.VITE_OPEN_PRICES_API_URL}${endpointWithParams}`
+  // set headers
+  let headers = options.headers || {}
+  if (options.body && !(options.body instanceof FormData)) {
+    headers['Content-Type'] = 'application/json'
+  }
+  if (withToken) {
+    const store = useAppStore()
+    headers['Authorization'] = `Bearer ${store.user.token}`
+  }
+  // call fetch
   return fetch(URLWithParams, {
     ...options,
+    headers: headers,
     credentials: 'omit'
   })
 }
@@ -93,8 +103,7 @@ export default {
     const endpointWithParams = `/auth?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
-      body: formData,
-      headers: {}
+      body: formData
     })
     .then((response) => response.json())
   },
@@ -104,8 +113,7 @@ export default {
     const endpointWithParams = `/auth?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
-      body: formData,
-      headers: {}
+      body: formData
     })
     .then((response) => response.json())
   },
@@ -113,22 +121,17 @@ export default {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
     const endpointWithParams = `/users?${buildURLParams({...defaultParams, ...params})}`
     return fetchOpenPrices(endpointWithParams, {
-      method: 'GET',
-      headers: OP_DEFAULT_HEADERS
+      method: 'GET'
     })
     .then((response) => response.json())
   },
 
   // can only fetch the user's own data
   getUserById(userId) {
-    const store = useAppStore()
     const endpointWithParams = `/users/${userId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
-    })
+    }, true)
     .then((response) => response.json())
   },
   createProof(image, inputData, source = null) {
@@ -177,64 +180,45 @@ export default {
     const endpointWithParams = `/proofs/upload?${buildURLParams({'app_page': source})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${store.user.token}`
-      },
       body: formData,
-    })
+    }, true)
     .then((response) => response.json())
   },
 
   getProofs(params = {}) {
-    const store = useAppStore()
     const defaultParams = {page: 1, size: 10, order_by: '-created'}
     const endpointWithParams = `/proofs?${buildURLParams({...defaultParams, ...params})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
   getProofById(proofId) {
-    const store = useAppStore()
     const endpointWithParams = `/proofs/${proofId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
   updateProof(proofId, inputData = {}) {
-    const store = useAppStore()
     // build body
     const data = filterBodyWithAllowedKeys(inputData, PROOF_UPDATE_FIELDS)
     // API call
     const endpointWithParams = `/proofs/${proofId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
       body: JSON.stringify(data),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
   deleteProof(proofId) {
-    const store = useAppStore()
     const endpointWithParams = `/proofs/${proofId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'DELETE',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
-    })
+    }, true)
     // .then((response) => response.json())
   },
 
@@ -249,11 +233,8 @@ export default {
     const endpointWithParams = `/prices?${buildURLParams({'app_page': source})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
       body: JSON.stringify(data),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
@@ -262,7 +243,6 @@ export default {
     const endpointWithParams = `/prices?${buildURLParams({...defaultParams, ...params})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -271,13 +251,11 @@ export default {
     const endpointWithParams = `/prices/${priceId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   updatePrice(priceId, inputData = {}) {
-    const store = useAppStore()
     // build body
     let data = filterBodyWithAllowedKeys(inputData, PRICE_UPDATE_FIELDS)
     data = extraPriceCreateOrUpdateFiltering(data)
@@ -285,28 +263,20 @@ export default {
     const endpointWithParams = `/prices/${priceId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
       body: JSON.stringify(data),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
   deletePrice(priceId) {
-    const store = useAppStore()
     const endpointWithParams = `/prices/${priceId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'DELETE',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
-    })
+    }, true)
     // .then((response) => response.json())
   },
 
   processWithGemini(labels) {
-    const store = useAppStore()
     const endpointWithParams = `/proofs/process-with-gemini`
     const formData = new FormData()
 
@@ -316,11 +286,8 @@ export default {
 
     return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${store.user.token}`,
-      },
       body: formData,
-    })
+    }, true)
     .then((response) => response.json())
   },
 
@@ -329,34 +296,25 @@ export default {
     const endpointWithParams = `/price-tags?${buildURLParams({...defaultParams, ...params})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   updatePriceTag(priceTagId, inputData = {}) {
-    const store = useAppStore()
     const endpointWithParams = `/price-tags/${priceTagId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
       body: JSON.stringify(inputData),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
   createPriceTag(inputData) {
-    const store = useAppStore()
     const endpointWithParams = `/price-tags?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
       body: JSON.stringify(inputData),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
@@ -365,34 +323,25 @@ export default {
     const endpointWithParams = `/receipt-items?${buildURLParams({...defaultParams, ...params})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   updateReceiptItem(receiptItemId, inputData = {}) {
-    const store = useAppStore()
     const endpointWithParams = `/receipt-items/${receiptItemId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
       body: JSON.stringify(inputData),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
   createReceiptItem(inputData) {
-    const store = useAppStore()
     const endpointWithParams = `/receipt-items?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
       body: JSON.stringify(inputData),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
@@ -401,7 +350,6 @@ export default {
     const endpointWithParams = `/products?${buildURLParams({...defaultParams, ...params})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -410,7 +358,6 @@ export default {
     const endpointWithParams = `/products/${productId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -419,49 +366,36 @@ export default {
     const endpointWithParams = `/products/code/${productCode}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   updateOffProduct(productCode, inputData = {}) {
-    const store = useAppStore()
     const endpointWithParams = `/products/code/${productCode}/off-update?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
       body: JSON.stringify(inputData),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
   updateOffProductImage(productCode, inputData = {}) {
-    const store = useAppStore()
     const endpointWithParams = `/products/code/${productCode}/off-upload-image?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
       body: JSON.stringify(inputData),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
   createLocationOnline(inputData) {
-    const store = useAppStore()
     const data = filterBodyWithAllowedKeys(inputData, LOCATION_ONLINE_CREATE_FIELDS)
     data.type = constants.LOCATION_TYPE_ONLINE
     const endpointWithParams = `/locations?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
       body: JSON.stringify(data),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
@@ -470,7 +404,6 @@ export default {
     const endpointWithParams = `/locations?${buildURLParams({...defaultParams, ...params})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -479,7 +412,6 @@ export default {
     const endpointWithParams = `/locations/${locationId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -488,7 +420,6 @@ export default {
     const endpointWithParams = `/locations/osm/${osmType.toUpperCase()}/${osmId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -497,7 +428,6 @@ export default {
     const endpointWithParams = `/locations/compare?${buildURLParams({'location_id_a': locationIdA, 'location_id_b': locationIdB, ...params})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -507,47 +437,34 @@ export default {
     const endpointWithParams = `/locations/osm/countries?${buildURLParams({...defaultParams, ...params})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   getFlags(params = {}) {
-    const store = useAppStore()
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
     const endpointWithParams = `/flags?${buildURLParams({...defaultParams, ...params})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
   createFlag(objectType, objectId, inputData) {
-    const store = useAppStore()
     const endpointWithParams = `/${objectType}s/${objectId}/flag?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
       body: JSON.stringify(inputData),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
   updateFlag(flagId, inputData = {}) {
-    const store = useAppStore()
     const endpointWithParams = `/flags/${flagId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
       body: JSON.stringify(inputData),
-    })
+    }, true)
     .then((response) => response.json())
   },
 
@@ -555,7 +472,6 @@ export default {
     const endpointWithParams = `/stats?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -564,7 +480,6 @@ export default {
     const endpointWithParams = `/prices/stats?${buildURLParams({...params})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -574,7 +489,6 @@ export default {
     const endpointWithParams = `/challenges?${buildURLParams({...defaultParams, ...params})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
