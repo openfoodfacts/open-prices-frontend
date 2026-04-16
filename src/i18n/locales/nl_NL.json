@@ -127,7 +127,7 @@
 	},
 	"Challenge": {
 		"Title": "Uitdaging voor de gemeenschap",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
+		"Subtitle": "Doe mee met andere liefhebbers van voedselprijzen en verzamel informatie over {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Maak foto's van prijskaartjes in winkels",
 			"line1": "Afbeeldingen kunnen een of meer prijskaartjes bevatten. Barcodes moeten leesbaar zijn. Bijvoorbeeld:",
@@ -595,7 +595,7 @@
 		"CountriesWhereSold": "Verkooplanden",
 		"CreateNewProduct": "Een nieuw product maken",
 		"CreateProduct": "Product maken",
-		"EnableCropMode": "Crop-modus inschakelen",
+		"EnableCropMode": "Bijsnijdmodus inschakelen",
 		"Flavor": "Selecteer het project waarin het product moet worden aangemaakt",
 		"NextProof": "Volgend bewijs",
 		"PreviousProof": "Vorig bewijs",
@@ -861,7 +861,7 @@
 			"Title": "Bon"
 		},
 		"Cities": {
-			"Title": "Plaatsen"
+			"Title": "Steden"
 		},
 		"Community": {
 			"Title": "Gemeenschap"
@@ -971,7 +971,7 @@
 		"ServerError": "Fout: serverfout",
 		"Title": "Inloggen",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
-		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
+		"SignInWithOpenFoodFactsAuth": "Log in met {off_name} authenticatie",
 		"UsernameLabel": "Gebruikersnaam",
 		"WrongCredentials": "Fout: verkeerde inloggegevens"
 	},
