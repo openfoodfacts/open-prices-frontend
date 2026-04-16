@@ -72,8 +72,8 @@ function extraPriceCreateOrUpdateFiltering(data) {
  * Wrapper around fetch
  * 1. to avoid repeating VITE_OPEN_PRICES_API_URL
  * 2. to ensure cookies are not sent to the API. Why?
- * - Open Prices API allows both cookie & token authentication
- * - but Open Prices Frontend only uses token authentication
+ * - Open Prices backend API allows both cookie & token authentication
+ * - but Open Prices frontend (this app) only uses token authentication
  * - sending both can lead to issues (the cookie likely coming from another OFF domain or env)
  */
 function fetchOpenPrices(endpointWithParams, options) {
