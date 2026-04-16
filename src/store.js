@@ -65,6 +65,7 @@ export const useAppStore = defineStore('app', {
     signOut() {
       this.user.username = null
       this.user.token = null
+      this.user.is_moderator = false
     },
     addRecentLocation(location) {
       this.user.recent_locations = utils.addObjectToArray(this.user.recent_locations, location, true)
