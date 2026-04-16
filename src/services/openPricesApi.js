@@ -68,6 +68,48 @@ function extraPriceCreateOrUpdateFiltering(data) {
   return filteredData
 }
 
+function getCurrentPath() {
+  return `${window.location.pathname}${window.location.search}${window.location.hash}`
+}
+
+function redirectToSignIn() {
+  const next = encodeURIComponent(getCurrentPath())
+  const signInPath = '/sign-in'
+  if (window.location.pathname !== signInPath) {
+    window.location.assign(`${signInPath}?next=${next}`)
+  }
+}
+
+function onAuthFailure() {
+  const store = useAppStore()
+  store.signOut()
+  redirectToSignIn()
+}
+
+function fetchWithAuth(url, options = {}) {
+  const store = useAppStore()
+  const token = store.user.token
+
+  if (!token) {
+    onAuthFailure()
+    return Promise.reject(new Error('Authentication token is missing'))
+  }
+
+  return fetch(url, {
+    ...options,
+    headers: Object.assign({}, options.headers, {
+      'Authorization': `Bearer ${token}`
+    }),
+  })
+  .then((response) => {
+    if (response.status === 401) {
+      onAuthFailure()
+      throw new Error('Authentication token is invalid or expired')
+    }
+    return response
+  })
+}
+
 
 export default {
   signIn(username, password) {
@@ -105,13 +147,10 @@ export default {
 
   // can only fetch the user's own data
   getUserById(userId) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/users/${userId}?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'GET',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
+      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -159,65 +198,50 @@ export default {
     }
     // API call
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams({'app_page': source})}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${store.user.token}`
-      },
       body: formData,
     })
     .then((response) => response.json())
   },
 
   getProofs(params = {}) {
-    const store = useAppStore()
     const defaultParams = {page: 1, size: 10, order_by: '-created'}
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'GET',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
+      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   getProofById(proofId) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'GET',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
+      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   updateProof(proofId, inputData = {}) {
-    const store = useAppStore()
     // build body
     const data = filterBodyWithAllowedKeys(inputData, PROOF_UPDATE_FIELDS)
     // API call
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
+      headers: OP_DEFAULT_HEADERS,
       body: JSON.stringify(data),
     })
     .then((response) => response.json())
   },
 
   deleteProof(proofId) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'DELETE',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
+      headers: OP_DEFAULT_HEADERS,
     })
     // .then((response) => response.json())
   },
@@ -231,11 +255,9 @@ export default {
     store.user.last_product_product_used = data.product_code ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
     // API call
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({'app_page': source})}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'POST',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
+      headers: OP_DEFAULT_HEADERS,
       body: JSON.stringify(data),
     })
     .then((response) => response.json())
@@ -261,36 +283,29 @@ export default {
   },
 
   updatePrice(priceId, inputData = {}) {
-    const store = useAppStore()
     // build body
     let data = filterBodyWithAllowedKeys(inputData, PRICE_UPDATE_FIELDS)
     data = extraPriceCreateOrUpdateFiltering(data)
     // API call
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
+      headers: OP_DEFAULT_HEADERS,
       body: JSON.stringify(data),
     })
     .then((response) => response.json())
   },
 
   deletePrice(priceId) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'DELETE',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
+      headers: OP_DEFAULT_HEADERS,
     })
     // .then((response) => response.json())
   },
 
   processWithGemini(labels) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/process-with-gemini`
     const formData = new FormData()
 
@@ -298,11 +313,8 @@ export default {
       formData.append('files', label.blob)
     });
 
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${store.user.token}`,
-      },
       body: formData,
     })
     .then((response) => response.json())
@@ -319,26 +331,20 @@ export default {
   },
 
   updatePriceTag(priceTagId, inputData = {}) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags/${priceTagId}?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
+      headers: OP_DEFAULT_HEADERS,
       body: JSON.stringify(inputData),
     })
     .then((response) => response.json())
   },
 
   createPriceTag(inputData) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'POST',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
+      headers: OP_DEFAULT_HEADERS,
       body: JSON.stringify(inputData),
     })
     .then((response) => response.json())
@@ -355,26 +361,20 @@ export default {
   },
 
   updateReceiptItem(receiptItemId, inputData = {}) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/receipt-items/${receiptItemId}?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
+      headers: OP_DEFAULT_HEADERS,
       body: JSON.stringify(inputData),
     })
     .then((response) => response.json())
   },
 
   createReceiptItem(inputData) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/receipt-items?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'POST',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
+      headers: OP_DEFAULT_HEADERS,
       body: JSON.stringify(inputData),
     })
     .then((response) => response.json())
@@ -409,41 +409,32 @@ export default {
   },
 
   updateOffProduct(productCode, inputData = {}) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}/off-update?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
+      headers: OP_DEFAULT_HEADERS,
       body: JSON.stringify(inputData),
     })
     .then((response) => response.json())
   },
 
   updateOffProductImage(productCode, inputData = {}) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}/off-upload-image?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`
-      }),
+      headers: OP_DEFAULT_HEADERS,
       body: JSON.stringify(inputData),
     })
     .then((response) => response.json())
   },
 
   createLocationOnline(inputData) {
-    const store = useAppStore()
     const data = filterBodyWithAllowedKeys(inputData, LOCATION_ONLINE_CREATE_FIELDS)
     data.type = constants.LOCATION_TYPE_ONLINE
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'POST',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
+      headers: OP_DEFAULT_HEADERS,
       body: JSON.stringify(data),
     })
     .then((response) => response.json())
@@ -497,39 +488,30 @@ export default {
   },
 
   getFlags(params = {}) {
-    const store = useAppStore()
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/flags?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'GET',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
+      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   createFlag(objectType, objectId, inputData) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/${objectType}s/${objectId}/flag?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'POST',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
+      headers: OP_DEFAULT_HEADERS,
       body: JSON.stringify(inputData),
     })
     .then((response) => response.json())
   },
 
   updateFlag(flagId, inputData = {}) {
-    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/flags/${flagId}?${buildURLParams()}`
-    return fetch(url, {
+    return fetchWithAuth(url, {
       method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
+      headers: OP_DEFAULT_HEADERS,
       body: JSON.stringify(inputData),
     })
     .then((response) => response.json())
