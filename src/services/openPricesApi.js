@@ -69,13 +69,19 @@ function extraPriceCreateOrUpdateFiltering(data) {
 }
 
 
+function fetchOpenPrices(endpointWithParams, options) {
+  const URLWithParams = `${import.meta.env.VITE_OPEN_PRICES_API_URL}${endpointWithParams}`
+  return fetch(URLWithParams, options)
+}
+
+
 export default {
   signIn(username, password) {
     let formData = new FormData()
     formData.append('username', username)
     formData.append('password', password)
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/auth?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/auth?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
       body: formData,
       headers: {}
@@ -85,8 +91,8 @@ export default {
   signInWithKeycloak(access_token) {
     let formData = new FormData()
     formData.append('access_token', access_token)
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/auth?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/auth?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
       body: formData,
       headers: {}
@@ -95,8 +101,8 @@ export default {
   },
   getUsers(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/users?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
+    const endpointWithParams = `/users?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS
     })
@@ -106,8 +112,8 @@ export default {
   // can only fetch the user's own data
   getUserById(userId) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/users/${userId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/users/${userId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
@@ -158,8 +164,8 @@ export default {
       store.setLastCurrencyUsed(data.currency)
     }
     // API call
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams({'app_page': source})}`
-    return fetch(url, {
+    const endpointWithParams = `/proofs/upload?${buildURLParams({'app_page': source})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${store.user.token}`
@@ -172,8 +178,8 @@ export default {
   getProofs(params = {}) {
     const store = useAppStore()
     const defaultParams = {page: 1, size: 10, order_by: '-created'}
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
+    const endpointWithParams = `/proofs?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
@@ -184,8 +190,8 @@ export default {
 
   getProofById(proofId) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/proofs/${proofId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
@@ -199,8 +205,8 @@ export default {
     // build body
     const data = filterBodyWithAllowedKeys(inputData, PROOF_UPDATE_FIELDS)
     // API call
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/proofs/${proofId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
@@ -212,8 +218,8 @@ export default {
 
   deleteProof(proofId) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/proofs/${proofId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'DELETE',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
@@ -230,8 +236,8 @@ export default {
     // update store
     store.user.last_product_product_used = data.product_code ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
     // API call
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({'app_page': source})}`
-    return fetch(url, {
+    const endpointWithParams = `/prices?${buildURLParams({'app_page': source})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
@@ -243,8 +249,8 @@ export default {
 
   getPrices(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE, order_by: '-created'}
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
+    const endpointWithParams = `/prices?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -252,8 +258,8 @@ export default {
   },
 
   getPriceById(priceId) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/prices/${priceId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -266,8 +272,8 @@ export default {
     let data = filterBodyWithAllowedKeys(inputData, PRICE_UPDATE_FIELDS)
     data = extraPriceCreateOrUpdateFiltering(data)
     // API call
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/prices/${priceId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
@@ -279,8 +285,8 @@ export default {
 
   deletePrice(priceId) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/prices/${priceId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'DELETE',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
@@ -291,14 +297,14 @@ export default {
 
   processWithGemini(labels) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/process-with-gemini`
+    const endpointWithParams = `/proofs/process-with-gemini`
     const formData = new FormData()
 
     labels.forEach((label) => {
       formData.append('files', label.blob)
     });
 
-    return fetch(url, {
+    return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${store.user.token}`,
@@ -310,8 +316,8 @@ export default {
 
   getPriceTags(params = {}) {
     const defaultParams = {page: 1, size: 10}  // order_by default ?
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
+    const endpointWithParams = `/price-tags?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -320,8 +326,8 @@ export default {
 
   updatePriceTag(priceTagId, inputData = {}) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags/${priceTagId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/price-tags/${priceTagId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
@@ -333,8 +339,8 @@ export default {
 
   createPriceTag(inputData) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/price-tags?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
@@ -346,8 +352,8 @@ export default {
 
   getReceiptItems(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/receipt-items?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
+    const endpointWithParams = `/receipt-items?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -356,8 +362,8 @@ export default {
 
   updateReceiptItem(receiptItemId, inputData = {}) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/receipt-items/${receiptItemId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/receipt-items/${receiptItemId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
@@ -369,8 +375,8 @@ export default {
 
   createReceiptItem(inputData) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/receipt-items?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/receipt-items?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
@@ -382,8 +388,8 @@ export default {
 
   getProducts(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
+    const endpointWithParams = `/products?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -391,8 +397,8 @@ export default {
   },
 
   getProductById(productId) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/${productId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/products/${productId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -400,8 +406,8 @@ export default {
   },
 
   getProductByCode(productCode) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/products/code/${productCode}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -410,8 +416,8 @@ export default {
 
   updateOffProduct(productCode, inputData = {}) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}/off-update?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/products/code/${productCode}/off-update?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
@@ -423,8 +429,8 @@ export default {
 
   updateOffProductImage(productCode, inputData = {}) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}/off-upload-image?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/products/code/${productCode}/off-upload-image?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
@@ -438,8 +444,8 @@ export default {
     const store = useAppStore()
     const data = filterBodyWithAllowedKeys(inputData, LOCATION_ONLINE_CREATE_FIELDS)
     data.type = constants.LOCATION_TYPE_ONLINE
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/locations?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
@@ -451,8 +457,8 @@ export default {
 
   getLocations(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
+    const endpointWithParams = `/locations?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -460,8 +466,8 @@ export default {
   },
 
   getLocationById(locationId) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/${locationId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/locations/${locationId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -469,8 +475,8 @@ export default {
   },
 
   getLocationByOsmTypeAndId(osmType, osmId) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/osm/${osmType.toUpperCase()}/${osmId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/locations/osm/${osmType.toUpperCase()}/${osmId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -478,8 +484,8 @@ export default {
   },
 
   getLocationsCompare(locationIdA, locationIdB, params = {}) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/compare?${buildURLParams({'location_id_a': locationIdA, 'location_id_b': locationIdB, ...params})}`
-    return fetch(url, {
+    const endpointWithParams = `/locations/compare?${buildURLParams({'location_id_a': locationIdA, 'location_id_b': locationIdB, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -488,8 +494,8 @@ export default {
 
   getCountries(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/osm/countries?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
+    const endpointWithParams = `/locations/osm/countries?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -499,8 +505,8 @@ export default {
   getFlags(params = {}) {
     const store = useAppStore()
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/flags?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
+    const endpointWithParams = `/flags?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
@@ -511,8 +517,8 @@ export default {
 
   createFlag(objectType, objectId, inputData) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/${objectType}s/${objectId}/flag?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/${objectType}s/${objectId}/flag?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
@@ -524,8 +530,8 @@ export default {
 
   updateFlag(flagId, inputData = {}) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/flags/${flagId}?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/flags/${flagId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'PATCH',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
@@ -536,8 +542,8 @@ export default {
   },
 
   getStats() {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/stats?${buildURLParams()}`
-    return fetch(url, {
+    const endpointWithParams = `/stats?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -545,8 +551,8 @@ export default {
   },
 
   getPriceStats(params = {}) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/stats?${buildURLParams({...params})}`
-    return fetch(url, {
+    const endpointWithParams = `/prices/stats?${buildURLParams({...params})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
@@ -555,8 +561,8 @@ export default {
 
   getChallenges(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE, order_by: '-id'}
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/challenges?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
+    const endpointWithParams = `/challenges?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
     })
