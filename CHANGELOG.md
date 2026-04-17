@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.162.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.161.2...v1.162.0) (2026-04-17)
+
+
+### Features
+
+* **BarcodeScannerDialog:** Display similar barcodes as choices ([#1724](https://github.com/openfoodfacts/open-prices-frontend/issues/1724)) ([a944d26](https://github.com/openfoodfacts/open-prices-frontend/commit/a944d260855b177a255b715503c9a3144d55534f))
+* **BarcodeScannerDialog:** if the barcode search has a prefill value, fetch the product on mount ([#2152](https://github.com/openfoodfacts/open-prices-frontend/issues/2152)) ([12690ed](https://github.com/openfoodfacts/open-prices-frontend/commit/12690ed09d4e4194862b4b0f4bbe04e87bf02c38))
+
+
+### Bug Fixes
+
+* move punctuation before challenge subtitle ([#2142](https://github.com/openfoodfacts/open-prices-frontend/issues/2142)) ([e6b524c](https://github.com/openfoodfacts/open-prices-frontend/commit/e6b524c36af0de4c711d7622ea0fef0b6e8c0fb8))
+
+
+### Technical
+
+* **Auth:** API: stop sending domain cookies to the API, they conflict with the token authentication ([#2148](https://github.com/openfoodfacts/open-prices-frontend/issues/2148)) ([541cda5](https://github.com/openfoodfacts/open-prices-frontend/commit/541cda5e0f76e751207db4c5a0f89be26c70cb05))
+* **Auth:** improve fetchOpenPrices to manage different headers depending on token & content-type ([#2151](https://github.com/openfoodfacts/open-prices-frontend/issues/2151)) ([e38c47e](https://github.com/openfoodfacts/open-prices-frontend/commit/e38c47e866c53ef125eeeee57f2b32b985d83226))
+* **Auth:** new fetchOpenPrices to call fetch with the same URL and avoid repeating ([#2150](https://github.com/openfoodfacts/open-prices-frontend/issues/2150)) ([ce66768](https://github.com/openfoodfacts/open-prices-frontend/commit/ce6676895b67bc41433ac030484f1a6629c8134c))
+* **Auth:** on signOut, clear is_moderator info ([#2149](https://github.com/openfoodfacts/open-prices-frontend/issues/2149)) ([5207faf](https://github.com/openfoodfacts/open-prices-frontend/commit/5207faf7667613f2f67744b904cee989b9d03eb8))
+* **BarcodeScannerDialog:** remove old component BarcodeManualInputDialog ([#2153](https://github.com/openfoodfacts/open-prices-frontend/issues/2153)) ([f125df7](https://github.com/openfoodfacts/open-prices-frontend/commit/f125df72909ebacfc2ff522269bc15ee84eef7b8))
+* **l10n:** New Crowdin translations to review and merge ([#2145](https://github.com/openfoodfacts/open-prices-frontend/issues/2145)) ([eee3579](https://github.com/openfoodfacts/open-prices-frontend/commit/eee3579bfeb3d8a04c8510a0a07b7c3a228d068f))
+* **LocationSelectorDialog:** disable submit button if online is empty or invalid ([#2155](https://github.com/openfoodfacts/open-prices-frontend/issues/2155)) ([74f302c](https://github.com/openfoodfacts/open-prices-frontend/commit/74f302c6da5289e6b4726591a0093f27ccb85e67))
+* **LocationSelectorDialog:** remove 'Results' title and show the list of cards directly (like the BarcodeScannerDialog) ([#2154](https://github.com/openfoodfacts/open-prices-frontend/issues/2154)) ([2c385af](https://github.com/openfoodfacts/open-prices-frontend/commit/2c385afb46d4588f4744949f4a6b2b9a0536ec14))
+
 ## [1.161.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.161.1...v1.161.2) (2026-04-12)
 
 
