@@ -45,6 +45,7 @@
                 :hint="barcodeManualInputLength"
                 clearable
                 persistent-hint
+                @update:modelValue="newValue => barcodeManualForm.barcode = numericAndWildcardOnly(newValue)"
               >
                 <template #append-inner>
                   <v-btn color="primary" :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!barcodeManualForm.barcode" @click="barcodeSearchOrSend" />
@@ -98,6 +99,7 @@ import { useAppStore } from '../store'
 import openPricesApi from '../services/openPricesApi'
 import openFoodFactsApi from '../services/openFoodFactsApi'
 import constants from '../constants'
+import utils from '../utils.js'
 import proof_utils from '../utils/proof.js'
 
 const config = {
@@ -228,6 +230,9 @@ export default {
     },
     onScanFailure(error) {  // eslint-disable-line no-unused-vars
       // console.warn(`Code scan error = ${error}`)
+    },
+    numericAndWildcardOnly(value) {
+      return utils.numericAndWildcardOnly(value)
     },
     barcodeSearchOrSend() {
       this.barcodeManualForm.barcode = this.barcodeManualForm.barcode.trim()
