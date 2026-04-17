@@ -17,6 +17,10 @@ function isNumber(value) {
   return !isNaN(parseFloat(value)) && isFinite(value)
 }
 
+function numbersOnly(value) {
+  return value.replace(/\D/g, '')
+}
+
 function toArray(value) {
   if (Array.isArray(value)) {
     return value
@@ -115,6 +119,7 @@ export default {
   debounce,
   getDocumentScrollPercentage,
   isNumber,
+  numbersOnly,
   toArray,
   slugify,
   isURL,

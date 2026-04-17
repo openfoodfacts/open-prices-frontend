@@ -29,11 +29,12 @@
             </div>
             <v-text-field
               v-model="productForm.product_code"
+              type="text"
+              inputmode="numeric"
               density="compact"
               variant="outlined"
-              type="text"
-              inputmode="decimal"
               persistent-hint
+              @update:modelValue="newValue => productForm.product_code = numbersOnly(newValue)"
             />
           </v-card-text>
           <v-divider />
@@ -45,6 +46,7 @@
                   color="primary"
                   variant="flat"
                   type="submit"
+                  :disabled="!productForm.product_code"
                 >
                   {{ $t('Common.Select') }}
                 </v-btn>
@@ -445,6 +447,9 @@ export default {
     this.setCountryTags()
   },
   methods: {
+    numbersOnly(value) {
+      return utils.numbersOnly(value)
+    },
     fieldRequired(v) {
       return !!v || this.$t('Common.FieldIsRequired')
     },
