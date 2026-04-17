@@ -47,7 +47,7 @@
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-btn color="primary" :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!formFilled" @click="barcodeSearchOrSend" />
+                  <v-btn color="primary" :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!barcodeManualForm.barcode" @click="barcodeSearchOrSend" />
                 </template>
               </v-text-field>
             </v-form>
@@ -175,9 +175,6 @@ export default {
     barcodeManualInputLength() {
       if (!this.barcodeManualForm.barcode) return '0'
       return this.barcodeManualForm.barcode.length.toString()
-    },
-    formFilled() {
-      return !!this.barcodeManualForm.barcode
     }
   },
   watch: {
