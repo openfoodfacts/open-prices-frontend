@@ -28,7 +28,7 @@
               :label="$t('AddPriceSingle.ProductInfo.ProductBarcode')"
               type="text"
               inputmode="numeric"
-              persistent-hint
+              hide-details="auto"
               @update:modelValue="newValue => productForm.product_code = numericOnly(newValue)"
             >
               <template #append-inner>
