@@ -14,51 +14,33 @@
   </v-row>
 
   <v-row v-if="step === 1">
-    <v-col cols="12" md="6">
+    <v-col cols="12">
       <v-form @submit.prevent="onProductCodeSelected">
         <v-card
-          class="mb-4"
           :title="$t('Common.BarcodeType')"
           prepend-icon="mdi-tag-plus-outline"
           height="100%"
         >
           <v-divider />
           <v-card-text>
-            <div class="text-body-2">
-              {{ $t('AddPriceSingle.ProductInfo.ProductBarcode') }}
-            </div>
             <v-text-field
               v-model="productForm.product_code"
+              :label="$t('AddPriceSingle.ProductInfo.ProductBarcode')"
               type="text"
               inputmode="numeric"
-              density="compact"
-              variant="outlined"
               persistent-hint
               @update:modelValue="newValue => productForm.product_code = numericOnly(newValue)"
-            />
+            >
+              <template #append-inner>
+                <v-btn color="primary" icon="mdi-plus" :disabled="!productForm.product_code" @click="onProductCodeSelected" />
+              </template>
+            </v-text-field>
           </v-card-text>
-          <v-divider />
-          <v-card-actions>
-            <v-row>
-              <v-col>
-                <v-btn
-                  class="float-right"
-                  color="primary"
-                  variant="flat"
-                  type="submit"
-                  :disabled="!productForm.product_code"
-                >
-                  {{ $t('Common.Select') }}
-                </v-btn>
-              </v-col>
-            </v-row>
-          </v-card-actions>
         </v-card>
       </v-form>
     </v-col>
-    <v-col cols="12" md="6">
+    <v-col cols="12">
       <v-card
-        class="mb-4"
         :title="$t('CreateOffProduct.SelectUnknownProductGuide')"
         prepend-icon="mdi-tag-plus-outline"
         height="100%"
