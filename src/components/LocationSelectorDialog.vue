@@ -42,7 +42,7 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="osm">
-            <v-form @submit.prevent="locationOsmSearch">
+            <v-form class="mb-4" @submit.prevent="locationOsmSearch">
               <v-text-field
                 ref="locationOsmSearchInput"
                 v-model="locationOsmSearchForm.q"
@@ -67,41 +67,33 @@
               </i18n-t>
             </p>
 
-            <v-sheet v-if="results !== null">
-              <h3 class="mt-4 mb-1">
-                <i18n-t keypath="LocationSelector.Result" tag="span">
-                  <template #resultNumber>
-                    <small>{{ results.length }}</small>
+            <!-- results -->
+            <v-row v-if="results.length">
+              <v-col cols="12" sm="6">
+                <LocationCard v-for="(location, index) in results" :key="index" :location="location" :hideLocationFooterRow="true" :readonly="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
+              </v-col>
+              <v-col cols="12" sm="6" style="min-height:400px">
+                <LeafletMap :locations="results" :showActions="true" @locationSelected="selectLocation" />
+              </v-col>
+            </v-row>
+
+            <p v-else>
+              <v-alert class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
+                {{ $t('LocationSelector.NoResultHelpKeywords') }}
+              </v-alert>
+              <v-alert class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
+                <i18n-t keypath="LocationSelector.NoResultHelpOSM" tag="span">
+                  <template #osm_name>
+                    {{ OSM_NAME }}
+                  </template>
+                  <template #osm_url>
+                    <a :href="OSM_URL" target="_blank">
+                      {{ OSM_URL }}
+                    </a>
                   </template>
                 </i18n-t>
-              </h3>
-              <v-row v-if="results.length">
-                <v-col cols="12" sm="6">
-                  <LocationCard v-for="(location, index) in results" :key="index" :location="location" :hideLocationFooterRow="true" :readonly="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
-                </v-col>
-                <v-col cols="12" sm="6" style="min-height:400px">
-                  <LeafletMap :locations="results" :showActions="true" @locationSelected="selectLocation" />
-                </v-col>
-              </v-row>
-
-              <p v-else>
-                <v-alert class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
-                  {{ $t('LocationSelector.NoResultHelpKeywords') }}
-                </v-alert>
-                <v-alert class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
-                  <i18n-t keypath="LocationSelector.NoResultHelpOSM" tag="span">
-                    <template #osm_name>
-                      {{ OSM_NAME }}
-                    </template>
-                    <template #osm_url>
-                      <a :href="OSM_URL" target="_blank">
-                        {{ OSM_URL }}
-                      </a>
-                    </template>
-                  </i18n-t>
-                </v-alert>
-              </p>
-            </v-sheet>
+              </v-alert>
+            </p>
           </v-tabs-window-item>
 
           <v-tabs-window-item value="online">

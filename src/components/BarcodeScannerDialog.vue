@@ -33,7 +33,7 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="type">
-            <v-form class="mb-2" @submit.prevent="barcodeSearchOrSend">
+            <v-form class="mb-4" @submit.prevent="barcodeSearchOrSend">
               <v-text-field
                 ref="barcodeManualInput"
                 v-model="barcodeManualForm.barcode"
@@ -51,6 +51,8 @@
                 </template>
               </v-text-field>
             </v-form>
+
+            <!-- results -->
             <ProductCard v-for="product in productSearchResultList" :key="product" :product="product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" @click="barcodeSend(product.code)" />
 
             <div v-if="barcodeManualInputSimilarBarcodeList.length">
