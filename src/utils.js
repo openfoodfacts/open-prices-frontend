@@ -17,7 +17,10 @@ function isNumber(value) {
   return !isNaN(parseFloat(value)) && isFinite(value)
 }
 
-function numbersOnly(value) {
+/**
+ * Remove all non-digit characters from a string
+ */
+function numericOnly(value) {
   return value.replace(/\D/g, '')
 }
 
@@ -119,7 +122,7 @@ export default {
   debounce,
   getDocumentScrollPercentage,
   isNumber,
-  numbersOnly,
+  numericOnly,
   toArray,
   slugify,
   isURL,

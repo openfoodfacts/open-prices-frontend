@@ -34,7 +34,7 @@
               density="compact"
               variant="outlined"
               persistent-hint
-              @update:modelValue="newValue => productForm.product_code = numbersOnly(newValue)"
+              @update:modelValue="newValue => productForm.product_code = numericOnly(newValue)"
             />
           </v-card-text>
           <v-divider />
@@ -447,8 +447,8 @@ export default {
     this.setCountryTags()
   },
   methods: {
-    numbersOnly(value) {
-      return utils.numbersOnly(value)
+    numericOnly(value) {
+      return utils.numericOnly(value)
     },
     fieldRequired(v) {
       return !!v || this.$t('Common.FieldIsRequired')
