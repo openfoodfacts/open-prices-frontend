@@ -15,7 +15,7 @@
 
   <v-row v-if="step === 1">
     <v-col cols="12" md="6">
-      <v-form @submit.prevent="loadProductInfo">
+      <v-form @submit.prevent="onProductCodeSelected">
         <v-card
           class="mb-4"
           :title="$t('Common.BarcodeType')"
@@ -79,8 +79,12 @@
               <ProductCard :product="missingProduct" elevation="1" height="100%" readonly @click="missingProductClicked(missingProduct)" />
             </v-col>
           </v-row>
+          <v-row v-if="loading">
+            <v-col align="center">
+              <v-progress-circular indeterminate :size="30" />
+            </v-col>
+          </v-row>
         </v-card-text>
-        <v-divider />
       </v-card>
     </v-col>
   </v-row>
@@ -248,6 +252,7 @@
                   color="primary"
                   variant="flat"
                   type="submit"
+                  :disabled="!productForm.flavor"
                 >
                   {{ $t('CreateOffProduct.CreateProduct') }}
                 </v-btn>
@@ -378,9 +383,17 @@ export default {
   data() {
     return {
       step: 1,
+      // product missing list
       missingProductsWithPrices: [],
+      currentFilterList: [],
+      currentOrder: constants.PRODUCT_CREATE_ORDER_LIST[0].key,  // -created
+      productTotal: 0,
+      // product missing form
       product: null,
       productForm: {},
+      flavorList: constants.PRODUCT_SOURCE_LIST,
+      languageList,
+      countryTags: [],  // list of country tags for autocomplete  // see mounted
       priceList: [],
       shownProofIndex: 0,
       shownProof: null,
@@ -393,12 +406,6 @@ export default {
       zoomLevel: 1,
       loading: false,
       panLevel: {x: 0, y: 0},
-      flavorList: constants.PRODUCT_SOURCE_LIST,
-      languageList,
-      countryTags: [],  // list of country tags for autocomplete  // see mounted
-      currentOrder: '-created',
-      currentFilterList: [],
-      productTotal: 0
     }
   },
   computed: {
@@ -428,23 +435,27 @@ export default {
     },
   },
   watch: {
-    '$route.query.product_code'(newVal) {
-      if (!newVal) {
-        this.getMissingProductsWithPrices()
-        this.step = 1
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        if (this.step === 1) {
+          this.getMissingProductsWithPrices()
+        }
       }
     }
   },
   mounted() {
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
+    if (this.$route.query.product_code) {
+      this.productForm.product_code = this.$route.query.product_code
+      this.onProductCodeSelected()
+    }
     if (this.$route.query.flavor) {
       this.productForm.flavor = this.$route.query.flavor
     }
-    if (this.$route.query.product_code) {
-      this.productForm.product_code = this.$route.query.product_code
-      this.loadProductInfo()
-    }
     this.getMissingProductsWithPrices()
     this.setCountryTags()
+    this.getChallenges()
   },
   methods: {
     numericOnly(value) {
@@ -453,23 +464,55 @@ export default {
     fieldRequired(v) {
       return !!v || this.$t('Common.FieldIsRequired')
     },
-    setCountryTags() {
-      data_utils.getLocaleCountryTags(this.appStore.getUserLanguage).then((module) => {
-        this.countryTags = module.default.sort((a, b) => a.name.localeCompare(b.name))
-      })
+    getMissingProductsWithPrices() {
+      this.missingProductsWithPrices = []
+      this.loading = true
+      // Use price API in some cases
+      if (this.currentFilterList.includes('price__owner') || this.currentOrder === '-created') {
+        // Using prices API lets us do finer filtering, typically limiting to price tags proofs
+        return openPricesApi.getPrices(this.getPricesParams)
+          .then((data) => {
+            const productMap = new Map()
+            data.items.forEach(price => {
+              if (price.product && !productMap.has(price.product.code)) {
+                productMap.set(price.product.code, price.product)
+              }
+            })
+            this.missingProductsWithPrices = Array.from(productMap.values())
+            this.productTotal = data.total // Only true if products have only one price, but it's good enough ..
+            this.loading = false
+          })
+      }
+      // Default to product API, this.currentOrder is '-proof_count', which is only available in the product API
+      // this.productTotal is accurate, but it also includes other, less useful, proof types (receipt, gdpr_request, etc.)
+      return openPricesApi.getProducts({ price_count__gte: 1, source__isnull: true, order_by: this.currentOrder })
+        .then((data) => {
+          this.missingProductsWithPrices = data.items
+          this.productTotal = data.total
+          this.loading = false
+        })
     },
-    loadProductInfo() {
+    missingProductClicked(product) {
+      this.productForm.product_code = product.code
       this.$router.push({ query: { product_code: this.productForm.product_code } })
+      this.onProductCodeSelected()
+    },
+    onProductCodeSelected() {
+      // move to step 2
       this.step = 2
+      // init
+      this.productForm.flavor = null
+      this.drawnImageSrc = null
+      // check if product already exists
+      // load product prices
       this.getProduct((product) => {
         if (product.source) {
           this.productExists = true
         } else {
           this.productExists = false
         }
-        this.getPrices(product)
+        this.getProductPrices(product)
       })
-      this.getChallenges()
     },
     getProduct(callback) {
       return openPricesApi.getProductByCode(this.productForm.product_code)
@@ -478,7 +521,7 @@ export default {
           if(callback) callback(product)
         })
     },
-    getPrices(product) {
+    getProductPrices(product) {
       return openPricesApi.getPrices({product_code: this.productForm.product_code, order_by: constants.PRICE_ORDER_LIST[2].key })
         .then((data) => {
           this.priceList = data.items
@@ -520,6 +563,11 @@ export default {
           }
         })
     },
+    setCountryTags() {
+      data_utils.getLocaleCountryTags(this.appStore.getUserLanguage).then((module) => {
+        this.countryTags = module.default.sort((a, b) => a.name.localeCompare(b.name))
+      })
+    },
     getChallenges() {
       return openPricesApi.getChallenges({ order_by: '-created' })
         .then((data) => {
@@ -528,37 +576,10 @@ export default {
           this.suggestedCategories = Array.from(new Set(challengeCategories.flat())) // unique categories
         })
     },
-    getMissingProductsWithPrices() {
-      if (this.currentFilterList.includes('price__owner') || this.currentOrder === '-created') {
-        // Using prices API lets us do finer filtering, typically limiting to price tags proofs
-        return openPricesApi.getPrices(this.getPricesParams)
-          .then((data) => {
-            const productMap = new Map()
-            data.items.forEach(price => {
-              if (price.product && !productMap.has(price.product.code)) {
-                productMap.set(price.product.code, price.product)
-              }
-            })
-            this.missingProductsWithPrices = Array.from(productMap.values())
-            this.productTotal = data.total // Only true if products have only one price, but it's good enough ..
-          })
-      }
-      // Default case, this.currentOrder is '-proof_count', which is only available in the product API
-      // this.productTotal is accurate, but it also includes other, less useful, proof types (receipt, gdpr_request, etc.)
-      return openPricesApi.getProducts({ price_count__gte: 1, source__isnull: true, order_by: this.currentOrder })
-        .then((data) => {
-          this.missingProductsWithPrices = data.items
-          this.productTotal = data.total
-        })
-    },
-    missingProductClicked(product) {
-      this.productForm.product_code = product.code
-      this.loadProductInfo()
-    },
     createProduct() {
-      if (!this.productForm.flavor) {
-        return
-      }
+      this.step = 3
+      this.loading = true
+      // create product
       let inputData = {
         flavor: this.productForm.flavor,
         product_language_code: this.productForm.product_language,
@@ -569,8 +590,6 @@ export default {
           countries: this.productForm.countries.map(c=>c.toLowerCase()).join(','),
         },
       }
-      this.step = 3
-      this.loading = true
       openPricesApi
         .updateOffProduct(this.productForm.product_code, inputData)
         .then(() => {
@@ -599,8 +618,6 @@ export default {
           console.log(error)
           this.loading = false
         })
-      
-
     },
     loadPriceTags(priceId) {
       openPricesApi.getPriceTags({price_id: priceId}).then(data => {
@@ -649,12 +666,14 @@ export default {
     },
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList
-      this.getMissingProductsWithPrices()
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      // this.getMissingProductsWithPrices() will be called in watch $route
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
-        this.getMissingProductsWithPrices()
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        // this.getMissingProductsWithPrices() will be called in watch $route
       }
     },
   }
