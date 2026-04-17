@@ -53,17 +53,16 @@
             </v-form>
             <ProductCard v-for="product in productSearchResultList" :key="product" :product="product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" @click="barcodeSend(product.code)" />
 
-            <div v-if="barcodeManualInputSimilarBarcodes.length">
-              <v-divider />
-              <h3 class="mt-4 mb-4">
+            <div v-if="barcodeManualInputSimilarBarcodeList.length">
+              <h3 class="mt-4 mb-1">
                 {{ $t('BarcodeScanner.SimilarBarcodes') }}
               </h3>
-              <p>
+              <p class="mb-2">
                 {{ $t('BarcodeScanner.SimilarBarcodesExplanation') }}
               </p>
-              <v-row class="mt-0 mb-1">
-                <v-col v-for="similarBarcode in barcodeManualInputSimilarBarcodes" :key="similarBarcode.barcode" cols="12" sm="6" md="4" xl="3">
-                  <ProductCard :product="productSuggestionResultDict[similarBarcode.barcode]" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :hideProductBarcode="false" :readonly="true" elevation="1" @click="barcodeSend(productSuggestionResultDict[similarBarcode.barcode].code)" />
+              <v-row>
+                <v-col v-for="similarProduct in productSimilarBarcodeResultList" :key="similarProduct.code" cols="12" sm="6" md="4" xl="3">
+                  <ProductCard :product="similarProduct" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :hideProductBarcode="false" :readonly="true" elevation="1" @click="barcodeSend(similarProduct.code)" />
                 </v-col>
               </v-row>
             </div>
@@ -129,9 +128,11 @@ export default {
       type: String,
       default: ''
     },
-    barcodeManualInputSimilarBarcodes: {
+    barcodeManualInputSimilarBarcodeList: {
+      // backend sometimes returns similar_barcodes, sorted by increasing Levenshtein distance
       type: Array,
-      default: () => []
+      default: () => [],
+      example: [{ barcode: '123', distance: 1}, { barcode: '456', distance: 2}]
     },
   },
   emits: ['barcode', 'close'],
@@ -143,7 +144,7 @@ export default {
       },
       barcodeManualFormValid: false,
       productSearchResultList: [],
-      productSuggestionResultDict: {},
+      productSimilarBarcodeResultList: [],
       // config
       currentDisplay: null,  // see mounted
       HTML5_QRCODE_URL: 'https://github.com/mebjas/html5-qrcode',
@@ -202,8 +203,9 @@ export default {
     if (this.barcodeManualInputPrefillValue) {
       this.barcodeManualForm.barcode = this.barcodeManualInputPrefillValue
     }
-    if (this.barcodeManualInputSimilarBarcodes.length) {
-      for (let barcode of this.barcodeManualInputSimilarBarcodes) {
+    if (this.barcodeManualInputSimilarBarcodeList.length) {
+      for (let barcode of this.barcodeManualInputSimilarBarcodeList) {
+        this.productSimilarBarcodeResultList.push({'code': barcode.barcode, 'price_count': 0})
         this.getProduct(barcode.barcode, false)
       }
     }
@@ -246,8 +248,6 @@ export default {
     getProduct(code, search=true) {
       if (search) {
         this.productSearchResultList = []
-      } else {
-        this.productSuggestionResultDict = {}
       }
       openPricesApi
         .getProductByCode(code)
@@ -256,7 +256,8 @@ export default {
           if (search) {
             this.productSearchResultList.push(product)
           } else {
-            this.productSuggestionResultDict[code] = product
+            const similarBarcodeResultIndex = this.barcodeManualInputSimilarBarcodeList.findIndex(item => item.barcode === code)
+            this.productSimilarBarcodeResultList[similarBarcodeResultIndex] = product
           }
         })
         .catch((error) => {
