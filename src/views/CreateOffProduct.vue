@@ -464,14 +464,45 @@ export default {
     fieldRequired(v) {
       return !!v || this.$t('Common.FieldIsRequired')
     },
-    setCountryTags() {
-      data_utils.getLocaleCountryTags(this.appStore.getUserLanguage).then((module) => {
-        this.countryTags = module.default.sort((a, b) => a.name.localeCompare(b.name))
-      })
+    getMissingProductsWithPrices() {
+      this.missingProductsWithPrices = []
+      this.loading = true
+      // Use price API in some cases
+      if (this.currentFilterList.includes('price__owner') || this.currentOrder === '-created') {
+        // Using prices API lets us do finer filtering, typically limiting to price tags proofs
+        return openPricesApi.getPrices(this.getPricesParams)
+          .then((data) => {
+            const productMap = new Map()
+            data.items.forEach(price => {
+              if (price.product && !productMap.has(price.product.code)) {
+                productMap.set(price.product.code, price.product)
+              }
+            })
+            this.missingProductsWithPrices = Array.from(productMap.values())
+            this.productTotal = data.total // Only true if products have only one price, but it's good enough ..
+            this.loading = false
+          })
+      }
+      // Default to product API, this.currentOrder is '-proof_count', which is only available in the product API
+      // this.productTotal is accurate, but it also includes other, less useful, proof types (receipt, gdpr_request, etc.)
+      return openPricesApi.getProducts({ price_count__gte: 1, source__isnull: true, order_by: this.currentOrder })
+        .then((data) => {
+          this.missingProductsWithPrices = data.items
+          this.productTotal = data.total
+          this.loading = false
+        })
+    },
+    missingProductClicked(product) {
+      this.productForm.product_code = product.code
+      this.$router.push({ query: { product_code: this.productForm.product_code } })
+      this.onProductCodeSelected()
     },
     onProductCodeSelected() {
       // move to step 2
       this.step = 2
+      // init
+      this.productForm.flavor = null
+      this.drawnImageSrc = null
       // check if product already exists
       // load product prices
       this.getProduct((product) => {
@@ -532,6 +563,11 @@ export default {
           }
         })
     },
+    setCountryTags() {
+      data_utils.getLocaleCountryTags(this.appStore.getUserLanguage).then((module) => {
+        this.countryTags = module.default.sort((a, b) => a.name.localeCompare(b.name))
+      })
+    },
     getChallenges() {
       return openPricesApi.getChallenges({ order_by: '-created' })
         .then((data) => {
@@ -539,39 +575,6 @@ export default {
           const challengeCategories = challenges.map(challenge => challenge.categories) // Array of arrays
           this.suggestedCategories = Array.from(new Set(challengeCategories.flat())) // unique categories
         })
-    },
-    getMissingProductsWithPrices() {
-      this.missingProductsWithPrices = []
-      this.loading = true
-      // Use price API in some cases
-      if (this.currentFilterList.includes('price__owner') || this.currentOrder === '-created') {
-        // Using prices API lets us do finer filtering, typically limiting to price tags proofs
-        return openPricesApi.getPrices(this.getPricesParams)
-          .then((data) => {
-            const productMap = new Map()
-            data.items.forEach(price => {
-              if (price.product && !productMap.has(price.product.code)) {
-                productMap.set(price.product.code, price.product)
-              }
-            })
-            this.missingProductsWithPrices = Array.from(productMap.values())
-            this.productTotal = data.total // Only true if products have only one price, but it's good enough ..
-            this.loading = false
-          })
-      }
-      // Default to product API, this.currentOrder is '-proof_count', which is only available in the product API
-      // this.productTotal is accurate, but it also includes other, less useful, proof types (receipt, gdpr_request, etc.)
-      return openPricesApi.getProducts({ price_count__gte: 1, source__isnull: true, order_by: this.currentOrder })
-        .then((data) => {
-          this.missingProductsWithPrices = data.items
-          this.productTotal = data.total
-          this.loading = false
-        })
-    },
-    missingProductClicked(product) {
-      this.productForm.product_code = product.code
-      this.$router.push({ query: { product_code: this.productForm.product_code } })
-      this.onProductCodeSelected()
     },
     createProduct() {
       this.step = 3
