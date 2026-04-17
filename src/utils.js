@@ -24,6 +24,13 @@ function numericOnly(value) {
   return value.replace(/\D/g, '')
 }
 
+/**
+ * Remove all non-digit and non-wildcard characters from a string (wildcard = *)
+ */
+function numericAndWildcardOnly(value) {
+  return value.replace(/[^0-9*]/g, '')
+}
+
 function toArray(value) {
   if (Array.isArray(value)) {
     return value
@@ -123,6 +130,7 @@ export default {
   getDocumentScrollPercentage,
   isNumber,
   numericOnly,
+  numericAndWildcardOnly,
   toArray,
   slugify,
   isURL,
