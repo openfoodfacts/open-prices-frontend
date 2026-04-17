@@ -52,6 +52,20 @@
               </v-text-field>
             </v-form>
             <ProductCard v-for="product in productSearchResultList" :key="product" :product="product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" @click="barcodeSend(product.code)" />
+
+            <div v-if="barcodeManualInputSimilarBarcodeList.length">
+              <h3 class="mt-4 mb-1">
+                {{ $t('BarcodeScanner.SimilarBarcodes') }}
+              </h3>
+              <p class="mb-2">
+                {{ $t('BarcodeScanner.SimilarBarcodesExplanation') }}
+              </p>
+              <v-row>
+                <v-col v-for="similarProduct in productSimilarBarcodeResultList" :key="similarProduct.code" cols="12" sm="6" md="4" xl="3">
+                  <ProductCard :product="similarProduct" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :hideProductBarcode="false" :readonly="true" elevation="1" @click="barcodeSend(similarProduct.code)" />
+                </v-col>
+              </v-row>
+            </div>
           </v-tabs-window-item>
         </v-tabs-window>
       </v-card-text>
@@ -114,6 +128,12 @@ export default {
       type: String,
       default: ''
     },
+    barcodeManualInputSimilarBarcodeList: {
+      // backend sometimes returns similar_barcodes, sorted by increasing Levenshtein distance
+      type: Array,
+      default: () => [],
+      example: [{ barcode: '123', distance: 1}, { barcode: '456', distance: 2}]
+    },
   },
   emits: ['barcode', 'close'],
   data() {
@@ -124,6 +144,7 @@ export default {
       },
       barcodeManualFormValid: false,
       productSearchResultList: [],
+      productSimilarBarcodeResultList: [],
       // config
       currentDisplay: null,  // see mounted
       HTML5_QRCODE_URL: 'https://github.com/mebjas/html5-qrcode',
@@ -182,6 +203,12 @@ export default {
     if (this.barcodeManualInputPrefillValue) {
       this.barcodeManualForm.barcode = this.barcodeManualInputPrefillValue
     }
+    if (this.barcodeManualInputSimilarBarcodeList.length) {
+      for (let barcode of this.barcodeManualInputSimilarBarcodeList) {
+        this.productSimilarBarcodeResultList.push({'code': barcode.barcode, 'price_count': 0})
+        this.getProduct(barcode.barcode, false)
+      }
+    }
     // init tab
     this.currentDisplay = this.appStore.user.barcode_scanner_default_mode
     if (this.appStore.user.barcode_scanner_library != 'auto') {
@@ -212,19 +239,26 @@ export default {
         if (this.barcodeManualForm.barcode.includes('*')) {
           this.searchProduct(this.barcodeManualForm.barcode)
         } else {
-          this.getProduct(this.barcodeManualForm.barcode)
+          this.getProduct(this.barcodeManualForm.barcode, true)
         }
       } else {
         this.barcodeSend(this.barcodeManualForm.barcode)
       }
     },
-    getProduct(code) {
-      this.productSearchResultList = []
+    getProduct(code, search=true) {
+      if (search) {
+        this.productSearchResultList = []
+      }
       openPricesApi
         .getProductByCode(code)
         .then((data) => {
           const product = data.id ? data : {'code': code, 'price_count': 0}
-          this.productSearchResultList.push(product)
+          if (search) {
+            this.productSearchResultList.push(product)
+          } else {
+            const similarBarcodeResultIndex = this.barcodeManualInputSimilarBarcodeList.findIndex(item => item.barcode === code)
+            this.productSimilarBarcodeResultList[similarBarcodeResultIndex] = product
+          }
         })
         .catch((error) => {
           alert(this.$t('Common.ServerError'))
