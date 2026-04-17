@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "מופעל על גבי {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "ברקוד",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "אתגר הקהילה",
-		"Subtitle": "אפשר להצטרף לחובבי מחירי מזון נוספים על ידי איסוף מידע על {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "צילום תמונות של תגי מחיר בחנויות",
 			"line1": "התמונות יכולות לכלול תגית מחיר אחת או יותר. הברקודים צריכים להיות קריאים. למשל:",

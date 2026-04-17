@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "{url} tarafından desteklenmektedir"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Barkod",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Topluluk Görevi",
-		"Subtitle": "Diğer gıda fiyat meraklılarıyla birlikte {challenge_title} {challenge_subtitle}hakkında bilgi toplayın.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Mağazalardaki fiyat etiketlerinin fotoğraflarını çekin",
 			"line1": "Resimlerde bir veya daha fazla fiyat etiketi bulunabilir. Barkodlar okunaklı olmalıdır. Örneğin:",

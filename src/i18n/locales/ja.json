@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "{url}によって提供"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "バーコード",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "コミュニティチャレンジ",
-		"Subtitle": "他の食品価格愛好家と一緒に、 {challenge_title} {challenge_subtitle}についての情報を収集しましょう。",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "店内の値札の写真を撮る",
 			"line1": "写真には1つまたは複数の値札を含めることができます。バーコードは読み取り可能なものでなければなりません。例：",

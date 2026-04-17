@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "பார்கோடு",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "சமூக சவால்",
-		"Subtitle": "{challenge_title} {challenge_subtitle} பற்றிய தகவல்களைச் சேகரிப்பதில் மற்ற உணவு விலை ஆர்வலர்களுடன் இணையுங்கள்.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "கடைகளில் விலைக் குறிச்சொற்களின் படங்களை எடுக்கவும்",
 			"line1": "படங்களில் ஒன்று அல்லது அதற்கு மேற்பட்ட விலைக் குறிச்சொற்கள் இருக்கலாம். பார்கோடுகள் படிக்கக்கூடியதாக இருக்க வேண்டும். உதாரணமாக:",
