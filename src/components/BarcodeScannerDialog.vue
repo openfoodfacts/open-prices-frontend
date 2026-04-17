@@ -33,7 +33,7 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="type">
-            <v-form v-model="barcodeManualFormValid" class="mb-2" @submit.prevent="barcodeSearchOrSend">
+            <v-form class="mb-2" @submit.prevent="barcodeSearchOrSend">
               <v-text-field
                 ref="barcodeManualInput"
                 v-model="barcodeManualForm.barcode"
@@ -47,7 +47,7 @@
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-btn color="primary" :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!barcodeManualFormValid" @click="barcodeSearchOrSend" />
+                  <v-btn color="primary" :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!formFilled" @click="barcodeSearchOrSend" />
                 </template>
               </v-text-field>
             </v-form>
@@ -142,7 +142,6 @@ export default {
       barcodeManualForm: {
         barcode: '',
       },
-      barcodeManualFormValid: false,
       productSearchResultList: [],
       productSimilarBarcodeResultList: [],
       // config
@@ -175,11 +174,9 @@ export default {
       if (!this.barcodeManualForm.barcode) return '0'
       return this.barcodeManualForm.barcode.length.toString()
     },
-    barcodeManualInputRules() {
-      return [
-        (v) => !!v || '',
-      ]
-    },
+    formFilled() {
+      return !!this.barcodeManualForm.barcode
+    }
   },
   watch: {
     currentDisplay(value) {
@@ -192,7 +189,7 @@ export default {
           }
         }
       } else {  // type
-        window.setTimeout(() => this.$refs.barcodeManualInput.focus(), 200)
+        window.setTimeout(() => this.$refs.barcodeManualInput?.focus?.(), 200)
         if (this.scanner && this.scanner.getState() > 1) {
           this.scanner.stop()
         }
@@ -200,19 +197,21 @@ export default {
     }
   },
   mounted() {
+    // init tab
+    this.currentDisplay = this.appStore.user.barcode_scanner_default_mode
+    if (this.appStore.user.barcode_scanner_library != 'auto') {
+      this.barcodeScannerLibrary = this.appStore.user.barcode_scanner_library
+    }
+    // init search(s)
     if (this.barcodeManualInputPrefillValue) {
       this.barcodeManualForm.barcode = this.barcodeManualInputPrefillValue
+      this.barcodeSearchOrSend()
     }
     if (this.barcodeManualInputSimilarBarcodeList.length) {
       for (let barcode of this.barcodeManualInputSimilarBarcodeList) {
         this.productSimilarBarcodeResultList.push({'code': barcode.barcode, 'price_count': 0})
         this.getProduct(barcode.barcode, false)
       }
-    }
-    // init tab
-    this.currentDisplay = this.appStore.user.barcode_scanner_default_mode
-    if (this.appStore.user.barcode_scanner_library != 'auto') {
-      this.barcodeScannerLibrary = this.appStore.user.barcode_scanner_library
     }
   },
   methods: {
@@ -233,9 +232,8 @@ export default {
     },
     barcodeSearchOrSend() {
       this.barcodeManualForm.barcode = this.barcodeManualForm.barcode.trim()
-      if (!this.barcodeManualFormValid) return
       if (this.barcodeManualInputMode === 'search') {
-        this.$refs.barcodeManualInput.blur()
+        this.$refs.barcodeManualInput?.blur?.()
         if (this.barcodeManualForm.barcode.includes('*')) {
           this.searchProduct(this.barcodeManualForm.barcode)
         } else {
