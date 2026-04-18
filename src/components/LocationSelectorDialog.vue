@@ -68,7 +68,7 @@
             </p>
 
             <!-- results -->
-            <v-row v-if="results.length">
+            <v-row v-if="results && results.length">
               <v-col cols="12" sm="6">
                 <LocationCard v-for="(location, index) in results" :key="index" :location="location" :hideLocationFooterRow="true" :readonly="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
               </v-col>
