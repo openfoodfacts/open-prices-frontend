@@ -4,7 +4,8 @@
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
           <v-img v-if="product.image_url" :src="product.image_url" max-height="100px" @click="clickProduct()" />
-          <v-img v-else :src="productImageDefault" width="100px" style="filter:invert(.9);" />
+          <v-img v-else-if="product.source" :src="productImageDefault" width="100px" style="filter: invert(0.9);" />
+          <v-img v-else :src="productImageDefault" width="100px" style="filter: invert(57%) sepia(22%) saturate(6809%) hue-rotate(314deg) brightness(96%) contrast(68%);" />
         </v-col>
         <v-col style="max-width:80%;">
           <v-row>

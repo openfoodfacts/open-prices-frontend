@@ -4,7 +4,8 @@
       <v-row>
         <v-col v-if="!hideProductImage" class="pr-0" style="max-width:20%;">
           <v-img v-if="product && product.image_url" :src="product.image_url" max-height="100px" @click="goToProduct()" />
-          <v-img v-else :src="productImageDefault" width="100px" style="filter:invert(.9);" />
+          <v-img v-else-if="product && product.source || price.category_tag" :src="productImageDefault" width="100px" style="filter: invert(0.9);" />
+          <v-img v-else :src="productImageDefault" width="100px" style="filter: invert(57%) sepia(22%) saturate(6809%) hue-rotate(314deg) brightness(96%) contrast(68%);" />
         </v-col>
         <v-col :style="hideProductImage ? '' : 'max-width:80%'">
           <h3 v-if="!hideProductTitle" id="product-title" role="link" tabindex="0" @click="goToProduct()" @keydown.enter="goToProduct()">
