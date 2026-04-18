@@ -1,6 +1,6 @@
 {
   "name": "open-prices",
-  "version": "1.162.1",
+  "version": "1.162.2",
   "private": true,
   "type": "module",
   "scripts": {
