@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.162.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.162.0...v1.162.1) (2026-04-18)
+
+
+### Bug Fixes
+
+* **BarcodeScannerDialog:** digit-only barcodes are allowed ([#2159](https://github.com/openfoodfacts/open-prices-frontend/issues/2159)) ([839583a](https://github.com/openfoodfacts/open-prices-frontend/commit/839583aac7e12d2458a8234be7ed6d20fc03038d))
+* **CreateOffProduct:** digit-only barcodes are allowed ([#2156](https://github.com/openfoodfacts/open-prices-frontend/issues/2156)) ([2cd53b2](https://github.com/openfoodfacts/open-prices-frontend/commit/2cd53b291f5eb15b2c171c90bd4e9e7af755e408))
+
+
+### Technical
+
+* **CreateOffProduct:** update URL when changing filter & order. Add loading spinner ([#2160](https://github.com/openfoodfacts/open-prices-frontend/issues/2160)) ([9cc8067](https://github.com/openfoodfacts/open-prices-frontend/commit/9cc8067b87c98dbc243ae7e4a3e79a9b41b99b9c))
+* **Price Card:** when product is missing, turn default image to red ([#2161](https://github.com/openfoodfacts/open-prices-frontend/issues/2161)) ([f2b83e7](https://github.com/openfoodfacts/open-prices-frontend/commit/f2b83e7b5ce042bbabc867bc8435306d9b80c554))
+
 ## [1.162.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.161.2...v1.162.0) (2026-04-17)
 
 
