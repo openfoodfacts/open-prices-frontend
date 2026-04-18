@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.162.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.162.1...v1.162.2) (2026-04-18)
+
+
+### Bug Fixes
+
+* **LocationSelectorDialog:** fix big in result display. following [#2154](https://github.com/openfoodfacts/open-prices-frontend/issues/2154) ([06046a5](https://github.com/openfoodfacts/open-prices-frontend/commit/06046a54f74c136a96deb7ac5276d7e45e655877))
+
+
+### Technical
+
+* **CreateOffProduct:** improve barcode input UI (full width) ([#2162](https://github.com/openfoodfacts/open-prices-frontend/issues/2162)) ([0fd9a62](https://github.com/openfoodfacts/open-prices-frontend/commit/0fd9a6237e4a7a9490ba899b222c09903fd2597d))
+
 ## [1.162.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.162.0...v1.162.1) (2026-04-18)
 
 
