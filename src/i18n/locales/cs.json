@@ -120,8 +120,8 @@
 		"Htlm5-qrcode": {
 			"Text": "poháněno {url}"
 		},
-		"SimilarBarcodes": "Similar barcodes",
-		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
+		"SimilarBarcodes": "Podobné čárové kódy",
+		"SimilarBarcodesExplanation": "Tyto produkty mají čárové kódy, které jsou blízko zjištěného čárového kódu. Možná je jeden z nich produkt, který hledáte?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Čárový kód",
@@ -129,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Komunitní výzva",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
+		"Subtitle": "Přidejte se k dalším nadšencům do cen potravin a shromažďujte informace o {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Vyfoťte si cenovky v obchodech",
 			"line1": "Obrázky mohou obsahovat jednu nebo více cenovek. Čárové kódy by měly být čitelné. Například:",
@@ -304,13 +304,13 @@
 		"FieldIsRequired": "Pole je povinné",
 		"FilterNoun": "Filtr",
 		"FilterVerb": "Filtr",
-		"Filters": "Filters",
+		"Filters": "Filtry",
 		"FilterChallengesShowAllStatus": "Zobrazit všechny výzvy",
 		"FilterWithPriceCount": "S cenami",
 		"FilterWithLocationCount": "S lokalitami",
 		"FilterProductWithPriceCount": "S cenou",
 		"FilterProductWithPriceCountHide": "Skrýt produkty s cenami",
-		"FilterProductWithPriceOwner": "Show only products with my prices",
+		"FilterProductWithPriceOwner": "Zobrazit pouze produkty s mými cenami",
 		"FilterProductWithoutPriceCount": "Bez cen",
 		"FilterPriceMoreThan30DaysHide": "Skrýt ceny starší než 30 dní",
 		"FilterProofWithPriceCountHide": "Skrýt doklady s cenami",
@@ -401,7 +401,7 @@
 		"PicturesAddedByYou": "Vámi přidané obrázky",
 		"PRICE_TAG": "Cenovka",
 		"PriceTags": "Cenovky",
-		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesDisplay": "Zobrazit ohraničující rámečky cenovek",
 		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -973,7 +973,7 @@
 		"ServerError": "Chyba: chyba serveru",
 		"Title": "Přihlásit se",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
-		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
+		"SignInWithOpenFoodFactsAuth": "Přihlásit se pomocí {off_name} ověření",
 		"UsernameLabel": "Uživatelské jméno",
 		"WrongCredentials": "Chyba: nesprávné přihlašovací údaje"
 	},

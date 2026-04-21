@@ -120,8 +120,8 @@
 		"Htlm5-qrcode": {
 			"Text": "Bereitgestellt von {url}"
 		},
-		"SimilarBarcodes": "Similar barcodes",
-		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
+		"SimilarBarcodes": "Ähnliche Barcodes",
+		"SimilarBarcodesExplanation": "Diese Produkte haben Barcodes, die dem erkannten Barcode sehr ähnlich sind. Vielleicht ist eines davon das Produkt, das Sie suchen?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Strichcode",
@@ -129,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Gemeinschaftliche Herausforderung",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
+		"Subtitle": "Sammeln Sie gemeinsam mit anderen Lebensmittelpreis-Enthusiasten Informationen über {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Fotografieren Sie Preisschilder in Geschäften",
 			"line1": "Die Bilder können ein oder mehrere Preisschilder enthalten. Barcodes sollten lesbar sein. Zum Beispiel:",
@@ -242,7 +242,7 @@
 		"Dashboard": "Übersicht",
 		"DisplayNoun": "Anzeigen",
 		"DisplayVerb": "Anzeigen",
-		"Displays": "Displays",
+		"Displays": "Anzeigen",
 		"DisplayList": "Liste",
 		"DisplayPriceList": "Liste",
 		"DisplayTable": "Tabelle",
@@ -304,13 +304,13 @@
 		"FieldIsRequired": "Dieses Feld ist erforderlich",
 		"FilterNoun": "Filter",
 		"FilterVerb": "Filter",
-		"Filters": "Filters",
+		"Filters": "Filter",
 		"FilterChallengesShowAllStatus": "Alle Herausforderungen anzeigen",
 		"FilterWithPriceCount": "Mit Preisen",
 		"FilterWithLocationCount": "Mit Standorten",
 		"FilterProductWithPriceCount": "Mit einem Preis",
 		"FilterProductWithPriceCountHide": "Produkte mit Preisen ausblenden",
-		"FilterProductWithPriceOwner": "Show only products with my prices",
+		"FilterProductWithPriceOwner": "Nur Produkte mit meinen Preisen anzeigen",
 		"FilterProductWithoutPriceCount": "Ohne Preise",
 		"FilterPriceMoreThan30DaysHide": "Preise ausblenden, die älter als 30 Tage sind",
 		"FilterProofWithPriceCountHide": "Nachweise mit Preisen ausblenden",
@@ -368,9 +368,9 @@
 		"Online": "Online",
 		"Open": "Offen",
 		"OpenWithTheAssistant": "Mit Assistent öffnen",
-		"OrderNoun": "Order",
-		"OrderVerb": "Order",
-		"Orders": "Orders",
+		"OrderNoun": "Reihenfolge",
+		"OrderVerb": "Reihenfolge",
+		"Orders": "Reihenfolgen",
 		"OrderNameASC": "Name",
 		"OrderLocationCountDESC": "Anzahl der Standorte",
 		"OrderProductUniqueScansDESC": "Anzahl der Scans",
@@ -462,7 +462,7 @@
 		"Select": "Auswählen",
 		"Send": "Senden",
 		"Settings": "Einstellungen",
-		"SignInOFFAccount": "Sign in with your {url} credentials",
+		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
 		"SignedIn": "Angemeldet!",
 		"SignIn": "Anmelden",
 		"SignOut": "Abmelden",
@@ -973,7 +973,7 @@
 		"ServerError": "Fehler: Serverfehler",
 		"Title": "Anmelden",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
-		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
+		"SignInWithOpenFoodFactsAuth": "Mit {off_name} auth anmelden",
 		"UsernameLabel": "Benutzername",
 		"WrongCredentials": "Fehler: üngültige Anmeldeinformationen"
 	},
