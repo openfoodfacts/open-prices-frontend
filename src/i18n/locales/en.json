@@ -459,6 +459,10 @@
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Search",
+		"SearchBar": {
+			"Placeholder": "Search {kind}...",
+			"NoResult": "no results found"
+		},
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "Settings",
