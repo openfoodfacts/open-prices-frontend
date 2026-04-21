@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.162.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.162.2...v1.162.3) (2026-04-21)
+
+
+### Bug Fixes
+
+* **LocationSelectorDialog:** hide info messages in result display. following [#2154](https://github.com/openfoodfacts/open-prices-frontend/issues/2154) ([85f6161](https://github.com/openfoodfacts/open-prices-frontend/commit/85f6161a9fff0260390041131acad26f7823978f))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#2158](https://github.com/openfoodfacts/open-prices-frontend/issues/2158)) ([ab5758a](https://github.com/openfoodfacts/open-prices-frontend/commit/ab5758a9ebdf1afe503d5c0dfa2e4cc876f6fd72))
+* **Locations:** improve fallback to png logo (or default) ([#2168](https://github.com/openfoodfacts/open-prices-frontend/issues/2168)) ([5719835](https://github.com/openfoodfacts/open-prices-frontend/commit/571983561d142e0085d0eef2ae14055011da9a0b))
+
 ## [1.162.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.162.1...v1.162.2) (2026-04-18)
 
 
