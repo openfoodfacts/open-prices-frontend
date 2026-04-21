@@ -410,6 +410,7 @@
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Price missing",
 		"PricePerMissing": "Price per missing",
+    "PriceSameAsDiscounted": "Discounted price is the same as full price",
 		"PriceAlreadyUploaded": "Price already uploaded",
 		"PriceReadyToBeUploaded": "Price ready to be uploaded",
 		"PricesAlreadyUploaded": "Prices already uploaded",
