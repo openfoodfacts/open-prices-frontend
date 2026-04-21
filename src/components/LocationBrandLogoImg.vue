@@ -1,6 +1,6 @@
 <template>
   <v-img
-    v-if="logo"
+    v-if="logoDisplayed"
     :src="currentSrc"
     :width="width"
     :height="height"
@@ -19,7 +19,6 @@
 import constants from '../constants'
 
 export default {
-  name: 'LocationBrandLogoImg',
   props: {
     logo: {
       type: String,
@@ -36,23 +35,26 @@ export default {
   },
   data() {
     return {
-      triedPng: false,
+      tryPngInsteadOfSvg: false,
+      fallbackToDefault: false,
       locationImageDefault: constants.LOCATION_IMAGE_DEFAULT_URL,
     }
   },
   computed: {
+    logoDisplayed() {
+      return this.logo && !this.fallbackToDefault
+    },
     currentSrc() {
       if (!this.logo) return null
-      return this.triedPng ? `${this.logo}.png` : `${this.logo}.svg`
+      return this.tryPngInsteadOfSvg ? `${this.logo}.png` : `${this.logo}.svg`
     }
   },
   methods: {
-    onError(e) {
-      if (!this.triedPng && this.logo) {
-        this.triedPng = true
-        e.target.src = `${this.logo}.png`
+    onError() {
+      if (!this.tryPngInsteadOfSvg && this.logo) {
+        this.tryPngInsteadOfSvg = true
       } else {
-        e.target.src = this.locationImageDefault
+        this.fallbackToDefault = true
       }
     }
   }
