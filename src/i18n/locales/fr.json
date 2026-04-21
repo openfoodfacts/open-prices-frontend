@@ -120,8 +120,8 @@
 		"Htlm5-qrcode": {
 			"Text": "fonctionne avec {url}"
 		},
-		"SimilarBarcodes": "Similar barcodes",
-		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
+		"SimilarBarcodes": "Codes-barres similaires",
+		"SimilarBarcodesExplanation": "Ces produits ont des codes-barres très proches de celui détecté. Peut-être que l'un d'eux est le produit que vous recherchez ?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Code-barres",
@@ -129,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Défi de la communauté",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
+		"Subtitle": "Rejoignez d'autres passionnés de prix alimentaires pour recueillir des informations sur {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Prendre des photos des étiquettes de prix dans les magasins",
 			"line1": "Les photos peuvent inclure une ou plusieurs étiquettes de prix. Les codes-barres doivent être lisibles. Par exemple :",
