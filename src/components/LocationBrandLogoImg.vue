@@ -1,6 +1,6 @@
 <template>
   <v-img
-    v-if="logo && !fallbackToDefault"
+    v-if="logoDisplayed"
     :src="currentSrc"
     :width="width"
     :height="height"
@@ -41,6 +41,9 @@ export default {
     }
   },
   computed: {
+    logoDisplayed() {
+      return this.logo && !this.fallbackToDefault
+    },
     currentSrc() {
       if (!this.logo) return null
       return this.tryPngInsteadOfSvg ? `${this.logo}.png` : `${this.logo}.svg`
