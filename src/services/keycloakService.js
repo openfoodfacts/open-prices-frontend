@@ -1,18 +1,19 @@
 import Keycloak from 'keycloak-js'
+const url = import.meta.env.VITE_KEYCLOAK_URL
+let keycloak = null
+if (url) {
+  keycloak = new Keycloak({
+    url: url,
+    realm: import.meta.env.VITE_KEYCLOAK_REALM,
+    clientId: import.meta.env.VITE_KEYCLOAK_CLIENT_ID
+  })
+}
 
 export default {
   init(callback) {
-    const url = import.meta.env.VITE_KEYCLOAK_URL
-    if (!url) {
-      // keycloak is not configured
-      return callback(null, 'Keycloak: URL is not configured')
+    if (keycloak.didInitialize) {
+      return callback(keycloak, null)
     }
-    const keycloak = new Keycloak({
-      url: url,
-      realm: import.meta.env.VITE_KEYCLOAK_REALM,
-      clientId: import.meta.env.VITE_KEYCLOAK_CLIENT_ID
-    })
-    
     keycloak.init()
       .then(() => {
         callback(keycloak, null)
