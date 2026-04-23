@@ -353,6 +353,7 @@ import proof_utils from '../utils/proof.js'
 import utils from '../utils'
 import data_utils from '../utils/data.js'
 import "vue-zoomable/dist/style.css"
+import keycloakService from '../services/keycloakService'
 
 export default {
   components: {
@@ -388,6 +389,7 @@ export default {
       zoomLevel: 1,
       loading: false,
       panLevel: {x: 0, y: 0},
+      token: null,
     }
   },
   computed: {
@@ -426,20 +428,42 @@ export default {
     }
   },
   mounted() {
-    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
-    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    if (this.$route.query.product_code) {
-      this.productForm.product_code = this.$route.query.product_code
-      this.onProductCodeSelected()
+    if (this.appStore.user.use_own_account_to_create_off_products) {
+      keycloakService.init((keycloak, error) => {
+        if (error) {
+          alert(error)
+          return
+        }
+        if (keycloak !== null) {
+          if (keycloak.authenticated) {
+            this.token = keycloak.token
+            this.onInit()
+          } else {
+            keycloak.login({
+              redirectUri: window.location.origin + '/sign-in?next=' + window.location.pathname
+            })
+          }
+        }
+      })
+    } else {
+      this.onInit()
     }
-    if (this.$route.query.flavor) {
-      this.productForm.flavor = this.$route.query.flavor
-    }
-    this.getMissingProductsWithPrices()
-    this.setCountryTags()
-    this.getChallenges()
   },
   methods: {
+    onInit() {
+      this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
+      this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
+      if (this.$route.query.product_code) {
+        this.productForm.product_code = this.$route.query.product_code
+        this.onProductCodeSelected()
+      }
+      if (this.$route.query.flavor) {
+        this.productForm.flavor = this.$route.query.flavor
+      }
+      this.getMissingProductsWithPrices()
+      this.setCountryTags()
+      this.getChallenges()
+    },
     numericOnly(value) {
       return utils.numericOnly(value)
     },
@@ -565,6 +589,7 @@ export default {
       let inputData = {
         flavor: this.productForm.flavor,
         product_language_code: this.productForm.product_language,
+        user_access_token: this.token,
         update_params: {
           ...this.productForm,
           categories: this.productForm.categories.join(','),
@@ -580,7 +605,8 @@ export default {
             inputData = {
               image_data_base64: drawnImageBase64,
               flavor: this.productForm.flavor,
-              product_language_code: this.productForm.product_language
+              product_language_code: this.productForm.product_language,
+              user_access_token: this.token
             }
             openPricesApi.updateOffProductImage(this.productForm.product_code, inputData)
               .then(() => {
