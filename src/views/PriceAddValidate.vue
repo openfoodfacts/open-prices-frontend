@@ -180,7 +180,7 @@ export default {
           this.loading = false
           for (let i = 0; i < data.items.length; i++) {
             // only validate price tags with predictions
-            if (data.items[i]['predictions'].length > 0) {
+            if (data.items[i]['predictions'].filter(prediction => prediction.type === 'PRICE_TAG_EXTRACTION').length > 0) {
               this.handlePriceTag(data.items[i])
             }
           }
