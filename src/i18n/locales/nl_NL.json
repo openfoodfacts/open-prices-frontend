@@ -120,8 +120,8 @@
 		"Htlm5-qrcode": {
 			"Text": "mogelijk gemaakt door {url}"
 		},
-		"SimilarBarcodes": "Similar barcodes",
-		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
+		"SimilarBarcodes": "Vergelijkbare streepjescodes",
+		"SimilarBarcodesExplanation": "Deze producten hebben streepjescodes die lijken op de gedetecteerde streepjescode. Misschien is één ervan het product dat je zoekt?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Streepjescode",
@@ -368,9 +368,9 @@
 		"Online": "Online",
 		"Open": "Open",
 		"OpenWithTheAssistant": "Openen met de assistent",
-		"OrderNoun": "Order",
-		"OrderVerb": "Order",
-		"Orders": "Orders",
+		"OrderNoun": "Bestellen",
+		"OrderVerb": "Bestellen",
+		"Orders": "Bestellingen",
 		"OrderNameASC": "Naam",
 		"OrderLocationCountDESC": "Aantal locaties",
 		"OrderProductUniqueScansDESC": "Aantal scans",
