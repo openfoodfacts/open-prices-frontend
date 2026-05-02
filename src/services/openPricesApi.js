@@ -65,6 +65,18 @@ function extraPriceCreateOrUpdateFiltering(data) {
   return filteredData
 }
 
+function extraProofCreateOrUpdateFiltering(data) {
+  let filteredData = {...data}
+  // non-receipt rules
+  if (filteredData.type !== constants.PROOF_TYPE_RECEIPT) {
+    delete filteredData.receipt_price_count
+    delete filteredData.receipt_price_total
+    delete filteredData.receipt_online_delivery_costs
+    filteredData.owner_consumption = null
+  }
+  return filteredData
+}
+
 /**
  * Wrapper around fetch
  * 1. to avoid repeating the URL prefix (VITE_OPEN_PRICES_API_URL)
@@ -137,7 +149,9 @@ export default {
   createProof(image, inputData, source = null) {
     const store = useAppStore()
     // build body
-    const data = filterBodyWithAllowedKeys(inputData, PROOF_CREATE_FIELDS)
+    let data = filterBodyWithAllowedKeys(inputData, PROOF_CREATE_FIELDS)
+    data = extraProofCreateOrUpdateFiltering(data)
+    // build form
     let formData = new FormData()
     formData.append('file', image, image.name)
     formData.append('type', data.type)
@@ -204,7 +218,8 @@ export default {
 
   updateProof(proofId, inputData = {}) {
     // build body
-    const data = filterBodyWithAllowedKeys(inputData, PROOF_UPDATE_FIELDS)
+    let data = filterBodyWithAllowedKeys(inputData, PROOF_UPDATE_FIELDS)
+    data = extraProofCreateOrUpdateFiltering(data)
     // API call
     const endpointWithParams = `/proofs/${proofId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
