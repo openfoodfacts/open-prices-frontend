@@ -37,14 +37,14 @@ function filterBodyWithAllowedKeys(data, allowedKeys) {
 
 function extraPriceCreateOrUpdateFiltering(data) {
   let filteredData = {...data}
-  // product-only rules
+  // product only rules
   if (filteredData.type == constants.PRICE_TYPE_PRODUCT) {
     delete filteredData.price_per
     delete filteredData.category_tag
     delete filteredData.origins_tags
     delete filteredData.labels_tags
   }
-  // category-only rules
+  // category only rules
   else if (filteredData.type == constants.PRICE_TYPE_CATEGORY) {
     delete filteredData.product_code
     delete filteredData.product
@@ -72,7 +72,14 @@ function extraProofCreateOrUpdateFiltering(data) {
     delete filteredData.receipt_price_count
     delete filteredData.receipt_price_total
     delete filteredData.receipt_online_delivery_costs
+  }
+  // price tag only rules
+  if (filteredData.type === constants.PROOF_TYPE_PRICE_TAG) {
     filteredData.owner_consumption = null
+  }
+  // non price tag rules
+  else {
+    delete filteredData.ready_for_price_tag_validation
   }
   return filteredData
 }
