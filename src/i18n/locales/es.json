@@ -120,7 +120,7 @@
 		"Htlm5-qrcode": {
 			"Text": "con tecnología de {url}"
 		},
-		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodes": "Códigos de barras similares",
 		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
@@ -357,7 +357,7 @@
 		"MyConsumption": "Mi consumo",
 		"MyDashboard": "Mi tablero de instrumentos",
 		"MyPrices": "Mis precios",
-		"MyProofs": "Mis pruebas",
+		"MyProofs": "Mis comprobantes",
 		"MyStats": "Mis estadísticas",
 		"New": "Nuevo",
 		"NextProof": "Siguiente prueba",
@@ -900,7 +900,7 @@
 			"Title": "Mis precios"
 		},
 		"MyProofs": {
-			"Title": "Mis pruebas"
+			"Title": "Mis comprobantes"
 		},
 		"MyDashboard": {
 			"Title": "Mi tablero de instrumentos"
@@ -1008,7 +1008,7 @@
 		"LoadMore": "Cargar más",
 		"MyDashboard": "Mi tablero de instrumentos",
 		"MyPrices": "Mis precios",
-		"MyProofs": "Mis pruebas",
+		"MyProofs": "Mis comprobantes",
 		"ProofUpdated": "¡Comprobante actualizado!",
 		"Settings": "Configuración",
 		"Title": "Panel de control",
