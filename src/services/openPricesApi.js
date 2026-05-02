@@ -37,14 +37,14 @@ function filterBodyWithAllowedKeys(data, allowedKeys) {
 
 function extraPriceCreateOrUpdateFiltering(data) {
   let filteredData = {...data}
-  // product-only rules
+  // product only rules
   if (filteredData.type == constants.PRICE_TYPE_PRODUCT) {
     delete filteredData.price_per
     delete filteredData.category_tag
     delete filteredData.origins_tags
     delete filteredData.labels_tags
   }
-  // category-only rules
+  // category only rules
   else if (filteredData.type == constants.PRICE_TYPE_CATEGORY) {
     delete filteredData.product_code
     delete filteredData.product
@@ -61,6 +61,25 @@ function extraPriceCreateOrUpdateFiltering(data) {
     filteredData.price_is_discounted = false
     filteredData.price_without_discount = null
     filteredData.discount_type = null
+  }
+  return filteredData
+}
+
+function extraProofCreateOrUpdateFiltering(data) {
+  let filteredData = {...data}
+  // non-receipt rules
+  if (filteredData.type !== constants.PROOF_TYPE_RECEIPT) {
+    delete filteredData.receipt_price_count
+    delete filteredData.receipt_price_total
+    delete filteredData.receipt_online_delivery_costs
+  }
+  // price tag only rules
+  if (filteredData.type === constants.PROOF_TYPE_PRICE_TAG) {
+    filteredData.owner_consumption = null
+  }
+  // non price tag rules
+  else {
+    delete filteredData.ready_for_price_tag_validation
   }
   return filteredData
 }
@@ -137,7 +156,9 @@ export default {
   createProof(image, inputData, source = null) {
     const store = useAppStore()
     // build body
-    const data = filterBodyWithAllowedKeys(inputData, PROOF_CREATE_FIELDS)
+    let data = filterBodyWithAllowedKeys(inputData, PROOF_CREATE_FIELDS)
+    data = extraProofCreateOrUpdateFiltering(data)
+    // build form
     let formData = new FormData()
     formData.append('file', image, image.name)
     formData.append('type', data.type)
@@ -204,7 +225,8 @@ export default {
 
   updateProof(proofId, inputData = {}) {
     // build body
-    const data = filterBodyWithAllowedKeys(inputData, PROOF_UPDATE_FIELDS)
+    let data = filterBodyWithAllowedKeys(inputData, PROOF_UPDATE_FIELDS)
+    data = extraProofCreateOrUpdateFiltering(data)
     // API call
     const endpointWithParams = `/proofs/${proofId}?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
