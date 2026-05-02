@@ -18,7 +18,12 @@ function getProofTypeIcon(proofType) {
  * Needed as input for the ContributionAssistantPriceFormCard
  */
 function handlePriceTag(priceTag) {
-  const priceTagPrediction = priceTag['predictions'][0]
+  // Only keep predictions of type 'PRICE_TAG_EXTRACTION'
+  const priceTagPredictions = priceTag['predictions'].filter(prediction => prediction.type === 'PRICE_TAG_EXTRACTION')
+  if (!priceTagPredictions.length) {
+    throw new Error(`No PRICE_TAG_EXTRACTION prediction found for this price tag: ${priceTag.id}`)
+  }
+  const priceTagPrediction = priceTagPredictions[0]
   const label = priceTagPrediction['data']
   const barcodeString = label.barcode ? barcode_utils.cleanBarcode(label.barcode.toString()) : ''
 
