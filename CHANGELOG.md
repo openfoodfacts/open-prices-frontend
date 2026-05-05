@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.163.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.162.3...v1.163.0) (2026-05-05)
+
+
+### Features
+
+* **UI:** Use the new official Open Prices favicon ([#2178](https://github.com/openfoodfacts/open-prices-frontend/issues/2178)) ([8310522](https://github.com/openfoodfacts/open-prices-frontend/commit/83105222485f05f4eead7eb7938565c073d93d0f))
+
+
+### Bug Fixes
+
+* **Price Validation Assistant:** filter price tag based on PRICE_TAG_EXTRACTION predictions ([#2174](https://github.com/openfoodfacts/open-prices-frontend/issues/2174)) ([b88d5bb](https://github.com/openfoodfacts/open-prices-frontend/commit/b88d5bbf7ffd223fd3f10760cb793d133bb078db))
+* **Proofs:** fix bug when changing receipt to price tag if owner_consumption was set ([#2179](https://github.com/openfoodfacts/open-prices-frontend/issues/2179)) ([0874fdf](https://github.com/openfoodfacts/open-prices-frontend/commit/0874fdf1d6167452488b16822b9340bcbe7fe915))
+
+
+### Technical
+
+* **deps:** bump googleapis/release-please-action from 4 to 5 ([#2177](https://github.com/openfoodfacts/open-prices-frontend/issues/2177)) ([5b06f56](https://github.com/openfoodfacts/open-prices-frontend/commit/5b06f56c79f16dece0911f3129fdf5c21ef1948d))
+* **deps:** bump toshimaru/auto-author-assign from 3.0.1 to 3.0.2 ([#2176](https://github.com/openfoodfacts/open-prices-frontend/issues/2176)) ([e89ca22](https://github.com/openfoodfacts/open-prices-frontend/commit/e89ca22438b53801af70a9fe731cf56a522a3901))
+
 ## [1.162.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.162.2...v1.162.3) (2026-04-21)
 
 
