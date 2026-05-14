@@ -120,7 +120,7 @@
 		"Htlm5-qrcode": {
 			"Text": "con tecnología de {url}"
 		},
-		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodes": "Códigos de barras similares",
 		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
@@ -357,7 +357,7 @@
 		"MyConsumption": "Mi consumo",
 		"MyDashboard": "Mi tablero de instrumentos",
 		"MyPrices": "Mis precios",
-		"MyProofs": "Mis pruebas",
+		"MyProofs": "Mis comprobantes",
 		"MyStats": "Mis estadísticas",
 		"New": "Nuevo",
 		"NextProof": "Siguiente prueba",
@@ -882,7 +882,7 @@
 		},
 		"Home": {
 			"Title": "Inicio",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "{op_name} es un proyecto para recopilar y compartir precios de productos en todo el mundo. Es un conjunto de datos disponible públicamente que puede ser utilizado para la investigación, el análisis y mucho más."
 		},
 		"Dashboard": {
 			"Title": "Panel de control"
@@ -900,7 +900,7 @@
 			"Title": "Mis precios"
 		},
 		"MyProofs": {
-			"Title": "Mis pruebas"
+			"Title": "Mis comprobantes"
 		},
 		"MyDashboard": {
 			"Title": "Mi tablero de instrumentos"
@@ -973,7 +973,7 @@
 		"ServerError": "Error: error del servidor",
 		"Title": "Iniciar sesión",
 		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
-		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
+		"SignInWithOpenFoodFactsAuth": "Iniciar sesión con la autenticación de {off_name}",
 		"UsernameLabel": "Nombre de usuario",
 		"WrongCredentials": "Error: credenciales incorrectas"
 	},
@@ -1008,7 +1008,7 @@
 		"LoadMore": "Cargar más",
 		"MyDashboard": "Mi tablero de instrumentos",
 		"MyPrices": "Mis precios",
-		"MyProofs": "Mis pruebas",
+		"MyProofs": "Mis comprobantes",
 		"ProofUpdated": "¡Comprobante actualizado!",
 		"Settings": "Configuración",
 		"Title": "Panel de control",
