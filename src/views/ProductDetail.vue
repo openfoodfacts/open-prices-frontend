@@ -157,6 +157,13 @@ export default {
   },
   unmounted() {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
+    document.title = constants.APP_NAME
+    document.querySelector('meta[name="title"]')?.setAttribute('content', constants.APP_NAME)
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'An open crowdsourced database of prices')
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', constants.APP_NAME)
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', 'An open crowdsourced database of prices')
+    document.querySelector('meta[property="twitter:title"]')?.setAttribute('content', constants.APP_NAME)
+    document.querySelector('meta[property="twitter:description"]')?.setAttribute('content', 'An open crowdsourced database of prices')
   },
   methods: {
     initPrices() {
@@ -177,9 +184,14 @@ export default {
           .then((data) => {
             if (data.id) {
               this.product = data
+              const name = data.product_name || data.code
+            this.setPageMeta(
+              `${name} - ${this.$t('Common.PriceCount', { count: data.price_count })}`,
+              this.$t('Common.PriceCount', { count: data.price_count })
+            )
             } else {
-              // product not found: set a minimal product to display the ProductCard
               this.product = { code: this.productId, price_count: this.priceTotal }
+              document.title = `${this.productId} | ${constants.APP_NAME}`
             }
           })
       }
@@ -223,6 +235,15 @@ export default {
       if (utils.getDocumentScrollPercentage() > 90) {
         this.getPrices()
       }
+    },
+    setPageMeta(title, description) {
+      document.title = `${title} | ${constants.APP_NAME}`
+      document.querySelector('meta[name="title"]')?.setAttribute('content', `${title} | ${constants.APP_NAME}`)
+      document.querySelector('meta[name="description"]')?.setAttribute('content', description)
+      document.querySelector('meta[property="og:title"]')?.setAttribute('content', `${title} | ${constants.APP_NAME}`)
+      document.querySelector('meta[property="og:description"]')?.setAttribute('content', description)
+      document.querySelector('meta[property="twitter:title"]')?.setAttribute('content', `${title} | ${constants.APP_NAME}`)
+      document.querySelector('meta[property="twitter:description"]')?.setAttribute('content', description)
     },
   }
 }

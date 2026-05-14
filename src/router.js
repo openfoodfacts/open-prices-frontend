@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useAppStore } from './store'
 import localeManager from './i18n/localeManager.js'
+import constants from './constants'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 const routes = [
@@ -95,6 +96,11 @@ const router = createRouter({
   }
 
   next()
+})
+
+
+router.afterEach((to) => {
+  document.title = to.meta?.title ? `${to.meta?.title} | ${constants.APP_NAME}` : constants.APP_NAME
 })
 
 export default router
