@@ -92,7 +92,7 @@ export default {
       let defaultParams = {
         proof__ready_for_price_tag_validation: true,
         status__isnull: true,
-        prediction_count__gte: 2, // at least 2 predictions : PRICE_TAG_CLF & PRICE_TAG_EXTRACTION
+        prediction_count__gte: 2, // at least 2 predictions: PRICE_TAG_CLF & PRICE_TAG_EXTRACTION
         created__lte: this.currentDateTime,
         order_by: this.currentOrder,
         size: this.getApiSize,
