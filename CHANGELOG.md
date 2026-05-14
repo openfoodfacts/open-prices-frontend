@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.163.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.163.0...v1.163.1) (2026-05-14)
+
+
+### Bug Fixes
+
+* keep en:breads in category list ([#2185](https://github.com/openfoodfacts/open-prices-frontend/issues/2185)) ([0190902](https://github.com/openfoodfacts/open-prices-frontend/commit/019090248f3a161d56be21e712bbb7be99908f5d))
+* **Price Validation:** Avoid loading price tags without extraction prediction (fixes blank screen) ([#2187](https://github.com/openfoodfacts/open-prices-frontend/issues/2187)) ([1866a59](https://github.com/openfoodfacts/open-prices-frontend/commit/1866a59ba529a7a6f31862f1fab5eb3e77dddcb4))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#2175](https://github.com/openfoodfacts/open-prices-frontend/issues/2175)) ([8dfee2b](https://github.com/openfoodfacts/open-prices-frontend/commit/8dfee2bf2c2476692caeb7505f4ee1b39908d74e))
+
 ## [1.163.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.162.3...v1.163.0) (2026-05-05)
 
 
