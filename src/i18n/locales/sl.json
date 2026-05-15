@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Ustvarjeni izdelki",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Izdelek manjka",
 		"ProductOrCategoryMissing": "Manjka izdelek ali kategorija",
