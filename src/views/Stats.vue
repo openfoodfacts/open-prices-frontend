@@ -139,8 +139,8 @@
         {{ $t('Common.Experiments') }}
       </h2>
     </v-col>
-    <v-col cols="6" sm="4">
-      <StatCard :value="stats.price_tag_status_linked_to_price_count" :subtitle="$t('Stats.PricesLinkedToPriceTag')" />
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_tag_status_linked_to_price_count" :subtitle="$t('UserSettings.PriceValidation')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.product_created_count" :subtitle="$t('Common.ProductsCreated')" />
