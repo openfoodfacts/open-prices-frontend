@@ -423,6 +423,8 @@
 		"Private": "خاص",
 		"Privacy": "الخصوصية",
 		"ProductCount": "{count} منتجات | {count} منتج | {count} منتجات",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "المنتجات التي تم إنشاؤها",
 		"ProductFind": "ابحث عن المنتج",
 		"ProductMissing": "المنتج مفقود",
 		"ProductOrCategoryMissing": "المنتج أو الفئة مفقودة",
