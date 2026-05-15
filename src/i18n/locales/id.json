@@ -194,7 +194,7 @@
 		"BarcodeTypeShort": "Tipe",
 		"BarcodeInvalid": "Kode batang tidak valid",
 		"Brand": "Merek",
-		"Brands": "Merek - merek",
+		"Brands": "Merek",
 		"BrandTotal": "{count} merek | {count} merek | {count} merek",
 		"Price": "Harga",
 		"Prices": "Harga",
@@ -230,7 +230,7 @@
 		"Confirm": "Konfirmasi",
 		"Count": "Hitung",
 		"Country": "Negara",
-		"Countries": "Negara - negara",
+		"Countries": "Negara",
 		"CountryCount": "{count} negara | {count} negara | {count} negara",
 		"Crop": "Potong",
 		"Cropped": "Terpotong",
@@ -423,6 +423,8 @@
 		"Private": "Pribadi",
 		"Privacy": "Privasi",
 		"ProductCount": "{count} produk | {count} produk | {count} produk",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Produk yang dibuat",
 		"ProductFind": "Temukan produk",
 		"ProductMissing": "Produk hilang",
 		"ProductOrCategoryMissing": "Produk atau kategori hilang",
@@ -703,7 +705,7 @@
 	},
 	"ProductCard": {
 		"BarcodeLength": "Panjang kode batang: {length}",
-		"Brands": "Merek - merek",
+		"Brands": "Merek",
 		"BrandLower": "merek",
 		"BrandMissing": "Merek tidak ada",
 		"BrandTotal": "{count} merek",
@@ -872,7 +874,7 @@
 			"Title": "Berkontribusi"
 		},
 		"Countries": {
-			"Title": "Negara - negara"
+			"Title": "Negara"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -953,7 +955,7 @@
 		},
 		"Validate": {
 			"Title": "Validasikan",
-			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
+			"Help": "Setelah beberapa detik, informasi label harga akan otomatis diekstrak dari foto yang diunggah, tetapi bantuanmu masih diperlukan untuk memastikan keakuratannya. Ini dilakukan melalui upaya bersama komunitas.\n\nUntuk setiap label harga yang ditampilkan, periksa apakah harga, kode batang, atau kategorinya sudah benar. Perbaiki jika diperlukan, lalu konfirmasi. Saat kamu mengonfirmasi sebuah harga, data tersebut akan ditambahkan ke basis data publik dan dibagikan kepada komunitas.\n\nLabel harga yang tidak terbaca atau tidak valid dapat ditandai sebagai eror. Jika ragu, kamu bisa melewatinya dan membiarkan kontributor lain yang mencobanya."
 		},
 		"ValidatePrices": {
 			"Title": "Validasi harga"
@@ -973,7 +975,7 @@
 		"ServerError": "Kesalahan: kesalahan server",
 		"Title": "Masuk",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
-		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
+		"SignInWithOpenFoodFactsAuth": "Masuk dengan autentikasi {off_name}",
 		"UsernameLabel": "Nama pengguna",
 		"WrongCredentials": "Kesalahan: kredensial salah"
 	},
@@ -1030,7 +1032,7 @@
 		"CountryLabel": "Negara",
 		"CurrencyLabel": "Mata uang",
 		"BarcodeScanner": "Pemindai kode batang",
-		"BarcodeScannerLibrary": "Barcode scanner library",
+		"BarcodeScannerLibrary": "Perpustakaan pemindai barcode",
 		"DefaultMode": "Mode bawaan",
 		"FavoriteCurrencies": "Mata uang favorit",
 		"CurrencyRequired": "Setidaknya diperlukan satu mata uang",
