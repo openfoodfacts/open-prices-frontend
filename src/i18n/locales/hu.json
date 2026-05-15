@@ -423,6 +423,8 @@
 		"Private": "Privát",
 		"Privacy": "Adatvédelem",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Létrehozott termékek",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Hiányzó termék",
 		"ProductOrCategoryMissing": "Hiányzó termék vagy kategória",
