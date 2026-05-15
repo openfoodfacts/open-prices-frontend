@@ -117,12 +117,21 @@
   <v-row>
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
-        <v-icon size="x-small" icon="mdi-test-tube" />
-        {{ $t('Common.Experiments') }}
+        <v-icon size="x-small" icon="mdi-trophy-variant" />
+        {{ $t('Common.Challenges') }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.challenge_count" :subtitle="$t('Common.Challenges')" to="/challenges" />
+      <StatCard :value="stats.challenge_count" :subtitle="$t('Stats.Total')" to="/challenges" />
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-test-tube" />
+        {{ $t('Common.Experiments') }}
+      </h2>
     </v-col>
     <v-col cols="6" sm="4">
       <StatCard :value="stats.price_tag_status_linked_to_price_count" :subtitle="$t('Stats.PricesLinkedToPriceTag')" />
