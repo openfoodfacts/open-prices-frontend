@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "उत्पादाः निर्मिताः",
 		"ProductFind": "Find the product",
 		"ProductMissing": "उत्पादः अनुपलब्धः अस्ति",
 		"ProductOrCategoryMissing": "उत्पादः वा वर्गः वा अनुपलब्धः",

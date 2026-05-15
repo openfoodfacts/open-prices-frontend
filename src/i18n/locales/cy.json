@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Cynhyrchion a grëwyd",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Cynnyrch ar goll",
 		"ProductOrCategoryMissing": "Cynnyrch neu gategori ar goll",

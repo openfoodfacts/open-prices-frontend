@@ -423,6 +423,8 @@
 		"Private": "Privata",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Prodotti creati",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Prodotto mancante",
 		"ProductOrCategoryMissing": "Prodotto o categoria mancante",

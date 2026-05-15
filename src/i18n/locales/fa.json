@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "حریم خصوصی",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "محصولات ایجاد شده",
 		"ProductFind": "Find the product",
 		"ProductMissing": "محصول موجود نیست",
 		"ProductOrCategoryMissing": "محصول یا دسته بندی موجود نیست",

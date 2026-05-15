@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Ստեղծված ապրանքներ",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Ապրանքը բացակայում է",
 		"ProductOrCategoryMissing": "Ապրանքը կամ կատեգորիան բացակայում է",

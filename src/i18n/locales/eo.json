@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privateco",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Produktoj kreitaj",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Produkto mankas",
 		"ProductOrCategoryMissing": "Mankas produkto aŭ kategorio",

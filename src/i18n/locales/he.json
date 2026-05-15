@@ -423,6 +423,8 @@
 		"Private": "פרטי",
 		"Privacy": "פרטיות",
 		"ProductCount": "{count} מוצרים | מוצר | {count} מוצרים",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "מוצרים שנוצרו",
 		"ProductFind": "איתור המוצר",
 		"ProductMissing": "מוצר חסר",
 		"ProductOrCategoryMissing": "מוצר או קטגוריה חסרים",

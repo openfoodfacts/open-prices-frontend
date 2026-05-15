@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Prodotti maħluqa",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Prodott nieqes",
 		"ProductOrCategoryMissing": "Prodott jew kategorija nieqsa",

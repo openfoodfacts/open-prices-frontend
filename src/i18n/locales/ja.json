@@ -423,6 +423,8 @@
 		"Private": "非公開",
 		"Privacy": "プライバシー",
 		"ProductCount": "{count} 製品 | {count} 製品 | {count} 製品",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "作成された製品",
 		"ProductFind": "製品を探す",
 		"ProductMissing": "商品が見つかりません",
 		"ProductOrCategoryMissing": "商品またはカテゴリが見つかりません",

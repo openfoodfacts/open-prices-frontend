@@ -423,6 +423,8 @@
 		"Private": "Приватний",
 		"Privacy": "Конфіденційність",
 		"ProductCount": "{count} продукти | {count} продукт | {count} продукти",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Створені продукти",
 		"ProductFind": "Знайти товар",
 		"ProductMissing": "Відсутній продукт",
 		"ProductOrCategoryMissing": "Відсутній продукт або категорія",

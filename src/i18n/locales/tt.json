@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Продуктлар",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Продукция җитми",
 		"ProductOrCategoryMissing": "Продукция яки категория юк",

@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Mga produktong nilikha",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Nawawala ang produkto",
 		"ProductOrCategoryMissing": "Nawawala ang produkto o kategorya",

@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Vörur búnar til",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Vara vantar",
 		"ProductOrCategoryMissing": "Vöru eða flokkur vantar",
