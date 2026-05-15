@@ -423,6 +423,8 @@
 		"Private": "Privāts",
 		"Privacy": "Privātums",
 		"ProductCount": "{count} produkti | {count} produkts | {count} produkti",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Izveidotie produkti",
 		"ProductFind": "Atrodiet produktu",
 		"ProductMissing": "Trūkst produkta",
 		"ProductOrCategoryMissing": "Trūkst produkta vai kategorijas",
