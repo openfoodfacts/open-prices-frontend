@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "তৈরি পণ্য",
 		"ProductFind": "Find the product",
 		"ProductMissing": "পণ্যটি অনুপস্থিত",
 		"ProductOrCategoryMissing": "পণ্য বা বিভাগ অনুপস্থিত",
