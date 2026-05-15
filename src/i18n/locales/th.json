@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "นโยบายความเป็นส่วนตัว",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "ผลิตภัณฑ์ที่สร้างขึ้น",
 		"ProductFind": "Find the product",
 		"ProductMissing": "สินค้าขาดหาย",
 		"ProductOrCategoryMissing": "สินค้าหรือหมวดหมู่ขาดหายไป",
