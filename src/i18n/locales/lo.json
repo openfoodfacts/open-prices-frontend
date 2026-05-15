@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "ຜະລິດຕະພັນທີ່ສ້າງຂຶ້ນ",
 		"ProductFind": "Find the product",
 		"ProductMissing": "ຜະລິດຕະພັນຫາຍໄປ",
 		"ProductOrCategoryMissing": "ບໍ່ມີສິນຄ້າ ຫຼືໝວດໝູ່",
