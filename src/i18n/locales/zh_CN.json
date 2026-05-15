@@ -423,6 +423,8 @@
 		"Private": "私人的",
 		"Privacy": "隐私",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "创造的产品",
 		"ProductFind": "Find the product",
 		"ProductMissing": "产品缺失",
 		"ProductOrCategoryMissing": "缺少产品或类别",
