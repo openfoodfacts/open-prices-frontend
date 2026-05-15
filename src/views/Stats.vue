@@ -127,6 +127,9 @@
     <v-col cols="6" sm="4">
       <StatCard :value="stats.price_tag_status_linked_to_price_count" :subtitle="$t('Stats.PricesLinkedToPriceTag')" />
     </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.product_created_count" :subtitle="$t('Common.ProductsCreated')" />
+    </v-col>
   </v-row>
 
   <v-row>
@@ -249,10 +252,11 @@ export default {
         proof_source_mobile_count: 0,
         proof_source_api_count: 0,
         proof_source_other_count: 0,
+        price_tag_status_linked_to_price_count: 0,
         user_count: 0,
         user_with_price_count: 0,
         challenge_count: 0,
-        price_tag_status_linked_to_price_count: 0,
+        product_created_count: 0,
         updated: null,
       },
       loading: false,
