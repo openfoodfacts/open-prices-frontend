@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Imikhiqizo idaliwe",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Umkhiqizo awukho",
 		"ProductOrCategoryMissing": "Umkhiqizo noma isigaba asitholakali",
