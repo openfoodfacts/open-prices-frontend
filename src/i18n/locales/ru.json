@@ -423,6 +423,8 @@
 		"Private": "Частный",
 		"Privacy": "Конфиденциальность",
 		"ProductCount": "{count} продуктов | {count} продуктов | {count} продуктов",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Созданные продукты",
 		"ProductFind": "Найти продукт",
 		"ProductMissing": "Продукт отсутствует",
 		"ProductOrCategoryMissing": "Отсутствует продукт или категория",
