@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Lihlahisoa tse entsoeng",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Sehlahisoa ha se eo",
 		"ProductOrCategoryMissing": "Sehlahisoa kapa sehlopha ha se teng",
