@@ -423,6 +423,8 @@
 		"Private": "Özel",
 		"Privacy": "Mahremiyet",
 		"ProductCount": "{count} ürünler | {count} ürün | {count} ürünler",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Oluşturulan ürünler",
 		"ProductFind": "Ürünü bul",
 		"ProductMissing": "Ürün eksik",
 		"ProductOrCategoryMissing": "Ürün veya kategori eksik",
