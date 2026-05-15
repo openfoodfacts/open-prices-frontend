@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.164.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.163.1...v1.164.0) (2026-05-15)
+
+
+### Features
+
+* **Stats:** display the new `product_created_count` ([#2191](https://github.com/openfoodfacts/open-prices-frontend/issues/2191)) ([e51eded](https://github.com/openfoodfacts/open-prices-frontend/commit/e51eded2bc180d440adb8d0b54024b820cce4dc4))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#2190](https://github.com/openfoodfacts/open-prices-frontend/issues/2190)) ([01b60e2](https://github.com/openfoodfacts/open-prices-frontend/commit/01b60e2f745e909d937af45b61e87cac3ce753a6))
+* **Location Card:** Use the new `osm_brand_logo_url` for OP locations ([#2194](https://github.com/openfoodfacts/open-prices-frontend/issues/2194)) ([7e11db5](https://github.com/openfoodfacts/open-prices-frontend/commit/7e11db5521f22f68e005cad5c3c5c0afd87ed255))
+* **Stats:** new Challenge sections. add Price & Proof count in challenges ([#2193](https://github.com/openfoodfacts/open-prices-frontend/issues/2193)) ([c83a5c7](https://github.com/openfoodfacts/open-prices-frontend/commit/c83a5c7e922781ad05857b7e9da7e949f223e8bc))
+
 ## [1.163.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.163.0...v1.163.1) (2026-05-14)
 
 
