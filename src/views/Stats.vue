@@ -124,6 +124,12 @@
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.challenge_count" :subtitle="$t('Stats.Total')" to="/challenges" />
     </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_in_challenge_count" :subtitle="$t('Common.Prices')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_in_challenge_count" :subtitle="$t('Common.Proofs')" />
+    </v-col>
   </v-row>
 
   <v-row>
@@ -265,6 +271,8 @@ export default {
         user_count: 0,
         user_with_price_count: 0,
         challenge_count: 0,
+        price_in_challenge_count: 0,
+        proof_in_challenge_count: 0,
         product_created_count: 0,
         updated: null,
       },
