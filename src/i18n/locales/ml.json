@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "സൃഷ്ടിച്ച ഉൽപ്പന്നങ്ങൾ",
 		"ProductFind": "Find the product",
 		"ProductMissing": "ഉൽപ്പന്നം കാണുന്നില്ല",
 		"ProductOrCategoryMissing": "ഉൽപ്പന്നമോ വിഭാഗമോ കാണുന്നില്ല.",
