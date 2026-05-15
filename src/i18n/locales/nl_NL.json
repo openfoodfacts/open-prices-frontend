@@ -423,6 +423,8 @@
 		"Private": "Privé",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} producten | {count} product | {count} producten",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Producten aangemaakt",
 		"ProductFind": "Zoek het product",
 		"ProductMissing": "Product ontbreekt",
 		"ProductOrCategoryMissing": "Product of categorie ontbreekt",
