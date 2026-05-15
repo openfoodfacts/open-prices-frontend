@@ -194,7 +194,8 @@ function getLocationBrandLogoPathName(locationObject) {
     nameCleaned = utils.slugify(locationObject.name)
   // OP
   } else if (locationObject.osm_brand) {
-    nameCleaned = utils.slugify(locationObject.osm_brand)
+    // See https://github.com/openfoodfacts/open-prices/issues/1148
+    return locationObject.osm_brand_logo_url.replace('.png', '').replace('.svg', '')
   }
   if (nameCleaned) {
     nameCleaned = `${BRAND_URL_PREFIX}${nameCleaned}`

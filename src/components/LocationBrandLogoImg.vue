@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      tryPngInsteadOfSvg: false,
+      trySvgInsteadOfPng: false,  // default to png, and try svg if png fails
       fallbackToDefault: false,
       locationImageDefault: constants.LOCATION_IMAGE_DEFAULT_URL,
     }
@@ -46,13 +46,13 @@ export default {
     },
     currentSrc() {
       if (!this.logo) return null
-      return this.tryPngInsteadOfSvg ? `${this.logo}.png` : `${this.logo}.svg`
+      return this.trySvgInsteadOfPng ? `${this.logo}.svg` : `${this.logo}.png`
     }
   },
   methods: {
     onError() {
-      if (!this.tryPngInsteadOfSvg && this.logo) {
-        this.tryPngInsteadOfSvg = true
+      if (!this.trySvgInsteadOfPng && this.logo) {
+        this.trySvgInsteadOfPng = true
       } else {
         this.fallbackToDefault = true
       }
