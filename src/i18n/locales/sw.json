@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Bidhaa zilizoundwa",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Bidhaa haipo",
 		"ProductOrCategoryMissing": "Bidhaa au kategoria haipo",
