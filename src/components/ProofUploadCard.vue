@@ -28,6 +28,21 @@
         <LocationInputRow class="mt-0" :locationForm="proofForm" @location="locationObject = $event" />
         <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
         <ProofMetadataInputRow class="mt-0" :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
+        <v-row class="mt-0">
+          <v-col cols="12" class="pb-1">
+            <v-switch
+              v-model="useAi" :true-value="true"
+              :false-value="false"
+              density="compact"
+              color="success"
+              hide-details="auto"
+            >
+              <template #label>
+                <span class="text-body-2">{{ $t('ProofAdd.PriceTagAllowCommunityValidation') }}</span>
+              </template>
+            </v-switch>
+          </v-col>
+        </v-row>
       </v-sheet>
       <v-sheet v-else-if="step === 2">
         <v-progress-linear
@@ -137,9 +152,10 @@ export default {
       default: false
     },
   },
-  emits: ['proof', 'done'],
+  emits: ['proof', 'done', 'useAi'],
   data() {
     return {
+      useAi: false,
       step: 1,  // 1: form; 2: uploading; 3: done
       // form
       proofForm: {
@@ -298,6 +314,7 @@ export default {
     },
     uploadProofList() {
       this.step = 2
+      this.$emit('useAi', this.useAi)
       // chain uploads sequentially
       this.proofImageList.reduce((promise, proofImage) => {
         return promise.then(() =>

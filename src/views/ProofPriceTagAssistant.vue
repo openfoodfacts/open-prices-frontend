@@ -18,7 +18,7 @@
   <template v-if="step === 1">
     <v-row>
       <v-col cols="12" md="6">
-        <ProofUploadCard :typePriceTagOnly="true" @proof="onProofUploaded($event)" />
+        <ProofUploadCard :typePriceTagOnly="true" @proof="onProofUploaded($event)" @useAi="onUseAiReceived" />
       </v-col>
     </v-row>
   </template>
@@ -26,10 +26,10 @@
   <template v-if="step === 2">
     <v-row>
       <v-col cols="12">
-        <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="warning" variant="outlined" density="compact">
+        <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading && useAi" class="mb-2" type="warning" variant="outlined" density="compact">
           {{ $t('ContributionAssistant.BoundingBoxesFromServerWarning') }}
         </v-alert>
-        <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
+        <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading && useAi" class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
           {{ $t('ContributionAssistant.FindBoundingBoxesRunning') }}
           <v-progress-circular indeterminate />
         </v-alert>
@@ -281,6 +281,7 @@ export default {
   },
   data() {
     return {
+      useAi: false,
       step: 1,
       // stepItemList: [],  // see computed
       // data
@@ -398,6 +399,9 @@ export default {
         this.proofPriceExistingList = data.items
       })
     },
+    onUseAiReceived(value) {
+      this.useAi = value
+    },
     onProofUploaded(proof) {
       // move to step 2
       this.step = 2
@@ -440,7 +444,7 @@ export default {
           // forceLoad is true when coming from processLabels (to fetch any new user-created priceTags)
           maxTries = forceLoad ? maxTries : 1
         }
-        openPricesApi.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
+        openPricesApi.getPriceTags({proof_id: this.proofObject.id, size: 100, use_ai: this.useAi}).then(data => {
           const priceTagsWithPredictions = data.items.filter(priceTag => priceTag.predictions && priceTag.predictions.length)
           if (priceTagsWithPredictions.length >= minNumberOfPriceTagWithPredictions) {
             callback(priceTagsWithPredictions)
@@ -477,7 +481,8 @@ export default {
         newLabelsAddedWithCanvas.forEach(label => {
           openPricesApi.createPriceTag({
             bounding_box: label.boundingBox,
-            proof_id: this.proofObject.id
+            proof_id: this.proofObject.id,
+            use_ai: this.useAi
           }).then(priceTag => {
             newPriceTagIds.push(priceTag.id)
           })
@@ -528,7 +533,7 @@ export default {
     },
     updatePriceTag(priceTagId, status, priceId) {
       return openPricesApi
-        .updatePriceTag(priceTagId, { status: status, price_id: priceId })
+        .updatePriceTag(priceTagId, { status: status, price_id: priceId,use_ai: this.useAi })
         .then((response) => {
           // if response.status == 204
           return response
