@@ -8,7 +8,7 @@
 
   <v-row v-if="productOrCategoryNotFound" class="mt-0">
     <v-col cols="12" sm="6">
-      <template v-if="!productNotFound">
+      <template v-if="productNotFound">
         <CreateOpenFoodFactsProductPromoBanner v-if="priceTotal" class="mt-3" :productCode="productId" />
         <ProductNotFoundAlert v-else :productCode="productId" />
       </template>
