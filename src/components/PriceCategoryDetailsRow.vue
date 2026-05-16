@@ -2,7 +2,7 @@
   <v-row>
     <v-col cols="12" class="pt-2 pb-2">
       <span class="chip-group">
-        <PriceCategoryChip v-if="!hideCategoryChip" :priceCategory="price.category_tag" />
+        <CategoryTagChip v-if="!hideCategoryChip" :category="price.category_tag" :localize="true" />
         <PriceOrigins v-if="hasPriceOrigin" :priceOrigins="price.origins_tags" />
         <PriceLabels v-if="hasPriceLabels" :priceLabels="price.labels_tags" />
       </span>
@@ -15,7 +15,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
+    CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
     PriceOrigins: defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
     PriceLabels: defineAsyncComponent(() => import('../components/PriceLabels.vue')),
   },

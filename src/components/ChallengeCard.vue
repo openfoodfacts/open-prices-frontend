@@ -12,7 +12,7 @@
       </span>
       <div v-if="challenge.categories.length" class="mt-1">
         <span class="chip-group">
-          <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" />
+          <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="category" />
         </span>
       </div>
       <div v-if="challenge.locations.length" class="mt-1">
