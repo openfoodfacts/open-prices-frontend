@@ -8,16 +8,21 @@
       <v-divider />
 
       <v-card-text>
-        <v-chip v-for="label in labels" :key="label" label class="mr-2 mb-2" :to="getLabelUrl(label)">
-          {{ label }}
-        </v-chip>
+        <span class="chip-group">
+          <LabelTagChip v-for="label in labels" :key="label" :label="label" />
+        </span>
       </v-card-text>
     </v-card>
   </v-dialog>
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
+
 export default {
+  components: {
+    LabelTagChip: defineAsyncComponent(() => import('../components/LabelTagChip.vue')),
+  },
   props: {
     labels: {
       type: Array,
@@ -26,9 +31,6 @@ export default {
   },
   emits: ['close'],
   methods: {
-    getLabelUrl(label) {
-      return `/labels/${label}`
-    },
     close() {
       this.$emit('close')
     },
