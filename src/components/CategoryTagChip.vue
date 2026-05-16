@@ -1,6 +1,6 @@
 <template>
   <v-chip label size="small" density="comfortable" @click="goToCategory()">
-    {{ localize ? categoryLocalizedName : category }}
+    {{ categoryLocalizedName || category }}
   </v-chip>
 </template>
 

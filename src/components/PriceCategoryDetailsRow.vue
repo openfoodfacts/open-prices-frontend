@@ -4,7 +4,7 @@
       <span class="chip-group">
         <CategoryTagChip v-if="!hideCategoryChip" :category="price.category_tag" :localize="true" />
         <PriceOrigins v-if="hasPriceOrigin" :priceOrigins="price.origins_tags" />
-        <PriceLabels v-if="hasPriceLabels" :priceLabels="price.labels_tags" />
+        <LabelTagChip v-for="label in price.labels_tags" :key="label" :label="label" :localize="true" />
       </span>
     </v-col>
   </v-row>
@@ -17,7 +17,7 @@ export default {
   components: {
     CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
     PriceOrigins: defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
-    PriceLabels: defineAsyncComponent(() => import('../components/PriceLabels.vue')),
+    LabelTagChip: defineAsyncComponent(() => import('../components/LabelTagChip.vue')),
   },
   props: {
     price: {
