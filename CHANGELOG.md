@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.165.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.164.0...v1.165.0) (2026-05-16)
+
+
+### Features
+
+* **ProofPriceTagAssistant:** allow users to edit price tags without extraction prediction ([#2188](https://github.com/openfoodfacts/open-prices-frontend/issues/2188)) ([6ea0535](https://github.com/openfoodfacts/open-prices-frontend/commit/6ea053594d57475cd24c8841ecf7ea87c85283df))
+
+
+### Bug Fixes
+
+* **Product Detail:** fix typo in [#2195](https://github.com/openfoodfacts/open-prices-frontend/issues/2195) ([a76bf10](https://github.com/openfoodfacts/open-prices-frontend/commit/a76bf10eb1282789f4cf3614d15233f08d90f5d8))
+
+
+### Technical
+
+* **CategoryTagChip:** use in ProductCategoriesChip component ([#2198](https://github.com/openfoodfacts/open-prices-frontend/issues/2198)) ([da2f53a](https://github.com/openfoodfacts/open-prices-frontend/commit/da2f53a6d2b873a025a5633ac0a2ef3da27aa9dd))
+* **CategoryTagChip:** use instead of PriceCategoryChip. new localize prop. simplify ([#2197](https://github.com/openfoodfacts/open-prices-frontend/issues/2197)) ([0ce4eec](https://github.com/openfoodfacts/open-prices-frontend/commit/0ce4eec37ae9fe2ab4f34eab05ed1cb85b8e3f22))
+* **Label Chip:** new LabelTagChip, similar to CategoryTagChip ([#2199](https://github.com/openfoodfacts/open-prices-frontend/issues/2199)) ([c2c2abc](https://github.com/openfoodfacts/open-prices-frontend/commit/c2c2abc9636de721c2993e223846e9b0686c2341))
+* **Origin Chip:** new OriginTagChip, similar to LabelTagChip & CategoryTagChip ([#2200](https://github.com/openfoodfacts/open-prices-frontend/issues/2200)) ([1c295d9](https://github.com/openfoodfacts/open-prices-frontend/commit/1c295d921b596bca36e03471ba1cdefad2ea4ded))
+* **Product Detail:** if unknown, show only 1 banner to add the product ([#2195](https://github.com/openfoodfacts/open-prices-frontend/issues/2195)) ([b621d3c](https://github.com/openfoodfacts/open-prices-frontend/commit/b621d3c840992724a2a45a0647f49c253e2bcbb4))
+
 ## [1.164.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.163.1...v1.164.0) (2026-05-15)
 
 
