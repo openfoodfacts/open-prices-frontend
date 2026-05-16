@@ -326,7 +326,7 @@ export default {
     },
     locationName() {
       const recentLocations = this.appStore.getRecentLocations()
-      const location = recentLocations.find((location) => location.properties.osm_id === this.proofObject.location_osm_id)
+      const location = recentLocations.find((location) => location.properties && location.properties.osm_id === this.proofObject.location_osm_id)
       if (location) {
         if (location.type === 'ONLINE') return location.website_url
         return geo_utils.getLocationOSMTitle(location, true, true, false, true)
@@ -377,7 +377,14 @@ export default {
     getUserDashboardUrl() {
       const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
       return `/dashboard?tab=${dashboardTab}`
-    }
+    },
+    getPriceTagsParams() {
+      let defaultParams = {
+        proof_id: this.proofObject.id, 
+        size: 100
+      }
+      return defaultParams
+    },
   },
   mounted() {
     if (this.$route.query.proof_ids) {
@@ -429,7 +436,6 @@ export default {
     },
     loadPriceTagsWithPredictions(minNumberOfPriceTagWithPredictions, forceLoad, callback) {
       // Call price tag API until we have at least minNumberOfPriceTagWithPredictions
-      // Question: callback vs Promise ? Neither are really used in the rest of the code base
       let maxTries = 10
       let tries = 0
       const load = () => {
@@ -440,14 +446,16 @@ export default {
           // forceLoad is true when coming from processLabels (to fetch any new user-created priceTags)
           maxTries = forceLoad ? maxTries : 1
         }
-        openPricesApi.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
-          const priceTagsWithPredictions = data.items.filter(priceTag => priceTag.predictions && priceTag.predictions.length)
-          if (priceTagsWithPredictions.length >= minNumberOfPriceTagWithPredictions) {
+        openPricesApi.getPriceTags(this.getPriceTagsParams).then(data => {
+          const priceTagsWithPredictions = data.items.filter(proof_utils.priceTagHasValidPredictions)
+          const expectedNumberOfPriceTagsWithPredictions = Math.max(minNumberOfPriceTagWithPredictions, data.items.length)
+          if (priceTagsWithPredictions.length >= expectedNumberOfPriceTagsWithPredictions) {
             callback(priceTagsWithPredictions)
           } else {
             tries += 1
             if (tries >= maxTries) {
-              callback([])
+              // Give up, return whatever we have and let users deal with incomplete price tags
+              callback(data.items)
               return
             }
             setTimeout(load, 5000)  //   // maximum wait time: maxTries * 5s (50s)
