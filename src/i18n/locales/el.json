@@ -423,6 +423,8 @@
 		"Private": "Ιδιωτικός",
 		"Privacy": "Απόρρητο",
 		"ProductCount": "{count} προϊόντα | {count} προϊόν | {count} προϊόντα",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Προϊόντα που δημιουργήθηκαν",
 		"ProductFind": "Βρείτε το προϊόν",
 		"ProductMissing": "Λείπει προϊόν",
 		"ProductOrCategoryMissing": "Λείπει προϊόν ή κατηγορία",

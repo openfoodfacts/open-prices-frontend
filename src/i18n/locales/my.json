@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "ထုတ်ကုန်များဖန်တီးခဲ့သည်။",
 		"ProductFind": "Find the product",
 		"ProductMissing": "ကုန်ပစ္စည်းပျောက်",
 		"ProductOrCategoryMissing": "ထုတ်ကုန် သို့မဟုတ် အမျိုးအစား ပျောက်ဆုံးနေပါသည်။",

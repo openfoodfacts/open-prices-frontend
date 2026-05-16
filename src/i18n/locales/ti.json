@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "ዝተፈጠሩ ፍርያት",
 		"ProductFind": "Find the product",
 		"ProductMissing": "ፍርያት ጠፊኡ",
 		"ProductOrCategoryMissing": "ፍርያት ወይ ምድብ ጎዲሉ።",
