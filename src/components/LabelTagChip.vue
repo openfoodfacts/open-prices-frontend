@@ -19,7 +19,7 @@ export default {
     },
     localize: {
       type: Boolean,
-      default: false
+      default: false  // open-prices-frontend only has a subset of all labels, see generate_labels_json_per_language.py
     },
     readonly: {
       type: Boolean,
