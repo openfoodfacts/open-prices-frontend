@@ -423,6 +423,8 @@
 		"Private": "Privat",
 		"Privacy": "Integritet",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Produkter skapade",
 		"ProductFind": "Hitta produkten",
 		"ProductMissing": "Produkt saknas",
 		"ProductOrCategoryMissing": "Produkt eller kategori saknas",

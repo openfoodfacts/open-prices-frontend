@@ -423,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "બનાવેલા ઉત્પાદનો",
 		"ProductFind": "Find the product",
 		"ProductMissing": "પ્રોડક્ટ ખૂટે છે",
 		"ProductOrCategoryMissing": "ઉત્પાદન અથવા શ્રેણી ખૂટે છે",

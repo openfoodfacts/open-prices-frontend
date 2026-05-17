@@ -423,6 +423,8 @@
 		"Private": "Yksityinen",
 		"Privacy": "Yksityisyys",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Luodut tuotteet",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Tuote puuttuu",
 		"ProductOrCategoryMissing": "Tuote tai luokka puuttuu",
