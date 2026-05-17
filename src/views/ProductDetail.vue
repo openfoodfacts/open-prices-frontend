@@ -157,13 +157,6 @@ export default {
   },
   unmounted() {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
-    document.title = constants.APP_NAME
-    document.querySelector('meta[name="title"]')?.setAttribute('content', constants.APP_NAME)
-    document.querySelector('meta[name="description"]')?.setAttribute('content', 'An open crowdsourced database of prices')
-    document.querySelector('meta[property="og:title"]')?.setAttribute('content', constants.APP_NAME)
-    document.querySelector('meta[property="og:description"]')?.setAttribute('content', 'An open crowdsourced database of prices')
-    document.querySelector('meta[property="twitter:title"]')?.setAttribute('content', constants.APP_NAME)
-    document.querySelector('meta[property="twitter:description"]')?.setAttribute('content', 'An open crowdsourced database of prices')
   },
   methods: {
     initPrices() {
