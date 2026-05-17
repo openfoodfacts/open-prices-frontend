@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { useAppStore } from './store'
 import localeManager from './i18n/localeManager.js'
 import constants from './constants'
+import i18n from './i18n'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 const routes = [
@@ -98,9 +99,20 @@ const router = createRouter({
   next()
 })
 
-
 router.afterEach((to) => {
-  document.title = to.meta?.title ? `${to.meta?.title} | ${constants.APP_NAME}` : constants.APP_NAME
+  const routeTitle = to.meta?.title
+  if (!routeTitle) {
+    document.title = constants.APP_NAME
+    return
+  }
+
+  const translationKey = `Router.${routeTitle}.Title`
+  const hasTranslation = i18n.global.te(translationKey)
+  const resolvedTitle = hasTranslation
+    ? i18n.global.t(translationKey)
+    : routeTitle
+
+  document.title = `${resolvedTitle} | ${constants.APP_NAME}`
 })
 
 export default router
