@@ -5,7 +5,7 @@
         {{ brand }}
       </v-chip>
     </template>
-    <v-chip v-else label size="small" density="comfortable" @click="showProductBrandsDialog">
+    <v-chip v-else-if="!readonly" label size="small" density="comfortable" @click="showProductBrandsDialog">
       <i>{{ $t('ProductCard.BrandTotal', { count: productBrandsList.length }) }}</i>
     </v-chip>
     <ProductBrandsDialog
@@ -15,7 +15,7 @@
       @close="productBrandsDialog = false"
     />
   </template>
-  <v-chip v-else label size="small" density="comfortable" prepend-icon="mdi-help" color="warning">
+  <v-chip v-else-if="!readonly" label size="small" density="comfortable" prepend-icon="mdi-help" color="warning">
     <i class="text-lowercase">{{ $t('Common.Brand') }}</i>
     <v-tooltip activator="parent" open-on-click location="top">
       {{ $t('ProductCard.BrandMissing') }}
