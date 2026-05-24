@@ -72,7 +72,7 @@
 			"Label": "Preço",
 			"LabelDiscounted": "Preço descontado",
 			"LabelFull": "Preço original",
-			"Proof": "Demonstração",
+			"Proof": "Comprovativo",
 			"ProofDateChanged": "Data de atualização!",
 			"ProofSelected": "Comprovativo selecionado!",
 			"ProofUploaded": "Comprovativo carregado!",
@@ -120,8 +120,8 @@
 		"Htlm5-qrcode": {
 			"Text": "fornecido por {url}"
 		},
-		"SimilarBarcodes": "Similar barcodes",
-		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
+		"SimilarBarcodes": "Códigos de barras semelhantes",
+		"SimilarBarcodesExplanation": "Estes produtos têm códigos de barras semelhantes ao código de barras detetado. Talvez um deles seja o produto que procura?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Código de barras",
@@ -129,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Desafio da comunidade",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
+		"Subtitle": "Junte-se a outros entusiastas dos preços dos alimentos para reunir informações sobre {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Tire fotografias das etiquetas de preços nas lojas",
 			"line1": "As fotografias podem incluir uma ou mais etiquetas de preço. Os códigos de barras devem ser legíveis. Por exemplo:",
@@ -202,7 +202,7 @@
 		"Product": "Produto",
 		"ProductName": "Nome do produto",
 		"Products": "Produtos",
-		"Proof": "Demonstração",
+		"Proof": "Comprovativo",
 		"Proofs": "Comprovativos",
 		"CATEGORY": "Categoria",
 		"Category": "Categoria",
@@ -304,13 +304,13 @@
 		"FieldIsRequired": "Campo obrigatório",
 		"FilterNoun": "Filtro",
 		"FilterVerb": "Filtro",
-		"Filters": "Filters",
+		"Filters": "Filtros",
 		"FilterChallengesShowAllStatus": "Mostrar todos os desafios",
 		"FilterWithPriceCount": "Com preços",
 		"FilterWithLocationCount": "Com localizações",
 		"FilterProductWithPriceCount": "Com um preço",
 		"FilterProductWithPriceCountHide": "Ocultar produtos com preços",
-		"FilterProductWithPriceOwner": "Show only products with my prices",
+		"FilterProductWithPriceOwner": "Mostrar apenas os produtos com os meus preços",
 		"FilterProductWithoutPriceCount": "Sem preços",
 		"FilterPriceMoreThan30DaysHide": "Ocultar preços com mais de 30 dias",
 		"FilterProofWithPriceCountHide": "Ocultar comprovativos com preços",
@@ -357,7 +357,7 @@
 		"MyConsumption": "O meu consumo",
 		"MyDashboard": "Meu painel de controlo",
 		"MyPrices": "Meus valores",
-		"MyProofs": "Minhas demonstrações",
+		"MyProofs": "Meus comprovativos",
 		"MyStats": "Minhas estatísticas",
 		"New": "Novo",
 		"NextProof": "Comprovativo seguinte",
@@ -670,7 +670,7 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unidade",
-		"Proof": "Demonstração",
+		"Proof": "Comprovativo",
 		"FullPrice": "Preço original",
 		"UnknownProduct": "Produto desconhecido"
 	},
@@ -748,7 +748,7 @@
 		"PromoReceiptAssistant": "Experimente: experimente o novo assistente de recibos para extrair automaticamente os preços dos seus recibos!"
 	},
 	"ProofCard": {
-		"Proof": "Demonstração",
+		"Proof": "Comprovativo",
 		"PRICE_TAG": "Etiqueta de preço",
 		"RECEIPT": "Talão",
 		"GDPR_REQUEST": "Pedido RGPD",
@@ -902,7 +902,7 @@
 			"Title": "Meus valores"
 		},
 		"MyProofs": {
-			"Title": "Minhas demonstrações"
+			"Title": "Meus comprovativos"
 		},
 		"MyDashboard": {
 			"Title": "Meu painel de controlo"
@@ -1010,7 +1010,7 @@
 		"LoadMore": "Carregar mais",
 		"MyDashboard": "Meu painel de controlo",
 		"MyPrices": "Meus valores",
-		"MyProofs": "Minhas demonstrações",
+		"MyProofs": "Meus comprovativos",
 		"ProofUpdated": "Comprovativo atualizado!",
 		"Settings": "Definições",
 		"Title": "Painel de controlo",
