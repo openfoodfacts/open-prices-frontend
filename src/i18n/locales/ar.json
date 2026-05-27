@@ -170,7 +170,7 @@
 	"Common": {
 		"About": "حول",
 		"Action": "فعل",
-		"Actions": "Actions",
+		"Actions": "الإجراءات",
 		"AddComment": "أضف تعليقًا",
 		"AddPrice": "أضف سعرا",
 		"AddPrices": "أضف الأسعار",
@@ -456,7 +456,7 @@
 		"Recent": "مؤخرًا",
 		"Re-open": "إعادة فتح",
 		"ReportProblem": "إبلاغ عن مشكلة",
-		"Reset": "Reset",
+		"Reset": "إعادة الضبط",
 		"Resolved": "تم الحل",
 		"Reuses": "إعادة الاستخدام",
 		"ReusesKnown": "الاستخدامات المعروفة",
@@ -648,7 +648,7 @@
 	},
 	"LocationSelector": {
 		"Clear": "محو",
-		"NoResult": "No results found",
+		"NoResult": "لم يتم العثور على نتائج",
 		"NoResultHelpKeywords": "لم تجد متجرك؟ حاول استخدام كلمات رئيسية بدلاً من العنوان الكامل (مثل \"كارفور ٧٥٠١٣ باريس\" أو \"وول مارت سان فرانسيسكو\").",
 		"NoResultHelpOSM": "ما زلتَ لا تجد متجرك؟ ربما لم يكن موجودًا في {osm_name} بعد. يمكنك إضافته إلى {osm_url} أولًا.",
 		"PoweredBy": {
