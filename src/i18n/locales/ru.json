@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "работает на {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Штрих-код",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Вызов сообществу",
-		"Subtitle": "Присоединяйтесь к другим энтузиастам цен на продукты питания в сборе информации о {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Фотографируйте ценники в магазинах",
 			"line1": "Фотографии могут включать один или несколько ценников. Штрихкоды должны быть читаемыми. Например:",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} валюты | {count} валюты | {count} валюты",
 		"CurrencyProofHelpTextSettings": "Вы можете добавить валюты в настройках.",
 		"Dashboard": "Панель инструментов",
-		"Display": "Показать",
+		"DisplayNoun": "Показать",
+		"DisplayVerb": "Показать",
+		"Displays": "Displays",
 		"DisplayList": "Список",
 		"DisplayPriceList": "Список",
 		"DisplayTable": "Таблица",
@@ -298,12 +302,15 @@
 		"End": "Конец",
 		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Поле обязательно для заполнения",
-		"Filter": "Фильтр",
+		"FilterNoun": "Фильтр",
+		"FilterVerb": "Фильтр",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Показать все испытания",
 		"FilterWithPriceCount": "С ценами",
 		"FilterWithLocationCount": "С местоположениями",
 		"FilterProductWithPriceCount": "С ценой",
 		"FilterProductWithPriceCountHide": "Скрыть продукты с ценами",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Без цен",
 		"FilterPriceMoreThan30DaysHide": "Скрыть цены старше 30 дней",
 		"FilterProofWithPriceCountHide": "Скрыть доказательства с ценами",
@@ -361,7 +368,9 @@
 		"Online": "Онлайн",
 		"Open": "Открыть",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Заказ",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Название",
 		"OrderLocationCountDESC": "Количество мест",
 		"OrderProductUniqueScansDESC": "Количество сканирований",
@@ -414,6 +423,8 @@
 		"Private": "Частный",
 		"Privacy": "Конфиденциальность",
 		"ProductCount": "{count} продуктов | {count} продуктов | {count} продуктов",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Созданные продукты",
 		"ProductFind": "Найти продукт",
 		"ProductMissing": "Продукт отсутствует",
 		"ProductOrCategoryMissing": "Отсутствует продукт или категория",
@@ -453,7 +464,7 @@
 		"Select": "Выбрать",
 		"Send": "Отправить",
 		"Settings": "Настройки",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Вход выполнен!",
 		"SignIn": "Войти",
 		"SignOut": "Выйти",
@@ -964,6 +975,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Войти",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Сменить язык",
 		"CountryLabel": "Страна",
 		"CurrencyLabel": "Валюта",
-		"DisplayTitle": "Показать",
 		"BarcodeScanner": "Сканер штрихкодов",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Режим по умолчанию",

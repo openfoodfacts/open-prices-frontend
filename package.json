@@ -1,13 +1,13 @@
 {
   "name": "open-prices",
-  "version": "0.0.0",
+  "version": "1.165.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build-staging": "vite build --mode staging",
-    "build-prod": "vite build --mode prod",
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vite build",
+    "build-staging": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vite build --mode staging",
+    "build-prod": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vite build --mode prod",
     "preview": "vite preview",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
@@ -23,7 +23,6 @@
     ]
   },
   "dependencies": {
-    "@intlify/unplugin-vue-i18n": "^4.0.0",
     "@openfoodfacts/openfoodfacts-webcomponents": "^1.16.0",
     "@sentry/vue": "^10.43.0",
     "@vue-leaflet/vue-leaflet": "^0.10.1",
@@ -33,6 +32,7 @@
     "compressorjs": "^1.2.1",
     "exifreader": "^4.36.1",
     "html5-qrcode": "^2.3.8",
+    "keycloak-js": "^26.2.3",
     "leaflet": "^1.9.4",
     "pinia": "^2.3.1",
     "pinia-plugin-persistedstate": "^3.2.3",
@@ -48,6 +48,7 @@
     "vuetify": "^3.11.8"
   },
   "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^4.0.0",
     "@intlify/eslint-plugin-vue-i18n": "^3.2.0",
     "@mdi/font": "^7.4.47",
     "@vitejs/plugin-vue": "^5.2.4",

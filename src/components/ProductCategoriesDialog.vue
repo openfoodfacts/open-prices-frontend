@@ -8,16 +8,21 @@
       <v-divider />
 
       <v-card-text>
-        <v-chip v-for="category in categories" :key="category" label class="mr-2 mb-2" :to="getCategoryUrl(category)">
-          {{ category }}
-        </v-chip>
+        <span class="chip-group">
+          <CategoryTagChip v-for="category in categories" :key="category" :category="category" />
+        </span>
       </v-card-text>
     </v-card>
   </v-dialog>
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
+
 export default {
+  components: {
+    CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
+  },
   props: {
     categories: {
       type: Array,

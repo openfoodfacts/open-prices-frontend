@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Viivakoodi",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -224,7 +226,7 @@
 		"ConsumptionProofs": "Consumption proofs",
 		"Contribute": "Osallistu",
 		"Contributors": "Osallistujat",
-		"Contributions": "Osallistumiset",
+		"Contributions": "Muokkaukset",
 		"Confirm": "Vahvista",
 		"Count": "Määrä",
 		"Country": "Maa",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Voit lisätä valuuttoja asetuksistasi.",
 		"Dashboard": "Kojelauta",
-		"Display": "Näytä",
+		"DisplayNoun": "Näytä",
+		"DisplayVerb": "Näytä",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
@@ -298,12 +302,15 @@
 		"End": "End",
 		"ErrorServer": "Virhe: palvelinvirhe",
 		"FieldIsRequired": "Kenttä on pakollinen",
-		"Filter": "Suodata",
+		"FilterNoun": "Suodata",
+		"FilterVerb": "Suodata",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterWithPriceCount": "Hintojen kanssa",
 		"FilterWithLocationCount": "Sijainnit",
 		"FilterProductWithPriceCount": "Hinnalla",
 		"FilterProductWithPriceCountHide": "Piilota tuotteet hinnoilla",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Piilota yli 30 päivää vanhat hinnat",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
@@ -361,7 +368,9 @@
 		"Online": "Online",
 		"Open": "Avata",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Järjestys",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Nimi",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Skannausten määrä",
@@ -414,6 +423,8 @@
 		"Private": "Yksityinen",
 		"Privacy": "Yksityisyys",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Luodut tuotteet",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Tuote puuttuu",
 		"ProductOrCategoryMissing": "Tuote tai luokka puuttuu",
@@ -453,7 +464,7 @@
 		"Select": "Select",
 		"Send": "Lähetä",
 		"Settings": "Asetukset",
-		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Kirjautunut sisään!",
 		"SignIn": "Kirjaudu sisään",
 		"SignOut": "Kirjaudu ulos",
@@ -716,7 +727,7 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Tuotteen määrä puuttuu",
 		"QuantityMissing": "Määrä puuttuu",
-		"UnknownProduct": "Tuntematon tuotenimi"
+		"UnknownProduct": "Tuotenimi ei tiedossa"
 	},
 	"ProductDetail": {
 		"AddPrice": "Lisää hinta",
@@ -964,6 +975,7 @@
 		"ServerError": "Virhe: palvelinvirhe",
 		"Title": "Kirjaudu sisään",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Käyttäjänimi",
 		"WrongCredentials": "Virhe: väärät tunnistetiedot"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Vaihda kieli",
 		"CountryLabel": "Maa",
 		"CurrencyLabel": "Valuutta",
-		"DisplayTitle": "Näytä",
 		"BarcodeScanner": "Barcode scanner",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",

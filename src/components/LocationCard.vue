@@ -3,8 +3,10 @@
     <v-card-text class="pa-2">
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
-          <v-img v-if="getLocationBrandLogo" :src="getLocationBrandLogo" width="100px" />
-          <v-img v-else :src="locationImageDefault" width="100px" style="filter:invert(.9);" />
+          <LocationBrandLogoImg
+            :logo="getLocationBrandLogoPathName"
+            width="100px"
+          />
         </v-col>
         <v-col style="max-width:80%;">
           <v-row>
@@ -34,6 +36,7 @@ import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
+    LocationBrandLogoImg: defineAsyncComponent(() => import('./LocationBrandLogoImg.vue')),
     LocationDetailsRow: defineAsyncComponent(() => import('../components/LocationDetailsRow.vue')),
     LocationFooterRow: defineAsyncComponent(() => import('../components/LocationFooterRow.vue')),
   },
@@ -69,9 +72,7 @@ export default {
   },
   emits: ['editLocation'],
   data() {
-    return {
-      locationImageDefault: constants.LOCATION_IMAGE_DEFAULT_URL,
-    }
+    return {}
   },
   computed: {
     ...mapStores(useAppStore),
@@ -90,9 +91,10 @@ export default {
       }
       return geo_utils.getLocationOSMTitle(this.location, false, true, false, false, false)
     },
-    getLocationBrandLogo() {
-      return geo_utils.getLocationBrandLogo(this.location)
+    getLocationBrandLogoPathName() {
+      return geo_utils.getLocationBrandLogoPathName(this.location)
     },
+    // Removed brandLogoSrc as it is no longer needed
     showLocationDetailsRow() {
       return !this.isTypeONLINE
     },
@@ -110,7 +112,7 @@ export default {
         return
       }
       this.$router.push({ path: `/locations/${this.location.id}` })
-    }
+    },
   }
 }
 </script>

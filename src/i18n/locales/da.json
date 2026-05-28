@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "drevet af {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Stregkode",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Fællesskabsudfordring",
-		"Subtitle": "Slut dig til andre madprisentusiaster for at samle information om {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Tag billeder af prisskilte i butikkerne",
 			"line1": "Billeder kan indeholde et eller flere prisskilte. Stregkoder skal kunne læses. For eksempel:",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} valutaer | {count} valuta | {count} valutaer",
 		"CurrencyProofHelpTextSettings": "Du kan tilføje valutaer i dine indstillinger.",
 		"Dashboard": "Oversigt",
-		"Display": "Vis",
+		"DisplayNoun": "Vis",
+		"DisplayVerb": "Vis",
+		"Displays": "Displays",
 		"DisplayList": "Liste",
 		"DisplayPriceList": "Liste",
 		"DisplayTable": "Tabel",
@@ -298,12 +302,15 @@
 		"End": "Slut",
 		"ErrorServer": "Fejl: serverfejl",
 		"FieldIsRequired": "Feltet er påkrævet",
-		"Filter": "Filtrere",
+		"FilterNoun": "Filtrere",
+		"FilterVerb": "Filtrere",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Vis alle udfordringer",
 		"FilterWithPriceCount": "Med priser",
 		"FilterWithLocationCount": "Med lokationer",
 		"FilterProductWithPriceCount": "Med en pris",
 		"FilterProductWithPriceCountHide": "Skjul produkter med priser",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Uden priser",
 		"FilterPriceMoreThan30DaysHide": "Skjul priser, der er ældre end 30 dage",
 		"FilterProofWithPriceCountHide": "Skjul beviser med priser",
@@ -361,7 +368,9 @@
 		"Online": "Online",
 		"Open": "Åben",
 		"OpenWithTheAssistant": "Åbn med assistenten",
-		"Order": "Sorter",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Navn",
 		"OrderLocationCountDESC": "Placeringsantal",
 		"OrderProductUniqueScansDESC": "Antal scanninger",
@@ -414,6 +423,8 @@
 		"Private": "Privat",
 		"Privacy": "Privatliv",
 		"ProductCount": "{count} produkter | {count} produkt | {count} produkter",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Produkter oprettet",
 		"ProductFind": "Find produktet",
 		"ProductMissing": "Produkt mangler",
 		"ProductOrCategoryMissing": "Produkt eller kategori mangler",
@@ -453,7 +464,7 @@
 		"Select": "Vælg",
 		"Send": "Indsend",
 		"Settings": "Indstillinger",
-		"SignInOFFAccount": "Log på med din {url} konto",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Logget ind!",
 		"SignIn": "Log ind",
 		"SignOut": "Log ud",
@@ -964,6 +975,7 @@
 		"ServerError": "Fejl: serverfejl",
 		"Title": "Log ind",
 		"SignInOFFAccount": "Log på med din {url} konto",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Brugernavn",
 		"WrongCredentials": "Fejl: forkerte loginoplysninger"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Skift sprog",
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
-		"DisplayTitle": "Vis",
 		"BarcodeScanner": "Stregkodescanner",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Standardtilstand",

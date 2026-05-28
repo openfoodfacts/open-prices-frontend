@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "{url} tarafından desteklenmektedir"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Barkod",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Topluluk Görevi",
-		"Subtitle": "Diğer gıda fiyat meraklılarıyla birlikte {challenge_title} {challenge_subtitle}hakkında bilgi toplayın.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Mağazalardaki fiyat etiketlerinin fotoğraflarını çekin",
 			"line1": "Resimlerde bir veya daha fazla fiyat etiketi bulunabilir. Barkodlar okunaklı olmalıdır. Örneğin:",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} para birimleri | {count} para birimi | {count} para birimleri",
 		"CurrencyProofHelpTextSettings": "Ayarlarınızdan para birimleri ekleyebilirsiniz.",
 		"Dashboard": "Gösterge paneli",
-		"Display": "Göster",
+		"DisplayNoun": "Göster",
+		"DisplayVerb": "Göster",
+		"Displays": "Displays",
 		"DisplayList": "Liste",
 		"DisplayPriceList": "Liste",
 		"DisplayTable": "Tablo",
@@ -298,12 +302,15 @@
 		"End": "Son",
 		"ErrorServer": "Hata: sunucu hatası",
 		"FieldIsRequired": "Alan gereklidir",
-		"Filter": "Filtrele",
+		"FilterNoun": "Filtrele",
+		"FilterVerb": "Filtrele",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Tüm meydan okumaları göster",
 		"FilterWithPriceCount": "Fiyatlarla birlikte",
 		"FilterWithLocationCount": "Konumlarla birlikte",
 		"FilterProductWithPriceCount": "Bir fiyat ile",
 		"FilterProductWithPriceCountHide": "Ürünleri fiyatlarıyla gizle",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Fiyatlar olmadan",
 		"FilterPriceMoreThan30DaysHide": "30 günden eski fiyatları gizle",
 		"FilterProofWithPriceCountHide": "Fiyatları olan kanıtları gizle",
@@ -361,7 +368,9 @@
 		"Online": "Çevrimiçi",
 		"Open": "Açık",
 		"OpenWithTheAssistant": "Asistanla açın",
-		"Order": "Sipariş",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "İsim",
 		"OrderLocationCountDESC": "Konum sayısı",
 		"OrderProductUniqueScansDESC": "Tarama sayısı",
@@ -414,6 +423,8 @@
 		"Private": "Özel",
 		"Privacy": "Mahremiyet",
 		"ProductCount": "{count} ürünler | {count} ürün | {count} ürünler",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Oluşturulan ürünler",
 		"ProductFind": "Ürünü bul",
 		"ProductMissing": "Ürün eksik",
 		"ProductOrCategoryMissing": "Ürün veya kategori eksik",
@@ -453,7 +464,7 @@
 		"Select": "Seçiniz",
 		"Send": "Gönder",
 		"Settings": "Ayarlar",
-		"SignInOFFAccount": "{url} hesabınızla oturum açın",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Giriş yapıldı!",
 		"SignIn": "Giriş Yap",
 		"SignOut": "Çıkış yap",
@@ -964,6 +975,7 @@
 		"ServerError": "Hata: sunucu hatası",
 		"Title": "Giriş Yap",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Kullanıcı adı",
 		"WrongCredentials": "Hata: yanlış kimlik bilgileri"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Dili Değiştir",
 		"CountryLabel": "Ülke",
 		"CurrencyLabel": "Kur",
-		"DisplayTitle": "Göster",
 		"BarcodeScanner": "Barkod tarayıcı",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Varsayılan mod",

@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Kòd ba",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Ou ka ajoute lajan nan paramèt ou yo.",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "Lis",
 		"DisplayPriceList": "Lis",
 		"DisplayTable": "Table",
@@ -298,12 +302,15 @@
 		"End": "End",
 		"ErrorServer": "Erè: erè sèvè",
 		"FieldIsRequired": "Chan sa a obligatwa",
-		"Filter": "Filter",
+		"FilterNoun": "Filter",
+		"FilterVerb": "Filter",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterWithPriceCount": "Avèk pri yo",
 		"FilterWithLocationCount": "Avèk kote yo ye a",
 		"FilterProductWithPriceCount": "Ak yon pri",
 		"FilterProductWithPriceCountHide": "Kache pwodwi ak pri",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Kache pri ki gen plis pase 30 jou",
 		"FilterProofWithPriceCountHide": "Kache prèv ak pri",
@@ -361,7 +368,9 @@
 		"Online": "Online",
 		"Open": "Ouvri",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Name",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Kantite skanè",
@@ -414,6 +423,8 @@
 		"Private": "Prive",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Pwodwi ki kreye",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Pwodwi ki manke",
 		"ProductOrCategoryMissing": "Pwodwi oswa kategori ki manke",
@@ -453,7 +464,7 @@
 		"Select": "Select",
 		"Send": "Voye",
 		"Settings": "Paramèt",
-		"SignInOFFAccount": "Konekte ak kont {url} ou",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Sign in",
 		"SignOut": "Sign out",
@@ -964,6 +975,7 @@
 		"ServerError": "Erè: erè sèvè",
 		"Title": "Sign in",
 		"SignInOFFAccount": "Konekte ak kont {url} ou",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Non itilizatè",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Peyi",
 		"CurrencyLabel": "Lajan",
-		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",

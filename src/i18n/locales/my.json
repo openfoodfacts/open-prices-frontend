@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "ဘားကုုဒ္",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "သင်၏ဆက်တင်များတွင် ငွေကြေးများကို ထည့်သွင်းနိုင်သည်။",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
@@ -298,12 +302,15 @@
 		"End": "End",
 		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "အကွက်လိုအပ်သည်။",
-		"Filter": "Filter",
+		"FilterNoun": "Filter",
+		"FilterVerb": "Filter",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterWithPriceCount": "ဈေးနှုန်းများဖြင့်",
 		"FilterWithLocationCount": "နေရာများနှင့်အတူ",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
@@ -361,7 +368,9 @@
 		"Online": "Online",
 		"Open": "ဖွင့်သည်။",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "အမည္",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -414,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "ထုတ်ကုန်များဖန်တီးခဲ့သည်။",
 		"ProductFind": "Find the product",
 		"ProductMissing": "ကုန်ပစ္စည်းပျောက်",
 		"ProductOrCategoryMissing": "ထုတ်ကုန် သို့မဟုတ် အမျိုးအစား ပျောက်ဆုံးနေပါသည်။",
@@ -453,7 +464,7 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "အပြင်​အဆင်​များ",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Sign in",
 		"SignOut": "Sign out",
@@ -964,6 +975,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Sign in",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",

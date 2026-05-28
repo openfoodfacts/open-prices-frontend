@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "на основі {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Код товару",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Випробування спільноти",
-		"Subtitle": "Приєднуйтесь до інших ентузіастів цін на продукти харчування, збираючи інформацію про {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Фотографуйте цінники в магазинах",
 			"line1": "На фотографіях може бути один або кілька цінників. Штрих-коди повинні бути читабельними. Наприклад:",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} валют | {count} валюта | {count} валют",
 		"CurrencyProofHelpTextSettings": "Ви можете додати валюти в налаштуваннях.",
 		"Dashboard": "Панель приладів",
-		"Display": "Показати",
+		"DisplayNoun": "Показати",
+		"DisplayVerb": "Показати",
+		"Displays": "Displays",
 		"DisplayList": "Список",
 		"DisplayPriceList": "Список",
 		"DisplayTable": "Таблиця",
@@ -298,12 +302,15 @@
 		"End": "Кінець",
 		"ErrorServer": "Помилка: помилка сервера",
 		"FieldIsRequired": "Поле обов'язкове для заповнення",
-		"Filter": "Фільтр",
+		"FilterNoun": "Фільтр",
+		"FilterVerb": "Фільтр",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Показати всі виклики",
 		"FilterWithPriceCount": "З цінами",
 		"FilterWithLocationCount": "З локаціями",
 		"FilterProductWithPriceCount": "З ціною",
 		"FilterProductWithPriceCountHide": "Приховати товари з цінами",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Без цін",
 		"FilterPriceMoreThan30DaysHide": "Приховати ціни старші за 30 днів",
 		"FilterProofWithPriceCountHide": "Сховати докази з цінами",
@@ -361,7 +368,9 @@
 		"Online": "Онлайн",
 		"Open": "ВІДЧИНЕНО",
 		"OpenWithTheAssistant": "Відкрити за допомогою помічника",
-		"Order": "Замовлення",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Ім’я",
 		"OrderLocationCountDESC": "Кількість місць",
 		"OrderProductUniqueScansDESC": "Кількість сканувань",
@@ -414,6 +423,8 @@
 		"Private": "Приватний",
 		"Privacy": "Конфіденційність",
 		"ProductCount": "{count} продукти | {count} продукт | {count} продукти",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Створені продукти",
 		"ProductFind": "Знайти товар",
 		"ProductMissing": "Відсутній продукт",
 		"ProductOrCategoryMissing": "Відсутній продукт або категорія",
@@ -453,7 +464,7 @@
 		"Select": "Обрати",
 		"Send": "Надіслати",
 		"Settings": "Налаштування",
-		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Ви ввійшли!",
 		"SignIn": "Увійти",
 		"SignOut": "Вийти",
@@ -964,6 +975,7 @@
 		"ServerError": "Помилка: помилка сервера",
 		"Title": "Увійти",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Ім'я користувача",
 		"WrongCredentials": "Помилка: неправильні облікові дані"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Змінити мову",
 		"CountryLabel": "Країна",
 		"CurrencyLabel": "Валюта",
-		"DisplayTitle": "Показати",
 		"BarcodeScanner": "Сканер штрих-кодів",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Стандартний режим",

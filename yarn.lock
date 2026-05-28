@@ -2747,6 +2747,11 @@ jsprim@^2.0.2:
     json-schema "0.4.0"
     verror "1.10.0"
 
+keycloak-js@^26.2.3:
+  version "26.2.3"
+  resolved "https://registry.yarnpkg.com/keycloak-js/-/keycloak-js-26.2.3.tgz#f68a7dae060de6a0f87bb6a378d57381cc617c5a"
+  integrity sha512-widjzw/9T6bHRgEp6H/Se3NCCarU7u5CwFKBcwtu7xfA1IfdZb+7Q7/KGusAnBo34Vtls8Oz9vzSqkQvQ7+b4Q==
+
 keyv@^4.5.4:
   version "4.5.4"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.5.4.tgz#a879a99e29452f942439f2a405e3af8b31d4de93"

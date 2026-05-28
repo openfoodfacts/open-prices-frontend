@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "fonctionne avec {url}"
-		}
+		},
+		"SimilarBarcodes": "Codes-barres similaires",
+		"SimilarBarcodesExplanation": "Ces produits ont des codes-barres très proches de celui détecté. Peut-être que l'un d'eux est le produit que vous recherchez ?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Code-barres",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Défi de la communauté",
-		"Subtitle": "Rejoignez d’autres passionnés des prix des denrées alimentaires pour recueillir des informations sur  {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Rejoignez d'autres passionnés de prix alimentaires pour recueillir des informations sur {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Prendre des photos des étiquettes de prix dans les magasins",
 			"line1": "Les photos peuvent inclure une ou plusieurs étiquettes de prix. Les codes-barres doivent être lisibles. Par exemple :",
@@ -149,7 +151,7 @@
 		"MostRecentContributions": "Contributions les plus récentes",
 		"ChallengeCount": "{count} défis | {count} défi | {count} défis",
 		"ChallengeStatuses": {
-			"DRAFT": "Ébauche",
+			"DRAFT": "Brouillon",
 			"UPCOMING": "À venir",
 			"ONGOING": "En cours",
 			"COMPLETED": "Complété"
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} monnaies | {count} monnaies | {count} monnaies",
 		"CurrencyProofHelpTextSettings": "Vous pouvez ajouter des devises dans vos paramètres.",
 		"Dashboard": "Tableau de bord",
-		"Display": "Afficher",
+		"DisplayNoun": "Affichage",
+		"DisplayVerb": "Afficher",
+		"Displays": "Affichages",
 		"DisplayList": "Liste",
 		"DisplayPriceList": "Liste",
 		"DisplayTable": "Tableau",
@@ -298,17 +302,20 @@
 		"End": "Fin",
 		"ErrorServer": "Erreur : erreur serveur",
 		"FieldIsRequired": "Le champ est obligatoire",
-		"Filter": "Filtre",
+		"FilterNoun": "Filtre",
+		"FilterVerb": "Filtrer",
+		"Filters": "Filtres",
 		"FilterChallengesShowAllStatus": "Afficher tous les défis",
 		"FilterWithPriceCount": "Avec les prix",
 		"FilterWithLocationCount": "Avec des emplacements",
 		"FilterProductWithPriceCount": "Avec un prix",
 		"FilterProductWithPriceCountHide": "Masquer les produits qui ont un prix",
+		"FilterProductWithPriceOwner": "Afficher uniquement des produits provenant de mes prix",
 		"FilterProductWithoutPriceCount": "Sans prix",
 		"FilterPriceMoreThan30DaysHide": "Masquer les prix datant de plus de 30 jours",
 		"FilterProofWithPriceCountHide": "Masquer les preuves qui ont un prix",
 		"FilterPriceTagWithProofOwner": "Afficher uniquement mes preuves",
-		"FilterPriceTagWithProofUserCountry": "Ne montrez que des preuves provenant de mon pays",
+		"FilterPriceTagWithProofUserCountry": "Afficher uniquement des preuves provenant de mon pays",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Avec un code-barres valide",
 		"FilterPriceTagWithTagPredictionProductExists": "Avec un produit valide",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Avec une balise de catégorie valide",
@@ -361,7 +368,9 @@
 		"Online": "En ligne",
 		"Open": "Ouvrir",
 		"OpenWithTheAssistant": "Ouvrir avec l'assistant",
-		"Order": "Ordre",
+		"OrderNoun": "Tri",
+		"OrderVerb": "Trier",
+		"Orders": "Tris",
 		"OrderNameASC": "Nom",
 		"OrderLocationCountDESC": "Nombre de lieux",
 		"OrderProductUniqueScansDESC": "Nombre de numérisations",
@@ -392,8 +401,8 @@
 		"PicturesAddedByYou": "Images ajoutées par vous",
 		"PRICE_TAG": "Étiquette de prix",
 		"PriceTags": "Étiquettes de prix",
-		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
-		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
+		"PriceTagsBoundingBoxesDisplay": "Afficher les cadres de délimitation des étiquettes de prix",
+		"PriceTagsBoundingBoxesHide": "Masquer les cadres de délimitation des étiquettes de prix",
 		"PriceCount": "{count} prix | {count} prix | {count} prix",
 		"PriceAddedCount": "{count} prix ajoutés | {count} prix ajouté | {count} prix ajoutés",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prix ajoutés",
@@ -401,9 +410,9 @@
 		"PriceCreated": "Prix créé !",
 		"PriceMissing": "Prix manquant",
 		"PricePerMissing": "Prix par manquant",
-		"PriceAlreadyUploaded": "Prix déjà affiché",
-		"PriceReadyToBeUploaded": "Prix prêt à être téléchargé",
-		"PricesAlreadyUploaded": "Les prix sont déjà téléchargés",
+		"PriceAlreadyUploaded": "Prix déjà téléversé",
+		"PriceReadyToBeUploaded": "Prix prêt à être téléversé",
+		"PricesAlreadyUploaded": "Prix déjà téléversés",
 		"PricesAll": "Tous les prix",
 		"PricesMore": "Plus de prix",
 		"PricesAdded": "Prix ajoutés",
@@ -414,6 +423,8 @@
 		"Private": "Privé",
 		"Privacy": "Confidentialité",
 		"ProductCount": "{count} produits | {count} produit | {count} produits",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Produits créés",
 		"ProductFind": "Trouver le produit",
 		"ProductMissing": "Produit manquant",
 		"ProductOrCategoryMissing": "Produit ou catégorie manquant",
@@ -425,7 +436,7 @@
 		"ProofSelected": "Preuve sélectionnée !",
 		"ProofSelectedCount": "{count} preuves sélectionnées | {count} preuve sélectionnée | {count} preuves sélectionnées",
 		"ProofUploadedCount": "{count} preuves téléversées | {count} preuve téléversée | {count} preuves téléversées",
-		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} preuves téléchargées",
+		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} preuves téléversées",
 		"ProofsAddedToday": "Preuves ajoutées aujourd'hui",
 		"ProofsToday": "Preuves aujourd'hui",
 		"ProofNotFound": "Preuve non trouvée",
@@ -453,7 +464,7 @@
 		"Select": "Sélectionner",
 		"Send": "Envoyer",
 		"Settings": "Paramètres",
-		"SignInOFFAccount": "Se connecter avec votre compte {url}",
+		"SignInOFFAccount": "Connectez-vous avec vos identifiants {url}",
 		"SignedIn": "Connecté !",
 		"SignIn": "Se connecter",
 		"SignOut": "Se déconnecter",
@@ -733,7 +744,7 @@
 		"PriceTagAIWarning": "L'IA sera exécutée sur vos preuves pour en extraire les prix.",
 		"ReceiptAllowAI": "Autoriser l'exécution de l'IA sur votre ticket de caisse pour extraire les prix",
 		"ReceiptAIWarning": "L'IA sera exécutée sur votre ticket de caisse pour en extraire les prix.",
-		"PromoProofPriceTagAddMultiple": "Pour télécharger plusieurs étiquettes de prix (même emplacement de magasin et même date), cliquez ici !",
+		"PromoProofPriceTagAddMultiple": "Pour téléverser plusieurs étiquettes de prix (même emplacement de magasin et même date), cliquez ici !",
 		"PromoReceiptAssistant": "Expérience : essayez le nouvel assistant de tickets de caisse pour extraire automatiquement les prix !"
 	},
 	"ProofCard": {
@@ -873,7 +884,7 @@
 		},
 		"Home": {
 			"Title": "Accueil",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "{op_name} est un projet de collecte et de partage des prix de produits du monde entier. Il s'agit d'un ensemble de données accessible au public, utilisable pour la recherche, l'analyse et bien plus encore !"
 		},
 		"Dashboard": {
 			"Title": "Tableau de bord"
@@ -937,14 +948,14 @@
 		},
 		"Challenges": {
 			"Title": "Défis",
-			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
+			"Help": "Les défis permettent à la communauté de concentrer ses efforts et de recueillir les prix de produits spécifiques. Ils durent généralement un mois, et les participants sont classés selon leur contribution.\n\nConsultez les défis en cours ci-dessous pour participer, ou consultez les données des défis précédents."
 		},
 		"CommunityChallenge": {
 			"Title": "Défi de la communauté"
 		},
 		"Validate": {
 			"Title": "Valider",
-			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
+			"Help": "Après quelques secondes, les informations des étiquettes de prix sont automatiquement extraites des photos téléversées, mais votre aide est toujours nécessaire pour en vérifier l'exactitude. Ce travail est réalisé collectivement.\n\nPour chaque étiquette de prix affichée, vérifiez que le prix, le code-barres ou la catégorie sont corrects, corrigez-les si nécessaire et confirmez. Une fois un prix confirmé, il est ajouté à la base de données publique et partagé avec la communauté.\n\nLes prix illisibles ou invalides peuvent être signalés comme erreurs. En cas de doute, vous pouvez ignorer le prix et laisser un autre contributeur le vérifier."
 		},
 		"ValidatePrices": {
 			"Title": "Valider des prix"
@@ -964,6 +975,7 @@
 		"ServerError": "Erreur : erreur serveur",
 		"Title": "Se connecter",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
+		"SignInWithOpenFoodFactsAuth": "Connectez-vous avec l'authentification {off_name}",
 		"UsernameLabel": "Identifiant",
 		"WrongCredentials": "Erreur : Problème d'identifiant"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Changer la langue",
 		"CountryLabel": "Pays",
 		"CurrencyLabel": "Devise",
-		"DisplayTitle": "Afficher",
 		"BarcodeScanner": "Lecteur de code-barres",
 		"BarcodeScannerLibrary": "Librairie du lecteur de codes-barres",
 		"DefaultMode": "Mode par défaut",

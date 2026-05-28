@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "பார்கோடு",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "சமூக சவால்",
-		"Subtitle": "{challenge_title} {challenge_subtitle} பற்றிய தகவல்களைச் சேகரிப்பதில் மற்ற உணவு விலை ஆர்வலர்களுடன் இணையுங்கள்.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "கடைகளில் விலைக் குறிச்சொற்களின் படங்களை எடுக்கவும்",
 			"line1": "படங்களில் ஒன்று அல்லது அதற்கு மேற்பட்ட விலைக் குறிச்சொற்கள் இருக்கலாம். பார்கோடுகள் படிக்கக்கூடியதாக இருக்க வேண்டும். உதாரணமாக:",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "உங்கள் அமைப்புகளில் நாணயங்களைச் சேர்க்கலாம்.",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
@@ -298,12 +302,15 @@
 		"End": "முடிவு",
 		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "புலம் அவசியம்",
-		"Filter": "வடிகட்டி",
+		"FilterNoun": "வடிகட்டி",
+		"FilterVerb": "வடிகட்டி",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterWithPriceCount": "விலைகளுடன்",
 		"FilterWithLocationCount": "இருப்பிடங்களுடன்",
 		"FilterProductWithPriceCount": "ஒரு விலையுடன்",
 		"FilterProductWithPriceCountHide": "விலைகளுடன் கூடிய தயாரிப்புகளை மறை",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "விலைகள் இல்லாமல்",
 		"FilterPriceMoreThan30DaysHide": "30 நாட்களுக்கு மேலான விலைகளை மறை",
 		"FilterProofWithPriceCountHide": "விலைகளுடன் கூடிய தயாரிப்புகளை மறை",
@@ -361,7 +368,9 @@
 		"Online": "ஆன்லைன்",
 		"Open": "திறந்த",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "ஆர்டர்",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "பெயர்",
 		"OrderLocationCountDESC": "இருப்பிட எண்ணிக்கை",
 		"OrderProductUniqueScansDESC": "ஸ்கேன்களின் எண்ணிக்கை",
@@ -414,6 +423,8 @@
 		"Private": "தனியார்",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} தயாரிப்புகள் | {count} தயாரிப்பு | {count} தயாரிப்புகள்",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "உருவாக்கப்பட்ட தயாரிப்புகள்",
 		"ProductFind": "தயாரிப்பைக் கண்டறியவும்",
 		"ProductMissing": "தயாரிப்பு இல்லை",
 		"ProductOrCategoryMissing": "தயாரிப்பு அல்லது வகை இல்லை.",
@@ -453,7 +464,7 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "அமைப்புகள்",
-		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "உள்நுழைந்தீர்கள்!",
 		"SignIn": "உள்நுழை",
 		"SignOut": "வெளியேறு",
@@ -964,6 +975,7 @@
 		"ServerError": "Error: server error",
 		"Title": "உள்நுழை",
 		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "நாணயம்",
-		"DisplayTitle": "Display",
 		"BarcodeScanner": "பார்கோடு ஸ்கேனர்",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "இயல்புநிலை பயன்முறை",

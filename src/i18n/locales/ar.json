@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "مدعوم بواسطة {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "الرمز الشريطي",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "تحدي المجتمع",
-		"Subtitle": "انضم إلى المهتمين الآخرين بأسعار المواد الغذائية في جمع المعلومات حول {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "التقط صوراً لبطاقات الأسعار في المتاجر",
 			"line1": "يمكن أن تتضمن الصور بطاقة سعر واحدة أو أكثر. يجب أن تكون الرموز الشريطية قابلة للقراءة. على سبيل المثال:",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} عملات | {count} عملة | {count} عملات",
 		"CurrencyProofHelpTextSettings": "يمكنك إضافة العملات في إعداداتك.",
 		"Dashboard": "لوحة التحكم",
-		"Display": "العرض",
+		"DisplayNoun": "العرض",
+		"DisplayVerb": "العرض",
+		"Displays": "Displays",
 		"DisplayList": "قائمة",
 		"DisplayPriceList": "قائمة",
 		"DisplayTable": "طاولة",
@@ -298,12 +302,15 @@
 		"End": "نهاية",
 		"ErrorServer": "خطأ: خطأ في الخادم",
 		"FieldIsRequired": "الحقل مطلوب",
-		"Filter": "تصفية",
+		"FilterNoun": "تصفية",
+		"FilterVerb": "تصفية",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "عرض جميع التحديات",
 		"FilterWithPriceCount": "مع الأسعار",
 		"FilterWithLocationCount": "مع مواقع",
 		"FilterProductWithPriceCount": "بثمن",
 		"FilterProductWithPriceCountHide": "إخفاء المنتجات مع الأسعار",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "بدون أسعار",
 		"FilterPriceMoreThan30DaysHide": "إخفاء الأسعار التي يزيد عمرها عن 30 يومًا",
 		"FilterProofWithPriceCountHide": "إخفاء الأدلة مع الأسعار",
@@ -361,7 +368,9 @@
 		"Online": "متصل",
 		"Open": "يفتح",
 		"OpenWithTheAssistant": "ابدأ بالمساعد",
-		"Order": "طلب",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "اﻹسم",
 		"OrderLocationCountDESC": "عدد المواقع",
 		"OrderProductUniqueScansDESC": "عدد عمليات المسح",
@@ -414,6 +423,8 @@
 		"Private": "خاص",
 		"Privacy": "الخصوصية",
 		"ProductCount": "{count} منتجات | {count} منتج | {count} منتجات",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "المنتجات التي تم إنشاؤها",
 		"ProductFind": "ابحث عن المنتج",
 		"ProductMissing": "المنتج مفقود",
 		"ProductOrCategoryMissing": "المنتج أو الفئة مفقودة",
@@ -453,7 +464,7 @@
 		"Select": "يختار",
 		"Send": "إرسال",
 		"Settings": "الإعدادات",
-		"SignInOFFAccount": "سجّل الدخول باستخدام حسابك {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "تم تسجيل الدخول!",
 		"SignIn": "تسجيل الدخول",
 		"SignOut": "تسجيل الخروج",
@@ -964,6 +975,7 @@
 		"ServerError": "خطأ: خطأ في الخادم",
 		"Title": "تسجيل الدخول",
 		"SignInOFFAccount": "سجّل الدخول باستخدام حسابك {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "اسم المستخدم",
 		"WrongCredentials": "خطأ: بيانات اعتماد خاطئة"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "تغيير اللغة",
 		"CountryLabel": "بلد",
 		"CurrencyLabel": "عملة",
-		"DisplayTitle": "العرض",
 		"BarcodeScanner": "ماسح الباركود",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "الوضع الافتراضي",

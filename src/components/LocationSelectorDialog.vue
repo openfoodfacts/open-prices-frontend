@@ -42,7 +42,7 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="osm">
-            <v-form @submit.prevent="locationOsmSearch">
+            <v-form class="mb-4" @submit.prevent="locationOsmSearch">
               <v-text-field
                 ref="locationOsmSearchInput"
                 v-model="locationOsmSearchForm.q"
@@ -67,14 +67,8 @@
               </i18n-t>
             </p>
 
+            <!-- results -->
             <v-sheet v-if="results !== null">
-              <h3 class="mt-4 mb-1">
-                <i18n-t keypath="LocationSelector.Result" tag="span">
-                  <template #resultNumber>
-                    <small>{{ results.length }}</small>
-                  </template>
-                </i18n-t>
-              </h3>
               <v-row v-if="results.length">
                 <v-col cols="12" sm="6">
                   <LocationCard v-for="(location, index) in results" :key="index" :location="location" :hideLocationFooterRow="true" :readonly="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
@@ -105,7 +99,7 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="online">
-            <v-form v-model="locationOnlineFormValid" @submit.prevent="createOnline">
+            <v-form @submit.prevent="createOnline">
               <v-text-field
                 ref="locationOnlineFormInput"
                 v-model="locationOnlineForm.website_url"
@@ -118,7 +112,7 @@
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-btn color="primary" icon="mdi-plus" :disabled="!locationOnlineFormValid" @click="createOnline" />
+                  <v-btn color="primary" icon="mdi-plus" :disabled="!locationOnlineFormFilled" @click="createOnline" />
                 </template>
               </v-text-field>
             </v-form>
@@ -170,7 +164,6 @@ export default {
       locationOnlineForm: {
         website_url: '',
       },
-      locationOnlineFormValid: false,
       loading: false,
       results: null,
       // config
@@ -197,10 +190,13 @@ export default {
     recentLocations() {
       return this.appStore.getRecentLocations()
     },
+    locationOnlineFormFilled() {
+      return !!this.locationOnlineForm.website_url && this.urlRules.every(rule => rule(this.locationOnlineForm.website_url) === true)
+    },
     urlRules() {
-      if (!this.locationOnlineForm.website_url) return [() => true]  // optional field
       return [
-        (v) => utils.isURL(v) || this.$t('Common.URLInvalid'),
+        // v => !!v || this.$t('Common.FieldIsRequired'),
+        v => !v || utils.isURL(v) || this.$t('Common.URLInvalid'),
       ]
     },
   },
@@ -221,7 +217,6 @@ export default {
       return !!v
     },
     locationOsmSearch() {
-      if (!this.locationOsmSearchForm.q) return
       this.$refs.locationOsmSearchInput.blur()
       this.results = null
       this.loading = true
@@ -243,7 +238,6 @@ export default {
       }
     },
     createOnline() {
-      if (!this.locationOnlineFormValid) return
       this.loading = true
       const website_url_cleaned = utils.getURLOrigin(this.locationOnlineForm.website_url)
       openPricesApi.createLocationOnline({website_url: website_url_cleaned})

@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "由{url} 技術支持"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "條碼 ",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "您可以在設定中新增貨幣。",
 		"Dashboard": "儀表板",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "清單",
 		"DisplayPriceList": "清單",
 		"DisplayTable": "Table",
@@ -298,12 +302,15 @@
 		"End": "End",
 		"ErrorServer": "錯誤：伺服器錯誤",
 		"FieldIsRequired": "必填字段",
-		"Filter": "篩選器",
+		"FilterNoun": "篩選器",
+		"FilterVerb": "篩選器",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterWithPriceCount": "價格",
 		"FilterWithLocationCount": "地點",
 		"FilterProductWithPriceCount": "有價格",
 		"FilterProductWithPriceCountHide": "隱藏有價格的產品",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "沒有價格",
 		"FilterPriceMoreThan30DaysHide": "隱藏 30 天前的價格",
 		"FilterProofWithPriceCountHide": "隱藏價格證明",
@@ -361,7 +368,9 @@
 		"Online": "在線",
 		"Open": "打開",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "順序",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "名稱",
 		"OrderLocationCountDESC": "地點總數",
 		"OrderProductUniqueScansDESC": "掃描次數",
@@ -414,6 +423,8 @@
 		"Private": "不公開",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "創造的產品",
 		"ProductFind": "Find the product",
 		"ProductMissing": "產品缺失",
 		"ProductOrCategoryMissing": "缺少產品或類別",
@@ -453,7 +464,7 @@
 		"Select": "Select",
 		"Send": "發送",
 		"Settings": "設定",
-		"SignInOFFAccount": "使用您的 {url} 帳號登入",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "已登入！",
 		"SignIn": "登入",
 		"SignOut": "登出",
@@ -964,6 +975,7 @@
 		"ServerError": "錯誤：伺服器錯誤",
 		"Title": "登入",
 		"SignInOFFAccount": "使用您的 {url} 帳號登入",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "使用者名稱",
 		"WrongCredentials": "錯誤：憑證錯誤"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "更改語言",
 		"CountryLabel": "國家",
 		"CurrencyLabel": "幣別",
-		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",

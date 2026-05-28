@@ -168,7 +168,7 @@ export default {
       if (this.price.product) {
         return `/products/${this.price.product.code}`
       } else if (this.price.category_tag) {
-        return `/categories/${this.price.category_tag}`
+        return `/products/${this.price.category_tag}`
       }
       return null
     },

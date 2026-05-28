@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "mogelijk gemaakt door {url}"
-		}
+		},
+		"SimilarBarcodes": "Vergelijkbare streepjescodes",
+		"SimilarBarcodesExplanation": "Deze producten hebben streepjescodes die lijken op de gedetecteerde streepjescode. Misschien is één ervan het product dat je zoekt?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Streepjescode",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Uitdaging voor de gemeenschap",
-		"Subtitle": "Sluit je aan bij andere voedselprijzen-enthousiastelingen en verzamel informatie over {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Doe mee met andere liefhebbers van voedselprijzen en verzamel informatie over {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Maak foto's van prijskaartjes in winkels",
 			"line1": "Afbeeldingen kunnen een of meer prijskaartjes bevatten. Barcodes moeten leesbaar zijn. Bijvoorbeeld:",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} valuta's | {count} valuta | {count} valuta's",
 		"CurrencyProofHelpTextSettings": "Je kunt valuta toevoegen in je instellingen.",
 		"Dashboard": "Dashboard",
-		"Display": "Weergave",
+		"DisplayNoun": "Weergave",
+		"DisplayVerb": "Weergave",
+		"Displays": "Weergaven",
 		"DisplayList": "Lijst",
 		"DisplayPriceList": "Lijst",
 		"DisplayTable": "Tabel",
@@ -298,12 +302,15 @@
 		"End": "Einde",
 		"ErrorServer": "Fout: serverfout",
 		"FieldIsRequired": "Veld is verplicht",
-		"Filter": "Filter",
+		"FilterNoun": "Filter",
+		"FilterVerb": "Filter",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Toon alle uitdagingen",
 		"FilterWithPriceCount": "Met prijzen",
 		"FilterWithLocationCount": "Met locaties",
 		"FilterProductWithPriceCount": "Met een prijs",
 		"FilterProductWithPriceCountHide": "Verberg producten met prijzen",
+		"FilterProductWithPriceOwner": "Toon alleen producten met mijn prijzen",
 		"FilterProductWithoutPriceCount": "Zonder prijzen",
 		"FilterPriceMoreThan30DaysHide": "Verberg prijzen ouder dan 30 dagen",
 		"FilterProofWithPriceCountHide": "Verberg bewijzen met prijzen",
@@ -361,7 +368,9 @@
 		"Online": "Online",
 		"Open": "Open",
 		"OpenWithTheAssistant": "Openen met de assistent",
-		"Order": "Sorteren",
+		"OrderNoun": "Bestellen",
+		"OrderVerb": "Bestellen",
+		"Orders": "Bestellingen",
 		"OrderNameASC": "Naam",
 		"OrderLocationCountDESC": "Aantal locaties",
 		"OrderProductUniqueScansDESC": "Aantal scans",
@@ -414,6 +423,8 @@
 		"Private": "Privé",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} producten | {count} product | {count} producten",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Producten aangemaakt",
 		"ProductFind": "Zoek het product",
 		"ProductMissing": "Product ontbreekt",
 		"ProductOrCategoryMissing": "Product of categorie ontbreekt",
@@ -453,7 +464,7 @@
 		"Select": "Selecteren",
 		"Send": "Verzenden",
 		"Settings": "Instellingen",
-		"SignInOFFAccount": "Meld u aan met uw {url} account",
+		"SignInOFFAccount": "Meld u aan met uw {url} inloggegevens",
 		"SignedIn": "Ingelogd!",
 		"SignIn": "Inloggen",
 		"SignOut": "Uitloggen",
@@ -588,7 +599,7 @@
 		"CountriesWhereSold": "Verkooplanden",
 		"CreateNewProduct": "Een nieuw product maken",
 		"CreateProduct": "Product maken",
-		"EnableCropMode": "Crop-modus inschakelen",
+		"EnableCropMode": "Bijsnijdmodus inschakelen",
 		"Flavor": "Selecteer het project waarin het product moet worden aangemaakt",
 		"NextProof": "Volgend bewijs",
 		"PreviousProof": "Vorig bewijs",
@@ -854,7 +865,7 @@
 			"Title": "Bon"
 		},
 		"Cities": {
-			"Title": "Plaatsen"
+			"Title": "Steden"
 		},
 		"Community": {
 			"Title": "Gemeenschap"
@@ -873,7 +884,7 @@
 		},
 		"Home": {
 			"Title": "Hoofdmenu",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "{op_name} is een project om prijzen van producten over de hele wereld te verzamelen en te delen. Het is een openbaar beschikbare dataset die kan worden gebruikt voor onderzoek, analyse en meer!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -937,14 +948,14 @@
 		},
 		"Challenges": {
 			"Title": "Uitdagingen",
-			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
+			"Help": "Uitdagingen zijn een manier voor de gemeenschap om hun inspanningen te bundelen en prijzen van specifieke producten te verzamelen. Ze duren meestal een maand en deelnemers worden gerangschikt op basis van hun bijdrage. Bekijk hieronder de lopende uitdagingen om deel te nemen, of bekijk de gegevens van eerdere uitdagingen."
 		},
 		"CommunityChallenge": {
 			"Title": "Uitdaging voor de gemeenschap"
 		},
 		"Validate": {
 			"Title": "Bevestigen",
-			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
+			"Help": "Na enkele seconden wordt de informatie op de prijskaartjes automatisch uit de geüploade foto's gehaald, maar er is nog steeds hulp nodig om de juistheid ervan te controleren. Dit gebeurt door middel van een gezamenlijke inspanning van de community.\n\nControleer voor elk weergegeven prijskaartje of de prijs, barcode of categorie correct is, corrigeer deze indien nodig en bevestig. Wanneer u een prijs bevestigt, wordt deze toegevoegd aan de openbare database en gedeeld met de community. Onleesbare of ongeldige prijzen kunnen als fouten worden gemarkeerd. Als u twijfelt, kunt u de prijs negeren en een andere bijdrager ernaar laten kijken."
 		},
 		"ValidatePrices": {
 			"Title": "Prijzen valideren"
@@ -964,6 +975,7 @@
 		"ServerError": "Fout: serverfout",
 		"Title": "Inloggen",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
+		"SignInWithOpenFoodFactsAuth": "Log in met {off_name} authenticatie",
 		"UsernameLabel": "Gebruikersnaam",
 		"WrongCredentials": "Fout: verkeerde inloggegevens"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Een andere taal kiezen",
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
-		"DisplayTitle": "Weergave",
 		"BarcodeScanner": "Streepjescodescanner",
 		"BarcodeScannerLibrary": "Bibliotheek Barcodescanner",
 		"DefaultMode": "Standaardmodus",

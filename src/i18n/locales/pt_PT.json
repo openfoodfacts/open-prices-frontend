@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "fornecido por {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Código de barras",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Desafio da comunidade",
-		"Subtitle": "Junte-se a outros entusiastas dos preços dos alimentos para reunir informações sobre {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Tire fotografias das etiquetas de preços nas lojas",
 			"line1": "As fotografias podem incluir uma ou mais etiquetas de preço. Os códigos de barras devem ser legíveis. Por exemplo:",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} moedas | {count} moeda | {count} moedas",
 		"CurrencyProofHelpTextSettings": "Pode adicionar moedas nas suas definições.",
 		"Dashboard": "Painel de controlo",
-		"Display": "Mostrar",
+		"DisplayNoun": "Mostrar",
+		"DisplayVerb": "Mostrar",
+		"Displays": "Displays",
 		"DisplayList": "Lista",
 		"DisplayPriceList": "Lista",
 		"DisplayTable": "Tabela",
@@ -269,7 +273,7 @@
 		"LocationFindShop": "Pesquisar o local da loja",
 		"LocationMissing": "Falta a localização",
 		"LocationSearchByName": "Pesquisar por nome e cidade",
-		"LocationsCompare": "Compare 2 locations",
+		"LocationsCompare": "Compare 2 localizações",
 		"Date": "Data",
 		"DateMissing": "Falta a data",
 		"DateProofHelpText": "Data da foto.",
@@ -298,12 +302,15 @@
 		"End": "Fim",
 		"ErrorServer": "Erro: erro do servidor",
 		"FieldIsRequired": "Campo obrigatório",
-		"Filter": "Filtro",
+		"FilterNoun": "Filtro",
+		"FilterVerb": "Filtro",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Mostrar todos os desafios",
 		"FilterWithPriceCount": "Com preços",
 		"FilterWithLocationCount": "Com localizações",
 		"FilterProductWithPriceCount": "Com um preço",
 		"FilterProductWithPriceCountHide": "Ocultar produtos com preços",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Sem preços",
 		"FilterPriceMoreThan30DaysHide": "Ocultar preços com mais de 30 dias",
 		"FilterProofWithPriceCountHide": "Ocultar comprovativos com preços",
@@ -361,7 +368,9 @@
 		"Online": "Online",
 		"Open": "Aberto",
 		"OpenWithTheAssistant": "Abra com o assistente",
-		"Order": "Ordem",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Nome",
 		"OrderLocationCountDESC": "Número de locais",
 		"OrderProductUniqueScansDESC": "Número de digitalizações",
@@ -414,6 +423,8 @@
 		"Private": "Privado",
 		"Privacy": "Privacidade",
 		"ProductCount": "{count} produtos | {count} produto | {count} produtos",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Produtos criados",
 		"ProductFind": "Pesquisar o produto",
 		"ProductMissing": "Produto em falta",
 		"ProductOrCategoryMissing": "Produto ou categoria em falta",
@@ -453,7 +464,7 @@
 		"Select": "Selecionar",
 		"Send": "Enviar",
 		"Settings": "Definições",
-		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Sessão iniciada!",
 		"SignIn": "Iniciar sessão",
 		"SignOut": "Terminar sessão",
@@ -821,7 +832,7 @@
 			"Title": "Adicionar comprovativos (etiquetas de preço)"
 		},
 		"CompareLocations": {
-			"Title": "Compare 2 locations"
+			"Title": "Compare 2 localizações"
 		},
 		"Explore": {
 			"Title": "Explorar"
@@ -873,7 +884,7 @@
 		},
 		"Home": {
 			"Title": "Início",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "é um projeto de "
 		},
 		"Dashboard": {
 			"Title": "Painel de controlo"
@@ -964,6 +975,7 @@
 		"ServerError": "Erro: erro do servidor",
 		"Title": "Iniciar sessão",
 		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Nome de utilizador",
 		"WrongCredentials": "Erro: credenciais incorrectas"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Alterar idioma",
 		"CountryLabel": "País",
 		"CurrencyLabel": "Moeda",
-		"DisplayTitle": "Mostrar",
 		"BarcodeScanner": "Leitor de código de barras",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Modo predefinido",

@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "fornito da {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Codice a Barre",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Puoi aggiungere valute nelle tue impostazioni.",
 		"Dashboard": "Cruscotto",
-		"Display": "Mostra",
+		"DisplayNoun": "Mostra",
+		"DisplayVerb": "Mostra",
+		"Displays": "Displays",
 		"DisplayList": "Lista",
 		"DisplayPriceList": "Lista",
 		"DisplayTable": "Table",
@@ -298,12 +302,15 @@
 		"End": "End",
 		"ErrorServer": "Errore: errore del server",
 		"FieldIsRequired": "Il campo è obbligatorio",
-		"Filter": "Filtra",
+		"FilterNoun": "Filtra",
+		"FilterVerb": "Filtra",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterWithPriceCount": "Con i prezzi",
 		"FilterWithLocationCount": "Con posizioni",
 		"FilterProductWithPriceCount": "Con un prezzo",
 		"FilterProductWithPriceCountHide": "Nascondi i prodotti con i prezzi",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Senza prezzi",
 		"FilterPriceMoreThan30DaysHide": "Nascondi i prezzi più vecchi di 30 giorni",
 		"FilterProofWithPriceCountHide": "Nascondi le prove con i prezzi",
@@ -361,7 +368,9 @@
 		"Online": "Online",
 		"Open": "Aprire",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Ordine",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Nome",
 		"OrderLocationCountDESC": "Numero di luoghi",
 		"OrderProductUniqueScansDESC": "Numero di scansioni",
@@ -414,6 +423,8 @@
 		"Private": "Privata",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Prodotti creati",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Prodotto mancante",
 		"ProductOrCategoryMissing": "Prodotto o categoria mancante",
@@ -453,7 +464,7 @@
 		"Select": "Select",
 		"Send": "Invia",
 		"Settings": "Impostazioni",
-		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Registrato in!",
 		"SignIn": "Accedi",
 		"SignOut": "Esci",
@@ -964,6 +975,7 @@
 		"ServerError": "Errore: errore del server",
 		"Title": "Accedi",
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Nome utente",
 		"WrongCredentials": "Errore: credenziali errate"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Cambia lingua",
 		"CountryLabel": "Paese",
 		"CurrencyLabel": "Moneta",
-		"DisplayTitle": "Mostra",
 		"BarcodeScanner": "Barcode scanner",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",

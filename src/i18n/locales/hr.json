@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Bar kod",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -191,7 +193,7 @@
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
 		"BarcodeInvalid": "Invalid barcode",
-		"Brand": "Brand",
+		"Brand": "Robna marka",
 		"Brands": "Marke",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Price",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Valute možete dodati u postavkama.",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
@@ -255,14 +259,14 @@
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Oznaka",
-		"Labels": "Labels",
+		"Labels": "Oznake",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Languages",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LearnMore": "Saznajte više",
-		"LoadMore": "Load more",
+		"LoadMore": "Učitaj više",
 		"Location": "Location",
 		"Locations": "Locations",
 		"LocationSelected": "Location selected",
@@ -298,12 +302,15 @@
 		"End": "End",
 		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Polje je obavezno",
-		"Filter": "Filter",
+		"FilterNoun": "Filter",
+		"FilterVerb": "Filter",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterWithPriceCount": "S cijenama",
 		"FilterWithLocationCount": "S lokacijama",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
@@ -361,7 +368,9 @@
 		"Online": "Online",
 		"Open": "Otvoriti",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Name",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -414,6 +423,8 @@
 		"Private": "Private",
 		"Privacy": "Privatnost",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Izrađeni proizvodi",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Nedostaje proizvod",
 		"ProductOrCategoryMissing": "Nedostaje proizvod ili kategorija",
@@ -453,7 +464,7 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "Settings",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Sign in",
 		"SignOut": "Sign out",
@@ -632,7 +643,7 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Učitaj više",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
@@ -681,7 +692,7 @@
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
-		"LoadMore": "Load more",
+		"LoadMore": "Učitaj više",
 		"Title": "Latest prices"
 	},
 	"PriceRules": {
@@ -702,7 +713,7 @@
 		"CategoriesLower": "kategorije",
 		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
-		"Labels": "Labels",
+		"Labels": "Oznake",
 		"LabelsLower": "oznake",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
@@ -722,7 +733,7 @@
 		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Učitaj više",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProofAdd": {
@@ -755,7 +766,7 @@
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "Učitaj više",
 		"Prices": "Prices",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
@@ -964,6 +975,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Sign in",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -995,7 +1007,7 @@
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
-		"LoadMore": "Load more",
+		"LoadMore": "Učitaj više",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
@@ -1007,10 +1019,10 @@
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more"
+		"LoadMore": "Učitaj više"
 	},
 	"UserList": {
-		"LoadMore": "Load more",
+		"LoadMore": "Učitaj više",
 		"Title": "Top contributors",
 		"UserTotal": "{count} contributors"
 	},
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Zemlja",
 		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",

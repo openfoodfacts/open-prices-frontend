@@ -2,13 +2,13 @@
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
       <v-btn v-bind="props" size="x-small" class="mr-2" prepend-icon="mdi-filter-variant" :append-icon="getCurrentFilterIcon" :active="hasCurrentFilter">
-        <span v-if="$vuetify.display.smAndUp">{{ $t('Common.Filter') }}</span>
+        <span v-if="$vuetify.display.smAndUp">{{ $t('Common.FilterNoun') }}</span>
       </v-btn>
     </template>
     <v-list>
       <!-- title -->
       <v-list-item class="d-sm-none text-uppercase" :slim="true" disabled>
-        {{ $t('Common.Filter') }}
+        {{ $t('Common.FilterNoun') }}
       </v-list-item>
       <v-divider class="d-sm-none" />
       <!-- default filters -->
@@ -78,7 +78,7 @@ export default {
     kind: {
       type: String,
       default: 'product',
-      examples: ['product', 'price', 'proof', 'priceTag', 'location', 'country', 'user']
+      examples: ['product', 'productCreate', 'price', 'proof', 'priceTag', 'location', 'country', 'user']
     },
     currentFilterList: {
       type: Array,
@@ -120,6 +120,7 @@ export default {
       locationFilterList: constants.LOCATION_FILTER_LIST,
       countryFilterList: constants.LOCATION_COUNTRY_FILTER_LIST,
       userFilterList: constants.USER_FILTER_LIST,
+      productCreateFilterList: constants.PRODUCT_CREATE_FILTER_LIST,
       // other filters
       productSourceList: constants.PRODUCT_SOURCE_LIST,
       priceTypeList: constants.PRICE_TYPE_LIST,

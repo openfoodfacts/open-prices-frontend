@@ -1,6 +1,3 @@
-import CategoryTags from './data/category-tags.json'
-
-
 function debounce(callback, wait) {
   let timeoutId = null;
   return (...args) => {
@@ -20,6 +17,20 @@ function isNumber(value) {
   return !isNaN(parseFloat(value)) && isFinite(value)
 }
 
+/**
+ * Remove all non-digit characters from a string
+ */
+function numericOnly(value) {
+  return value.replace(/\D/g, '')
+}
+
+/**
+ * Remove all non-digit and non-wildcard characters from a string (wildcard = *)
+ */
+function numericAndWildcardOnly(value) {
+  return value.replace(/[^0-9*]/g, '')
+}
+
 function toArray(value) {
   if (Array.isArray(value)) {
     return value
@@ -28,6 +39,18 @@ function toArray(value) {
   } else {
     return []
   }
+}
+
+function slugify(value) {
+  return value.toString().toLowerCase()
+    .normalize('NFD')               // Decompose accented characters
+    .replace(/\p{Diacritic}/gu, '') // Remove diacritics (accents)
+    .replace(/'/g, '')              // Remove apostrophes like Django
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w-]+/g, '')        // Remove all non-word chars
+    .replace(/--+/g, '-')           // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '')             // Trim - from end of text
 }
 
 /**
@@ -73,51 +96,6 @@ function removeObjectFromArray(arr, obj) {
   return arr
 }
 
-/**
- * OFF auth token format: 'username__uuid'
- */
-function getOFFUsernameFromAuthToken(token) {
-  return token.split("__")[0]
-}
-
-function getCategoryName(categoryId) {
-  let category = CategoryTags.find(ct => ct.id === categoryId)
-  return category ? category.name : categoryId
-}
-
-function getLocaleCategoryTags(locale) {
-  return import(`./data/categories/${locale}.json`)
-}
-
-function getLocaleCategoryTag(locale, categoryId) {
-  return getLocaleCategoryTags(locale).then((module) => {
-    let category = module.default.find(ct => ct.id === categoryId)
-    return category ? category : { 'id': categoryId, 'name': categoryId, 'status': 'unknown' }
-  })
-}
-
-function getLocaleCategoryTagName(locale, categoryId) {
-  return getLocaleCategoryTags(locale).then((module) => {
-    let category = module.default.find(ct => ct.id === categoryId)
-    return category ? category.name : categoryId
-  })
-}
-
-function getLocaleOriginTags(locale) {
-  return import(`./data/origins/${locale}.json`)
-}
-
-function getLocaleLabelTags(locale) {
-  return import(`./data/labels/${locale}.json`)
-}
-
-function getLocaleLabelTagName(locale, labelId) {
-  return getLocaleLabelTags(locale).then((module) => {
-    let label = module.default.find(ct => ct.id === labelId)
-    return label ? label.name : labelId
-  })
-}
-
 function toTitleCase(str) {
   return str.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(' ');
 }
@@ -139,24 +117,28 @@ function replaceStringWithList(value) {
   return value
 }
 
+/**
+ * OFF auth token format: 'username__uuid'
+ */
+function getOFFUsernameFromAuthToken(token) {
+  return token.split("__")[0]
+}
+
+
 export default {
   debounce,
   getDocumentScrollPercentage,
   isNumber,
+  numericOnly,
+  numericAndWildcardOnly,
   toArray,
+  slugify,
   isURL,
   getURLOrigin,
   addObjectToArray,
   removeObjectFromArray,
-  getOFFUsernameFromAuthToken,
-  getCategoryName,
-  getLocaleCategoryTags,
-  getLocaleCategoryTag,
-  getLocaleCategoryTagName,
-  getLocaleOriginTags,
-  getLocaleLabelTags,
-  getLocaleLabelTagName,
   toTitleCase,
   replaceCommaWithDot,
-  replaceStringWithList
+  replaceStringWithList,
+  getOFFUsernameFromAuthToken,
 }

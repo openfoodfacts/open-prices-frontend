@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "con tecnología de {url}"
-		}
+		},
+		"SimilarBarcodes": "Códigos de barras similares",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Código de barras",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Desafíos de la comunidad",
-		"Subtitle": "Únase a otros entusiastas del precio de los alimentos para recopilar información sobre {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Toma fotos de las etiquetas de precios en las tiendas",
 			"line1": "Las fotos pueden incluir una o más etiquetas de precios. Los códigos de barras deben ser legibles. Por ejemplo:",
@@ -238,7 +240,9 @@
 		"CurrencyCount": "{count} monedas | {count} moneda | {count} monedas",
 		"CurrencyProofHelpTextSettings": "Puede agregar monedas en su configuración.",
 		"Dashboard": "Panel de control",
-		"Display": "Mostrar",
+		"DisplayNoun": "Mostrar",
+		"DisplayVerb": "Mostrar",
+		"Displays": "Displays",
 		"DisplayList": "Lista",
 		"DisplayPriceList": "Lista",
 		"DisplayTable": "Mesa",
@@ -298,12 +302,15 @@
 		"End": "Fin",
 		"ErrorServer": "Error: error del servidor",
 		"FieldIsRequired": "El campo es obligatorio",
-		"Filter": "Filtro",
+		"FilterNoun": "Filtro",
+		"FilterVerb": "Filtro",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Mostrar todos los desafíos",
 		"FilterWithPriceCount": "Con precios",
 		"FilterWithLocationCount": "Con ubicaciones",
 		"FilterProductWithPriceCount": "con precio",
 		"FilterProductWithPriceCountHide": "Ocultar productos con precios",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Sin precios",
 		"FilterPriceMoreThan30DaysHide": "Ocultar precios de más de 30 días",
 		"FilterProofWithPriceCountHide": "Ocultar pruebas con precios",
@@ -350,7 +357,7 @@
 		"MyConsumption": "Mi consumo",
 		"MyDashboard": "Mi tablero de instrumentos",
 		"MyPrices": "Mis precios",
-		"MyProofs": "Mis pruebas",
+		"MyProofs": "Mis comprobantes",
 		"MyStats": "Mis estadísticas",
 		"New": "Nuevo",
 		"NextProof": "Siguiente prueba",
@@ -361,7 +368,9 @@
 		"Online": "En línea",
 		"Open": "Abierto",
 		"OpenWithTheAssistant": "Abrir con el asistente",
-		"Order": "Pedido",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Nombre",
 		"OrderLocationCountDESC": "Recuento de ubicaciones",
 		"OrderProductUniqueScansDESC": "Número de escaneos",
@@ -414,6 +423,8 @@
 		"Private": "Privado",
 		"Privacy": "Privacidad",
 		"ProductCount": "{count} productos | {count} producto | {count} productos",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Productos creados",
 		"ProductFind": "Encuentra el producto",
 		"ProductMissing": "Producto faltante",
 		"ProductOrCategoryMissing": "Falta producto o categoría",
@@ -453,7 +464,7 @@
 		"Select": "Seleccionar",
 		"Send": "Enviar",
 		"Settings": "Configuración",
-		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "¡Sesión iniciada!",
 		"SignIn": "Iniciar sesión",
 		"SignOut": "Cerrar sesión",
@@ -873,7 +884,7 @@
 		},
 		"Home": {
 			"Title": "Inicio",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "{op_name} es un proyecto para recopilar y compartir precios de productos en todo el mundo. Es un conjunto de datos disponible públicamente que puede ser utilizado para la investigación, el análisis y mucho más."
 		},
 		"Dashboard": {
 			"Title": "Panel de control"
@@ -891,7 +902,7 @@
 			"Title": "Mis precios"
 		},
 		"MyProofs": {
-			"Title": "Mis pruebas"
+			"Title": "Mis comprobantes"
 		},
 		"MyDashboard": {
 			"Title": "Mi tablero de instrumentos"
@@ -964,6 +975,7 @@
 		"ServerError": "Error: error del servidor",
 		"Title": "Iniciar sesión",
 		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
+		"SignInWithOpenFoodFactsAuth": "Iniciar sesión con la autenticación de {off_name}",
 		"UsernameLabel": "Nombre de usuario",
 		"WrongCredentials": "Error: credenciales incorrectas"
 	},
@@ -998,7 +1010,7 @@
 		"LoadMore": "Cargar más",
 		"MyDashboard": "Mi tablero de instrumentos",
 		"MyPrices": "Mis precios",
-		"MyProofs": "Mis pruebas",
+		"MyProofs": "Mis comprobantes",
 		"ProofUpdated": "¡Comprobante actualizado!",
 		"Settings": "Configuración",
 		"Title": "Panel de control",
@@ -1019,7 +1031,6 @@
 		"ChangeLanguage": "Cambiar idioma",
 		"CountryLabel": "País",
 		"CurrencyLabel": "Moneda",
-		"DisplayTitle": "Mostrar",
 		"BarcodeScanner": "Escáner de código de barras",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Modo predeterminado",

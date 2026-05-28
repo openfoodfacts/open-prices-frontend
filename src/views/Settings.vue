@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-card :title="$t('Common.Display')" prepend-icon="mdi-laptop">
+      <v-card :title="$t('Common.DisplayNoun')" prepend-icon="mdi-laptop">
         <v-divider />
         <v-card-text>
           <!-- Theme -->
@@ -29,18 +29,6 @@
               <v-icon :icon="getThemeInfo('dark').icon" />
             </template>
           </v-switch>
-          <!-- Country -->
-          <h3 class="mt-4 mb-1">
-            {{ $t('Common.Country') }}
-          </h3>
-          <v-autocomplete
-            v-model="appStore.user.country"
-            :label="$t('Common.Country')"
-            :items="countryList"
-            item-title="native"
-            item-value="code"
-            hide-details="auto"
-          />
           <!-- Language -->
           <h3 class="mt-4 mb-1">
             {{ $t('Common.Language') }}
@@ -59,6 +47,18 @@
               <v-icon size="small" icon="mdi-open-in-new" />
             </a>
           </p>
+          <!-- Country -->
+          <h3 class="mt-4 mb-1">
+            {{ $t('Common.Country') }}
+          </h3>
+          <v-autocomplete
+            v-model="appStore.user.country"
+            :label="$t('Common.Country')"
+            :items="countryTags"
+            item-title="name"
+            item-value="country_code_2"
+            hide-details="auto"
+          />
           <!-- Price list display -->
           <h3 class="mt-4 mb-1">
             {{ $t('UserSettings.PriceListDisplay') }}
@@ -200,18 +200,19 @@
 import { useTheme } from 'vuetify'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import countryList from '../i18n/data/countries.json'
 import languageList from '../i18n/data/languages.json'
+import countryList from '../i18n/data/countries.json'  // still needed for currencies
 import localeManager from '../i18n/localeManager.js'
 import constants from '../constants'
+import data_utils from '../utils/data.js'
 
 export default {
   data() {
     return {
-      OFF_CROWDIN_URL: constants.OFF_CROWDIN_URL,
       theme: useTheme(),
-      countryList,
       languageList,
+      OFF_CROWDIN_URL: constants.OFF_CROWDIN_URL,
+      countryTags: [],  // list of country tags for autocomplete  // see mounted
       // currencyList,
       priceListDisplayList: constants.DISPLAY_LIST,
       locationSelectorDisplayList: constants.LOCATION_SELECTOR_DISPLAY_LIST,
@@ -222,19 +223,23 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     currencyList() {
-      return [...new Set(this.countryList
+      return [...new Set(countryList
         .map(country => country.currency)
         .flat()
         .filter(currency => currency !== null && currency.length !== 0))]
       }
   },
   watch: {
-    'appStore.user.language': function (newLanguage, oldLanguage) {  // eslint-disable-line no-unused-vars
-      localeManager.changeLanguage(newLanguage)
-    },
     'appStore.user.preferedTheme': function (newTheme, oldTheme) {  // eslint-disable-line no-unused-vars
       this.theme.change(newTheme)
-    }
+    },
+    'appStore.user.language': function (newLanguage, oldLanguage) {  // eslint-disable-line no-unused-vars
+      localeManager.changeLanguage(newLanguage)
+      this.setCountryTags()
+    },
+  },
+  mounted() {
+    this.setCountryTags()
   },
   methods: {
     getThemeInfo(themeName) {
@@ -248,6 +253,11 @@ export default {
         icon: constants.THEME_DARK_ICON,
         label: this.$t('Common.ThemeDark')
       }
+    },
+    setCountryTags() {
+      data_utils.getLocaleCountryTags(this.appStore.getUserLanguage).then((module) => {
+        this.countryTags = module.default.sort((a, b) => a.name.localeCompare(b.name))
+      })
     }
   },
 }
