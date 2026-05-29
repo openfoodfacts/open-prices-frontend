@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.166.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.165.0...v1.166.0) (2026-05-29)
+
+
+### Features
+
+* **Proofs:** when uploading, add alert message to avoid closing the page ([#2208](https://github.com/openfoodfacts/open-prices-frontend/issues/2208)) ([4fdf919](https://github.com/openfoodfacts/open-prices-frontend/commit/4fdf9196ba3f01c33e6aa461cbe1e2870089861b))
+* **UX:** improve the page meta title displayed (use translated page title when available) ([#2189](https://github.com/openfoodfacts/open-prices-frontend/issues/2189)) ([4e07aa2](https://github.com/openfoodfacts/open-prices-frontend/commit/4e07aa20834dfa8f68d0b01548fa4dd17bedafe1))
+
+
+### Bug Fixes
+
+* **Proofs:** fix translation in new uploading alert. ref [#2208](https://github.com/openfoodfacts/open-prices-frontend/issues/2208) ([d0508ec](https://github.com/openfoodfacts/open-prices-frontend/commit/d0508ec4331ae60fadb8c67162efc47492d35393))
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2166](https://github.com/openfoodfacts/open-prices-frontend/issues/2166)) ([567e230](https://github.com/openfoodfacts/open-prices-frontend/commit/567e23015d932c23733e6b357eb0765b4fca26e0))
+* **l10n:** New Crowdin translations to review and merge ([#2201](https://github.com/openfoodfacts/open-prices-frontend/issues/2201)) ([9c51351](https://github.com/openfoodfacts/open-prices-frontend/commit/9c513519a978c47ee731d6367a34613e3afef346))
+
 ## [1.165.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.164.0...v1.165.0) (2026-05-16)
 
 
