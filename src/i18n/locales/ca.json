@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Per carregar diverses etiquetes de preu (mateixa ubicació i data de la botiga), feu clic aquí!",
-		"PromoReceiptAssistant": "Experiment: prova el nou assistent de rebuts per extreure automàticament els preus dels teus rebuts!"
+		"PromoReceiptAssistant": "Experiment: prova el nou assistent de rebuts per extreure automàticament els preus dels teus rebuts!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Prova",
