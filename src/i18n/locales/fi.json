@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Ladataksesi useita hintalappuja (sama myymälän sijainti ja päivämäärä), klikkaa tästä!",
-		"PromoReceiptAssistant": "Kokeile: kokeile uutta kuittiavustajaa, joka poimii hinnat kuiteistasi automaattisesti!"
+		"PromoReceiptAssistant": "Kokeile: kokeile uutta kuittiavustajaa, joka poimii hinnat kuiteistasi automaattisesti!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Todiste",
