@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Kuti uise akawanda ma tag emitengo (yakafanana chitoro nzvimbo uye zuva), tinya apa!",
-		"PromoReceiptAssistant": "Kuedza: edza mutsva werisiti mubatsiri kuti abvise otomatiki mitengo kubva pamarisiti ako!"
+		"PromoReceiptAssistant": "Kuedza: edza mutsva werisiti mubatsiri kuti abvise otomatiki mitengo kubva pamarisiti ako!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
