@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Izinkan penggunaan AI pada struk belanja Anda untuk mengekstrak harga",
 		"ReceiptAIWarning": "AI akan memproses struk belanja Anda untuk mengekstrak harga.",
 		"PromoProofPriceTagAddMultiple": "Untuk mengunggah beberapa label harga (lokasi toko dan tanggal yang sama), klik di sini!",
-		"PromoReceiptAssistant": "Eksperimen: cobalah asisten struk baru untuk secara otomatis mengekstrak harga dari struk Anda!"
+		"PromoReceiptAssistant": "Eksperimen: cobalah asisten struk baru untuk secara otomatis mengekstrak harga dari struk Anda!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Bukti",
