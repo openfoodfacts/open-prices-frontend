@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Za postavljanje više cjenovnih oznaka (ista lokacija i datum trgovine), kliknite ovdje!",
-		"PromoReceiptAssistant": "Eksperiment: isprobajte novog asistenta za račune koji automatski izdvaja cijene s vaših računa!"
+		"PromoReceiptAssistant": "Eksperiment: isprobajte novog asistenta za račune koji automatski izdvaja cijene s vaših računa!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
