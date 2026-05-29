@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Ukulayisha iithegi zamaxabiso amaninzi (indawo yevenkile efanayo kunye nomhla), cofa apha!",
-		"PromoReceiptAssistant": "Uvavanyo: zama umncedisi omtsha werisithi ukuze ukhuphe amaxabiso ngokuzenzekelayo kwiirisithi zakho!"
+		"PromoReceiptAssistant": "Uvavanyo: zama umncedisi omtsha werisithi ukuze ukhuphe amaxabiso ngokuzenzekelayo kwiirisithi zakho!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
