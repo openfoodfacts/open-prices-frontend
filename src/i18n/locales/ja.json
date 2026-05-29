@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "レシートでAIを実行して価格を抽出できるようにする",
 		"ReceiptAIWarning": "AI がレシートに基づいて価格を抽出します。",
 		"PromoProofPriceTagAddMultiple": "複数の値札（同じ店舗の場所と日付）をアップロードするには、ここをクリックしてください。",
-		"PromoReceiptAssistant": "実験: 新しいレシート アシスタントを試して、レシートから価格を自動的に抽出してみましょう。"
+		"PromoReceiptAssistant": "実験: 新しいレシート アシスタントを試して、レシートから価格を自動的に抽出してみましょう。",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "証拠",
