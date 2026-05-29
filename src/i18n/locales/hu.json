@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Több árcédula feltöltéséhez (ugyanazzal az üzlet helyszínével és dátumával), kattintson ide!",
-		"PromoReceiptAssistant": "Kísérlet: próbáld ki az új nyugtaasszisztenst, amely automatikusan kinyeri az árakat a nyugtáidból!"
+		"PromoReceiptAssistant": "Kísérlet: próbáld ki az új nyugtaasszisztenst, amely automatikusan kinyeri az árakat a nyugtáidból!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Bizonylat",
