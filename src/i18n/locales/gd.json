@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Gus iomadh taga prìse a luchdachadh suas (an aon àite bùtha agus ceann-latha), briog an seo!",
-		"PromoReceiptAssistant": "Deuchainn: feuch an neach-cuideachaidh cuidhteis ùr gus prìsean a thoirt a-mach às na cuidhteisean agad gu fèin-ghluasadach!"
+		"PromoReceiptAssistant": "Deuchainn: feuch an neach-cuideachaidh cuidhteis ùr gus prìsean a thoirt a-mach às na cuidhteisean agad gu fèin-ghluasadach!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
