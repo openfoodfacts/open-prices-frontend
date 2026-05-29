@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "I uwchlwytho tagiau pris lluosog (yr un lleoliad siop a dyddiad), cliciwch yma!",
-		"PromoReceiptAssistant": "Arbrawf: rhowch gynnig ar y cynorthwyydd derbynebau newydd i dynnu prisiau o'ch derbynebau yn awtomatig!"
+		"PromoReceiptAssistant": "Arbrawf: rhowch gynnig ar y cynorthwyydd derbynebau newydd i dynnu prisiau o'ch derbynebau yn awtomatig!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Prawf",
