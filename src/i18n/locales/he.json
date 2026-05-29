@@ -746,7 +746,7 @@
 		"ReceiptAIWarning": "בינה מלאכותית תרוץ על הקבלה שלך כדי לחלץ מחירים.",
 		"PromoProofPriceTagAddMultiple": "להעלאת מספר תגיות מחיר (אותו מקום חנות ותאריך), יש ללחוץ כאן!",
 		"PromoReceiptAssistant": "ניסוי: אפשר לנסות את עוזר הקבלות החדש כדי לחלץ מחירים מהקבלות שלך אוטומטית!",
-		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
+		"ProofUploadProgressWarning": "לא לסגור את הלשונית הזאת או לרענן את העמוד בזמן שהתמונות שלך נשלחות!"
 	},
 	"ProofCard": {
 		"Proof": "הוכחה",
