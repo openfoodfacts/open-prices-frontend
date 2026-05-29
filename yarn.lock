@@ -996,10 +996,10 @@
   resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.8.0.tgz#ab21f027594fa827c1889e8b646da7be27c7908a"
   integrity sha512-loGD63sacRzOzSJgQnB9ZAhaQGkN7wl2Zuw7tsphI5Isa0irijrRo6EnJii/GgjGefIFO8AIO7UivzRhFaEk9w==
 
-"@xmldom/xmldom@^0.9.4":
-  version "0.9.8"
-  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.9.8.tgz#1471e82bdff9e8f20ee8bbe60d4ffa8a516e78d8"
-  integrity sha512-p96FSY54r+WJ50FIOsCOjyj/wavs8921hG5+kVMmZgKcvIKxMXHTrjNJvRgWa/zuX3B6t2lijLNFaOyuxUH+2A==
+"@xmldom/xmldom@^0.9.9":
+  version "0.9.10"
+  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.9.10.tgz#a0ad5a26fe8aa996310870726e1704977f769dee"
+  integrity sha512-A9gOqLdi6cV4ibazAjcQufGj0B1y/vDqYrcuP6d/6x8P27gRS8643Dj9o1dEKtB6O7fwxb2FgBmJS2mX7gpvdw==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -2094,12 +2094,12 @@ executable@^4.1.1:
   dependencies:
     pify "^2.2.0"
 
-exifreader@^4.36.1:
-  version "4.36.1"
-  resolved "https://registry.yarnpkg.com/exifreader/-/exifreader-4.36.1.tgz#a01cd420144105ac75dadf8bae93415b1d9b4b35"
-  integrity sha512-LrQP+ad6g/9wLtw6pJyD7qTOKUECQxNcy9M3f8UhcOH4rZReuQhpWoOaG6lIGmzSJxwF2k+tH2atZoPuY6x7RQ==
+exifreader@^4.39.0:
+  version "4.39.0"
+  resolved "https://registry.yarnpkg.com/exifreader/-/exifreader-4.39.0.tgz#248af3fc63c1a6ec9f6481fd892a190c8ff18a25"
+  integrity sha512-lP/BslNNbT3zZDtNyVli8XaPCxKE8f0OXb5hGhPVqaoIGCvOVanICwM3FXO45MkDjI3KHgFBk0KKVAw/W4xP2A==
   optionalDependencies:
-    "@xmldom/xmldom" "^0.9.4"
+    "@xmldom/xmldom" "^0.9.9"
 
 extend@~3.0.2:
   version "3.0.2"
