@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Autoriser l'exécution de l'IA sur votre ticket de caisse pour extraire les prix",
 		"ReceiptAIWarning": "L'IA sera exécutée sur votre ticket de caisse pour en extraire les prix.",
 		"PromoProofPriceTagAddMultiple": "Pour téléverser plusieurs étiquettes de prix (même emplacement de magasin et même date), cliquez ici !",
-		"PromoReceiptAssistant": "Expérience : essayez le nouvel assistant de tickets de caisse pour extraire automatiquement les prix !"
+		"PromoReceiptAssistant": "Expérience : essayez le nouvel assistant de tickets de caisse pour extraire automatiquement les prix !",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Preuve",
