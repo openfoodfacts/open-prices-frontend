@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Si aad u soo geliso calaamado qiimo badan (goobta dukaanka iyo taariikhda), dhagsii halkan!",
-		"PromoReceiptAssistant": "Tijaabi: isku day kaaliyaha cusub ee rasiidka si aad si toos ah uga soo saarto qiimayaasha rasiidhadaada!"
+		"PromoReceiptAssistant": "Tijaabi: isku day kaaliyaha cusub ee rasiidka si aad si toos ah uga soo saarto qiimayaasha rasiidhadaada!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
