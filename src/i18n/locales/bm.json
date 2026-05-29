@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Walasa ka sɔngɔ sɛbɛn caman bila (butiki sigiyɔrɔ ni don kelen), i ka nin yɔrɔ digi!",
-		"PromoReceiptAssistant": "Kɔrɔbɔli: aw bɛ resipi dɛmɛbaga kura lajɛ walasa ka sɔngɔw bɔ aw ka resipiw la a yɛrɛma!"
+		"PromoReceiptAssistant": "Kɔrɔbɔli: aw bɛ resipi dɛmɛbaga kura lajɛ walasa ka sɔngɔw bɔ aw ka resipiw la a yɛrɛma!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
