@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "பல விலைக் குறிச்சொற்களைப் பதிவேற்ற (ஒரே கடை இடம் மற்றும் தேதி), இங்கே கிளிக் செய்யவும்!",
-		"PromoReceiptAssistant": "பரிசோதனை: உங்கள் ரசீதுகளிலிருந்து விலைகளைத் தானாகவே பிரித்தெடுக்க புதிய ரசீது உதவியாளரை முயற்சிக்கவும்!"
+		"PromoReceiptAssistant": "பரிசோதனை: உங்கள் ரசீதுகளிலிருந்து விலைகளைத் தானாகவே பிரித்தெடுக்க புதிய ரசீது உதவியாளரை முயற்சிக்கவும்!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "ஆதாரம்",
