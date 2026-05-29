@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Evit pellgargañ meur a dikedenn priz (lec'hiadur ha deiziad ar memes stal), klikit amañ !",
-		"PromoReceiptAssistant": "Arnodiñ : klaskit gant ar skoazellerez resev nevez evit tennañ ar prizioù ent emgefre eus ho resevoù !"
+		"PromoReceiptAssistant": "Arnodiñ : klaskit gant ar skoazellerez resev nevez evit tennañ ar prizioù ent emgefre eus ho resevoù !",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Prouenn",
