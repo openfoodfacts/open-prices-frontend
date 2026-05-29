@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Atļaujiet čekā darbināt mākslīgo intelektu, lai iegūtu cenas",
 		"ReceiptAIWarning": "Mākslīgais intelekts (AI) veiks pārbaudi, lai iegūtu cenas jūsu čekā.",
 		"PromoProofPriceTagAddMultiple": "Lai augšupielādētu vairākas cenu zīmes (viena un tā pati veikala atrašanās vieta un datums), noklikšķiniet šeit!",
-		"PromoReceiptAssistant": "Eksperiments: izmēģiniet jauno čeku palīgu, lai automātiski iegūtu cenas no jūsu čekiem!"
+		"PromoReceiptAssistant": "Eksperiments: izmēģiniet jauno čeku palīgu, lai automātiski iegūtu cenas no jūsu čekiem!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Pierādījums",
