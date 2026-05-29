@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Темиҫе хак паллине (пӗр лавкка вырӑнӗпе кунне) ярса пама кунта пусӑр!",
-		"PromoReceiptAssistant": "Эксперимент: ҫӗнӗ квитанци пулӑшаканӗпе усӑ курса хӑвӑрӑн квитанцисенчен хаксене автоматла майпа кӑларса пӑхӑр!"
+		"PromoReceiptAssistant": "Эксперимент: ҫӗнӗ квитанци пулӑшаканӗпе усӑ курса хӑвӑрӑн квитанцисенчен хаксене автоматла майпа кӑларса пӑхӑр!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

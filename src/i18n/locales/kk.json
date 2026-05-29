@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Бірнеше баға белгілерін (бір дүкен орны мен күні) жүктеп салу үшін осы жерді басыңыз!",
-		"PromoReceiptAssistant": "Эксперимент: түбіртектерден бағаларды автоматты түрде шығару үшін жаңа түбіртек көмекшісін қолданып көріңіз!"
+		"PromoReceiptAssistant": "Эксперимент: түбіртектерден бағаларды автоматты түрде шығару үшін жаңа түбіртек көмекшісін қолданып көріңіз!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

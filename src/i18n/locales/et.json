@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Mitme hinnasildi üleslaadimiseks (sama poe asukoht ja kuupäev) klõpsake siin!",
-		"PromoReceiptAssistant": "Eksperiment: proovi uut kviitungiabilist, mis automaatselt sinu kviitungitelt hindu ammutab!"
+		"PromoReceiptAssistant": "Eksperiment: proovi uut kviitungiabilist, mis automaatselt sinu kviitungitelt hindu ammutab!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Tõestus",

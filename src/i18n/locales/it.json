@@ -99,7 +99,7 @@
 			"Title": "Informazioni sul prodotto"
 		},
 		"ProductModeList": {
-			"Barcode": "Codice a Barre",
+			"Barcode": "Codice a barre",
 			"Category": "Categoria"
 		},
 		"CategoryPricePer": {
@@ -124,7 +124,7 @@
 		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
-		"Barcode": "Codice a Barre",
+		"Barcode": "Codice a barre",
 		"Title": "Inserisci il codice a barre"
 	},
 	"Challenge": {
@@ -186,7 +186,7 @@
 		"Added": "Aggiunto",
 		"AdditionalInfo": "Informazioni aggiuntive",
 		"All": "Tutti",
-		"Barcode": "Codice a Barre",
+		"Barcode": "Codice a barre",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scansiona un codice a barre",
 		"BarcodeScanShort": "Analizza",
@@ -228,7 +228,7 @@
 		"Contributors": "Contributori",
 		"Contributions": "Contributi",
 		"Confirm": "Conferma",
-		"Count": "Quantità",
+		"Count": "Conteggio",
 		"Country": "Paese",
 		"Countries": "Paesi",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -266,7 +266,7 @@
 		"LatestPrices": "Ultimi prezzi",
 		"LatestProofs": "Ultime prove",
 		"LearnMore": "Ulteriori informazioni",
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"Location": "Posizione",
 		"Locations": "Posizioni",
 		"LocationSelected": "Location selected",
@@ -643,7 +643,7 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Ultimi prezzi",
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"LocationNotFound": "Posizione non trovata in OpenStreetMap... Non esitate ad aggiungerla :)"
 	},
 	"LocationSelector": {
@@ -692,7 +692,7 @@
 		"LabelFull": "Prezzo pieno"
 	},
 	"PriceList": {
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"Title": "Ultimi prezzi"
 	},
 	"PriceRules": {
@@ -733,7 +733,7 @@
 		"AddPrice": "Aggiungi un prezzo",
 		"CategoryNotFound": "Categoria non trovata...",
 		"LatestPrices": "Ultimi prezzi",
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"ProductNotFound": "Prodotto non trovato in Open Food Facts... Non esitate ad aggiungerlo :)"
 	},
 	"ProofAdd": {
@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Per caricare più cartellini dei prezzi (stesso negozio e stessa data), clicca qui!",
-		"PromoReceiptAssistant": "Esperimento: prova il nuovo assistente per ricevute che estrae automaticamente i prezzi dalle tue ricevute!"
+		"PromoReceiptAssistant": "Esperimento: prova il nuovo assistente per ricevute che estrae automaticamente i prezzi dalle tue ricevute!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Prova",
@@ -766,7 +767,7 @@
 		"Success": "Prova eliminata!"
 	},
 	"ProofDetail": {
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"Prices": "Prezzi",
 		"ProofNotFound": "Proof not found",
 		"Public": "Pubblica",
@@ -1007,7 +1008,7 @@
 	"UserDashboard": {
 		"LatestPrices": "Ultimi prezzi",
 		"LatestProofs": "Ultime prove",
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"MyDashboard": "Dashboard",
 		"MyPrices": "I miei prezzi",
 		"MyProofs": "Le mie prove",
@@ -1019,10 +1020,10 @@
 	},
 	"UserDetail": {
 		"LatestPrices": "Ultimi prezzi",
-		"LoadMore": "Scarica altro"
+		"LoadMore": "Carica altro"
 	},
 	"UserList": {
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"Title": "Collaboratori principali",
 		"UserTotal": "{count} contributori"
 	},

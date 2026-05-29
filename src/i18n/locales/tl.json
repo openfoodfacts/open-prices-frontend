@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Upang mag-upload ng maraming tag ng presyo (parehong lokasyon at petsa ng tindahan), mag-click dito!",
-		"PromoReceiptAssistant": "Eksperimento: subukan ang bagong assistant ng resibo upang awtomatikong kunin ang mga presyo mula sa iyong mga resibo!"
+		"PromoReceiptAssistant": "Eksperimento: subukan ang bagong assistant ng resibo upang awtomatikong kunin ang mga presyo mula sa iyong mga resibo!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Fişinizde fiyatları çıkarmak için AI çalıştırılmasına izin verin",
 		"ReceiptAIWarning": "Yapay zeka fişiniz üzerinde çalışarak fiyatları çıkaracak.",
 		"PromoProofPriceTagAddMultiple": "Birden fazla fiyat etiketi yüklemek için (aynı mağaza adresi ve tarihi) buraya tıklayın!",
-		"PromoReceiptAssistant": "Deney: Fişlerinizden fiyatları otomatik olarak çıkarmak için yeni fiş asistanını deneyin!"
+		"PromoReceiptAssistant": "Deney: Fişlerinizden fiyatları otomatik olarak çıkarmak için yeni fiş asistanını deneyin!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Kanıt",

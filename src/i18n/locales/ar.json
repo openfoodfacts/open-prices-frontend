@@ -120,8 +120,8 @@
 		"Htlm5-qrcode": {
 			"Text": "مدعوم بواسطة {url}"
 		},
-		"SimilarBarcodes": "Similar barcodes",
-		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
+		"SimilarBarcodes": "رموز شريطية مماثلة",
+		"SimilarBarcodesExplanation": "تحتوي هذه المنتجات على رموز شريطية قريبة من الرمز الشريطي الذي تم اكتشافه. ربما يكون أحدها هو المنتج الذي تبحث عنه؟"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "الرمز الشريطي",
@@ -129,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "تحدي المجتمع",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
+		"Subtitle": "انضم إلى المهتمين الآخرين بأسعار المواد الغذائية في جمع المعلومات حول {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "التقط صوراً لبطاقات الأسعار في المتاجر",
 			"line1": "يمكن أن تتضمن الصور بطاقة سعر واحدة أو أكثر. يجب أن تكون الرموز الشريطية قابلة للقراءة. على سبيل المثال:",
@@ -170,7 +170,7 @@
 	"Common": {
 		"About": "حول",
 		"Action": "فعل",
-		"Actions": "Actions",
+		"Actions": "الإجراءات",
 		"AddComment": "أضف تعليقًا",
 		"AddPrice": "أضف سعرا",
 		"AddPrices": "أضف الأسعار",
@@ -242,7 +242,7 @@
 		"Dashboard": "لوحة التحكم",
 		"DisplayNoun": "العرض",
 		"DisplayVerb": "العرض",
-		"Displays": "Displays",
+		"Displays": "شاشات العرض",
 		"DisplayList": "قائمة",
 		"DisplayPriceList": "قائمة",
 		"DisplayTable": "طاولة",
@@ -273,7 +273,7 @@
 		"LocationFindShop": "ابحث عن موقع المتجر",
 		"LocationMissing": "الموقع مفقود",
 		"LocationSearchByName": "ابحث بالاسم والمدينة",
-		"LocationsCompare": "Compare 2 locations",
+		"LocationsCompare": "قارن بين موقعين",
 		"Date": "تاريخ",
 		"DateMissing": "التاريخ مفقود",
 		"DateProofHelpText": "تاريخ الصورة.",
@@ -304,13 +304,13 @@
 		"FieldIsRequired": "الحقل مطلوب",
 		"FilterNoun": "تصفية",
 		"FilterVerb": "تصفية",
-		"Filters": "Filters",
+		"Filters": "عوامل التصفية",
 		"FilterChallengesShowAllStatus": "عرض جميع التحديات",
 		"FilterWithPriceCount": "مع الأسعار",
 		"FilterWithLocationCount": "مع مواقع",
 		"FilterProductWithPriceCount": "بثمن",
 		"FilterProductWithPriceCountHide": "إخفاء المنتجات مع الأسعار",
-		"FilterProductWithPriceOwner": "Show only products with my prices",
+		"FilterProductWithPriceOwner": "اعرض فقط المنتجات التي تحمل أسعاري",
 		"FilterProductWithoutPriceCount": "بدون أسعار",
 		"FilterPriceMoreThan30DaysHide": "إخفاء الأسعار التي يزيد عمرها عن 30 يومًا",
 		"FilterProofWithPriceCountHide": "إخفاء الأدلة مع الأسعار",
@@ -368,9 +368,9 @@
 		"Online": "متصل",
 		"Open": "يفتح",
 		"OpenWithTheAssistant": "ابدأ بالمساعد",
-		"OrderNoun": "Order",
-		"OrderVerb": "Order",
-		"Orders": "Orders",
+		"OrderNoun": "الترتيب",
+		"OrderVerb": "الترتيب",
+		"Orders": "الطلبات",
 		"OrderNameASC": "اﻹسم",
 		"OrderLocationCountDESC": "عدد المواقع",
 		"OrderProductUniqueScansDESC": "عدد عمليات المسح",
@@ -401,8 +401,8 @@
 		"PicturesAddedByYou": "الصور التي أضفتها أنت",
 		"PRICE_TAG": "سعر البطاقة",
 		"PriceTags": "بطاقات الأسعار",
-		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
-		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
+		"PriceTagsBoundingBoxesDisplay": "مربعات تحديد عرض بطاقات الأسعار",
+		"PriceTagsBoundingBoxesHide": "مربعات تحديد علامة السعر المخفية",
 		"PriceCount": "{count} الأسعار | {count} السعر | {count} الأسعار",
 		"PriceAddedCount": "تمت إضافة الأسعار {count} | تمت إضافة السعر {count} | تمت إضافة الأسعار {count}",
 		"PriceAddProgress": "تمت إضافة الأسعار {numberOfPricesAdded} / {totalNumberOfPrices}",
@@ -423,7 +423,7 @@
 		"Private": "خاص",
 		"Privacy": "الخصوصية",
 		"ProductCount": "{count} منتجات | {count} منتج | {count} منتجات",
-		"ProductCreated": "Product created!",
+		"ProductCreated": "تم إنشاء المنتج!",
 		"ProductsCreated": "المنتجات التي تم إنشاؤها",
 		"ProductFind": "ابحث عن المنتج",
 		"ProductMissing": "المنتج مفقود",
@@ -456,7 +456,7 @@
 		"Recent": "مؤخرًا",
 		"Re-open": "إعادة فتح",
 		"ReportProblem": "إبلاغ عن مشكلة",
-		"Reset": "Reset",
+		"Reset": "إعادة الضبط",
 		"Resolved": "تم الحل",
 		"Reuses": "إعادة الاستخدام",
 		"ReusesKnown": "الاستخدامات المعروفة",
@@ -464,7 +464,7 @@
 		"Select": "يختار",
 		"Send": "إرسال",
 		"Settings": "الإعدادات",
-		"SignInOFFAccount": "Sign in with your {url} credentials",
+		"SignInOFFAccount": "سجّل الدخول باستخدام بيانات اعتمادك {url}",
 		"SignedIn": "تم تسجيل الدخول!",
 		"SignIn": "تسجيل الدخول",
 		"SignOut": "تسجيل الخروج",
@@ -648,7 +648,7 @@
 	},
 	"LocationSelector": {
 		"Clear": "محو",
-		"NoResult": "No results found",
+		"NoResult": "لم يتم العثور على نتائج",
 		"NoResultHelpKeywords": "لم تجد متجرك؟ حاول استخدام كلمات رئيسية بدلاً من العنوان الكامل (مثل \"كارفور ٧٥٠١٣ باريس\" أو \"وول مارت سان فرانسيسكو\").",
 		"NoResultHelpOSM": "ما زلتَ لا تجد متجرك؟ ربما لم يكن موجودًا في {osm_name} بعد. يمكنك إضافته إلى {osm_url} أولًا.",
 		"PoweredBy": {
@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "اسمح بتشغيل الذكاء الاصطناعي على إيصالك لاستخراج الأسعار",
 		"ReceiptAIWarning": "سيقوم الذكاء الاصطناعي بمعالجة إيصالك لاستخراج الأسعار.",
 		"PromoProofPriceTagAddMultiple": "لتحميل بطاقات الأسعار المتعددة (نفس موقع المتجر والتاريخ)، انقر هنا!",
-		"PromoReceiptAssistant": "تجربة: جرب مساعد الإيصال الجديد لاستخراج الأسعار تلقائيًا من إيصالاتك!"
+		"PromoReceiptAssistant": "تجربة: جرب مساعد الإيصال الجديد لاستخراج الأسعار تلقائيًا من إيصالاتك!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "دليل",
@@ -832,7 +833,7 @@
 			"Title": "أضف إثباتات (بطاقات الأسعار)"
 		},
 		"CompareLocations": {
-			"Title": "Compare 2 locations"
+			"Title": "قارن بين موقعين"
 		},
 		"Explore": {
 			"Title": "يستكشف"
@@ -884,7 +885,7 @@
 		},
 		"Home": {
 			"Title": "الصفحة الرئيسية",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "{op_name} هو مشروع لجمع ومشاركة أسعار المنتجات حول العالم. وهي مجموعة بيانات متاحة للجميع يمكن استخدامها في البحث والتحليل وغير ذلك!"
 		},
 		"Dashboard": {
 			"Title": "لوحة التحكم"
@@ -948,14 +949,14 @@
 		},
 		"Challenges": {
 			"Title": "التحديات",
-			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
+			"Help": "وتمثل التحديات وسيلة للمجتمع المحلي لتركيز جهوده وجمع أسعار منتجات محددة. وعادة ما تدوم شهرا، ويصنف المساهمون حسب إسهاماتهم.\n\nتحقق من التحديات الجارية أدناه للمشاركة، أو زيارة بيانات التحديات السابقة."
 		},
 		"CommunityChallenge": {
 			"Title": "تحدي المجتمع"
 		},
 		"Validate": {
 			"Title": "التحقق",
-			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
+			"Help": "بعد ثوانٍ معدودة، تُستخرج معلومات بطاقات الأسعار تلقائيًا من الصور المرفوعة، ولكن لا يزال التحقق من دقتها مطلوبًا. يتم ذلك بجهود جماعية.\n\nلكل بطاقة سعر معروضة، تحقق من صحة السعر أو الرمز الشريطي أو الفئة، وصححها إن لزم الأمر، ثم أكدها. عند تأكيد السعر، يُضاف إلى قاعدة البيانات العامة ويُشارك مع المجتمع.\n\nيمكن وضع علامة \"خطأ\" على الأسعار غير المقروءة أو غير الصالحة. إذا كنت غير متأكد، يمكنك تجاهل السعر والسماح لمساهم آخر بمراجعته."
 		},
 		"ValidatePrices": {
 			"Title": "تحقق من الأسعار"
@@ -975,7 +976,7 @@
 		"ServerError": "خطأ: خطأ في الخادم",
 		"Title": "تسجيل الدخول",
 		"SignInOFFAccount": "سجّل الدخول باستخدام حسابك {url}",
-		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
+		"SignInWithOpenFoodFactsAuth": "سجّل الدخول باستخدام {off_name} auth",
 		"UsernameLabel": "اسم المستخدم",
 		"WrongCredentials": "خطأ: بيانات اعتماد خاطئة"
 	},
@@ -1032,7 +1033,7 @@
 		"CountryLabel": "بلد",
 		"CurrencyLabel": "عملة",
 		"BarcodeScanner": "ماسح الباركود",
-		"BarcodeScannerLibrary": "Barcode scanner library",
+		"BarcodeScannerLibrary": "مكتبة الماسح الضوئي الباركود",
 		"DefaultMode": "الوضع الافتراضي",
 		"FavoriteCurrencies": "العملات المفضلة",
 		"CurrencyRequired": "يلزم وجود عملة واحدة على الأقل",

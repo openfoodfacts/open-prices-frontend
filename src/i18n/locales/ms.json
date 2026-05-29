@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Untuk memuat naik berbilang tanda harga (lokasi dan tarikh kedai yang sama), klik di sini!",
-		"PromoReceiptAssistant": "Percubaan: cuba pembantu resit baharu untuk mengeluarkan harga secara automatik daripada resit anda!"
+		"PromoReceiptAssistant": "Percubaan: cuba pembantu resit baharu untuk mengeluarkan harga secara automatik daripada resit anda!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Bukti",

@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Permitir o uso de IA no seu recibo para extrair preços",
 		"ReceiptAIWarning": "Usaremos IA no seu recibo para extrair preços.",
 		"PromoProofPriceTagAddMultiple": "Para carregar várias etiquetas de preço (mesma localização da loja e data), clique aqui!",
-		"PromoReceiptAssistant": "Experimente: experimente o novo assistente de recibos para extrair automaticamente os preços dos seus recibos!"
+		"PromoReceiptAssistant": "Experimente: experimente o novo assistente de recibos para extrair automaticamente os preços dos seus recibos!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Demonstração",

@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "여러 개의 가격표(동일한 매장 위치 및 날짜)를 업로드하려면 여기를 클릭하세요!",
-		"PromoReceiptAssistant": "실험해 보세요: 새로운 영수증 도우미를 사용해 영수증에서 자동으로 가격을 추출해 보세요!"
+		"PromoReceiptAssistant": "실험해 보세요: 새로운 영수증 도우미를 사용해 영수증에서 자동으로 가격을 추출해 보세요!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "증거",

@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Prezio-etiketa bat baino gehiago igotzeko (denda-kokapen eta data berdinak), egin klik hemen!",
-		"PromoReceiptAssistant": "Esperimentua: probatu ordainagirien laguntzaile berria zure ordainagirietatik prezioak automatikoki ateratzeko!"
+		"PromoReceiptAssistant": "Esperimentua: probatu ordainagirien laguntzaile berria zure ordainagirietatik prezioak automatikoki ateratzeko!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Per caricà parechje etichette di prezzu (listessa locu di a buttega è data), cliccate quì!",
-		"PromoReceiptAssistant": "Esperimentu: pruvate u novu assistente di ricevute per estrarre automaticamente i prezzi da e vostre ricevute!"
+		"PromoReceiptAssistant": "Esperimentu: pruvate u novu assistente di ricevute per estrarre automaticamente i prezzi da e vostre ricevute!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

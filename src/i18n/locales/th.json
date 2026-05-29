@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "หากต้องการอัพโหลดป้ายราคาหลายรายการ (ที่ตั้งร้านและวันที่เดียวกัน) คลิกที่นี่!",
-		"PromoReceiptAssistant": "ทดลอง: ทดลองใช้ระบบช่วยรับใบเสร็จใหม่เพื่อดึงราคาจากใบเสร็จของคุณโดยอัตโนมัติ!"
+		"PromoReceiptAssistant": "ทดลอง: ทดลองใช้ระบบช่วยรับใบเสร็จใหม่เพื่อดึงราคาจากใบเสร็จของคุณโดยอัตโนมัติ!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "การพิสูจน์",

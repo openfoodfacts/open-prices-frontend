@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Raha te hampiditra marika vidin-javatra maro (toerana sy daty fivarotana mitovy), tsindrio eto!",
-		"PromoReceiptAssistant": "Andrana: andramo ny mpanampy amin'ny tapakila vaovao hanesorana ho azy ny vidin'ny tapakilanao!"
+		"PromoReceiptAssistant": "Andrana: andramo ny mpanampy amin'ny tapakila vaovao hanesorana ho azy ny vidin'ny tapakilanao!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

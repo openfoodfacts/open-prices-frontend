@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Để tải lên nhiều thẻ giá (cùng địa điểm cửa hàng và ngày), hãy nhấp vào đây!",
-		"PromoReceiptAssistant": "Thử nghiệm: hãy dùng thử trợ lý biên lai mới để tự động trích xuất giá từ biên lai của bạn!"
+		"PromoReceiptAssistant": "Thử nghiệm: hãy dùng thử trợ lý biên lai mới để tự động trích xuất giá từ biên lai của bạn!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Bằng chứng",

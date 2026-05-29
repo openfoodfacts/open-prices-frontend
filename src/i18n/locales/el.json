@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Επιτρέψτε την εκτέλεση τεχνητής νοημοσύνης στην απόδειξή σας για την εξαγωγή τιμών",
 		"ReceiptAIWarning": "Η Τεχνητή Νοημοσύνη θα εκτελεστεί με βάση την απόδειξή σας για να εξαγάγει τιμές.",
 		"PromoProofPriceTagAddMultiple": "Για να ανεβάσετε πολλές ετικέτες τιμών (ίδια τοποθεσία και ημερομηνία καταστήματος), κάντε κλικ εδώ!",
-		"PromoReceiptAssistant": "Πείραμα: δοκιμάστε τον νέο βοηθό αποδείξεων για να εξάγετε αυτόματα τιμές από τις αποδείξεις σας!"
+		"PromoReceiptAssistant": "Πείραμα: δοκιμάστε τον νέο βοηθό αποδείξεων για να εξάγετε αυτόματα τιμές από τις αποδείξεις σας!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Επαλήθευση",

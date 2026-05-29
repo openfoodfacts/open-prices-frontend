@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Go laisa ditheke tse dintsi tsa ditlhwatlhwa (lefelo le le tshwanang la lebenkele le letlha), tobetsa fano!",
-		"PromoReceiptAssistant": "Tekeletsa: leka mothusi yo mosha wa dirasiti go ntsha ditlhwatlhwa ka go itirisa mo dirasiti tsa gago!"
+		"PromoReceiptAssistant": "Tekeletsa: leka mothusi yo mosha wa dirasiti go ntsha ditlhwatlhwa ka go itirisa mo dirasiti tsa gago!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

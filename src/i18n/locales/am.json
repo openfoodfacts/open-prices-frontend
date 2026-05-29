@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "ብዙ የዋጋ መለያዎችን ለመስቀል (ተመሳሳይ የሱቅ ቦታ እና ቀን) እዚህ ጠቅ ያድርጉ!",
-		"PromoReceiptAssistant": "ሙከራ፡ ከደረሰኞችዎ ዋጋዎችን በራስ ሰር ለማውጣት አዲሱን ደረሰኝ ረዳት ይሞክሩ!"
+		"PromoReceiptAssistant": "ሙከራ፡ ከደረሰኞችዎ ዋጋዎችን በራስ ሰር ለማውጣት አዲሱን ደረሰኝ ረዳት ይሞክሩ!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "ማረጋገጫ",

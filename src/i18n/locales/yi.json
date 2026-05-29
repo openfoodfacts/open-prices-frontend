@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "צו אַרויפֿלאָדן קייפל פּרייַז טאַגס (זעלביקער קראָם אָרט און דאַטע), גיט דאָ!",
-		"PromoReceiptAssistant": "עקספּערימענט: פּרוּווט דעם נײַעם קוויטל אַסיסטאַנט צו אויטאָמאַטיש עקסטראַקטירן פּרײַזן פֿון אײַערע קוויטלעך!"
+		"PromoReceiptAssistant": "עקספּערימענט: פּרוּווט דעם נײַעם קוויטל אַסיסטאַנט צו אויטאָמאַטיש עקסטראַקטירן פּרײַזן פֿון אײַערע קוויטלעך!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

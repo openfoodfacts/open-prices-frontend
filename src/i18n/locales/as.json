@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "একাধিক মূল্যৰ টেগ আপলোড কৰিবলৈ (একে দোকানৰ স্থান আৰু তাৰিখ), ইয়াত ক্লিক কৰক!",
-		"PromoReceiptAssistant": "পৰীক্ষা: আপোনাৰ ৰচিদৰ পৰা স্বয়ংক্ৰিয়ভাৱে মূল্য উলিয়াবলৈ নতুন ৰচিদ সহায়ক চেষ্টা কৰক!"
+		"PromoReceiptAssistant": "পৰীক্ষা: আপোনাৰ ৰচিদৰ পৰা স্বয়ংক্ৰিয়ভাৱে মূল্য উলিয়াবলৈ নতুন ৰচিদ সহায়ক চেষ্টা কৰক!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

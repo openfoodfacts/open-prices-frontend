@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Tillad at AI unders\nger din kvittering for at udtrække priser",
 		"ReceiptAIWarning": "AI vil undersøge din kvittering for at udtrække priser.",
 		"PromoProofPriceTagAddMultiple": "For at uploade flere prismærker (samme butikslokation og dato), klik her!",
-		"PromoReceiptAssistant": "Eksperiment: Prøv den nye kvitteringsassistent til automatisk at udtrække priser fra dine kvitteringer!"
+		"PromoReceiptAssistant": "Eksperiment: Prøv den nye kvitteringsassistent til automatisk at udtrække priser fra dine kvitteringer!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Bevis",

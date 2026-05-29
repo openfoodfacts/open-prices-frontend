@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Hei tuku ake i nga tohu utu maha (te waahi toa me te ra ano), paatohia ki konei!",
-		"PromoReceiptAssistant": "Whakamatau: whakamatauhia te kaiawhina rīhiti hou ki te tango aunoa i nga utu mai i o rihīti!"
+		"PromoReceiptAssistant": "Whakamatau: whakamatauhia te kaiawhina rīhiti hou ki te tango aunoa i nga utu mai i o rihīti!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

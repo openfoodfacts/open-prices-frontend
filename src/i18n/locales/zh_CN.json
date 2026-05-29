@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "要上传多个价格标签（相同的商店位置和日期），请单击此处！",
-		"PromoReceiptAssistant": "实验：尝试使用新的收据助手自动从收据中提取价格！"
+		"PromoReceiptAssistant": "实验：尝试使用新的收据助手自动从收据中提取价格！",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "证明",

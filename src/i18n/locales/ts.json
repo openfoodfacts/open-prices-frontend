@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Ku layicha swikoweto swo tala swa nxavo (ndhawu ya xitolo na siku rin’we), tinya laha!",
-		"PromoReceiptAssistant": "Ringeta: ringeta mupfuni lontshwa wa tirhisithi ku humesa minxavo hi ku tisungulela eka tirhisithi ta wena!"
+		"PromoReceiptAssistant": "Ringeta: ringeta mupfuni lontshwa wa tirhisithi ku humesa minxavo hi ku tisungulela eka tirhisithi ta wena!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

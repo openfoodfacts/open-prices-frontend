@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "برای آپلود چندین برچسب قیمت (همان مکان و تاریخ فروشگاه)، اینجا کلیک کنید!",
-		"PromoReceiptAssistant": "آزمایش: دستیار رسید جدید را امتحان کنید تا به طور خودکار قیمت‌ها را از رسیدهای شما استخراج کند!"
+		"PromoReceiptAssistant": "آزمایش: دستیار رسید جدید را امتحان کنید تا به طور خودکار قیمت‌ها را از رسیدهای شما استخراج کند!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

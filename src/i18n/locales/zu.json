@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Ukuze ulayishe amathegi amanani amaningi (indawo yesitolo efanayo nosuku), chofoza lapha!",
-		"PromoReceiptAssistant": "Isilingo: zama umsizi omusha wamarisidi ukuze ukhiphe izintengo ngokuzenzakalelayo kumarisidi akho!"
+		"PromoReceiptAssistant": "Isilingo: zama umsizi omusha wamarisidi ukuze ukhiphe izintengo ngokuzenzakalelayo kumarisidi akho!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Ubufakazi",
