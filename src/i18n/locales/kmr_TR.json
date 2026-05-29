@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Ji bo barkirina gelek etîketên bihayê (heman cîh û dîroka dikanê), li vir bikirtînin!",
-		"PromoReceiptAssistant": "Ceribandin: alîkarê wergirtinê yê nû biceribînin da ku bi otomatîkî bihayan ji wergirtinên xwe derxîne!"
+		"PromoReceiptAssistant": "Ceribandin: alîkarê wergirtinê yê nû biceribînin da ku bi otomatîkî bihayan ji wergirtinên xwe derxîne!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
