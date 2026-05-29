@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "अनेक किंमत टॅग (एकच दुकानाचे स्थान आणि तारीख) अपलोड करण्यासाठी, येथे क्लिक करा!",
-		"PromoReceiptAssistant": "प्रयोग: तुमच्या पावत्यांमधून आपोआप किंमती काढण्यासाठी नवीन पावती सहाय्यक वापरून पहा!"
+		"PromoReceiptAssistant": "प्रयोग: तुमच्या पावत्यांमधून आपोआप किंमती काढण्यासाठी नवीन पावती सहाय्यक वापरून पहा!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
