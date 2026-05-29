@@ -44,10 +44,8 @@
         <v-alert
           class="mt-4"
           type="warning"
-          variant="tonal"
-          border="start"
-          density="comfortable"
-          icon="mdi-alert"
+          variant="outlined"
+          density="compact"
         >
           {{ $t('AddProof.ProofUploadProgressWarning') }}
         </v-alert>
