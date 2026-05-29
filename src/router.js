@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useAppStore } from './store'
 import localeManager from './i18n/localeManager.js'
+import constants from './constants'
+import i18n from './i18n'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 const routes = [
@@ -79,7 +81,7 @@ const router = createRouter({
 })
 
 /**
- * On each page change, check if it needs authentication.
+ * Before each page change, check if it needs authentication.
  * If required, but the user is not authenticated (token unknown):
  * - then redirect to 'sign-in'
  * - the initial url is passed as query parameter ?next=, in order to redirect back after login
@@ -95,6 +97,25 @@ const router = createRouter({
   }
 
   next()
+})
+
+/**
+ * After each page change, update the document title based on the route meta title and translation.
+ */
+router.afterEach((to) => {
+  const routeTitle = to.meta?.title
+  if (!routeTitle) {
+    document.title = constants.APP_NAME
+    return
+  }
+
+  const translationKey = `Router.${routeTitle}.Title`
+  const hasTranslation = i18n.global.te(translationKey)
+  const resolvedTitle = hasTranslation
+    ? i18n.global.t(translationKey)
+    : routeTitle
+
+  document.title = `${resolvedTitle} | ${constants.APP_NAME}`
 })
 
 export default router
