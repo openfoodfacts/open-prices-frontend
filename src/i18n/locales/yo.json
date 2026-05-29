@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Lati gbe awọn aami idiyele lọpọlọpọ (ipo itaja kanna ati ọjọ), tẹ ibi!",
-		"PromoReceiptAssistant": "Ṣàdánwò: gbìyànjú olùrànlọ́wọ́ ọ̀wọ̀ tuntun láti yọ àwọn iye owó jáde lọ́fẹ̀ẹ́ láti inú àwọn ọjà rẹ!"
+		"PromoReceiptAssistant": "Ṣàdánwò: gbìyànjú olùrànlọ́wọ́ ọ̀wọ̀ tuntun láti yọ àwọn iye owó jáde lọ́fẹ̀ẹ́ láti inú àwọn ọjà rẹ!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Ẹ̀rí",
