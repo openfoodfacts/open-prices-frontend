@@ -47,7 +47,7 @@
           variant="outlined"
           density="compact"
         >
-          {{ $t('AddProof.ProofUploadProgressWarning') }}
+          {{ $t('ProofAdd.ProofUploadProgressWarning') }}
         </v-alert>
       </v-sheet>
     </v-card-text>
