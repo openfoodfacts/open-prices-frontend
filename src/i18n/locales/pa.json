@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "ਕਈ ਕੀਮਤ ਟੈਗ (ਇੱਕੋ ਦੁਕਾਨ ਦੀ ਸਥਿਤੀ ਅਤੇ ਮਿਤੀ) ਅਪਲੋਡ ਕਰਨ ਲਈ, ਇੱਥੇ ਕਲਿੱਕ ਕਰੋ!",
-		"PromoReceiptAssistant": "ਪ੍ਰਯੋਗ: ਆਪਣੀਆਂ ਰਸੀਦਾਂ ਤੋਂ ਕੀਮਤਾਂ ਆਪਣੇ ਆਪ ਕੱਢਣ ਲਈ ਨਵੇਂ ਰਸੀਦ ਸਹਾਇਕ ਨੂੰ ਅਜ਼ਮਾਓ!"
+		"PromoReceiptAssistant": "ਪ੍ਰਯੋਗ: ਆਪਣੀਆਂ ਰਸੀਦਾਂ ਤੋਂ ਕੀਮਤਾਂ ਆਪਣੇ ਆਪ ਕੱਢਣ ਲਈ ਨਵੇਂ ਰਸੀਦ ਸਹਾਇਕ ਨੂੰ ਅਜ਼ਮਾਓ!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "ਸਬੂਤ",
