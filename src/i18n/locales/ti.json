@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "ብዙሓት ዋጋታት (ሓደ ዓይነት ቦታን ዕለትን ድኳን) ንምስቃል፡ ኣብዚ ጠውቑ!",
-		"PromoReceiptAssistant": "ፈተነ: ካብ ቅብሊታትካ ዋጋታት ብኣውቶማቲክ ንምውጻእ ሓድሽ ሓጋዚ ቅብሊት ፈትኖ!"
+		"PromoReceiptAssistant": "ፈተነ: ካብ ቅብሊታትካ ዋጋታት ብኣውቶማቲክ ንምውጻእ ሓድሽ ሓጋዚ ቅብሊት ፈትኖ!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
