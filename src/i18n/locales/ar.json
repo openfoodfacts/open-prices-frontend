@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "اسمح بتشغيل الذكاء الاصطناعي على إيصالك لاستخراج الأسعار",
 		"ReceiptAIWarning": "سيقوم الذكاء الاصطناعي بمعالجة إيصالك لاستخراج الأسعار.",
 		"PromoProofPriceTagAddMultiple": "لتحميل بطاقات الأسعار المتعددة (نفس موقع المتجر والتاريخ)، انقر هنا!",
-		"PromoReceiptAssistant": "تجربة: جرب مساعد الإيصال الجديد لاستخراج الأسعار تلقائيًا من إيصالاتك!"
+		"PromoReceiptAssistant": "تجربة: جرب مساعد الإيصال الجديد لاستخراج الأسعار تلقائيًا من إيصالاتك!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "دليل",
