@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "რამდენიმე ფასის ეტიკეტის ასატვირთად (იგივე მაღაზიის მდებარეობა და თარიღი), დააწკაპუნეთ აქ!",
-		"PromoReceiptAssistant": "ექსპერიმენტი: სცადეთ ახალი ქვითრების ასისტენტი, რათა ავტომატურად ამოიღოთ ფასები თქვენი ქვითრებიდან!"
+		"PromoReceiptAssistant": "ექსპერიმენტი: სცადეთ ახალი ქვითრების ასისტენტი, რათა ავტომატურად ამოიღოთ ფასები თქვენი ქვითრებიდან!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "მტკიცებულება",
