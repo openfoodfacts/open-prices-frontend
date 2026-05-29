@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Para cargar varias etiquetas de prezo (mesma localización e data da tenda), fai clic aquí!",
-		"PromoReceiptAssistant": "Experimento: proba o novo asistente de recibos para extraer automaticamente os prezos dos teus recibos!"
+		"PromoReceiptAssistant": "Experimento: proba o novo asistente de recibos para extraer automaticamente os prezos dos teus recibos!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
