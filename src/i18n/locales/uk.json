@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Дозвольте запустити ШІ на квитанції, щоб отримати ціни",
 		"ReceiptAIWarning": "AI запуститься у вашому чеку, щоб отримати ціни.",
 		"PromoProofPriceTagAddMultiple": "Щоб завантажити кілька цінників (однакове місцезнаходження та дата магазину), натисніть тут!",
-		"PromoReceiptAssistant": "Експеримент: спробуйте новий помічник з чеків, щоб автоматично витягувати ціни з ваших чеків!"
+		"PromoReceiptAssistant": "Експеримент: спробуйте новий помічник з чеків, щоб автоматично витягувати ціни з ваших чеків!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Доказ",
