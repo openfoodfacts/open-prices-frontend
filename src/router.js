@@ -81,7 +81,7 @@ const router = createRouter({
 })
 
 /**
- * On each page change, check if it needs authentication.
+ * Before each page change, check if it needs authentication.
  * If required, but the user is not authenticated (token unknown):
  * - then redirect to 'sign-in'
  * - the initial url is passed as query parameter ?next=, in order to redirect back after login
@@ -99,6 +99,9 @@ const router = createRouter({
   next()
 })
 
+/**
+ * After each page change, update the document title based on the route meta title and translation.
+ */
 router.afterEach((to) => {
   const routeTitle = to.meta?.title
   if (!routeTitle) {
