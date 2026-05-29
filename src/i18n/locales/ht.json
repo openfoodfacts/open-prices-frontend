@@ -745,7 +745,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Pou telechaje plizyè etikèt pri (menm kote magazen an ak menm dat la), klike la a!",
-		"PromoReceiptAssistant": "Eksperyans: eseye nouvo asistan resi a pou otomatikman ekstrè pri nan resi ou yo!"
+		"PromoReceiptAssistant": "Eksperyans: eseye nouvo asistan resi a pou otomatikman ekstrè pri nan resi ou yo!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Prèv",
