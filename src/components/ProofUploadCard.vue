@@ -41,6 +41,14 @@
         >
           <strong>{{ $t('Common.ProofUploadProgress', { numberOfProofsUploaded: proofObjectList.length, totalNumberOfProofs: proofImageList.length }) }}</strong>
         </v-progress-linear>
+        <v-alert
+          class="mt-4"
+          type="warning"
+          variant="outlined"
+          density="compact"
+        >
+          {{ $t('AddProof.ProofUploadProgressWarning') }}
+        </v-alert>
       </v-sheet>
     </v-card-text>
     <v-divider v-if="step === 1" />
