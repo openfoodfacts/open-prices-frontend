@@ -746,7 +746,7 @@
 		"ReceiptAIWarning": "AI analyseert uw kassabon om prijzen te extraheren.",
 		"PromoProofPriceTagAddMultiple": "Als u meerdere prijskaartjes wilt uploaden (op dezelfde winkellocatie en datum), klik dan hier!",
 		"PromoReceiptAssistant": "Experimenteer: probeer de nieuwe kassabonassistent om automatisch prijzen uit uw kassabonnen te extraheren!",
-		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
+		"ProofUploadProgressWarning": "Sluit dit tabblad niet en vernieuw de niet pagina tijdens het uploaden!"
 	},
 	"ProofCard": {
 		"Proof": "Bewijs",
