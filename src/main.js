@@ -31,13 +31,15 @@ localeManager.changeLanguage(locale)
 // Sentry
 if (import.meta.env.VITE_SENTRY_DSN) {
   if (["staging", "prod"].includes(import.meta.env.VITE_OPEN_PRICES_ENV)) {
-    Sentry.init({
-      app,
-      dsn: import.meta.env.VITE_SENTRY_DSN,
-      environment: import.meta.env.VITE_OPEN_PRICES_ENV,
-      sendDefualtPii: false,  // default
-      tracesSampleRate: 1  // default
-    })
+    if (window.location.origin === import.meta.env.VITE_OPEN_PRICES_APP_URL) {
+      Sentry.init({
+        app,
+        dsn: import.meta.env.VITE_SENTRY_DSN,
+        environment: import.meta.env.VITE_OPEN_PRICES_ENV,
+        sendDefualtPii: false,  // default
+        tracesSampleRate: 1  // default
+      })
+    }
   }
 }
 
