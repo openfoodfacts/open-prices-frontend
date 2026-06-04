@@ -30,12 +30,7 @@ export const useAppStore = defineStore('app', {
   }),
   getters: {
     getRecentLocations: (state) => {
-      return (limit=null) => {
-        if (limit && state.user.recent_locations.length && state.user.recent_locations.length > limit) {
-          return state.user.recent_locations.slice(0, limit)
-        }
-        return state.user.recent_locations
-      }
+      return state.user.recent_locations || []
     },
     getUserLanguage: (state) => {
       return state.user.language

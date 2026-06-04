@@ -188,7 +188,7 @@ export default {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
     recentLocations() {
-      return this.appStore.getRecentLocations()
+      return this.appStore.getRecentLocations
     },
     locationOnlineFormFilled() {
       return !!this.locationOnlineForm.website_url && this.urlRules.every(rule => rule(this.locationOnlineForm.website_url) === true)
