@@ -368,9 +368,9 @@
 		"Online": "Online",
 		"Open": "OTEVŘENO",
 		"OpenWithTheAssistant": "Otevřete s asistentem",
-		"OrderNoun": "Order",
-		"OrderVerb": "Order",
-		"Orders": "Orders",
+		"OrderNoun": "Řazení",
+		"OrderVerb": "Řazení",
+		"Orders": "Řazení",
 		"OrderNameASC": "Jméno",
 		"OrderLocationCountDESC": "Počet míst",
 		"OrderProductUniqueScansDESC": "Počet skenů",
@@ -746,7 +746,7 @@
 		"ReceiptAIWarning": "Umělá inteligence na vaší účtence rozezná ceny.",
 		"PromoProofPriceTagAddMultiple": "Chcete-li nahrát více cenovek (stejné umístění a datum prodejny), klikněte sem!",
 		"PromoReceiptAssistant": "Experiment: vyzkoušejte nového asistenta pro účtenky, který automaticky extrahuje ceny z vašich účtenek!",
-		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
+		"ProofUploadProgressWarning": "Během nahrávání obrázků nezavírejte tuto záložku ani neobnovujte stránku!"
 	},
 	"ProofCard": {
 		"Proof": "Doklad",
