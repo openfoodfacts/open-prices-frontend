@@ -2,6 +2,10 @@ import { defineStore } from 'pinia'
 import constants from './constants'
 import utils from './utils.js'
 
+
+const RECENT_LOCATIONS_MAX_SIZE = 10
+
+
 export const useAppStore = defineStore('app', {
   state: () => ({
     user: {
@@ -30,7 +34,7 @@ export const useAppStore = defineStore('app', {
   }),
   getters: {
     getRecentLocations: (state) => {
-      return state.user.recent_locations || []
+      return state.user.recent_locations
     },
     getUserLanguage: (state) => {
       return state.user.language
@@ -64,6 +68,10 @@ export const useAppStore = defineStore('app', {
     },
     addRecentLocation(location) {
       this.user.recent_locations = utils.addObjectToArray(this.user.recent_locations, location, true)
+      // Only store the 10 most recent locations
+      if (this.user.recent_locations.length > RECENT_LOCATIONS_MAX_SIZE) {
+        this.user.recent_locations = this.user.recent_locations.slice(0, RECENT_LOCATIONS_MAX_SIZE)
+      }
     },
     removeRecentLocation(location) {
       this.user.recent_locations = utils.removeObjectFromArray(this.user.recent_locations, location)

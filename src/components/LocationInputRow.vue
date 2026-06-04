@@ -57,11 +57,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     recentLocations() {
-      const recentLocations = this.appStore.getRecentLocations
-      if (this.maxRecentLocations) {
-        return recentLocations.slice(0, this.maxRecentLocations)
-      }
-      return recentLocations
+      return this.appStore.getRecentLocations
     },
     locationFormFilled() {
       let keysOSM = ['location_osm_id', 'location_osm_type']
