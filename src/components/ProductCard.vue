@@ -9,12 +9,12 @@
         </v-col>
         <v-col style="max-width:80%;">
           <v-row>
-            <v-col :cols="!isSelected ? '12' : '10'">
+            <v-col :cols="!showActionButton ? '12' : '10'">
               <h3 id="product-title" role="link" tabindex="0" @click="clickProduct()" @keydown.enter="clickProduct()">
                 {{ getProductTitle() }}
               </h3>
             </v-col>
-            <v-col v-if="isSelected" cols="2" class="pl-0">
+            <v-col v-if="showActionButton" cols="2" class="pl-0">
               <v-btn class="float-right" icon="mdi-pencil" size="small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickProduct()" />
             </v-col>
           </v-row>
@@ -92,6 +92,9 @@ export default {
     },
     hasProductSource() {
       return !!this.product.source
+    },
+    showActionButton() {
+      return this.isSelected
     },
   },
   methods: {

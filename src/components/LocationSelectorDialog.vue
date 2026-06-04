@@ -21,11 +21,31 @@
         </v-tabs>
 
         <v-tabs-window v-model="currentDisplay" disabled>
+          <v-tabs-window-item value="favorite">
+            <template v-if="favoriteLocations.length">
+              <v-row>
+                <v-col v-for="(location, index) in favoriteLocations" :key="index" cols="12" sm="6">
+                  <LocationCard class="mb-2" :location="location" :hideLocationFooterRow="true" :showFavoriteButton="true" :readonly="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12">
+                  <v-btn size="small" color="primary" @click="clearFavoriteLocations">
+                    {{ $t('Common.Clear') }}
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </template>
+            <p v-else>
+              {{ $t('LocationSelector.FavoriteLocations', favoriteLocations.length) }}
+            </p>
+          </v-tabs-window-item>
+
           <v-tabs-window-item value="recent">
             <template v-if="recentLocations.length">
               <v-row>
                 <v-col v-for="(location, index) in recentLocations" :key="index" cols="12" sm="6">
-                  <LocationCard class="mb-2" :location="location" :hideLocationFooterRow="true" :readonly="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
+                  <LocationCard class="mb-2" :location="location" :hideLocationFooterRow="true" :showFavoriteButton="true" :readonly="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
                 </v-col>
               </v-row>
               <v-row>
@@ -187,6 +207,9 @@ export default {
     dialogWidth() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
+    favoriteLocations() {
+      return this.appStore.getFavoriteLocations
+     },
     recentLocations() {
       return this.appStore.getRecentLocations
     },
@@ -202,9 +225,9 @@ export default {
   },
   watch: {
     currentDisplay(value) {
-      if (value === constants.LOCATION_SELECTOR_DISPLAY_LIST[1].key) {
+      if (value === constants.LOCATION_SELECTOR_DISPLAY_LIST[2].key) {  // Physical
         window.setTimeout(() => this.$refs.locationOsmSearchInput.focus(), 200)
-      } else if (value === constants.LOCATION_SELECTOR_DISPLAY_LIST[2].key) {
+      } else if (value === constants.LOCATION_SELECTOR_DISPLAY_LIST[3].key) {  // Online
         window.setTimeout(() => this.$refs.locationOnlineFormInput.focus(), 200)
       }
     }
@@ -250,8 +273,8 @@ export default {
       this.$emit('location', location)
       this.close()
     },
-    removeRecentLocation(location) {
-      this.appStore.removeRecentLocation(location)
+    clearFavoriteLocations() {
+      this.appStore.clearFavoriteLocations()
     },
     clearRecentLocations() {
       this.appStore.clearRecentLocations()

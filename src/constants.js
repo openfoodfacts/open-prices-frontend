@@ -259,12 +259,13 @@ export default {
     { key: 'photon' },
   ],
   LOCATION_SELECTOR_DISPLAY_LIST: [
-    { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },  // Recent
+    { key: 'favorite', value: 'Favorite', valueSmallScreen: '', icon: 'mdi-star' },
+    { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },
     { key: 'osm', value: 'Physical', valueSmallScreen: 'Physical', icon: LOCATION_TYPE_OSM_ICON },
     { key: 'online', value: 'Online', valueSmallScreen: 'Online', icon: LOCATION_TYPE_ONLINE_ICON },
   ],
   PRODUCT_SELECTOR_DISPLAY_LIST: [
-    // { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },  // Recent
+    // { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },
     { key: 'scan', value: 'BarcodeScan', valueSmallScreen: 'BarcodeScanShort', icon: 'mdi-barcode-scan' },
     { key: 'type', value: 'BarcodeType', valueSmallScreen: 'BarcodeTypeShort', icon: 'mdi-numeric' },
   ],
