@@ -301,6 +301,9 @@
 		"Edit": "Bewerken",
 		"End": "Einde",
 		"ErrorServer": "Fout: serverfout",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Veld is verplicht",
 		"FilterNoun": "Filter",
 		"FilterVerb": "Filter",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "mogelijk gemaakt door {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Geen recente locaties | Recente locatie {recentLocationNumber}| Recente locaties {recentLocationNumber}",
 		"Result": "Resultaat {resultNumber} | Resultaten {resultNumber}",
 		"SearchByName": "Zoek uw winkel op naam en plaats",
