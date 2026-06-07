@@ -301,6 +301,9 @@
 		"Edit": "Bearbeiten",
 		"End": "Ende",
 		"ErrorServer": "Fehler: Serverfehler",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Dieses Feld ist erforderlich",
 		"FilterNoun": "Filter",
 		"FilterVerb": "Filter",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "Bereitgestellt von {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Keine aktuellen Standorte | Aktueller Standort {recentLocationNumber}| Letzte Standorte {recentLocationNumber}",
 		"Result": "Ergebnis {resultNumber} | Ergebnisse {resultNumber}",
 		"SearchByName": "Suchen Sie Ihr Geschäft nach Name und Stadt",
