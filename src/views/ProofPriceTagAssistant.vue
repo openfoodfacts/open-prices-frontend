@@ -325,7 +325,7 @@ export default {
       ]
     },
     locationName() {
-      const recentLocations = this.appStore.getRecentLocations()
+      const recentLocations = this.appStore.getRecentLocations
       const location = recentLocations.find((location) => location.properties && location.properties.osm_id === this.proofObject.location_osm_id)
       if (location) {
         if (location.type === 'ONLINE') return location.website_url
