@@ -16,7 +16,7 @@
               <LocationDetailsRow v-if="showLocationDetailsRow" class="mt-0" :location="location" :hideLocationOSMID="hideLocationOSMID" :hideCountryCity="hideCountryCity" />
             </v-col>
             <v-col v-if="isSelected" cols="2" class="pl-0">
-              <v-btn class="float-right" icon="mdi-pencil" size="x-small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickLocation()" />
+              <v-btn class="float-right" icon="mdi-pencil" size="small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickLocation()" />
             </v-col>
           </v-row>
         </v-col>
