@@ -301,6 +301,9 @@
 		"Edit": "編輯 ",
 		"End": "End",
 		"ErrorServer": "錯誤：伺服器錯誤",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "必填字段",
 		"FilterNoun": "篩選器",
 		"FilterVerb": "篩選器",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "由{url} 技術支持"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "沒有最近的地點 |最近地點 {recentLocationNumber}|最近地點 {recentLocationNumber}",
 		"Result": "結果 {resultNumber} |結果 {resultNumber}",
 		"SearchByName": "依名稱和城市搜尋您的商店",
