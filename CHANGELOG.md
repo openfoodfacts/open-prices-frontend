@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.167.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.166.0...v1.167.0) (2026-06-07)
+
+
+### Features
+
+* **Location Selector:** allow users to set locations as favorites + new tab ([#2222](https://github.com/openfoodfacts/open-prices-frontend/issues/2222)) ([4e0a69b](https://github.com/openfoodfacts/open-prices-frontend/commit/4e0a69b29af20e26733c79c408d1d9765ee9fc6e))
+
+
+### Technical
+
+* add Sentry to the project ([#2075](https://github.com/openfoodfacts/open-prices-frontend/issues/2075)) ([d5f96f4](https://github.com/openfoodfacts/open-prices-frontend/commit/d5f96f46a93c54696c99165d37db491bbf06473e))
+* **Data:** update generated data from taxonomies ([#2214](https://github.com/openfoodfacts/open-prices-frontend/issues/2214)) ([43825f3](https://github.com/openfoodfacts/open-prices-frontend/commit/43825f30298160560e01a572ddab5a3f1bedba9c))
+* **Data:** update generated data from taxonomies ([#2224](https://github.com/openfoodfacts/open-prices-frontend/issues/2224)) ([3ac8cda](https://github.com/openfoodfacts/open-prices-frontend/commit/3ac8cdae2ea0498edd5270e4171a0a81858e6fa0))
+* increase the size of edit button in Location & Product cards. following [#1818](https://github.com/openfoodfacts/open-prices-frontend/issues/1818) & [#1871](https://github.com/openfoodfacts/open-prices-frontend/issues/1871) ([439ffbf](https://github.com/openfoodfacts/open-prices-frontend/commit/439ffbfabdd65dd9b4c6eb2c1736c111e73c8b5b))
+* **l10n:** New Crowdin translations to review and merge ([#2212](https://github.com/openfoodfacts/open-prices-frontend/issues/2212)) ([370d4d0](https://github.com/openfoodfacts/open-prices-frontend/commit/370d4d012608d2eab2cb44af0dee2bde1d370a7a))
+* **l10n:** New Crowdin translations to review and merge ([#2223](https://github.com/openfoodfacts/open-prices-frontend/issues/2223)) ([d95078d](https://github.com/openfoodfacts/open-prices-frontend/commit/d95078d06e7a18231de723677a8912e203f91420))
+* **Location Selector:** only store the 10 most recent locations ([#2221](https://github.com/openfoodfacts/open-prices-frontend/issues/2221)) ([6661f0a](https://github.com/openfoodfacts/open-prices-frontend/commit/6661f0af7aec642816aa53f36973b10d27a4b766))
+* **Location Selector:** reduce the size of icon-only tabs (on small screens) ([#2225](https://github.com/openfoodfacts/open-prices-frontend/issues/2225)) ([111d70f](https://github.com/openfoodfacts/open-prices-frontend/commit/111d70f1dd44d9ca7df00a107caa4e1422c6d7f4))
+
 ## [1.166.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.165.0...v1.166.0) (2026-05-29)
 
 
