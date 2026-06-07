@@ -301,6 +301,9 @@
 		"Edit": "Επεξεργασία",
 		"End": "Τέλος",
 		"ErrorServer": "Σφάλμα: σφάλμα διακομιστή",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Απαιτείται πεδίο",
 		"FilterNoun": "Φίλτρο",
 		"FilterVerb": "Φίλτρο",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "με την υποστήριξη του {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Δεν υπάρχουν πρόσφατες τοποθεσίες | Πρόσφατη τοποθεσία {recentLocationNumber}| Πρόσφατες τοποθεσίες {recentLocationNumber}",
 		"Result": "Αποτέλεσμα {resultNumber} | Αποτελέσματα {resultNumber}",
 		"SearchByName": "Αναζητήστε το κατάστημά σας με βάση το όνομα και την πόλη",
