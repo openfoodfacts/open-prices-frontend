@@ -301,6 +301,9 @@
 		"Edit": "Upravit",
 		"End": "Konec",
 		"ErrorServer": "Chyba: chyba serveru",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Pole je povinné",
 		"FilterNoun": "Filtr",
 		"FilterVerb": "Filtr",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "poháněno {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Žádná nedávné poloha | Nedávná poloha {recentLocationNumber}| Nedávné polohy {recentLocationNumber}",
 		"Result": "Výsledek {resultNumber} | Výsledky {resultNumber}",
 		"SearchByName": "Vyhledejte svůj obchod podle názvu a města",
