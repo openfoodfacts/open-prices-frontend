@@ -14,9 +14,9 @@
           contain
           max-height="50%"
         />
-        <v-tabs v-model="currentDisplay">
+        <v-tabs v-model="currentDisplay" :grow="!$vuetify.display.smAndUp">
           <v-tab v-for="item in displayItems" :key="item.key" :value="item.key">
-            <v-icon start>
+            <v-icon :start="$vuetify.display.smAndUp || !!item.valueSmallScreen">
               {{ item.icon }}
             </v-icon>
             <span v-if="$vuetify.display.smAndUp">{{ $t('Common.' + item.value) }}</span>

@@ -68,6 +68,11 @@
     padding-inline-end: 12px !important;
 }
 
+.v-tab.v-btn {
+    /* allow icon-only tabs to shrink */
+    min-width: unset !important;
+}
+
 .chip-group {
   display: flex;
   flex-wrap: wrap;
