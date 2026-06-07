@@ -301,6 +301,9 @@
 		"Edit": "עריכה",
 		"End": "סוף",
 		"ErrorServer": "שגיאה: שגיאת שרת",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "שדה חובה",
 		"FilterNoun": "סינון",
 		"FilterVerb": "סינון",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "מופעל על גבי {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "אין מקומות אחרונים | מקום אחרון {recentLocationNumber}| {recentLocationNumber} מקומות אחרונים",
 		"Result": "תוצאה אחת | {resultNumber} תוצאות",
 		"SearchByName": "חיפוש החנות שלך לפי שם ועיר",
