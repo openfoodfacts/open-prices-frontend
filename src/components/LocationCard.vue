@@ -10,13 +10,16 @@
         </v-col>
         <v-col style="max-width:80%;">
           <v-row>
-            <v-col :cols="!isSelected ? '12' : '10'" @click="clickLocation()">
+            <v-col :cols="!showActionButton ? '12' : '10'" @click="clickLocation()">
               <h3>{{ getLocationTitle }}</h3>
               <p>{{ getLocationSubtitle }}</p>
               <LocationDetailsRow v-if="showLocationDetailsRow" class="mt-0" :location="location" :hideLocationOSMID="hideLocationOSMID" :hideCountryCity="hideCountryCity" />
             </v-col>
-            <v-col v-if="isSelected" cols="2" class="pl-0">
+            <v-col v-if="showEditButton" cols="2" class="pl-0">
               <v-btn class="float-right" icon="mdi-pencil" size="small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickLocation()" />
+            </v-col>
+            <v-col v-else-if="showFavoriteButton" cols="2" class="pl-0">
+              <v-btn class="float-right" :icon="isFavoriteLocation ? 'mdi-star' : 'mdi-star-outline'" size="small" density="comfortable" variant="text" :title="location.is_favorite ? $t('Common.FavoritesRemove') : $t('Common.FavoritesAdd')" @click.stop="toggleFavorite()" />
             </v-col>
           </v-row>
         </v-col>
@@ -46,6 +49,10 @@ export default {
       required: true
     },
     isSelected: {
+      type: Boolean,
+      default: false
+    },
+    showFavoriteButton: {
       type: Boolean,
       default: false
     },
@@ -94,7 +101,15 @@ export default {
     getLocationBrandLogoPathName() {
       return geo_utils.getLocationBrandLogoPathName(this.location)
     },
-    // Removed brandLogoSrc as it is no longer needed
+    showEditButton() {
+      return this.isSelected
+    },
+    showActionButton() {
+      return this.showEditButton || this.showFavoriteButton
+    },
+    isFavoriteLocation() {
+      return this.appStore.isFavoriteLocation(this.location)
+    },
     showLocationDetailsRow() {
       return !this.isTypeONLINE
     },
@@ -113,6 +128,13 @@ export default {
       }
       this.$router.push({ path: `/locations/${this.location.id}` })
     },
+    toggleFavorite() {
+      if (this.appStore.isFavoriteLocation(this.location)) {
+        this.appStore.removeFavoriteLocation(this.location)
+      } else {
+        this.appStore.addFavoriteLocation(this.location)
+      }
+     },
   }
 }
 </script>

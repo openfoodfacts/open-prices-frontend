@@ -14,6 +14,7 @@ export const useAppStore = defineStore('app', {
       is_moderator: false,
       last_product_type_used: constants.PRICE_TYPE_PRODUCT,  // or 'BARCODE'
       last_currency_used: import.meta.env.VITE_DEFAULT_CURRENCY,  // 'EUR'
+      favorite_locations: [],
       recent_locations: [],
       language: import.meta.env.VITE_DEFAULT_LOCALE, // 'en'
       country: import.meta.env.VITE_DEFAULT_COUNTRY,  // 'FR',
@@ -27,12 +28,15 @@ export const useAppStore = defineStore('app', {
       drawer_display_experiments: true,
       preferedTheme: null,
       price_list_display_default_mode: constants.DISPLAY_LIST[0].key,
-      location_finder_default_mode: constants.LOCATION_SELECTOR_DISPLAY_LIST[1].key,
+      location_finder_default_mode: constants.LOCATION_SELECTOR_DISPLAY_LIST[2].key,  // Physical
       barcode_scanner_default_mode: constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key,
       barcode_scanner_library: constants.BARCODE_SCANNER_DISPLAY_LIST[0].key
     },
   }),
   getters: {
+    getFavoriteLocations: (state) => {
+      return state.user.favorite_locations || []
+    },
     getRecentLocations: (state) => {
       return state.user.recent_locations
     },
@@ -66,6 +70,9 @@ export const useAppStore = defineStore('app', {
       this.user.token = null
       this.user.is_moderator = false
     },
+    isRecentLocation(location) {
+      return this.user.recent_locations.some(recentLocation => recentLocation.id === location.id)
+    },
     addRecentLocation(location) {
       this.user.recent_locations = utils.addObjectToArray(this.user.recent_locations, location, true)
       // Only store the 10 most recent locations
@@ -78,6 +85,18 @@ export const useAppStore = defineStore('app', {
     },
     clearRecentLocations() {
       this.user.recent_locations = []
+    },
+    isFavoriteLocation(location) {
+      return this.user.favorite_locations.some(favoriteLocation => favoriteLocation.id === location.id)
+    },
+    addFavoriteLocation(location) {
+      this.user.favorite_locations = utils.addObjectToArray(this.user.favorite_locations, location, true)
+    },
+    removeFavoriteLocation(location) {
+      this.user.favorite_locations = utils.removeObjectFromArray(this.user.favorite_locations, location)
+    },
+    clearFavoriteLocations() {
+      this.user.favorite_locations = []
     },
     setLanguage(language) {
       this.user.language = language
