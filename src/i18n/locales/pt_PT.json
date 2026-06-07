@@ -301,6 +301,9 @@
 		"Edit": "Editar",
 		"End": "Fim",
 		"ErrorServer": "Erro: erro do servidor",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Campo obrigatório",
 		"FilterNoun": "Filtro",
 		"FilterVerb": "Filtro",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "fornecido por {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Nenhuma localização recente | Localização recente {recentLocationNumber}| Localizações recentes {recentLocationNumber}",
 		"Result": "Resultado {resultNumber} | Resultados {resultNumber}",
 		"SearchByName": "Pesquisar a sua loja por nome e cidade",
