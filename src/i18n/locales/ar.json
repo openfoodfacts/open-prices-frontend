@@ -301,6 +301,9 @@
 		"Edit": "تحرير",
 		"End": "نهاية",
 		"ErrorServer": "خطأ: خطأ في الخادم",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "الحقل مطلوب",
 		"FilterNoun": "تصفية",
 		"FilterVerb": "تصفية",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "مدعوم بواسطة {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "لا توجد مواقع حديثة | الموقع الأخير {recentLocationNumber}| المواقع الحديثة {recentLocationNumber}",
 		"Result": "النتيجة {resultNumber} | النتائج {resultNumber}",
 		"SearchByName": "ابحث عن متجرك بالاسم والمدينة",

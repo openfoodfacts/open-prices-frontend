@@ -301,6 +301,9 @@
 		"Edit": "Redaguoti",
 		"End": "Pabaiga",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Laukas būtinas",
 		"FilterNoun": "Filtras",
 		"FilterVerb": "Filtras",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "įgalino {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Ieškoti savo parduotuvės pagal pavadinimą ir miestą",

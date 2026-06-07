@@ -301,6 +301,9 @@
 		"Edit": "Редагувати",
 		"End": "Кінець",
 		"ErrorServer": "Помилка: помилка сервера",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Поле обов'язкове для заповнення",
 		"FilterNoun": "Фільтр",
 		"FilterVerb": "Фільтр",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "на основі {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Немає останніх локацій | Останнє локація {recentLocationNumber}| Останні локації {recentLocationNumber}",
 		"Result": "Результат {resultNumber} | Результати {resultNumber}",
 		"SearchByName": "Шукайте свій магазин за назвою та містом",

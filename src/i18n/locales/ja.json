@@ -301,6 +301,9 @@
 		"Edit": "編集",
 		"End": "終わり",
 		"ErrorServer": "エラー: サーバーエラー",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "このフィールドは必須です",
 		"FilterNoun": "フィルタ",
 		"FilterVerb": "フィルタ",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "{url}によって提供"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "最近の場所なし | 最近の場所 {recentLocationNumber}| 最近の場所 {recentLocationNumber}",
 		"Result": "結果 {resultNumber} | 結果 {resultNumber}",
 		"SearchByName": "名前と都市でショップを検索",

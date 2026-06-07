@@ -301,6 +301,9 @@
 		"Edit": "Upravit",
 		"End": "Konec",
 		"ErrorServer": "Chyba: chyba serveru",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Pole je povinné",
 		"FilterNoun": "Filtr",
 		"FilterVerb": "Filtr",
@@ -368,9 +371,9 @@
 		"Online": "Online",
 		"Open": "OTEVŘENO",
 		"OpenWithTheAssistant": "Otevřete s asistentem",
-		"OrderNoun": "Order",
-		"OrderVerb": "Order",
-		"Orders": "Orders",
+		"OrderNoun": "Řazení",
+		"OrderVerb": "Řazení",
+		"Orders": "Řazení",
 		"OrderNameASC": "Jméno",
 		"OrderLocationCountDESC": "Počet míst",
 		"OrderProductUniqueScansDESC": "Počet skenů",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "poháněno {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Žádná nedávné poloha | Nedávná poloha {recentLocationNumber}| Nedávné polohy {recentLocationNumber}",
 		"Result": "Výsledek {resultNumber} | Výsledky {resultNumber}",
 		"SearchByName": "Vyhledejte svůj obchod podle názvu a města",
@@ -746,7 +750,7 @@
 		"ReceiptAIWarning": "Umělá inteligence na vaší účtence rozezná ceny.",
 		"PromoProofPriceTagAddMultiple": "Chcete-li nahrát více cenovek (stejné umístění a datum prodejny), klikněte sem!",
 		"PromoReceiptAssistant": "Experiment: vyzkoušejte nového asistenta pro účtenky, který automaticky extrahuje ceny z vašich účtenek!",
-		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
+		"ProofUploadProgressWarning": "Během nahrávání obrázků nezavírejte tuto záložku ani neobnovujte stránku!"
 	},
 	"ProofCard": {
 		"Proof": "Doklad",

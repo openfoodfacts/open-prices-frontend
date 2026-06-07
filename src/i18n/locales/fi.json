@@ -301,6 +301,9 @@
 		"Edit": "Muokkaa",
 		"End": "End",
 		"ErrorServer": "Virhe: palvelinvirhe",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Kenttä on pakollinen",
 		"FilterNoun": "Suodata",
 		"FilterVerb": "Suodata",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Ei viimeaikaisia sijainteja | Viimeaikainen sijainti {recentLocationNumber}| Viimeaikaiset sijainnit {recentLocationNumber}",
 		"Result": "Tulos {resultNumber} | Tulokset {resultNumber}",
 		"SearchByName": "Hae kauppaasi nimen ja kaupungin mukaan",

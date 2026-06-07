@@ -301,6 +301,9 @@
 		"Edit": "Редактировать",
 		"End": "Конец",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Поле обязательно для заполнения",
 		"FilterNoun": "Фильтр",
 		"FilterVerb": "Фильтр",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "работает на {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",

@@ -301,6 +301,9 @@
 		"Edit": "Sunting",
 		"End": "Selesai",
 		"ErrorServer": "Kesalahan: kesalahan server",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Bidang wajib diisi",
 		"FilterNoun": "Filter",
 		"FilterVerb": "Filter",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "didukung oleh {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Tidak ada lokasi terbaru | Lokasi terbaru {recentLocationNumber}| Lokasi terbaru {recentLocationNumber}",
 		"Result": "Hasil {resultNumber} | Hasil {resultNumber}",
 		"SearchByName": "Cari toko Anda berdasarkan nama dan kota",

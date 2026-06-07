@@ -301,6 +301,9 @@
 		"Edit": "编辑",
 		"End": "End",
 		"ErrorServer": "错误：服务器错误",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "必填字段",
 		"FilterNoun": "筛选",
 		"FilterVerb": "筛选",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "由 {url} 供电"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "没有最近的地点 |最近位置 {recentLocationNumber}|最近地点 {recentLocationNumber}",
 		"Result": "结果 {resultNumber} | 结果 {resultNumber}",
 		"SearchByName": "按名称和城市搜索您的商店",

@@ -301,6 +301,9 @@
 		"Edit": "Redigér",
 		"End": "Slut",
 		"ErrorServer": "Fejl: serverfejl",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Feltet er påkrævet",
 		"FilterNoun": "Filtrere",
 		"FilterVerb": "Filtrere",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "drevet af {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Ingen nylige placeringer | Seneste placering {recentLocationNumber}| Seneste placeringer {recentLocationNumber}",
 		"Result": "Resultat {resultNumber} | Resultater {resultNumber}",
 		"SearchByName": "Søg efter butik med navn og by",

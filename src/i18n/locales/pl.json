@@ -301,6 +301,9 @@
 		"Edit": "Edytuj",
 		"End": "End",
 		"ErrorServer": "Błąd: błąd serwera",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Pole jest wymagane",
 		"FilterNoun": "Filtr",
 		"FilterVerb": "Filtr",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "używa {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Brak ostatnich lokalizacji | Ostatnia lokalizacja {recentLocationNumber}| Ostatnie lokalizacje {recentLocationNumber}",
 		"Result": "Wynik {resultNumber} | Wyniki {resultNumber}",
 		"SearchByName": "Wyszukaj swój sklep według nazwy i miasta",
