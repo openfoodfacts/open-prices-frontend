@@ -301,6 +301,9 @@
 		"Edit": "Rediģēt",
 		"End": "Beigas",
 		"ErrorServer": "Kļūda: servera kļūda",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Lauks ir obligāts",
 		"FilterNoun": "Filtrs",
 		"FilterVerb": "Filtrs",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "nodrošina {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Nav nesenu atrašanās vietu | Nesenā atrašanās vieta {recentLocationNumber}| Nesenās atrašanās vietas {recentLocationNumber}",
 		"Result": "Rezultāts {resultNumber} | Rezultāti {resultNumber}",
 		"SearchByName": "Meklējiet savu veikalu pēc nosaukuma un pilsētas",
