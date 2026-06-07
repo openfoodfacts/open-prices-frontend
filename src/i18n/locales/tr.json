@@ -301,6 +301,9 @@
 		"Edit": "Düzenle",
 		"End": "Son",
 		"ErrorServer": "Hata: sunucu hatası",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Alan gereklidir",
 		"FilterNoun": "Filtrele",
 		"FilterVerb": "Filtrele",
@@ -654,6 +657,7 @@
 		"PoweredBy": {
 			"text": "{url} tarafından desteklenmektedir"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Yeni konum yok | Son konum {recentLocationNumber}| Son konumlar {recentLocationNumber}",
 		"Result": "Sonuç {resultNumber} | Sonuçlar {resultNumber}",
 		"SearchByName": "Mağazanızı ada ve şehre göre arayın",
