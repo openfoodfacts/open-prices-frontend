@@ -91,8 +91,8 @@ export default {
         this.locationForm.location_osm_type = null
       } else {
         this.locationForm.location_id = null
-        this.locationForm.location_osm_id = geo_utils.getLocationID(location)
-        this.locationForm.location_osm_type = geo_utils.getLocationType(location)
+        this.locationForm.location_osm_id = geo_utils.getLocationOSMId(location)
+        this.locationForm.location_osm_type = geo_utils.getLocationOSMType(location)
       }
       this.$emit('location', this.selectedLocation)
     },

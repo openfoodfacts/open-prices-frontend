@@ -92,7 +92,9 @@ function addObjectToArray(arr, obj, unshift=false, avoidDuplicates=true) {
 
 function removeObjectFromArray(arr, obj) {
   let itemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
-  arr.splice(itemIndex, 1)
+  if (itemIndex >= 0) {
+    arr.splice(itemIndex, 1)
+  }
   return arr
 }
 
