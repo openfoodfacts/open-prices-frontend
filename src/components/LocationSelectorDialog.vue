@@ -24,7 +24,7 @@
           <v-tabs-window-item value="favorite">
             <template v-if="favoriteLocations.length">
               <v-row>
-                <v-col v-for="(location, index) in favoriteLocations" :key="index" cols="12" sm="6">
+                <v-col v-for="location in favoriteLocations" :key="getLocationId(location)" cols="12" sm="6">
                   <LocationCard class="mb-2" :location="location" :hideLocationFooterRow="true" :showFavoriteButton="true" :readonly="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
                 </v-col>
               </v-row>
@@ -44,7 +44,7 @@
           <v-tabs-window-item value="recent">
             <template v-if="recentLocations.length">
               <v-row>
-                <v-col v-for="(location, index) in recentLocations" :key="index" cols="12" sm="6">
+                <v-col v-for="location in recentLocations" :key="getLocationId(location)" cols="12" sm="6">
                   <LocationCard class="mb-2" :location="location" :hideLocationFooterRow="true" :showFavoriteButton="true" :readonly="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
                 </v-col>
               </v-row>
@@ -91,7 +91,7 @@
             <v-sheet v-if="results !== null">
               <v-row v-if="results.length">
                 <v-col cols="12" sm="6">
-                  <LocationCard v-for="(location, index) in results" :key="index" :location="location" :hideLocationFooterRow="true" :readonly="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
+                  <LocationCard v-for="location in results" :key="getLocationId(location)" :location="location" :hideLocationFooterRow="true" :readonly="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
                 </v-col>
                 <v-col cols="12" sm="6" style="min-height:400px">
                   <LeafletMap :locations="results" :showActions="true" @locationSelected="selectLocation" />
@@ -168,6 +168,7 @@ import openStreetMapApi from '../services/openStreetMapApi'
 import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import utils from '../utils.js'
+import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
@@ -238,6 +239,9 @@ export default {
   methods: {
     fieldRequired(v) {
       return !!v
+    },
+    getLocationId(location) {
+      return geo_utils.getLocationId(location)
     },
     locationOsmSearch() {
       this.$refs.locationOsmSearchInput.blur()

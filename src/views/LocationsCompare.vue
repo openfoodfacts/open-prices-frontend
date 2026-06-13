@@ -159,7 +159,7 @@ export default {
         this.$router.push({ name: 'locations-compare', query: query })
       }
       else {
-        openPricesApi.getLocationByOsmTypeAndId(geo_utils.getLocationType(location), geo_utils.getLocationID(location)).then((location) => {
+        openPricesApi.getLocationByOsmTypeAndId(geo_utils.getLocationOSMType(location), geo_utils.getLocationOSMId(location)).then((location) => {
           this[`selectedLocation${key.toUpperCase()}`] = location
           query[`location_${key}_id`] = location.id
           this.$router.push({ name: 'locations-compare', query: query })

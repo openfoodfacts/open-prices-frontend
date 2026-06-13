@@ -4,7 +4,7 @@
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
           <LocationBrandLogoImg
-            :logo="getLocationBrandLogoPathName"
+            :logo="getLocationOSMBrandLogoPathName"
             width="100px"
           />
         </v-col>
@@ -19,7 +19,7 @@
               <v-btn class="float-right" icon="mdi-pencil" size="small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickLocation()" />
             </v-col>
             <v-col v-else-if="showFavoriteButton" cols="2" class="pl-0">
-              <v-btn class="float-right" :icon="isFavoriteLocation ? 'mdi-star' : 'mdi-star-outline'" size="small" density="comfortable" variant="text" :title="location.is_favorite ? $t('Common.FavoritesRemove') : $t('Common.FavoritesAdd')" @click.stop="toggleFavorite()" />
+              <v-btn class="float-right" :icon="isFavoriteLocation ? 'mdi-star' : 'mdi-star-outline'" size="small" density="comfortable" variant="text" :title="isFavoriteLocation ? $t('Common.FavoritesRemove') : $t('Common.FavoritesAdd')" @click.stop="toggleFavorite()" />
             </v-col>
           </v-row>
         </v-col>
@@ -98,8 +98,8 @@ export default {
       }
       return geo_utils.getLocationOSMTitle(this.location, false, true, false, false, false)
     },
-    getLocationBrandLogoPathName() {
-      return geo_utils.getLocationBrandLogoPathName(this.location)
+    getLocationOSMBrandLogoPathName() {
+      return geo_utils.getLocationOSMBrandLogoPathName(this.location)
     },
     showEditButton() {
       return this.isSelected

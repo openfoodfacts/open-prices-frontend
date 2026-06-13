@@ -2,207 +2,6 @@ import constants from '../constants'
 import utils from '../utils'
 
 
-/**
- * /**
- * Get the flag emoji for the country
- * @link https://dev.to/jorik/country-code-to-flag-emoji-a21
- * @param  {String} countryCode The country code
- * @return {String}             The flag emoji
- */
-function getCountryEmojiFromCode(countryCode) {
-  let codePoints = countryCode.toUpperCase().split('').map(char =>  127397 + char.charCodeAt())
-	return String.fromCodePoint(...codePoints)
-}
-
-function getLocationName(locationObject) {
-  // Photon
-  if (locationObject.properties) {
-    return locationObject.properties.name
-  }
-  // Nominatim or OP
-  return locationObject.name || locationObject.osm_name || ''
-}
-
-function getLocationRoad(locationObject) {
-  // Nominatim
-  if (locationObject.address) {
-    let locationRoad = locationObject.address.house_number ? `${locationObject.address.house_number}, ` : ''
-    locationRoad += locationObject.address.road || ''
-    return locationRoad
-  }
-  // Photon
-  else if (locationObject.properties) {
-    let locationRoad = locationObject.properties.housenumber ? `${locationObject.properties.housenumber}, ` : ''
-    locationRoad += locationObject.properties.street || ''
-    return locationRoad
-  }
-  // OP
-  // return everything from osm_display_name between locationName & locationCity
-  else if (locationObject.osm_display_name) {
-    const locationName = getLocationName(locationObject)
-    const locationCity = getLocationCity(locationObject)
-    let startIndex = locationObject.osm_display_name.indexOf(locationName)
-    if (startIndex !== -1) {
-      startIndex += locationName.length
-      let endIndex = locationObject.osm_display_name.indexOf(locationCity, startIndex)
-      if (endIndex === -1) {
-        endIndex = locationObject.osm_display_name.length
-      }
-      let locationRoad = locationObject.osm_display_name.substring(startIndex, endIndex).trim()
-      // remove leading and trailing commas
-      locationRoad = locationRoad.replace(/^,|,$/g, '').trim()
-      return locationRoad
-    }
-  }
-  return ''
-}
-
-function getLocationCity(locationObject) {
-  // Nominatim
-  if (locationObject.address) {
-    return locationObject.address.village || locationObject.address.town || locationObject.address.city || locationObject.address.municipality
-  }
-  // Photon
-  else if (locationObject.properties) {
-    return locationObject.properties.village || locationObject.properties.town || locationObject.properties.city || locationObject.properties.municipality
-  }
-  // OP
-  return locationObject.osm_address_city || ''
-}
-
-function getLocationCountry(locationObject) {
-  // Nominatim
-  if (locationObject.address) {
-    return locationObject.address.country || ''
-  }
-  // Photon
-  else if (locationObject.properties) {
-    return locationObject.properties.country || ''
-  }
-  // OP
-  return locationObject.osm_address_country || ''
-}
-
-function getLocationCountryCode(locationObject) {
-  // Nominatim
-  if (locationObject.address) {
-    return locationObject.address.country_code || ''
-  }
-  // Photon
-  else if (locationObject.properties) {
-    return locationObject.properties.countrycode || ''
-  }
-  // OP
-  return locationObject.osm_address_country_code || ''
-}
-
-/**
- * input: {"geometry":{"coordinates":[2.3548062,48.8301752],"type":"Point"},"type":"Feature","properties":{"osm_id":11112946989,"country":"France","city":"Paris","countrycode":"FR","postcode":"75013","locality":"Quartier de la Maison-Blanche","type":"house","osm_type":"N","osm_key":"shop","housenumber":"30","street":"Avenue d'Italie","district":"Paris","osm_value":"department_store","name":"HEMA","state":"Ile-de-France"}}
- * output: HEMA ; 30, Avenue d'Italie, Paris
- */
-function getLocationOSMTitle(locationObject, withName=true, withRoad=false, withCity=true, withCountry=false, withEmoji=false) {
-  let locationTitle = ''
-  if (withName) {
-    locationTitle += `${getLocationName(locationObject)}`
-  }
-  if (withRoad && (locationObject.address || locationObject.properties || locationObject.osm_display_name)) {
-    locationTitle += locationTitle ? ', ' : ''
-    locationTitle += getLocationRoad(locationObject)
-  }
-  if (withCity) {
-    locationTitle += locationTitle ? ', ' : ''
-    locationTitle += getLocationCity(locationObject)
-  }
-  if (withCountry) {
-    locationTitle += locationTitle ? ', ' : ''
-    locationTitle += getLocationCountry(locationObject)
-  }
-  if (withEmoji) {
-    locationTitle += ` ${getCountryEmojiFromCode(getLocationCountryCode(locationObject)) || ''}`
-  }
-  if (!locationTitle) {
-    locationTitle = locationObject.id
-  }
-  return locationTitle
-}
-
-function getLocationID(locationObject) {
-  // Photon
-  if (locationObject.properties) {
-    return locationObject.properties.osm_id
-  }
-  // Nominatim or OP
-  return locationObject.osm_id
-}
-
-function getLocationType(locationObject) {
-  if (locationObject.properties) {
-    const OSM_TYPE_MAPPING = {"N": "Node", "W": "Way", "R": "Relation"}
-    return OSM_TYPE_MAPPING[locationObject.properties.osm_type].toUpperCase()
-  }
-  // Nominatim or OP
-  return locationObject.osm_type.toUpperCase()
-}
-
-function buildLocationUniqueId(locationId, locationType) {
-  // examples: N12345, W12345, R12345
-  if (locationId && locationType) {
-    return `${locationType[0]}${locationId.toString()}`
-  }
-  return null
-}
-
-function getLocationUniqueID(locationObject) {
-  return buildLocationUniqueId(getLocationID(locationObject), getLocationType(locationObject))
-}
-
-function getLocationTag(locationObject) {
-  // examples: shop:supermarket, shop:convenience, shop:bakery, shop:doityourself
-  // Photon
-  if (locationObject.properties) {
-    return `${locationObject.properties.osm_key}:${locationObject.properties.osm_value}`
-  }
-  // Nominatim
-  else if (locationObject.address) {
-    return `${locationObject.class}:${locationObject.type}`
-  }
-  // OP
-  return `${locationObject.osm_tag_key}:${locationObject.osm_tag_value}`
-}
-
-function getLocationLatLng(locationObject) {
-  // Nominatim
-  if (locationObject.lat && locationObject.lon) {
-    return [locationObject.lat, locationObject.lon]
-  }
-  // Photon
-  else if (locationObject.geometry && locationObject.geometry.coordinates) {
-    return [locationObject.geometry.coordinates[1], locationObject.geometry.coordinates[0]]
-  }
-  // OP
-  return [locationObject.osm_lat, locationObject.osm_lon]
-}
-
-function getLocationBrandLogoPathName(locationObject) {
-  const BRAND_URL_PREFIX = 'https://raw.githubusercontent.com/openfoodfacts/brand-images/refs/heads/main/xx/stores/'
-  let nameCleaned = null
-  // Photon
-  if (locationObject.properties && locationObject.properties.name) {
-    nameCleaned = utils.slugify(locationObject.properties.name)
-  // Nominatim
-  } else if (locationObject.address && locationObject.name) {
-    nameCleaned = utils.slugify(locationObject.name)
-  // OP
-  } else if (locationObject.osm_brand) {
-    // See https://github.com/openfoodfacts/open-prices/issues/1148
-    return locationObject.osm_brand_logo_url.replace('.png', '').replace('.svg', '')
-  }
-  if (nameCleaned) {
-    nameCleaned = `${BRAND_URL_PREFIX}${nameCleaned}`
-  }
-  return nameCleaned
-}
-
 function getMapBounds(results) {
   if (results.length > 0) {
     // Nominatim
@@ -235,9 +34,214 @@ function getMapCenter(results) {
   return [45, 5]
 }
 
-// OP location
+/**
+ * /**
+ * Get the flag emoji for the country
+ * @link https://dev.to/jorik/country-code-to-flag-emoji-a21
+ * @param  {String} countryCode The country code
+ * @return {String}             The flag emoji
+ */
+function getCountryEmojiFromCode(countryCode) {
+  let codePoints = countryCode.toUpperCase().split('').map(char =>  127397 + char.charCodeAt())
+	return String.fromCodePoint(...codePoints)
+}
+
+function getLocationOSMName(locationObject) {
+  // Photon
+  if (locationObject.properties) {
+    return locationObject.properties.name
+  }
+  // Nominatim or OP
+  return locationObject.name || locationObject.osm_name || ''
+}
+
+function getLocationOSMRoad(locationObject) {
+  // Nominatim
+  if (locationObject.address) {
+    let locationRoad = locationObject.address.house_number ? `${locationObject.address.house_number}, ` : ''
+    locationRoad += locationObject.address.road || ''
+    return locationRoad
+  }
+  // Photon
+  else if (locationObject.properties) {
+    let locationRoad = locationObject.properties.housenumber ? `${locationObject.properties.housenumber}, ` : ''
+    locationRoad += locationObject.properties.street || ''
+    return locationRoad
+  }
+  // OP
+  // return everything from osm_display_name between locationName & locationCity
+  else if (locationObject.osm_display_name) {
+    const locationName = getLocationOSMName(locationObject)
+    const locationCity = getLocationOSMCity(locationObject)
+    let startIndex = locationObject.osm_display_name.indexOf(locationName)
+    if (startIndex !== -1) {
+      startIndex += locationName.length
+      let endIndex = locationObject.osm_display_name.indexOf(locationCity, startIndex)
+      if (endIndex === -1) {
+        endIndex = locationObject.osm_display_name.length
+      }
+      let locationRoad = locationObject.osm_display_name.substring(startIndex, endIndex).trim()
+      // remove leading and trailing commas
+      locationRoad = locationRoad.replace(/^,|,$/g, '').trim()
+      return locationRoad
+    }
+  }
+  return ''
+}
+
+function getLocationOSMCity(locationObject) {
+  // Nominatim
+  if (locationObject.address) {
+    return locationObject.address.village || locationObject.address.town || locationObject.address.city || locationObject.address.municipality
+  }
+  // Photon
+  else if (locationObject.properties) {
+    return locationObject.properties.village || locationObject.properties.town || locationObject.properties.city || locationObject.properties.municipality
+  }
+  // OP
+  return locationObject.osm_address_city || ''
+}
+
+function getLocationOSMCountry(locationObject) {
+  // Nominatim
+  if (locationObject.address) {
+    return locationObject.address.country || ''
+  }
+  // Photon
+  else if (locationObject.properties) {
+    return locationObject.properties.country || ''
+  }
+  // OP
+  return locationObject.osm_address_country || ''
+}
+
+function getLocationOSMCountryCode(locationObject) {
+  // Nominatim
+  if (locationObject.address) {
+    return locationObject.address.country_code || ''
+  }
+  // Photon
+  else if (locationObject.properties) {
+    return locationObject.properties.countrycode || ''
+  }
+  // OP
+  return locationObject.osm_address_country_code || ''
+}
+
+/**
+ * input: {"geometry":{"coordinates":[2.3548062,48.8301752],"type":"Point"},"type":"Feature","properties":{"osm_id":11112946989,"country":"France","city":"Paris","countrycode":"FR","postcode":"75013","locality":"Quartier de la Maison-Blanche","type":"house","osm_type":"N","osm_key":"shop","housenumber":"30","street":"Avenue d'Italie","district":"Paris","osm_value":"department_store","name":"HEMA","state":"Ile-de-France"}}
+ * output: HEMA ; 30, Avenue d'Italie, Paris
+ */
+function getLocationOSMTitle(locationObject, withName=true, withRoad=false, withCity=true, withCountry=false, withEmoji=false) {
+  let locationTitle = ''
+  if (withName) {
+    locationTitle += `${getLocationOSMName(locationObject)}`
+  }
+  if (withRoad && (locationObject.address || locationObject.properties || locationObject.osm_display_name)) {
+    locationTitle += locationTitle ? ', ' : ''
+    locationTitle += getLocationOSMRoad(locationObject)
+  }
+  if (withCity) {
+    locationTitle += locationTitle ? ', ' : ''
+    locationTitle += getLocationOSMCity(locationObject)
+  }
+  if (withCountry) {
+    locationTitle += locationTitle ? ', ' : ''
+    locationTitle += getLocationOSMCountry(locationObject)
+  }
+  if (withEmoji) {
+    locationTitle += ` ${getCountryEmojiFromCode(getLocationOSMCountryCode(locationObject)) || ''}`
+  }
+  if (!locationTitle) {
+    locationTitle = locationObject.id
+  }
+  return locationTitle
+}
+
+function getLocationOSMId(locationObject) {
+  // Photon
+  if (locationObject.properties) {
+    return locationObject.properties.osm_id
+  }
+  // Nominatim or OP
+  return locationObject.osm_id
+}
+
+function getLocationOSMType(locationObject) {
+  if (locationObject.properties) {
+    const OSM_TYPE_MAPPING = {"N": "Node", "W": "Way", "R": "Relation"}
+    return OSM_TYPE_MAPPING[locationObject.properties.osm_type].toUpperCase()
+  }
+  // Nominatim or OP
+  return locationObject.osm_type.toUpperCase()
+}
+
+function buildLocationOSMUniqueId(locationId, locationType) {
+  // examples: N12345, W12345, R12345
+  if (locationId && locationType) {
+    return `${locationType[0]}${locationId.toString()}`
+  }
+  return null
+}
+
+function getLocationOSMUniqueId(locationObject) {
+  return buildLocationOSMUniqueId(getLocationOSMId(locationObject), getLocationOSMType(locationObject))
+}
+
+function getLocationOSMTag(locationObject) {
+  // examples: shop:supermarket, shop:convenience, shop:bakery, shop:doityourself
+  // Photon
+  if (locationObject.properties) {
+    return `${locationObject.properties.osm_key}:${locationObject.properties.osm_value}`
+  }
+  // Nominatim
+  else if (locationObject.address) {
+    return `${locationObject.class}:${locationObject.type}`
+  }
+  // OP
+  return `${locationObject.osm_tag_key}:${locationObject.osm_tag_value}`
+}
+
+function getLocationOSMLatLng(locationObject) {
+  // Nominatim
+  if (locationObject.lat && locationObject.lon) {
+    return [locationObject.lat, locationObject.lon]
+  }
+  // Photon
+  else if (locationObject.geometry && locationObject.geometry.coordinates) {
+    return [locationObject.geometry.coordinates[1], locationObject.geometry.coordinates[0]]
+  }
+  // OP
+  return [locationObject.osm_lat, locationObject.osm_lon]
+}
+
+function getLocationOSMBrandLogoPathName(locationObject) {
+  const BRAND_URL_PREFIX = 'https://raw.githubusercontent.com/openfoodfacts/brand-images/refs/heads/main/xx/stores/'
+  let nameCleaned = null
+  // Photon
+  if (locationObject.properties && locationObject.properties.name) {
+    nameCleaned = utils.slugify(locationObject.properties.name)
+  // Nominatim
+  } else if (locationObject.address && locationObject.name) {
+    nameCleaned = utils.slugify(locationObject.name)
+  // OP
+  } else if (locationObject.osm_brand) {
+    // See https://github.com/openfoodfacts/open-prices/issues/1148
+    return locationObject.osm_brand_logo_url.replace('.png', '').replace('.svg', '')
+  }
+  if (nameCleaned) {
+    nameCleaned = `${BRAND_URL_PREFIX}${nameCleaned}`
+  }
+  return nameCleaned
+}
+
 function getLocationONLINETitle(locationObject) {
+  // OP location
   return locationObject.website_url
+}
+
+function getLocationId(locationObject) {
+  return getLocationOSMId(locationObject) || getLocationONLINETitle(locationObject) || locationObject.id
 }
 
 function getLocationIcon(locationObject) {
@@ -258,21 +262,22 @@ function getLocationIcon(locationObject) {
 
 
 export default {
-  getCountryEmojiFromCode,
-  getLocationCountryCode,
-  getLocationName,
-  getLocationRoad,
-  getLocationCity,
-  getLocationOSMTitle,
-  getLocationID,
-  getLocationType,
-  buildLocationUniqueId,
-  getLocationUniqueID,
-  getLocationTag,
-  getLocationLatLng,
-  getLocationBrandLogoPathName,
   getMapBounds,
   getMapCenter,
+  getCountryEmojiFromCode,
+  getLocationOSMCountryCode,
+  getLocationOSMName,
+  getLocationOSMRoad,
+  getLocationOSMCity,
+  getLocationOSMTitle,
+  getLocationOSMId,
+  getLocationOSMType,
+  buildLocationOSMUniqueId,
+  getLocationOSMUniqueId,
+  getLocationOSMTag,
+  getLocationOSMLatLng,
+  getLocationOSMBrandLogoPathName,
   getLocationONLINETitle,
-  getLocationIcon
+  getLocationId,
+  getLocationIcon,
 }
