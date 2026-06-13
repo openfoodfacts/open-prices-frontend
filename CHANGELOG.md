@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.168.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.167.0...v1.168.0) (2026-06-13)
+
+
+### Features
+
+* **Home:** new dynamic `SurveyBanner` + link to current Gamification survey ([#2228](https://github.com/openfoodfacts/open-prices-frontend/issues/2228)) ([9e164ec](https://github.com/openfoodfacts/open-prices-frontend/commit/9e164ec8553bac21feffe5dc2384016dce5996d1))
+
 ## [1.167.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.166.0...v1.167.0) (2026-06-07)
 
 
