@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.168.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.168.0...v1.168.1) (2026-06-16)
+
+
+### Bug Fixes
+
+* **Moderation:** fix Proofs should be flaggable by non-moderators ([#2238](https://github.com/openfoodfacts/open-prices-frontend/issues/2238)) ([2af8602](https://github.com/openfoodfacts/open-prices-frontend/commit/2af8602a44a81b2afb9e35adb4c355fdc4c3eedb))
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2234](https://github.com/openfoodfacts/open-prices-frontend/issues/2234)) ([94cc9c0](https://github.com/openfoodfacts/open-prices-frontend/commit/94cc9c0f61c46ff1dc51d8a038bbc260544a40e4))
+* **deps:** Update some packages ([#2235](https://github.com/openfoodfacts/open-prices-frontend/issues/2235)) ([70fc0ca](https://github.com/openfoodfacts/open-prices-frontend/commit/70fc0cafd6366f84cfb855108ea89a76650d8b0c))
+* **Location Selector:** avoid key=index. rename utils to specify OSM. Hopefully fix some strange fav behavior ([#2232](https://github.com/openfoodfacts/open-prices-frontend/issues/2232)) ([fed5057](https://github.com/openfoodfacts/open-prices-frontend/commit/fed505798067698b9aa7d89f9220fde3d055b76c))
+
 ## [1.168.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.167.0...v1.168.0) (2026-06-13)
 
 
