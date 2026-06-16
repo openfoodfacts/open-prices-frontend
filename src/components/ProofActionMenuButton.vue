@@ -29,16 +29,16 @@
           <v-list-item :slim="true" prepend-icon="mdi-delete" :disabled="!proofCanBeDeleted" @click="openDeleteConfirmationDialog">
             {{ $t('Common.Delete') }}
           </v-list-item>
-          <!-- Moderation -->
-          <v-sheet v-if="userIsLoggedIn">
-            <v-list-subheader class="text-uppercase" :slim="true" disabled>
-              {{ $t('Common.Moderation') }}
-            </v-list-subheader>
-            <v-divider />
-            <v-list-item :slim="true" prepend-icon="mdi-flag" @click="moderationFlagCreateDialog = true">
-              {{ $t('Common.ReportProblem') }}
-            </v-list-item>
-          </v-sheet>
+        </v-sheet>
+        <!-- Moderation -->
+        <v-sheet v-if="userIsLoggedIn">
+          <v-list-subheader class="text-uppercase" :slim="true" disabled>
+            {{ $t('Common.Moderation') }}
+          </v-list-subheader>
+          <v-divider />
+          <v-list-item :slim="true" prepend-icon="mdi-flag" @click="moderationFlagCreateDialog = true">
+            {{ $t('Common.ReportProblem') }}
+          </v-list-item>
         </v-sheet>
       </v-list>
     </v-menu>
