@@ -1009,6 +1009,10 @@
 		"PricesProofsPerSource": "Ціни та докази за джерелом",
 		"LastUpdated": "Оновлено {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Остання ціна",
 		"LatestProofs": "Останні докази",
