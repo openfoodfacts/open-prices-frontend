@@ -1009,6 +1009,10 @@
 		"PricesProofsPerSource": "ソースごとの価格と証明",
 		"LastUpdated": "最終更新日: {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "最新価格",
 		"LatestProofs": "最新の証拠",
