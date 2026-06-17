@@ -301,9 +301,9 @@
 		"Edit": "Modifier",
 		"End": "Fin",
 		"ErrorServer": "Erreur : erreur serveur",
-		"Favorite": "Favorite",
-		"FavoritesAdd": "Add to favorites",
-		"FavoritesRemove": "Remove from favorites",
+		"Favorite": "Favori",
+		"FavoritesAdd": "Ajouter aux favoris",
+		"FavoritesRemove": "Supprimer des favoris",
 		"FieldIsRequired": "Le champ est obligatoire",
 		"FilterNoun": "Filtre",
 		"FilterVerb": "Filtrer",
@@ -657,7 +657,7 @@
 		"PoweredBy": {
 			"text": "fonctionne avec {url}"
 		},
-		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
+		"FavoriteLocations": "Aucun lieu favori | Lieu favori {favoriteLocationNumber} | Lieux favoris {favoriteLocationNumber}",
 		"RecentLocations": "Aucun lieu récent | Lieu récent {recentLocationNumber} | Lieux récents {recentLocationNumber}",
 		"Result": "Résultat {resultNumber} | Résultats {resultNumber}",
 		"SearchByName": "Recherchez votre magasin par nom et par ville",
@@ -1008,6 +1008,10 @@
 		"ProofsPerSource": "Preuves par source",
 		"PricesProofsPerSource": "Prix et preuves par source",
 		"LastUpdated": "Dernière mise à jour le {date}"
+	},
+	"Surveys": {
+		"HelpFeatures": "Aidez-nous à construire les prochaines fonctionnalités dans {op_name}!",
+		"SurveyGamification": "Répondez à notre enquête de 1 minute sur la gamification."
 	},
 	"UserDashboard": {
 		"LatestPrices": "Derniers prix",
