@@ -301,9 +301,9 @@
 		"Edit": "Bewerken",
 		"End": "Einde",
 		"ErrorServer": "Fout: serverfout",
-		"Favorite": "Favorite",
-		"FavoritesAdd": "Add to favorites",
-		"FavoritesRemove": "Remove from favorites",
+		"Favorite": "Favoriet",
+		"FavoritesAdd": "Toevoegen aan favorieten",
+		"FavoritesRemove": "Verwijderd uit favorieten",
 		"FieldIsRequired": "Veld is verplicht",
 		"FilterNoun": "Filter",
 		"FilterVerb": "Filter",
@@ -1008,6 +1008,10 @@
 		"ProofsPerSource": "Bewijzen per bron",
 		"PricesProofsPerSource": "Prijzen en bewijzen per bron",
 		"LastUpdated": "Laatst bijgewerkt op {date}"
+	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
 	},
 	"UserDashboard": {
 		"LatestPrices": "Nieuwste prijzen",
