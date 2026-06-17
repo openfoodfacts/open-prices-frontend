@@ -1009,6 +1009,10 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Ultimo aggiornamento: {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Ultimi prezzi",
 		"LatestProofs": "Ultime prove",
