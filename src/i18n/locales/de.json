@@ -1009,6 +1009,10 @@
 		"PricesProofsPerSource": "Preise und Nachweise je Quelle",
 		"LastUpdated": "Zuletzt aktualisiert am {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Aktuelle Preise",
 		"LatestProofs": "Letzte Belege",
