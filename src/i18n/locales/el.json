@@ -1009,6 +1009,10 @@
 		"PricesProofsPerSource": "Τιμές και αποδείξεις ανά πηγή",
 		"LastUpdated": "Τελευταία ενημέρωση στις {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Τελευταίες τιμές",
 		"LatestProofs": "Τελευταίες αποδείξεις",
