@@ -1009,6 +1009,10 @@
 		"PricesProofsPerSource": "Harga dan bukti per sumber",
 		"LastUpdated": "Terakhir diperbarui pada {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Harga terbaru",
 		"LatestProofs": "Bukti terbaru",
