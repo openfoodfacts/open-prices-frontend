@@ -1009,6 +1009,10 @@
 		"PricesProofsPerSource": "Priser og beviser pr. kilde",
 		"LastUpdated": "Sidst opdateret {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Seneste priser",
 		"LatestProofs": "Seneste beviser",
