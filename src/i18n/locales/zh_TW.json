@@ -1009,6 +1009,10 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "最後更新於 {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "最新價格",
 		"LatestProofs": "最新證明",
