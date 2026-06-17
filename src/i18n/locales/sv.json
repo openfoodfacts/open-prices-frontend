@@ -1009,6 +1009,10 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Senast uppdaterad {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Hjälp oss bygga nästa funktion i {op_name}!",
+		"SurveyGamification": "Delta i vår 1-minuts gamification-undersökning."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Senaste priser",
 		"LatestProofs": "Senaste bevis",
