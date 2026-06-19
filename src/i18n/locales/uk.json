@@ -317,11 +317,12 @@
 		"FilterProductWithoutPriceCount": "Без цін",
 		"FilterPriceMoreThan30DaysHide": "Приховати ціни старші за 30 днів",
 		"FilterProofWithPriceCountHide": "Сховати докази з цінами",
-		"FilterPriceTagWithProofOwner": "Показувати тільки мої докази",
-		"FilterPriceTagWithProofUserCountry": "Показувати лише докази з моєї країни",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "З дійсним штрих-кодом",
-		"FilterPriceTagWithTagPredictionProductExists": "З дійсним продуктом",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "З дійсним тегом категорії",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Приховати місця з цінами",
 		"FilterUserWithPriceCountHide": "Приховати учасників із цінами",
 		"Fix": "Виправити",
@@ -1008,6 +1009,10 @@
 		"ProofsPerSource": "Докази для кожного джерела",
 		"PricesProofsPerSource": "Ціни та докази за джерелом",
 		"LastUpdated": "Оновлено {date}"
+	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
 	},
 	"UserDashboard": {
 		"LatestPrices": "Остання ціна",

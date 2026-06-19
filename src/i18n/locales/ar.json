@@ -317,11 +317,12 @@
 		"FilterProductWithoutPriceCount": "بدون أسعار",
 		"FilterPriceMoreThan30DaysHide": "إخفاء الأسعار التي يزيد عمرها عن 30 يومًا",
 		"FilterProofWithPriceCountHide": "إخفاء الأدلة مع الأسعار",
-		"FilterPriceTagWithProofOwner": "أظهر فقط أدلتي",
-		"FilterPriceTagWithProofUserCountry": "أظهر فقط الأدلة من بلدي",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "مع رمز شريطي صالح",
-		"FilterPriceTagWithTagPredictionProductExists": "مع منتج صالح",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "مع علامة فئة صالحة",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "إخفاء المواقع التي تحتوي على الأسعار",
 		"FilterUserWithPriceCountHide": "إخفاء المساهمين الذين لديهم أسعار",
 		"Fix": "يصلح",
@@ -1008,6 +1009,10 @@
 		"ProofsPerSource": "الأدلة حسب المصدر",
 		"PricesProofsPerSource": "الأسعار والإثباتات لكل مصدر",
 		"LastUpdated": "آخر تحديث في {date}"
+	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
 	},
 	"UserDashboard": {
 		"LatestPrices": "أحدث الأسعار",

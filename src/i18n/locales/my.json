@@ -317,11 +317,12 @@
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithProofUserCountry": "ကျွန်တော့်နိုင်ငံက အထောက်အထားတွေကိုပဲ ပြပါ။",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "မှန်ကန်သော ဘားကုဒ်ဖြင့်",
-		"FilterPriceTagWithTagPredictionProductExists": "တရားဝင်ထုတ်ကုန်တစ်ခုနှင့်အတူ",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "မှန်ကန်သော အမျိုးအစား တဂ်ဖြင့်",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
@@ -1008,6 +1009,10 @@
 		"ProofsPerSource": "အရင်းအမြစ်အလိုက် အထောက်အထားများ",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
+	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",

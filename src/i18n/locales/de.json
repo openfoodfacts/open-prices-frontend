@@ -317,11 +317,12 @@
 		"FilterProductWithoutPriceCount": "Ohne Preise",
 		"FilterPriceMoreThan30DaysHide": "Preise ausblenden, die älter als 30 Tage sind",
 		"FilterProofWithPriceCountHide": "Nachweise mit Preisen ausblenden",
-		"FilterPriceTagWithProofOwner": "Nur eigene Nachweise zeigen",
-		"FilterPriceTagWithProofUserCountry": "Nur Beweise aus meinem Land anzeigen",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Mit einem gültigen Barcode",
-		"FilterPriceTagWithTagPredictionProductExists": "Mit einem gültigen Produkt",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Mit einem gültigen Kategorie-Tag",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Orte mit Preisen ausblenden",
 		"FilterUserWithPriceCountHide": "Mitwirkende mit Preisen ausblenden",
 		"Fix": "Beheben",
@@ -1008,6 +1009,10 @@
 		"ProofsPerSource": "Beweise pro Quelle",
 		"PricesProofsPerSource": "Preise und Nachweise je Quelle",
 		"LastUpdated": "Zuletzt aktualisiert am {date}"
+	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
 	},
 	"UserDashboard": {
 		"LatestPrices": "Aktuelle Preise",

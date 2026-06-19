@@ -317,11 +317,12 @@
 		"FilterProductWithoutPriceCount": "Sem preços",
 		"FilterPriceMoreThan30DaysHide": "Esconder preços com mais de 30 dias",
 		"FilterProofWithPriceCountHide": "Ocultar provas com preços",
-		"FilterPriceTagWithProofOwner": "Mostrar apenas minhas provas",
-		"FilterPriceTagWithProofUserCountry": "Mostrar apenas comprovantes do meu país",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Com um código de barras válido",
-		"FilterPriceTagWithTagPredictionProductExists": "Com um produto válido",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Com uma tag de categoria válida",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Oculte locais com preços",
 		"FilterUserWithPriceCountHide": "Oculte colaboradores com preços",
 		"Fix": "Corrigir",
@@ -1008,6 +1009,10 @@
 		"ProofsPerSource": "Provas por fonte",
 		"PricesProofsPerSource": "Preços e provas por fonte",
 		"LastUpdated": "Última atualização em {date}"
+	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
 	},
 	"UserDashboard": {
 		"LatestPrices": "Preços mais recentes",

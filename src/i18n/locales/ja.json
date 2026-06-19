@@ -317,11 +317,12 @@
 		"FilterProductWithoutPriceCount": "価格なし",
 		"FilterPriceMoreThan30DaysHide": "30日以上経過した価格を非表示にする",
 		"FilterProofWithPriceCountHide": "価格の証明を隠す",
-		"FilterPriceTagWithProofOwner": "私の証明のみを表示",
-		"FilterPriceTagWithProofUserCountry": "私の国からの証明のみを表示する",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "有効なバーコード付き",
-		"FilterPriceTagWithTagPredictionProductExists": "有効な製品",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "有効なカテゴリタグ付き",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "価格付きの場所を非表示にする",
 		"FilterUserWithPriceCountHide": "価格付きの貢献者を非表示にする",
 		"Fix": "修理",
@@ -1008,6 +1009,10 @@
 		"ProofsPerSource": "情報源ごとの証明",
 		"PricesProofsPerSource": "ソースごとの価格と証明",
 		"LastUpdated": "最終更新日: {date}"
+	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
 	},
 	"UserDashboard": {
 		"LatestPrices": "最新価格",

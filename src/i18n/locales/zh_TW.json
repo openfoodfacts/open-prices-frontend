@@ -317,11 +317,12 @@
 		"FilterProductWithoutPriceCount": "沒有價格",
 		"FilterPriceMoreThan30DaysHide": "隱藏 30 天前的價格",
 		"FilterProofWithPriceCountHide": "隱藏價格證明",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithProofUserCountry": "僅顯示來自我國的證據",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "帶有有效條碼",
-		"FilterPriceTagWithTagPredictionProductExists": "持有有效產品",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "具有有效的類別標籤",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "隱藏帶有價格的地點",
 		"FilterUserWithPriceCountHide": "隱藏提供價格的貢獻者",
 		"Fix": "Fix",
@@ -1008,6 +1009,10 @@
 		"ProofsPerSource": "每個來源的證據",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "最後更新於 {date}"
+	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
 	},
 	"UserDashboard": {
 		"LatestPrices": "最新價格",

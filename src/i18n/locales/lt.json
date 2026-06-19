@@ -317,11 +317,12 @@
 		"FilterProductWithoutPriceCount": "Be kainų",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Slėpti įrodymus su kainomis",
-		"FilterPriceTagWithProofOwner": "Rodyti tik mano įrodymus",
-		"FilterPriceTagWithProofUserCountry": "Rodyti tik įrodymus iš mano šalies",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Su galiojančiu brūkšniniu kodu",
-		"FilterPriceTagWithTagPredictionProductExists": "Su galiojančiu produktu",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Su galiojančia kategorijos žyme",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Slėpti vietoves su kainomis",
 		"FilterUserWithPriceCountHide": "Slėpti bendraautorius su kainomis",
 		"Fix": "Taisyti",
@@ -1008,6 +1009,10 @@
 		"ProofsPerSource": "Įrodymai pagal šaltinį",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Paskutinį kartą atnaujinta {date}"
+	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
 	},
 	"UserDashboard": {
 		"LatestPrices": "Naujausios kainos",
