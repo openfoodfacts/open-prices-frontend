@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.168.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.168.1...v1.168.2) (2026-06-19)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#2240](https://github.com/openfoodfacts/open-prices-frontend/issues/2240)) ([d4692dd](https://github.com/openfoodfacts/open-prices-frontend/commit/d4692dd418a68310086e8c02075192d029b1c6a9))
+* **Price Validation:** add a new filter to show hidden-by-default price tags classified as 'invalid' ([#2241](https://github.com/openfoodfacts/open-prices-frontend/issues/2241)) ([5445013](https://github.com/openfoodfacts/open-prices-frontend/commit/5445013345b2a877e8eb711cc501b77765ff55cd))
+
 ## [1.168.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.168.0...v1.168.1) (2026-06-16)
 
 
