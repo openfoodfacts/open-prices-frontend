@@ -322,6 +322,7 @@
 		"FilterPriceTagWithTagPredictionBarcodeValid": "With a valid barcode",
 		"FilterPriceTagWithTagPredictionProductExists": "With a valid product",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "With a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Show prices classified as invalid by AI",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
