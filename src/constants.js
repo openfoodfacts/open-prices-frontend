@@ -197,6 +197,7 @@ export default {
     // { key: 'tag_prediction_barcode_valid', value: 'FilterPriceTagWithTagPredictionBarcodeValid' },
     { key: 'tag_prediction_product_exists', value: 'FilterPriceTagWithTagPredictionProductExists' },
     // { key: 'tag_prediction_category_tag_valid', value: 'FilterPriceTagWithTagPredictionCategoryTagValid' },
+    { key: 'tag_invalid_include', value: 'FilterPriceTagWithTagInvalidInclude' },
   ],
   LOCATION_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterLocationWithPriceCountHide' },

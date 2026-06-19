@@ -92,12 +92,13 @@ export default {
       let defaultParams = {
         proof__ready_for_price_tag_validation: true,
         status__isnull: true,
-        prediction_count__gte: 2, // at least 2 predictions: PRICE_TAG_CLF & PRICE_TAG_EXTRACTION
+        prediction_count__gte: 2, // at least 2 predictions (PRICE_TAG_CLF & PRICE_TAG_EXTRACTION) to avoid fetching price tags newly created and not yet ready for validation
         created__lte: this.currentDateTime,
         order_by: this.currentOrder,
         size: this.getApiSize,
         page: this.priceTagPage
       }
+      // FilterMenu filters
       if (this.currentFilterList.includes('proof__owner')) {
         defaultParams['proof__owner'] = this.username
       }
@@ -106,6 +107,9 @@ export default {
       }
       if (this.currentFilterList.includes('tag_prediction_product_exists')) {
         defaultParams['tags__contains'] = 'prediction-product-exists'
+      }
+      if (!this.currentFilterList.includes('tag_invalid_include')) {
+        defaultParams['tags__not_contains'] = 'invalid'
       }
       return defaultParams
     },
