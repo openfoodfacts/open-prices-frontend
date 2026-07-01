@@ -529,7 +529,7 @@
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
 		"UserNotFound": "Pa jwenn itilizatè a",
-		"Validate": "Validate",
+		"Validate": "Valide",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"ValidatePricesFromCommunity": "Valide pri yo nan kominote a",
@@ -960,7 +960,7 @@
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Validate",
+			"Title": "Valide",
 			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
