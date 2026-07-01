@@ -1011,8 +1011,8 @@
 		"LastUpdated": "Naposledy aktualizováno {date}"
 	},
 	"Surveys": {
-		"HelpFeatures": "Help us build the next features in {op_name}!",
-		"SurveyGamification": "Take our 1-minute gamification survey."
+		"HelpFeatures": "Pomozte nám vybudovat další funkce v {op_name}!",
+		"SurveyGamification": "Zúčastněte se našeho jednominutového gamifikačního průzkumu."
 	},
 	"UserDashboard": {
 		"LatestPrices": "Nejnovější ceny",
