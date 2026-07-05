@@ -33,6 +33,14 @@
       preventDrawing: {
         type: Boolean,
         default: false
+      },
+      removeMode: {
+        type: Boolean,
+        default: true
+      },
+      mode: {
+        type: String,
+        default: 'Labels'
       }
     },
     emits: ['extractedLabels', 'loaded'],
@@ -151,12 +159,22 @@
           const width = currentX - this.startX
           const height = currentY - this.startY
           
-          ctx.strokeStyle = "red"
-          ctx.strokeRect(this.startX, this.startY, width, height)
+          if (this.mode === 'Labels') {
+            ctx.strokeStyle = "red"
+            ctx.strokeRect(this.startX, this.startY, width, height)
+          } else if (this.mode === 'Redact') {
+            ctx.fillStyle = "black"
+            ctx.fillRect(this.startX, this.startY, width, height)
+          }
         }
       },
       finishDrawing(event) {
-        if (this.preventDrawing) return
+        if (this.preventDrawing) {
+          if (this.removeMode) {
+            this.findBoundingBoxAndRemove(event)
+          }
+          return
+        }
         this.isDrawing = false
         if (event.type == "touchend") {
           const rect = event.target.getBoundingClientRect()
@@ -179,22 +197,27 @@
         const width = endX - startX
         const height = endY - startY
         // set text & color
-        let text = ""
-        constants.PRICE_TAG_STATUS_LIST.some(statusObj => {
-          if (rect.status === statusObj.key) {
-            text = this.$t(statusObj.text)
-            ctx.strokeStyle = statusObj.color
-            ctx.fillStyle = statusObj.color
-            return true
-          }
-        })
-        ctx.strokeRect(startX, startY, width, height)
-        ctx.font = `bold ${8/this.scale}px sans-serif `
-        const textWidth = ctx.measureText(text).width + 4
-        ctx.strokeRect(Math.min(startX, endX), Math.min(startY, endY) - (8/this.scale), textWidth, (8/this.scale))
-        ctx.fillRect(Math.min(startX, endX), Math.min(startY, endY) - (8/this.scale), textWidth, (8/this.scale))
-        ctx.fillStyle = "white"
-        ctx.fillText(text, Math.min(startX, endX) + 3, Math.min(startY, endY) - 3)
+        if (this.mode === 'Labels') {
+          let text = ""
+          constants.PRICE_TAG_STATUS_LIST.some(statusObj => {
+            if (rect.status === statusObj.key) {
+              text = this.$t(statusObj.text)
+              ctx.strokeStyle = statusObj.color
+              ctx.fillStyle = statusObj.color
+              return true
+            }
+          })
+          ctx.strokeRect(startX, startY, width, height)
+          ctx.font = `bold ${8/this.scale}px sans-serif `
+          const textWidth = ctx.measureText(text).width + 4
+          ctx.strokeRect(Math.min(startX, endX), Math.min(startY, endY) - (8/this.scale), textWidth, (8/this.scale))
+          ctx.fillRect(Math.min(startX, endX), Math.min(startY, endY) - (8/this.scale), textWidth, (8/this.scale))
+          ctx.fillStyle = "white"
+          ctx.fillText(text, Math.min(startX, endX) + 3, Math.min(startY, endY) - 3)
+        } else if (this.mode === 'Redact') {
+          ctx.fillStyle = "black"
+          ctx.fillRect(startX, startY, width, height)
+        }
       },
       drawBoundingBoxes() {
         const ctx = this.$refs.canvas.getContext("2d")
@@ -227,11 +250,28 @@
             blob: await new Promise(resolve => originalCanvas.toBlob(resolve, 'image/webp')),
             boundingSource: boundingSource,
             boundingBox: [y_min, x_min, y_max, x_max],
+            redactBoundingBox: [x_min, y_min, x_max, y_max],
             status: rect.status,
             id: rect.id || null
           }
         }
         this.$emit('extractedLabels', extractedLabels)
+      },
+      findBoundingBoxAndRemove(event) {
+        const xPos = event.offsetX / this.scale
+        const yPos = event.offsetY / this.scale
+        const box = this.boundingBoxes.find(rect => {
+          const x_min = Math.min(rect.startX, rect.endX)
+          const y_min = Math.min(rect.startY, rect.endY)
+          const x_max = Math.max(rect.startX, rect.endX)
+          const y_max = Math.max(rect.startY, rect.endY)
+          if (x_min <= xPos && xPos <= x_max && y_min <= yPos && yPos <= y_max) {
+            return true
+          }
+        })
+        if (box) {
+          this.removeBoundingBox(this.boundingBoxes.indexOf(box))
+        }
       },
       removeBoundingBox(index) {
         this.boundingBoxes.splice(index, 1)

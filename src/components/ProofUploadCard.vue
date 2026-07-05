@@ -55,6 +55,10 @@
     <v-divider v-if="step === 1" />
     <v-card-actions v-if="step === 1">
       <v-spacer v-if="$vuetify.display.smAndUp" />
+      
+      <v-btn v-if="proofDraftsList.length > 0 && proofForm.type === constants.PROOF_TYPE_RECEIPT" @click="() => { showAnonymizeDialog = true }">
+        {{ $t('XXX.Anonymize') }}
+      </v-btn>
       <v-btn
         class="float-right"
         color="primary"
@@ -74,6 +78,7 @@
     <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
   </v-sheet>
 
+  <ReceiptAnonymizerDialog v-if="showAnonymizeDialog" v-model="showAnonymizeDialog" :draftProof="proofDraftsList[0]" @done="anonymizeDone" />
   <v-snackbar
     v-model="proofDateSuccessMessage"
     color="primary"
@@ -120,6 +125,7 @@ export default {
     ProofImagePreviewList: defineAsyncComponent(() => import('../components/ProofImagePreviewList.vue')),
     ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    ReceiptAnonymizerDialog: defineAsyncComponent(() => import('../components/ReceiptAnonymizerDialog.vue')),
   },
   props: {
     hideHeader: {
@@ -176,6 +182,7 @@ export default {
       proofDraftsList: [],  // images uploaded as drafts
       proofObjectList: [],  // images uploaded (drafts finalized)
       loading: false,
+      showAnonymizeDialog: false,
     }
   },
   computed: {
@@ -401,6 +408,10 @@ export default {
           })
       })
     },
+    anonymizeDone() {
+      this.showAnonymizeDialog = false
+      this.proofDraftsList[0].image_thumb_path = this.proofDraftsList[0].image_thumb_path + '?refetch'
+    }
   }
 }
 </script>

@@ -243,6 +243,25 @@ export default {
     .then((response) => response.json())
   },
 
+  anonymizeDraftProof(proofId, boundingBoxes) {
+    const endpointWithParams = `/proofs/drafts/${proofId}/anonymize?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'POST',
+      body: JSON.stringify({
+        bounding_boxes: boundingBoxes
+      }),
+    }, true)
+    // .then((response) => response.json())
+  },
+  
+  getDraftProofById(proofId) {
+    const endpointWithParams = `/proofs/drafts/${proofId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'GET',
+    }, true)
+    .then((response) => response.json())
+  },
+
   getProofs(params = {}) {
     const defaultParams = {page: 1, size: 10, order_by: '-created'}
     const endpointWithParams = `/proofs?${buildURLParams({...defaultParams, ...params})}`
