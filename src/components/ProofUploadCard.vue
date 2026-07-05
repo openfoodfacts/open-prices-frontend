@@ -56,7 +56,7 @@
     <v-card-actions v-if="step === 1">
       <v-spacer v-if="$vuetify.display.smAndUp" />
       
-      <v-btn v-if="proofDraftsList.length > 0 && proofForm.type === constants.PROOF_TYPE_RECEIPT" @click="() => { showAnonymizeDialog = true }">
+      <v-btn v-if="proofDraftsList.length > 0 && proofIsTypeReceipt" @click="() => { showAnonymizeDialog = true }">
         {{ $t('XXX.Anonymize') }}
       </v-btn>
       <v-btn
