@@ -26,20 +26,21 @@
         </v-row>
         <ProofTypeInputRow :class="showTopAlertOrBanner ? 'mt-0' : ''" :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
         <LocationInputRow class="mt-0" :locationForm="proofForm" @location="locationObject = $event" />
-        <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
+        <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" :numberProofsSelected="proofDraftsList.length" @proofList="proofImageList = $event" />
+        <ProofImagePreviewList v-if="proofDraftsList.length" class="mt-0" :proofObjectList="proofDraftsList" @removeProof="removeProof" />
         <ProofMetadataInputRow class="mt-0" :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
       </v-sheet>
       <v-sheet v-else-if="step === 2">
         <v-progress-linear
           v-model="proofObjectList.length"
-          :max="proofImageList.length"
-          :color="proofImageList.length === proofObjectList.length ? 'success' : 'primary'"
+          :max="proofDraftsList.length"
+          :color="proofDraftsList.length === proofObjectList.length ? 'success' : 'primary'"
           height="25"
           :indeterminate="proofObjectList.length ? false : true"
-          :striped="proofImageList.length !== proofObjectList.length"
+          :striped="proofDraftsList.length !== proofObjectList.length"
           rounded
         >
-          <strong>{{ $t('Common.ProofUploadProgress', { numberOfProofsUploaded: proofObjectList.length, totalNumberOfProofs: proofImageList.length }) }}</strong>
+          <strong>{{ $t('Common.ProofUploadProgress', { numberOfProofsUploaded: proofObjectList.length, totalNumberOfProofs: proofDraftsList.length }) }}</strong>
         </v-progress-linear>
         <v-alert
           class="mt-4"
@@ -60,10 +61,10 @@
         variant="flat"
         type="submit"
         :block="!$vuetify.display.smAndUp"
-        :disabled="!proofFormFilled"
-        @click="uploadProofList"
+        :disabled="!readyToFinalize"
+        @click="finalizeDraftProofs"
       >
-        <span v-if="multiple && proofImageList.length">{{ $t('Common.UploadMultipleProofs', { count: proofImageList.length }) }}</span>
+        <span v-if="multiple && proofDraftsList.length">{{ $t('Common.UploadMultipleProofs', { count: proofDraftsList.length }) }}</span>
         <span v-else>{{ $t('Common.Upload') }}</span>
       </v-btn>
     </v-card-actions>
@@ -116,6 +117,7 @@ export default {
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
+    ProofImagePreviewList: defineAsyncComponent(() => import('../components/ProofImagePreviewList.vue')),
     ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
@@ -171,7 +173,8 @@ export default {
       proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
       proofImageList: [],  // images to upload
-      proofObjectList: [],  // images uploaded
+      proofDraftsList: [],  // images uploaded as drafts
+      proofObjectList: [],  // images uploaded (drafts finalized)
       loading: false,
     }
   },
@@ -196,7 +199,7 @@ export default {
       return this.proofIsTypePriceTag || this.proofIsTypeReceipt
     },
     proofImageFormFilled() {
-      return !!this.proofImageList.length
+      return !!this.proofDraftsList.length
     },
     proofLocationFormFilled() {
       let keysOSM = ['location_osm_id', 'location_osm_type']
@@ -209,6 +212,9 @@ export default {
     },
     proofFormFilled() {
       return this.proofTypeFormFilled && this.proofImageFormFilled && this.proofLocationFormFilled && this.proofMetadataFormFilled
+    },
+    readyToFinalize() {
+      return this.proofDraftsList.every(proof => proof.id) && this.proofFormFilled
     },
     proofCardShowImageThumb() {
       return this.multiple ? true : false
@@ -224,7 +230,7 @@ export default {
       this.proofForm.proof_id = newProofObjectList[0].id
       this.proofForm.location_id = newProofObjectList[0].location_id
       // all proofs uploaded
-      if (this.proofObjectList.length === this.proofImageList.length) {
+      if (this.proofObjectList.length === this.proofDraftsList.length) {
         this.step = 3
         this.$emit('done', this.proofObjectList.length)
       }
@@ -290,6 +296,7 @@ export default {
             }
           }
         })
+        this.uploadProofsAsDrafts()
       }
     },
     compressProof(proofImage) {
@@ -304,15 +311,23 @@ export default {
         console.log(JSON.stringify(error))
       })
     },
-    uploadProofList() {
-      this.step = 2
+    uploadProofsAsDrafts() {
+      this.proofDraftsList = this.proofImageList.map((proofImage, index) => {
+        return {
+          localId: index,
+          blob: proofImage
+        }
+      })
       // chain uploads sequentially
-      this.proofImageList.reduce((promise, proofImage) => {
+      this.proofDraftsList.reduce((promise, proof, index) => {
         return promise.then(() =>
-          this.uploadProof(proofImage)
+          this.uploadProofAsDraft(proof.blob, this.proofForm.type)
             .then((data) => {
               if (data.id) {
-                this.proofObjectList = this.proofObjectList.concat(data)
+                this.proofDraftsList[index] = {
+                  ...data,
+                  localId: proof.localId
+                }
               }
             })
             .catch((error) => {
@@ -321,13 +336,13 @@ export default {
         )
       }, Promise.resolve())
     },
-    uploadProof(proofImage) {
+    uploadProofAsDraft(proofImage, type) {
       this.loading = true
       return new Promise((resolve, reject) => {  // eslint-disable-line no-unused-vars
         this.compressProof(proofImage)
           .then((proofImageCompressed) => {
             openPricesApi
-              .createProof(proofImageCompressed, this.proofForm, this.$route.path)
+              .createDraftProof(proofImageCompressed, type)
               .then((data) => {
                 this.loading = false
                 if (data.id) {
@@ -343,9 +358,47 @@ export default {
                 this.loading = false
               })
           })
-          // .finally(() => {
-          //   console.log('Compress complete')
-          // })
+      })
+    },
+    removeProof(localId) {
+      this.proofDraftsList = this.proofDraftsList.filter(proof => proof.localId !== localId)
+    },
+    finalizeDraftProofs() {
+      this.step = 2
+      // chain uploads sequentially
+      this.proofDraftsList.reduce((promise, proofDraft) => {
+        return promise.then(() =>
+          this.finalizeDraftProof(proofDraft)
+            .then((data) => {
+              if (data.id) {
+                this.proofObjectList = this.proofObjectList.concat(data)
+              }
+            })
+            .catch((error) => {
+              console.log(JSON.stringify(error))
+            })
+        )
+      }, Promise.resolve())
+    },
+    finalizeDraftProof(proofDraft) {
+      this.loading = true
+      return new Promise((resolve, reject) => {  // eslint-disable-line no-unused-vars
+        openPricesApi
+          .finalizeDraftProof(proofDraft.id, this.proofForm, this.$route.path)
+          .then((data) => {
+            this.loading = false
+            if (data.id) {
+              resolve(data)
+            } else {
+              alert(`Error: ${JSON.stringify(data)}`)
+              console.log(JSON.stringify(data))
+            }
+          })
+          .catch((error) => {
+            alert(`Error: ${JSON.stringify(error)}`)
+            console.log(JSON.stringify(error))
+            this.loading = false
+          })
       })
     },
   }
