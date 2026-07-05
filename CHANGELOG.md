@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.168.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.168.2...v1.168.3) (2026-07-05)
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2246](https://github.com/openfoodfacts/open-prices-frontend/issues/2246)) ([a8d2d7a](https://github.com/openfoodfacts/open-prices-frontend/commit/a8d2d7a81bbef994a8bdf8f1b7a05e46cd322409))
+* **l10n:** New Crowdin translations to review and merge ([#2247](https://github.com/openfoodfacts/open-prices-frontend/issues/2247)) ([58c5c53](https://github.com/openfoodfacts/open-prices-frontend/commit/58c5c533565f8fa52dea2146fa53a176c3cbb789))
+
 ## [1.168.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.168.1...v1.168.2) (2026-06-19)
 
 
