@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <v-chip label variant="text" :prepend-icon="badgeIcon">
+      <v-chip label variant="text" :prepend-icon="BADGE_ICON">
         {{ $t('Common.BadgeCount', { count: badgeTotal }) }}
       </v-chip>
       <template v-if="!loading">
@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      badgeIcon: constants.BADGE_ICON,
+      BADGE_ICON: constants.BADGE_ICON,
       // data
       badgeList: [],
       badgeTotal: null,
