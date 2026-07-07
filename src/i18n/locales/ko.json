@@ -188,6 +188,7 @@
 		"Badge": "Badge",
 		"Badges": "Badges",
 		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "바코드",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
