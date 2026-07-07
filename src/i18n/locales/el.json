@@ -188,6 +188,7 @@
 		"Badge": "Badge",
 		"Badges": "Badges",
 		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Γραμμικός κωδικός",
 		"Barcodes": "Γραμμωτοί κώδικες",
 		"BarcodeScan": "Σάρωση ενός γραμμωτού κώδικα",
