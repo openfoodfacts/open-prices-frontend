@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <v-chip label variant="text" prepend-icon="mdi-medal-outline">
+      <v-chip label variant="text" :prepend-icon="badgeIcon">
         {{ $t('Common.BadgeCount', { count: badgeTotal }) }}
       </v-chip>
       <template v-if="!loading">
@@ -26,6 +26,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import openPricesApi from '../services/openPricesApi'
+import constants from '../constants'
 
 export default {
   components: {
@@ -34,6 +35,7 @@ export default {
   },
   data() {
     return {
+      badgeIcon: constants.BADGE_ICON,
       // data
       badgeList: [],
       badgeTotal: null,

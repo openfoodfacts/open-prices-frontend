@@ -177,6 +177,7 @@ export default {
   USER_CONSUMPTION_ICON: USER_CONSUMPTION_ICON,
   USER_COMMUNITY: USER_COMMUNITY,
   USER_COMMENT_ICON: 'mdi-comment-text-outline',
+  BADGE_ICON: 'mdi-medal-outline',
   BADGE_IMAGE_DEFAULT_URL: '/icon-mdi-medal-outline.svg',
   // filter
   PRODUCT_FILTER_LIST: [

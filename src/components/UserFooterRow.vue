@@ -9,6 +9,7 @@
         <ProductCountChip :count="user.product_count" :withLabel="true" />
         <ProofCountChip :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
         <ChallengeCountChip :count="user.challenge_count" :withLabel="true" />
+        <BadgeCountChip :count="user.badge_count" :withLabel="true" />
       </span>
     </v-col>
     <v-col v-if="!hideActionMenuButton" cols="1">
@@ -29,6 +30,7 @@ export default {
     ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
     ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
     ChallengeCountChip: defineAsyncComponent(() => import('../components/ChallengeCountChip.vue')),
+    BadgeCountChip: defineAsyncComponent(() => import('../components/BadgeCountChip.vue')),
     UserActionMenuButton: defineAsyncComponent(() => import('../components/UserActionMenuButton.vue'))
   },
   props: {
