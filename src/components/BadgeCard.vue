@@ -10,12 +10,13 @@
             <v-col cols="12">
               <h3>{{ badge.name }}</h3>
               <p>{{ badge.description }}</p>
+              <DateChip v-if="achievedAt" :date="achievedAt" :class="$t('Common.BadgeAchievementDate')" />
             </v-col>
           </v-row>
         </v-col>
       </v-row>
 
-      <v-row>
+      <v-row v-if="showBadgeFooterRow" class="mt-0">
         <v-col cols="12">
           <span class="chip-group">
             <UserCountChip :count="badge.user_count" :withLabel="true" />
@@ -32,6 +33,7 @@ import constants from '../constants'
 
 export default {
   components: {
+    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     UserCountChip: defineAsyncComponent(() => import('../components/UserCountChip.vue')),
   },
   props: {
@@ -39,11 +41,24 @@ export default {
       type: Object,
       required: true
     },
+    achievedAt: {
+      type: String,
+      default: null
+    },
+    hideBadgeFooterRow: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return {
       badgeImageDefault: constants.BADGE_IMAGE_DEFAULT_URL,
     }
   },
+  computed: {
+    showBadgeFooterRow() {
+      return !this.hideBadgeFooterRow
+    }
+  }
 }
 </script>
