@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "आपके द्वारा जोड़े गए मूल्य",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -186,6 +185,10 @@
 		"Added": "जोड़ा",
 		"AdditionalInfo": "Additional information",
 		"All": "सभी",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "बारकोड",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "बारकोड स्कैन करें",
@@ -805,7 +808,7 @@
 			"Title": "जानकारी"
 		},
 		"Add": {
-			"Title": "डालिए"
+			"Title": "जोड़ें"
 		},
 		"AddPrice": {
 			"Title": "एक मूल्य जोड़े"
@@ -839,6 +842,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "अन्वेषण करना"
