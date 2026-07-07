@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} sizin tarafınızdan eklenen fiyatlar",
 		"PricesAddedByYou": "Sizin tarafınızdan eklenen fiyatlar",
 		"MostRecentContributions": "En son katkılar",
-		"ChallengeCount": "{count} meydan okumalar | {count} meydan okuma | {count} meydan okumalar",
 		"ChallengeStatuses": {
 			"DRAFT": "Taslak",
 			"UPCOMING": "Yakında",
@@ -186,6 +185,9 @@
 		"Added": "Eklendi",
 		"AdditionalInfo": "Ek Bilgiler",
 		"All": "Hepsi",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
 		"Barcode": "Barkod",
 		"Barcodes": "Barkodlar",
 		"BarcodeScan": "Barkod tara",
@@ -839,6 +841,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Keşfetmek"
