@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Priser som du har lagt till",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Kommande",
@@ -186,6 +185,9 @@
 		"Added": "Tillagd",
 		"AdditionalInfo": "Ytterligare information",
 		"All": "Alla",
+		"Badge": "Badge",
+		"Badges": "Märken",
+		"BadgeCount": "{count} märken | {count} märke | {count} märken",
 		"Barcode": "Streckkod",
 		"Barcodes": "Streckkoder",
 		"BarcodeScan": "Skanna en streckkod",
@@ -839,6 +841,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Märken"
 		},
 		"Explore": {
 			"Title": "Utforska"
