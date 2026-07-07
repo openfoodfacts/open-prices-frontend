@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} מחירים על ידיך",
 		"PricesAddedByYou": "מחירים שנוספו על ידך",
 		"MostRecentContributions": "התרומות האחרונות",
-		"ChallengeCount": "{count} אתגרים | אתגר | {count} אתגרים",
 		"ChallengeStatuses": {
 			"DRAFT": "טיוטה",
 			"UPCOMING": "בקרוב",
@@ -186,6 +185,9 @@
 		"Added": "נוסף",
 		"AdditionalInfo": "מידע נוסף",
 		"All": "הכול",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
 		"Barcode": "ברקוד",
 		"Barcodes": "ברקודים",
 		"BarcodeScan": "סריקת ברקוד",
@@ -839,6 +841,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "לַחקוֹר"
