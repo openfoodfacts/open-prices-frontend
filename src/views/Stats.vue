@@ -135,6 +135,18 @@
   <v-row>
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
+        <v-icon size="x-small" :icon="BADGE_ICON" />
+        {{ $t('Common.Badges') }}
+      </h2>
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.badge_count" :subtitle="$t('Stats.Total')" to="/badges" />
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-test-tube" />
         {{ $t('Common.Experiments') }}
       </h2>
@@ -268,9 +280,11 @@ export default {
         proof_source_api_count: 0,
         proof_source_other_count: 0,
         price_tag_status_linked_to_price_count: 0,
-        user_count: 0,
+        user_count: 0,  // not displayed
         user_with_price_count: 0,
         challenge_count: 0,
+        badge_count: 0,
+        badge_with_user_count: 0,  // not displayed
         price_in_challenge_count: 0,
         proof_in_challenge_count: 0,
         product_created_count: 0,
@@ -282,6 +296,7 @@ export default {
       OBF_ICON: constants.OBF_ICON,
       OPF_ICON: constants.OPF_ICON,
       OPFF_ICON: constants.OPFF_ICON,
+      BADGE_ICON: constants.BADGE_ICON,
     }
   },
   mounted() {
