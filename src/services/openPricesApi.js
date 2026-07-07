@@ -153,6 +153,16 @@ export default {
     }, true)
     .then((response) => response.json())
   },
+
+  getUserBadges(userId, params = {}) {
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
+    const endpointWithParams = `/users/${userId}/badges?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'GET',
+    }, true)
+    .then((response) => response.json())
+  },
+
   createProof(image, inputData, source = null) {
     const store = useAppStore()
     // build body

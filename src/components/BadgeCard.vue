@@ -15,7 +15,7 @@
         </v-col>
       </v-row>
 
-      <v-row>
+      <v-row v-if="showBadgeFooterRow" class="mt-0">
         <v-col cols="12">
           <span class="chip-group">
             <UserCountChip :count="badge.user_count" :withLabel="true" />
@@ -39,11 +39,20 @@ export default {
       type: Object,
       required: true
     },
+    hideBadgeFooterRow: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return {
       badgeImageDefault: constants.BADGE_IMAGE_DEFAULT_URL,
     }
   },
+  computed: {
+    showBadgeFooterRow() {
+      return !this.hideBadgeFooterRow
+    }
+  }
 }
 </script>
