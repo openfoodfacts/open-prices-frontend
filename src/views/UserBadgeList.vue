@@ -9,7 +9,7 @@
 
   <v-row class="mt-0">
     <v-col v-for="userBadge in userBadgeList" :key="userBadge.id" cols="12" sm="6" md="4" xl="3">
-      <BadgeCard :badge="userBadge.badge" :hideBadgeFooterRow="true" height="100%" />
+      <BadgeCard :badge="userBadge.badge" :achievedAt="userBadge.achieved_at" :hideBadgeFooterRow="true" height="100%" />
     </v-col>
   </v-row>
 

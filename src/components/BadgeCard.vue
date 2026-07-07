@@ -10,6 +10,7 @@
             <v-col cols="12">
               <h3>{{ badge.name }}</h3>
               <p>{{ badge.description }}</p>
+              <DateChip v-if="achievedAt" :date="achievedAt" :class="$t('Common.BadgeAchievementDate')" />
             </v-col>
           </v-row>
         </v-col>
@@ -32,12 +33,17 @@ import constants from '../constants'
 
 export default {
   components: {
+    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     UserCountChip: defineAsyncComponent(() => import('../components/UserCountChip.vue')),
   },
   props: {
     badge: {
       type: Object,
       required: true
+    },
+    achievedAt: {
+      type: String,
+      default: null
     },
     hideBadgeFooterRow: {
       type: Boolean,
