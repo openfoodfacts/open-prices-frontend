@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} cenas no jums",
 		"PricesAddedByYou": "Jūsu pievienotās cenas",
 		"MostRecentContributions": "Jaunākie ieguldījumi",
-		"ChallengeCount": "{count} izaicinājumi | {count} izaicinājums | {count} izaicinājumi",
 		"ChallengeStatuses": {
 			"DRAFT": "Melnraksts",
 			"UPCOMING": "Gaidāmie",
@@ -186,6 +185,10 @@
 		"Added": "Pievienots",
 		"AdditionalInfo": "Papildinformācija",
 		"All": "Visi",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Svītrkods",
 		"Barcodes": "Svītrkodi",
 		"BarcodeScan": "Skenēt svītrkodu",
@@ -839,6 +842,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Izpētīt"
