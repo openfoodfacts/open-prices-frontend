@@ -2,7 +2,7 @@
   <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-trophy-variant">
-        {{ $t('Challenge.ChallengeCount', { count: challengeTotal }) }}
+        {{ $t('Common.ChallengeCount', { count: challengeTotal }) }}
       </v-chip>
     </v-col>
   </v-row>
