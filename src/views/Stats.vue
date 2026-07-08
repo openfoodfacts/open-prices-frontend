@@ -60,7 +60,7 @@
   <v-row>
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
-        <v-icon size="x-small" icon="mdi-map-marker-outline" />
+        <v-icon size="x-small" :icon="LOCATION_TYPE_OSM_ICON" />
         {{ $t('Common.Locations') }}
       </h2>
     </v-col>
@@ -296,6 +296,7 @@ export default {
       OBF_ICON: constants.OBF_ICON,
       OPF_ICON: constants.OPF_ICON,
       OPFF_ICON: constants.OPFF_ICON,
+      LOCATION_TYPE_OSM_ICON: constants.LOCATION_TYPE_OSM_ICON,
       CHALLENGE_ICON: constants.CHALLENGE_ICON,
       BADGE_ICON: constants.BADGE_ICON,
     }

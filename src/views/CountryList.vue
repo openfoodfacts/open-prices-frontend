@@ -101,7 +101,7 @@ export default {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
-        // this.initLocationList() will be called in watch $route
+        // this.initCountryList() will be called in watch $route
       }
     },
   }

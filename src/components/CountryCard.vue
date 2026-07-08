@@ -1,5 +1,5 @@
 <template>
-  <v-card :title="getCityCountryTitle" prepend-icon="mdi-map-marker-outline" data-name="country-card">
+  <v-card :title="getCityCountryTitle" :prepend-icon="LOCATION_TYPE_OSM_ICON" data-name="country-card">
     <v-card-text>
       <span class="chip-group">
         <PriceCountChip v-if="showPriceCountChip" :count="priceCount" :withLabel="true" />
@@ -12,6 +12,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
 
 export default {
   components: {
@@ -36,6 +37,11 @@ export default {
       type: Number,
       default: null
     },
+  },
+  data() {
+    return {
+      LOCATION_TYPE_OSM_ICON: constants.LOCATION_TYPE_OSM_ICON,
+    }
   },
   computed: {
     getCityCountryTitle() {

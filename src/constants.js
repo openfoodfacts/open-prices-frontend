@@ -249,12 +249,12 @@ export default {
   PRICE_ORDER_LIST: [
     { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
     { key: '-price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-descending' },
-    { key: '-date,-created', value: 'OrderPriceDateDESC', icon: 'mdi-calendar-today' },
+    { key: '-date,-created', value: 'OrderPriceDateDESC', icon: DATE_ICON },
     { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
   ],
   PROOF_ORDER_LIST: [
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-date,-created', value: 'OrderProofDateDESC', icon: 'mdi-calendar-today' },
+    { key: '-date,-created', value: 'OrderProofDateDESC', icon: DATE_ICON },
     { key: '-created', value: 'OrderProofCreatedDESC', icon: 'mdi-clock-outline' },
   ],
   LOCATION_ORDER_LIST: [
@@ -267,12 +267,12 @@ export default {
   LOCATION_COUNTRY_ORDER_LIST: [
     { key: 'name', value: 'OrderNameASC', icon: 'mdi-alphabetical' },
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-location_count', value: 'OrderLocationCountDESC', icon: 'mdi-map-marker-outline' },
+    { key: '-location_count', value: 'OrderLocationCountDESC', icon: LOCATION_TYPE_OSM_ICON },
   ],
   USER_ORDER_LIST: [
     // same order as UserCard chips
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-location_count', value: 'OrderLocationCountDESC', icon: 'mdi-map-marker-outline' },
+    { key: '-location_count', value: 'OrderLocationCountDESC', icon: LOCATION_TYPE_OSM_ICON },
     { key: '-product_count', value: 'OrderProductCountDESC', icon: 'mdi-database-outline' },
     { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
   ],
