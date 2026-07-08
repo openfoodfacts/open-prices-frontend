@@ -185,10 +185,10 @@
 		"Added": "Přidáno",
 		"AdditionalInfo": "Další informace",
 		"All": "Vše",
-		"Badge": "Badge",
-		"Badges": "Badges",
+		"Badge": "Odznak",
+		"Badges": "Odznaky",
 		"BadgeCount": "{count} badges | {count} badge | {count} badges",
-		"BadgeAchievementDate": "Achievement date",
+		"BadgeAchievementDate": "Datum dosažení",
 		"Barcode": "Čárový kód",
 		"Barcodes": "Čárové kódy",
 		"BarcodeScan": "Naskenovat čárový kód",
@@ -844,7 +844,7 @@
 			"Title": "Porovnejte 2 lokality"
 		},
 		"Badges": {
-			"Title": "Badges"
+			"Title": "Odznaky"
 		},
 		"Explore": {
 			"Title": "Prozkoumat"
