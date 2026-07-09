@@ -149,7 +149,6 @@
 		"PricesByYou": "Ceny {challenge_title} od vás",
 		"PricesAddedByYou": "Ceny, které jste přidali",
 		"MostRecentContributions": "Nejnovější příspěvky",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Návrh",
 			"UPCOMING": "Připravované",
@@ -186,6 +185,10 @@
 		"Added": "Přidáno",
 		"AdditionalInfo": "Další informace",
 		"All": "Vše",
+		"Badge": "Odznak",
+		"Badges": "Odznaky",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Datum dosažení",
 		"Barcode": "Čárový kód",
 		"Barcodes": "Čárové kódy",
 		"BarcodeScan": "Naskenovat čárový kód",
@@ -658,7 +661,7 @@
 		"PoweredBy": {
 			"text": "poháněno {url}"
 		},
-		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
+		"FavoriteLocations": "Žádná oblíbená místa | Oblíbené místo {favoriteLocationNumber} | Oblíbená místa {favoriteLocationNumber}",
 		"RecentLocations": "Žádná nedávné poloha | Nedávná poloha {recentLocationNumber}| Nedávné polohy {recentLocationNumber}",
 		"Result": "Výsledek {resultNumber} | Výsledky {resultNumber}",
 		"SearchByName": "Vyhledejte svůj obchod podle názvu a města",
@@ -839,6 +842,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Porovnejte 2 lokality"
+		},
+		"Badges": {
+			"Title": "Odznaky"
 		},
 		"Explore": {
 			"Title": "Prozkoumat"

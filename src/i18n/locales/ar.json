@@ -149,7 +149,6 @@
 		"PricesByYou": "الأسعار من اختيارك {challenge_title}",
 		"PricesAddedByYou": "الأسعار التي أضفتها",
 		"MostRecentContributions": "أحدث المساهمات",
-		"ChallengeCount": "{count} تحديات | {count} تحدي | {count} تحديات",
 		"ChallengeStatuses": {
 			"DRAFT": "مسودة",
 			"UPCOMING": "قريباً",
@@ -186,6 +185,10 @@
 		"Added": "تمت الإضافة",
 		"AdditionalInfo": "معلومات إضافية",
 		"All": "الكل",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "الرمز الشريطي",
 		"Barcodes": "الرموز الشريطية",
 		"BarcodeScan": "امسح الرمز الشريطي",
@@ -839,6 +842,9 @@
 		},
 		"CompareLocations": {
 			"Title": "قارن بين موقعين"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "يستكشف"

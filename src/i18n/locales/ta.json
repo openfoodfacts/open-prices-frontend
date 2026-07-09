@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "நீங்கள் சேர்த்த விலைகள்",
 		"MostRecentContributions": "மிகச் சமீபத்திய பங்களிப்புகள்",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -186,6 +185,10 @@
 		"Added": "சேர்க்கப்பட்டது",
 		"AdditionalInfo": "கூடுதல் தகவல்",
 		"All": "All",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "பார்கோடு",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -839,6 +842,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "ஆராயுங்கள்"

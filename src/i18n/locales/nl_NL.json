@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prijzen door jou",
 		"PricesAddedByYou": "Door u toegevoegde prijzen",
 		"MostRecentContributions": "Meest recente bijdragen",
-		"ChallengeCount": "{count} uitdagingen | {count} uitdaging | {count} uitdagingen",
 		"ChallengeStatuses": {
 			"DRAFT": "Concept",
 			"UPCOMING": "Aankomende",
@@ -186,6 +185,10 @@
 		"Added": "Toegevoegd",
 		"AdditionalInfo": "Aanvullende informatie",
 		"All": "Alles",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Streepjescode",
 		"Barcodes": "Streepjescodes",
 		"BarcodeScan": "Scan een streepjescode",
@@ -839,6 +842,9 @@
 		},
 		"CompareLocations": {
 			"Title": "2 locaties vergelijken"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Ontdekken"

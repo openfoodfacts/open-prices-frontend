@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} あなたによる価格",
 		"PricesAddedByYou": "あなたが追加した価格",
 		"MostRecentContributions": "最近の投稿",
-		"ChallengeCount": "{count} 課題 | {count} 課題 | {count} 課題",
 		"ChallengeStatuses": {
 			"DRAFT": "下書き",
 			"UPCOMING": "今後の予定",
@@ -186,6 +185,10 @@
 		"Added": "追加した",
 		"AdditionalInfo": "追加情報",
 		"All": "全て",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "バーコード",
 		"Barcodes": "バーコード",
 		"BarcodeScan": "バーコードをスキャンする",
@@ -839,6 +842,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "探検する"

@@ -149,7 +149,6 @@
 		"PricesByYou": "Precios {challenge_title} por ti",
 		"PricesAddedByYou": "Precios añadidos por usted",
 		"MostRecentContributions": "Contribuciones más recientes",
-		"ChallengeCount": "Desafíos {count} | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Borrador",
 			"UPCOMING": "Próximamente",
@@ -186,6 +185,10 @@
 		"Added": "Agregado",
 		"AdditionalInfo": "Información adicional",
 		"All": "Todo",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Código de barras",
 		"Barcodes": "Códigos de barras",
 		"BarcodeScan": "Escanear un código de barras",
@@ -839,6 +842,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Comparar 2 ubicaciones"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Explorar"

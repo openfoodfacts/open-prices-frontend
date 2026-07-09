@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} цены по вашему желанию",
 		"PricesAddedByYou": "Цены добавлены вами",
 		"MostRecentContributions": "Последние взносы",
-		"ChallengeCount": "{count} вызовы | {count} вызов | {count} вызовы",
 		"ChallengeStatuses": {
 			"DRAFT": "Черновик",
 			"UPCOMING": "Предстоящие",
@@ -186,6 +185,10 @@
 		"Added": "Добавлен",
 		"AdditionalInfo": "Дополнительная информация",
 		"All": "Все",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Штрих-код",
 		"Barcodes": "Штрих-коды",
 		"BarcodeScan": "Сканировать штрихкод",
@@ -839,6 +842,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Исследовать"
