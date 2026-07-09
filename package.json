@@ -53,7 +53,7 @@
     "@mdi/font": "^7.4.47",
     "@vitejs/plugin-vue": "^5.2.4",
     "@vue/compiler-sfc": "^3.5.38",
-    "autoprefixer": "^10.5.0",
+    "autoprefixer": "^10.5.2",
     "cross-env": "^7.0.3",
     "cypress": "^13.17.0",
     "eslint": "^10.6.0",
