@@ -4,13 +4,13 @@ on: push
 
 jobs:
   lint-and-test:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v7
       # Install npm dependencies, cache them correctly
       - name: Cypress run
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7.4.1
         with:
           # just perform install
           runTests: false
