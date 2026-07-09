@@ -5,8 +5,8 @@
         <LocationOSMTagChip :location="location" />
         <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
         <template v-if="!hideCountryCity">
-          <CountryCityChip v-if="hasLocationCity" :location="location" type="city" />
-          <CountryCityChip v-if="hasLocationCountry" :location="location" type="country" />
+          <CountryCityChip v-if="hasLocationCity" type="city" :country="location.osm_address_country" :city="location.osm_address_city" />
+          <CountryCityChip v-if="hasLocationCountry" type="country" :country="location.osm_address_country" />
         </template>
       </span>
     </v-col>

@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "używa {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Kod kreskowy",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Ceny dodane przez Ciebie",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -168,7 +169,7 @@
 	"Common": {
 		"About": "Na temat",
 		"Action": "Działanie",
-		"Actions": "Actions",
+		"Actions": "Akcje",
 		"AddComment": "Add a comment",
 		"AddPrice": "Dodaj cenę",
 		"AddPrices": "Add prices",
@@ -178,10 +179,16 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Dodaj nowe metki cenowe",
+		"AddNewProofReceipt": "Dodaj nowy paragon",
 		"AddToOFF": "Add to {name}",
 		"Added": "W dodatku",
 		"AdditionalInfo": "Additional information",
 		"All": "Wszystkie",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Kod kreskowy",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Zeskanuj kod kreskowy",
@@ -224,7 +231,8 @@
 		"Contributors": "Współtwórcy",
 		"Contributions": "Wkład",
 		"Confirm": "Potwierdź",
-		"Country": "Country",
+		"Count": "Licznik",
+		"Country": "Kraj",
 		"Countries": "Kraje",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -235,7 +243,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Waluty możesz dodać w ustawieniach.",
 		"Dashboard": "Panel",
-		"Display": "Wyświetl",
+		"DisplayNoun": "Wyświetl",
+		"DisplayVerb": "Wyświetl",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
@@ -246,6 +256,7 @@
 		"Error": "Błąd",
 		"Experiment": "Eksperyment",
 		"Experiments": "Experiments",
+		"Explore": "Badać",
 		"FromPriceTag": "Od ceny",
 		"FromReceipt": "Z paragonu",
 		"GoToProof": "Go to proof",
@@ -257,6 +268,7 @@
 		"Languages": "Języki",
 		"LatestPrices": "Najnowsze ceny",
 		"LatestProofs": "Najnowsze dowody",
+		"LearnMore": "Dowiedz się więcej",
 		"LoadMore": "Załaduj więcej",
 		"Location": "Location",
 		"Locations": "Lokalizacje",
@@ -264,6 +276,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Data",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Data wykonania zdjęcia.",
@@ -291,18 +304,28 @@
 		"Edit": "Edytuj",
 		"End": "End",
 		"ErrorServer": "Błąd: błąd serwera",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Pole jest wymagane",
-		"Filter": "Filtr",
+		"FilterNoun": "Filtr",
+		"FilterVerb": "Filtr",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Z cenami",
+		"FilterWithLocationCount": "Z lokalizacjami",
 		"FilterProductWithPriceCount": "Z ceną",
 		"FilterProductWithPriceCountHide": "Ukryj produkty z cenami",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Z ważnym kodem kreskowym",
-		"FilterPriceTagWithTagPredictionProductExists": "Z ważnym produktem",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Z prawidłowym tagiem kategorii",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
@@ -311,6 +334,7 @@
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
 		"Help": "Pomoc",
+		"Here": "Tutaj",
 		"History": "Historia",
 		"Image": "Zdjęcie",
 		"ImageSelect": "Select an image",
@@ -351,7 +375,10 @@
 		"Online": "Online",
 		"Open": "Otwarte",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
+		"OrderNameASC": "Nazwa",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -381,6 +408,8 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Cenówka",
 		"PriceTags": "Metki cenowe",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -391,6 +420,7 @@
 		"PriceAlreadyUploaded": "Cena już przesłana",
 		"PriceReadyToBeUploaded": "Cena gotowa do przesłania",
 		"PricesAlreadyUploaded": "Ceny już załadowane",
+		"PricesAll": "Wszystkie ceny",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -400,6 +430,8 @@
 		"Private": "Private",
 		"Privacy": "Prywatność",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Produkty stworzone",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Brak produktu",
 		"ProductOrCategoryMissing": "Brak produktu lub kategorii",
@@ -419,6 +451,7 @@
 		"Quantity": "Ilość",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Stopień",
 		"Reason": "Powód",
 		"RECEIPT": "Rachunek",
 		"Receipt": "Rachunek",
@@ -430,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "Otworzyć na nowo",
 		"ReportProblem": "Zgłoś problem",
+		"Reset": "Reset",
 		"Resolved": "Rozwiązany",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -437,7 +471,7 @@
 		"Select": "Select",
 		"Send": "Wyślij",
 		"Settings": "Ustawienia",
-		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Zalogowano!",
 		"SignIn": "Zaloguj się",
 		"SignOut": "Wyloguj się",
@@ -497,6 +531,7 @@
 		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Użytkownik nie został znaleziony",
 		"Validate": "Zweryfikuj",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -511,7 +546,7 @@
 		"No": "Nie",
 		"Food": "Żywność",
 		"PetFood": "Karma dla zwierząt",
-		"Beauty": "Beauty"
+		"Beauty": "Uroda"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -579,7 +614,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Dowód ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Sklepy, w których sprzedawano",
-		"UseCropModeToAddImage": "Aby dodać zdjęcie produktu, włącz tryb przycinania pod zdjęciem próbnym i narysuj prostokąt wokół produktu."
+		"UseCropModeToAddImage": "Aby dodać zdjęcie produktu, włącz tryb przycinania pod zdjęciem próbnym i narysuj prostokąt wokół produktu.",
+		"ProductMissingPromoBanner": "Eksperyment: utwórz ten produkt, korzystając z danych z Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -625,6 +661,7 @@
 		"PoweredBy": {
 			"text": "używa {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Brak ostatnich lokalizacji | Ostatnia lokalizacja {recentLocationNumber}| Ostatnie lokalizacje {recentLocationNumber}",
 		"Result": "Wynik {resultNumber} | Wyniki {resultNumber}",
 		"SearchByName": "Wyszukaj swój sklep według nazwy i miasta",
@@ -716,7 +753,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Aby przesłać wiele cen (z tego samego sklepu i tej samej daty), kliknij tutaj!",
-		"PromoReceiptAssistant": "Eksperyment: wypróbuj nowego asystenta paragonów, który automatycznie pobiera ceny z paragonów!"
+		"PromoReceiptAssistant": "Eksperyment: wypróbuj nowego asystenta paragonów, który automatycznie pobiera ceny z paragonów!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Dowód",
@@ -796,8 +834,20 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Dodaj dowód (paragon)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
+		},
+		"Explore": {
+			"Title": "Badać"
 		},
 		"Locations": {
 			"Title": "Lokalizacje"
@@ -823,11 +873,20 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "Rachunek"
+		},
+		"Cities": {
+			"Title": "Miasta"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Wnieś wkład"
+		},
+		"Countries": {
+			"Title": "Kraje"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -836,7 +895,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Strona główna"
+			"Title": "Strona główna",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Panel"
@@ -892,9 +952,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Asystent metki cenowej"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -902,13 +959,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Zweryfikuj"
+			"Title": "Zweryfikuj",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -928,6 +987,7 @@
 		"ServerError": "Błąd: błąd serwera",
 		"Title": "Zaloguj się",
 		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Nazwa użytkownika",
 		"WrongCredentials": "Błąd: nieprawidłowe dane logowania"
 	},
@@ -956,6 +1016,10 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Najnowsze ceny",
 		"LatestProofs": "Najnowsze dowody",
@@ -981,10 +1045,10 @@
 	"UserSettings": {
 		"AddingPrices": "Dodawanie cen",
 		"ChangeLanguage": "Zmiana języka",
-		"CountryLabel": "Country",
+		"CountryLabel": "Kraj",
 		"CurrencyLabel": "Waluta",
-		"DisplayTitle": "Wyświetl",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

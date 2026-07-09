@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useAppStore } from './store'
 import localeManager from './i18n/localeManager.js'
+import constants from './constants'
+import i18n from './i18n'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 const routes = [
@@ -17,19 +19,21 @@ const routes = [
   { path: '/prices/add/multiple/receipt', name: 'price-add-multiple-receipt', redirect: () => { return { path: '/prices/add/multiple' }}},
   { path: '/prices/add/validate', name: 'price-add-validate', component: () => import('./views/PriceAddValidate.vue'),  meta: { title: 'ValidatePrices', icon: 'mdi-checkbox-marked-circle-plus-outline', requiresAuth: true, breadcrumbs: [{title: 'Prices', disabled: false, to: '/prices' }, { title: 'Add', disabled: true }, {title: 'Validate', disabled: true }] }},
   { path: '/proofs/add/single', name: 'proof-add-single', component: () => import('./views/ProofAddSingle.vue'), meta: { title: 'AddProofSingle', icon: 'mdi-image-plus', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'AddProofSingle', disabled: true }] }},
+  { path: '/proofs/add/receipt', name: 'proof-add-receipt', component: () => import('./views/ProofReceiptAdd.vue'), meta: { title: 'AddProofsReceipt', icon: 'mdi-image-plus', requiresAuth: true, breadcrumbs: [{ title: 'Proofs', disabled: false, to: '/proofs' }, { title: 'Add', disabled: true }, { title: 'Receipt', disabled: true }] }},
   { path: '/proofs/add/price-tags', name: 'proof-add-multiple-price-tags', component: () => import('./views/ProofPriceTagAddMultiple.vue'), meta: { title: 'AddProofsPriceTags', icon: 'mdi-image-plus', requiresAuth: true, breadcrumbs: [{ title: 'Proofs', disabled: false, to: '/proofs' }, { title: 'Add', disabled: true }, { title: 'PriceTags', disabled: true }] }},
-  { path: '/search', name: 'search', component: () => import('./views/Search.vue'), meta: { title: 'Search', icon: 'mdi-magnify', drawerMenu: true, breadcrumbs: [{title: 'Search', disabled: true }] }},
   { path: '/prices/:id', name: 'prices-detail', component: () => import('./views/PriceDetail.vue'), meta: { title: 'Price detail' }},
-  { path: '/prices', name: 'prices', component: () => import('./views/PriceList.vue'), meta: { title: 'LatestPrices', icon: 'mdi-tag-multiple-outline', drawerMenu: true, breadcrumbs: [{title: 'LatestPrices', disabled: true }] }},
+  { path: '/prices', name: 'prices', component: () => import('./views/PriceList.vue'), meta: { title: 'LatestPrices', icon: 'mdi-tag-multiple-outline', breadcrumbs: [{title: 'LatestPrices', disabled: true }] }},
   { path: '/proofs/:id', name: 'proof-detail', component: () => import('./views/ProofDetail.vue'), meta: { title: 'Proof detail', requiresAuth: true }},
-  { path: '/proofs', name: 'proofs', component: () => import('./views/ProofList.vue'), meta: { title: 'LatestProofs', icon: 'mdi-image-multiple', drawerMenu: true, breadcrumbs: [{title: 'LatestProofs', disabled: true }] }},
+  { path: '/proofs', name: 'proofs', component: () => import('./views/ProofList.vue'), meta: { title: 'LatestProofs', icon: 'mdi-image-multiple', breadcrumbs: [{title: 'LatestProofs', disabled: true }] }},
   { path: '/products', name: 'products', component: () => import('./views/ProductList.vue'), meta: { title: 'TopProducts', icon: 'mdi-database-outline', breadcrumbs: [{title: 'TopProducts', disabled: true }] }},
   { path: '/products/:id', name: 'product-detail', component: () => import('./views/ProductDetail.vue'), meta: { title: 'Product detail' }},
   { path: '/locations', name: 'locations', component: () => import('./views/LocationList.vue'), meta: { title: 'TopLocations', icon: 'mdi-map-marker-star-outline', breadcrumbs: [{title: 'TopLocations', disabled: true }] }},
   { path: '/locations/:id', name: 'location-detail', component: () => import('./views/LocationDetail.vue'), meta: { title: 'Location detail' }},
   { path: '/locations/:id/proofs', name: 'location-proofs', component: () => import('./views/LocationProofList.vue'), meta: { title: 'Location proofs', breadcrumbs: [{title: 'Locations', disabled: false, to: '/locations' }, {title: ':id', disabled: false, to: '/locations/:id' }, {title: 'Proofs', disabled: true }] }},
-  { path: '/countries/:country', name: 'country-detail', component: () => import('./views/CountryDetail.vue'), meta: { title: 'Country detail' }},
-  { path: '/countries/:country/cities/:city', name: 'country-city-detail', component: () => import('./views/CountryCityDetail.vue'), meta: { title: 'City detail' }},
+  { path: '/locations/compare', name: 'locations-compare', component: () => import('./views/LocationsCompare.vue'), meta: { title: 'LocationsCompare', icon: 'mdi-information-outline', breadcrumbs: [{title: 'CompareLocations', disabled: true }] }},
+  { path: '/countries', name: 'countries', component: () => import('./views/CountryList.vue'), meta: { title: 'Countries', icon: 'mdi-earth', breadcrumbs: [{title: 'Countries', disabled: true }] }},
+  { path: '/countries/:country', name: 'country-detail', component: () => import('./views/CountryDetail.vue'), meta: { title: 'Country detail', breadcrumbs: [{title: 'Countries', disabled: false, to: '/countries' }, {title: ':country', disabled: true }] }},
+  { path: '/countries/:country/cities/:city', name: 'country-city-detail', component: () => import('./views/CountryCityDetail.vue'), meta: { title: 'City detail', breadcrumbs: [{title: 'Countries', disabled: false, to: '/countries' }, {title: ':country', disabled: false, to: '/countries/:country' }, {title: 'Cities', disabled: true}, {title: ':city', disabled: true }] }},
   { path: '/brands/:id', name: 'brand-detail', component: () => import('./views/BrandDetail.vue'), meta: { title: 'Brand detail' }},
   { path: '/dates/:date', name: 'date-detail', component: () => import('./views/DateDetail.vue'), meta: { title: 'Date detail' }},
   { path: '/currencies/:currency', name: 'currency-detail', component: () => import('./views/CurrencyDetail.vue'), meta: { title: 'Currency detail' }},
@@ -37,7 +41,10 @@ const routes = [
   { path: '/labels/:id', name: 'label-detail', component: () => import('./views/LabelDetail.vue'), meta: { title: 'Label detail' }},
   { path: '/users', name: 'users', component: () => import('./views/UserList.vue'), meta: { title: 'TopContributors', icon: 'mdi-account-star-outline', breadcrumbs: [{title: 'TopContributors', disabled: true }] }},
   { path: '/users/:username', name: 'user-detail', component: () => import('./views/UserDetail.vue'), meta: { title: 'User detail' }},
-  { path: '/users/:username/proofs', name: 'user-proofs', component: () => import('./views/UserProofList.vue'), meta: { title: 'User proofs', breadcrumbs: [{title: 'Users', disabled: false, to: '/users' }, {title: 'Username', disabled: false, to: '/users/:username' }, {title: 'Proofs', disabled: true }] }},
+  { path: '/users/:username/proofs', name: 'user-proofs', component: () => import('./views/UserProofList.vue'), meta: { title: 'User proofs', breadcrumbs: [{title: 'Users', disabled: false, to: '/users' }, {title: ':username', disabled: false, to: '/users/:username' }, {title: 'Proofs', disabled: true }] }},
+  { path: '/users/:username/badges', name: 'user-badges', component: () => import('./views/UserBadgeList.vue'), meta: { title: 'User badges', breadcrumbs: [{title: 'Users', disabled: false, to: '/users' }, {title: ':username', disabled: false, to: '/users/:username' }, {title: 'Badges', disabled: true }] }},
+  { path: '/explore', name: 'explore', component: () => import('./views/Explore.vue'), meta: { title: 'Explore', icon: 'mdi-magnify-expand', drawerMenu: true, breadcrumbs: [{title: 'Explore', disabled: true }] }},
+  { path: '/search', name: 'search', component: () => import('./views/Search.vue'), meta: { title: 'Search', icon: 'mdi-magnify', breadcrumbs: [{title: 'Search', disabled: true }] }},
   { path: '/community', name: 'community', component: () => import('./views/Community.vue'), meta: { title: 'Community', icon: 'mdi-account-group', drawerMenu: true, breadcrumbs: [{title: 'Community', disabled: true }] }},
   { path: '/reuses', name: 'reuses', component: () => import('./views/Reuses.vue'), meta: { title: 'Reuses', icon: 'mdi-account-group', drawerMenu: false, breadcrumbs: [{title: 'Reuses', disabled: true }] }},
   { path: '/challenge', name: 'current-challenge', component: () => import('./views/ChallengeDetail.vue'), meta: { title: 'Challenge', icon: 'mdi-trophy-variant', drawerMenu: false,  breadcrumbs: [{title: 'Challenges', disabled: false, to: '/challenges' }, {title: 'CommunityChallenge', disabled: true }] }},
@@ -45,7 +52,8 @@ const routes = [
   { path: '/challenges/:id', name: 'challenge-detail', component: () => import('./views/ChallengeDetail.vue'), meta: { title: 'Challenge', icon: 'mdi-trophy-variant',  breadcrumbs: [{title: 'Challenges', disabled: false, to: '/challenges' }, {title: ':id', disabled: true }] }},
   { path: '/challenges/:id/prices', name: 'challenge-prices', component: () => import('./views/ChallengePriceList.vue'), meta: { title: 'Challenge prices', breadcrumbs: [{title: 'Challenges', disabled: false, to: '/challenges' }, {title: ':id', disabled: false, to: '/challenges/:id' }, {title: 'Prices', disabled: true }] }},
   { path: '/challenges/:id/proofs', name: 'challenge-proofs', component: () => import('./views/ChallengeProofList.vue'), meta: { title: 'Challenge proofs', breadcrumbs: [{title: 'Challenges', disabled: false, to: '/challenges' }, {title: ':id', disabled: false, to: '/challenges/:id' }, {title: 'Proofs', disabled: true }] }},
-  { path: '/experiments', name: 'experiments', component: () => import('./views/Experiments.vue'), meta: { title: 'Experiments', icon: 'mdi-test-tube', drawerMenu: true, drawerMenuConditionalDisplay: 'drawer_display_experiments', breadcrumbs: [{title: 'Experiments', disabled: true }] }},
+  { path: '/badges', name: 'badges', component: () => import('./views/BadgeList.vue'), meta: { title: 'Badges', icon: 'mdi-medal-outline', drawerMenu: true, breadcrumbs: [{title: 'Badges', disabled: true }] }},
+  { path: '/experiments', name: 'experiments', component: () => import('./views/Experiments.vue'), meta: { title: 'Experiments', icon: 'mdi-test-tube', drawerMenu: true, breadcrumbs: [{title: 'Experiments', disabled: true }] }},
   { path: '/experiments/proof-price-tag-assistant', name: 'price-tag-assistant', component: () => import('./views/ProofPriceTagAssistant.vue'), meta: { title: 'ProofPriceTagAssistant', icon: 'mdi-draw', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'ProofPriceTagAssistant', disabled: true }] }},
   { path: '/experiments/receipt-assistant', name: 'receipt-assistant', component: () => import('./views/ReceiptAssistant.vue'), meta: { title: 'ReceiptAssistant', icon: 'mdi-draw', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'ReceiptAssistant', disabled: true }] }},
   { path: '/experiments/create-off-product', name: 'create-off-product', component: () => import('./views/CreateOffProduct.vue'), meta: { title: 'CreateOffProduct', icon: 'mdi-draw', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'CreateOffProduct', disabled: true }] }},
@@ -53,6 +61,8 @@ const routes = [
   { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats', icon: 'mdi-chart-box-outline', drawerMenu: true, breadcrumbs: [{title: 'Stats', disabled: true }] }},
   { path: '/settings', name: 'settings', component: () => import('./views/Settings.vue'), meta: { title: 'Settings', icon: 'mdi-cog-outline', drawerMenu: true, breadcrumbs: [{title: 'Settings', disabled: true }] }},
   { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', icon: 'mdi-information-outline', drawerMenu: true, breadcrumbs: [{title: 'About', disabled: true }] }},
+  // redirects (in the component)
+  { path: '/locations/osm/:osmType/:osmId', name: 'location-osm-detail', component: () => import('./views/LocationOSMDetail.vue'), meta: { title: 'Location OSM detail' }},
   // redirects
   { path: '/experiments/challenge', redirect: '/challenge' },
   { path: '/experiments/contribution-assistant', redirect: '/experiments/proof-price-tag-assistant' },
@@ -73,7 +83,7 @@ const router = createRouter({
 })
 
 /**
- * On each page change, check if it needs authentication.
+ * Before each page change, check if it needs authentication.
  * If required, but the user is not authenticated (token unknown):
  * - then redirect to 'sign-in'
  * - the initial url is passed as query parameter ?next=, in order to redirect back after login
@@ -89,6 +99,25 @@ const router = createRouter({
   }
 
   next()
+})
+
+/**
+ * After each page change, update the document title based on the route meta title and translation.
+ */
+router.afterEach((to) => {
+  const routeTitle = to.meta?.title
+  if (!routeTitle) {
+    document.title = constants.APP_NAME
+    return
+  }
+
+  const translationKey = `Router.${routeTitle}.Title`
+  const hasTranslation = i18n.global.te(translationKey)
+  const resolvedTitle = hasTranslation
+    ? i18n.global.t(translationKey)
+    : routeTitle
+
+  document.title = `${resolvedTitle} | ${constants.APP_NAME}`
 })
 
 export default router

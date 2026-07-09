@@ -74,7 +74,7 @@
       <StatCard :value="stats.location_type_online_count" :subtitle="$t('Common.Online')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_type_osm_country_count" :subtitle="$t('Common.Countries')" />
+      <StatCard :value="stats.location_type_osm_country_count" :subtitle="$t('Common.Countries')" to="/countries?filter=location_count_gte_1" />
     </v-col>
   </v-row>
 
@@ -117,15 +117,45 @@
   <v-row>
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-trophy-variant" />
+        {{ $t('Common.Challenges') }}
+      </h2>
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.challenge_count" :subtitle="$t('Stats.Total')" to="/challenges" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_in_challenge_count" :subtitle="$t('Common.Prices')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_in_challenge_count" :subtitle="$t('Common.Proofs')" />
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" :icon="BADGE_ICON" />
+        {{ $t('Common.Badges') }}
+      </h2>
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.badge_count" :subtitle="$t('Stats.Total')" to="/badges" />
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-test-tube" />
         {{ $t('Common.Experiments') }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.challenge_count" :subtitle="$t('Common.Challenges')" to="/challenges" />
+      <StatCard :value="stats.price_tag_status_linked_to_price_count" :subtitle="$t('UserSettings.PriceValidation')" />
     </v-col>
-    <v-col cols="6" sm="4">
-      <StatCard :value="stats.price_tag_status_linked_to_price_count" :subtitle="$t('Stats.PricesLinkedToPriceTag')" />
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.product_created_count" :subtitle="$t('Common.ProductsCreated')" />
     </v-col>
   </v-row>
 
@@ -193,24 +223,20 @@
 
   <v-row>
     <v-col cols="12">
-      <i18n-t keypath="Stats.LastUpdated" tag="span" :title="getRelativeDateTimeFormatted(stats.updated)">
-        <template #date>
-          {{ getDateTimeFormatted(stats.updated) }}
-        </template>
-      </i18n-t>
+      <StatsLastUpdatedAlert v-if="stats" :lastUpdated="stats.updated" />
     </v-col>
   </v-row>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
-import date_utils from '../utils/date.js'
 
 export default {
   components: {
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
+    StatsLastUpdatedAlert: defineAsyncComponent(() => import('../components/StatsLastUpdatedAlert.vue')),
   },
   data() {
     return {
@@ -253,10 +279,15 @@ export default {
         proof_source_mobile_count: 0,
         proof_source_api_count: 0,
         proof_source_other_count: 0,
-        user_count: 0,
+        price_tag_status_linked_to_price_count: 0,
+        user_count: 0,  // not displayed
         user_with_price_count: 0,
         challenge_count: 0,
-        price_tag_status_linked_to_price_count: 0,
+        badge_count: 0,
+        badge_with_user_count: 0,  // not displayed
+        price_in_challenge_count: 0,
+        proof_in_challenge_count: 0,
+        product_created_count: 0,
         updated: null,
       },
       loading: false,
@@ -265,6 +296,7 @@ export default {
       OBF_ICON: constants.OBF_ICON,
       OPF_ICON: constants.OPF_ICON,
       OPFF_ICON: constants.OPFF_ICON,
+      BADGE_ICON: constants.BADGE_ICON,
     }
   },
   mounted() {
@@ -273,19 +305,13 @@ export default {
   methods: {
     getStats() {
       this.loading = true
-      return api.getStats()
+      return openPricesApi.getStats()
         .then((data) => {
           for (const key in this.stats) {
             this.stats[key] = (key in data) ? data[key] : this.stats[key]
           }
           this.loading = false
         })
-    },
-    getDateTimeFormatted(dateTimeString) {
-      return date_utils.offDateTime(dateTimeString)
-    },
-    getRelativeDateTimeFormatted(dateTimeString) {
-      return date_utils.prettyRelativeDateTime(dateTimeString, 'short')
     },
   }
 }

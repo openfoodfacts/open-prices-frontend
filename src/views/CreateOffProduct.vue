@@ -14,62 +14,59 @@
   </v-row>
 
   <v-row v-if="step === 1">
-    <v-col cols="12" md="6">
-      <v-form @submit.prevent="loadProductInfo">
+    <v-col cols="12">
+      <v-form @submit.prevent="onProductCodeSelected">
         <v-card
-          class="mb-4"
           :title="$t('Common.BarcodeType')"
           prepend-icon="mdi-tag-plus-outline"
           height="100%"
         >
           <v-divider />
           <v-card-text>
-            <div class="text-body-2">
-              {{ $t('AddPriceSingle.ProductInfo.ProductBarcode') }}
-            </div>
             <v-text-field
               v-model="productForm.product_code"
-              density="compact"
-              variant="outlined"
+              :label="$t('AddPriceSingle.ProductInfo.ProductBarcode')"
               type="text"
-              inputmode="decimal"
-              persistent-hint
-            />
+              inputmode="numeric"
+              hide-details="auto"
+              @update:modelValue="newValue => productForm.product_code = numericOnly(newValue)"
+            >
+              <template #append-inner>
+                <v-btn color="primary" icon="mdi-plus" :disabled="!productForm.product_code" @click="onProductCodeSelected" />
+              </template>
+            </v-text-field>
           </v-card-text>
-          <v-divider />
-          <v-card-actions>
-            <v-row>
-              <v-col>
-                <v-btn
-                  class="float-right"
-                  color="primary"
-                  variant="flat"
-                  type="submit"
-                >
-                  {{ $t('Common.Select') }}
-                </v-btn>
-              </v-col>
-            </v-row>
-          </v-card-actions>
         </v-card>
       </v-form>
     </v-col>
-    <v-col cols="12" md="6">
+    <v-col cols="12">
       <v-card
-        class="mb-4"
         :title="$t('CreateOffProduct.SelectUnknownProductGuide')"
         prepend-icon="mdi-tag-plus-outline"
         height="100%"
       >
         <v-divider />
         <v-card-text>
-          <v-row class="mt-0">
+          <v-row>
+            <v-col class="pt-0 pb-0">
+              <v-chip label variant="text" prepend-icon="mdi-database-outline">
+                {{ $t('Common.ProductCount', { count: productTotal }) }}
+              </v-chip>
+              <FilterMenu kind="productCreate" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
+              <OrderMenu v-if="!currentFilterList.includes('price__owner')" kind="productCreate" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+            </v-col>
+          </v-row>
+          <v-row>
             <v-col v-for="missingProduct in missingProductsWithPrices" :key="missingProduct" cols="12" sm="6">
               <ProductCard :product="missingProduct" elevation="1" height="100%" readonly @click="missingProductClicked(missingProduct)" />
             </v-col>
           </v-row>
+          <v-row v-if="loading">
+            <v-col align="center">
+              <v-progress-circular indeterminate :size="30" />
+            </v-col>
+          </v-row>
         </v-card-text>
-        <v-divider />
       </v-card>
     </v-col>
   </v-row>
@@ -85,7 +82,7 @@
         >
           <v-divider />
           <v-card-text>
-            <v-alert v-if="productExists" type="info" variant="outlined" density="compact">
+            <v-alert v-if="productExists" type="warning" variant="outlined" density="compact">
               {{ $t('CreateOffProduct.ProductAlreadyExists') }}
             </v-alert>
             <div class="text-body-2">
@@ -104,7 +101,9 @@
             </div>
             <v-select
               v-model="productForm.flavor"
-              :items="flavors"
+              :items="flavorList"
+              :item-title="item => item.value"
+              :item-value="item => item.key"
               :disabled="productExists"
               density="compact"
               variant="outlined"
@@ -116,7 +115,7 @@
             </div>
             <v-autocomplete
               v-model="productForm.product_language"
-              :items="Languages"
+              :items="languageList"
               item-title="native"
               item-value="code"
               density="compact"
@@ -167,9 +166,9 @@
               <v-autocomplete
                 v-model="productForm.countries"
                 density="compact"
-                :items="Countries"
-                item-title="native"
-                item-value="code"
+                :items="countryTags"
+                item-title="name"
+                item-value="country_code_2"
                 variant="outlined"
                 chips
                 clearable
@@ -221,7 +220,7 @@
                 {{ $t('Common.Image') }}
               </div>
               <v-img v-if="drawnImageSrc" :src="drawnImageSrc" max-height="200px" />
-              <v-alert v-else class="mb-2" type="info" variant="outlined" density="compact">
+              <v-alert v-else class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
                 {{ $t('CreateOffProduct.UseCropModeToAddImage') }}
               </v-alert>
             </div>
@@ -235,6 +234,7 @@
                   color="primary"
                   variant="flat"
                   type="submit"
+                  :disabled="!productForm.flavor"
                 >
                   {{ $t('CreateOffProduct.CreateProduct') }}
                 </v-btn>
@@ -262,18 +262,31 @@
         <v-divider />
         <v-card-actions>
           <v-row>
-            <v-col>
+            <v-col cols="6">
               <v-btn
                 color="primary"
                 variant="flat"
                 type="submit"
                 :disabled="shownProofIndex === 0"
+                block
                 @click="previousProof()"
               >
                 {{ $t('CreateOffProduct.PreviousProof') }}
               </v-btn>
             </v-col>
-            <v-col>
+            <v-col cols="6">
+              <v-btn
+                color="primary"
+                variant="flat"
+                type="submit"
+                :disabled="shownProofIndex === priceList.length - 1"
+                block
+                @click="nextProof()"
+              >
+                {{ $t('CreateOffProduct.NextProof') }}
+              </v-btn>
+            </v-col>
+            <v-col cols="12" class="d-flex justify-center">
               <v-switch
                 v-model="imageEditMode"
                 density="compact"
@@ -282,17 +295,6 @@
                 :true-value="true"
                 hide-details="auto"
               />
-            </v-col>
-            <v-col>
-              <v-btn
-                color="primary"
-                variant="flat"
-                type="submit"
-                :disabled="shownProofIndex === priceList.length - 1"
-                @click="nextProof()"
-              >
-                {{ $t('CreateOffProduct.NextProof') }}
-              </v-btn>
             </v-col>
           </v-row>
         </v-card-actions>
@@ -344,12 +346,12 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
+import languageList from '../i18n/data/languages.json'
 import constants from '../constants'
 import proof_utils from '../utils/proof.js'
 import utils from '../utils'
-import Languages from '../i18n/data/languages.json'
-import Countries from '../i18n/data/countries.json'
+import data_utils from '../utils/data.js'
 import "vue-zoomable/dist/style.css"
 
 export default {
@@ -357,13 +359,23 @@ export default {
     ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     VueZoomable: defineAsyncComponent(() => import('vue-zoomable')),
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
   },
   data() {
     return {
       step: 1,
+      // product missing list
       missingProductsWithPrices: [],
+      currentFilterList: [],
+      currentOrder: constants.PRODUCT_CREATE_ORDER_LIST[0].key,  // -created
+      productTotal: 0,
+      // product missing form
       product: null,
       productForm: {},
+      flavorList: constants.PRODUCT_SOURCE_LIST,
+      languageList,
+      countryTags: [],  // list of country tags for autocomplete  // see mounted
       priceList: [],
       shownProofIndex: 0,
       shownProof: null,
@@ -376,8 +388,6 @@ export default {
       zoomLevel: 1,
       loading: false,
       panLevel: {x: 0, y: 0},
-      Languages,
-      Countries
     }
   },
   computed: {
@@ -398,54 +408,103 @@ export default {
         },
       ]
     },
-    flavors() {
-      return constants.PRODUCT_SOURCE_LIST.map(source => source.value)
-    }
+    getPricesParams() {
+      let defaultParams = { product__source__isnull: true, product_id__isnull: false, proof__type: constants.PROOF_TYPE_PRICE_TAG, order_by: '-created' }
+      if (this.currentFilterList.includes('price__owner')) {
+        defaultParams['owner'] = this.appStore.user.username
+      }
+      return defaultParams
+    },
   },
   watch: {
-    '$route.query.product_code'(newVal) {
-      if (!newVal) {
-        this.getMissingProductsWithPrices()
-        this.step = 1
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        if (this.step === 1) {
+          this.getMissingProductsWithPrices()
+        }
       }
     }
   },
   mounted() {
-    if (this.$route.query.flavor) {
-      this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === this.$route.query.flavor).value
-    }
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     if (this.$route.query.product_code) {
       this.productForm.product_code = this.$route.query.product_code
-      this.loadProductInfo()
+      this.onProductCodeSelected()
+    }
+    if (this.$route.query.flavor) {
+      this.productForm.flavor = this.$route.query.flavor
     }
     this.getMissingProductsWithPrices()
+    this.setCountryTags()
+    this.getChallenges()
   },
   methods: {
+    numericOnly(value) {
+      return utils.numericOnly(value)
+    },
     fieldRequired(v) {
       return !!v || this.$t('Common.FieldIsRequired')
     },
-    loadProductInfo() {
+    getMissingProductsWithPrices() {
+      this.missingProductsWithPrices = []
+      this.loading = true
+      // Use price API in some cases
+      if (this.currentFilterList.includes('price__owner') || this.currentOrder === '-created') {
+        // Using prices API lets us do finer filtering, typically limiting to price tags proofs
+        return openPricesApi.getPrices(this.getPricesParams)
+          .then((data) => {
+            const productMap = new Map()
+            data.items.forEach(price => {
+              if (price.product && !productMap.has(price.product.code)) {
+                productMap.set(price.product.code, price.product)
+              }
+            })
+            this.missingProductsWithPrices = Array.from(productMap.values())
+            this.productTotal = data.total // Only true if products have only one price, but it's good enough ..
+            this.loading = false
+          })
+      }
+      // Default to product API, this.currentOrder is '-proof_count', which is only available in the product API
+      // this.productTotal is accurate, but it also includes other, less useful, proof types (receipt, gdpr_request, etc.)
+      return openPricesApi.getProducts({ price_count__gte: 1, source__isnull: true, order_by: this.currentOrder })
+        .then((data) => {
+          this.missingProductsWithPrices = data.items
+          this.productTotal = data.total
+          this.loading = false
+        })
+    },
+    missingProductClicked(product) {
+      this.productForm.product_code = product.code
       this.$router.push({ query: { product_code: this.productForm.product_code } })
+      this.onProductCodeSelected()
+    },
+    onProductCodeSelected() {
+      // move to step 2
       this.step = 2
+      // init
+      this.productForm.flavor = null
+      this.drawnImageSrc = null
+      // check if product already exists
+      // load product prices
       this.getProduct((product) => {
         if (product.source) {
           this.productExists = true
         } else {
           this.productExists = false
         }
-        this.getPrices(product)
+        this.getProductPrices(product)
       })
-      this.getChallenges()
     },
     getProduct(callback) {
-      return api.getProductByCode(this.productForm.product_code)
+      return openPricesApi.getProductByCode(this.productForm.product_code)
         .then((product) => {
           this.product = product
           if(callback) callback(product)
         })
     },
-    getPrices(product) {
-      return api.getPrices({product_code: this.productForm.product_code, order_by: constants.PRICE_ORDER_LIST[2].key })
+    getProductPrices(product) {
+      return openPricesApi.getPrices({product_code: this.productForm.product_code, order_by: constants.PRICE_ORDER_LIST[2].key })
         .then((data) => {
           this.priceList = data.items
           if (this.priceList.length) {
@@ -476,7 +535,7 @@ export default {
             }
           }
           if (this.productExists) {
-            this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === product.source).value
+            this.productForm.flavor = product.source
             this.productForm.product_name = product.product_name
             this.productForm.quantity = product.product_quantity + product.product_quantity_unit
             this.productForm.categories = product.categories_tags
@@ -486,52 +545,44 @@ export default {
           }
         })
     },
+    setCountryTags() {
+      data_utils.getLocaleCountryTags(this.appStore.getUserLanguage).then((module) => {
+        this.countryTags = module.default.sort((a, b) => a.name.localeCompare(b.name))
+      })
+    },
     getChallenges() {
-      return api.getChallenges({ order_by: '-created' })
+      return openPricesApi.getChallenges({ order_by: '-created' })
         .then((data) => {
           const challenges = data.items
           const challengeCategories = challenges.map(challenge => challenge.categories) // Array of arrays
           this.suggestedCategories = Array.from(new Set(challengeCategories.flat())) // unique categories
         })
     },
-    getMissingProductsWithPrices() {
-      return api.getProducts({ price_count__gte: 1, source__isnull: true, order_by: '-proof_count' })
-        .then((data) => {
-          this.missingProductsWithPrices = data.items
-        })
-    },
-    missingProductClicked(product) {
-      this.productForm.product_code = product.code
-      this.loadProductInfo()
-    },
     createProduct() {
-      if (!this.productForm.flavor) {
-        return
-      }
-      const flavorkey = constants.PRODUCT_SOURCE_LIST.find(source => source.value === this.productForm.flavor).key
+      this.step = 3
+      this.loading = true
+      // create product
       let inputData = {
+        flavor: this.productForm.flavor,
+        product_language_code: this.productForm.product_language,
         update_params: {
           ...this.productForm,
           categories: this.productForm.categories.join(','),
           stores: this.productForm.stores.join(','),
           countries: this.productForm.countries.map(c=>c.toLowerCase()).join(','),
         },
-        flavor: flavorkey,
-        product_language_code: this.productForm.product_language
       }
-      this.step = 3
-      this.loading = true
-      api
+      openPricesApi
         .updateOffProduct(this.productForm.product_code, inputData)
         .then(() => {
           if (this.drawnImageSrc) {
             const drawnImageBase64 = this.drawnImageSrc.split(';base64,')[1]
             inputData = {
               image_data_base64: drawnImageBase64,
-              flavor: flavorkey,
+              flavor: this.productForm.flavor,
               product_language_code: this.productForm.product_language
             }
-            api.updateOffProductImage(this.productForm.product_code, inputData)
+            openPricesApi.updateOffProductImage(this.productForm.product_code, inputData)
               .then(() => {
                 this.loading = false
                 this.getProduct()
@@ -549,11 +600,9 @@ export default {
           console.log(error)
           this.loading = false
         })
-      
-
     },
     loadPriceTags(priceId) {
-      api.getPriceTags({price_id: priceId}).then(data => {
+      openPricesApi.getPriceTags({price_id: priceId}).then(data => {
         const priceTags = data.items
         if (priceTags.length) {
           this.boundingBoxesFromServer = [
@@ -596,6 +645,18 @@ export default {
     },
     reloadPage() {
       window.location = window.location.pathname
+    },
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      // this.getMissingProductsWithPrices() will be called in watch $route
+    },
+    updateOrder(orderKey) {
+      if (this.currentOrder !== orderKey) {
+        this.currentOrder = orderKey
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        // this.getMissingProductsWithPrices() will be called in watch $route
+      }
     },
   }
 }

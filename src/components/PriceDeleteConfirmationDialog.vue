@@ -57,7 +57,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 
 export default {
   components: {
@@ -97,7 +97,7 @@ export default {
   methods: {
     deletePrice() {
       this.loading = true
-      api
+      openPricesApi
         .deletePrice(this.price.id)
         .then((response) => {  // eslint-disable-line no-unused-vars
           // if response.status == 204

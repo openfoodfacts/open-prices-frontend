@@ -8,9 +8,9 @@
       <v-divider />
 
       <v-card-text>
-        <v-tabs v-model="currentDisplay">
+        <v-tabs v-model="currentDisplay" :grow="!$vuetify.display.smAndUp">
           <v-tab v-for="item in displayItems" :key="item.key" :value="item.key">
-            <v-icon start>
+            <v-icon :start="$vuetify.display.smAndUp || !!item.valueSmallScreen">
               {{ item.icon }}
             </v-icon>
             <span v-if="$vuetify.display.smAndUp">{{ $t('Common.' + item.value) }}</span>
@@ -21,11 +21,31 @@
         </v-tabs>
 
         <v-tabs-window v-model="currentDisplay" disabled>
+          <v-tabs-window-item value="favorite">
+            <template v-if="favoriteLocations.length">
+              <v-row>
+                <v-col v-for="location in favoriteLocations" :key="getLocationId(location)" cols="12" sm="6">
+                  <LocationCard class="mb-2" :location="location" :hideLocationFooterRow="true" :showFavoriteButton="true" :readonly="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12">
+                  <v-btn size="small" color="primary" @click="clearFavoriteLocations">
+                    {{ $t('Common.Clear') }}
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </template>
+            <p v-else>
+              {{ $t('LocationSelector.FavoriteLocations', favoriteLocations.length) }}
+            </p>
+          </v-tabs-window-item>
+
           <v-tabs-window-item value="recent">
             <template v-if="recentLocations.length">
               <v-row>
-                <v-col v-for="(location, index) in recentLocations" :key="index" cols="12" sm="6">
-                  <LocationCard class="mb-2" :location="location" :hideLocationFooterRow="true" :readonly="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
+                <v-col v-for="location in recentLocations" :key="getLocationId(location)" cols="12" sm="6">
+                  <LocationCard class="mb-2" :location="location" :hideLocationFooterRow="true" :showFavoriteButton="true" :readonly="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
                 </v-col>
               </v-row>
               <v-row>
@@ -42,7 +62,7 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="osm">
-            <v-form @submit.prevent="locationOsmSearch">
+            <v-form class="mb-4" @submit.prevent="locationOsmSearch">
               <v-text-field
                 ref="locationOsmSearchInput"
                 v-model="locationOsmSearchForm.q"
@@ -67,17 +87,11 @@
               </i18n-t>
             </p>
 
+            <!-- results -->
             <v-sheet v-if="results !== null">
-              <h3 class="mt-4 mb-1">
-                <i18n-t keypath="LocationSelector.Result" tag="span">
-                  <template #resultNumber>
-                    <small>{{ results.length }}</small>
-                  </template>
-                </i18n-t>
-              </h3>
               <v-row v-if="results.length">
                 <v-col cols="12" sm="6">
-                  <LocationCard v-for="(location, index) in results" :key="index" :location="location" :hideLocationFooterRow="true" :readonly="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
+                  <LocationCard v-for="location in results" :key="getLocationId(location)" :location="location" :hideLocationFooterRow="true" :readonly="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
                 </v-col>
                 <v-col cols="12" sm="6" style="min-height:400px">
                   <LeafletMap :locations="results" :showActions="true" @locationSelected="selectLocation" />
@@ -85,10 +99,10 @@
               </v-row>
 
               <p v-else>
-                <v-alert class="mb-2" type="info" variant="outlined" density="compact">
+                <v-alert class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
                   {{ $t('LocationSelector.NoResultHelpKeywords') }}
                 </v-alert>
-                <v-alert class="mb-2" type="info" variant="outlined" density="compact">
+                <v-alert class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
                   <i18n-t keypath="LocationSelector.NoResultHelpOSM" tag="span">
                     <template #osm_name>
                       {{ OSM_NAME }}
@@ -105,7 +119,7 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="online">
-            <v-form v-model="locationOnlineFormValid" @submit.prevent="createOnline">
+            <v-form @submit.prevent="createOnline">
               <v-text-field
                 ref="locationOnlineFormInput"
                 v-model="locationOnlineForm.website_url"
@@ -118,7 +132,7 @@
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-btn color="primary" icon="mdi-plus" :disabled="!locationOnlineFormValid" @click="createOnline" />
+                  <v-btn color="primary" icon="mdi-plus" :disabled="!locationOnlineFormFilled" @click="createOnline" />
                 </template>
               </v-text-field>
             </v-form>
@@ -150,9 +164,11 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openStreetMapApi from '../services/openStreetMapApi'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import utils from '../utils.js'
+import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
@@ -169,7 +185,6 @@ export default {
       locationOnlineForm: {
         website_url: '',
       },
-      locationOnlineFormValid: false,
       loading: false,
       results: null,
       // config
@@ -193,21 +208,27 @@ export default {
     dialogWidth() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
+    favoriteLocations() {
+      return this.appStore.getFavoriteLocations
+     },
     recentLocations() {
-      return this.appStore.getRecentLocations()
+      return this.appStore.getRecentLocations
+    },
+    locationOnlineFormFilled() {
+      return !!this.locationOnlineForm.website_url && this.urlRules.every(rule => rule(this.locationOnlineForm.website_url) === true)
     },
     urlRules() {
-      if (!this.locationOnlineForm.website_url) return [() => true]  // optional field
       return [
-        (v) => utils.isURL(v) || this.$t('Common.URLInvalid'),
+        // v => !!v || this.$t('Common.FieldIsRequired'),
+        v => !v || utils.isURL(v) || this.$t('Common.URLInvalid'),
       ]
     },
   },
   watch: {
     currentDisplay(value) {
-      if (value === constants.LOCATION_SELECTOR_DISPLAY_LIST[1].key) {
+      if (value === constants.LOCATION_SELECTOR_DISPLAY_LIST[2].key) {  // Physical
         window.setTimeout(() => this.$refs.locationOsmSearchInput.focus(), 200)
-      } else if (value === constants.LOCATION_SELECTOR_DISPLAY_LIST[2].key) {
+      } else if (value === constants.LOCATION_SELECTOR_DISPLAY_LIST[3].key) {  // Online
         window.setTimeout(() => this.$refs.locationOnlineFormInput.focus(), 200)
       }
     }
@@ -219,22 +240,24 @@ export default {
     fieldRequired(v) {
       return !!v
     },
+    getLocationId(location) {
+      return geo_utils.getLocationId(location)
+    },
     locationOsmSearch() {
-      if (!this.locationOsmSearchForm.q) return
       this.$refs.locationOsmSearchInput.blur()
       this.results = null
       this.loading = true
       // search by id (N12208020359, 12208020359)
       if (utils.isNumber(this.locationOsmSearchForm.q.substring(1))) {
         const id = utils.isNumber(this.locationOsmSearchForm.q.substring(0, 1)) ? this.locationOsmSearchForm.q : this.locationOsmSearchForm.q.substring(1)
-        api.openstreetmapNominatimLookup(id)
+        openStreetMapApi.openstreetmapNominatimLookup(id)
           .then((data) => {
             this.loading = false
             this.results = data
           })
         // search by name
       } else {
-        api.openstreetmapSearch(this.locationOsmSearchForm.q, this.searchProvider)
+        openStreetMapApi.openstreetmapSearch(this.locationOsmSearchForm.q, this.searchProvider)
           .then((data) => {
             this.loading = false
             this.results = data
@@ -242,10 +265,9 @@ export default {
       }
     },
     createOnline() {
-      if (!this.locationOnlineFormValid) return
       this.loading = true
       const website_url_cleaned = utils.getURLOrigin(this.locationOnlineForm.website_url)
-      api.createLocationOnline({website_url: website_url_cleaned})
+      openPricesApi.createLocationOnline({website_url: website_url_cleaned})
         .then((location) => {
           this.loading = false
           this.selectLocation(location)
@@ -255,8 +277,8 @@ export default {
       this.$emit('location', location)
       this.close()
     },
-    removeRecentLocation(location) {
-      this.appStore.removeRecentLocation(location)
+    clearFavoriteLocations() {
+      this.appStore.clearFavoriteLocations()
     },
     clearRecentLocations() {
       this.appStore.clearRecentLocations()

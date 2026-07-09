@@ -22,6 +22,10 @@
         type: String,
         default: null
       },
+      forceFullImageHeight: {
+        type: Boolean,
+        default: false
+      },
       boundingBoxesFromServer: {
         type: Array,
         default: null
@@ -76,7 +80,7 @@
         this.scale = canvas.offsetWidth / this.image.width
         const maxHeight = window.innerHeight - 350
 
-        if (maxHeight < this.image.height) {
+        if (!this.forceFullImageHeight && maxHeight < this.image.height) {
           // Image will be too tall
           // Ajust to fit optimal height
           const aspectRatio = this.image.height / this.image.width

@@ -47,7 +47,7 @@
 import { mapStores } from 'pinia'
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants.js'
-import api from '../services/api.js'
+import openPricesApi from '../services/openPricesApi'
 import { useAppStore } from '../store.js'
 import date_utils from '../utils/date.js'
 import proof_utils from '../utils/proof.js'
@@ -80,6 +80,9 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    userCountry() {
+      return this.appStore.user.country
+    },
     getApiSize() {
       // reduce size to speed up the loading
       if (!this.$vuetify.display.smAndUp) return 2
@@ -89,17 +92,24 @@ export default {
       let defaultParams = {
         proof__ready_for_price_tag_validation: true,
         status__isnull: true,
-        prediction_count__gte: 1,
+        prediction_count__gte: 2, // at least 2 predictions (PRICE_TAG_CLF & PRICE_TAG_EXTRACTION) to avoid fetching price tags newly created and not yet ready for validation
         created__lte: this.currentDateTime,
         order_by: this.currentOrder,
         size: this.getApiSize,
         page: this.priceTagPage
       }
+      // FilterMenu filters
       if (this.currentFilterList.includes('proof__owner')) {
         defaultParams['proof__owner'] = this.username
       }
+      if (this.currentFilterList.includes('proof_user_country')) {
+        defaultParams['proof__location__osm_address_country_code'] = this.userCountry
+      }
       if (this.currentFilterList.includes('tag_prediction_product_exists')) {
         defaultParams['tags__contains'] = 'prediction-product-exists'
+      }
+      if (!this.currentFilterList.includes('tag_invalid_include')) {
+        defaultParams['tags__not_contains'] = 'invalid'
       }
       return defaultParams
     },
@@ -167,14 +177,14 @@ export default {
       if ((this.priceTagTotal != null) && (this.priceTagList.length >= this.priceTagTotal)) return
       this.loading = true
       this.priceTagPage += 1
-      return api.getPriceTags(this.getPriceTagsParams)
+      return openPricesApi.getPriceTags(this.getPriceTagsParams)
         .then((data) => {
           this.priceTagList.push(...data.items)
           this.priceTagTotal = data.total
           this.loading = false
           for (let i = 0; i < data.items.length; i++) {
             // only validate price tags with predictions
-            if (data.items[i]['predictions'].length > 0) {
+            if (data.items[i]['predictions'].filter(prediction => prediction.type === 'PRICE_TAG_EXTRACTION').length > 0) {
               this.handlePriceTag(data.items[i])
             }
           }
@@ -185,7 +195,7 @@ export default {
       this.productPriceForms.push(productPriceForm)
     },
     updatePriceTag(priceTagId, status, priceId) {
-      return api
+      return openPricesApi
         .updatePriceTag(priceTagId, { status: status, price_id: priceId })
         .then((response) => {
           // if response.status == 204
@@ -205,7 +215,7 @@ export default {
         location_osm_type: productPriceData.proof.location_osm_type,
         proof_id: productPriceData.proof.id
       }
-      return api
+      return openPricesApi
         .createPrice(Object.assign({}, priceData), this.$route.path)
         .then((data) => {
           productPriceData.loading = false

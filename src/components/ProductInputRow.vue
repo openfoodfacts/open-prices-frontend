@@ -12,7 +12,7 @@
       </v-item-group>
     </v-col>
   </v-row>
-  <v-row v-if="productIsTypeProduct && !hideBarcodeMode" class="mt-0">
+  <v-row v-if="productIsTypeProduct" class="mt-0">
     <v-col>
       <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :isSelected="true" :readonly="true" elevation="1" @editProduct="showBarcodeScannerDialog" />
       <v-btn v-else class="text-body-2 mb-2" block spaced="end" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
@@ -72,6 +72,7 @@
     :hideBarcodeScannerTab="hideBarcodeScannerTab"
     :barcodeManualInputPrefillValue="productForm.product_code"
     :barcodeManualInputCroppedImage="productForm.image_path"
+    :barcodeManualInputSimilarBarcodeList="productForm.similar_barcodes"
     @barcode="setProductCode($event)"
     @close="barcodeScannerDialog = false"
   />
@@ -81,8 +82,9 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
+import data_utils from '../utils/data.js'
 import utils from '../utils.js'
 
 export default {
@@ -111,10 +113,6 @@ export default {
       type: Boolean,
       default: false
     },
-    hideBarcodeMode: {
-      type: Boolean,
-      default: false
-    },
     hideProductBarcode: {
       type: Boolean,
       default: true
@@ -127,9 +125,9 @@ export default {
   emits: ['filled'],
   data() {
     return {
-      categoryTags: [],  // list of category tags for autocomplete  // see initPriceMultipleForm
-      originTags: [],  // list of origins tags for autocomplete  // see initPriceMultipleForm
-      labelTags: [],  // list of labels tags for checkboxes  // see initPriceMultipleForm
+      categoryTags: [],  // list of category tags for autocomplete  // see mounted
+      originTags: [],  // list of origins tags for autocomplete  // see mounted
+      labelTags: [],  // list of labels tags for checkboxes  // see mounted
       barcodeScannerDialog: false,
     }
   },
@@ -142,9 +140,6 @@ export default {
       return this.productForm && this.productForm.type === constants.PRICE_TYPE_CATEGORY
     },
     productTypeDisplayList() {
-      if (this.hideBarcodeMode) {
-        return constants.PRICE_TYPE_LIST.filter(pt => pt.key !== constants.PRICE_TYPE_PRODUCT)
-      }
       return constants.PRICE_TYPE_LIST
     },
     productProductFormFilled() {
@@ -178,21 +173,30 @@ export default {
         this.productForm.product_code = this.$route.query.code
       }
     }
-    utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
-      this.categoryTags = module.default
-    })
-    utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
-      this.originTags = module.default
-    })
-    utils.getLocaleLabelTags(this.appStore.getUserLanguage).then((module) => {
-      this.labelTags = module.default
-    })
+    this.setCategoryTags()
+    this.setOriginTags()
+    this.setLabelTags()
     this.productForm.type = this.productForm.type ? this.productForm.type : (this.productForm.product_code ? constants.PRICE_TYPE_PRODUCT : this.appStore.user.last_product_product_used)
     if (this.productForm.product_code) {
       this.getProduct(this.productForm.product_code)
     }
   },
   methods: {
+    setCategoryTags() {
+      data_utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
+        this.categoryTags = module.default
+      })
+    },
+    setOriginTags() {
+      data_utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
+        this.originTags = module.default
+      })
+    },
+    setLabelTags() {
+      data_utils.getLocaleLabelTags(this.appStore.getUserLanguage).then((module) => {
+        this.labelTags = module.default
+      })
+    },
     showBarcodeScannerDialog() {
       this.barcodeScannerDialog = true
     },
@@ -215,7 +219,7 @@ export default {
     },
     getProduct(code) {
       this.productForm.product = null
-      api
+      openPricesApi
         .getProductByCode(code)
         .then((data) => {
           this.productForm.product = data.id ? data : {'code': code, 'price_count': 0}

@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Strekkode",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Priser lagt til av deg",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -168,7 +169,7 @@
 	"Common": {
 		"About": "Om",
 		"Action": "Handling",
-		"Actions": "Actions",
+		"Actions": "Handlinger",
 		"AddComment": "Add a comment",
 		"AddPrice": "Legg til en pris",
 		"AddPrices": "Add prices",
@@ -178,10 +179,16 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Legg til nye prislapper",
+		"AddNewProofReceipt": "Legg til en ny kvittering",
 		"AddToOFF": "Add to {name}",
 		"Added": "Lagt til",
 		"AdditionalInfo": "Additional information",
 		"All": "All",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Strekkode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -224,6 +231,7 @@
 		"Contributors": "Bidragere",
 		"Contributions": "Contributions",
 		"Confirm": "Bekrefte",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -235,7 +243,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Du kan legge til valutaer i innstillingene dine.",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
@@ -246,6 +256,7 @@
 		"Error": "Feil",
 		"Experiment": "Eksperiment",
 		"Experiments": "Experiments",
+		"Explore": "Utforske",
 		"FromPriceTag": "Fra en prislapp",
 		"FromReceipt": "Fra en kvittering",
 		"GoToProof": "Go to proof",
@@ -257,6 +268,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Lær mer",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -264,6 +276,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Dato",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Dato for bildet.",
@@ -291,18 +304,28 @@
 		"Edit": "Edit",
 		"End": "End",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Felt er obligatorisk",
-		"Filter": "Filter",
+		"FilterNoun": "Filter",
+		"FilterVerb": "Filter",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Med priser",
+		"FilterWithLocationCount": "Med lokasjoner",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Med en gyldig strekkode",
-		"FilterPriceTagWithTagPredictionProductExists": "Med et gyldig produkt",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Med en gyldig kategoritagg",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
@@ -311,6 +334,7 @@
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
 		"Help": "Hjelp",
+		"Here": "Her",
 		"History": "Logg",
 		"Image": "Bilde",
 		"ImageSelect": "Select an image",
@@ -351,7 +375,10 @@
 		"Online": "Online",
 		"Open": "Åpne",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
+		"OrderNameASC": "Navn",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -381,6 +408,8 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Prislapp",
 		"PriceTags": "Prislapper",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -391,6 +420,7 @@
 		"PriceAlreadyUploaded": "Prisen er allerede lastet opp",
 		"PriceReadyToBeUploaded": "Prisen er klar til opplasting",
 		"PricesAlreadyUploaded": "Prisene er allerede lastet opp",
+		"PricesAll": "Alle priser",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -400,6 +430,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Produkter opprettet",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Produkt mangler",
 		"ProductOrCategoryMissing": "Produkt eller kategori mangler",
@@ -419,6 +451,7 @@
 		"Quantity": "Mengde",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Rang",
 		"Reason": "Grunn",
 		"RECEIPT": "Kvittering",
 		"Receipt": "Kvittering",
@@ -430,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "Åpne igjen",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Løst",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -437,7 +471,7 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "Innstillinger",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Logg inn",
 		"SignOut": "Logg ut",
@@ -497,6 +531,7 @@
 		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Brukeren ble ikke funnet",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -579,7 +614,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Butikker der det ble solgt",
-		"UseCropModeToAddImage": "For å legge til et produktbilde, aktiver beskjæringsmodus under korrekturbildet og tegn et rektangel rundt produktet."
+		"UseCropModeToAddImage": "For å legge til et produktbilde, aktiver beskjæringsmodus under korrekturbildet og tegn et rektangel rundt produktet.",
+		"ProductMissingPromoBanner": "Eksperiment: lag dette produktet ved hjelp av data fra Åpne priser"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -625,6 +661,7 @@
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",
@@ -716,7 +753,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "For å laste opp flere prislapper (samme butikklokasjon og dato), klikk her!",
-		"PromoReceiptAssistant": "Eksperiment: prøv den nye kvitteringsassistenten for å automatisk hente ut priser fra kvitteringene dine!"
+		"PromoReceiptAssistant": "Eksperiment: prøv den nye kvitteringsassistenten for å automatisk hente ut priser fra kvitteringene dine!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Bevis",
@@ -796,8 +834,20 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Legg til bevis (kvittering)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
+		},
+		"Explore": {
+			"Title": "Utforske"
 		},
 		"Locations": {
 			"Title": "Locations"
@@ -823,11 +873,20 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "Kvittering"
+		},
+		"Cities": {
+			"Title": "Byer"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Countries"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -836,7 +895,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Hjem"
+			"Title": "Hjem",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -892,9 +952,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Assistent for bevisprislapper"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -902,13 +959,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Validate"
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -928,6 +987,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Logg inn",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -956,6 +1016,10 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -983,8 +1047,8 @@
 		"ChangeLanguage": "Bytt språk",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Valuta",
-		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "Minst én valuta kreves",

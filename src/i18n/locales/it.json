@@ -99,7 +99,7 @@
 			"Title": "Informazioni sul prodotto"
 		},
 		"ProductModeList": {
-			"Barcode": "Codice a Barre",
+			"Barcode": "Codice a barre",
 			"Category": "Categoria"
 		},
 		"CategoryPricePer": {
@@ -119,15 +119,17 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "fornito da {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
-		"Barcode": "Codice a Barre",
+		"Barcode": "Codice a barre",
 		"Title": "Inserisci il codice a barre"
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Prezzi aggiunti da te",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -178,11 +179,17 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Aggiungi nuovi cartellini dei prezzi",
+		"AddNewProofReceipt": "Aggiungi una nuova ricevuta",
 		"AddToOFF": "Aggiungi a {name}",
 		"Added": "Aggiunto",
 		"AdditionalInfo": "Informazioni aggiuntive",
 		"All": "Tutti",
-		"Barcode": "Codice a Barre",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
+		"Barcode": "Codice a barre",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scansiona un codice a barre",
 		"BarcodeScanShort": "Analizza",
@@ -224,7 +231,8 @@
 		"Contributors": "Contributori",
 		"Contributions": "Contributi",
 		"Confirm": "Conferma",
-		"Country": "Country",
+		"Count": "Conteggio",
+		"Country": "Paese",
 		"Countries": "Paesi",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -235,7 +243,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Puoi aggiungere valute nelle tue impostazioni.",
 		"Dashboard": "Cruscotto",
-		"Display": "Mostra",
+		"DisplayNoun": "Mostra",
+		"DisplayVerb": "Mostra",
+		"Displays": "Displays",
 		"DisplayList": "Lista",
 		"DisplayPriceList": "Lista",
 		"DisplayTable": "Table",
@@ -246,6 +256,7 @@
 		"Error": "Errore",
 		"Experiment": "Sperimentare",
 		"Experiments": "Experiments",
+		"Explore": "Esplorare",
 		"FromPriceTag": "Da un cartellino del prezzo",
 		"FromReceipt": "Da una ricevuta",
 		"GoToProof": "Go to proof",
@@ -257,13 +268,15 @@
 		"Languages": "Lingue",
 		"LatestPrices": "Ultimi prezzi",
 		"LatestProofs": "Ultime prove",
-		"LoadMore": "Scarica altro",
+		"LearnMore": "Ulteriori informazioni",
+		"LoadMore": "Carica altro",
 		"Location": "Posizione",
 		"Locations": "Posizioni",
 		"LocationSelected": "Location selected",
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Posizione mancante",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Data",
 		"DateMissing": "Data mancante",
 		"DateProofHelpText": "Data della foto.",
@@ -291,18 +304,28 @@
 		"Edit": "Modifica",
 		"End": "End",
 		"ErrorServer": "Errore: errore del server",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Il campo è obbligatorio",
-		"Filter": "Filtra",
+		"FilterNoun": "Filtra",
+		"FilterVerb": "Filtra",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Con i prezzi",
+		"FilterWithLocationCount": "Con posizioni",
 		"FilterProductWithPriceCount": "Con un prezzo",
 		"FilterProductWithPriceCountHide": "Nascondi i prodotti con i prezzi",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Senza prezzi",
 		"FilterPriceMoreThan30DaysHide": "Nascondi i prezzi più vecchi di 30 giorni",
 		"FilterProofWithPriceCountHide": "Nascondi le prove con i prezzi",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Con un codice a barre valido",
-		"FilterPriceTagWithTagPredictionProductExists": "Con un prodotto valido",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Con un tag di categoria valido",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Nascondi le posizioni con i prezzi",
 		"FilterUserWithPriceCountHide": "Nascondi i collaboratori con i prezzi",
 		"Fix": "Fix",
@@ -311,6 +334,7 @@
 		"GDPR_REQUEST": "Richiesta RGPD",
 		"Group": "Group",
 		"Help": "Assistenza",
+		"Here": "Qui",
 		"History": "Cronologia",
 		"Image": "Immagine",
 		"ImageSelect": "Select an image",
@@ -351,7 +375,10 @@
 		"Online": "Online",
 		"Open": "Aprire",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Ordine",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
+		"OrderNameASC": "Nome",
 		"OrderLocationCountDESC": "Numero di luoghi",
 		"OrderProductUniqueScansDESC": "Numero di scansioni",
 		"OrderProductPriceCountDESC": "Numero di prezzi",
@@ -381,6 +408,8 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Etichetta del prezzo",
 		"PriceTags": "cartellini dei prezzi",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -391,6 +420,7 @@
 		"PriceAlreadyUploaded": "Prezzo già caricato",
 		"PriceReadyToBeUploaded": "Prezzo pronto per essere caricato",
 		"PricesAlreadyUploaded": "Prezzi già caricati",
+		"PricesAll": "Tutti i prezzi",
 		"PricesMore": "Altri prezzi",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prezzi aggiunti oggi",
@@ -400,6 +430,8 @@
 		"Private": "Privata",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Prodotti creati",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Prodotto mancante",
 		"ProductOrCategoryMissing": "Prodotto o categoria mancante",
@@ -419,6 +451,7 @@
 		"Quantity": "Quantità",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantità mancante",
+		"Rank": "Rango",
 		"Reason": "Motivazione",
 		"RECEIPT": "Ricevuta",
 		"Receipt": "Ricevuta",
@@ -430,6 +463,7 @@
 		"Recent": "Recenti",
 		"Re-open": "Riaprire",
 		"ReportProblem": "Segnala un problema",
+		"Reset": "Ripristina",
 		"Resolved": "Risolto",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -437,7 +471,7 @@
 		"Select": "Select",
 		"Send": "Invia",
 		"Settings": "Impostazioni",
-		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Registrato in!",
 		"SignIn": "Accedi",
 		"SignOut": "Esci",
@@ -497,6 +531,7 @@
 		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Utente non trovato",
 		"Validate": "Convalida",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -579,7 +614,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Dimostrazione ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Negozi dove è venduto",
-		"UseCropModeToAddImage": "Per aggiungere un'immagine del prodotto, attiva la modalità di ritaglio sotto l'immagine di prova e disegna un rettangolo attorno al prodotto."
+		"UseCropModeToAddImage": "Per aggiungere un'immagine del prodotto, attiva la modalità di ritaglio sotto l'immagine di prova e disegna un rettangolo attorno al prodotto.",
+		"ProductMissingPromoBanner": "Esperimento: crea questo prodotto utilizzando i dati di Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Seleziona una delle tue prove recenti"
@@ -614,7 +650,7 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Ultimi prezzi",
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"LocationNotFound": "Posizione non trovata in OpenStreetMap... Non esitate ad aggiungerla :)"
 	},
 	"LocationSelector": {
@@ -625,6 +661,7 @@
 		"PoweredBy": {
 			"text": "fornito da {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Nessuna posizione recente | Posizione recente {recentLocationNumber}| Posizioni recenti {recentLocationNumber}",
 		"Result": "Risultato {resultNumber} | Risultati {resultNumber}",
 		"SearchByName": "Cerca il tuo negozio per nome e città",
@@ -663,7 +700,7 @@
 		"LabelFull": "Prezzo pieno"
 	},
 	"PriceList": {
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"Title": "Ultimi prezzi"
 	},
 	"PriceRules": {
@@ -704,7 +741,7 @@
 		"AddPrice": "Aggiungi un prezzo",
 		"CategoryNotFound": "Categoria non trovata...",
 		"LatestPrices": "Ultimi prezzi",
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"ProductNotFound": "Prodotto non trovato in Open Food Facts... Non esitate ad aggiungerlo :)"
 	},
 	"ProofAdd": {
@@ -716,7 +753,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Per caricare più cartellini dei prezzi (stesso negozio e stessa data), clicca qui!",
-		"PromoReceiptAssistant": "Esperimento: prova il nuovo assistente per ricevute che estrae automaticamente i prezzi dalle tue ricevute!"
+		"PromoReceiptAssistant": "Esperimento: prova il nuovo assistente per ricevute che estrae automaticamente i prezzi dalle tue ricevute!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Prova",
@@ -737,7 +775,7 @@
 		"Success": "Prova eliminata!"
 	},
 	"ProofDetail": {
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"Prices": "Prezzi",
 		"ProofNotFound": "Proof not found",
 		"Public": "Pubblica",
@@ -796,8 +834,20 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Aggiungi prova (ricevuta)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
+		},
+		"Explore": {
+			"Title": "Esplorare"
 		},
 		"Locations": {
 			"Title": "Posizioni"
@@ -823,11 +873,20 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "Ricevuta"
+		},
+		"Cities": {
+			"Title": "Città"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribuire"
+		},
+		"Countries": {
+			"Title": "Paesi"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -836,7 +895,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Homepage"
+			"Title": "Homepage",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Cruscotto"
@@ -892,9 +952,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Assistente per la prova del prezzo"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -902,13 +959,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Convalida"
+			"Title": "Convalida",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -928,6 +987,7 @@
 		"ServerError": "Errore: errore del server",
 		"Title": "Accedi",
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Nome utente",
 		"WrongCredentials": "Errore: credenziali errate"
 	},
@@ -956,10 +1016,14 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Ultimo aggiornamento: {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Ultimi prezzi",
 		"LatestProofs": "Ultime prove",
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"MyDashboard": "Dashboard",
 		"MyPrices": "I miei prezzi",
 		"MyProofs": "Le mie prove",
@@ -971,20 +1035,20 @@
 	},
 	"UserDetail": {
 		"LatestPrices": "Ultimi prezzi",
-		"LoadMore": "Scarica altro"
+		"LoadMore": "Carica altro"
 	},
 	"UserList": {
-		"LoadMore": "Scarica altro",
+		"LoadMore": "Carica altro",
 		"Title": "Collaboratori principali",
 		"UserTotal": "{count} contributori"
 	},
 	"UserSettings": {
 		"AddingPrices": "Aggiunta di prezzi",
 		"ChangeLanguage": "Cambia lingua",
-		"CountryLabel": "Country",
+		"CountryLabel": "Paese",
 		"CurrencyLabel": "Moneta",
-		"DisplayTitle": "Mostra",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Valute preferite",
 		"CurrencyRequired": "Almeno una valuta è necessaria",

@@ -63,20 +63,20 @@
 			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
 			"Title": "Proof details"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Lisa mitu hinda"
 	},
 	"AddPriceSingle": {
 		"Create": "Loo",
 		"PriceDetails": {
-			"Discount": "Discount?",
+			"Discount": "On see allahindlusega?",
 			"Label": "Hind",
 			"LabelDiscounted": "Soodushind",
-			"LabelFull": "Full price",
+			"LabelFull": "Täishind",
 			"Proof": "Tõestus",
-			"ProofDateChanged": "Date updated!",
+			"ProofDateChanged": "Kuupäev on uuendatud!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
+			"Title": "Hinna üksikasjad",
 			"UploadProof": "Upload a proof",
 			"Picture": "Picture",
 			"TakePicture": "Tehke foto",
@@ -88,12 +88,12 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategooria",
 			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Toote triipkood",
 			"Scan": "Skanneeri",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "Skaneeri triipkoodi",
 			"ScanBarcodeShort": "Skanneeri",
 			"Type": "Tüüp",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Sisesta triipkood",
 			"TypeBarcodeShort": "Tüüp",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -111,23 +111,25 @@
 			"Date": "Kuupäev",
 			"DateLabel": "Kuupäev",
 			"Find": "Otsi",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Poe asukoht",
+			"SelectLocation": "Vali oma asukoht",
+			"Title": "Kus ja millal?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Triipkood",
-		"Title": "Type a barcode"
+		"Title": "Sisesta triipkood"
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -143,11 +145,10 @@
 		},
 		"PicturesAddedByYou": "Pictures added by you",
 		"Prices": "{challenge_title} prices",
-		"PricesAdded": "{challenge_title} prices added",
+		"PricesAdded": "{challenge_title} hinda on lisatud",
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Sinu lisatud hinnad",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -171,22 +172,28 @@
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Lisa hind",
-		"AddPrices": "Add prices",
+		"AddPrices": "Lisa hindu",
 		"AddNewPrice": "Add a new price",
-		"AddNewPrices": "Add new prices",
+		"AddNewPrices": "Lisa uusi hindu",
 		"AddProof": "Add a proof",
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Lisa uued hinnasildid",
+		"AddNewProofReceipt": "Lisa uus kviitung",
 		"AddToOFF": "Add to {name}",
 		"Added": "Lisatud",
 		"AdditionalInfo": "Additional information",
 		"All": "Kõik",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Triipkood",
 		"Barcodes": "Barcodes",
-		"BarcodeScan": "Scan a barcode",
+		"BarcodeScan": "Skaneeri triipkoodi",
 		"BarcodeScanShort": "Skanneeri",
-		"BarcodeType": "Type a barcode",
+		"BarcodeType": "Sisesta triipkood",
 		"BarcodeTypeShort": "Tüüp",
 		"BarcodeInvalid": "Kehtetu vöötkood",
 		"Brand": "Kaubamärk",
@@ -214,7 +221,7 @@
 		"Clear": "Selge",
 		"Close": "Sulge",
 		"Comment": "Comment",
-		"Community": "Community",
+		"Community": "Kogukond",
 		"CommunityPrices": "Community prices",
 		"CommunityProofs": "Community proofs",
 		"Consumption": "Consumption",
@@ -224,7 +231,8 @@
 		"Contributors": "Contributors",
 		"Contributions": "Panused",
 		"Confirm": "Kinnita",
-		"Country": "Country",
+		"Count": "Count",
+		"Country": "Riik",
 		"Countries": "Riigid",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -235,7 +243,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Saate valuutasid oma seadetes lisada.",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
@@ -246,6 +256,7 @@
 		"Error": "Viga",
 		"Experiment": "Katse",
 		"Experiments": "Experiments",
+		"Explore": "Avasta",
 		"FromPriceTag": "Hinnasildilt alates",
 		"FromReceipt": "Kviitungilt",
 		"GoToProof": "Go to proof",
@@ -257,6 +268,7 @@
 		"Languages": "Keeled",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Lisateave",
 		"LoadMore": "Lae rohkem",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -264,6 +276,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Kuupäev",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Pildi kuupäev.",
@@ -291,18 +304,28 @@
 		"Edit": "Muuda",
 		"End": "End",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Väli on kohustuslik",
-		"Filter": "Filtreeri",
+		"FilterNoun": "Filtreeri",
+		"FilterVerb": "Filtreeri",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Hindadega",
+		"FilterWithLocationCount": "Asukohtadega",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Kehtiva vöötkoodiga",
-		"FilterPriceTagWithTagPredictionProductExists": "Kehtiva tootega",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Kehtiva kategooria sildiga",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
@@ -311,6 +334,7 @@
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
 		"Help": "Abi",
+		"Here": "Siin",
 		"History": "Ajalugu",
 		"Image": "Pilt",
 		"ImageSelect": "Select an image",
@@ -351,7 +375,10 @@
 		"Online": "Online",
 		"Open": "Avatud",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
+		"OrderNameASC": "Nimi",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -381,6 +408,8 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Hinnasilt",
 		"PriceTags": "Hinnasildid",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -391,6 +420,7 @@
 		"PriceAlreadyUploaded": "Hind on juba üles laaditud",
 		"PriceReadyToBeUploaded": "Hind on üleslaadimiseks valmis",
 		"PricesAlreadyUploaded": "Hinnad on juba üles laaditud",
+		"PricesAll": "Kõik hinnad",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -400,6 +430,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Loodud tooted",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Toode puudub",
 		"ProductOrCategoryMissing": "Toode või kategooria puudub",
@@ -419,6 +451,7 @@
 		"Quantity": "Kogus",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Auaste",
 		"Reason": "Põhjus",
 		"RECEIPT": "Kviitung",
 		"Receipt": "Kviitung",
@@ -430,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "Ava uuesti",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Lahendatud",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -437,7 +471,7 @@
 		"Select": "Select",
 		"Send": "Saada",
 		"Settings": "Seaded",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Logi sisse",
 		"SignOut": "Logi välja",
@@ -497,6 +531,7 @@
 		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Kasutajat ei leitud",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -555,8 +590,8 @@
 		"OpenWithTheAssistant": "Open with the assistant"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "Liitu meiega!",
+		"HowToUseTheData": "Kasuta andmeid"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
@@ -579,7 +614,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Tõestus ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Kauplused, kus müüakse",
-		"UseCropModeToAddImage": "Tootepildi lisamiseks luba proovipildi all kärpimisrežiim ja joonista toote ümber ristkülik."
+		"UseCropModeToAddImage": "Tootepildi lisamiseks luba proovipildi all kärpimisrežiim ja joonista toote ümber ristkülik.",
+		"ProductMissingPromoBanner": "Katse: loo see toode avatud hindade andmete abil"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -625,6 +661,7 @@
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",
@@ -642,7 +679,7 @@
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Tõestus",
-		"FullPrice": "Full price",
+		"FullPrice": "Täishind",
 		"UnknownProduct": "Tundmatu toode"
 	},
 	"PriceDelete": {
@@ -657,10 +694,10 @@
 		"Title": "Edit a price"
 	},
 	"PriceForm": {
-		"Discount": "Discount?",
+		"Discount": "On see allahindlusega?",
 		"Label": "Hind",
 		"LabelDiscounted": "Soodushind",
-		"LabelFull": "Full price"
+		"LabelFull": "Täishind"
 	},
 	"PriceList": {
 		"LoadMore": "Lae rohkem",
@@ -716,7 +753,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Mitme hinnasildi üleslaadimiseks (sama poe asukoht ja kuupäev) klõpsake siin!",
-		"PromoReceiptAssistant": "Eksperiment: proovi uut kviitungiabilist, mis automaatselt sinu kviitungitelt hindu ammutab!"
+		"PromoReceiptAssistant": "Eksperiment: proovi uut kviitungiabilist, mis automaatselt sinu kviitungitelt hindu ammutab!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Tõestus",
@@ -776,13 +814,13 @@
 			"Title": "Lisa hind"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Lisa hindu"
 		},
 		"AddPriceSingle": {
 			"Title": "Add a single price"
 		},
 		"AddPriceMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "Lisa mitu hinda"
 		},
 		"AddProof": {
 			"Title": "Add a proof"
@@ -796,8 +834,20 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Lisa tõend (kviitung)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
+		},
+		"Explore": {
+			"Title": "Avasta"
 		},
 		"Locations": {
 			"Title": "Locations"
@@ -809,7 +859,7 @@
 			"Title": "Add a single price"
 		},
 		"PriceAddMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "Lisa mitu hinda"
 		},
 		"Prices": {
 			"Title": "Hinnad"
@@ -823,11 +873,20 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "Kviitung"
+		},
+		"Cities": {
+			"Title": "Linnad"
+		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Kogukond"
 		},
 		"Contribute": {
 			"Title": "Tee kaastööd"
+		},
+		"Countries": {
+			"Title": "Riigid"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -836,7 +895,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Kodu"
+			"Title": "Kodu",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -892,9 +952,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Proof Price Tag Assistant"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -902,20 +959,22 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Validate"
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Toote triipkood",
 		"Title": "Otsi"
 	},
 	"ShareButton": {
@@ -928,6 +987,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Logi sisse",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Kasutajanimi",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -956,6 +1016,10 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -981,10 +1045,10 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "Riik",
 		"CurrencyLabel": "Valuuta",
-		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

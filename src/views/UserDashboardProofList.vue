@@ -52,7 +52,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import utils from '../utils.js'
 
@@ -135,7 +135,7 @@ export default {
       if ((this.proofTotal != null) && (this.proofList.length >= this.proofTotal)) return
       this.loading = true
       this.proofPage += 1
-      return api.getProofs(this.getProofsParams)
+      return openPricesApi.getProofs(this.getProofsParams)
         .then((data) => {
           this.proofList.push(...data.items)
           this.proofTotal = data.total

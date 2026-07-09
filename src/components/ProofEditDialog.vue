@@ -53,7 +53,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 
 export default {
   components: {
@@ -131,7 +131,7 @@ export default {
       })
     },
     updateProof() {
-      api
+      openPricesApi
         .updateProof(this.proof.id, this.updateProofForm)
         .then((response) => {
           // if response.status == 204

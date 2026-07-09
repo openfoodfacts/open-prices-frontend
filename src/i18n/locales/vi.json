@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Mã vạch",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Giá do bạn thêm vào",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -178,10 +179,16 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Thêm thẻ giá mới",
+		"AddNewProofReceipt": "Thêm biên lai mới",
 		"AddToOFF": "Add to {name}",
 		"Added": "Đã thêm",
 		"AdditionalInfo": "Additional information",
 		"All": "Tất cả",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Mã vạch",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -224,7 +231,8 @@
 		"Contributors": "Người đóng góp",
 		"Contributions": "Đóng góp",
 		"Confirm": "Xác nhận",
-		"Country": "Country",
+		"Count": "Đếm",
+		"Country": "Quốc gia",
 		"Countries": "Quốc gia",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -235,7 +243,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Bạn có thể thêm các loại tiền tệ trong phần cài đặt.",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
@@ -246,6 +256,7 @@
 		"Error": "Lỗi",
 		"Experiment": "Cuộc thí nghiệm",
 		"Experiments": "Experiments",
+		"Explore": "Khám phá",
 		"FromPriceTag": "Từ một mức giá",
 		"FromReceipt": "Từ một biên lai",
 		"GoToProof": "Go to proof",
@@ -257,6 +268,7 @@
 		"Languages": "Ngôn ngữ",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Tìm hiểu thêm",
 		"LoadMore": "Tải thêm",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -264,6 +276,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Ngày",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Ngày chụp ảnh.",
@@ -291,18 +304,28 @@
 		"Edit": "Chỉnh sửa",
 		"End": "End",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Trường bắt buộc",
-		"Filter": "Bộ lọc",
+		"FilterNoun": "Bộ lọc",
+		"FilterVerb": "Bộ lọc",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Với giá cả",
+		"FilterWithLocationCount": "Với các địa điểm",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Với mã vạch hợp lệ",
-		"FilterPriceTagWithTagPredictionProductExists": "Với một sản phẩm hợp lệ",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Với thẻ danh mục hợp lệ",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
@@ -311,6 +334,7 @@
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
 		"Help": "Giúp đỡ",
+		"Here": "Đây",
 		"History": "Lịch sử",
 		"Image": "Hình ảnh",
 		"ImageSelect": "Select an image",
@@ -351,7 +375,10 @@
 		"Online": "Online",
 		"Open": "Mở",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
+		"OrderNameASC": "Tên",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -381,6 +408,8 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Giá cả",
 		"PriceTags": "Thẻ giá",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -391,6 +420,7 @@
 		"PriceAlreadyUploaded": "Giá đã được tải lên",
 		"PriceReadyToBeUploaded": "Giá đã sẵn sàng để tải lên",
 		"PricesAlreadyUploaded": "Giá đã được tải lên",
+		"PricesAll": "Tất cả giá cả",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -398,8 +428,10 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "Giá do bạn thêm vào",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Sự riêng tư",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Sản phẩm đã tạo",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Sản phẩm bị thiếu",
 		"ProductOrCategoryMissing": "Sản phẩm hoặc danh mục bị thiếu",
@@ -419,6 +451,7 @@
 		"Quantity": "Số lượng",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Thứ hạng",
 		"Reason": "Lý do",
 		"RECEIPT": "Biên lai",
 		"Receipt": "Biên lai",
@@ -429,7 +462,8 @@
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Re-open": "Mở lại",
-		"ReportProblem": "Report a problem",
+		"ReportProblem": "Báo cáo sự cố",
+		"Reset": "Reset",
 		"Resolved": "Đã giải quyết",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -437,7 +471,7 @@
 		"Select": "Select",
 		"Send": "Gửi",
 		"Settings": "Cài đặt",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Đăng nhập",
 		"SignOut": "Thoát",
@@ -466,7 +500,7 @@
 		"TopCountries": "Các quốc gia hàng đầu",
 		"Today": "Today",
 		"Top": "Top",
-		"Total": "Total",
+		"Total": "Tổng cộng",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"TryItOut": "Hãy thử xem",
@@ -497,6 +531,7 @@
 		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Không tìm thấy người dùng",
 		"Validate": "Xác thực",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -511,7 +546,7 @@
 		"No": "Không",
 		"Food": "Đồ ăn",
 		"PetFood": "Thức ăn cho thú cưng",
-		"Beauty": "Beauty"
+		"Beauty": "Sắc đẹp"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -579,7 +614,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bằng chứng ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Các cửa hàng đã bán",
-		"UseCropModeToAddImage": "Để thêm hình ảnh sản phẩm, hãy bật chế độ cắt bên dưới hình ảnh minh họa và vẽ một hình chữ nhật xung quanh sản phẩm."
+		"UseCropModeToAddImage": "Để thêm hình ảnh sản phẩm, hãy bật chế độ cắt bên dưới hình ảnh minh họa và vẽ một hình chữ nhật xung quanh sản phẩm.",
+		"ProductMissingPromoBanner": "Thí nghiệm: tạo sản phẩm này bằng cách sử dụng dữ liệu từ Open Prices."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -625,6 +661,7 @@
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",
@@ -716,7 +753,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Để tải lên nhiều thẻ giá (cùng địa điểm cửa hàng và ngày), hãy nhấp vào đây!",
-		"PromoReceiptAssistant": "Thử nghiệm: hãy dùng thử trợ lý biên lai mới để tự động trích xuất giá từ biên lai của bạn!"
+		"PromoReceiptAssistant": "Thử nghiệm: hãy dùng thử trợ lý biên lai mới để tự động trích xuất giá từ biên lai của bạn!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Bằng chứng",
@@ -742,7 +780,7 @@
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Sự riêng tư"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -796,8 +834,20 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Thêm bằng chứng (hóa đơn)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
+		},
+		"Explore": {
+			"Title": "Khám phá"
 		},
 		"Locations": {
 			"Title": "Locations"
@@ -823,11 +873,20 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "Biên lai"
+		},
+		"Cities": {
+			"Title": "Thành phố"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Góp phần"
+		},
+		"Countries": {
+			"Title": "Quốc gia"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -836,7 +895,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Trang chủ"
+			"Title": "Trang chủ",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -892,9 +952,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Trợ lý thẻ giá bằng chứng"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -902,13 +959,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Xác thực"
+			"Title": "Xác thực",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -928,6 +987,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Đăng nhập",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -942,7 +1002,7 @@
 		"Products": "Sản phẩm",
 		"Locations": "Locations",
 		"Users": "Users",
-		"Total": "Total",
+		"Total": "Tổng cộng",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
@@ -955,6 +1015,10 @@
 		"ProofsPerSource": "Bằng chứng theo nguồn",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
+	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
@@ -981,10 +1045,10 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Thay đổi ngôn ngữ",
-		"CountryLabel": "Country",
+		"CountryLabel": "Quốc gia",
 		"CurrencyLabel": "Tiền tệ",
-		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

@@ -6,7 +6,7 @@
           <span class="chip-group">
             <ProductCountChip v-if="sourceIsCategory" :count="productCount" :withLabel="true" />
             <PriceCountChip v-else-if="sourceIsProduct" :count="priceCount" />
-            <CategoryTagChip v-if="showProductCategoryTag" :category="category" :readonly="true" />
+            <CategoryTagChip v-if="showProductCategoryTag" :category="category.id" :readonly="true" />
           </span>
         </v-col>
         <v-col v-if="!hideActionMenuButton" cols="1">

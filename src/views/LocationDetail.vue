@@ -51,7 +51,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
 import utils from '../utils.js'
@@ -120,7 +120,7 @@ export default {
       this.getPrices()
     },
     getLocation() {
-      return api.getLocationById(this.locationId)
+      return openPricesApi.getLocationById(this.locationId)
         .then((data) => {
           if (data.id) {
             this.location = data
@@ -131,7 +131,7 @@ export default {
       if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
       this.pricePage += 1
-      return api.getPrices(this.getPricesParams)
+      return openPricesApi.getPrices(this.getPricesParams)
         .then((data) => {
           this.loading = false
           if (!data.items) return

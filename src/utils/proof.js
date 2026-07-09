@@ -13,12 +13,55 @@ function getProofTypeIcon(proofType) {
   return constants[`PROOF_TYPE_${proofType}_ICON`] || constants.PROOF_ICON
 }
 
+function priceTagHasValidPredictions(priceTag) {
+  if (!priceTag.predictions || priceTag.predictions.length === 0) {
+    return false
+  }
+  if (priceTag.predictions.length === 1) {
+    if (priceTag.predictions[0].type === 'PRICE_TAG_EXTRACTION') {
+      // The only prediction is PRICE_TAG_EXTRACTION, this is expected for old proofs
+      return true
+    }
+    if (priceTag.predictions[0].type === 'PRICE_TAG_CLF') {
+      // The only prediction is PRICE_TAG_CLF, we're missing the PRICE_TAG_EXTRACTION prediction
+      if (priceTag.tags.includes('invalid')) {
+        // The PRICE_TAG_CLF prediction is invalid, the lack of PRICE_TAG_EXTRACTION prediction is expected
+        return true
+      }
+      // The PRICE_TAG_CLF prediction is above average quality, a PRICE_TAG_EXTRACTION prediction is still expected
+      return false
+    }
+  }
+  // The price tag has at least 2 predictions, no need to check, we should be good (PRICE_TAG_CLF & PRICE_TAG_EXTRACTION)
+  return true
+}
+
 /**
  * Format the price tag prediction depending on the version
  * Needed as input for the ContributionAssistantPriceFormCard
  */
 function handlePriceTag(priceTag) {
-  const priceTagPrediction = priceTag['predictions'][0]
+  // Only keep predictions of type 'PRICE_TAG_EXTRACTION'
+  const priceTagPredictions = priceTag['predictions'].filter(prediction => prediction.type === 'PRICE_TAG_EXTRACTION')
+  if (!priceTagPredictions.length) {
+    // Price tag extraction did not ran successfully. We create a dummy product price form for user to complete
+    return {
+      id: priceTag.id,
+      origins_tags: [],
+      currency: priceTag['proof'].currency,
+      proof: priceTag['proof'],
+      proofImage: priceTag['proof'].file_path,
+      type: constants.PRICE_TYPE_PRODUCT,
+      product_code: '',
+      detected_product_code: '',
+      product_name: '',
+      bounding_box: priceTag.bounding_box,
+      status: priceTag.status,
+      price_id: priceTag.price_id,
+      image_path: priceTag.image_path
+    }
+  }
+  const priceTagPrediction = priceTagPredictions[0]
   const label = priceTagPrediction['data']
   const barcodeString = label.barcode ? barcode_utils.cleanBarcode(label.barcode.toString()) : ''
 
@@ -78,6 +121,17 @@ function handlePriceTag(priceTag) {
     productPriceForm.price_is_discounted = selectedPrice ? selectedPrice.price_is_discounted : false
     productPriceForm.price_without_discount = selectedPrice.price_without_discount ? selectedPrice.price_without_discount.toString() : ""
     productPriceForm.discount_type = selectedPrice.discount_type || ""
+
+    // Add similar barcodes if available
+    if (label.similar_barcodes && label.similar_barcodes.length) {
+      productPriceForm.similar_barcodes = label.similar_barcodes.filter(similarBarcode => {
+        if (similarBarcode.barcode.length > 10) {
+          return similarBarcode.distance < 3 // Max 2 digits variance
+        } else {
+          return similarBarcode.distance < 2 // Max 1 digit variance for short barcodes
+        }
+    })
+    }
   }
 
   return productPriceForm
@@ -86,5 +140,6 @@ function handlePriceTag(priceTag) {
 export default {
   getImageFullUrl,
   getProofTypeIcon,
+  priceTagHasValidPredictions,
   handlePriceTag
 }

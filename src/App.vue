@@ -2,7 +2,7 @@
   <v-app>
     <Header />
 
-    <v-main class="d-flex justify-center">
+    <v-main>
       <v-container>
         <Breadcrumbs />
         <router-view />

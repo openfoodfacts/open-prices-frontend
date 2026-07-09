@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Qəbz"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "Yarat",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,20 +66,20 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Yarat",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Qiymət",
+			"LabelDiscounted": "Endirimli qiymət",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Sübut",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"Picture": "Picture",
-			"TakePicture": "Take a picture",
+			"TakePicture": "Şəkil çəkin",
 			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery",
 			"RecentProof": "Recent proof",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Tarix",
+			"DateLabel": "Tarix",
 			"Find": "Tap",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Barkod",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Sizin əlavə etdiyiniz qiymətlər",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -170,7 +171,7 @@
 		"Action": "Fəaliyyət",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Qiymət əlavə edin",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -178,27 +179,33 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Yeni qiymət etiketləri əlavə edin",
+		"AddNewProofReceipt": "Yeni qəbz əlavə edin",
 		"AddToOFF": "Add to {name}",
 		"Added": "Əlavə edilib",
 		"AdditionalInfo": "Additional information",
 		"All": "All",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Barkod",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
 		"BarcodeScanShort": "Kodu oxu",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "Yanlış barkod",
 		"Brand": "Brend",
 		"Brands": "Brendlər",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Qiymət",
+		"Prices": "Qiymətlər",
 		"PRODUCT": "Məhsul",
 		"Product": "Məhsul",
 		"ProductName": "Product name",
-		"Products": "Products",
-		"Proof": "Proof",
+		"Products": "Məhsullar",
+		"Proof": "Sübut",
 		"Proofs": "Proofs",
 		"CATEGORY": "Category",
 		"Category": "Category",
@@ -217,35 +224,39 @@
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
 		"CommunityProofs": "Community proofs",
-		"Consumption": "Consumption",
+		"Consumption": "İstehlak",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
 		"Contribute": "Contribute",
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
+		"Confirm": "Təsdiqləyin",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Ölkələr",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Valyuta",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Parametrlərinizdə valyutalar əlavə edə bilərsiniz.",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
-		"DisplayMap": "Map",
-		"DisplayPriceMap": "Map",
+		"DisplayMap": "Xəritə",
+		"DisplayPriceMap": "Xəritə",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
-		"Error": "Error",
+		"Done": "Hazırdır",
+		"Error": "Xəta",
 		"Experiment": "Təcrübə",
 		"Experiments": "Experiments",
+		"Explore": "Araşdırın",
 		"FromPriceTag": "Qiymət etiketindən",
 		"FromReceipt": "Qəbzdən",
 		"GoToProof": "Go to proof",
@@ -257,6 +268,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Daha çox məlumat əldə edin",
 		"LoadMore": "Daha çox yüklə",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -264,12 +276,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "Tarix",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Şəklin tarixi.",
 		"DateProofHelpTextExif": "Varsayılan olaraq, onu şəklin EXIF metaməlumatlarından çıxarmağa çalışırıq.",
 		"DateProofHelpTextReceipt": "Qəbzlər üçün onu alış tarixinə təyin edin.",
-		"Details": "Details",
+		"Details": "Təfərrüatlar",
 		"Delete": "Sil",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -281,38 +294,49 @@
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
 		"DiscountTypeSecondHand": "Second hand",
-		"DiscountTypeOther": "Other",
+		"DiscountTypeOther": "Digər",
 		"Example": "Example",
 		"Examples": "Examples",
-		"ExampleWithColon": "Example:",
+		"ExampleWithColon": "Nümunə:",
 		"ExampleWithColonAndValue": "Example: {value}",
-		"ExamplesWithColon": "Examples:",
+		"ExamplesWithColon": "Nümunələr:",
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Düzəliş etmək",
 		"End": "End",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Sahə tələb olunur",
-		"Filter": "Filter",
+		"FilterNoun": "Filtr",
+		"FilterVerb": "Filtr",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Qiymətlərlə",
+		"FilterWithLocationCount": "Yerləri ilə",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Etibarlı barkod ilə",
-		"FilterPriceTagWithTagPredictionProductExists": "Etibarlı məhsulla",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Etibarlı kateqoriya etiketi ilə",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
-		"FrequentlyAskedQuestions": "Frequently asked questions",
+		"FAQ": "Tez-tez verilən suallar",
+		"FrequentlyAskedQuestions": "Tez-tez verilən suallar",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Kömək",
+		"Here": "Burada",
 		"History": "Tarixçə",
-		"Image": "Image",
+		"Image": "Şəkil",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -323,8 +347,8 @@
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
-		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Map": "Xəritə",
+		"Miscellaneous": "Müxtəlif",
 		"MobileApp": "Mobile app",
 		"Moderation": "Moderasiya",
 		"ModerationFlagReasonWrongType": "Səhv tip",
@@ -333,14 +357,14 @@
 		"ModerationFlagReasonWrongProduct": "Yanlış məhsul",
 		"ModerationFlagReasonWrongLocation": "Yanlış yer",
 		"ModerationFlagReasonWrongDate": "Səhv tarix",
-		"ModerationFlagReasonOther": "Other",
+		"ModerationFlagReasonOther": "Digər",
 		"ModerationFlagCreateSuccess": "Hesabatınız üçün təşəkkür edirik!",
 		"ModerationFlagStatusOpen": "Açıq",
 		"ModerationFlagStatusClosed": "bağlıdır",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Qiymətlərim",
+		"MyProofs": "Mənim sübutlarım",
 		"MyStats": "My stats",
 		"New": "Yeni",
 		"NextProof": "Next proof",
@@ -351,12 +375,15 @@
 		"Online": "Online",
 		"Open": "Açıq",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
+		"OrderNameASC": "Ad",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Qiymət",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -364,7 +391,7 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
-		"Other": "Other",
+		"Other": "Digər",
 		"OtherContributions": "Other contributions",
 		"PageNotMaintainedAnymore": "Bu səhifə artıq saxlanılmır.",
 		"PersonalInfo": "Personal information",
@@ -379,8 +406,10 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Qiymət etiketi",
 		"PriceTags": "Qiymət etiketləri",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -391,6 +420,7 @@
 		"PriceAlreadyUploaded": "Qiymət artıq yüklənib",
 		"PriceReadyToBeUploaded": "Qiymət yüklənməyə hazırdır",
 		"PricesAlreadyUploaded": "Qiymətlər artıq yüklənib",
+		"PricesAll": "Bütün qiymətlər",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -398,15 +428,17 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "Sizin əlavə etdiyiniz qiymətlər",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Məxfilik",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Məhsullar yaradılmışdır",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Məhsul yoxdur",
 		"ProductOrCategoryMissing": "Məhsul və ya kateqoriya yoxdur",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Sübut seçin",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -419,9 +451,10 @@
 		"Quantity": "Miqdar",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"Reason": "Reason",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "Rütbə",
+		"Reason": "Səbəb",
+		"RECEIPT": "Qəbz",
+		"Receipt": "Qəbz",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -429,7 +462,8 @@
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Re-open": "Yenidən açın",
-		"ReportProblem": "Report a problem",
+		"ReportProblem": "Problemi bildirin",
+		"Reset": "Reset",
 		"Resolved": "Həll olundu",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -437,15 +471,15 @@
 		"Select": "Select",
 		"Send": "Göndər",
 		"Settings": "Tənzimləmələr",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out",
+		"SignIn": "Daxil ol",
+		"SignOut": "Çıxış",
 		"SideMenu": "Side menu",
 		"Share": "Paylaş",
-		"Source": "Source",
+		"Source": "Mənbə",
 		"SourceCode": "Source code",
-		"Start": "Start",
+		"Start": "Başlayın",
 		"Stats": "Stats",
 		"Status": "Status",
 		"SuggestedBarcode": "Təklif olunan barkod:",
@@ -456,9 +490,9 @@
 		"TaglineAlt3": "Prices should be free",
 		"Text": "Mətn",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "Mövzu",
+		"ThemeLight": "İşıq",
+		"ThemeDark": "Qaranlıq",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -466,12 +500,12 @@
 		"TopCountries": "Ən yaxşı ölkələr",
 		"Today": "Today",
 		"Top": "Top",
-		"Total": "Total",
+		"Total": "Cəmi",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"TryItOut": "Sınayın",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Naməlum məhsul",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -497,21 +531,22 @@
 		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "İstifadəçi tapılmadı",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"ValidatePricesFromCommunity": "Cəmiyyətdən qiymətləri təsdiqləyin",
 		"View": "Bax",
-		"Website": "Website",
+		"Website": "Veb sayt",
 		"WithAPrice": "With a price",
 		"WithoutAPrice": "Qiymət olmadan",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Bəli",
 		"No": "Xeyr",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Food": "Yemək",
+		"PetFood": "Ev heyvanları üçün yem",
+		"Beauty": "Gözəllik"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -560,7 +595,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Valyuta",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -579,7 +614,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Sübut ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Satılan mağazalar",
-		"UseCropModeToAddImage": "Məhsul şəklini əlavə etmək üçün sübut şəklin altında kəsmə rejimini aktiv edin və məhsulun ətrafında düzbucaqlı çəkin."
+		"UseCropModeToAddImage": "Məhsul şəklini əlavə etmək üçün sübut şəklin altında kəsmə rejimini aktiv edin və məhsulun ətrafında düzbucaqlı çəkin.",
+		"ProductMissingPromoBanner": "Təcrübə: Açıq Qiymətlərdən əldə edilən məlumatlardan istifadə edərək bu məhsulu yaradın"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -592,18 +628,18 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Tənzimləmələr",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out"
+		"SignIn": "Daxil ol",
+		"SignOut": "Çıxış"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Qiymət əlavə edin",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Məhsul axtarın",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -625,6 +661,7 @@
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",
@@ -641,9 +678,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Sübut",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Naməlum məhsul"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -658,8 +695,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Qiymət",
+		"LabelDiscounted": "Endirimli qiymət",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -681,14 +718,14 @@
 		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Kateqoriyalar",
-		"CategoriesLower": "categories",
+		"CategoriesLower": "kateqoriyalar",
 		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Labels",
-		"LabelsLower": "labels",
+		"LabelsLower": "etiketlər",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "Yanlış barkod",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -698,10 +735,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Naməlum məhsul adı"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Qiymət əlavə edin",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Daha çox yüklə",
@@ -716,17 +753,18 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Çoxsaylı qiymət etiketlərini (eyni mağazanın yeri və tarixi) yükləmək üçün bura klikləyin!",
-		"PromoReceiptAssistant": "Təcrübə: qəbzlərinizdən qiymətləri avtomatik çıxarmaq üçün yeni qəbz köməkçisini sınayın!"
+		"PromoReceiptAssistant": "Təcrübə: qəbzlərinizdən qiymətləri avtomatik çıxarmaq üçün yeni qəbz köməkçisini sınayın!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Sübut",
+		"PRICE_TAG": "Qiymət etiketi",
+		"RECEIPT": "Qəbz",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Sübut seçin",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -738,11 +776,11 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Daha çox yüklə",
-		"Prices": "Prices",
+		"Prices": "Qiymətlər",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Məxfilik"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -773,7 +811,7 @@
 			"Title": "Əlavə eləyin"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Qiymət əlavə edin"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -796,14 +834,26 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Sübut (qəbz) əlavə edin"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
+		},
+		"Explore": {
+			"Title": "Araşdırın"
 		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Qiymət əlavə edin"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -812,7 +862,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Qiymətlər"
 		},
 		"PriceTags": {
 			"Title": "Qiymət etiketləri"
@@ -823,11 +873,20 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "Qəbz"
+		},
+		"Cities": {
+			"Title": "Şəhərlər"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Ölkələr"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -836,7 +895,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Əsas səhifə"
+			"Title": "Əsas səhifə",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -851,10 +911,10 @@
 			"Title": "Moderasiya"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Qiymətlərim"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Mənim sübutlarım"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -869,7 +929,7 @@
 			"Title": "Tənzimləmələr"
 		},
 		"SignIn": {
-			"Title": "Sign in"
+			"Title": "Daxil ol"
 		},
 		"Stats": {
 			"Title": "Stats"
@@ -892,9 +952,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Proof Qiymət Tag Assistant"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -902,13 +959,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Validate"
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -923,26 +982,27 @@
 		"Title": "Paylaş"
 	},
 	"SignIn": {
-		"Button": "Sign in",
+		"Button": "Daxil ol",
 		"Password": "Şifrə",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "Daxil ol",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Qiymətlər",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "Məhsullar",
 		"Locations": "Locations",
 		"Users": "Users",
-		"Total": "Total",
+		"Total": "Cəmi",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
@@ -956,13 +1016,17 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Daha çox yüklə",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Qiymətlərim",
+		"MyProofs": "Mənim sübutlarım",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Tənzimləmələr",
 		"Title": "Dashboard",
@@ -982,9 +1046,9 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
+		"CurrencyLabel": "Valyuta",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Признаница"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "Креирај",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Креирај",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Цена",
+			"LabelDiscounted": "Цена са попустом",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Доказ",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Датум",
+			"DateLabel": "Датум",
 			"Find": "Nađi",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Barkod",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Цене које сте ви додали",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -170,7 +171,7 @@
 		"Action": "Акција",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Додај цену",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -178,27 +179,33 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Додајте нове ценовнике",
+		"AddNewProofReceipt": "Додај нови рачун",
 		"AddToOFF": "Add to {name}",
 		"Added": "Додато",
 		"AdditionalInfo": "Additional information",
 		"All": "All",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Barkod",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
 		"BarcodeScanShort": "Skeniraj",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "Неважећи бар код",
 		"Brand": "Brend",
 		"Brands": "Брендови",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Цена",
+		"Prices": "Цене",
 		"PRODUCT": "Proizvod",
 		"Product": "Proizvod",
 		"ProductName": "Ime proizvoda",
 		"Products": "Proizvodi",
-		"Proof": "Proof",
+		"Proof": "Доказ",
 		"Proofs": "Proofs",
 		"CATEGORY": "Kategorija",
 		"Category": "Kategorija",
@@ -223,29 +230,33 @@
 		"Contribute": "Contribute",
 		"Contributors": "Saradnici",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
+		"Confirm": "Потврди",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Валута",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Можете додати валуте у подешавањима.",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
+		"Done": "Готово",
 		"Error": "Greška",
 		"Experiment": "Експеримент",
 		"Experiments": "Experiments",
+		"Explore": "Истражите",
 		"FromPriceTag": "Са цене",
 		"FromReceipt": "Са рачуна",
 		"GoToProof": "Go to proof",
@@ -257,6 +268,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Saznajte Više",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -264,12 +276,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "Датум",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Датум слике.",
 		"DateProofHelpTextExif": "Подразумевано, покушавамо да га издвојимо из EXIF метаподатака слике.",
 		"DateProofHelpTextReceipt": "За рачуне, подесите га на датум куповине.",
-		"Details": "Details",
+		"Details": "Детаљи",
 		"Delete": "Obriši",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -291,28 +304,39 @@
 		"Edit": "Izmeni",
 		"End": "End",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Поље је обавезно",
-		"Filter": "Filter",
+		"FilterNoun": "Филтер",
+		"FilterVerb": "Филтер",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Са ценама",
+		"FilterWithLocationCount": "Са локацијама",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Са важећим бар-кодом",
-		"FilterPriceTagWithTagPredictionProductExists": "Са валидним производом",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Са важећом ознаком категорије",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "Честа питања",
 		"FrequentlyAskedQuestions": "Često postavljana pitanja",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Помоћ",
+		"Here": "Овде",
 		"History": "Istorija",
-		"Image": "Image",
+		"Image": "Слика",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -324,7 +348,7 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Mapa",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "Разно",
 		"MobileApp": "Mobile app",
 		"Moderation": "Модерација",
 		"ModerationFlagReasonWrongType": "Погрешан тип",
@@ -339,8 +363,8 @@
 		"ModerationFlagStatusClosed": "Затворено",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Моје цене",
+		"MyProofs": "Моји докази",
 		"MyStats": "My stats",
 		"New": "Ново",
 		"NextProof": "Next proof",
@@ -351,12 +375,15 @@
 		"Online": "Online",
 		"Open": "Отворено",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
+		"OrderNameASC": "Naziv",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Цена",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -379,8 +406,10 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Цена",
 		"PriceTags": "Ценовнике",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -391,6 +420,7 @@
 		"PriceAlreadyUploaded": "Цена је већ отпремљена",
 		"PriceReadyToBeUploaded": "Цена је спремна за отпремање",
 		"PricesAlreadyUploaded": "Цене су већ отпремљене",
+		"PricesAll": "Све цене",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -400,13 +430,15 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Производи креирани",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Недостаје производ",
 		"ProductOrCategoryMissing": "Недостаје производ или категорија",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Изаберите доказ",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -419,9 +451,10 @@
 		"Quantity": "Količina",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"Reason": "Reason",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "Ранг",
+		"Reason": "Разлог",
+		"RECEIPT": "Признаница",
+		"Receipt": "Признаница",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -430,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "Поново отвори",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Решено",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -437,10 +471,10 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "Podešavanja",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Prijavite se",
-		"SignOut": "Sign out",
+		"SignOut": "Одјавите се",
 		"SideMenu": "Side menu",
 		"Share": "Podeli",
 		"Source": "Source",
@@ -456,9 +490,9 @@
 		"TaglineAlt3": "Prices should be free",
 		"Text": "Текст",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "Тема",
+		"ThemeLight": "Светло",
+		"ThemeDark": "Тамно",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -471,7 +505,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Испробај",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Непознати производ",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -497,20 +531,21 @@
 		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Корисник није пронађен",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"ValidatePricesFromCommunity": "Проверите цене од стране заједнице",
 		"View": "View",
-		"Website": "Website",
+		"Website": "Веб-сајт",
 		"WithAPrice": "With a price",
 		"WithoutAPrice": "Без цене",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Da",
 		"No": "Ne",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Храна",
+		"PetFood": "Храна за кућне љубимце",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -560,7 +595,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Валута",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -579,7 +614,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Доказ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Продавнице у којима се продаје",
-		"UseCropModeToAddImage": "Да бисте додали слику производа, омогућите режим обрезивања испод пробне слике и нацртајте правоугаоник око производа."
+		"UseCropModeToAddImage": "Да бисте додали слику производа, омогућите режим обрезивања испод пробне слике и нацртајте правоугаоник око производа.",
+		"ProductMissingPromoBanner": "Експеримент: креирајте овај производ користећи податке из Open Prices-а"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -593,17 +629,17 @@
 		"Dashboard": "Dashboard",
 		"Settings": "Podešavanja",
 		"SignIn": "Prijavite se",
-		"SignOut": "Sign out"
+		"SignOut": "Одјавите се"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Додај цену",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Претрага производа",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -625,6 +661,7 @@
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",
@@ -641,9 +678,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Доказ",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Непознати производ"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -658,8 +695,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Цена",
+		"LabelDiscounted": "Цена са попустом",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -688,7 +725,7 @@
 		"LabelsLower": "oznake",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "Неважећи бар код",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -698,10 +735,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Непознато име производа"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Додај цену",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -716,17 +753,18 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Да бисте отпремили више ценовника (иста локација и датум продавнице), кликните овде!",
-		"PromoReceiptAssistant": "Експеримент: испробајте новог асистента за рачуне да аутоматски издвоји цене са ваших рачуна!"
+		"PromoReceiptAssistant": "Експеримент: испробајте новог асистента за рачуне да аутоматски издвоји цене са ваших рачуна!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Доказ",
+		"PRICE_TAG": "Цена",
+		"RECEIPT": "Признаница",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Изаберите доказ",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -738,7 +776,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "Цене",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -773,7 +811,7 @@
 			"Title": "Dodajte"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Додај цену"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -796,14 +834,26 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Додајте доказ (рачун)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
+		},
+		"Explore": {
+			"Title": "Истражите"
 		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Додај цену"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -812,7 +862,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Цене"
 		},
 		"PriceTags": {
 			"Title": "Ценовнике"
@@ -823,11 +873,20 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "Признаница"
+		},
+		"Cities": {
+			"Title": "Градови"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Countries"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -836,7 +895,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Početna"
+			"Title": "Početna",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -851,10 +911,10 @@
 			"Title": "Модерација"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Моје цене"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Моји докази"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -892,9 +952,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Помоћник за доказне цене"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -902,13 +959,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Validate"
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -928,12 +987,13 @@
 		"ServerError": "Error: server error",
 		"Title": "Prijavite se",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Цене",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -956,13 +1016,17 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Моје цене",
+		"MyProofs": "Моји докази",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Podešavanja",
 		"Title": "Dashboard",
@@ -982,9 +1046,9 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
+		"CurrencyLabel": "Валута",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

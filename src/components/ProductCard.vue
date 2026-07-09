@@ -4,17 +4,18 @@
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
           <v-img v-if="product.image_url" :src="product.image_url" max-height="100px" @click="clickProduct()" />
-          <v-img v-else :src="productImageDefault" width="100px" style="filter:invert(.9);" />
+          <v-img v-else-if="product.source" :src="productImageDefault" width="100px" style="filter: invert(0.9);" />
+          <v-img v-else :src="productImageDefault" width="100px" style="filter: invert(57%) sepia(22%) saturate(6809%) hue-rotate(314deg) brightness(96%) contrast(68%);" />
         </v-col>
         <v-col style="max-width:80%;">
           <v-row>
-            <v-col :cols="!isSelected ? '12' : '10'">
+            <v-col :cols="!showActionButton ? '12' : '10'">
               <h3 id="product-title" role="link" tabindex="0" @click="clickProduct()" @keydown.enter="clickProduct()">
                 {{ getProductTitle() }}
               </h3>
             </v-col>
-            <v-col v-if="isSelected" cols="2" class="pl-0">
-              <v-btn class="float-right" icon="mdi-pencil" size="x-small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickProduct()" />
+            <v-col v-if="showActionButton" cols="2" class="pl-0">
+              <v-btn class="float-right" icon="mdi-pencil" size="small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickProduct()" />
             </v-col>
           </v-row>
 
@@ -91,6 +92,9 @@ export default {
     },
     hasProductSource() {
       return !!this.product.source
+    },
+    showActionButton() {
+      return this.isSelected
     },
   },
   methods: {

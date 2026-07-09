@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Ìwé ẹ̀rí ìsanwó"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "Ṣẹ̀dá",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Ṣẹ̀dá",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Iye owo",
+			"LabelDiscounted": "Iye owo ẹdinwo",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Ẹ̀rí",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Déètì",
+			"DateLabel": "Déètì",
 			"Find": "Wa",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Onnka idanimo oja",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Awọn idiyele ti a ṣafikun nipasẹ rẹ",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -170,7 +171,7 @@
 		"Action": "Iṣe",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Fi iye owo kun",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -178,27 +179,33 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Fi awọn ami idiyele tuntun kun",
+		"AddNewProofReceipt": "Fi ìwé ẹ̀rí ìsanwó tuntun kún un",
 		"AddToOFF": "Add to {name}",
 		"Added": "Fi kun",
 		"AdditionalInfo": "Additional information",
 		"All": "All",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Onnka idanimo oja",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
 		"BarcodeScanShort": "Ọlọjẹ",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "Káàdì àmì tí kò tọ́",
 		"Brand": "Eya",
 		"Brands": "Awon Eya",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Iye owo",
+		"Prices": "Awọn idiyele",
 		"PRODUCT": "Product",
 		"Product": "Product",
 		"ProductName": "Product name",
-		"Products": "Products",
-		"Proof": "Proof",
+		"Products": "Àwọn ọjà",
+		"Proof": "Ẹ̀rí",
 		"Proofs": "Proofs",
 		"CATEGORY": "Category",
 		"Category": "Category",
@@ -211,7 +218,7 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
-		"Clear": "Clear",
+		"Clear": "Parẹ́",
 		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
@@ -223,29 +230,33 @@
 		"Contribute": "Contribute",
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
+		"Confirm": "Jẹ́rìísí",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Owó kọ̀ǹpútà",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "O le fi awọn owo kun si awọn eto rẹ.",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
+		"Done": "Ti pari",
 		"Error": "Asise",
 		"Experiment": "Idanwo",
 		"Experiments": "Experiments",
+		"Explore": "Ye",
 		"FromPriceTag": "Lati aami idiyele",
 		"FromReceipt": "Lati iwe-ẹri kan",
 		"GoToProof": "Go to proof",
@@ -257,6 +268,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Kọ ẹkọ diẹ si",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -264,13 +276,14 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "Déètì",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Ọjọ́ tí àwòrán náà wà.",
 		"DateProofHelpTextExif": "Nípa àìṣeédá, a gbìyànjú láti yọ ọ́ kúrò nínú metadata EXIF ti àwòrán náà.",
 		"DateProofHelpTextReceipt": "Fún àwọn ìwé ẹ̀rí ìsanwó, ṣètò rẹ̀ sí ọjọ́ tí a rà á.",
-		"Details": "Details",
-		"Delete": "Delete",
+		"Details": "Àwọn àlàyé",
+		"Delete": "Paarẹ́",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
 		"DiscountType": "Discount type",
@@ -291,28 +304,39 @@
 		"Edit": "Edit",
 		"End": "End",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Aaye ti wa ni ti beere",
-		"Filter": "Filter",
+		"FilterNoun": "Àlẹ̀mọ́",
+		"FilterVerb": "Àlẹ̀mọ́",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Pẹlu awọn idiyele",
+		"FilterWithLocationCount": "Pẹ̀lú àwọn ibi tí ó wà",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Pẹlu koodu iwọle to wulo",
-		"FilterPriceTagWithTagPredictionProductExists": "Pẹlu ọja to wulo",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Pẹlu aami ẹka ti o wulo",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "Awọn ibeere ti a maa n beere nigbagbogbo",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
-		"History": "History",
-		"Image": "Image",
+		"Help": "Egba Mi O",
+		"Here": "Nibi",
+		"History": "Ìtàn",
+		"Image": "Àwòrán",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -324,7 +348,7 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "Onírúurú",
 		"MobileApp": "Mobile app",
 		"Moderation": "Iwọntunwọnsi",
 		"ModerationFlagReasonWrongType": "Iru aṣiṣe",
@@ -339,8 +363,8 @@
 		"ModerationFlagStatusClosed": "Pipade",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Àwọn iye owó mi",
+		"MyProofs": "Àwọn ẹ̀rí mi",
 		"MyStats": "My stats",
 		"New": "Tuntun",
 		"NextProof": "Next proof",
@@ -351,12 +375,15 @@
 		"Online": "Online",
 		"Open": "Ṣii",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
+		"OrderNameASC": "Orúkọ",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Iye owo",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -379,8 +406,10 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Tagi oye owo",
 		"PriceTags": "Awọn idiyele idiyele",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -391,6 +420,7 @@
 		"PriceAlreadyUploaded": "Iye owo ti gbejade tẹlẹ",
 		"PriceReadyToBeUploaded": "Owo setan lati wa ni Àwọn",
 		"PricesAlreadyUploaded": "Awọn idiyele ti gbejade tẹlẹ",
+		"PricesAll": "Gbogbo iye owo",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -400,13 +430,15 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Awọn ọja ti a ṣẹda",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Ọja sonu",
 		"ProductOrCategoryMissing": "Ọja tabi ẹka sonu",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Yan ẹ̀rí kan",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -419,9 +451,10 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"Reason": "Reason",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "Ipò",
+		"Reason": "Ìdí",
+		"RECEIPT": "Ìwé ẹ̀rí ìsanwó",
+		"Receipt": "Ìwé ẹ̀rí ìsanwó",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -430,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "Tun-ṣii",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Ti yanju",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -437,12 +471,12 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "Ètò",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out",
+		"SignIn": "wọle",
+		"SignOut": "ifowosi jada",
 		"SideMenu": "Side menu",
-		"Share": "Share",
+		"Share": "Pin",
 		"Source": "Source",
 		"SourceCode": "Source code",
 		"Start": "Start",
@@ -456,9 +490,9 @@
 		"TaglineAlt3": "Prices should be free",
 		"Text": "Ọrọ",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "Àkòrí",
+		"ThemeLight": "Ìmọ́lẹ̀",
+		"ThemeDark": "Dúdú",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -471,7 +505,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Gbiyanju o jade",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Ọjà tí a kò mọ̀",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -497,20 +531,21 @@
 		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "A ko ri olumulo",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"ValidatePricesFromCommunity": "Sooto awọn idiyele lati agbegbe",
 		"View": "View",
-		"Website": "Website",
+		"Website": "Oju opo wẹẹbu",
 		"WithAPrice": "With a price",
 		"WithoutAPrice": "Laisi idiyele",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Yes",
 		"No": "No",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Ounjẹ",
+		"PetFood": "Ounjẹ ẹranko",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -560,7 +595,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Owó kọ̀ǹpútà",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -579,7 +614,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Ẹri ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Awọn ile itaja nibiti o ti ta",
-		"UseCropModeToAddImage": "Lati fi aworan ọja kun, mu ipo irugbin ṣiṣẹ ni isalẹ aworan ẹri ki o fa onigun mẹta yika ọja naa."
+		"UseCropModeToAddImage": "Lati fi aworan ọja kun, mu ipo irugbin ṣiṣẹ ni isalẹ aworan ẹri ki o fa onigun mẹta yika ọja naa.",
+		"ProductMissingPromoBanner": "Ìdánwò: ṣẹ̀dá ọjà yìí nípa lílo dátà láti Àwọn Iye Owó Ṣíṣí"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -592,18 +628,18 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Ètò",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out"
+		"SignIn": "wọle",
+		"SignOut": "ifowosi jada"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Fi iye owo kun",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Wa ọjà kan",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -618,13 +654,14 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
-		"Clear": "Clear",
+		"Clear": "Parẹ́",
 		"NoResult": "No results found",
 		"NoResultHelpKeywords": "Ko le ri ile itaja rẹ? Gbiyanju lilo awọn koko dipo adirẹsi kikun (fun apẹẹrẹ 'Carrefour 75013 Paris' tabi 'Walmart San Francisco').",
 		"NoResultHelpOSM": "Njẹ ko le ri ile itaja rẹ bi? O le ma wa ni {osm_name} sibẹsibẹ. O le ṣafikun si {osm_url} akọkọ.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",
@@ -641,13 +678,13 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Ẹ̀rí",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Ọjà tí a kò mọ̀"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
-		"Delete": "Delete",
+		"Delete": "Paarẹ́",
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
@@ -658,8 +695,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Iye owo",
+		"LabelDiscounted": "Iye owo ẹdinwo",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -688,7 +725,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "Káàdì àmì tí kò tọ́",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -698,10 +735,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Orúkọ ọjà tí a kò mọ̀"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Fi iye owo kun",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -716,29 +753,30 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Lati gbe awọn aami idiyele lọpọlọpọ (ipo itaja kanna ati ọjọ), tẹ ibi!",
-		"PromoReceiptAssistant": "Ṣàdánwò: gbìyànjú olùrànlọ́wọ́ ọ̀wọ̀ tuntun láti yọ àwọn iye owó jáde lọ́fẹ̀ẹ́ láti inú àwọn ọjà rẹ!"
+		"PromoReceiptAssistant": "Ṣàdánwò: gbìyànjú olùrànlọ́wọ́ ọ̀wọ̀ tuntun láti yọ àwọn iye owó jáde lọ́fẹ̀ẹ́ láti inú àwọn ọjà rẹ!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Ẹ̀rí",
+		"PRICE_TAG": "Tagi oye owo",
+		"RECEIPT": "Ìwé ẹ̀rí ìsanwó",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Yan ẹ̀rí kan",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
-		"Delete": "Delete",
+		"Delete": "Paarẹ́",
 		"Title": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "Awọn idiyele",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -773,7 +811,7 @@
 			"Title": "Fi kun"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Fi iye owo kun"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -796,14 +834,26 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Fi ẹ̀rí kún un (ẹ̀rí ìsanwó)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
+		},
+		"Explore": {
+			"Title": "Ye"
 		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Fi iye owo kun"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -812,7 +862,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Awọn idiyele"
 		},
 		"PriceTags": {
 			"Title": "Awọn idiyele idiyele"
@@ -823,11 +873,20 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "Ìwé ẹ̀rí ìsanwó"
+		},
+		"Cities": {
+			"Title": "Àwọn ìlú ńlá"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Countries"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -836,7 +895,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Home",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -851,10 +911,10 @@
 			"Title": "Iwọntunwọnsi"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Àwọn iye owó mi"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Àwọn ẹ̀rí mi"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -869,7 +929,7 @@
 			"Title": "Ètò"
 		},
 		"SignIn": {
-			"Title": "Sign in"
+			"Title": "wọle"
 		},
 		"Stats": {
 			"Title": "Stats"
@@ -892,9 +952,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Ẹri Iye Tag Iranlọwọ"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -902,13 +959,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Validate"
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -920,26 +979,27 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "Share"
+		"Title": "Pin"
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "wọle",
+		"Password": "Ọ̀rọ̀ìpamọ́",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "wọle",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Awọn idiyele",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "Àwọn ọjà",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
@@ -956,13 +1016,17 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Àwọn iye owó mi",
+		"MyProofs": "Àwọn ẹ̀rí mi",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Ètò",
 		"Title": "Dashboard",
@@ -982,9 +1046,9 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
+		"CurrencyLabel": "Owó kọ̀ǹpútà",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

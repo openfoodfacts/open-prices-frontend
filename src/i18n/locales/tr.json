@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "{url} tarafından desteklenmektedir"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Barkod",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Topluluk Görevi",
-		"Subtitle": "Diğer gıda fiyat meraklılarıyla birlikte {challenge_title} {challenge_subtitle}hakkında bilgi toplayın.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Mağazalardaki fiyat etiketlerinin fotoğraflarını çekin",
 			"line1": "Resimlerde bir veya daha fazla fiyat etiketi bulunabilir. Barkodlar okunaklı olmalıdır. Örneğin:",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} sizin tarafınızdan eklenen fiyatlar",
 		"PricesAddedByYou": "Sizin tarafınızdan eklenen fiyatlar",
 		"MostRecentContributions": "En son katkılar",
-		"ChallengeCount": "{count} meydan okumalar | {count} meydan okuma | {count} meydan okumalar",
 		"ChallengeStatuses": {
 			"DRAFT": "Taslak",
 			"UPCOMING": "Yakında",
@@ -178,10 +179,16 @@
 		"AddProofs": "Kanıtları ekle",
 		"AddNewProof": "Yeni bir kanıt ekle",
 		"AddNewProofs": "Yeni kanıtlar ekle",
+		"AddNewProofPriceTags": "Yeni fiyat etiketleri ekle",
+		"AddNewProofReceipt": "Yeni bir fiş ekle",
 		"AddToOFF": "{name}'e ekle",
 		"Added": "Eklendi",
 		"AdditionalInfo": "Ek Bilgiler",
 		"All": "Hepsi",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Barkod",
 		"Barcodes": "Barkodlar",
 		"BarcodeScan": "Barkod tara",
@@ -220,10 +227,11 @@
 		"Consumption": "Tüketim",
 		"ConsumptionPrices": "Tüketim fiyatları",
 		"ConsumptionProofs": "Tüketim kanıtları",
-		"Contribute": "Destekleyebilirsiniz",
+		"Contribute": "Katkıda bulunun",
 		"Contributors": "Katkıda bulunanlar",
 		"Contributions": "Katkıda Bulunulanlar",
 		"Confirm": "Onayla",
+		"Count": "Miktar",
 		"Country": "Ülke",
 		"Countries": "Ülkeler",
 		"CountryCount": "{count} ülkeler | {count} ülke | {count} ülkeler",
@@ -235,7 +243,9 @@
 		"CurrencyCount": "{count} para birimleri | {count} para birimi | {count} para birimleri",
 		"CurrencyProofHelpTextSettings": "Ayarlarınızdan para birimleri ekleyebilirsiniz.",
 		"Dashboard": "Gösterge paneli",
-		"Display": "Göster",
+		"DisplayNoun": "Göster",
+		"DisplayVerb": "Göster",
+		"Displays": "Displays",
 		"DisplayList": "Liste",
 		"DisplayPriceList": "Liste",
 		"DisplayTable": "Tablo",
@@ -246,6 +256,7 @@
 		"Error": "Hata",
 		"Experiment": "Deney",
 		"Experiments": "Deneyler",
+		"Explore": "Keşfetmek",
 		"FromPriceTag": "Bir fiyat etiketinden",
 		"FromReceipt": "Bir makbuzdan",
 		"GoToProof": "Kanıta git",
@@ -257,6 +268,7 @@
 		"Languages": "Diller",
 		"LatestPrices": "Son fiyatlar",
 		"LatestProofs": "En son bedeller",
+		"LearnMore": "Daha fazla bilgi edin",
 		"LoadMore": "Daha fazla yükle",
 		"Location": "Konum",
 		"Locations": "Konumlar",
@@ -264,6 +276,7 @@
 		"LocationFindShop": "Mağaza konumunu bulun",
 		"LocationMissing": "Konum eksik",
 		"LocationSearchByName": "İsme ve şehre göre ara",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Tarih",
 		"DateMissing": "Tarih eksik",
 		"DateProofHelpText": "Fotoğrafın çekildiği tarih.",
@@ -291,18 +304,28 @@
 		"Edit": "Düzenle",
 		"End": "Son",
 		"ErrorServer": "Hata: sunucu hatası",
+		"Favorite": "Sık Kullanılan",
+		"FavoritesAdd": "Sık kullanılanlara ekle",
+		"FavoritesRemove": "Sık kullanılanlardan kaldır",
 		"FieldIsRequired": "Alan gereklidir",
-		"Filter": "Filtrele",
+		"FilterNoun": "Filtrele",
+		"FilterVerb": "Filtrele",
+		"Filters": "Filtreler",
 		"FilterChallengesShowAllStatus": "Tüm meydan okumaları göster",
+		"FilterWithPriceCount": "Fiyatlarla birlikte",
+		"FilterWithLocationCount": "Konumlarla birlikte",
 		"FilterProductWithPriceCount": "Bir fiyat ile",
 		"FilterProductWithPriceCountHide": "Ürünleri fiyatlarıyla gizle",
+		"FilterProductWithPriceOwner": "Sadece benim fiyat listemde olan ürünleri göster",
 		"FilterProductWithoutPriceCount": "Fiyatlar olmadan",
 		"FilterPriceMoreThan30DaysHide": "30 günden eski fiyatları gizle",
 		"FilterProofWithPriceCountHide": "Fiyatları olan kanıtları gizle",
-		"FilterPriceTagWithProofOwner": "Sadece benim kanıtlarımı göster",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Geçerli bir barkod ile",
-		"FilterPriceTagWithTagPredictionProductExists": "Geçerli bir ürünle",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Geçerli bir kategori etiketiyle",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Fiyatları olan konumları gizle",
 		"FilterUserWithPriceCountHide": "Fiyat bulunan katkıda bulunanları gizle",
 		"Fix": "Onar",
@@ -311,6 +334,7 @@
 		"GDPR_REQUEST": "GDPR talebi",
 		"Group": "Grup",
 		"Help": "Yardım",
+		"Here": "Burada",
 		"History": "Geçmiş",
 		"Image": "Resim",
 		"ImageSelect": "Bir resim seçin",
@@ -351,7 +375,10 @@
 		"Online": "Çevrimiçi",
 		"Open": "Açık",
 		"OpenWithTheAssistant": "Asistanla açın",
-		"Order": "Sipariş",
+		"OrderNoun": "Sipariş",
+		"OrderVerb": "Sipariş",
+		"Orders": "Siparişler",
+		"OrderNameASC": "İsim",
 		"OrderLocationCountDESC": "Konum sayısı",
 		"OrderProductUniqueScansDESC": "Tarama sayısı",
 		"OrderProductPriceCountDESC": "Fiyat sayısı",
@@ -381,6 +408,8 @@
 		"PicturesAddedByYou": "Sizin tarafınızdan eklenen resimler",
 		"PRICE_TAG": "Fiyat etiketi",
 		"PriceTags": "Fiyat etiketleri",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} fiyatlar | {count} fiyat | {count} fiyatlar",
 		"PriceAddedCount": "{count} fiyatlar eklendi | {count} fiyatlar eklendi | {count} fiyatlar eklendi",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} fiyatlar eklendi",
@@ -391,6 +420,7 @@
 		"PriceAlreadyUploaded": "Fiyat zaten yüklendi",
 		"PriceReadyToBeUploaded": "Fiyat yüklenmeye hazır",
 		"PricesAlreadyUploaded": "Fiyatlar zaten yüklendi",
+		"PricesAll": "Tüm fiyatlar",
 		"PricesMore": "Daha fazla fiyat",
 		"PricesAdded": "Fiyatlar eklendi",
 		"PricesAddedToday": "Bugün eklenen fiyatlar",
@@ -400,6 +430,8 @@
 		"Private": "Özel",
 		"Privacy": "Mahremiyet",
 		"ProductCount": "{count} ürünler | {count} ürün | {count} ürünler",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Oluşturulan ürünler",
 		"ProductFind": "Ürünü bul",
 		"ProductMissing": "Ürün eksik",
 		"ProductOrCategoryMissing": "Ürün veya kategori eksik",
@@ -419,6 +451,7 @@
 		"Quantity": "Miktar",
 		"QuantityBought": "Satın alınan miktar",
 		"QuantityMissing": "Miktar eksik",
+		"Rank": "Rütbe",
 		"Reason": "Sebep",
 		"RECEIPT": "Makbuz",
 		"Receipt": "Makbuz",
@@ -430,6 +463,7 @@
 		"Recent": "En son",
 		"Re-open": "Yeniden aç",
 		"ReportProblem": "Bir sorun bildir",
+		"Reset": "Sıfırla",
 		"Resolved": "Çözüldü",
 		"Reuses": "Yeniden kullanımlar",
 		"ReusesKnown": "Bilinen yeniden kullanımlar",
@@ -437,7 +471,7 @@
 		"Select": "Seçiniz",
 		"Send": "Gönder",
 		"Settings": "Ayarlar",
-		"SignInOFFAccount": "{url} hesabınızla oturum açın",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Giriş yapıldı!",
 		"SignIn": "Giriş Yap",
 		"SignOut": "Çıkış yap",
@@ -497,6 +531,7 @@
 		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Kullanıcı bulunamadı.",
 		"Validate": "Geçerlilik",
 		"ValidatePrices": "Fiyatları doğrula",
 		"ValidatePricesWithAI": "AI ile fiyatları doğrulayın",
@@ -576,10 +611,11 @@
 		"NextProof": "Bir sonraki kanıt",
 		"PreviousProof": "Önceki kanıt",
 		"ProductAlreadyExists": "Ürün zaten mevcut",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "Ürün dili",
 		"ProofNumberOfOutProofs": "Kanıt ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Satılan mağazalar",
-		"UseCropModeToAddImage": "Ürün görseli eklemek için prova resminin altındaki kırpma modunu etkinleştirin ve ürünün etrafına bir dikdörtgen çizin."
+		"UseCropModeToAddImage": "Ürün görseli eklemek için prova resminin altındaki kırpma modunu etkinleştirin ve ürünün etrafına bir dikdörtgen çizin.",
+		"ProductMissingPromoBanner": "Deney: Open Prices verilerini kullanarak bu ürünü oluşturun."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Son bedellerinizden birini seçin"
@@ -625,6 +661,7 @@
 		"PoweredBy": {
 			"text": "{url} tarafından desteklenmektedir"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Yeni konum yok | Son konum {recentLocationNumber}| Son konumlar {recentLocationNumber}",
 		"Result": "Sonuç {resultNumber} | Sonuçlar {resultNumber}",
 		"SearchByName": "Mağazanızı ada ve şehre göre arayın",
@@ -716,7 +753,8 @@
 		"ReceiptAllowAI": "Fişinizde fiyatları çıkarmak için AI çalıştırılmasına izin verin",
 		"ReceiptAIWarning": "Yapay zeka fişiniz üzerinde çalışarak fiyatları çıkaracak.",
 		"PromoProofPriceTagAddMultiple": "Birden fazla fiyat etiketi yüklemek için (aynı mağaza adresi ve tarihi) buraya tıklayın!",
-		"PromoReceiptAssistant": "Deney: Fişlerinizden fiyatları otomatik olarak çıkarmak için yeni fiş asistanını deneyin!"
+		"PromoReceiptAssistant": "Deney: Fişlerinizden fiyatları otomatik olarak çıkarmak için yeni fiş asistanını deneyin!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Kanıt",
@@ -796,8 +834,20 @@
 		"AddProofMultiple": {
 			"Title": "Birden fazla kanıt ekleyin"
 		},
+		"AddProofReceipt": {
+			"Title": "Kanıt ekleyin (makbuz)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
+		},
+		"Explore": {
+			"Title": "Keşfetmek"
 		},
 		"Locations": {
 			"Title": "Konumlar"
@@ -823,11 +873,20 @@
 		"ProofAddSingle": {
 			"Title": "Tek bir kanıt ekle"
 		},
+		"Receipt": {
+			"Title": "Makbuz"
+		},
+		"Cities": {
+			"Title": "Şehirler"
+		},
 		"Community": {
 			"Title": "Topluluk"
 		},
 		"Contribute": {
-			"Title": "Destekleyebilirsiniz"
+			"Title": "Katkıda bulunun"
+		},
+		"Countries": {
+			"Title": "Ülkeler"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -836,7 +895,8 @@
 			"Title": "Deneyler"
 		},
 		"Home": {
-			"Title": "Ana Sayfa"
+			"Title": "Ana Sayfa",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Gösterge paneli"
@@ -892,9 +952,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Kanıt Fiyat Etiketi Asistanı"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Fiyat Doğrulama Asistanı"
-		},
 		"ReceiptAssistant": {
 			"Title": "Fiş Asistanı"
 		},
@@ -902,13 +959,15 @@
 			"Title": "Meydan Okuma"
 		},
 		"Challenges": {
-			"Title": "Meydan Okumalar"
+			"Title": "Meydan Okumalar",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Topluluk Görevi"
 		},
 		"Validate": {
-			"Title": "Geçerlilik"
+			"Title": "Geçerlilik",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Fiyatları doğrula"
@@ -928,6 +987,7 @@
 		"ServerError": "Hata: sunucu hatası",
 		"Title": "Giriş Yap",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Kullanıcı adı",
 		"WrongCredentials": "Hata: yanlış kimlik bilgileri"
 	},
@@ -956,6 +1016,10 @@
 		"PricesProofsPerSource": "Kaynak başına fiyatlar ve kanıtlar",
 		"LastUpdated": "Son güncelleme {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Son fiyatlar",
 		"LatestProofs": "En son bedeller",
@@ -983,8 +1047,8 @@
 		"ChangeLanguage": "Dili Değiştir",
 		"CountryLabel": "Ülke",
 		"CurrencyLabel": "Kur",
-		"DisplayTitle": "Göster",
 		"BarcodeScanner": "Barkod tarayıcı",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Varsayılan mod",
 		"FavoriteCurrencies": "Sık kullanılan para birimleri",
 		"CurrencyRequired": "En az bir para birimi gerekli",

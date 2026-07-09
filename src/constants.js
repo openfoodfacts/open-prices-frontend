@@ -177,10 +177,15 @@ export default {
   USER_CONSUMPTION_ICON: USER_CONSUMPTION_ICON,
   USER_COMMUNITY: USER_COMMUNITY,
   USER_COMMENT_ICON: 'mdi-comment-text-outline',
+  BADGE_ICON: 'mdi-medal-outline',
+  BADGE_IMAGE_DEFAULT_URL: '/icon-mdi-medal-outline.svg',
   // filter
   PRODUCT_FILTER_LIST: [
-    { key: 'price_count_gte_1', value: 'FilterProductWithPriceCount' },
+    { key: 'price_count_gte_1', value: 'FilterWithPriceCount' },
     { key: 'price_count_0', value: 'FilterProductWithoutPriceCount' },
+  ],
+  PRODUCT_CREATE_FILTER_LIST: [
+    { key: 'price__owner', value: 'FilterProductWithPriceOwner' },
   ],
   PRICE_FILTER_LIST: [
     { key: 'show_last_month', value: 'FilterPriceMoreThan30DaysHide' },
@@ -190,12 +195,18 @@ export default {
   ],
   PRICE_TAG_FILTER_LIST: [
     { key: 'proof__owner', value: 'FilterPriceTagWithProofOwner' },
+    { key: 'proof_user_country', value: 'FilterPriceTagWithProofUserCountry' },
     // { key: 'tag_prediction_barcode_valid', value: 'FilterPriceTagWithTagPredictionBarcodeValid' },
     { key: 'tag_prediction_product_exists', value: 'FilterPriceTagWithTagPredictionProductExists' },
     // { key: 'tag_prediction_category_tag_valid', value: 'FilterPriceTagWithTagPredictionCategoryTagValid' },
+    { key: 'tag_invalid_include', value: 'FilterPriceTagWithTagInvalidInclude' },
   ],
   LOCATION_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterLocationWithPriceCountHide' },
+  ],
+  LOCATION_COUNTRY_FILTER_LIST: [
+    { key: 'price_count_gte_1', value: 'FilterWithPriceCount' },
+    { key: 'location_count_gte_1', value: 'FilterWithLocationCount' },
   ],
   USER_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterUserWithPriceCountHide' },
@@ -204,6 +215,10 @@ export default {
   PRODUCT_ORDER_LIST: [
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
     { key: '-unique_scans_n', value: 'OrderProductUniqueScansDESC', icon: 'mdi-barcode-scan' },
+  ],
+  PRODUCT_CREATE_ORDER_LIST: [
+    { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
+    { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
   ],
   PRICE_ORDER_LIST: [
     { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
@@ -222,6 +237,11 @@ export default {
     { key: '-user_count', value: 'OrderUserCountDESC', icon: 'mdi-account' },
     { key: '-product_count', value: 'OrderProductCountDESC', icon: 'mdi-database-outline' },
     { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
+  ],
+  LOCATION_COUNTRY_ORDER_LIST: [
+    { key: 'name', value: 'OrderNameASC', icon: 'mdi-alphabetical' },
+    { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
+    { key: '-location_count', value: 'OrderLocationCountDESC', icon: 'mdi-map-marker-outline' },
   ],
   USER_ORDER_LIST: [
     // same order as UserCard chips
@@ -242,12 +262,13 @@ export default {
     { key: 'photon' },
   ],
   LOCATION_SELECTOR_DISPLAY_LIST: [
-    { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },  // Recent
+    { key: 'favorite', value: 'Favorite', valueSmallScreen: '', icon: 'mdi-star' },
+    { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },
     { key: 'osm', value: 'Physical', valueSmallScreen: 'Physical', icon: LOCATION_TYPE_OSM_ICON },
     { key: 'online', value: 'Online', valueSmallScreen: 'Online', icon: LOCATION_TYPE_ONLINE_ICON },
   ],
   PRODUCT_SELECTOR_DISPLAY_LIST: [
-    // { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },  // Recent
+    // { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },
     { key: 'scan', value: 'BarcodeScan', valueSmallScreen: 'BarcodeScanShort', icon: 'mdi-barcode-scan' },
     { key: 'type', value: 'BarcodeType', valueSmallScreen: 'BarcodeTypeShort', icon: 'mdi-numeric' },
   ],

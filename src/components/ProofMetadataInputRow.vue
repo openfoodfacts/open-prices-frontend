@@ -163,7 +163,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    AIUsageAlert: defineAsyncComponent(() => import('./AIUsageAlert.vue')),
+    AIUsageAlert: defineAsyncComponent(() => import('../components/AIUsageAlert.vue')),
   },
   props: {
     proofMetadataForm: {

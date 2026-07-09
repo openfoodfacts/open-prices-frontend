@@ -34,7 +34,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import utils from '../utils.js'
 
 export default {
@@ -99,7 +99,7 @@ export default {
       if ((this.brandProductTotal != null) && (this.brandProductList.length >= this.brandProductTotal)) return
       this.loading = true
       this.brandProductPage += 1
-      return api.getProducts(this.getProductsParams)
+      return openPricesApi.getProducts(this.getProductsParams)
         .then((data) => {
           this.brandProductList.push(...data.items)
           this.brandProductTotal = data.total

@@ -9,242 +9,248 @@
           <v-divider />
           <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" :disabled="disableCleanupStep" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[3].title" :value="stepItemList[3].value" :complete="step === 4" :disabled="disableSummaryStep" />
+          <v-stepper-item :title="stepItemList[3].title" :value="stepItemList[3].value" :complete="step > 4" :disabled="disableSummaryStep" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
   </v-row>
 
-  <v-row v-if="step === 1">
-    <v-col cols="12" md="6">
-      <ProofUploadCard :typePriceTagOnly="true" @proof="onProofUploaded($event)" />
-    </v-col>
-  </v-row>
+  <template v-if="step === 1">
+    <v-row>
+      <v-col cols="12" md="6">
+        <ProofUploadCard :typePriceTagOnly="true" @proof="onProofUploaded($event)" />
+      </v-col>
+    </v-row>
+  </template>
   
-  <v-row v-if="step === 2">
-    <v-col cols="12">
-      <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="warning" variant="outlined" density="compact">
-        {{ $t('ContributionAssistant.BoundingBoxesFromServerWarning') }}
-      </v-alert>
-      <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" density="compact" icon="mdi-magnify">
-        {{ $t('ContributionAssistant.FindBoundingBoxesRunning') }}
-        <v-progress-circular indeterminate />
-      </v-alert>
-      <v-row>
-        <v-col cols="12" lg="6">
-          <h3 class="mb-4">
-            {{ $t('ContributionAssistant.LabelsExtractionSteps.DrawBoundingBoxes') }}
-          </h3>
-          <v-card>
-            <v-card-text>
-              <v-progress-circular v-if="!drawCanvasLoaded" indeterminate />
-              <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :key="proofObject.id" :imageSrc="imageSrc" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
-            </v-card-text>
-            <v-divider />
-            <v-card-actions>
-              <ProofFooterRow :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col cols="12" lg="6">
-          <h3 class="mb-4">
-            {{ $t('ContributionAssistant.LabelsExtractionSteps.CheckLabels') }}
-          </h3>
-          <v-row>
-            <v-col v-for="(label, index) in extractedLabels" :key="index" cols="6" md="6" xl="4">
-              <ContributionAssistantLabelCard :label="label" @removeLabel="removeLabel(index)" />
-            </v-col>
-          </v-row>
-          <h3 class="mt-4 mb-4">
-            {{ $t('ContributionAssistant.LabelsExtractionSteps.SendLabels') }}
-          </h3>
-          <v-btn class="float-right" color="primary" :block="!$vuetify.display.smAndUp" :disabled="!extractedLabels.length" :loading="processLabelsLoading" @click="processLabels">
-            {{ $t('ContributionAssistant.LabelsExtractionSteps.SendLabelsButton') }}
-          </v-btn>
-        </v-col>
-      </v-row>
-    </v-col>
-  </v-row>
+  <template v-if="step === 2">
+    <v-row>
+      <v-col cols="12">
+        <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="warning" variant="outlined" density="compact">
+          {{ $t('ContributionAssistant.BoundingBoxesFromServerWarning') }}
+        </v-alert>
+        <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
+          {{ $t('ContributionAssistant.FindBoundingBoxesRunning') }}
+          <v-progress-circular indeterminate />
+        </v-alert>
+        <v-row>
+          <v-col cols="12" lg="6">
+            <h3 class="mb-4">
+              {{ $t('ContributionAssistant.LabelsExtractionSteps.DrawBoundingBoxes') }}
+            </h3>
+            <v-card>
+              <v-card-text>
+                <v-progress-circular v-if="!drawCanvasLoaded" indeterminate />
+                <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :key="proofObject.id" :imageSrc="imageSrc" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
+              </v-card-text>
+              <v-divider />
+              <v-card-actions>
+                <ProofFooterRow :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
+              </v-card-actions>
+            </v-card>
+          </v-col>
+          <v-col cols="12" lg="6">
+            <h3 class="mb-4">
+              {{ $t('ContributionAssistant.LabelsExtractionSteps.CheckLabels') }}
+            </h3>
+            <v-row>
+              <v-col v-for="(label, index) in extractedLabels" :key="index" cols="6" md="6" xl="4">
+                <ContributionAssistantLabelCard :label="label" @removeLabel="removeLabel(index)" />
+              </v-col>
+            </v-row>
+            <h3 class="mt-4 mb-4">
+              {{ $t('ContributionAssistant.LabelsExtractionSteps.SendLabels') }}
+            </h3>
+            <v-btn class="float-right" color="primary" :block="!$vuetify.display.smAndUp" :disabled="!extractedLabels.length" :loading="processLabelsLoading" @click="processLabels">
+              {{ $t('ContributionAssistant.LabelsExtractionSteps.SendLabelsButton') }}
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+  </template>
 
-  <v-row v-if="step === 3">
-    <v-col cols="12">
-      <v-row>
-        <v-col
-          v-for="(productPriceForm, index) in productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError"
-          :key="productPriceForm.id"
-          cols="12"
-          md="6"
-          xl="4"
-        >
-          <ContributionAssistantPriceFormCard
-            :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''"
-            height="100%"
-            :productPriceForm="productPriceForm"
-            :hideProductBarcodeScannerTab="true"
-            :hideProofDetails="true"
-            :hideUploadAction="true"
-            @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
-            @validatePriceTag="validatePriceTag(index)"
-          />
-        </v-col>
-      </v-row>
-      <h3 v-if="productPriceFormsWithoutProductOrCategoryAndNoError.length" class="mt-4 mb-4">
-        {{ $t('ContributionAssistant.PricesWithoutProductOrCategory') }}
-      </h3>
-      <v-row v-if="productPriceFormsWithoutProductOrCategoryAndNoError.length">
-        <v-col
-          v-for="productPriceForm in productPriceFormsWithoutProductOrCategoryAndNoError"
-          :key="productPriceForm.id"
-          cols="12"
-          md="6"
-          xl="4"
-        >
-          <ContributionAssistantPriceFormCard
-            :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''"
-            height="100%"
-            :productPriceForm="productPriceForm"
-            :hideProductBarcodeScannerTab="true"
-            :hideProofDetails="true"
-            :hideUploadAction="true"
-            @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
-          />
-        </v-col>
-      </v-row>
-      <h3 v-if="productPriceFormsMarkedAsError.length" class="mt-4 mb-4">
-        {{ $t('ContributionAssistant.PricesMarkedAsError') }}
-      </h3>
-      <v-row v-if="productPriceFormsMarkedAsError.length">
-        <v-col
-          v-for="productPriceForm in productPriceFormsMarkedAsError"
-          :key="productPriceForm.id"
-          cols="12"
-          md="6"
-          xl="4"
-        >
-          <ContributionAssistantPriceFormCard
-            :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''"
-            height="100%"
-            :productPriceForm="productPriceForm"
-            :hideProductBarcodeScannerTab="true"
-            :hideProofDetails="true"
-            :hideUploadAction="true"
-            @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
-          />
-        </v-col>
-      </v-row>
-      <h3 v-if="productPriceFormsWithPriceId.length" class="mt-4 mb-4">
-        {{ $t('ContributionAssistant.PricesAlreadyAdded') }}
-      </h3>
-      <v-row v-if="productPriceFormsWithPriceId.length">
-        <v-col
-          v-for="(productPriceForm, index) in productPriceFormsWithPriceId"
-          :key="index"
-          cols="12"
-          md="6"
-          xl="4"
-        >
-          <ContributionAssistantPriceFormCard
-            height="100%"
-            :productPriceForm="productPriceForm"
-            :hideProductBarcodeScannerTab="true"
-            :hideProofDetails="true"
-            :hideActions="true"
-            :disabled="true"
-          />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
-          <v-alert
-            class="mb-2"
-            type="info"
-            variant="outlined"
-            density="compact"
+  <template v-if="step === 3">
+    <v-row>
+      <v-col cols="12">
+        <v-row>
+          <v-col
+            v-for="(productPriceForm, index) in productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError"
+            :key="productPriceForm.id"
+            cols="12"
+            md="6"
+            xl="4"
           >
-            <p>
-              {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length, date: proofObject.date, locationName: locationName }) }}
-            </p>
-          </v-alert>
-          <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" :loading="loading" @click="addPrices">
-            {{ $t('Common.UploadMultiplePrices', productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length) }}
-          </v-btn>
-        </v-col>
-      </v-row>
-    </v-col>
-  </v-row>
+            <ContributionAssistantPriceFormCard
+              :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''"
+              height="100%"
+              :productPriceForm="productPriceForm"
+              :hideProductBarcodeScannerTab="true"
+              :hideProofDetails="true"
+              :hideUploadAction="true"
+              @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
+              @validatePriceTag="validatePriceTag(index)"
+            />
+          </v-col>
+        </v-row>
+        <h3 v-if="productPriceFormsWithoutProductOrCategoryAndNoError.length" class="mt-4 mb-4">
+          {{ $t('ContributionAssistant.PricesWithoutProductOrCategory') }}
+        </h3>
+        <v-row v-if="productPriceFormsWithoutProductOrCategoryAndNoError.length">
+          <v-col
+            v-for="productPriceForm in productPriceFormsWithoutProductOrCategoryAndNoError"
+            :key="productPriceForm.id"
+            cols="12"
+            md="6"
+            xl="4"
+          >
+            <ContributionAssistantPriceFormCard
+              :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''"
+              height="100%"
+              :productPriceForm="productPriceForm"
+              :hideProductBarcodeScannerTab="true"
+              :hideProofDetails="true"
+              :hideUploadAction="true"
+              @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
+            />
+          </v-col>
+        </v-row>
+        <h3 v-if="productPriceFormsMarkedAsError.length" class="mt-4 mb-4">
+          {{ $t('ContributionAssistant.PricesMarkedAsError') }}
+        </h3>
+        <v-row v-if="productPriceFormsMarkedAsError.length">
+          <v-col
+            v-for="productPriceForm in productPriceFormsMarkedAsError"
+            :key="productPriceForm.id"
+            cols="12"
+            md="6"
+            xl="4"
+          >
+            <ContributionAssistantPriceFormCard
+              :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''"
+              height="100%"
+              :productPriceForm="productPriceForm"
+              :hideProductBarcodeScannerTab="true"
+              :hideProofDetails="true"
+              :hideUploadAction="true"
+              @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
+            />
+          </v-col>
+        </v-row>
+        <h3 v-if="productPriceFormsWithPriceId.length" class="mt-4 mb-4">
+          {{ $t('ContributionAssistant.PricesAlreadyAdded') }}
+        </h3>
+        <v-row v-if="productPriceFormsWithPriceId.length">
+          <v-col
+            v-for="(productPriceForm, index) in productPriceFormsWithPriceId"
+            :key="index"
+            cols="12"
+            md="6"
+            xl="4"
+          >
+            <ContributionAssistantPriceFormCard
+              height="100%"
+              :productPriceForm="productPriceForm"
+              :hideProductBarcodeScannerTab="true"
+              :hideProofDetails="true"
+              :hideActions="true"
+              :disabled="true"
+            />
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <v-alert
+              class="mb-2"
+              color="primary"
+              variant="outlined"
+              density="compact"
+              icon="mdi-information"
+            >
+              <p>
+                {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length, date: proofObject.date, locationName: locationName }) }}
+              </p>
+            </v-alert>
+            <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" :loading="loading" @click="addPrices">
+              {{ $t('Common.UploadMultiplePrices', productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length) }}
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+  </template>
 
-  <v-row v-if="step === 4">
-    <v-col>
-      <v-row>
-        <v-col cols="12">
-          <v-progress-linear
-            v-if="!finishedUploading"
-            v-model="numberOfPricesAdded"
-            :max="productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length"
-            :color="productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length === numberOfPricesAdded ? 'success' : 'primary'"
-            height="25"
-            :striped="productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length !== numberOfPricesAdded"
-            rounded
-          >
-            <strong>{{ $t('Common.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length }) }}</strong>
-          </v-progress-linear>
-          <v-alert
-            v-if="finishedUploading"
-            type="success"
-            variant="outlined"
-            density="compact"
-            :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
-          />
-        </v-col>
-      </v-row>
-      <v-row v-if="finishedUploading">
-        <v-col cols="12" sm="6" lg="4">
-          <v-card
-            :title="$t('Common.AddNewProof')"
-            prepend-icon="mdi-image-plus"
-            append-icon="mdi-arrow-right"
-            @click="reloadPage"
-          />
-        </v-col>
-        <v-col v-if="proofIdsFromQueryParam && proofIdsFromQueryParam.length > 1" cols="12" sm="6" lg="4">
-          <v-card
-            :title="$t('Common.NextProof')"
-            prepend-icon="mdi-image"
-            append-icon="mdi-arrow-right"
-            @click="nextProof"
-          />
-        </v-col>
-        <v-col cols="12" sm="6" lg="4">
-          <v-card
-            :title="$t('Common.GoToProof')"
-            prepend-icon="mdi-image"
-            append-icon="mdi-arrow-right"
-            :to="'/proofs/' + proofObject.id"
-          />
-        </v-col>
-        <v-col cols="12" sm="6" lg="4">
-          <v-card
-            :title="$t('Common.MyDashboard')"
-            prepend-icon="mdi-account-circle"
-            append-icon="mdi-arrow-right"
-            :to="getUserDashboardUrl"
-          />
-        </v-col>
-      </v-row>
-      <v-row v-if="finishedUploading && nextProofSuggestions.length">
-        <v-col>
-          <h3 class="mb-4">
-            {{ $t('ContributionAssistant.ChooseNextProof') }}
-          </h3>
-          <v-row v-if="nextProofSuggestions.length">
-            <v-col v-for="proof in nextProofSuggestions" :key="proof" cols="12" md="6" lg="4">
-              <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" :isSelectable="true" @proofSelected="selectProof" />
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-col>
-  </v-row>
+  <!-- Step 4: actions -->
+  <template v-if="step === 4">
+    <v-row>
+      <v-col cols="12">
+        <v-progress-linear
+          v-if="!finishedUploading"
+          v-model="numberOfPricesAdded"
+          :max="productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length"
+          :color="productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length === numberOfPricesAdded ? 'success' : 'primary'"
+          height="25"
+          :striped="productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length !== numberOfPricesAdded"
+          rounded
+        >
+          <strong>{{ $t('Common.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length }) }}</strong>
+        </v-progress-linear>
+        <v-alert
+          v-if="finishedUploading"
+          type="success"
+          variant="outlined"
+          density="compact"
+          :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
+        />
+      </v-col>
+    </v-row>
+    <v-row v-if="finishedUploading">
+      <v-col cols="12" sm="6" lg="4">
+        <v-card
+          :title="$t('Common.AddNewProof')"
+          prepend-icon="mdi-image-plus"
+          append-icon="mdi-arrow-right"
+          @click="reloadPage"
+        />
+      </v-col>
+      <v-col v-if="proofIdsFromQueryParam && proofIdsFromQueryParam.length > 1" cols="12" sm="6" lg="4">
+        <v-card
+          :title="$t('Common.NextProof')"
+          prepend-icon="mdi-image"
+          append-icon="mdi-arrow-right"
+          @click="nextProof"
+        />
+      </v-col>
+      <v-col cols="12" sm="6" lg="4">
+        <v-card
+          :title="$t('Common.GoToProof')"
+          prepend-icon="mdi-image"
+          append-icon="mdi-arrow-right"
+          :to="'/proofs/' + proofObject.id"
+        />
+      </v-col>
+      <v-col cols="12" sm="6" lg="4">
+        <v-card
+          :title="$t('Common.MyDashboard')"
+          prepend-icon="mdi-account-circle"
+          append-icon="mdi-arrow-right"
+          :to="getUserDashboardUrl"
+        />
+      </v-col>
+    </v-row>
+    <v-row v-if="finishedUploading && nextProofSuggestions.length">
+      <v-col>
+        <h3 class="mb-4">
+          {{ $t('ContributionAssistant.ChooseNextProof') }}
+        </h3>
+        <v-row v-if="nextProofSuggestions.length">
+          <v-col v-for="proof in nextProofSuggestions" :key="proof" cols="12" md="6" lg="4">
+            <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" :isSelectable="true" @proofSelected="selectProof" />
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+  </template>
 
   <v-snackbar
     v-model="labelProcessingErrorMessage"
@@ -259,7 +265,7 @@
 import { mapStores } from 'pinia'
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants.js'
-import api from '../services/api.js'
+import openPricesApi from '../services/openPricesApi'
 import { useAppStore } from '../store.js'
 import geo_utils from '../utils/geo.js'
 import proof_utils from '../utils/proof.js'
@@ -319,8 +325,8 @@ export default {
       ]
     },
     locationName() {
-      const recentLocations = this.appStore.getRecentLocations()
-      const location = recentLocations.find((location) => location.properties.osm_id === this.proofObject.location_osm_id)
+      const recentLocations = this.appStore.getRecentLocations
+      const location = recentLocations.find((location) => location.properties && location.properties.osm_id === this.proofObject.location_osm_id)
       if (location) {
         if (location.type === 'ONLINE') return location.website_url
         return geo_utils.getLocationOSMTitle(location, true, true, false, true)
@@ -371,7 +377,14 @@ export default {
     getUserDashboardUrl() {
       const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
       return `/dashboard?tab=${dashboardTab}`
-    }
+    },
+    getPriceTagsParams() {
+      let defaultParams = {
+        proof_id: this.proofObject.id, 
+        size: 100
+      }
+      return defaultParams
+    },
   },
   mounted() {
     if (this.$route.query.proof_ids) {
@@ -382,13 +395,13 @@ export default {
   methods: {
     initWithProofIds(proofIds) {
       if (proofIds.length) {
-        api.getProofById(proofIds[0]).then(proof => {
+        openPricesApi.getProofById(proofIds[0]).then(proof => {
           this.onProofUploaded(proof)
         })
       }
     },
     getExistingProofPrices(proofId) {
-      api.getPrices({proof_id: proofId}).then(data => {
+      openPricesApi.getPrices({proof_id: proofId}).then(data => {
         this.proofPriceExistingList = data.items
       })
     },
@@ -423,7 +436,6 @@ export default {
     },
     loadPriceTagsWithPredictions(minNumberOfPriceTagWithPredictions, forceLoad, callback) {
       // Call price tag API until we have at least minNumberOfPriceTagWithPredictions
-      // Question: callback vs Promise ? Neither are really used in the rest of the code base
       let maxTries = 10
       let tries = 0
       const load = () => {
@@ -434,14 +446,16 @@ export default {
           // forceLoad is true when coming from processLabels (to fetch any new user-created priceTags)
           maxTries = forceLoad ? maxTries : 1
         }
-        api.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
-          const priceTagsWithPredictions = data.items.filter(priceTag => priceTag.predictions && priceTag.predictions.length)
-          if (priceTagsWithPredictions.length >= minNumberOfPriceTagWithPredictions) {
+        openPricesApi.getPriceTags(this.getPriceTagsParams).then(data => {
+          const priceTagsWithPredictions = data.items.filter(proof_utils.priceTagHasValidPredictions)
+          const expectedNumberOfPriceTagsWithPredictions = Math.max(minNumberOfPriceTagWithPredictions, data.items.length)
+          if (priceTagsWithPredictions.length >= expectedNumberOfPriceTagsWithPredictions) {
             callback(priceTagsWithPredictions)
           } else {
             tries += 1
             if (tries >= maxTries) {
-              callback([])
+              // Give up, return whatever we have and let users deal with incomplete price tags
+              callback(data.items)
               return
             }
             setTimeout(load, 5000)  //   // maximum wait time: maxTries * 5s (50s)
@@ -469,7 +483,7 @@ export default {
         const expectedNumberOfPriceTagsWithPredictions = this.priceTags.length + newLabelsAddedWithCanvas.length
         let newPriceTagIds = []
         newLabelsAddedWithCanvas.forEach(label => {
-          api.createPriceTag({
+          openPricesApi.createPriceTag({
             bounding_box: label.boundingBox,
             proof_id: this.proofObject.id
           }).then(priceTag => {
@@ -521,7 +535,7 @@ export default {
       this.updatePriceTag(productPriceForm.id, status)
     },
     updatePriceTag(priceTagId, status, priceId) {
-      return api
+      return openPricesApi
         .updatePriceTag(priceTagId, { status: status, price_id: priceId })
         .then((response) => {
           // if response.status == 204
@@ -548,7 +562,7 @@ export default {
           location_osm_type: this.proofObject.location_osm_type,
           proof_id: this.proofObject.id
         }
-        api.createPrice(priceData, this.$route.path).then((price) => {
+        openPricesApi.createPrice(priceData, this.$route.path).then((price) => {
           // TODO: error handling
           this.numberOfPricesAdded += 1
           this.updatePriceTag(productPriceForm.id, 1, price.id)
@@ -566,7 +580,7 @@ export default {
         ready_for_price_tag_validation: true,
         price_count: 0
       }
-      api.getProofs(params)
+      openPricesApi.getProofs(params)
         .then(proofs => {
           this.nextProofSuggestions = proofs.items.filter(proof => proof.id != this.proofObject.id)
         })

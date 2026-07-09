@@ -18,7 +18,7 @@
       </span>
     </v-col>
     <v-col v-if="!hideActionMenuButton" cols="1">
-      <ProofActionMenuButton :proof="proof" />
+      <ProofActionMenuButton :proof="proof" :showPriceTagsBoundingBoxes="showPriceTagsBoundingBoxes" @update:showPriceTagsBoundingBoxes="handleShowPriceTagsBoundingBoxes" />
     </v-col>
   </v-row>
 </template>
@@ -75,7 +75,12 @@ export default {
       type: Boolean,
       default: false,
     },
+    showPriceTagsBoundingBoxes: {
+      type: Boolean,
+      default: false,
+    }
   },
+  emits: ['update:showPriceTagsBoundingBoxes'],
   computed: {
     ...mapStores(useAppStore),
     username() {
@@ -106,6 +111,9 @@ export default {
         return
       }
       this.$router.push({ path: `/proofs/${this.proof.id}` })
+    },
+    handleShowPriceTagsBoundingBoxes($event) {
+      this.$emit('update:showPriceTagsBoundingBoxes', $event)
     },
   }
 }

@@ -8,19 +8,11 @@
 
   <v-row v-if="productOrCategoryNotFound" class="mt-0">
     <v-col cols="12" sm="6">
-      <v-alert v-if="productNotFound" data-name="product-not-found-alert" type="error" variant="outlined" density="compact">
-        <p>
-          <i18n-t keypath="ProductDetail.ProductNotFound" tag="span">
-            <template #name>
-              {{ OFF_NAME }}
-            </template>
-          </i18n-t>
-        </p>
-        <OpenFoodFactsAddMenu :productCode="productId" />
-      </v-alert>
-      <v-alert v-else-if="categoryNotFound" data-name="category-not-found-alert" type="error" variant="outlined" density="compact">
-        {{ $t('ProductDetail.CategoryNotFound') }}
-      </v-alert>
+      <template v-if="productNotFound">
+        <CreateOpenFoodFactsProductPromoBanner v-if="priceTotal" class="mt-3" :productCode="productId" />
+        <ProductNotFoundAlert v-else :productCode="productId" />
+      </template>
+      <CategoryNotFoundAlert v-else-if="categoryNotFound" :categoryTag="productId" />
     </v-col>
   </v-row>
 
@@ -76,8 +68,9 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
+import data_utils from '../utils/data.js'
 import date_utils from '../utils/date.js'
 import utils from '../utils.js'
 
@@ -85,6 +78,9 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
+    CreateOpenFoodFactsProductPromoBanner: defineAsyncComponent(() => import('../components/CreateOpenFoodFactsProductPromoBanner.vue')),
+    ProductNotFoundAlert: defineAsyncComponent(() => import('../components/ProductNotFoundAlert.vue')),
+    CategoryNotFoundAlert: defineAsyncComponent(() => import('../components/CategoryNotFoundAlert.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
@@ -93,11 +89,9 @@ export default {
     PriceTable: defineAsyncComponent(() => import('../components/PriceTable.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
     PriceChart: defineAsyncComponent(() => import('../components/PriceChart.vue')),
-    OpenFoodFactsAddMenu: defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),
   },
   data() {
     return {
-      OFF_NAME: constants.OFF_NAME,
       productId: this.$route.params.id,  // product_code or product_category
       // data
       product: null,
@@ -177,11 +171,11 @@ export default {
     },
     getProduct() {
       if (this.productIsCategory) {
-        utils.getLocaleCategoryTag(this.appStore.getUserLanguage, this.productId).then((category) => {
+        data_utils.getLocaleCategoryTag(this.appStore.getUserLanguage, this.productId).then((category) => {
           this.category = category
         })
       } else {
-        return api.getProductByCode(this.productId)
+        return openPricesApi.getProductByCode(this.productId)
           .then((data) => {
             if (data.id) {
               this.product = data
@@ -196,7 +190,7 @@ export default {
       if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
       this.pricePage += 1
-      return api.getPrices(this.getPricesParams)
+      return openPricesApi.getPrices(this.getPricesParams)
         .then((data) => {
           this.loading = false
           // product not found: the API will return an empty list

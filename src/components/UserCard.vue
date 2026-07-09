@@ -14,7 +14,7 @@
         </v-col>
       </v-row>
 
-      <UserFooterRow v-if="!hideUserFooterRow" class="mt-0" :user="user" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
+      <UserFooterRow v-if="showUserFooterRow" class="mt-0" :user="user" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
     </v-card-text>
   </v-card>
 </template>
@@ -53,6 +53,9 @@ export default {
   computed: {
     getUserTitle() {
       return this.user.user_id
+    },
+    showUserFooterRow() {
+      return !this.hideUserFooterRow
     }
   },
   methods: {

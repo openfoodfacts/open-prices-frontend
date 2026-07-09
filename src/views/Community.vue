@@ -42,18 +42,7 @@
 
   <v-row>
     <v-col>
-      <v-alert
-        class="mb-2"
-        type="info"
-        variant="outlined"
-        density="compact"
-      >
-        <i18n-t keypath="Reuses.AlertNew" tag="span">
-          <template #url>
-            <a :href="APP_GITHUB_REUSE_DISCUSSION_URL" target="_blank">{{ $t('Reuses.Here') }}</a>
-          </template>
-        </i18n-t>
-      </v-alert>
+      <ReuseNewFormAlert />
     </v-col>
   </v-row>
 </template>
@@ -66,6 +55,7 @@ import constants from '../constants'
 export default {
   components: {
     ReuseCard: defineAsyncComponent(() => import('../components/ReuseCard.vue')),
+    ReuseNewFormAlert: defineAsyncComponent(() => import('../components/ReuseNewFormAlert.vue')),
   },
   data() {
     return {
@@ -77,7 +67,6 @@ export default {
       APP_DUMP_PRICES_URL: constants.APP_DUMP_PRICES_URL,
       APP_DUMP_PROOFS_URL: constants.APP_DUMP_PROOFS_URL,
       APP_DUMP_LOCATIONS_URL: constants.APP_DUMP_LOCATIONS_URL,
-      APP_GITHUB_REUSE_DISCUSSION_URL: constants.APP_GITHUB_REUSE_DISCUSSION_URL,
     }
   },
   computed: {

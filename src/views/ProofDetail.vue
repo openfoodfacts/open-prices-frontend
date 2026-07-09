@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <ProofCard v-if="proof" :proof="proof" :hideProofHeader="true" :readonly="true" />
+      <ProofCard v-if="proof" :proof="proof" :hideProofHeader="true" />
     </v-col>
   </v-row>
 
@@ -55,7 +55,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import utils from '../utils.js'
 
@@ -121,10 +121,13 @@ export default {
       this.getPrices()
     },
     getProof() {
-      return api.getProofById(this.proofId)
+      return openPricesApi.getProofById(this.proofId)
         .then((data) => {
           if (data.id) {
             this.proof = data
+            if (this.proof.type === constants.PROOF_TYPE_PRICE_TAG) {
+              this.getPriceTagsBoundingBoxes()
+            }
           }
         })
     },
@@ -132,13 +135,21 @@ export default {
       if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
       this.pricePage += 1
-      return api.getPrices(this.getPricesParams)
+      return openPricesApi.getPrices(this.getPricesParams)
         .then((data) => {
           this.loading = false
           if (!data.items) return
           this.priceList.push(...data.items)
           this.priceTotal = data.total
         })
+    },
+    getPriceTagsBoundingBoxes() {
+      return openPricesApi.getPriceTags({proof_id: this.proofId, size: 100}).then(data => {
+        if (!data?.items?.length) return
+        this.proof.priceTagsBoundingBoxes = data.items.map(priceTag => {
+          return {boundingBox: priceTag.bounding_box, id: priceTag.id, status: priceTag.status, created_by: priceTag.created_by}
+        })
+      })
     },
     updateDisplay(displayKey) {
       this.currentDisplay = displayKey

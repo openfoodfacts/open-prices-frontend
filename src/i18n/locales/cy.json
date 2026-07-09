@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Derbynneb"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "Creu",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Creu",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Pris",
+			"LabelDiscounted": "Pris gostyngedig",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Prawf",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -89,9 +89,9 @@
 			"CategoryLabel": "Categori",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
-			"Scan": "Scan",
+			"Scan": "Sganio",
 			"ScanBarcode": "Scan a barcode",
-			"ScanBarcodeShort": "Scan",
+			"ScanBarcodeShort": "Sganio",
 			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"TypeBarcodeShort": "Type",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Dyddiad",
+			"DateLabel": "Dyddiad",
 			"Find": "Find",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Côd bar",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Prisiau wedi'u hychwanegu gennych chi",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -170,7 +171,7 @@
 		"Action": "Gweithredu",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Ychwanegu pris",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -178,27 +179,33 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Ychwanegu tagiau pris newydd",
+		"AddNewProofReceipt": "Ychwanegu derbynneb newydd",
 		"AddToOFF": "Add to {name}",
 		"Added": "Ychwanegwyd",
 		"AdditionalInfo": "Additional information",
 		"All": "All",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Côd bar",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
-		"BarcodeScanShort": "Scan",
+		"BarcodeScanShort": "Sganio",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "Cod bar annilys",
 		"Brand": "Brand",
 		"Brands": "Brandiau",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Pris",
+		"Prices": "Prisiau",
 		"PRODUCT": "Gynnyrch",
 		"Product": "Gynnyrch",
 		"ProductName": "Product name",
-		"Products": "Products",
-		"Proof": "Proof",
+		"Products": "Cynhyrchion",
+		"Proof": "Prawf",
 		"Proofs": "Proofs",
 		"CATEGORY": "Categori",
 		"Category": "Categori",
@@ -211,7 +218,7 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
-		"Clear": "Clear",
+		"Clear": "Clirio",
 		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
@@ -223,29 +230,33 @@
 		"Contribute": "Contribute",
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
-		"Country": "Country",
+		"Confirm": "Cadarnhau",
+		"Count": "Count",
+		"Country": "Gwlad",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Arian cyfred",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Gallwch ychwanegu arian cyfred yn eich gosodiadau.",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
-		"Error": "Error",
+		"Done": "Wedi'i wneud",
+		"Error": "Gwall",
 		"Experiment": "Arbrawf",
 		"Experiments": "Experiments",
+		"Explore": "Archwilio",
 		"FromPriceTag": "O dag pris",
 		"FromReceipt": "O dderbynneb",
 		"GoToProof": "Go to proof",
@@ -257,6 +268,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Dysgu mwy",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -264,13 +276,14 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "Dyddiad",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Dyddiad y llun.",
 		"DateProofHelpTextExif": "Yn ddiofyn, rydym yn ceisio ei echdynnu o metadata EXIF y llun.",
 		"DateProofHelpTextReceipt": "Ar gyfer derbynebau, gosodwch ef i'r dyddiad prynu.",
-		"Details": "Details",
-		"Delete": "Delete",
+		"Details": "Manylion",
+		"Delete": "Dileu",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
 		"DiscountType": "Discount type",
@@ -291,28 +304,39 @@
 		"Edit": "Edit",
 		"End": "End",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Mae angen maes",
-		"Filter": "Filter",
+		"FilterNoun": "Hidlo",
+		"FilterVerb": "Hidlo",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Gyda phrisiau",
+		"FilterWithLocationCount": "Gyda lleoliadau",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Gyda chod bar dilys",
-		"FilterPriceTagWithTagPredictionProductExists": "Gyda chynnyrch dilys",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Gyda thag categori dilys",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "Cwestiynau Cyffredin",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
-		"History": "History",
-		"Image": "Image",
+		"Help": "Cymorth",
+		"Here": "Yma",
+		"History": "Hanes",
+		"Image": "Delwedd",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -324,7 +348,7 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "Amrywiol",
 		"MobileApp": "Mobile app",
 		"Moderation": "Cymedroli",
 		"ModerationFlagReasonWrongType": "Math anghywir",
@@ -339,8 +363,8 @@
 		"ModerationFlagStatusClosed": "Ar gau",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Fy mhrisiau",
+		"MyProofs": "Fy mhrofion",
 		"MyStats": "My stats",
 		"New": "Newydd",
 		"NextProof": "Next proof",
@@ -351,12 +375,15 @@
 		"Online": "Online",
 		"Open": "Agor",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
+		"OrderNameASC": "Enw",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Pris",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -379,8 +406,10 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Tag pris",
 		"PriceTags": "Tagiau pris",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -391,6 +420,7 @@
 		"PriceAlreadyUploaded": "Pris eisoes wedi'i uwchlwytho",
 		"PriceReadyToBeUploaded": "Pris yn barod i'w uwchlwytho",
 		"PricesAlreadyUploaded": "Prisiau eisoes wedi'u llwytho i fyny",
+		"PricesAll": "Pob pris",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -400,13 +430,15 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Cynhyrchion a grëwyd",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Cynnyrch ar goll",
 		"ProductOrCategoryMissing": "Cynnyrch neu gategori ar goll",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Dewiswch brawf",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -419,9 +451,10 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"Reason": "Reason",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "Safle",
+		"Reason": "Rheswm",
+		"RECEIPT": "Derbynneb",
+		"Receipt": "Derbynneb",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -430,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "Ailagor",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Wedi'i ddatrys",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -437,12 +471,12 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "Settings",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out",
+		"SignIn": "Mewngofnodi",
+		"SignOut": "Allgofnodi",
 		"SideMenu": "Side menu",
-		"Share": "Share",
+		"Share": "Rhannu",
 		"Source": "Source",
 		"SourceCode": "Source code",
 		"Start": "Start",
@@ -456,9 +490,9 @@
 		"TaglineAlt3": "Prices should be free",
 		"Text": "Testun",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "Thema",
+		"ThemeLight": "Golau",
+		"ThemeDark": "Tywyll",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -471,7 +505,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Rhowch gynnig arni",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Cynnyrch anhysbys",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -497,20 +531,21 @@
 		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "Ni chanfuwyd y defnyddiwr",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"ValidatePricesFromCommunity": "Dilysu prisiau gan y gymuned",
 		"View": "View",
-		"Website": "Website",
+		"Website": "Gwefan",
 		"WithAPrice": "With a price",
 		"WithoutAPrice": "Heb bris",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Yes",
 		"No": "No",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Bwyd",
+		"PetFood": "Bwyd anifeiliaid anwes",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -560,7 +595,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Arian cyfred",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -579,7 +614,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Prawf ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Siopau lle gwerthir",
-		"UseCropModeToAddImage": "I ychwanegu delwedd cynnyrch, galluogwch y modd cnydio o dan y llun prawf a lluniwch betryal o amgylch y cynnyrch."
+		"UseCropModeToAddImage": "I ychwanegu delwedd cynnyrch, galluogwch y modd cnydio o dan y llun prawf a lluniwch betryal o amgylch y cynnyrch.",
+		"ProductMissingPromoBanner": "Arbrawf: creu'r cynnyrch hwn gan ddefnyddio data o Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -592,18 +628,18 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Settings",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out"
+		"SignIn": "Mewngofnodi",
+		"SignOut": "Allgofnodi"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Ychwanegu pris",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Chwiliwch am gynnyrch",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -618,13 +654,14 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
-		"Clear": "Clear",
+		"Clear": "Clirio",
 		"NoResult": "No results found",
 		"NoResultHelpKeywords": "Methu dod o hyd i'ch siop? Rhowch gynnig ar ddefnyddio allweddeiriau yn lle'r cyfeiriad llawn (e.e. 'Carrefour 75013 Paris' neu 'Walmart San Francisco').",
 		"NoResultHelpOSM": "Dal ddim yn gallu dod o hyd i'ch siop? Efallai nad yw yn {osm_name} eto. Gallwch ei ychwanegu ar {osm_url} yn gyntaf.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",
@@ -641,13 +678,13 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Prawf",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Cynnyrch anhysbys"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
-		"Delete": "Delete",
+		"Delete": "Dileu",
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
@@ -658,8 +695,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Pris",
+		"LabelDiscounted": "Pris gostyngedig",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -688,7 +725,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "Cod bar annilys",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -698,10 +735,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Enw cynnyrch anhysbys"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Ychwanegu pris",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -716,29 +753,30 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "I uwchlwytho tagiau pris lluosog (yr un lleoliad siop a dyddiad), cliciwch yma!",
-		"PromoReceiptAssistant": "Arbrawf: rhowch gynnig ar y cynorthwyydd derbynebau newydd i dynnu prisiau o'ch derbynebau yn awtomatig!"
+		"PromoReceiptAssistant": "Arbrawf: rhowch gynnig ar y cynorthwyydd derbynebau newydd i dynnu prisiau o'ch derbynebau yn awtomatig!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Prawf",
+		"PRICE_TAG": "Tag pris",
+		"RECEIPT": "Derbynneb",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Dewiswch brawf",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
-		"Delete": "Delete",
+		"Delete": "Dileu",
 		"Title": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "Prisiau",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -773,7 +811,7 @@
 			"Title": "Ychwanegu"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Ychwanegu pris"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -796,14 +834,26 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Ychwanegu prawf (derbynneb)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
+		},
+		"Explore": {
+			"Title": "Archwilio"
 		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Ychwanegu pris"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -812,7 +862,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Prisiau"
 		},
 		"PriceTags": {
 			"Title": "Tagiau pris"
@@ -823,11 +873,20 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "Derbynneb"
+		},
+		"Cities": {
+			"Title": "Dinasoedd"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Countries"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -836,7 +895,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Home",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -851,10 +911,10 @@
 			"Title": "Cymedroli"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Fy mhrisiau"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Fy mhrofion"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -869,7 +929,7 @@
 			"Title": "Settings"
 		},
 		"SignIn": {
-			"Title": "Sign in"
+			"Title": "Mewngofnodi"
 		},
 		"Stats": {
 			"Title": "Stats"
@@ -892,9 +952,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "Cynorthwyydd Tag Pris Prawf"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -902,13 +959,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Validate"
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -920,26 +979,27 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "Share"
+		"Title": "Rhannu"
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "Mewngofnodi",
+		"Password": "Cyfrinair",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "Mewngofnodi",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Prisiau",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "Cynhyrchion",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
@@ -956,13 +1016,17 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Fy mhrisiau",
+		"MyProofs": "Fy mhrofion",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Settings",
 		"Title": "Dashboard",
@@ -981,10 +1045,10 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
+		"CountryLabel": "Gwlad",
+		"CurrencyLabel": "Arian cyfred",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

@@ -3,18 +3,23 @@
     <v-card-text class="pa-2">
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
-          <v-img v-if="getLocationBrandLogo" :src="getLocationBrandLogo" width="100px" />
-          <v-img v-else :src="locationImageDefault" width="100px" style="filter:invert(.9);" />
+          <LocationBrandLogoImg
+            :logo="getLocationOSMBrandLogoPathName"
+            width="100px"
+          />
         </v-col>
         <v-col style="max-width:80%;">
           <v-row>
-            <v-col :cols="!isSelected ? '12' : '10'" @click="clickLocation()">
+            <v-col :cols="!showActionButton ? '12' : '10'" @click="clickLocation()">
               <h3>{{ getLocationTitle }}</h3>
               <p>{{ getLocationSubtitle }}</p>
               <LocationDetailsRow v-if="showLocationDetailsRow" class="mt-0" :location="location" :hideLocationOSMID="hideLocationOSMID" :hideCountryCity="hideCountryCity" />
             </v-col>
-            <v-col v-if="isSelected" cols="2" class="pl-0">
-              <v-btn class="float-right" icon="mdi-pencil" size="x-small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickLocation()" />
+            <v-col v-if="showEditButton" cols="2" class="pl-0">
+              <v-btn class="float-right" icon="mdi-pencil" size="small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickLocation()" />
+            </v-col>
+            <v-col v-else-if="showFavoriteButton" cols="2" class="pl-0">
+              <v-btn class="float-right" :icon="isFavoriteLocation ? 'mdi-star' : 'mdi-star-outline'" size="small" density="comfortable" variant="text" :title="isFavoriteLocation ? $t('Common.FavoritesRemove') : $t('Common.FavoritesAdd')" @click.stop="toggleFavorite()" />
             </v-col>
           </v-row>
         </v-col>
@@ -34,6 +39,7 @@ import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
+    LocationBrandLogoImg: defineAsyncComponent(() => import('./LocationBrandLogoImg.vue')),
     LocationDetailsRow: defineAsyncComponent(() => import('../components/LocationDetailsRow.vue')),
     LocationFooterRow: defineAsyncComponent(() => import('../components/LocationFooterRow.vue')),
   },
@@ -43,6 +49,10 @@ export default {
       required: true
     },
     isSelected: {
+      type: Boolean,
+      default: false
+    },
+    showFavoriteButton: {
       type: Boolean,
       default: false
     },
@@ -69,15 +79,10 @@ export default {
   },
   emits: ['editLocation'],
   data() {
-    return {
-      locationImageDefault: constants.LOCATION_IMAGE_DEFAULT_URL,
-    }
+    return {}
   },
   computed: {
     ...mapStores(useAppStore),
-    locationFound() {
-      return this.location && this.location.type && (this.location.osm_id || this.location.website_url)
-    },
     isTypeONLINE() {
       return this.location && this.location.type === constants.LOCATION_TYPE_ONLINE
     },
@@ -93,14 +98,23 @@ export default {
       }
       return geo_utils.getLocationOSMTitle(this.location, false, true, false, false, false)
     },
-    getLocationBrandLogo() {
-      return geo_utils.getLocationBrandLogo(this.location)
+    getLocationOSMBrandLogoPathName() {
+      return geo_utils.getLocationOSMBrandLogoPathName(this.location)
+    },
+    showEditButton() {
+      return this.isSelected
+    },
+    showActionButton() {
+      return this.showEditButton || this.showFavoriteButton
+    },
+    isFavoriteLocation() {
+      return this.appStore.isFavoriteLocation(this.location)
     },
     showLocationDetailsRow() {
-      return this.locationFound && !this.isTypeONLINE
+      return !this.isTypeONLINE
     },
     showLocationFooterRow() {
-      return this.locationFound && !this.hideLocationFooterRow
+      return !this.hideLocationFooterRow
     }
   },
   methods: {
@@ -113,7 +127,14 @@ export default {
         return
       }
       this.$router.push({ path: `/locations/${this.location.id}` })
-    }
+    },
+    toggleFavorite() {
+      if (this.appStore.isFavoriteLocation(this.location)) {
+        this.appStore.removeFavoriteLocation(this.location)
+      } else {
+        this.appStore.addFavoriteLocation(this.location)
+      }
+     },
   }
 }
 </script>

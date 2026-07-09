@@ -2,12 +2,12 @@
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
       <v-btn v-bind="props" size="x-small" class="mr-2" prepend-icon="mdi-arrow-down" :append-icon="getCurrentOrderIcon" :active="!!currentOrder">
-        <span v-if="$vuetify.display.smAndUp">{{ $t('Common.Order') }}</span>
+        <span v-if="$vuetify.display.smAndUp">{{ $t('Common.OrderNoun') }}</span>
       </v-btn>
     </template>
     <v-list>
       <v-list-item class="d-sm-none text-uppercase" :slim="true" disabled>
-        {{ $t('Common.Order') }}
+        {{ $t('Common.OrderNoun') }}
       </v-list-item>
       <v-divider class="d-sm-none" />
       <v-list-item v-for="order in orderList" :key="order.key" :slim="true" :prepend-icon="order.icon" :active="currentOrder === order.key" @click="selectOrder(order.key)">
@@ -29,16 +29,18 @@ export default {
     kind: {
       type: String,
       default: 'product',
-      examples: ['product', 'price', 'proof', 'location', 'user']
+      examples: ['product', 'price', 'proof', 'location', 'country', 'user']
     }
   },
   emits: ['update:currentOrder'],
   data() {
     return {
       productOrderList: constants.PRODUCT_ORDER_LIST,
+      productCreateOrderList: constants.PRODUCT_CREATE_ORDER_LIST,
       priceOrderList: constants.PRICE_ORDER_LIST,
       proofOrderList: constants.PROOF_ORDER_LIST,
       locationOrderList: constants.LOCATION_ORDER_LIST,
+      countryOrderList: constants.LOCATION_COUNTRY_ORDER_LIST,
       userOrderList: constants.USER_ORDER_LIST,
     }
   },

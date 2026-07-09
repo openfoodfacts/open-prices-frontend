@@ -2,17 +2,17 @@
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
       <v-btn v-bind="props" size="x-small" class="mr-2" prepend-icon="mdi-filter-variant" :append-icon="getCurrentFilterIcon" :active="hasCurrentFilter">
-        <span v-if="$vuetify.display.smAndUp">{{ $t('Common.Filter') }}</span>
+        <span v-if="$vuetify.display.smAndUp">{{ $t('Common.FilterNoun') }}</span>
       </v-btn>
     </template>
     <v-list>
       <!-- title -->
       <v-list-item class="d-sm-none text-uppercase" :slim="true" disabled>
-        {{ $t('Common.Filter') }}
+        {{ $t('Common.FilterNoun') }}
       </v-list-item>
       <v-divider class="d-sm-none" />
       <!-- default filters -->
-      <v-list-item v-for="filter in filterList" :key="filter.key" :slim="true" :prepend-icon="(currentFilterList.includes(filter.key)) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="currentFilterList.includes(filter.key)" @click="selectFilter(filter.key)">
+      <v-list-item v-for="filter in filterList" :key="filter.key" :slim="true" :prepend-icon="(currentFilterList.includes(filter.key)) ? 'mdi-checkbox-marked' : 'mdi-checkbox-blank-outline'" :active="currentFilterList.includes(filter.key)" @click="selectFilter(filter.key)">
         {{ $t('Common.' + filter.value) }}
       </v-list-item>
       <!-- extra filters -->
@@ -78,7 +78,7 @@ export default {
     kind: {
       type: String,
       default: 'product',
-      examples: ['product', 'price', 'proof', 'priceTag', 'location', 'user']
+      examples: ['product', 'productCreate', 'price', 'proof', 'priceTag', 'location', 'country', 'user']
     },
     currentFilterList: {
       type: Array,
@@ -118,7 +118,9 @@ export default {
       proofFilterList: constants.PROOF_FILTER_LIST,
       priceTagFilterList: constants.PRICE_TAG_FILTER_LIST,
       locationFilterList: constants.LOCATION_FILTER_LIST,
+      countryFilterList: constants.LOCATION_COUNTRY_FILTER_LIST,
       userFilterList: constants.USER_FILTER_LIST,
+      productCreateFilterList: constants.PRODUCT_CREATE_FILTER_LIST,
       // other filters
       productSourceList: constants.PRODUCT_SOURCE_LIST,
       priceTypeList: constants.PRICE_TYPE_LIST,

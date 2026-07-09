@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "રસીદ"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "બનાવો",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "બનાવો",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "કિંમત",
+			"LabelDiscounted": "ડિસ્કાઉન્ટેડ કિંમત",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "પુરાવો",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -89,9 +89,9 @@
 			"CategoryLabel": "Category",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
-			"Scan": "Scan",
+			"Scan": "સ્કેન કરો",
 			"ScanBarcode": "Scan a barcode",
-			"ScanBarcodeShort": "Scan",
+			"ScanBarcodeShort": "સ્કેન કરો",
 			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"TypeBarcodeShort": "Type",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "તારીખ",
+			"DateLabel": "તારીખ",
 			"Find": "Find",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "બારકોડ",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "તમારા દ્વારા ઉમેરાયેલ કિંમતો",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -170,7 +171,7 @@
 		"Action": "ક્રિયા",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "કિંમત ઉમેરો",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -178,27 +179,33 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "નવા ભાવ ટૅગ્સ ઉમેરો",
+		"AddNewProofReceipt": "નવી રસીદ ઉમેરો",
 		"AddToOFF": "Add to {name}",
 		"Added": "ઉમેર્યું",
 		"AdditionalInfo": "Additional information",
 		"All": "All",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "બારકોડ",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
-		"BarcodeScanShort": "Scan",
+		"BarcodeScanShort": "સ્કેન કરો",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "અમાન્ય બારકોડ",
 		"Brand": "Brand",
 		"Brands": "બ્રાન્ડ",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "કિંમત",
+		"Prices": "કિંમતો",
 		"PRODUCT": "Product",
 		"Product": "Product",
 		"ProductName": "Product name",
-		"Products": "Products",
-		"Proof": "Proof",
+		"Products": "ઉત્પાદનો",
+		"Proof": "પુરાવો",
 		"Proofs": "Proofs",
 		"CATEGORY": "Category",
 		"Category": "Category",
@@ -211,7 +218,7 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
-		"Clear": "Clear",
+		"Clear": "ચોખ્ખું",
 		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
@@ -223,29 +230,33 @@
 		"Contribute": "Contribute",
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
+		"Confirm": "પુષ્ટિ કરો",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "ચલણ",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "તમે તમારી સેટિંગ્સમાં ચલણ ઉમેરી શકો છો.",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
+		"Done": "થઈ ગયું",
 		"Error": "ક્ષતિ",
 		"Experiment": "પ્રયોગ",
 		"Experiments": "Experiments",
+		"Explore": "અન્વેષણ કરો",
 		"FromPriceTag": "કિંમત ટેગમાંથી",
 		"FromReceipt": "રસીદમાંથી",
 		"GoToProof": "Go to proof",
@@ -257,6 +268,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "વધુ જાણો",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -264,13 +276,14 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "તારીખ",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "ચિત્રની તારીખ.",
 		"DateProofHelpTextExif": "મૂળભૂત રીતે, આપણે તેને ચિત્રના EXIF મેટાડેટામાંથી કાઢવાનો પ્રયાસ કરીએ છીએ.",
 		"DateProofHelpTextReceipt": "રસીદો માટે, તેને ખરીદી તારીખ પર સેટ કરો.",
-		"Details": "Details",
-		"Delete": "Delete",
+		"Details": "વિગતો",
+		"Delete": "કાઢી નાખો",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
 		"DiscountType": "Discount type",
@@ -291,28 +304,39 @@
 		"Edit": "Edit",
 		"End": "End",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "ફીલ્ડ જરૂરી છે",
-		"Filter": "Filter",
+		"FilterNoun": "ફિલ્ટર",
+		"FilterVerb": "ફિલ્ટર",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "કિંમતો સાથે",
+		"FilterWithLocationCount": "સ્થાનો સાથે",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "માન્ય બારકોડ સાથે",
-		"FilterPriceTagWithTagPredictionProductExists": "માન્ય ઉત્પાદન સાથે",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "માન્ય શ્રેણી ટૅગ સાથે",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "વારંવાર પૂછાતા પ્રશ્નો",
 		"FrequentlyAskedQuestions": "વારંવાર પૂછાતા પ્રશ્નો",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
-		"History": "History",
-		"Image": "Image",
+		"Help": "મદદ",
+		"Here": "અહીં",
+		"History": "ઇતિહાસ",
+		"Image": "છબી",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -324,7 +348,7 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "વિવિધ",
 		"MobileApp": "Mobile app",
 		"Moderation": "મધ્યસ્થતા",
 		"ModerationFlagReasonWrongType": "ખોટો પ્રકાર",
@@ -339,8 +363,8 @@
 		"ModerationFlagStatusClosed": "બંધ",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "મારા ભાવ",
+		"MyProofs": "મારા પુરાવા",
 		"MyStats": "My stats",
 		"New": "નવું",
 		"NextProof": "Next proof",
@@ -351,12 +375,15 @@
 		"Online": "Online",
 		"Open": "ખુલ્લું",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
+		"OrderNameASC": "નામ",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "કિંમત",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -379,8 +406,10 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "કિંમત",
 		"PriceTags": "કિંમત ટૅગ્સ",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -391,6 +420,7 @@
 		"PriceAlreadyUploaded": "કિંમત પહેલેથી જ અપલોડ કરેલી છે.",
 		"PriceReadyToBeUploaded": "કિંમત અપલોડ કરવા માટે તૈયાર છે",
 		"PricesAlreadyUploaded": "કિંમતો પહેલેથી જ અપલોડ કરેલી છે.",
+		"PricesAll": "બધી કિંમતો",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -400,13 +430,15 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "બનાવેલા ઉત્પાદનો",
 		"ProductFind": "Find the product",
 		"ProductMissing": "પ્રોડક્ટ ખૂટે છે",
 		"ProductOrCategoryMissing": "ઉત્પાદન અથવા શ્રેણી ખૂટે છે",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "એક પુરાવો પસંદ કરો",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -419,9 +451,10 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"Reason": "Reason",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "ક્રમ",
+		"Reason": "કારણ",
+		"RECEIPT": "રસીદ",
+		"Receipt": "રસીદ",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -430,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "ફરીથી ખોલો",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "ઉકેલાયેલ",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -437,12 +471,12 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "Settings",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out",
+		"SignIn": "સાઇન ઇન કરો",
+		"SignOut": "સાઇન આઉટ કરો",
 		"SideMenu": "Side menu",
-		"Share": "Share",
+		"Share": "શેર કરો",
 		"Source": "Source",
 		"SourceCode": "Source code",
 		"Start": "Start",
@@ -456,9 +490,9 @@
 		"TaglineAlt3": "Prices should be free",
 		"Text": "ટેક્સ્ટ",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "થીમ",
+		"ThemeLight": "પ્રકાશ",
+		"ThemeDark": "શ્યામ",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -471,7 +505,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "અજમાવી જુઓ",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "અજાણ્યું ઉત્પાદન",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -497,20 +531,21 @@
 		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "વપરાશકર્તા મળ્યો નથી",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"ValidatePricesFromCommunity": "સમુદાયમાંથી કિંમતો માન્ય કરો",
 		"View": "View",
-		"Website": "Website",
+		"Website": "વેબસાઇટ",
 		"WithAPrice": "With a price",
 		"WithoutAPrice": "કિંમત વગર",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Yes",
 		"No": "No",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "ખોરાક",
+		"PetFood": "પાલતુ ખોરાક",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -560,7 +595,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "ચલણ",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -579,7 +614,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "પુરાવો ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "વેચાયેલી દુકાનો",
-		"UseCropModeToAddImage": "પ્રોડક્ટ ઇમેજ ઉમેરવા માટે, પ્રૂફ પિક્ચરની નીચે ક્રોપ મોડ ચાલુ કરો અને પ્રોડક્ટની આસપાસ એક લંબચોરસ દોરો."
+		"UseCropModeToAddImage": "પ્રોડક્ટ ઇમેજ ઉમેરવા માટે, પ્રૂફ પિક્ચરની નીચે ક્રોપ મોડ ચાલુ કરો અને પ્રોડક્ટની આસપાસ એક લંબચોરસ દોરો.",
+		"ProductMissingPromoBanner": "પ્રયોગ: ઓપન પ્રાઈસિસના ડેટાનો ઉપયોગ કરીને આ પ્રોડક્ટ બનાવો"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -592,18 +628,18 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Settings",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out"
+		"SignIn": "સાઇન ઇન કરો",
+		"SignOut": "સાઇન આઉટ કરો"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "કિંમત ઉમેરો",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "ઉત્પાદન શોધો",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -618,13 +654,14 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
-		"Clear": "Clear",
+		"Clear": "ચોખ્ખું",
 		"NoResult": "No results found",
 		"NoResultHelpKeywords": "તમારી દુકાન નથી મળી રહી? સંપૂર્ણ સરનામાંને બદલે કીવર્ડ્સનો ઉપયોગ કરવાનો પ્રયાસ કરો (દા.ત. 'કેરેફોર 75013 પેરિસ' અથવા 'વોલમાર્ટ સાન ફ્રાન્સિસ્કો').",
 		"NoResultHelpOSM": "હજુ પણ તમારી દુકાન નથી મળી રહી? તે કદાચ {osm_name} માં નથી. તમે તેને પહેલા {osm_url} પર ઉમેરી શકો છો.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",
@@ -641,13 +678,13 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "પુરાવો",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "અજાણ્યું ઉત્પાદન"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
-		"Delete": "Delete",
+		"Delete": "કાઢી નાખો",
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
@@ -658,8 +695,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "કિંમત",
+		"LabelDiscounted": "ડિસ્કાઉન્ટેડ કિંમત",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -688,7 +725,7 @@
 		"LabelsLower": "લેબલ્સ",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "અમાન્ય બારકોડ",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -698,10 +735,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "અજાણ્યું ઉત્પાદન નામ"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "કિંમત ઉમેરો",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -716,29 +753,30 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "બહુવિધ કિંમત ટૅગ્સ (એક જ દુકાનનું સ્થાન અને તારીખ) અપલોડ કરવા માટે, અહીં ક્લિક કરો!",
-		"PromoReceiptAssistant": "પ્રયોગ: તમારી રસીદોમાંથી આપમેળે કિંમતો કાઢવા માટે નવા રસીદ સહાયકનો પ્રયાસ કરો!"
+		"PromoReceiptAssistant": "પ્રયોગ: તમારી રસીદોમાંથી આપમેળે કિંમતો કાઢવા માટે નવા રસીદ સહાયકનો પ્રયાસ કરો!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "પુરાવો",
+		"PRICE_TAG": "કિંમત",
+		"RECEIPT": "રસીદ",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "એક પુરાવો પસંદ કરો",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
-		"Delete": "Delete",
+		"Delete": "કાઢી નાખો",
 		"Title": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "કિંમતો",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -773,7 +811,7 @@
 			"Title": "ઉમેરો"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "કિંમત ઉમેરો"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -796,14 +834,26 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "પુરાવો (રસીદ) ઉમેરો"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
+		},
+		"Explore": {
+			"Title": "અન્વેષણ કરો"
 		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "કિંમત ઉમેરો"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -812,7 +862,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "કિંમતો"
 		},
 		"PriceTags": {
 			"Title": "કિંમત ટૅગ્સ"
@@ -823,11 +873,20 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "રસીદ"
+		},
+		"Cities": {
+			"Title": "શહેરો"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Countries"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -836,7 +895,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Home",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -851,10 +911,10 @@
 			"Title": "મધ્યસ્થતા"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "મારા ભાવ"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "મારા પુરાવા"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -869,7 +929,7 @@
 			"Title": "Settings"
 		},
 		"SignIn": {
-			"Title": "Sign in"
+			"Title": "સાઇન ઇન કરો"
 		},
 		"Stats": {
 			"Title": "Stats"
@@ -892,9 +952,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "પ્રૂફ પ્રાઇસ ટેગ આસિસ્ટન્ટ"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -902,13 +959,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Validate"
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -920,26 +979,27 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "Share"
+		"Title": "શેર કરો"
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "સાઇન ઇન કરો",
+		"Password": "પાસવર્ડ",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "સાઇન ઇન કરો",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "કિંમતો",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "ઉત્પાદનો",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
@@ -956,13 +1016,17 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "મારા ભાવ",
+		"MyProofs": "મારા પુરાવા",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Settings",
 		"Title": "Dashboard",
@@ -982,9 +1046,9 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
+		"CurrencyLabel": "ચલણ",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

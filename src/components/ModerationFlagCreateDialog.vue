@@ -79,7 +79,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 
 export default {
@@ -155,7 +155,7 @@ export default {
   methods: {
     createFlag() {
       this.loading = true
-      api
+      openPricesApi
         .createFlag(this.objectType, this.objectId, this.flagForm)
         .then((response) => {  // eslint-disable-line no-unused-vars
           this.loading = false

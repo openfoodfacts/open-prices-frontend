@@ -2,7 +2,17 @@
   <h2 class="text-h6 pb-4">
     {{ $t('Common.TaglineAlt1') }} {{ APP_HOME_ICONS }}
   </h2>
-
+  
+  
+  <v-row>
+    <v-col>
+      <i18n-t keypath="Router.Home.Help" tag="p" class="text-primary text-pre-line">
+        <template #op_name>
+          {{ APP_NAME }}
+        </template>
+      </i18n-t>
+    </v-col>
+  </v-row>
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="todayPriceCount" :subtitle="$t('Common.Today')" />
@@ -10,13 +20,13 @@
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="totalPriceCount" :subtitle="$t('Common.Total')" />
     </v-col>
+    <v-col v-if="currentSurvey" cols="12" class="pt-0">
+      <SurveyBanner :survey="currentSurvey" />
+    </v-col>
+    <v-col v-if="currentChallenge" cols="12" class="pt-0">
+      <ChallengeCurrentPromoBanner :challenge="currentChallenge" />
+    </v-col>
   </v-row>
-
-  <br v-if="currentChallenge">
-
-  <ChallengeBanner v-if="currentChallenge" :challenge="currentChallenge" />
-
-  <br>
 
   <v-row>
     <v-col v-for="price in latestPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
@@ -42,14 +52,16 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
+import Surveys from '../data/surveys.json'
 
 export default {
   components: {
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
-    ChallengeBanner: defineAsyncComponent(() => import('../components/ChallengeBanner.vue')),
+    SurveyBanner: defineAsyncComponent(() => import('../components/SurveyBanner.vue')),
+    ChallengeCurrentPromoBanner: defineAsyncComponent(() => import('../components/ChallengeCurrentPromoBanner.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
@@ -61,6 +73,7 @@ export default {
       todayPriceCount: null,
       totalPriceCount: null,
       loading: false,
+      currentSurvey: null,
       currentChallenge: null,
     }
   },
@@ -77,18 +90,28 @@ export default {
   mounted() {
     this.getPrices()
     this.getTodayPriceCount()
+    this.getCurrentSurvey()
     this.getCurrentChallenge()
   },
   methods: {
+    getCurrentSurvey() {
+      const now = new Date()
+
+      this.currentSurvey = Surveys.find(survey => {
+        const startDate = new Date(survey.start_date)
+        const endDate = new Date(survey.end_date)
+        return now >= startDate && now <= endDate
+      })
+    },
     getCurrentChallenge() {
-      api.getChallenges({ status: 'ONGOING', order_by: '-created', size: 1 })
+      openPricesApi.getChallenges({ status: 'ONGOING', order_by: '-created', size: 1 })
       .then((data) => {
         this.currentChallenge = data.items[0]
       })
     },
     getPrices() {
       this.loading = true
-      return api.getPrices({ size: this.getApiSize })
+      return openPricesApi.getPrices({ size: this.getApiSize })
         .then((data) => {
           this.latestPriceList = data.items
           this.totalPriceCount = data.total
@@ -97,7 +120,7 @@ export default {
     },
     getTodayPriceCount() {
       this.loading = true
-      return api.getPrices({ created__gte: date_utils.currentStartOfDay(), size: 1 })
+      return openPricesApi.getPrices({ created__gte: date_utils.currentStartOfDay(), size: 1 })
         .then((data) => {
           this.todayPriceCount = data.total
           this.loading = false

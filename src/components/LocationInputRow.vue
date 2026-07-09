@@ -28,7 +28,7 @@ import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
-    LocationCard: defineAsyncComponent(() => import('./LocationCard.vue')),
+    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
     LocationSelectorDialog: defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
   },
   props: {
@@ -57,7 +57,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     recentLocations() {
-      return this.appStore.getRecentLocations(this.maxRecentLocations)
+      return this.appStore.getRecentLocations
     },
     locationFormFilled() {
       let keysOSM = ['location_osm_id', 'location_osm_type']
@@ -91,8 +91,8 @@ export default {
         this.locationForm.location_osm_type = null
       } else {
         this.locationForm.location_id = null
-        this.locationForm.location_osm_id = geo_utils.getLocationID(location)
-        this.locationForm.location_osm_type = geo_utils.getLocationType(location)
+        this.locationForm.location_osm_id = geo_utils.getLocationOSMId(location)
+        this.locationForm.location_osm_type = geo_utils.getLocationOSMType(location)
       }
       this.$emit('location', this.selectedLocation)
     },

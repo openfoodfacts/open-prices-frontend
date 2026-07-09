@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "ರಶೀದಿ"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "ರಚಿಸಿ",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "ರಚಿಸಿ",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "ಬೆಲೆ",
+			"LabelDiscounted": "ರಿಯಾಯಿತಿ ಬೆಲೆ",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "ಪುರಾವೆ",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -89,9 +89,9 @@
 			"CategoryLabel": "ವರ್ಗ",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
-			"Scan": "Scan",
+			"Scan": "ಸ್ಕ್ಯಾನ್ ಮಾಡಿ",
 			"ScanBarcode": "Scan a barcode",
-			"ScanBarcodeShort": "Scan",
+			"ScanBarcodeShort": "ಸ್ಕ್ಯಾನ್ ಮಾಡಿ",
 			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"TypeBarcodeShort": "Type",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "ದಿನಾಂಕ",
+			"DateLabel": "ದಿನಾಂಕ",
 			"Find": "ಹುಡುಕಿ",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "ಬಾರ್‌ ಕೋಡ್",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "ನೀವು ಸೇರಿಸಿದ ಬೆಲೆಗಳು",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -170,7 +171,7 @@
 		"Action": "ಆಕ್ಟ್",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "ಬೆಲೆಯನ್ನು ಸೇರಿಸಿ",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -178,27 +179,33 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "ಹೊಸ ಬೆಲೆ ಟ್ಯಾಗ್‌ಗಳನ್ನು ಸೇರಿಸಿ",
+		"AddNewProofReceipt": "ಹೊಸ ರಸೀದಿಯನ್ನು ಸೇರಿಸಿ",
 		"AddToOFF": "Add to {name}",
 		"Added": "ಸೇರಿಸಲಾಗಿದೆ",
 		"AdditionalInfo": "Additional information",
 		"All": "All",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "ಬಾರ್‌ ಕೋಡ್",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
-		"BarcodeScanShort": "Scan",
+		"BarcodeScanShort": "ಸ್ಕ್ಯಾನ್ ಮಾಡಿ",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "ಅಮಾನ್ಯ ಬಾರ್‌ಕೋಡ್",
 		"Brand": "ಬ್ರ್ಯಾಂಡ್",
 		"Brands": "ಬ್ರಾಂಡ್ಸ್",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "ಬೆಲೆ",
+		"Prices": "ಬೆಲೆಗಳು",
 		"PRODUCT": "Product",
 		"Product": "Product",
 		"ProductName": "Product name",
-		"Products": "Products",
-		"Proof": "Proof",
+		"Products": "ಉತ್ಪನ್ನಗಳು",
+		"Proof": "ಪುರಾವೆ",
 		"Proofs": "Proofs",
 		"CATEGORY": "ವರ್ಗ",
 		"Category": "ವರ್ಗ",
@@ -223,29 +230,33 @@
 		"Contribute": "Contribute",
 		"Contributors": "Contributors",
 		"Contributions": "ಕೊಡುಗೆಗಳು",
-		"Confirm": "Confirm",
+		"Confirm": "ದೃಢೀಕರಿಸಿ",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "ಕರೆನ್ಸಿ",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "ನಿಮ್ಮ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ನೀವು ಕರೆನ್ಸಿಗಳನ್ನು ಸೇರಿಸಬಹುದು.",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
-		"Error": "Error",
+		"Done": "ಮುಗಿದಿದೆ",
+		"Error": "ದೋಷ",
 		"Experiment": "ಪ್ರಯೋಗ",
 		"Experiments": "Experiments",
+		"Explore": "ಅನ್ವೇಷಿಸಿ",
 		"FromPriceTag": "ಬೆಲೆ ಪಟ್ಟಿಯಿಂದ",
 		"FromReceipt": "ರಶೀದಿಯಿಂದ",
 		"GoToProof": "Go to proof",
@@ -257,6 +268,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -264,12 +276,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"LocationsCompare": "Compare 2 locations",
+		"Date": "ದಿನಾಂಕ",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "ಚಿತ್ರದ ದಿನಾಂಕ.",
 		"DateProofHelpTextExif": "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ, ನಾವು ಅದನ್ನು ಚಿತ್ರದ EXIF ಮೆಟಾಡೇಟಾದಿಂದ ಹೊರತೆಗೆಯಲು ಪ್ರಯತ್ನಿಸುತ್ತೇವೆ.",
 		"DateProofHelpTextReceipt": "ರಸೀದಿಗಳಿಗಾಗಿ, ಅದನ್ನು ಖರೀದಿ ದಿನಾಂಕಕ್ಕೆ ಹೊಂದಿಸಿ.",
-		"Details": "Details",
+		"Details": "ವಿವರಗಳು",
 		"Delete": "ಅಳಿಸಿ",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -291,28 +304,39 @@
 		"Edit": "ತಿದ್ದು",
 		"End": "End",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "ಕ್ಷೇತ್ರ ಕಡ್ಡಾಯವಾಗಿದೆ",
-		"Filter": "Filter",
+		"FilterNoun": "ಫಿಲ್ಟರ್",
+		"FilterVerb": "ಫಿಲ್ಟರ್",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "ಬೆಲೆಗಳೊಂದಿಗೆ",
+		"FilterWithLocationCount": "ಸ್ಥಳಗಳೊಂದಿಗೆ",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "ಮಾನ್ಯ ಬಾರ್‌ಕೋಡ್‌ನೊಂದಿಗೆ",
-		"FilterPriceTagWithTagPredictionProductExists": "ಮಾನ್ಯ ಉತ್ಪನ್ನದೊಂದಿಗೆ",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "ಮಾನ್ಯ ವರ್ಗ ಟ್ಯಾಗ್‌ನೊಂದಿಗೆ",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "ಸಹಾಯ",
+		"Here": "ಇಲ್ಲಿ",
 		"History": "ಇತಿಹಾಸ",
-		"Image": "Image",
+		"Image": "ಚಿತ್ರ",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -324,7 +348,7 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "ವಿವಿಧ",
 		"MobileApp": "Mobile app",
 		"Moderation": "ಮಿತಗೊಳಿಸುವಿಕೆ",
 		"ModerationFlagReasonWrongType": "ತಪ್ಪು ಪ್ರಕಾರ",
@@ -339,8 +363,8 @@
 		"ModerationFlagStatusClosed": "ಮುಚ್ಚಲಾಗಿದೆ",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "ನನ್ನ ಬೆಲೆಗಳು",
+		"MyProofs": "ನನ್ನ ಪುರಾವೆಗಳು",
 		"MyStats": "My stats",
 		"New": "ಹೊಸದು",
 		"NextProof": "Next proof",
@@ -351,12 +375,15 @@
 		"Online": "Online",
 		"Open": "ತೆರೆದ",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
+		"OrderNameASC": "ಹೆಸರು",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "ಬೆಲೆ",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -379,8 +406,10 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "ಬೆಲೆ ಪಟ್ಟಿ",
 		"PriceTags": "ಬೆಲೆ ಟ್ಯಾಗ್‌ಗಳು",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -391,6 +420,7 @@
 		"PriceAlreadyUploaded": "ಬೆಲೆಯನ್ನು ಈಗಾಗಲೇ ಅಪ್‌ಲೋಡ್ ಮಾಡಲಾಗಿದೆ.",
 		"PriceReadyToBeUploaded": "ಬೆಲೆ ಅಪ್‌ಲೋಡ್ ಮಾಡಲು ಸಿದ್ಧವಾಗಿದೆ.",
 		"PricesAlreadyUploaded": "ಬೆಲೆಗಳನ್ನು ಈಗಾಗಲೇ ಅಪ್‌ಲೋಡ್ ಮಾಡಲಾಗಿದೆ",
+		"PricesAll": "ಎಲ್ಲಾ ಬೆಲೆಗಳು",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -400,13 +430,15 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "ರಚಿಸಲಾದ ಉತ್ಪನ್ನಗಳು",
 		"ProductFind": "Find the product",
 		"ProductMissing": "ಉತ್ಪನ್ನ ಕಾಣೆಯಾಗಿದೆ",
 		"ProductOrCategoryMissing": "ಉತ್ಪನ್ನ ಅಥವಾ ವರ್ಗ ಕಾಣೆಯಾಗಿದೆ.",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "ಪುರಾವೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -419,9 +451,10 @@
 		"Quantity": "ಪ್ರಮಾಣ",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"Reason": "Reason",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Rank": "ಶ್ರೇಣಿ",
+		"Reason": "ಕಾರಣ",
+		"RECEIPT": "ರಶೀದಿ",
+		"Receipt": "ರಶೀದಿ",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -430,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "ಪುನಃ ತೆರೆಯಿರಿ",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "ಪರಿಹರಿಸಲಾಗಿದೆ",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -437,10 +471,10 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "ಸೆಟ್ಟಿಂಗ್",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "ಸೈನ್ ಇನ್ ಮಾಡಿ",
-		"SignOut": "Sign out",
+		"SignOut": "ಸೈನ್ ಔಟ್ ಮಾಡಿ",
 		"SideMenu": "Side menu",
 		"Share": "ಹಂಚಿಕೊಳ್ಳಿ",
 		"Source": "Source",
@@ -456,9 +490,9 @@
 		"TaglineAlt3": "Prices should be free",
 		"Text": "ಪಠ್ಯ",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "ಥೀಮ್",
+		"ThemeLight": "ಬೆಳಕು",
+		"ThemeDark": "ಕತ್ತಲೆ",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -471,7 +505,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ ನೋಡಿ",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "ಅಪರಿಚಿತ ಉತ್ಪನ್ನ",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -497,20 +531,21 @@
 		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserNotFound": "ಬಳಕೆದಾರರು ಕಂಡುಬಂದಿಲ್ಲ.",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"ValidatePricesFromCommunity": "ಸಮುದಾಯದಿಂದ ಬೆಲೆಗಳನ್ನು ಮೌಲ್ಯೀಕರಿಸಿ",
 		"View": "View",
-		"Website": "Website",
+		"Website": "ವೆಬ್‌ಸೈಟ್",
 		"WithAPrice": "With a price",
 		"WithoutAPrice": "ಬೆಲೆ ಇಲ್ಲದೆ",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "ಹೌದು",
 		"No": "ಇಲ್ಲ",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "ಆಹಾರ",
+		"PetFood": "ಸಾಕುಪ್ರಾಣಿ ಆಹಾರ",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -560,7 +595,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "ಕರೆನ್ಸಿ",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -579,7 +614,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "ಪುರಾವೆ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ಮಾರಾಟವಾಗುವ ಅಂಗಡಿಗಳು",
-		"UseCropModeToAddImage": "ಉತ್ಪನ್ನ ಚಿತ್ರವನ್ನು ಸೇರಿಸಲು, ಪ್ರೂಫ್ ಚಿತ್ರದ ಕೆಳಗೆ ಕ್ರಾಪ್ ಮೋಡ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಉತ್ಪನ್ನದ ಸುತ್ತಲೂ ಒಂದು ಆಯತವನ್ನು ಎಳೆಯಿರಿ."
+		"UseCropModeToAddImage": "ಉತ್ಪನ್ನ ಚಿತ್ರವನ್ನು ಸೇರಿಸಲು, ಪ್ರೂಫ್ ಚಿತ್ರದ ಕೆಳಗೆ ಕ್ರಾಪ್ ಮೋಡ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಉತ್ಪನ್ನದ ಸುತ್ತಲೂ ಒಂದು ಆಯತವನ್ನು ಎಳೆಯಿರಿ.",
+		"ProductMissingPromoBanner": "ಪ್ರಯೋಗ: ಮುಕ್ತ ಬೆಲೆಗಳಿಂದ ಡೇಟಾವನ್ನು ಬಳಸಿಕೊಂಡು ಈ ಉತ್ಪನ್ನವನ್ನು ರಚಿಸಿ."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -593,17 +629,17 @@
 		"Dashboard": "Dashboard",
 		"Settings": "ಸೆಟ್ಟಿಂಗ್",
 		"SignIn": "ಸೈನ್ ಇನ್ ಮಾಡಿ",
-		"SignOut": "Sign out"
+		"SignOut": "ಸೈನ್ ಔಟ್ ಮಾಡಿ"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "ಬೆಲೆಯನ್ನು ಸೇರಿಸಿ",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "ಉತ್ಪನ್ನವನ್ನು ಹುಡುಕಿ",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -625,6 +661,7 @@
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",
@@ -641,9 +678,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "ಪುರಾವೆ",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "ಅಪರಿಚಿತ ಉತ್ಪನ್ನ"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -658,8 +695,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "ಬೆಲೆ",
+		"LabelDiscounted": "ರಿಯಾಯಿತಿ ಬೆಲೆ",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -688,7 +725,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "ಅಮಾನ್ಯ ಬಾರ್‌ಕೋಡ್",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -698,10 +735,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "ಅಪರಿಚಿತ ಉತ್ಪನ್ನ ಹೆಸರು"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "ಬೆಲೆಯನ್ನು ಸೇರಿಸಿ",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -716,17 +753,18 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "ಬಹು ಬೆಲೆ ಟ್ಯಾಗ್‌ಗಳನ್ನು (ಒಂದೇ ಅಂಗಡಿ ಸ್ಥಳ ಮತ್ತು ದಿನಾಂಕ) ಅಪ್‌ಲೋಡ್ ಮಾಡಲು, ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!",
-		"PromoReceiptAssistant": "ಪ್ರಯೋಗ: ನಿಮ್ಮ ರಶೀದಿಗಳಿಂದ ಬೆಲೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಹೊರತೆಗೆಯಲು ಹೊಸ ರಶೀದಿ ಸಹಾಯಕವನ್ನು ಪ್ರಯತ್ನಿಸಿ!"
+		"PromoReceiptAssistant": "ಪ್ರಯೋಗ: ನಿಮ್ಮ ರಶೀದಿಗಳಿಂದ ಬೆಲೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಹೊರತೆಗೆಯಲು ಹೊಸ ರಶೀದಿ ಸಹಾಯಕವನ್ನು ಪ್ರಯತ್ನಿಸಿ!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "ಪುರಾವೆ",
+		"PRICE_TAG": "ಬೆಲೆ ಪಟ್ಟಿ",
+		"RECEIPT": "ರಶೀದಿ",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "ಪುರಾವೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -738,7 +776,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "ಬೆಲೆಗಳು",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -770,10 +808,10 @@
 			"Title": "ಬಗ್ಗೆ"
 		},
 		"Add": {
-			"Title": "Add"
+			"Title": "ಸೇರಿಸಿ"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "ಬೆಲೆಯನ್ನು ಸೇರಿಸಿ"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -796,14 +834,26 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "ಪುರಾವೆ ಸೇರಿಸಿ (ರಶೀದಿ)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
+		},
+		"Explore": {
+			"Title": "ಅನ್ವೇಷಿಸಿ"
 		},
 		"Locations": {
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "ಬೆಲೆಯನ್ನು ಸೇರಿಸಿ"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -812,7 +862,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "ಬೆಲೆಗಳು"
 		},
 		"PriceTags": {
 			"Title": "ಬೆಲೆ ಟ್ಯಾಗ್‌ಗಳು"
@@ -823,11 +873,20 @@
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
+		"Receipt": {
+			"Title": "ರಶೀದಿ"
+		},
+		"Cities": {
+			"Title": "ನಗರಗಳು"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Countries"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
@@ -836,7 +895,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "ಮುಖಪುಟ"
+			"Title": "ಮುಖಪುಟ",
+			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -851,10 +911,10 @@
 			"Title": "ಮಿತಗೊಳಿಸುವಿಕೆ"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "ನನ್ನ ಬೆಲೆಗಳು"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "ನನ್ನ ಪುರಾವೆಗಳು"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -892,9 +952,6 @@
 		"ProofPriceTagAssistant": {
 			"Title": "ಪ್ರೈಸ್ ಟ್ಯಾಗ್ ಅಸಿಸ್ಟೆಂಟ್ ಪುರಾವೆ"
 		},
-		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
-		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
@@ -902,13 +959,15 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Validate"
+			"Title": "Validate",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -928,18 +987,19 @@
 		"ServerError": "Error: server error",
 		"Title": "ಸೈನ್ ಇನ್ ಮಾಡಿ",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "ಬೆಲೆಗಳು",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "ಉತ್ಪನ್ನಗಳು",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
@@ -956,13 +1016,17 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "ನನ್ನ ಬೆಲೆಗಳು",
+		"MyProofs": "ನನ್ನ ಪುರಾವೆಗಳು",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "ಸೆಟ್ಟಿಂಗ್",
 		"Title": "Dashboard",
@@ -982,9 +1046,9 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
+		"CurrencyLabel": "ಕರೆನ್ಸಿ",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

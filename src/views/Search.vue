@@ -47,7 +47,8 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
+import barcodeUtils from '../utils/barcode'
 
 export default {
   components: {
@@ -103,7 +104,9 @@ export default {
         this.productList = []
         this.productTotal = null
         this.loading = true
-        return api.getProducts({ code: this.productSearchForm.q })
+        // Normalizes UPC barcode to EAN 13 barcode
+        const code = barcodeUtils.normalizeBarcode(this.productSearchForm.q)
+        return openPricesApi.getProducts({ code: code })
           .then((data) => {
             this.productList.push(...data.items)
             this.productTotal = data.total
@@ -122,7 +125,7 @@ export default {
       })
     },
     getPrices(product) {
-      return api.getPrices({ product_code: product.code, size: 1, order_by: '-date' })
+      return openPricesApi.getPrices({ product_code: product.code, size: 1, order_by: '-date' })
         .then((data) => {
           if (data.items.length) {
             product.latest_price = data.items[0]
