@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Inkludera priser som flaggats som ogiltiga (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Fix",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "Vanliga frågor",
