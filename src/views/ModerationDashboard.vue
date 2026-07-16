@@ -6,7 +6,7 @@
       </v-chip>
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="flagList.length" :totalCount="flagTotal" />
-        <FilterMenu kind="flag" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleFlagType($event)" />
+        <FilterMenu kind="flag" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleFlagType($event)" @update:currentKind="toggleFlagKind($event)" />
       </template>
     </v-col>
   </v-row>
@@ -81,6 +81,7 @@ export default {
       // filter & order
       currentFilterList: [],
       currentType: '',
+      currentKind: '',
       currentOrder: '-id'
     }
   },
@@ -92,6 +93,9 @@ export default {
       }
       if (this.currentType) {
         defaultParams['content_type'] = this.currentType
+      }
+      if (this.currentKind) {
+        defaultParams['reason'] = this.currentKind
       }
       return defaultParams
     }
@@ -106,6 +110,7 @@ export default {
   mounted() {
     this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
+    this.currentKind = this.$route.query[constants.KIND_PARAM] || this.currentKind
     this.initFlagList()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
@@ -117,6 +122,7 @@ export default {
   methods: {
     initFlagList() {
       this.flagList = []
+      this.flagTotal = null
       this.flagPage = 0
       this.getFlags()
     },
@@ -149,6 +155,11 @@ export default {
     toggleFlagType(sourceKey) {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
+      // this.initFlagList() will be called in watch $route
+    },
+    toggleFlagKind(kindKey) {
+      this.currentKind = (this.currentKind !== kindKey) ? kindKey : ''
+      this.$router.push({ query: { ...this.$route.query, [constants.KIND_PARAM]: this.currentKind } })
       // this.initFlagList() will be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars

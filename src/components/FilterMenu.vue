@@ -56,6 +56,16 @@
           {{ item.value }}
         </v-list-item>
       </v-sheet>
+      <v-sheet v-if="showPriceProofKindFilter">
+        <v-divider />
+        <v-list-subheader class="text-uppercase">
+          {{ $t('Common.Group') }}
+        </v-list-subheader>
+        <v-list-item v-for="item in priceProofKindList" :key="item.key" :slim="true" :active="currentKind === item.key" @click="selectKind(item.key)">
+          <v-icon>{{ item.icon }}</v-icon>
+          {{ item.value }}
+        </v-list-item>
+      </v-sheet>
       <v-sheet v-if="showFlagTypeFilter">
         <v-divider />
         <v-list-subheader class="text-uppercase">
@@ -66,14 +76,13 @@
           {{ item.value }}
         </v-list-item>
       </v-sheet>
-      <v-sheet v-if="showPriceProofKindFilter">
+      <v-sheet v-if="showFlagReasonFilter">
         <v-divider />
         <v-list-subheader class="text-uppercase">
-          {{ $t('Common.Group') }}
+          {{ $t('Common.Reason') }}
         </v-list-subheader>
-        <v-list-item v-for="item in priceProofKindList" :key="item.key" :slim="true" :active="currentKind === item.key" @click="selectKind(item.key)">
-          <v-icon>{{ item.icon }}</v-icon>
-          {{ item.value }}
+        <v-list-item v-for="item in flagReasonList" :key="item.key" :slim="true" :active="currentKind === item.key" @click="selectKind(item.key)">
+          {{ $t('Common.' + item.value) }}
         </v-list-item>
       </v-sheet>
     </v-list>
@@ -139,6 +148,7 @@ export default {
       locationTypeList: constants.LOCATION_TYPE_LIST,
       priceProofKindList: constants.PRICE_PROOF_KIND_LIST,
       flagTypeList: constants.MODERATION_FLAG_TYPE_LIST,
+      flagReasonList: constants.MODERATION_FLAG_REASON_LIST,
     }
   },
   computed: {
@@ -159,6 +169,9 @@ export default {
     },
     showPriceProofKindFilter() {
       return ['price', 'proof'].includes(this.kind) && this.showKind
+    },
+    showFlagReasonFilter() {
+      return this.kind === 'flag' && this.showKind
     },
     filterList() {
       return this[`${this.kind}FilterList`]
