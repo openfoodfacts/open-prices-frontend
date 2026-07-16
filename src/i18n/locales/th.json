@@ -463,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "เปิดใหม่อีกครั้ง",
 		"ReportProblem": "รายงานปัญหา",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Reset",
 		"Resolved": "ได้รับการแก้ไขแล้ว",
 		"Reuses": "Reuses",
