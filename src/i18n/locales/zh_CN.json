@@ -463,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "重新开放",
 		"ReportProblem": "公布一项问题",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Reset",
 		"Resolved": "已解决",
 		"Reuses": "Reuses",
