@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Fiyatları olan konumları gizle",
 		"FilterUserWithPriceCountHide": "Fiyat bulunan katkıda bulunanları gizle",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Onar",
 		"FAQ": "SSS",
 		"FrequentlyAskedQuestions": "Sıkça sorulan sorular",
