@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Inclure les prix signalés comme invalides (IA)",
 		"FilterLocationWithPriceCountHide": "Masquer les lieux quit ont un prix",
 		"FilterUserWithPriceCountHide": "Masquer les contributeurs qui ont un prix",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Corriger",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "Questions fréquentes",
