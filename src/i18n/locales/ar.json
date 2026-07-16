@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "إخفاء المواقع التي تحتوي على الأسعار",
 		"FilterUserWithPriceCountHide": "إخفاء المساهمين الذين لديهم أسعار",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "يصلح",
 		"FAQ": "الأسئلة المتكررة",
 		"FrequentlyAskedQuestions": "أسئلة مكررة",
