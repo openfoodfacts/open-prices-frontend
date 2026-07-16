@@ -463,6 +463,7 @@
 		"Recent": "最近の",
 		"Re-open": "再開",
 		"ReportProblem": "問題を報告する",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "リセット",
 		"Resolved": "解決済み",
 		"Reuses": "再利用",
