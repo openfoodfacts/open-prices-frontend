@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "விலையுடைய இடங்களை மறை",
 		"FilterUserWithPriceCountHide": "விலைகளுடன் பங்களிப்பாளர்களை மறை",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "சரிசெய்தல்",
 		"FAQ": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
