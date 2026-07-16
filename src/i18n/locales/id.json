@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Sembunyikan lokasi dengan harga",
 		"FilterUserWithPriceCountHide": "Sembunyikan kontributor dengan harga",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Perbaiki",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "Pertanyaan yang sering diajukan",
