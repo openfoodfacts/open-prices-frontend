@@ -107,7 +107,7 @@ export default {
     toggleLocationType(sourceKey) {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
-      // this.initProductList() will be called in watch $route
+      // this.initLocationList() will be called in watch $route
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
