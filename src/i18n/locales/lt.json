@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Slėpti vietoves su kainomis",
 		"FilterUserWithPriceCountHide": "Slėpti bendraautorius su kainomis",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Taisyti",
 		"FAQ": "DUK",
 		"FrequentlyAskedQuestions": "Dažniausiai užduodami klausimai",
