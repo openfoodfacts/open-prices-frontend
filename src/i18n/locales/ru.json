@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Скрыть местоположения с ценами",
 		"FilterUserWithPriceCountHide": "Скрыть участников с ценами",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Исправить",
 		"FAQ": "Часто задаваемые вопросы",
 		"FrequentlyAskedQuestions": "Часто задаваемые вопросы",
