@@ -463,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "Mở lại",
 		"ReportProblem": "Báo cáo sự cố",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Reset",
 		"Resolved": "Đã giải quyết",
 		"Reuses": "Reuses",
