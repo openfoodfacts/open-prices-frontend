@@ -463,6 +463,7 @@
 		"Recent": "Πρόσφατος",
 		"Re-open": "Ξανανοίγω",
 		"ReportProblem": "Αναφορά πρόβληματος",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Επαναφορά",
 		"Resolved": "Αποφασισμένος",
 		"Reuses": "Επαναχρήσεις",
