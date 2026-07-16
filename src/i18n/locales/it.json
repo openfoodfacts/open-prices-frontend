@@ -463,6 +463,7 @@
 		"Recent": "Recenti",
 		"Re-open": "Riaprire",
 		"ReportProblem": "Segnala un problema",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Ripristina",
 		"Resolved": "Risolto",
 		"Reuses": "Reuses",
