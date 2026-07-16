@@ -463,6 +463,7 @@
 		"Recent": "Terbaru",
 		"Re-open": "Buka kembali",
 		"ReportProblem": "Laporkan masalah",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Atur ulang",
 		"Resolved": "Terselesaikan",
 		"Reuses": "Penggunaan kembali",
