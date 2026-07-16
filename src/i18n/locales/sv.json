@@ -463,6 +463,7 @@
 		"Recent": "Senaste",
 		"Re-open": "Öppna igen",
 		"ReportProblem": "Rapportera ett problem",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Återställ",
 		"Resolved": "Löst",
 		"Reuses": "Reuses",
