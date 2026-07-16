@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Απόκρυψη τοποθεσιών με τιμές",
 		"FilterUserWithPriceCountHide": "Απόκρυψη συνεισφερόντων με τιμές",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Επιδιόρθωση",
 		"FAQ": "Συχνές ερωτήσεις",
 		"FrequentlyAskedQuestions": "Συχνές ερωτήσεις",
