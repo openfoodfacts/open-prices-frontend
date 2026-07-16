@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Zahrnout ceny označené jako neplatné (AI)",
 		"FilterLocationWithPriceCountHide": "Skrýt místa s cenami",
 		"FilterUserWithPriceCountHide": "Skrýt přispěvatele s cenami",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Opravit",
 		"FAQ": "Často kladené otázky",
 		"FrequentlyAskedQuestions": "Často kladené otázky",
