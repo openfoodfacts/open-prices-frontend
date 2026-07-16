@@ -463,6 +463,7 @@
 		"Recent": "Seneste",
 		"Re-open": "Genåbn",
 		"ReportProblem": "Rapportér et problem",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Nulstil",
 		"Resolved": "Løst",
 		"Reuses": "Genbrug",
