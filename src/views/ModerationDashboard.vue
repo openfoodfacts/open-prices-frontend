@@ -6,7 +6,7 @@
       </v-chip>
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="flagList.length" :totalCount="flagTotal" />
-        <FilterMenu kind="flag" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
+        <FilterMenu kind="flag" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleFlagType($event)" />
       </template>
     </v-col>
   </v-row>
@@ -80,6 +80,7 @@ export default {
       tablePageLimit: -1,  // all items
       // filter & order
       currentFilterList: [],
+      currentType: '',
       currentOrder: '-id'
     }
   },
@@ -88,6 +89,9 @@ export default {
       let defaultParams = { order_by: this.currentOrder, page: this.flagPage }
       if (!this.currentFilterList.includes('show_closed')) {
         defaultParams['status'] = 'OPEN'
+      }
+      if (this.currentType) {
+        defaultParams['content_type'] = this.currentType
       }
       return defaultParams
     }
@@ -101,6 +105,7 @@ export default {
   },
   mounted() {
     this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
+    this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.initFlagList()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
@@ -139,6 +144,11 @@ export default {
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      // this.initFlagList() will be called in watch $route
+    },
+    toggleFlagType(sourceKey) {
+      this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
+      this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
       // this.initFlagList() will be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars

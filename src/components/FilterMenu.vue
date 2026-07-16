@@ -56,6 +56,16 @@
           {{ item.value }}
         </v-list-item>
       </v-sheet>
+      <v-sheet v-if="showFlagTypeFilter">
+        <v-divider />
+        <v-list-subheader class="text-uppercase">
+          {{ $t('Common.Type') }}
+        </v-list-subheader>
+        <v-list-item v-for="item in flagTypeList" :key="item.key" :slim="true" :active="currentType === item.key" @click="selectType(item.key)">
+          <v-icon>{{ item.icon }}</v-icon>
+          {{ item.value }}
+        </v-list-item>
+      </v-sheet>
       <v-sheet v-if="showPriceProofKindFilter">
         <v-divider />
         <v-list-subheader class="text-uppercase">
@@ -121,13 +131,14 @@ export default {
       locationFilterList: constants.LOCATION_FILTER_LIST,
       countryFilterList: constants.LOCATION_COUNTRY_FILTER_LIST,
       userFilterList: constants.USER_FILTER_LIST,
-      flagFilterList: constants.FLAG_FILTER_LIST,
+      flagFilterList: constants.MODERATION_FLAG_FILTER_LIST,
       // other filters
       productSourceList: constants.PRODUCT_SOURCE_LIST,
       priceTypeList: constants.PRICE_TYPE_LIST,
       proofTypeList: constants.PROOF_TYPE_LIST,
       locationTypeList: constants.LOCATION_TYPE_LIST,
       priceProofKindList: constants.PRICE_PROOF_KIND_LIST,
+      flagTypeList: constants.MODERATION_FLAG_TYPE_LIST,
     }
   },
   computed: {
@@ -142,6 +153,9 @@ export default {
     },
     showLocationTypeFilter() {
       return this.kind === 'location' && !this.hideType
+    },
+    showFlagTypeFilter() {
+      return this.kind === 'flag' && !this.hideType
     },
     showPriceProofKindFilter() {
       return ['price', 'proof'].includes(this.kind) && this.showKind
@@ -164,6 +178,9 @@ export default {
         return type ? type.icon : ''
       } else if (this.kind === 'location') {
         let type = this.locationTypeList.find(o => o.key === this.currentType)
+        return type ? type.icon : ''
+      } else if (this.kind === 'flag') {
+        let type = this.flagTypeList.find(o => o.key === this.currentType)
         return type ? type.icon : ''
       }
       return ''

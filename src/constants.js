@@ -31,6 +31,7 @@ const LOCATION_TYPE_OSM = 'OSM'
 const LOCATION_TYPE_OSM_ICON = 'mdi-map-marker-outline'
 const LOCATION_TYPE_ONLINE = 'ONLINE'
 const LOCATION_TYPE_ONLINE_ICON = 'mdi-web'
+const USER_ICON = 'mdi-account'
 const USER_CONSUMPTION = 'CONSUMPTION'
 const USER_CONSUMPTION_ICON = 'mdi-cart-outline'
 const USER_COMMUNITY = 'COMMUNITY'
@@ -173,6 +174,7 @@ export default {
     {key: LOCATION_TYPE_OSM, value: LOCATION_TYPE_OSM, icon: LOCATION_TYPE_OSM_ICON},
     {key: LOCATION_TYPE_ONLINE, value: LOCATION_TYPE_ONLINE, icon: LOCATION_TYPE_ONLINE_ICON},
   ],
+  USER_ICON: USER_ICON,
   USER_IMAGE_DEFAULT_URL: '/icon-account-outline.svg',
   USER_CONSUMPTION: USER_CONSUMPTION,
   USER_CONSUMPTION_ICON: USER_CONSUMPTION_ICON,
@@ -212,7 +214,7 @@ export default {
   USER_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterUserWithPriceCountHide' },
   ],
-  FLAG_FILTER_LIST: [
+  MODERATION_FLAG_FILTER_LIST: [
     { key: 'show_closed', value: 'FilterFlagShowClosed' },
   ],
   // order
@@ -289,6 +291,12 @@ export default {
   // moderation
   // see https://github.com/openfoodfacts/open-prices/blob/main/open_prices/moderation/models.py for reasons
   MODERATION_ICON: MODERATION_ICON,
+  MODERATION_FLAG_TYPE_LIST: [
+    { key: 'PROOF', value: 'Proof', icon: PROOF_ICON },
+    { key: 'PRICE', value: 'Price', icon: PRICE_ICON },
+    // { key: 'LOCATION', value: 'Location', icon: LOCATION_TYPE_OSM_ICON },
+    // { key: 'USER', value: 'User', icon: USER_ICON },
+  ],
   MODERATION_FLAG_REASON_LIST: [
     { key: 'WRONG_TYPE', value: 'ModerationFlagReasonWrongType', restrictTo: null },
     { key: 'WRONG_PRICE_VALUE', value: 'ModerationFlagReasonWrongPriceValue', restrictTo: ['price'] },
