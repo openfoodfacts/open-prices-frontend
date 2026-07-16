@@ -463,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "Újranyitás",
 		"ReportProblem": "Probléma bejelentése",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Visszaállítás",
 		"Resolved": "Megoldva",
 		"Reuses": "Reuses",
