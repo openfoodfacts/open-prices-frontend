@@ -4207,7 +4207,7 @@ vue-demi@>=0.14.10, vue-demi@^0.14.10:
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.14.10.tgz#afc78de3d6f9e11bf78c55e8510ee12814522f04"
   integrity sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==
 
-"vue-eslint-parser@^9.0.0 || ^10.0.0":
+vue-eslint-parser@^10.4.1, "vue-eslint-parser@^9.0.0 || ^10.0.0":
   version "10.4.1"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-10.4.1.tgz#3d0aabb6604dac3fcd94f893291cb9e754cc392c"
   integrity sha512-Gk6gRDj0n/fkRa3C3l0bBheoBckUq/Rs0F/TvMWIS6nzzx67amAViMe9CkNgsP2tXyQONvGiHQESHwFtZ3aYDA==
@@ -4219,7 +4219,7 @@ vue-demi@>=0.14.10, vue-demi@^0.14.10:
     esquery "^1.6.0"
     semver "^7.6.3"
 
-vue-eslint-parser@^9.3.1, vue-eslint-parser@^9.4.3:
+vue-eslint-parser@^9.3.1:
   version "9.4.3"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-9.4.3.tgz#9b04b22c71401f1e8bca9be7c3e3416a4bde76a8"
   integrity sha512-2rYRLWlIpaiN8xbPiDyXZXRgLGOtWxERV7ND5fFAv5qo1D2N9Fu9MNajBNc6o13lZ+24DAWCkQCvj4klgmcITg==
