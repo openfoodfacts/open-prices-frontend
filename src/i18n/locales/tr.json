@@ -463,6 +463,7 @@
 		"Recent": "En son",
 		"Re-open": "Yeniden aç",
 		"ReportProblem": "Bir sorun bildir",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Sıfırla",
 		"Resolved": "Çözüldü",
 		"Reuses": "Yeniden kullanımlar",
