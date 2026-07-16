@@ -328,7 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "הסתרת מקומות עם מחירים",
 		"FilterUserWithPriceCountHide": "הסתרת תרומות עם מחירים",
-		"FilterFlagShowClosed": "Include closed reports",
+		"FilterFlagShowClosed": "לכלול דוחות שנסגרו",
 		"Fix": "תיקון",
 		"FAQ": "שו״ת",
 		"FrequentlyAskedQuestions": "שאלות נפוצות",
