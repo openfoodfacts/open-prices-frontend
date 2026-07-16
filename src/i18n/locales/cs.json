@@ -463,6 +463,7 @@
 		"Recent": "Nedávné",
 		"Re-open": "Znovu otevřít",
 		"ReportProblem": "Nahlásit problém",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Obnovit",
 		"Resolved": "Vyřešeno",
 		"Reuses": "Opakované použití",
