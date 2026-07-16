@@ -463,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "Ponovo otvoriti",
 		"ReportProblem": "Prijavi problem",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Reset",
 		"Resolved": "Riješeno",
 		"Reuses": "Reuses",
