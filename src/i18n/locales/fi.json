@@ -463,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "Avaa uudelleen",
 		"ReportProblem": "Ilmoita ongelmasta",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Reset",
 		"Resolved": "Ratkaistu",
 		"Reuses": "Reuses",
