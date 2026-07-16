@@ -463,6 +463,7 @@
 		"Recent": "Недавние",
 		"Re-open": "Повторно открыть",
 		"ReportProblem": "Сообщить о проблеме",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Сбросить",
 		"Resolved": "Решено",
 		"Reuses": "Reuses",
