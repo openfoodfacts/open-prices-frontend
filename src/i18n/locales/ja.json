@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "価格付きの場所を非表示にする",
 		"FilterUserWithPriceCountHide": "価格付きの貢献者を非表示にする",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "修理",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "よくある質問",
