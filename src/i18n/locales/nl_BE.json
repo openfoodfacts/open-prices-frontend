@@ -463,6 +463,7 @@
 		"Recent": "Recent",
 		"Re-open": "Heropenen",
 		"ReportProblem": "Meld een probleem",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Herstellen",
 		"Resolved": "Opgelost",
 		"Reuses": "Hergebruik",
