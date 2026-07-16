@@ -463,6 +463,7 @@
 		"Recent": "אחרונים",
 		"Re-open": "פתיחה מחדש",
 		"ReportProblem": "דיווח על תקלה",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "איפוס",
 		"Resolved": "נפתר",
 		"Reuses": "גזירות",
