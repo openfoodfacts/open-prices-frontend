@@ -1,0 +1,5 @@
+@use 'sass:string';
+@use 'vuetify/settings' with (
+  $body-font-family: string.unquote('"Public Sans", Helvetica, Roboto, Arial, sans-serif'),
+  $heading-font-family: string.unquote('"Public Sans", Helvetica, Roboto, Arial, sans-serif')
+);
