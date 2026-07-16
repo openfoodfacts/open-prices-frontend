@@ -1,5 +1,16 @@
 <template>
   <v-row>
+    <v-col>
+      <v-chip label variant="text" :prepend-icon="MODERATION_ICON">
+        {{ $t('Common.ReportCount', { count: flagTotal }) }}
+      </v-chip>
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="flagList.length" :totalCount="flagTotal" />
+      </template>
+    </v-col>
+  </v-row>
+
+  <v-row class="mt-0">
     <v-col cols="12">
       <v-data-table :headers="tableHeaders" :items="flagList" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
         <template #[`item.object`]="{ item }">
@@ -37,16 +48,19 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import openPricesApi from '../services/openPricesApi'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
   components: {
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     ModerationReasonChip: defineAsyncComponent(() => import('../components/ModerationReasonChip.vue')),
     ModerationStatusChip: defineAsyncComponent(() => import('../components/ModerationStatusChip.vue')),
     RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
   },
   data() {
     return {
+      MODERATION_ICON: constants.MODERATION_ICON,
       // data
       flagList: [],
       flagTotal: null,

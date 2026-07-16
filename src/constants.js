@@ -34,6 +34,7 @@ const LOCATION_TYPE_ONLINE_ICON = 'mdi-web'
 const USER_CONSUMPTION = 'CONSUMPTION'
 const USER_CONSUMPTION_ICON = 'mdi-cart-outline'
 const USER_COMMUNITY = 'COMMUNITY'
+const MODERATION_ICON = 'mdi-shield-account'
 const OSM_NAME = 'OpenStreetMap'
 
 export default {
@@ -284,6 +285,7 @@ export default {
   ],
   // moderation
   // see https://github.com/openfoodfacts/open-prices/blob/main/open_prices/moderation/models.py for reasons
+  MODERATION_ICON: MODERATION_ICON,
   MODERATION_FLAG_REASON_LIST: [
     { key: 'WRONG_TYPE', value: 'ModerationFlagReasonWrongType', restrictTo: null },
     { key: 'WRONG_PRICE_VALUE', value: 'ModerationFlagReasonWrongPriceValue', restrictTo: ['price'] },
