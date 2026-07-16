@@ -463,6 +463,7 @@
 		"Recent": "مؤخرًا",
 		"Re-open": "إعادة فتح",
 		"ReportProblem": "إبلاغ عن مشكلة",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "إعادة الضبط",
 		"Resolved": "تم الحل",
 		"Reuses": "إعادة الاستخدام",
