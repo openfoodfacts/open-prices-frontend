@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Slēpt atrašanās vietas ar cenām",
 		"FilterUserWithPriceCountHide": "Slēpt līdzautorus ar cenām",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Labot",
 		"FAQ": "Bieži uzdotie jautājumi",
 		"FrequentlyAskedQuestions": "Bieži uzdotie jautājumi",
