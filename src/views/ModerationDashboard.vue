@@ -6,6 +6,7 @@
       </v-chip>
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="flagList.length" :totalCount="flagTotal" />
+        <FilterMenu kind="flag" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
       </template>
     </v-col>
   </v-row>
@@ -54,6 +55,7 @@ import utils from '../utils.js'
 export default {
   components: {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     ModerationReasonChip: defineAsyncComponent(() => import('../components/ModerationReasonChip.vue')),
     ModerationStatusChip: defineAsyncComponent(() => import('../components/ModerationStatusChip.vue')),
     RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
@@ -77,16 +79,28 @@ export default {
       ],
       tablePageLimit: -1,  // all items
       // filter & order
+      currentFilterList: [],
       currentOrder: '-id'
     }
   },
   computed: {
     getFlagsParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.flagPage }
+      if (!this.currentFilterList.includes('show_closed')) {
+        defaultParams['status'] = 'OPEN'
+      }
       return defaultParams
     }
   },
+  watch: {
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.initFlagList()
+      }
+    }
+  },
   mounted() {
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.initFlagList()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
@@ -121,6 +135,11 @@ export default {
         .then(() => {
           this.initFlagList()
         })
+    },
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      // this.initFlagList() will be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
