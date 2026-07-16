@@ -328,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Приховати місця з цінами",
 		"FilterUserWithPriceCountHide": "Приховати учасників із цінами",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Виправити",
 		"FAQ": "ЧаПИ",
 		"FrequentlyAskedQuestions": "Найбільш поширені запитання",
