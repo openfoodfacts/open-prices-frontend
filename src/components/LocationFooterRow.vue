@@ -3,8 +3,8 @@
     <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <span class="chip-group">
         <PriceCountChip :count="location.price_count" :withLabel="true" source="location" @click="goToLocation()" />
-        <UserCountChip :count="location.user_count" :withLabel="true" />
-        <ProductCountChip :count="location.product_count" :withLabel="true" />
+        <CountChip kind="user" :count="location.user_count" :withLabel="true" />
+        <CountChip kind="product" :count="location.product_count" :withLabel="true" />
         <CountChip kind="proof" :count="location.proof_count" :withLabel="true" :to="getLocationProofListUrl" />
       </span>
     </v-col>
@@ -19,10 +19,8 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    UserCountChip: defineAsyncComponent(() => import('../components/UserCountChip.vue')),
-    ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
     CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
+    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     LocationActionMenuButton: defineAsyncComponent(() => import('../components/LocationActionMenuButton.vue'))
   },
   props: {

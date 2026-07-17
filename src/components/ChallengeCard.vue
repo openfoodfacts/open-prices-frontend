@@ -26,10 +26,10 @@
 
     <v-card-text v-if="challenge.status !== 'UPCOMING'">
       <span class="chip-group">
-        <PriceCountChip :count="challenge.stats.price_count" :withLabel="true" />
+        <CountChip kind="price" :count="challenge.stats.price_count" :withLabel="true" />
         <CountChip kind="proof" :count="challenge.stats.proof_count" :withLabel="true" />
         <CountChip kind="location" :count="challenge.stats.proof_location_count" :withLabel="true" />
-        <ProductCountChip :count="challenge.stats.price_product_count" :withLabel="true" />
+        <CountChip kind="product" :count="challenge.stats.price_product_count" :withLabel="true" />
       </span>
     </v-card-text>
   </v-card>
@@ -44,9 +44,7 @@ export default {
     CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
     DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     ChallengeStatusChip: defineAsyncComponent(() => import('../components/ChallengeStatusChip.vue')),
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
-    ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
   },
   props: {
     challenge: {

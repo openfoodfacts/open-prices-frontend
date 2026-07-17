@@ -19,6 +19,7 @@ const PRICE_TAG_STATUS_TRUNCATED = {key: 3, color: '#883c1e', icon: 'mdi-crop', 
 const PRICE_TAG_STATUS_NOT_A_PRICE = {key: 4, color: '#88631e', icon: 'mdi-currency-usd-off', textSmallScreen: 'Common.NotAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagNotAPrice'}
 const PRICE_TAG_STATUS_NO_BARCODE = {key: 5, color: 'yellow', icon: 'mdi-barcode-off', textSmallScreen: 'Common.NoBarcode', text: 'ContributionAssistant.PriceTagLabels.PriceTagNoBarcode'}
 const PRICE_TAG_STATUS_OTHER = {key: 6, color: 'grey', icon: '', textSmallScreen: 'Common.Other', text: 'ContributionAssistant.PriceTagLabels.PriceTagOther'}
+const PRODUCT_ICON = 'mdi-food-outline'
 const PRODUCT_CATEGORY_LABEL_ORGANIC = 'en:organic'
 const PROOF_ICON = 'mdi-image'
 const PROOF_TYPE_PRICE_TAG = 'PRICE_TAG'
@@ -144,6 +145,7 @@ export default {
     PRICE_TAG_STATUS_OTHER,
   ],
   // products
+  PRODUCT_ICON: PRODUCT_ICON,
   PRODUCT_IMAGE_DEFAULT_URL: '/icon-off-packaging.svg',
   PRODUCT_CATEGORY_LABEL_ORGANIC: PRODUCT_CATEGORY_LABEL_ORGANIC,
   PRODUCT_QUANTITY_UNIT_G: 'g',

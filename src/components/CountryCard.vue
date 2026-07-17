@@ -15,8 +15,8 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
+    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     CountryCityChip: defineAsyncComponent(() => import('../components/CountryCityChip.vue')),
   },
   props: {

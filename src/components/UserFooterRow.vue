@@ -6,7 +6,7 @@
         <CountChip kind="currency" :count="user.currency_count" :withLabel="true" />
         <CountChip kind="location" :count="user.location_count" :withLabel="true" />
         <CountChip kind="country" :count="user.location_type_osm_country_count" :withLabel="true" />
-        <ProductCountChip :count="user.product_count" :withLabel="true" />
+        <CountChip kind="product" :count="user.product_count" :withLabel="true" />
         <CountChip kind="proof" :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
         <CountChip kind="challenge" :count="user.challenge_count" :withLabel="true" />
         <CountChip kind="badge" :count="user.badge_count" :withLabel="true" :to="getUserBadgeListUrl" />
@@ -25,7 +25,6 @@ export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
-    ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
     UserActionMenuButton: defineAsyncComponent(() => import('../components/UserActionMenuButton.vue'))
   },
   props: {
