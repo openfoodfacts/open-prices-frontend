@@ -17,7 +17,7 @@
       </div>
       <div v-if="challenge.locations.length" class="mt-1">
         <span class="chip-group">
-          <LocationCountChip :count="challenge.locations.length" :withLabel="true" />
+          <CountChip kind="location" :count="challenge.locations.length" :withLabel="true" />
         </span>
       </div>
     </v-card-text>
@@ -27,8 +27,8 @@
     <v-card-text v-if="challenge.status !== 'UPCOMING'">
       <span class="chip-group">
         <PriceCountChip :count="challenge.stats.price_count" :withLabel="true" />
-        <ProofCountChip :count="challenge.stats.proof_count" :withLabel="true" />
-        <LocationCountChip :count="challenge.stats.proof_location_count" :withLabel="true" />
+        <CountChip kind="proof" :count="challenge.stats.proof_count" :withLabel="true" />
+        <CountChip kind="location" :count="challenge.stats.proof_location_count" :withLabel="true" />
         <ProductCountChip :count="challenge.stats.price_product_count" :withLabel="true" />
       </span>
     </v-card-text>
@@ -45,8 +45,7 @@ export default {
     DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     ChallengeStatusChip: defineAsyncComponent(() => import('../components/ChallengeStatusChip.vue')),
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
-    LocationCountChip: defineAsyncComponent(() => import('../components/LocationCountChip.vue')),
+    CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
     ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
   },
   props: {

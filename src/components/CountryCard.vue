@@ -3,7 +3,7 @@
     <v-card-text>
       <span class="chip-group">
         <PriceCountChip v-if="showPriceCountChip" :count="priceCount" :withLabel="true" />
-        <LocationCountChip v-if="showLocationCountChip" :count="locationCount" :withLabel="true" />
+        <CountChip v-if="showLocationCountChip" kind="location" :count="locationCount" :withLabel="true" />
         <CountryCityChip v-if="city" type="country" :country="country" />
       </span>
     </v-card-text>
@@ -16,7 +16,7 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    LocationCountChip: defineAsyncComponent(() => import('../components/LocationCountChip.vue')),
+    CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
     CountryCityChip: defineAsyncComponent(() => import('../components/CountryCityChip.vue')),
   },
   props: {

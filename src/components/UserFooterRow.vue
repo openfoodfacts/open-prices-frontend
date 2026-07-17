@@ -3,13 +3,13 @@
     <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <span class="chip-group">
         <PriceCountChip :count="user.price_count" :withLabel="true" />
-        <CurrencyCountChip :count="user.currency_count" :withLabel="true" />
-        <LocationCountChip :count="user.location_count" :withLabel="true" />
-        <CountryCountChip :count="user.location_type_osm_country_count" :withLabel="true" />
+        <CountChip kind="currency" :count="user.currency_count" :withLabel="true" />
+        <CountChip kind="location" :count="user.location_count" :withLabel="true" />
+        <CountChip kind="country" :count="user.location_type_osm_country_count" :withLabel="true" />
         <ProductCountChip :count="user.product_count" :withLabel="true" />
-        <ProofCountChip :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
-        <ChallengeCountChip :count="user.challenge_count" :withLabel="true" />
-        <BadgeCountChip :count="user.badge_count" :withLabel="true" :to="getUserBadgeListUrl" />
+        <CountChip kind="proof" :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
+        <CountChip kind="challenge" :count="user.challenge_count" :withLabel="true" />
+        <CountChip kind="badge" :count="user.badge_count" :withLabel="true" :to="getUserBadgeListUrl" />
       </span>
     </v-col>
     <v-col v-if="!hideActionMenuButton" cols="1">
@@ -24,13 +24,8 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    CurrencyCountChip: defineAsyncComponent(() => import('../components/CurrencyCountChip.vue')),
-    LocationCountChip: defineAsyncComponent(() => import('../components/LocationCountChip.vue')),
-    CountryCountChip: defineAsyncComponent(() => import('../components/CountryCountChip.vue')),
+    CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
     ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
-    ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
-    ChallengeCountChip: defineAsyncComponent(() => import('../components/ChallengeCountChip.vue')),
-    BadgeCountChip: defineAsyncComponent(() => import('../components/BadgeCountChip.vue')),
     UserActionMenuButton: defineAsyncComponent(() => import('../components/UserActionMenuButton.vue'))
   },
   props: {
