@@ -1,9 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <v-chip label variant="text" :prepend-icon="MODERATION_ICON">
-        {{ $t('Common.ReportCount', { count: flagTotal }) }}
-      </v-chip>
+      <CountTextChip kind="report" :count="flagTotal" />
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="flagList.length" :totalCount="flagTotal" />
         <FilterMenu kind="flag" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleFlagType($event)" @update:currentKind="toggleFlagKind($event)" />
@@ -55,6 +53,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
@@ -64,7 +63,6 @@ export default {
   },
   data() {
     return {
-      MODERATION_ICON: constants.MODERATION_ICON,
       // data
       flagList: [],
       flagTotal: null,

@@ -39,6 +39,7 @@ const USER_CONSUMPTION = 'CONSUMPTION'
 const USER_CONSUMPTION_ICON = 'mdi-cart-outline'
 const USER_COMMUNITY = 'COMMUNITY'
 const MODERATION_ICON = 'mdi-shield-account'
+const REPORT_ICON = 'mdi-flag'
 const CHALLENGE_ICON = 'mdi-trophy-variant'
 const BADGE_ICON = 'mdi-medal-outline'
 const CURRENCY_ICON = 'mdi-cash'
@@ -314,6 +315,7 @@ export default {
   // moderation
   // see https://github.com/openfoodfacts/open-prices/blob/main/open_prices/moderation/models.py for reasons
   MODERATION_ICON: MODERATION_ICON,
+  REPORT_ICON: REPORT_ICON,
   MODERATION_FLAG_TYPE_LIST: [
     { key: 'PROOF', value: 'Proof', icon: PROOF_ICON },
     { key: 'PRICE', value: 'Price', icon: PRICE_ICON },
