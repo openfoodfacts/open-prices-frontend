@@ -1,9 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <v-chip label variant="text" :prepend-icon="BADGE_ICON">
-        {{ $t('Common.BadgeCount', { count: userBadgeTotal }) }}
-      </v-chip>
+      <CountTextChip kind="badge" :count="userBadgeTotal" />
     </v-col>
   </v-row>
 
@@ -23,16 +21,15 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
 
 export default {
   components: {
+    CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
     BadgeCard: defineAsyncComponent(() => import('../components/BadgeCard.vue')),
   },
   data() {
     return {
       username: this.$route.params.username,
-      BADGE_ICON: constants.BADGE_ICON,
       // data
       userBadgeList: [],
       userBadgeTotal: null,

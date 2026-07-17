@@ -49,9 +49,7 @@
         <v-card-text>
           <v-row>
             <v-col class="pt-0 pb-0">
-              <v-chip label variant="text" prepend-icon="mdi-database-outline">
-                {{ $t('Common.ProductCount', { count: productTotal }) }}
-              </v-chip>
+              <CountTextChip kind="product" :count="productTotal" />
               <FilterMenu kind="productCreate" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
               <OrderMenu v-if="!currentFilterList.includes('price__owner')" kind="productCreate" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
             </v-col>
@@ -357,6 +355,7 @@ import "vue-zoomable/dist/style.css"
 export default {
   components: {
     ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
+    CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     VueZoomable: defineAsyncComponent(() => import('vue-zoomable')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
