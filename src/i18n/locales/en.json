@@ -379,6 +379,8 @@
 		"OrderNoun": "Order",
 		"OrderVerb": "Order",
 		"Orders": "Orders",
+		"OrderFlagCreatedDESC": "Report date",
+		"OrderFlagReasonASC": "Report reason",
 		"OrderNameASC": "Name",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",

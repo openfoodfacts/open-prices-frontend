@@ -256,6 +256,10 @@ export default {
     { key: '-product_count', value: 'OrderProductCountDESC', icon: 'mdi-database-outline' },
     { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
   ],
+  MODERATION_FLAG_ORDER_LIST: [
+    { key: '-created', value: 'OrderFlagCreatedDESC', icon: 'mdi-clock-outline' },
+    { key: 'reason', value: 'OrderFlagReasonASC', icon: 'mdi-comment-text-outline' },
+  ],
   // display
   DISPLAY_LIST: [
     { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
