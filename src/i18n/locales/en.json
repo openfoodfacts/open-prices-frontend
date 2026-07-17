@@ -387,6 +387,7 @@
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
 		"OrderPriceASC": "Price",
+		"OrderPriceDESC": "Price",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",

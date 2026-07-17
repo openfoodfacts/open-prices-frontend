@@ -1,11 +1,13 @@
 <template>
   <v-chip label size="small" density="comfortable" @click="goToUser()">
-    <v-icon start icon="mdi-account" />
+    <v-icon start :icon="USER_ICON" />
     {{ username }}
   </v-chip>
 </template>
 
 <script>
+import constants from '../constants'
+
 export default {
   props: {
     username: {
@@ -16,6 +18,11 @@ export default {
       type: Boolean,
       default: false
     },
+  },
+  data() {
+    return {
+      USER_ICON: constants.USER_ICON
+    }
   },
   methods: {
     goToUser() {

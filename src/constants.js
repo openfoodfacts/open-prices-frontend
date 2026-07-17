@@ -42,7 +42,12 @@ const MODERATION_ICON = 'mdi-shield-account'
 const REPORT_ICON = 'mdi-flag'
 const CHALLENGE_ICON = 'mdi-trophy-variant'
 const BADGE_ICON = 'mdi-medal-outline'
+const DATE_ICON = 'mdi-calendar-today'
 const CURRENCY_ICON = 'mdi-cash'
+const EXPERIMENTS_ICON = 'mdi-test-tube'
+const STATS_ICON = 'mdi-chart-box-outline'
+const SETTINGS_ICON = 'mdi-cog-outline'
+const ABOUT_ICON = 'mdi-information-outline'
 const OSM_NAME = 'OpenStreetMap'
 
 export default {
@@ -244,37 +249,37 @@ export default {
   ],
   PRODUCT_CREATE_ORDER_LIST: [
     { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
-    { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
+    { key: '-proof_count', value: 'OrderProofCountDESC', icon: PROOF_ICON },
   ],
   PRICE_ORDER_LIST: [
     { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
-    { key: '-price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-descending' },
-    { key: '-date,-created', value: 'OrderPriceDateDESC', icon: 'mdi-calendar-today' },
+    { key: '-price', value: 'OrderPriceDESC', icon: 'mdi-order-numeric-descending' },
+    { key: '-date,-created', value: 'OrderPriceDateDESC', icon: DATE_ICON },
     { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
   ],
   PROOF_ORDER_LIST: [
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-date,-created', value: 'OrderProofDateDESC', icon: 'mdi-calendar-today' },
+    { key: '-date,-created', value: 'OrderProofDateDESC', icon: DATE_ICON },
     { key: '-created', value: 'OrderProofCreatedDESC', icon: 'mdi-clock-outline' },
   ],
   LOCATION_ORDER_LIST: [
     // same order as LocationCard chips
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-user_count', value: 'OrderUserCountDESC', icon: 'mdi-account' },
-    { key: '-product_count', value: 'OrderProductCountDESC', icon: 'mdi-database-outline' },
-    { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
+    { key: '-user_count', value: 'OrderUserCountDESC', icon: USER_ICON },
+    { key: '-product_count', value: 'OrderProductCountDESC', icon: PRODUCT_ICON },
+    { key: '-proof_count', value: 'OrderProofCountDESC', icon: PROOF_ICON },
   ],
   LOCATION_COUNTRY_ORDER_LIST: [
     { key: 'name', value: 'OrderNameASC', icon: 'mdi-alphabetical' },
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-location_count', value: 'OrderLocationCountDESC', icon: 'mdi-map-marker-outline' },
+    { key: '-location_count', value: 'OrderLocationCountDESC', icon: LOCATION_TYPE_OSM_ICON },
   ],
   USER_ORDER_LIST: [
     // same order as UserCard chips
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-location_count', value: 'OrderLocationCountDESC', icon: 'mdi-map-marker-outline' },
-    { key: '-product_count', value: 'OrderProductCountDESC', icon: 'mdi-database-outline' },
-    { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
+    { key: '-location_count', value: 'OrderLocationCountDESC', icon: LOCATION_TYPE_OSM_ICON },
+    { key: '-product_count', value: 'OrderProductCountDESC', icon: PRODUCT_ICON },
+    { key: '-proof_count', value: 'OrderProofCountDESC', icon: PROOF_ICON },
   ],
   MODERATION_FLAG_ORDER_LIST: [
     { key: '-created', value: 'OrderFlagCreatedDESC', icon: 'mdi-clock-outline' },
@@ -335,6 +340,11 @@ export default {
     { key: 'OPEN', value: 'ModerationFlagStatusOpen', color: 'warning' },
     { key: 'CLOSED', value: 'ModerationFlagStatusClosed', color: 'success' }
   ],
+  // misc
+  EXPERIMENTS_ICON: EXPERIMENTS_ICON,
+  STATS_ICON: STATS_ICON,
+  SETTINGS_ICON: SETTINGS_ICON,
+  ABOUT_ICON: ABOUT_ICON,
   // date regex
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,
   DATE_YEAR_MONTH_REGEX_MATCH: /(\d{4})-(\d{2})/,

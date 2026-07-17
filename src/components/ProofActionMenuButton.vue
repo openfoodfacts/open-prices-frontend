@@ -36,7 +36,7 @@
             {{ $t('Common.Moderation') }}
           </v-list-subheader>
           <v-divider />
-          <v-list-item :slim="true" prepend-icon="mdi-flag" @click="moderationFlagCreateDialog = true">
+          <v-list-item :slim="true" :prepend-icon="REPORT_ICON" @click="moderationFlagCreateDialog = true">
             {{ $t('Common.ReportProblem') }}
           </v-list-item>
         </v-sheet>
@@ -123,6 +123,7 @@ export default {
   emits: ['update:showPriceTagsBoundingBoxes'],
   data() {
     return {
+      REPORT_ICON: constants.REPORT_ICON,
       ACTION_MENU_ICON: constants.ACTION_MENU_ICON,
       // data
       editDialog: false,

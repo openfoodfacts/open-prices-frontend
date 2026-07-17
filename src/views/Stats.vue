@@ -2,7 +2,7 @@
   <v-row>
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
-        <v-icon size="x-small" icon="mdi-tag-outline" />
+        <v-icon size="x-small" :icon="PRICE_ICON" />
         {{ $t('Common.Prices') }}
       </h2>
     </v-col>
@@ -31,7 +31,7 @@
   <v-row>
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
-        <v-icon size="x-small" icon="mdi-database-outline" />
+        <v-icon size="x-small" :icon="PRODUCT_ICON" />
         {{ $t('Common.Products') }}
       </h2>
     </v-col>
@@ -60,7 +60,7 @@
   <v-row>
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
-        <v-icon size="x-small" icon="mdi-map-marker-outline" />
+        <v-icon size="x-small" :icon="LOCATION_TYPE_OSM_ICON" />
         {{ $t('Common.Locations') }}
       </h2>
     </v-col>
@@ -81,7 +81,7 @@
   <v-row>
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
-        <v-icon size="x-small" icon="mdi-image" />
+        <v-icon size="x-small" :icon="PROOF_ICON" />
         {{ $t('Common.Proofs') }}
       </h2>
     </v-col>
@@ -105,7 +105,7 @@
   <v-row>
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
-        <v-icon size="x-small" icon="mdi-account-outline" />
+        <v-icon size="x-small" :icon="USER_ICON" />
         {{ $t('Common.Contributors') }}
       </h2>
     </v-col>
@@ -117,7 +117,7 @@
   <v-row>
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
-        <v-icon size="x-small" icon="mdi-trophy-variant" />
+        <v-icon size="x-small" :icon="CHALLENGE_ICON" />
         {{ $t('Common.Challenges') }}
       </h2>
     </v-col>
@@ -147,7 +147,7 @@
   <v-row>
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
-        <v-icon size="x-small" icon="mdi-test-tube" />
+        <v-icon size="x-small" :icon="EXPERIMENTS_ICON" />
         {{ $t('Common.Experiments') }}
       </h2>
     </v-col>
@@ -223,7 +223,7 @@
 
   <v-row>
     <v-col cols="12">
-      <StatsLastUpdatedAlert v-if="stats" :lastUpdated="stats.updated" />
+      <StatsLastUpdatedAlert v-if="stats.updated" :lastUpdated="stats.updated" />
     </v-col>
   </v-row>
 </template>
@@ -296,7 +296,14 @@ export default {
       OBF_ICON: constants.OBF_ICON,
       OPF_ICON: constants.OPF_ICON,
       OPFF_ICON: constants.OPFF_ICON,
+      PRICE_ICON: constants.PRICE_ICON,
+      PROOF_ICON: constants.PROOF_ICON,
+      PRODUCT_ICON: constants.PRODUCT_ICON,
+      LOCATION_TYPE_OSM_ICON: constants.LOCATION_TYPE_OSM_ICON,
+      USER_ICON: constants.USER_ICON,
+      CHALLENGE_ICON: constants.CHALLENGE_ICON,
       BADGE_ICON: constants.BADGE_ICON,
+      EXPERIMENTS_ICON: constants.EXPERIMENTS_ICON,
     }
   },
   mounted() {

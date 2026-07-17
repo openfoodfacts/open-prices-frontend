@@ -11,7 +11,7 @@
           <!-- Selection menu -->
           <v-menu scroll-strategy="close" :disabled="loading">
             <template #activator="{ props }">
-              <v-btn v-bind="props" class="text-body-2" block spaced="end" prepend-icon="mdi-image" append-icon="mdi-menu-down" :class="hasProofImageSelected ? 'border-success' : 'border-error'">
+              <v-btn v-bind="props" class="text-body-2" block spaced="end" :prepend-icon="PROOF_ICON" append-icon="mdi-menu-down" :class="hasProofImageSelected ? 'border-success' : 'border-error'">
                 <span v-if="hasProofImageSelected">{{ $t('Common.PictureSelectedCount', { count: proofImagePreviewList.length }) }}</span>
                 <span v-else-if="multiple">{{ $t('Common.PictureSelectMultiple') }}</span>
                 <span v-else>{{ $t('Common.PictureSelect') }}</span>
@@ -124,6 +124,7 @@ export default {
   emits: ['proofList'],
   data() {
     return {
+      PROOF_ICON: constants.PROOF_ICON,
       PROOF_TYPE_RECEIPT: constants.PROOF_TYPE_RECEIPT,
       // data
       proofImageList: [],

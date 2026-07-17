@@ -77,6 +77,7 @@ export default {
   },
   data() {
     return {
+      // data
       challengeList: [],
       challengeTotal: null,
       challengePage: 0,
