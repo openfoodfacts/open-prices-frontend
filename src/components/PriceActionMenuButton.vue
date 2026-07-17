@@ -55,7 +55,7 @@
             {{ $t('Common.Moderation') }}
           </v-list-subheader>
           <v-divider />
-          <v-list-item :slim="true" prepend-icon="mdi-flag" @click="moderationFlagCreateDialog = true">
+          <v-list-item :slim="true" :prepend-icon="REPORT_ICON" @click="moderationFlagCreateDialog = true">
             {{ $t('Common.ReportProblem') }}
           </v-list-item>
         </v-sheet>
@@ -149,6 +149,7 @@ export default {
   data() {
     return {
       ACTION_MENU_ICON: constants.ACTION_MENU_ICON,
+      REPORT_ICON: constants.REPORT_ICON,
       // data
       loading: false,
       editDialog: false,

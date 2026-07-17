@@ -31,7 +31,7 @@
           <v-btn v-if="item.status === 'OPEN'" size="x-small" color="success" variant="outlined" prepend-icon="mdi-check-bold" @click="toggleFlagStatus(item)">
             {{ $t('Common.Close') }}
           </v-btn>
-          <v-btn v-if="item.status === 'CLOSED'" size="x-small" color="warning" variant="outlined" prepend-icon="mdi-flag" @click="toggleFlagStatus(item)">
+          <v-btn v-if="item.status === 'CLOSED'" size="x-small" color="warning" variant="outlined" :prepend-icon="REPORT_ICON" @click="toggleFlagStatus(item)">
             {{ $t('Common.Re-open') }}
           </v-btn>
         </template>
@@ -63,6 +63,7 @@ export default {
   },
   data() {
     return {
+      REPORT_ICON: constants.REPORT_ICON,
       // data
       flagList: [],
       flagTotal: null,

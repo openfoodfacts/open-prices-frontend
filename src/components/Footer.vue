@@ -2,13 +2,13 @@
   <v-footer class="bg-footer py-4 flex-grow-0">
     <v-row no-gutters>
       <v-col cols="12" md="6" align="center">
-        <v-btn class="mx-2" variant="text" prepend-icon="mdi-chart-box-outline" to="/stats">
+        <v-btn class="mx-2" variant="text" :prepend-icon="STATS_ICON" to="/stats">
           {{ $t('Common.Stats') }}
         </v-btn>
-        <v-btn class="mx-2" variant="text" prepend-icon="mdi-cog-outline" to="/settings">
+        <v-btn class="mx-2" variant="text" :prepend-icon="SETTINGS_ICON" to="/settings">
           {{ $t('Common.Settings') }}
         </v-btn>
-        <v-btn class="mx-2" variant="text" prepend-icon="mdi-information-outline" to="/about">
+        <v-btn class="mx-2" variant="text" :prepend-icon="ABOUT_ICON" to="/about">
           {{ $t('Common.About') }}
         </v-btn>
         <v-btn class="mx-2 my-2" variant="text" prepend-icon="mdi-github" :href="APP_GITHUB_FRONTEND_URL" target="_blank">
@@ -51,6 +51,9 @@ export default {
     return {
       APP_NAME: constants.APP_NAME,
       APP_GITHUB_FRONTEND_URL: constants.APP_GITHUB_FRONTEND_URL,
+      STATS_ICON: constants.STATS_ICON,
+      SETTINGS_ICON: constants.SETTINGS_ICON,
+      ABOUT_ICON: constants.ABOUT_ICON,
       GITHUB_NAME: constants.GITHUB_NAME,
       sourceList: [
         {

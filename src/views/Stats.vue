@@ -147,7 +147,7 @@
   <v-row>
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
-        <v-icon size="x-small" icon="mdi-test-tube" />
+        <v-icon size="x-small" :icon="EXPERIMENTS_ICON" />
         {{ $t('Common.Experiments') }}
       </h2>
     </v-col>
@@ -303,6 +303,7 @@ export default {
       USER_ICON: constants.USER_ICON,
       CHALLENGE_ICON: constants.CHALLENGE_ICON,
       BADGE_ICON: constants.BADGE_ICON,
+      EXPERIMENTS_ICON: constants.EXPERIMENTS_ICON,
     }
   },
   mounted() {

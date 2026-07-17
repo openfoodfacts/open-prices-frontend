@@ -7,7 +7,7 @@
       <v-chip v-if="contribute.community" class="mr-1" density="comfortable" prepend-icon="mdi-account-group">
         {{ $t('Common.Community') }}
       </v-chip>
-      <v-chip v-if="contribute.experiment" density="comfortable" prepend-icon="mdi-test-tube">
+      <v-chip v-if="contribute.experiment" density="comfortable" :prepend-icon="EXPERIMENTS_ICON">
         {{ $t('Common.Experiment') }}
       </v-chip>
     </v-card-text>
@@ -15,11 +15,18 @@
 </template>
 
 <script>
+import constants from '../constants'
+
 export default {
   props: {
     contribute: {
       type: Object,
       required: true
+    }
+  },
+  data() {
+    return {
+      EXPERIMENTS_ICON: constants.EXPERIMENTS_ICON
     }
   }
 }
