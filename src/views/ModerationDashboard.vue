@@ -7,6 +7,7 @@
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="flagList.length" :totalCount="flagTotal" />
         <FilterMenu kind="flag" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleFlagType($event)" @update:currentKind="toggleFlagKind($event)" />
+        <OrderMenu kind="flag" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
       </template>
     </v-col>
   </v-row>
@@ -56,6 +57,7 @@ export default {
   components: {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     ModerationReasonChip: defineAsyncComponent(() => import('../components/ModerationReasonChip.vue')),
     ModerationStatusChip: defineAsyncComponent(() => import('../components/ModerationStatusChip.vue')),
     RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
@@ -82,7 +84,7 @@ export default {
       currentFilterList: [],
       currentType: '',
       currentKind: '',
-      currentOrder: '-id'
+      currentOrder: constants.MODERATION_FLAG_ORDER_LIST[0].key,  // created first
     }
   },
   computed: {
@@ -111,6 +113,7 @@ export default {
     this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.currentKind = this.$route.query[constants.KIND_PARAM] || this.currentKind
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initFlagList()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
@@ -161,6 +164,13 @@ export default {
       this.currentKind = (this.currentKind !== kindKey) ? kindKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.KIND_PARAM]: this.currentKind } })
       // this.initFlagList() will be called in watch $route
+    },
+    updateOrder(orderKey) {
+      if (this.currentOrder !== orderKey) {
+        this.currentOrder = orderKey
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        // this.initFlagList() will be called in watch $route
+      }
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
