@@ -19,7 +19,7 @@
       <v-row v-if="showBadgeFooterRow" class="mt-0">
         <v-col cols="12">
           <span class="chip-group">
-            <UserCountChip :count="badge.user_count" :withLabel="true" />
+            <CountChip kind="user" :count="badge.user_count" :withLabel="true" />
           </span>
         </v-col>
       </v-row>
@@ -34,7 +34,7 @@ import constants from '../constants'
 export default {
   components: {
     DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
-    UserCountChip: defineAsyncComponent(() => import('../components/UserCountChip.vue')),
+    CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
   },
   props: {
     badge: {

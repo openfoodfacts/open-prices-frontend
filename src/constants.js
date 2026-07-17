@@ -11,14 +11,6 @@ const PRICE_TYPE_PRODUCT = 'PRODUCT'
 const PRICE_TYPE_PRODUCT_ICON = 'mdi-barcode'
 const PRICE_TYPE_CATEGORY = 'CATEGORY'
 const PRICE_TYPE_CATEGORY_ICON = 'mdi-basket-outline'
-const PRODUCT_CATEGORY_LABEL_ORGANIC = 'en:organic'
-const PROOF_ICON = 'mdi-image'
-const PROOF_TYPE_PRICE_TAG = 'PRICE_TAG'
-const PROOF_TYPE_PRICE_TAG_ICON = 'mdi-library-shelves'
-const PROOF_TYPE_RECEIPT = 'RECEIPT'
-const PROOF_TYPE_RECEIPT_ICON = 'mdi-receipt-text-outline'
-const PROOF_TYPE_GDPR_REQUEST = 'GDPR_REQUEST'
-const PROOF_TYPE_GDPR_REQUEST_ICON = 'mdi-email-open-outline'
 const PRICE_TAG_STATUS_NEW = {key: -1, color: 'red', icon: '', textSmallScreen: 'Common.New', text: 'ContributionAssistant.PriceTagLabels.NewPriceTag'}
 const PRICE_TAG_STATUS_EMPTY = {key: null, color: 'blue', icon: '', textSmallScreen: 'Common.WithoutAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagWithoutPrice'}
 const PRICE_TAG_STATUS_WITH_PRICE = {key: 1, color: 'green', icon: '', textSmallScreen: 'Common.WithAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagWithPrice'}
@@ -27,15 +19,29 @@ const PRICE_TAG_STATUS_TRUNCATED = {key: 3, color: '#883c1e', icon: 'mdi-crop', 
 const PRICE_TAG_STATUS_NOT_A_PRICE = {key: 4, color: '#88631e', icon: 'mdi-currency-usd-off', textSmallScreen: 'Common.NotAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagNotAPrice'}
 const PRICE_TAG_STATUS_NO_BARCODE = {key: 5, color: 'yellow', icon: 'mdi-barcode-off', textSmallScreen: 'Common.NoBarcode', text: 'ContributionAssistant.PriceTagLabels.PriceTagNoBarcode'}
 const PRICE_TAG_STATUS_OTHER = {key: 6, color: 'grey', icon: '', textSmallScreen: 'Common.Other', text: 'ContributionAssistant.PriceTagLabels.PriceTagOther'}
+const PRODUCT_ICON = 'mdi-food-outline'
+const PRODUCT_CATEGORY_LABEL_ORGANIC = 'en:organic'
+const PROOF_ICON = 'mdi-image'
+const PROOF_TYPE_PRICE_TAG = 'PRICE_TAG'
+const PROOF_TYPE_PRICE_TAG_ICON = 'mdi-library-shelves'
+const PROOF_TYPE_RECEIPT = 'RECEIPT'
+const PROOF_TYPE_RECEIPT_ICON = 'mdi-receipt-text-outline'
+const PROOF_TYPE_GDPR_REQUEST = 'GDPR_REQUEST'
+const PROOF_TYPE_GDPR_REQUEST_ICON = 'mdi-email-open-outline'
+const LOCATION_ICON = 'mdi-map-marker-outline'
 const LOCATION_TYPE_OSM = 'OSM'
 const LOCATION_TYPE_OSM_ICON = 'mdi-map-marker-outline'
 const LOCATION_TYPE_ONLINE = 'ONLINE'
 const LOCATION_TYPE_ONLINE_ICON = 'mdi-web'
+const COUNTRY_ICON = 'mdi-map-outline'
 const USER_ICON = 'mdi-account'
 const USER_CONSUMPTION = 'CONSUMPTION'
 const USER_CONSUMPTION_ICON = 'mdi-cart-outline'
 const USER_COMMUNITY = 'COMMUNITY'
 const MODERATION_ICON = 'mdi-shield-account'
+const CHALLENGE_ICON = 'mdi-trophy-variant'
+const BADGE_ICON = 'mdi-medal-outline'
+const CURRENCY_ICON = 'mdi-cash'
 const OSM_NAME = 'OpenStreetMap'
 
 export default {
@@ -88,6 +94,7 @@ export default {
   ORDER_PARAM: 'order',
   DISPLAY_PARAM: 'display',
   TAB_PARAM: 'tab',
+  // prices
   PRICE_ICON: PRICE_ICON,
   PRICE_TYPE_PRODUCT: PRICE_TYPE_PRODUCT,
   PRICE_TYPE_PRODUCT_ICON: PRICE_TYPE_PRODUCT_ICON,
@@ -137,6 +144,8 @@ export default {
     PRICE_TAG_STATUS_NO_BARCODE,
     PRICE_TAG_STATUS_OTHER,
   ],
+  // products
+  PRODUCT_ICON: PRODUCT_ICON,
   PRODUCT_IMAGE_DEFAULT_URL: '/icon-off-packaging.svg',
   PRODUCT_CATEGORY_LABEL_ORGANIC: PRODUCT_CATEGORY_LABEL_ORGANIC,
   PRODUCT_QUANTITY_UNIT_G: 'g',
@@ -147,6 +156,7 @@ export default {
     { key: 'opf', value: OPF_NAME, icon: OPF_ICON },
     { key: 'opff', value: OPFF_NAME, icon: OPFF_ICON },
   ],
+  // proofs
   PROOF_ICON: PROOF_ICON,
   PROOF_TYPE_PRICE_TAG: PROOF_TYPE_PRICE_TAG,
   PROOF_TYPE_PRICE_TAG_ICON: PROOF_TYPE_PRICE_TAG_ICON,
@@ -164,6 +174,8 @@ export default {
     {key: PROOF_TYPE_GDPR_REQUEST, value: PROOF_TYPE_GDPR_REQUEST, icon: PROOF_TYPE_GDPR_REQUEST_ICON},
   ],
   PROOF_TYPE_USER_EDITABLE_LIST: [PROOF_TYPE_PRICE_TAG, PROOF_TYPE_RECEIPT],
+  // locations
+  LOCATION_ICON: LOCATION_ICON,
   LOCATION_IMAGE_DEFAULT_URL: '/icon-mdi-map-marker-outline.svg',
   LOCATION_TYPE_OSM: LOCATION_TYPE_OSM,
   LOCATION_TYPE_OSM_ICON: LOCATION_TYPE_OSM_ICON,
@@ -174,14 +186,21 @@ export default {
     {key: LOCATION_TYPE_OSM, value: LOCATION_TYPE_OSM, icon: LOCATION_TYPE_OSM_ICON},
     {key: LOCATION_TYPE_ONLINE, value: LOCATION_TYPE_ONLINE, icon: LOCATION_TYPE_ONLINE_ICON},
   ],
+  COUNTRY_ICON: COUNTRY_ICON,
+  // users
   USER_ICON: USER_ICON,
   USER_IMAGE_DEFAULT_URL: '/icon-account-outline.svg',
   USER_CONSUMPTION: USER_CONSUMPTION,
   USER_CONSUMPTION_ICON: USER_CONSUMPTION_ICON,
   USER_COMMUNITY: USER_COMMUNITY,
   USER_COMMENT_ICON: 'mdi-comment-text-outline',
-  BADGE_ICON: 'mdi-medal-outline',
+  // challenges
+  CHALLENGE_ICON: CHALLENGE_ICON,
+  // badges
+  BADGE_ICON: BADGE_ICON,
   BADGE_IMAGE_DEFAULT_URL: '/icon-mdi-medal-outline.svg',
+  // currencies
+  CURRENCY_ICON: CURRENCY_ICON,
   // filter
   PRODUCT_FILTER_LIST: [
     { key: 'price_count_gte_1', value: 'FilterWithPriceCount' },
