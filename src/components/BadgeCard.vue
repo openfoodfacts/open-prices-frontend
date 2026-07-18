@@ -10,6 +10,8 @@
             <v-col cols="12">
               <h3>{{ badge.name }}</h3>
               <p>{{ badge.description }}</p>
+              <CountChip v-if="badge.metric === 'price_count'" class="mr-2" kind="price" :count="badge.threshold" :withLabel="true" />
+              <CountChip v-if="badge.metric === 'proof_count'" class="mr-2" kind="proof" :count="badge.threshold" :withLabel="true" />
               <DateChip v-if="achievedAt" :title="$t('Common.BadgeAchievementDate')" :date="achievedAt" :readonly="true" />
             </v-col>
           </v-row>
@@ -33,8 +35,8 @@ import constants from '../constants'
 
 export default {
   components: {
-    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
+    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
   },
   props: {
     badge: {
