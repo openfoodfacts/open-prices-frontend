@@ -33,6 +33,9 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    getLabelUrl() {
+      return this.label && !this.readonly ? `/labels/${this.label}` : null
+    }
   },
   mounted() {
     this.setLabelLocalizedName(this.label)
@@ -47,9 +50,6 @@ export default {
         this.labelLocalizedName = null
       }
     },
-    get getLabelUrl() {
-      return this.label && !this.readonly ? `/labels/${this.label}` : null
-    }
   }
 }
 </script>
