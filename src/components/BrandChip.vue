@@ -18,7 +18,7 @@ export default {
   },
   computed: {
     getBrandUrl() {
-      return !this.readonly ? `/brands/${this.brand}` : null
+      return this.brand && !this.readonly ? `/brands/${this.brand}` : null
     }
   }
 }
