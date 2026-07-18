@@ -245,6 +245,9 @@ function getLocationId(locationObject) {
 }
 
 function getLocationIcon(locationObject) {
+  if (!locationObject) {
+    return constants.LOCATION_UNKNOWN_ICON
+  }
   // Photon location
   if (locationObject.properties) {
     return constants.LOCATION_TYPE_OSM_ICON
