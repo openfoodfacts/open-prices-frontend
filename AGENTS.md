@@ -29,7 +29,12 @@ Do **NOT** modify the following files or directories:
 
 ## 4. Component & Code Conventions
 
-Always prefer the Options API (`export default {}` with `data()`, `methods`, `computed`, etc.), Vuetify components, and the `$t` function for internationalization.
+- Always prefer the Options API (`export default {}`, and keep the order `components`, `props`, `data()`, `computed`, `watch`, `mounted()`, `unmounted()`, `methods`).
+- Always import components using `defineAsyncComponent`.
+- Always prefer promises (`.then()`) over async.
+- Always prefer Vuetify components.
+- Use `$t` function for internationalization.
+- Extract API logic to `/src/services` and keep global state in Pinia (`/src/store.js`). Use `data()` for local UI-only state (e.g., loading spinners, dialog open/close).
 
 **Example 1: Basic Component Structure**
 
@@ -65,7 +70,6 @@ export default {
 ```
 
 **Example 2: API Calls & State Management**
-Extract API logic to `/src/services` and keep global state in Pinia (`/src/store.js`). Use `data()` for local UI-only state (e.g., loading spinners, dialog open/close).
 
 ```vue
 <script>
