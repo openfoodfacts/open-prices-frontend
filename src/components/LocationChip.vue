@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" :prepend-icon="getLocationIcon" density="comfortable" :color="locationMissingAndShowError ? 'error' : 'default'" @click="goToLocation()">
+  <v-chip :class="{ 'cursor-default': readonly }" label size="small" :prepend-icon="getLocationIcon" density="comfortable" :color="locationMissingAndShowError ? 'error' : 'default'" @click="goToLocation()">
     <span v-if="locationNotMissing">{{ getLocationTitle }}</span>
     <span v-if="getLocationEmoji" style="margin-inline-start:5px">{{ getLocationEmoji }}</span>
     <span v-else-if="locationMissingAndShowError">

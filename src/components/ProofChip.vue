@@ -37,7 +37,7 @@ export default {
       type: Boolean,
       default: false
     },
-    readonly: {
+    readonly: {  // for the ProofDialog, not for the chip itself
       type: Boolean,
       default: false,
     },

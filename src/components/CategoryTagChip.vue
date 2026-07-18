@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable" @click="goToCategory()">
+  <v-chip :class="{ 'cursor-default': readonly }" label size="small" density="comfortable" @click="goToCategory()">
     {{ categoryLocalizedName || category }}
   </v-chip>
 </template>

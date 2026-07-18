@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable" @click="goToOrigin()">
+  <v-chip :class="{ 'cursor-default': readonly }" label size="small" density="comfortable" @click="goToOrigin()">
     {{ originLocalizedName || origin }}
   </v-chip>
 </template>

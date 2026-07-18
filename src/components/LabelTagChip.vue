@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable" @click="goToLabel()">
+  <v-chip :class="{ 'cursor-default': readonly }" label size="small" density="comfortable" @click="goToLabel()">
     {{ labelLocalizedName || label }}
     <v-icon v-if="label === 'en:organic'" icon="mdi-leaf-circle-outline" end />
   </v-chip>

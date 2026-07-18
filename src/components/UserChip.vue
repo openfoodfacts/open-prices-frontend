@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable" @click="goToUser()">
+  <v-chip :class="{ 'cursor-default': readonly }" label size="small" density="comfortable" @click="goToUser()">
     <v-icon start :icon="USER_ICON" />
     {{ username }}
   </v-chip>

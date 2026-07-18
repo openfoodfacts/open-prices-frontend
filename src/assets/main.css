@@ -7,6 +7,10 @@
     color: -webkit-link;
 }
 
+.cursor-default {
+    cursor: default;
+}
+
 .input-lowercase input {
     text-transform: lowercase;
 }

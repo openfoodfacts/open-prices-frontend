@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable" @click="goToCountryCity()">
+  <v-chip :class="{ 'cursor-default': readonly }" label size="small" density="comfortable" @click="goToCountryCity()">
     {{ getCountryCityName }}
   </v-chip>
 </template>

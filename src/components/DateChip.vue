@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" :prepend-icon="DATE_ICON" density="comfortable" :color="dateMissingAndShowError ? 'error' : 'default'" @click="goToDate()">
+  <v-chip :class="{ 'cursor-default': readonly }" label size="small" :prepend-icon="DATE_ICON" density="comfortable" :color="dateMissingAndShowError ? 'error' : 'default'" @click="goToDate()">
     <span v-if="date">{{ getDateFormatted(date) }}</span>
     <span v-else-if="dateMissingAndShowError">
       <i class="text-lowercase">{{ $t('Common.Date') }}</i>

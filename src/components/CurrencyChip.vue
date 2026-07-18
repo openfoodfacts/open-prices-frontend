@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" :prepend-icon="CURRENCY_ICON" density="comfortable" :color="currencyMissingAndShowError ? 'error' : 'default'" @click="goToCurrency()">
+  <v-chip :class="{ 'cursor-default': readonly }" label size="small" :prepend-icon="CURRENCY_ICON" density="comfortable" :color="currencyMissingAndShowError ? 'error' : 'default'" @click="goToCurrency()">
     <span v-if="currency">{{ currency }}</span>
     <span v-else-if="currencyMissingAndShowError">
       <i class="text-lowercase">{{ $t('Common.Currency') }}</i>
