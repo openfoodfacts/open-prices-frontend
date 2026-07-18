@@ -7,7 +7,7 @@
         </v-col>
         <v-col style="max-width:80%;">
           <v-row>
-            <v-col cols="12">
+            <v-col cols="12" @click="clickBadge()">
               <h3>{{ badge.name }}</h3>
               <p>{{ badge.description }}</p>
               <CountChip v-if="badge.metric === 'price_count'" class="mr-2" kind="price" :count="badge.threshold" :withLabel="true" />
@@ -51,6 +51,10 @@ export default {
       type: Boolean,
       default: false
     },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return {
@@ -61,6 +65,14 @@ export default {
     showBadgeFooterRow() {
       return !this.hideBadgeFooterRow
     }
+  },
+  methods: {
+    clickBadge() {
+      if (this.readonly) {
+        return
+      }
+      this.$router.push({ path: `/badges/${this.badge.id}` })
+    },
   }
 }
 </script>
