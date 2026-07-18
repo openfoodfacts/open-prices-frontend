@@ -10,7 +10,7 @@
             <v-col cols="12">
               <h3>{{ badge.name }}</h3>
               <p>{{ badge.description }}</p>
-              <DateChip v-if="achievedAt" :date="achievedAt" :class="$t('Common.BadgeAchievementDate')" />
+              <DateChip v-if="achievedAt" :title="$t('Common.BadgeAchievementDate')" :date="achievedAt" :readonly="true" />
             </v-col>
           </v-row>
         </v-col>
