@@ -37,6 +37,9 @@ export default {
   computed: {
     dateMissingAndShowError() {
       return !this.date && this.showErrorIfDateMissing
+    },
+    dateShort() {
+      return date_utils.dateShort(this.date)
     }
   },
   methods: {
@@ -47,7 +50,7 @@ export default {
       if (this.readonly || !this.date) {
         return
       }
-      this.$router.push({ path: `/dates/${this.date}` })
+      this.$router.push({ path: `/dates/${this.dateShort}` })
     },
   }
 }
