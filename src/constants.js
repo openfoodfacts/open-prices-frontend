@@ -205,6 +205,8 @@ export default {
   // badges
   BADGE_ICON: BADGE_ICON,
   BADGE_IMAGE_DEFAULT_URL: '/icon-mdi-medal-outline.svg',
+  // dates
+  DATE_ICON: DATE_ICON,
   // currencies
   CURRENCY_ICON: CURRENCY_ICON,
   // filter
