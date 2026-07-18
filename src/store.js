@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import constants from './constants'
 import utils from './utils.js'
+import geo_utils from './utils/geo.js'
 
 
 const RECENT_LOCATIONS_MAX_SIZE = 10
@@ -71,7 +72,7 @@ export const useAppStore = defineStore('app', {
       this.user.is_moderator = false
     },
     isRecentLocation(location) {
-      return this.user.recent_locations.some(recentLocation => recentLocation.id === location.id)
+      return this.user.recent_locations.some(recentLocation => geo_utils.getLocationId(recentLocation) === geo_utils.getLocationId(location))
     },
     addRecentLocation(location) {
       this.user.recent_locations = utils.addObjectToArray(this.user.recent_locations, location, true)
@@ -87,7 +88,7 @@ export const useAppStore = defineStore('app', {
       this.user.recent_locations = []
     },
     isFavoriteLocation(location) {
-      return this.user.favorite_locations.some(favoriteLocation => favoriteLocation.id === location.id)
+      return this.user.favorite_locations.some(favoriteLocation => geo_utils.getLocationId(favoriteLocation) === geo_utils.getLocationId(location))
     },
     addFavoriteLocation(location) {
       this.user.favorite_locations = utils.addObjectToArray(this.user.favorite_locations, location, true)
