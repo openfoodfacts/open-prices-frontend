@@ -1,5 +1,5 @@
 <template>
-  <v-chip :class="{ 'cursor-default': readonly }" label size="small" :prepend-icon="CURRENCY_ICON" density="comfortable" :color="currencyMissingAndShowError ? 'error' : 'default'" @click="goToCurrency()">
+  <v-chip label size="small" :prepend-icon="CURRENCY_ICON" density="comfortable" :color="currencyMissingAndShowError ? 'error' : 'default'" :to="getCurrencyUrl">
     <span v-if="currency">{{ currency }}</span>
     <span v-else-if="currencyMissingAndShowError">
       <i class="text-lowercase">{{ $t('Common.Currency') }}</i>
@@ -36,15 +36,10 @@ export default {
   computed: {
     currencyMissingAndShowError() {
       return !this.currency && this.showErrorIfCurrencyMissing
-    }
-  },
-  methods: {
-    goToCurrency() {
-      if (this.readonly || !this.currency) {
-        return
-      }
-      this.$router.push({ path: `/currencies/${this.currency}` })
     },
+    getCurrencyUrl() {
+      return this.currency && !this.readonly ? `/currencies/${this.currency}` : null
+    }
   }
 }
 </script>

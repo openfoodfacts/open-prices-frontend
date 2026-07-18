@@ -1,5 +1,5 @@
 <template>
-  <v-chip :class="{ 'cursor-default': readonly }" label size="small" density="comfortable" @click="goToOrigin()">
+  <v-chip label size="small" density="comfortable" :to="getOriginUrl">
     {{ originLocalizedName || origin }}
   </v-chip>
 </template>
@@ -32,6 +32,9 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    getOriginUrl() {
+      return this.origin && !this.readonly ? `/origins/${this.origin}` : null
+    },
   },
   mounted() {
     this.setOriginLocalizedName(this.origin)
@@ -45,12 +48,6 @@ export default {
       } else {
         this.originLocalizedName = null
       }
-    },
-    goToOrigin() {
-      if (this.readonly || !this.origin) {
-        return
-      }
-      this.$router.push({ path: `/origins/${this.origin}` })
     },
   }
 }

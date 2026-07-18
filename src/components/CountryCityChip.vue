@@ -1,5 +1,5 @@
 <template>
-  <v-chip :class="{ 'cursor-default': readonly }" label size="small" density="comfortable" @click="goToCountryCity()">
+  <v-chip label size="small" density="comfortable" :to="getCountryCityUrl">
     {{ getCountryCityName }}
   </v-chip>
 </template>
@@ -37,20 +37,12 @@ export default {
     getCountryCityUrl() {
       const countryUrl = `/countries/${this.country}`
       if (this.type === 'country') {
-        return this.country ? countryUrl : null
+        return this.country && !this.readonly ? countryUrl : null
       } else if (this.type === 'city') {
-        return this.city ? `${countryUrl}/cities/${this.city}` : null
+        return this.city && !this.readonly ? `/cities/${this.country}/${this.city}` : null
       }
       return null
     }
   },
-  methods: {
-    goToCountryCity() {
-      if (this.readonly || !this.getCountryCityUrl) {
-        return
-      }
-      this.$router.push({ path: this.getCountryCityUrl })
-    },
-  }
 }
 </script>

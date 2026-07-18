@@ -1,5 +1,5 @@
 <template>
-  <v-chip :class="{ 'cursor-default': readonly }" label size="small" density="comfortable" @click="goToUser()">
+  <v-chip label size="small" density="comfortable" :to="getUserUrl">
     <v-icon start :icon="USER_ICON" />
     {{ username }}
   </v-chip>
@@ -24,13 +24,10 @@ export default {
       USER_ICON: constants.USER_ICON
     }
   },
-  methods: {
-    goToUser() {
-      if (this.readonly) {
-        return
-      }
-      this.$router.push({ path: `/users/${this.username}` })
-    },
+  computed: {
+    getUserUrl() {
+      return this.username && !this.readonly ? `/users/${this.username}` : null
+    }
   }
 }
 </script>

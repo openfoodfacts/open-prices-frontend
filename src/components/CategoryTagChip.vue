@@ -1,5 +1,5 @@
 <template>
-  <v-chip :class="{ 'cursor-default': readonly }" label size="small" density="comfortable" @click="goToCategory()">
+  <v-chip label size="small" density="comfortable" :to="getCategoryUrl">
     {{ categoryLocalizedName || category }}
   </v-chip>
 </template>
@@ -32,6 +32,9 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    getCategoryUrl() {
+      return this.category && !this.readonly ? `/categories/${this.category}` : null
+    }
   },
   mounted() {
     this.setCategoryLocalizedName(this.category)
@@ -45,12 +48,6 @@ export default {
       } else {
         this.categoryLocalizedName = null
       }
-    },
-    goToCategory() {
-      if (this.readonly || !this.category) {
-        return
-      }
-      this.$router.push({ path: `/categories/${this.category}` })
     },
   }
 }
