@@ -78,17 +78,19 @@ export default {
       isLoading: false // Local state for UI only
     }
   },
-  async mounted() {
+  mounted() {
     this.isLoading = true
-    try {
-      const data = await api.fetchPrices()
-      const store = useAppStore()
-      store.setPrices(data) // Global state goes in Pinia
-    } catch (err) {
-      console.error(err)
-    } finally {
-      this.isLoading = false
-    }
+    api.fetchPrices()
+      .then((data) => {
+        const store = useAppStore()
+        store.setPrices(data) // Global state goes in Pinia
+      })
+      .catch((err) => {
+        console.error(err)
+      })
+      .finally(() => {
+        this.isLoading = false
+      })
   }
 }
 </script>
