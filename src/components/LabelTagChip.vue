@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable" @click="goToLabel()">
+  <v-chip label size="small" density="comfortable" :to="getLabelUrl">
     {{ labelLocalizedName || label }}
     <v-icon v-if="label === 'en:organic'" icon="mdi-leaf-circle-outline" end />
   </v-chip>
@@ -47,12 +47,9 @@ export default {
         this.labelLocalizedName = null
       }
     },
-    goToLabel() {
-      if (this.readonly || !this.label) {
-        return
-      }
-      this.$router.push({ path: `/labels/${this.label}` })
-    },
+    get getLabelUrl() {
+      return this.label && !this.readonly ? `/labels/${this.label}` : null
+    }
   }
 }
 </script>

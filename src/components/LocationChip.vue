@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" :prepend-icon="getLocationIcon" density="comfortable" :color="locationMissingAndShowError ? 'error' : 'default'" @click="goToLocation()">
+  <v-chip label size="small" :prepend-icon="getLocationIcon" density="comfortable" :color="locationMissingAndShowError ? 'error' : 'default'" :to="getLocationUrl">
     <span v-if="locationNotMissing">{{ getLocationTitle }}</span>
     <span v-if="getLocationEmoji" style="margin-inline-start:5px">{{ getLocationEmoji }}</span>
     <span v-else-if="locationMissingAndShowError">
@@ -61,15 +61,10 @@ export default {
     },
     locationMissingAndShowError() {
       return !this.locationNotMissing && this.showErrorIfLocationMissing
-    }
-  },
-  methods: {
-    goToLocation() {
-      if (!this.locationId || this.readonly) {
-        return
-      }
-      this.$router.push({ path: `/locations/${this.locationId}` })
     },
+    getLocationUrl() {
+      return this.locationId && !this.readonly ? `/locations/${this.locationId}` : null
+    }
   }
 }
 </script>
