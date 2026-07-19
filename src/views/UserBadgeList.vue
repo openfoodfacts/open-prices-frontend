@@ -21,6 +21,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import openPricesApi from '../services/openPricesApi'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -33,16 +34,23 @@ export default {
       // data
       userBadgeList: [],
       userBadgeTotal: null,
+      userBadgePage: 0,
       loading: false,
     }
   },
   computed: {
     getUserBadgesParams() {
-      return { }
+      return { page: this.userBadgePage }
     },
   },
   mounted() {
     this.getBadges()
+    // load more
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
     initBadgeList() {
@@ -52,12 +60,19 @@ export default {
     getBadges() {
       if ((this.userBadgeTotal != null) && (this.userBadgeList.length >= this.userBadgeTotal)) return
       this.loading = true
+      this.userBadgePage += 1
       openPricesApi.getUserBadges(this.username, this.getUserBadgesParams)
         .then((data) => {
-          this.userBadgeList = data
-          this.userBadgeTotal = data.length
+          if (!data.items) return
+          this.userBadgeList.push(...data.items)
+          this.userBadgeTotal = data.total
           this.loading = false
         })
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getBadges()
+      }
     },
   },
 }

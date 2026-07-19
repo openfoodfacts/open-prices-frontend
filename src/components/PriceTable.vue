@@ -11,7 +11,7 @@
       <PriceCategoryDetailsRow v-else :price="item" />
     </template>
     <template #[`item.location`]="{ item }">
-      <LocationChip :location="item.location" :locationId="item.location_id" :readonly="true" />
+      <LocationChip :location="item.location" :locationId="item.location_id" />
     </template>
     <template #[`item.date`]="{ item }">
       <DateChip :date="item.date" :readonly="true" />

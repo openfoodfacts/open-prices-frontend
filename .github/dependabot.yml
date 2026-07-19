@@ -1,50 +1,49 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/" # Location of package manifests
+    directory: "/"
     schedule:
       interval: "monthly"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-    open-pull-requests-limit: 20
+    open-pull-requests-limit: 5
+    ignore:
+      - dependency-name: "eslint"
+      - dependency-name: "eslint-*"
+      - dependency-name: "@eslint/*"
+      - dependency-name: "@intlify/*"
+      - dependency-name: "cypress"
+      - dependency-name: "start-server-and-test"
+      - dependency-name: "autoprefixer"
+      - dependency-name: "postcss"
+      - dependency-name: "cross-env"
+      - dependency-name: "husky"
+      - dependency-name: "lint-staged"
+      - dependency-name: "@mdi/font"
     groups:
-      mui-packages:
-        # Define patterns to include dependencies in the group (based on dependency name)
+      vue-ecosystem:
         patterns:
-          - "@mui/*"
-      i18n:
+          - "vue"
+          - "vue-*"
+          - "pinia"
+          - "@vueuse/*"
+      vuetify:
         patterns:
-          - "i18next"
-          - "react-i18next"
-      basics:
+          - "vuetify"
+      maps:
         patterns:
-          - "@types/node"
-          - "@types/react"
-          - "@types/react-dom"
-          - "react"
-          - "react-dom"
-          - "typescript"
-      emotion:
+          - "leaflet"
+          - "@vue-leaflet/*"
+      visualization:
         patterns:
-          - "@emotion/*"
-      redux:
+          - "vega*"
+      openfoodfacts:
         patterns:
-          - "@reduxjs/toolkit"
-          - "react-redux"
-      vite:
+          - "openfoodfacts-*"
+      security:
         patterns:
-          - "@vitejs/plugin-react"
-          - "vite"
-      eslint:
-        patterns:
-          - "@typescript-eslint/*"
-          - "eslint"
+          - "@sentry/*"
+          - "keycloak-js"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "monthly"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-    open-pull-requests-limit: 20
+    open-pull-requests-limit: 5
