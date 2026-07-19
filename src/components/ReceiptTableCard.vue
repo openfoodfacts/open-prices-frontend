@@ -21,6 +21,10 @@
             <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.ProductMissing')" />
             <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.ProductMissing') }}</span>
           </v-sheet>
+          <v-sheet v-else-if="item.price_is_discounted && item.price !== null && item.price_without_discount !== null && Number(item.price) === Number(item.price_without_discount)">
+            <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.PriceSameAsDiscounted')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.PriceSameAsDiscounted') }}</span>
+          </v-sheet>
           <v-sheet v-else>
             <v-icon icon="mdi-tag-plus-outline" color="success" :title="$t('Common.PriceReadyToBeUploaded')" />
             <span v-if="$vuetify.display.smAndDown" class="text-success ml-2">{{ $t('Common.PriceReadyToBeUploaded') }}</span>
@@ -58,7 +62,8 @@
           <template v-else>
             <v-text-field
               v-model="item.price"
-              :class="item.price ? 'outline-border-success' : 'outline-border-error'"
+              :class="item.price && Number(item.price) === Number(item.price_without_discount)?'outline-border-error':
+                item.price ? 'outline-border-success' : 'outline-border-error'"
               density="compact"
               variant="outlined"
               type="text"
