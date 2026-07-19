@@ -32,6 +32,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import openPricesApi from '../services/openPricesApi'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -46,12 +47,24 @@ export default {
       badge: null,
       badgeUserList: [],
       badgeUserTotal: null,
+      badgeUserPage: 0,
       loading: false,
     }
+  },
+  computed: {
+    getBadgeUsersParams() {
+      return { page: this.badgeUserPage }
+    },
   },
   mounted() {
     this.getBadge()
     this.getUsers()
+    // load more
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
     getBadge() {
@@ -61,13 +74,21 @@ export default {
         })
     },
     getUsers() {
+      if ((this.badgeUserTotal != null) && (this.badgeUserList.length >= this.badgeUserTotal)) return
       this.loading = true
-      openPricesApi.getBadgeUsers(this.badgeId)
+      this.badgeUserPage += 1
+      openPricesApi.getBadgeUsers(this.badgeId, this.getBadgeUsersParams)
         .then((data) => {
           this.loading = false
-          this.badgeUserList = data.items
+          if (!data.items) return
+          this.badgeUserList.push(...data.items)
           this.badgeUserTotal = data.total
         })
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getUsers()
+      }
     },
   },
 }
