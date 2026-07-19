@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "您添加的價格",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -186,6 +185,10 @@
 		"Added": "額外",
 		"AdditionalInfo": "附加資訊",
 		"All": "全部 ",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "條碼 ",
 		"Barcodes": "條碼",
 		"BarcodeScan": "掃描條碼",
@@ -325,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "隱藏帶有價格的地點",
 		"FilterUserWithPriceCountHide": "隱藏提供價格的貢獻者",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Fix",
 		"FAQ": "常見問題",
 		"FrequentlyAskedQuestions": "常見問答集",
@@ -460,6 +464,7 @@
 		"Recent": "最近的",
 		"Re-open": "重新開放",
 		"ReportProblem": "Report a problem",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Reset",
 		"Resolved": "已解決",
 		"Reuses": "重複使用",
@@ -839,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "探索"

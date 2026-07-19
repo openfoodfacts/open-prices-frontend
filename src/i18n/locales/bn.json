@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "আপনার দ্বারা যোগ করা দাম",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -186,6 +185,10 @@
 		"Added": "যোগ করা হয়েছে",
 		"AdditionalInfo": "Additional information",
 		"All": "All",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "বারকোড",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -325,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Fix",
 		"FAQ": "প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
@@ -460,6 +464,7 @@
 		"Recent": "Recent",
 		"Re-open": "পুনরায় খুলুন",
 		"ReportProblem": "Report a problem",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Reset",
 		"Resolved": "সমাধান করা হয়েছে",
 		"Reuses": "Reuses",
@@ -839,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "অন্বেষণ করুন"

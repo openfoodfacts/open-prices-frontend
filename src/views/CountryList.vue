@@ -1,9 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <v-chip label variant="text" prepend-icon="mdi-map-marker-outline">
-        {{ $t('Common.CountryCount', { count: countryList.length }) }}
-      </v-chip>
+      <CountTextChip kind="country" :count="countryList.length" />
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="countryList.length" :totalCount="countryTotal" />
         <FilterMenu kind="country" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
@@ -33,6 +31,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
@@ -102,7 +101,7 @@ export default {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
-        // this.initLocationList() will be called in watch $route
+        // this.initCountryList() will be called in watch $route
       }
     },
   }

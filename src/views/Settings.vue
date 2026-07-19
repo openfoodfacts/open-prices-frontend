@@ -130,7 +130,7 @@
     </v-col>
 
     <v-col cols="12" sm="6">
-      <v-card :title="$t('Common.DeveloperMode')" prepend-icon="mdi-test-tube">
+      <v-card :title="$t('Common.DeveloperMode')" :prepend-icon="EXPERIMENTS_ICON">
         <v-divider />
         <v-card-text>
           <!-- Products -->
@@ -212,6 +212,7 @@ export default {
       theme: useTheme(),
       languageList,
       OFF_CROWDIN_URL: constants.OFF_CROWDIN_URL,
+      EXPERIMENTS_ICON: constants.EXPERIMENTS_ICON,
       countryTags: [],  // list of country tags for autocomplete  // see mounted
       // currencyList,
       priceListDisplayList: constants.DISPLAY_LIST,

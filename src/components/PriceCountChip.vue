@@ -1,12 +1,14 @@
 <template>
   <v-chip label size="small" density="comfortable" :color="getColor()">
-    <v-icon start icon="mdi-tag-outline" />
+    <v-icon start :icon="PRICE_ICON" />
     <span v-if="withLabel" id="price-count">{{ $t('Common.PriceCount', { count: count }) }}</span>
     <span v-else id="price-count">{{ count }}</span>
   </v-chip>
 </template>
 
 <script>
+import constants from '../constants'
+
 export default {
   props: {
     count: {
@@ -21,6 +23,11 @@ export default {
       type: String,
       default: null,
       examples: ['proof', 'location', 'product', 'category', 'date', 'currency', 'user']
+    }
+  },
+  data() {
+    return {
+      PRICE_ICON: constants.PRICE_ICON
     }
   },
   methods: {

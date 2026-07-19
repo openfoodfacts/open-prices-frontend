@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} ціни від вас",
 		"PricesAddedByYou": "Ціни, додані вами",
 		"MostRecentContributions": "Найновіші внески",
-		"ChallengeCount": "{count} виклики | {count} виклик | {count} виклики",
 		"ChallengeStatuses": {
 			"DRAFT": "Чернетка",
 			"UPCOMING": "Незабаром",
@@ -186,6 +185,10 @@
 		"Added": "Додано",
 		"AdditionalInfo": "Додаткова інформація",
 		"All": "Усі",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Код товару",
 		"Barcodes": "Штрих-коди",
 		"BarcodeScan": "Просканувати штрих-код",
@@ -325,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Приховати місця з цінами",
 		"FilterUserWithPriceCountHide": "Приховати учасників із цінами",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Виправити",
 		"FAQ": "ЧаПИ",
 		"FrequentlyAskedQuestions": "Найбільш поширені запитання",
@@ -460,6 +464,7 @@
 		"Recent": "Недавні",
 		"Re-open": "Знову відкрити",
 		"ReportProblem": "Повідомити про проблему",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Скинути",
 		"Resolved": "Вирішено",
 		"Reuses": "Повторне використання",
@@ -839,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Дослідити"

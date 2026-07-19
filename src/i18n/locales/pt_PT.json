@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} preços por si",
 		"PricesAddedByYou": "Preços adicionados por si",
 		"MostRecentContributions": "Contribuições mais recentes",
-		"ChallengeCount": "{count} desafios | {count} desafio | {count} desafios",
 		"ChallengeStatuses": {
 			"DRAFT": "Rascunho",
 			"UPCOMING": "Próximo",
@@ -186,6 +185,10 @@
 		"Added": "Adicionado",
 		"AdditionalInfo": "Informação adicional",
 		"All": "Todos",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Código de barras",
 		"Barcodes": "Códigos de barras",
 		"BarcodeScan": "Digitalizar um código de barras",
@@ -325,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Ocultar locais com preços",
 		"FilterUserWithPriceCountHide": "Ocultar colaboradores com preços",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Corrigir",
 		"FAQ": "Perguntas frequentes",
 		"FrequentlyAskedQuestions": "Perguntas frequentes",
@@ -460,6 +464,7 @@
 		"Recent": "Recente",
 		"Re-open": "Reabrir",
 		"ReportProblem": "Denunciar um problema",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Repor",
 		"Resolved": "Resolvido",
 		"Reuses": "Reutilizações",
@@ -839,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 localizações"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Explorar"

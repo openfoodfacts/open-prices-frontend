@@ -1,9 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <v-chip label variant="text" prepend-icon="mdi-trophy-variant">
-        {{ $t('Challenge.ChallengeCount', { count: challengeTotal }) }}
-      </v-chip>
+      <CountTextChip kind="challenge" :count="challengeTotal" />
     </v-col>
   </v-row>
 
@@ -72,12 +70,14 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     ChallengeCard: defineAsyncComponent(() => import('../components/ChallengeCard.vue')),
     ChallengeNewFormAlert: defineAsyncComponent(() => import('../components/ChallengeNewFormAlert.vue')),
   },
   data() {
     return {
+      // data
       challengeList: [],
       challengeTotal: null,
       challengePage: 0,

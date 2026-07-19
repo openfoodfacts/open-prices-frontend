@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} あなたによる価格",
 		"PricesAddedByYou": "あなたが追加した価格",
 		"MostRecentContributions": "最近の投稿",
-		"ChallengeCount": "{count} 課題 | {count} 課題 | {count} 課題",
 		"ChallengeStatuses": {
 			"DRAFT": "下書き",
 			"UPCOMING": "今後の予定",
@@ -186,6 +185,10 @@
 		"Added": "追加した",
 		"AdditionalInfo": "追加情報",
 		"All": "全て",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "バーコード",
 		"Barcodes": "バーコード",
 		"BarcodeScan": "バーコードをスキャンする",
@@ -325,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "価格付きの場所を非表示にする",
 		"FilterUserWithPriceCountHide": "価格付きの貢献者を非表示にする",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "修理",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "よくある質問",
@@ -460,6 +464,7 @@
 		"Recent": "最近の",
 		"Re-open": "再開",
 		"ReportProblem": "問題を報告する",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "リセット",
 		"Resolved": "解決済み",
 		"Reuses": "再利用",
@@ -839,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "探検する"

@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} harga oleh Anda",
 		"PricesAddedByYou": "Harga yang Anda tambahkan",
 		"MostRecentContributions": "Kontribusi terbaru",
-		"ChallengeCount": "{count} tantangan | {count} tantangan | {count} tantangan",
 		"ChallengeStatuses": {
 			"DRAFT": "Draf",
 			"UPCOMING": "Akan datang",
@@ -186,6 +185,10 @@
 		"Added": "Ditambahkan",
 		"AdditionalInfo": "Informasi tambahan",
 		"All": "Semua",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Kode batang",
 		"Barcodes": "Kode batang",
 		"BarcodeScan": "Pindai barcode",
@@ -325,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Sembunyikan lokasi dengan harga",
 		"FilterUserWithPriceCountHide": "Sembunyikan kontributor dengan harga",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Perbaiki",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "Pertanyaan yang sering diajukan",
@@ -460,6 +464,7 @@
 		"Recent": "Terbaru",
 		"Re-open": "Buka kembali",
 		"ReportProblem": "Laporkan masalah",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Atur ulang",
 		"Resolved": "Terselesaikan",
 		"Reuses": "Penggunaan kembali",
@@ -839,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Mengeksplorasi"

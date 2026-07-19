@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Priser som du har lagt till",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Kommande",
@@ -186,6 +185,10 @@
 		"Added": "Tillagd",
 		"AdditionalInfo": "Ytterligare information",
 		"All": "Alla",
+		"Badge": "Märke",
+		"Badges": "Märken",
+		"BadgeCount": "{count} märken | {count} märke | {count} märken",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Streckkod",
 		"Barcodes": "Streckkoder",
 		"BarcodeScan": "Skanna en streckkod",
@@ -325,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Inkludera priser som flaggats som ogiltiga (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Fix",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "Vanliga frågor",
@@ -460,6 +464,7 @@
 		"Recent": "Senaste",
 		"Re-open": "Öppna igen",
 		"ReportProblem": "Rapportera ett problem",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Återställ",
 		"Resolved": "Löst",
 		"Reuses": "Reuses",
@@ -839,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Märken"
 		},
 		"Explore": {
 			"Title": "Utforska"

@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} eigene Preise",
 		"PricesAddedByYou": "Von Ihnen hinzugefügte Preise",
 		"MostRecentContributions": "Neueste Beiträge",
-		"ChallengeCount": "{count} Herausforderungen | {count} Herausforderung | {count} Herausforderungen",
 		"ChallengeStatuses": {
 			"DRAFT": "Entwurf",
 			"UPCOMING": "Demnächst",
@@ -186,6 +185,10 @@
 		"Added": "Hinzugefügt",
 		"AdditionalInfo": "Zusätzliche Informationen",
 		"All": "Alle",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Strichcode",
 		"Barcodes": "Strichcode",
 		"BarcodeScan": "Strichcode einlesen",
@@ -325,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Orte mit Preisen ausblenden",
 		"FilterUserWithPriceCountHide": "Mitwirkende mit Preisen ausblenden",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Beheben",
 		"FAQ": "Häufig gestellte Fragen",
 		"FrequentlyAskedQuestions": "Häufig gestellte Fragen",
@@ -460,6 +464,7 @@
 		"Recent": "Neueste",
 		"Re-open": "Wieder öffnen",
 		"ReportProblem": "Problem melden",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Zurücksetzten",
 		"Resolved": "Gelöst",
 		"Reuses": "Wiederverwendung",
@@ -839,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "2 Standorte vergleichen"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Entdecken"

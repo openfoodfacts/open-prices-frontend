@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} τιμές από εσάς",
 		"PricesAddedByYou": "Τιμές που προστέθηκαν από εσάς",
 		"MostRecentContributions": "Οι πιο πρόσφατες συνεισφορές",
-		"ChallengeCount": "{count} προκλήσεις | {count} πρόκληση | {count} προκλήσεις",
 		"ChallengeStatuses": {
 			"DRAFT": "Προσχέδιο",
 			"UPCOMING": "Επερχόμενες",
@@ -186,6 +185,10 @@
 		"Added": "Προστέθηκε",
 		"AdditionalInfo": "Πρόσθετες πληροφορίες",
 		"All": "Όλα",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Γραμμικός κωδικός",
 		"Barcodes": "Γραμμωτοί κώδικες",
 		"BarcodeScan": "Σάρωση ενός γραμμωτού κώδικα",
@@ -325,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Απόκρυψη τοποθεσιών με τιμές",
 		"FilterUserWithPriceCountHide": "Απόκρυψη συνεισφερόντων με τιμές",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Επιδιόρθωση",
 		"FAQ": "Συχνές ερωτήσεις",
 		"FrequentlyAskedQuestions": "Συχνές ερωτήσεις",
@@ -460,6 +464,7 @@
 		"Recent": "Πρόσφατος",
 		"Re-open": "Ξανανοίγω",
 		"ReportProblem": "Αναφορά πρόβληματος",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Επαναφορά",
 		"Resolved": "Αποφασισμένος",
 		"Reuses": "Επαναχρήσεις",
@@ -839,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Συγκρίνετε 2 τοποθεσίες"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Εξερευνώ"

@@ -149,7 +149,6 @@
 		"PricesByYou": "{challenge_title} מחירים על ידיך",
 		"PricesAddedByYou": "מחירים שנוספו על ידך",
 		"MostRecentContributions": "התרומות האחרונות",
-		"ChallengeCount": "{count} אתגרים | אתגר | {count} אתגרים",
 		"ChallengeStatuses": {
 			"DRAFT": "טיוטה",
 			"UPCOMING": "בקרוב",
@@ -186,6 +185,10 @@
 		"Added": "נוסף",
 		"AdditionalInfo": "מידע נוסף",
 		"All": "הכול",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "ברקוד",
 		"Barcodes": "ברקודים",
 		"BarcodeScan": "סריקת ברקוד",
@@ -325,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "הסתרת מקומות עם מחירים",
 		"FilterUserWithPriceCountHide": "הסתרת תרומות עם מחירים",
+		"FilterFlagShowClosed": "לכלול דוחות שנסגרו",
 		"Fix": "תיקון",
 		"FAQ": "שו״ת",
 		"FrequentlyAskedQuestions": "שאלות נפוצות",
@@ -460,6 +464,7 @@
 		"Recent": "אחרונים",
 		"Re-open": "פתיחה מחדש",
 		"ReportProblem": "דיווח על תקלה",
+		"ReportCount": "{count} דוחות | דוח | {count} דוחות",
 		"Reset": "איפוס",
 		"Resolved": "נפתר",
 		"Reuses": "גזירות",
@@ -839,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "לַחקוֹר"

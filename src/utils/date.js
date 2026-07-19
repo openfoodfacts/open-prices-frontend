@@ -33,6 +33,14 @@ function currentStartOfDay() {
 }
 
 /**
+ * input: '2023-12-25' or '2023-12-25T17:08:19.021410+01:00'
+ * output: '2023-12-25'
+ */
+function dateShort(dateString) {
+  return dateString?.substring(0, 10)
+}
+
+/**
  * input: '2023-12-25'
  * output: '2023-12-25T00:00:00.000Z'
  */
@@ -148,6 +156,7 @@ export default {
   currentDate,
   currentDateTime,
   currentStartOfDay,
+  dateShort,
   dateStartOfDay,
   dateEndOfDay,
   oneMonthAgoDate,

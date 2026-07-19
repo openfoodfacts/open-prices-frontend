@@ -149,7 +149,6 @@
 		"PricesByYou": "الأسعار من اختيارك {challenge_title}",
 		"PricesAddedByYou": "الأسعار التي أضفتها",
 		"MostRecentContributions": "أحدث المساهمات",
-		"ChallengeCount": "{count} تحديات | {count} تحدي | {count} تحديات",
 		"ChallengeStatuses": {
 			"DRAFT": "مسودة",
 			"UPCOMING": "قريباً",
@@ -186,6 +185,10 @@
 		"Added": "تمت الإضافة",
 		"AdditionalInfo": "معلومات إضافية",
 		"All": "الكل",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "الرمز الشريطي",
 		"Barcodes": "الرموز الشريطية",
 		"BarcodeScan": "امسح الرمز الشريطي",
@@ -325,6 +328,7 @@
 		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "إخفاء المواقع التي تحتوي على الأسعار",
 		"FilterUserWithPriceCountHide": "إخفاء المساهمين الذين لديهم أسعار",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "يصلح",
 		"FAQ": "الأسئلة المتكررة",
 		"FrequentlyAskedQuestions": "أسئلة مكررة",
@@ -460,6 +464,7 @@
 		"Recent": "مؤخرًا",
 		"Re-open": "إعادة فتح",
 		"ReportProblem": "إبلاغ عن مشكلة",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "إعادة الضبط",
 		"Resolved": "تم الحل",
 		"Reuses": "إعادة الاستخدام",
@@ -839,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "قارن بين موقعين"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "يستكشف"

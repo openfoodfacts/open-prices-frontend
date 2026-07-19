@@ -1,5 +1,16 @@
 <template>
   <v-row>
+    <v-col>
+      <CountTextChip kind="report" :count="flagTotal" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="flagList.length" :totalCount="flagTotal" />
+        <FilterMenu kind="flag" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleFlagType($event)" @update:currentKind="toggleFlagKind($event)" />
+        <OrderMenu kind="flag" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      </template>
+    </v-col>
+  </v-row>
+
+  <v-row class="mt-0">
     <v-col cols="12">
       <v-data-table :headers="tableHeaders" :items="flagList" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
         <template #[`item.object`]="{ item }">
@@ -20,7 +31,7 @@
           <v-btn v-if="item.status === 'OPEN'" size="x-small" color="success" variant="outlined" prepend-icon="mdi-check-bold" @click="toggleFlagStatus(item)">
             {{ $t('Common.Close') }}
           </v-btn>
-          <v-btn v-if="item.status === 'CLOSED'" size="x-small" color="warning" variant="outlined" prepend-icon="mdi-flag" @click="toggleFlagStatus(item)">
+          <v-btn v-if="item.status === 'CLOSED'" size="x-small" color="warning" variant="outlined" :prepend-icon="REPORT_ICON" @click="toggleFlagStatus(item)">
             {{ $t('Common.Re-open') }}
           </v-btn>
         </template>
@@ -37,16 +48,22 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import openPricesApi from '../services/openPricesApi'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
   components: {
+    CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     ModerationReasonChip: defineAsyncComponent(() => import('../components/ModerationReasonChip.vue')),
     ModerationStatusChip: defineAsyncComponent(() => import('../components/ModerationStatusChip.vue')),
     RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
   },
   data() {
     return {
+      REPORT_ICON: constants.REPORT_ICON,
       // data
       flagList: [],
       flagTotal: null,
@@ -63,16 +80,39 @@ export default {
       ],
       tablePageLimit: -1,  // all items
       // filter & order
-      currentOrder: '-id'
+      currentFilterList: [],
+      currentType: '',
+      currentKind: '',
+      currentOrder: constants.MODERATION_FLAG_ORDER_LIST[0].key,  // created first
     }
   },
   computed: {
     getFlagsParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.flagPage }
+      if (!this.currentFilterList.includes('show_closed')) {
+        defaultParams['status'] = 'OPEN'
+      }
+      if (this.currentType) {
+        defaultParams['content_type'] = this.currentType
+      }
+      if (this.currentKind) {
+        defaultParams['reason'] = this.currentKind
+      }
       return defaultParams
     }
   },
+  watch: {
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.initFlagList()
+      }
+    }
+  },
   mounted() {
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
+    this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
+    this.currentKind = this.$route.query[constants.KIND_PARAM] || this.currentKind
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initFlagList()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
@@ -84,6 +124,7 @@ export default {
   methods: {
     initFlagList() {
       this.flagList = []
+      this.flagTotal = null
       this.flagPage = 0
       this.getFlags()
     },
@@ -107,6 +148,28 @@ export default {
         .then(() => {
           this.initFlagList()
         })
+    },
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      // this.initFlagList() will be called in watch $route
+    },
+    toggleFlagType(sourceKey) {
+      this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
+      this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
+      // this.initFlagList() will be called in watch $route
+    },
+    toggleFlagKind(kindKey) {
+      this.currentKind = (this.currentKind !== kindKey) ? kindKey : ''
+      this.$router.push({ query: { ...this.$route.query, [constants.KIND_PARAM]: this.currentKind } })
+      // this.initFlagList() will be called in watch $route
+    },
+    updateOrder(orderKey) {
+      if (this.currentOrder !== orderKey) {
+        this.currentOrder = orderKey
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        // this.initFlagList() will be called in watch $route
+      }
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {

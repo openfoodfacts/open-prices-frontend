@@ -187,6 +187,16 @@ export default {
     }, true)
     .then((response) => response.json())
   },
+
+  getUserBadges(userId, params = {}) {
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
+    const endpointWithParams = `/users/${userId}/badges?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'GET',
+    }, true)
+    .then((response) => response.json())
+  },
+
   createProof(image, inputData, source = null) {
     const store = useAppStore()
     // build body
@@ -519,6 +529,24 @@ export default {
     .then((response) => response.json())
   },
 
+  getChallenges(params = {}) {
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE, order_by: '-id'}
+    const endpointWithParams = `/challenges?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'GET',
+    })
+    .then((response) => response.json())
+  },
+
+  getBadges(params = {}) {
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
+    const endpointWithParams = `/badges?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'GET',
+    })
+    .then((response) => response.json())
+  },
+
   getFlags(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
     const endpointWithParams = `/flags?${buildURLParams({...defaultParams, ...params})}`
@@ -556,15 +584,6 @@ export default {
 
   getPriceStats(params = {}) {
     const endpointWithParams = `/prices/stats?${buildURLParams({...params})}`
-    return fetchOpenPrices(endpointWithParams, {
-      method: 'GET',
-    })
-    .then((response) => response.json())
-  },
-
-  getChallenges(params = {}) {
-    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE, order_by: '-id'}
-    const endpointWithParams = `/challenges?${buildURLParams({...defaultParams, ...params})}`
     return fetchOpenPrices(endpointWithParams, {
       method: 'GET',
     })
