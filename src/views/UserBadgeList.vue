@@ -54,8 +54,8 @@ export default {
       this.loading = true
       openPricesApi.getUserBadges(this.username, this.getUserBadgesParams)
         .then((data) => {
-          this.userBadgeList = data
-          this.userBadgeTotal = data.length
+          this.userBadgeList = data.items
+          this.userBadgeTotal = data.total
           this.loading = false
         })
     },

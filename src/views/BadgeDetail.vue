@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <BadgeCard :badge="badge" />
+      <BadgeCard v-if="badge" :badge="badge" readonly />
     </v-col>
   </v-row>
 
@@ -11,7 +11,7 @@
         {{ $t('Common.Users') }}
       </h2>
       <template v-if="!loading">
-        <LoadedCountChip :loadedCount="badgeUserList.length" :totalCount="badge.user_count" />
+        <LoadedCountChip :loadedCount="badgeUserList.length" :totalCount="badgeUserTotal" />
       </template>
     </v-col>
   </v-row>
@@ -45,6 +45,7 @@ export default {
       // data
       badge: null,
       badgeUserList: [],
+      badgeUserTotal: null,
       loading: false,
     }
   },
@@ -64,7 +65,8 @@ export default {
       openPricesApi.getBadgeUsers(this.badgeId)
         .then((data) => {
           this.loading = false
-          this.badgeUserList = data
+          this.badgeUserList = data.items
+          this.badgeUserTotal = data.total
         })
     },
   },
