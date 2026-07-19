@@ -26,21 +26,20 @@
         </v-row>
         <ProofTypeInputRow :class="showTopAlertOrBanner ? 'mt-0' : ''" :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
         <LocationInputRow class="mt-0" :locationForm="proofForm" @location="locationObject = $event" />
-        <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" :numberProofsSelected="proofDraftsList.length" @proofList="proofImageList = $event" />
-        <ProofImagePreviewList v-if="proofDraftsList.length" class="mt-0" :proofObjectList="proofDraftsList" @removeProof="removeProof" />
+        <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
         <ProofMetadataInputRow class="mt-0" :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
       </v-sheet>
       <v-sheet v-else-if="step === 2">
         <v-progress-linear
           v-model="proofObjectList.length"
-          :max="proofDraftsList.length"
-          :color="proofDraftsList.length === proofObjectList.length ? 'success' : 'primary'"
+          :max="proofImageList.length"
+          :color="proofImageList.length === proofObjectList.length ? 'success' : 'primary'"
           height="25"
           :indeterminate="proofObjectList.length ? false : true"
-          :striped="proofDraftsList.length !== proofObjectList.length"
+          :striped="proofImageList.length !== proofObjectList.length"
           rounded
         >
-          <strong>{{ $t('Common.ProofUploadProgress', { numberOfProofsUploaded: proofObjectList.length, totalNumberOfProofs: proofDraftsList.length }) }}</strong>
+          <strong>{{ $t('Common.ProofUploadProgress', { numberOfProofsUploaded: proofObjectList.length, totalNumberOfProofs: proofImageList.length }) }}</strong>
         </v-progress-linear>
         <v-alert
           class="mt-4"
@@ -56,7 +55,7 @@
     <v-card-actions v-if="step === 1">
       <v-spacer v-if="$vuetify.display.smAndUp" />
       
-      <v-btn v-if="proofDraftsList.length > 0 && proofIsTypeReceipt" @click="() => { showAnonymizeDialog = true }">
+      <v-btn v-if="proofImageList.length > 0 && proofIsTypeReceipt" @click="() => { showAnonymizeDialog = true }">
         {{ $t('XXX.Anonymize') }}
       </v-btn>
       <v-btn
@@ -65,10 +64,10 @@
         variant="flat"
         type="submit"
         :block="!$vuetify.display.smAndUp"
-        :disabled="!readyToFinalize"
-        @click="finalizeDraftProofs"
+        :disabled="!proofFormFilled"
+        @click="uploadProofList"
       >
-        <span v-if="multiple && proofDraftsList.length">{{ $t('Common.UploadMultipleProofs', { count: proofDraftsList.length }) }}</span>
+        <span v-if="multiple && proofImageList.length">{{ $t('Common.UploadMultipleProofs', { count: proofImageList.length }) }}</span>
         <span v-else>{{ $t('Common.Upload') }}</span>
       </v-btn>
     </v-card-actions>
@@ -78,7 +77,7 @@
     <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
   </v-sheet>
 
-  <ReceiptAnonymizerDialog v-if="showAnonymizeDialog" v-model="showAnonymizeDialog" :draftProof="proofDraftsList[0]" @done="anonymizeDone" />
+  <ReceiptAnonymizerDialog v-if="showAnonymizeDialog" v-model="showAnonymizeDialog" :draftProof="proofImageList[0]" @done="anonymizeDone" />
   <v-snackbar
     v-model="proofDateSuccessMessage"
     color="primary"
@@ -122,7 +121,6 @@ export default {
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
-    ProofImagePreviewList: defineAsyncComponent(() => import('../components/ProofImagePreviewList.vue')),
     ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     ReceiptAnonymizerDialog: defineAsyncComponent(() => import('../components/ReceiptAnonymizerDialog.vue')),
@@ -179,8 +177,7 @@ export default {
       proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
       proofImageList: [],  // images to upload
-      proofDraftsList: [],  // images uploaded as drafts
-      proofObjectList: [],  // images uploaded (drafts finalized)
+      proofObjectList: [],  // images uploaded
       loading: false,
       showAnonymizeDialog: false,
     }
@@ -206,7 +203,7 @@ export default {
       return this.proofIsTypePriceTag || this.proofIsTypeReceipt
     },
     proofImageFormFilled() {
-      return !!this.proofDraftsList.length
+      return !!this.proofImageList.length
     },
     proofLocationFormFilled() {
       let keysOSM = ['location_osm_id', 'location_osm_type']
@@ -219,9 +216,6 @@ export default {
     },
     proofFormFilled() {
       return this.proofTypeFormFilled && this.proofImageFormFilled && this.proofLocationFormFilled && this.proofMetadataFormFilled
-    },
-    readyToFinalize() {
-      return this.proofDraftsList.every(proof => proof.id) && this.proofFormFilled
     },
     proofCardShowImageThumb() {
       return this.multiple ? true : false
@@ -237,7 +231,7 @@ export default {
       this.proofForm.proof_id = newProofObjectList[0].id
       this.proofForm.location_id = newProofObjectList[0].location_id
       // all proofs uploaded
-      if (this.proofObjectList.length === this.proofDraftsList.length) {
+      if (this.proofObjectList.length === this.proofImageList.length) {
         this.step = 3
         this.$emit('done', this.proofObjectList.length)
       }
@@ -303,7 +297,6 @@ export default {
             }
           }
         })
-        this.uploadProofsAsDrafts()
       }
     },
     compressProof(proofImage) {
@@ -318,23 +311,15 @@ export default {
         console.log(JSON.stringify(error))
       })
     },
-    uploadProofsAsDrafts() {
-      this.proofDraftsList = this.proofImageList.map((proofImage, index) => {
-        return {
-          localId: index,
-          blob: proofImage
-        }
-      })
+    uploadProofList() {
+      this.step = 2
       // chain uploads sequentially
-      this.proofDraftsList.reduce((promise, proof, index) => {
+      this.proofImageList.reduce((promise, proofImage) => {
         return promise.then(() =>
-          this.uploadProofAsDraft(proof.blob, this.proofForm.type)
+          this.uploadProof(proofImage)
             .then((data) => {
               if (data.id) {
-                this.proofDraftsList[index] = {
-                  ...data,
-                  localId: proof.localId
-                }
+                this.proofObjectList = this.proofObjectList.concat(data)
               }
             })
             .catch((error) => {
@@ -343,13 +328,13 @@ export default {
         )
       }, Promise.resolve())
     },
-    uploadProofAsDraft(proofImage, type) {
+    uploadProof(proofImage) {
       this.loading = true
       return new Promise((resolve, reject) => {  // eslint-disable-line no-unused-vars
         this.compressProof(proofImage)
           .then((proofImageCompressed) => {
             openPricesApi
-              .createDraftProof(proofImageCompressed, type)
+              .createProof(proofImageCompressed, this.proofForm, this.$route.path)
               .then((data) => {
                 this.loading = false
                 if (data.id) {
@@ -365,51 +350,14 @@ export default {
                 this.loading = false
               })
           })
-      })
-    },
-    removeProof(localId) {
-      this.proofDraftsList = this.proofDraftsList.filter(proof => proof.localId !== localId)
-    },
-    finalizeDraftProofs() {
-      this.step = 2
-      // chain uploads sequentially
-      this.proofDraftsList.reduce((promise, proofDraft) => {
-        return promise.then(() =>
-          this.finalizeDraftProof(proofDraft)
-            .then((data) => {
-              if (data.id) {
-                this.proofObjectList = this.proofObjectList.concat(data)
-              }
-            })
-            .catch((error) => {
-              console.log(JSON.stringify(error))
-            })
-        )
-      }, Promise.resolve())
-    },
-    finalizeDraftProof(proofDraft) {
-      this.loading = true
-      return new Promise((resolve, reject) => {  // eslint-disable-line no-unused-vars
-        openPricesApi
-          .finalizeDraftProof(proofDraft.id, this.proofForm, this.$route.path)
-          .then((data) => {
-            this.loading = false
-            if (data.id) {
-              resolve(data)
-            } else {
-              alert(`Error: ${JSON.stringify(data)}`)
-              console.log(JSON.stringify(data))
-            }
-          })
-          .catch((error) => {
-            alert(`Error: ${JSON.stringify(error)}`)
-            console.log(JSON.stringify(error))
-            this.loading = false
-          })
+          // .finally(() => {
+          //   console.log('Compress complete')
+          // })
       })
     },
     anonymizeDone() {
       this.showAnonymizeDialog = false
+      // TODO
       this.proofDraftsList[0].image_thumb_path = this.proofDraftsList[0].image_thumb_path + '?refetch'
     }
   }
