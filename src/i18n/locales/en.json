@@ -792,6 +792,16 @@
 		"Save": "Save",
 		"Success": "Proof edited!"
 	},
+	"ReceiptAnonymize": {
+		"Title": "Anonymize a receipt",
+		"Save": "Save",
+		"EditRedactBoxes": "Edit & redact boxes",
+		"EnableBoxDrawMode": "Enable box draw mode",
+		"EnableBoxRemoveMode": "Enable box remove mode",
+		"WaitingForReceiptUpload": "Waiting for receipt upload...",
+		"WaitingForAnonymizationPrediction": "Waiting for anonymization prediction...",
+		"Anonymize": "Anonymize"
+	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",

@@ -26,7 +26,30 @@
         </v-row>
         <ProofTypeInputRow :class="showTopAlertOrBanner ? 'mt-0' : ''" :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
         <LocationInputRow class="mt-0" :locationForm="proofForm" @location="locationObject = $event" />
-        <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
+        <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :hideProofImagePreview="receiptDraftProof !== null" :multiple="multiple" @proofList="proofImageList = $event" @anonymizeReceipt="showReceiptAnonymizeDialog = true" />
+        <v-row v-if="receiptDraftProof" class="mt-0">
+          <v-col cols="6">
+            <v-card class="d-flex flex-column" height="100%">
+              <v-card-text class="flex-grow-1 pa-2">
+                <v-img :src="receiptDraftProof.imagePreview" max-height="200px" />
+              </v-card-text>
+              <v-divider />
+              <v-card-actions>
+                <v-btn v-if="!$vuetify.display.smAndUp" color="error" variant="outlined" icon="mdi-delete" size="small" density="comfortable" :aria-label="$t('Common.Delete')" @click="removeImage(index)" />
+                <v-btn
+                  v-else
+                  color="error"
+                  variant="outlined"
+                  prepend-icon="mdi-delete"
+                  size="small"
+                  @click="deleteReceiptDraftProof"
+                >
+                  {{ $t('Common.Delete') }}
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
         <ProofMetadataInputRow class="mt-0" :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
       </v-sheet>
       <v-sheet v-else-if="step === 2">
@@ -54,10 +77,7 @@
     <v-divider v-if="step === 1" />
     <v-card-actions v-if="step === 1">
       <v-spacer v-if="$vuetify.display.smAndUp" />
-      
-      <v-btn v-if="proofImageList.length > 0 && proofIsTypeReceipt" @click="() => { showAnonymizeDialog = true }">
-        {{ $t('XXX.Anonymize') }}
-      </v-btn>
+
       <v-btn
         class="float-right"
         color="primary"
@@ -77,7 +97,7 @@
     <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
   </v-sheet>
 
-  <ReceiptAnonymizerDialog v-if="showAnonymizeDialog" v-model="showAnonymizeDialog" :draftProof="proofImageList[0]" @done="anonymizeDone" />
+  <ReceiptAnonymizerDialog v-if="showReceiptAnonymizeDialog" v-model="showReceiptAnonymizeDialog" :proofImage="proofImageList[0]" @done="receiptAnonymizeDone" />
   <v-snackbar
     v-model="proofDateSuccessMessage"
     color="primary"
@@ -103,6 +123,7 @@ import { useAppStore } from '../store'
 import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
+import proof_utils from '../utils/proof.js'
 
 Compressor.setDefaults({
   checkOrientation: true,  // default
@@ -179,7 +200,8 @@ export default {
       proofImageList: [],  // images to upload
       proofObjectList: [],  // images uploaded
       loading: false,
-      showAnonymizeDialog: false,
+      receiptDraftProof: null,
+      showReceiptAnonymizeDialog: false,
     }
   },
   computed: {
@@ -313,6 +335,10 @@ export default {
     },
     uploadProofList() {
       this.step = 2
+      if (this.receiptDraftProof) {
+        this.finalizeDraftProof(this.receiptDraftProof)
+        return
+      }
       // chain uploads sequentially
       this.proofImageList.reduce((promise, proofImage) => {
         return promise.then(() =>
@@ -355,10 +381,34 @@ export default {
           // })
       })
     },
-    anonymizeDone() {
-      this.showAnonymizeDialog = false
-      // TODO
-      this.proofDraftsList[0].image_thumb_path = this.proofDraftsList[0].image_thumb_path + '?refetch'
+    finalizeDraftProof(proofDraft) {
+      this.loading = true
+      openPricesApi
+        .finalizeDraftProof(proofDraft.id, this.proofForm, this.$route.path)
+        .then((data) => {
+          this.loading = false
+          if (data.id) {
+            this.proofObjectList = this.proofObjectList.concat(data)
+          } else {
+            alert(`Error: ${JSON.stringify(data)}`)
+            console.log(JSON.stringify(data))
+          }
+        })
+        .catch((error) => {
+          alert(`Error: ${JSON.stringify(error)}`)
+          console.log(JSON.stringify(error))
+          this.loading = false
+        })
+    },
+    receiptAnonymizeDone(draftProof) {
+      this.showReceiptAnonymizeDialog = false
+      this.receiptDraftProof = draftProof
+      this.receiptDraftProof.imagePreview = proof_utils.getImageFullUrl(this.receiptDraftProof.file_path)
+    },
+    deleteReceiptDraftProof() {
+      this.receiptDraftProof = null
+      this.proofImageList = []
+      // TODO: API call to delete draft proof. Should be clear, even if unused drafts are deleted after an hour
     }
   }
 }
