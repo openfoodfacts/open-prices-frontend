@@ -18,7 +18,7 @@
 
   <v-row class="mt-0">
     <v-col v-for="badgeUser in badgeUserList" :key="badgeUser.user_id" cols="12" sm="6" md="4" xl="3">
-      <UserCard :user="badgeUser.user" height="100%" />
+      <UserCard :user="badgeUser.user" :badgeAchievedAt="badgeUser.achieved_at" height="100%" />
     </v-col>
   </v-row>
 
