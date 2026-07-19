@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.170.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.169.0...v1.170.0) (2026-07-19)
+
+
+### Features
+
+* **Badges:** new detail page (with the list of users who achieved it, ordered by most recent) ([#2286](https://github.com/openfoodfacts/open-prices-frontend/issues/2286)) ([fb40acb](https://github.com/openfoodfacts/open-prices-frontend/commit/fb40acb237ff496967a0f341c77af4391fdbe939))
+
+
+### Bug Fixes
+
+* **Date Chip:** fix behavior when a datetime is passed (instead of a date) ([#2282](https://github.com/openfoodfacts/open-prices-frontend/issues/2282)) ([22706f6](https://github.com/openfoodfacts/open-prices-frontend/commit/22706f64eed441758dbdb79499c33a634e9ba271))
+* **Prices:** Table view: fix location link ([#2290](https://github.com/openfoodfacts/open-prices-frontend/issues/2290)) ([d18e23c](https://github.com/openfoodfacts/open-prices-frontend/commit/d18e23cfa180d37d057c85fad6cf98dcb02cf074))
+
+
+### Technical
+
+* add AGENTS.md for AI assistants ([#2274](https://github.com/openfoodfacts/open-prices-frontend/issues/2274)) ([6048659](https://github.com/openfoodfacts/open-prices-frontend/commit/6048659d08e1d6823edca64fb0b1eafb6d77d890))
+* **Badge Card:** display the metric & threshold in a chip ([#2285](https://github.com/openfoodfacts/open-prices-frontend/issues/2285)) ([bdea731](https://github.com/openfoodfacts/open-prices-frontend/commit/bdea7310ae7f2cf199b9e0719a28107470a4b90c))
+* **Chips:** improve the behavior when clickable (show url, default cursor when readonly) ([#2283](https://github.com/openfoodfacts/open-prices-frontend/issues/2283)) ([04f4194](https://github.com/openfoodfacts/open-prices-frontend/commit/04f4194221b6203b2dbdef3c51542477464c521a))
+* **Chips:** new BrandChip component ([#2284](https://github.com/openfoodfacts/open-prices-frontend/issues/2284)) ([713d0e7](https://github.com/openfoodfacts/open-prices-frontend/commit/713d0e761979688f051fa4cb382e2afc5a736211))
+* **Data:** update generated data from taxonomies ([#2287](https://github.com/openfoodfacts/open-prices-frontend/issues/2287)) ([b3d4a58](https://github.com/openfoodfacts/open-prices-frontend/commit/b3d4a584542e42bbee95b1d8ae2a1b40bd14d519))
+* **Dependabot:** reduce the number of generated PRs (ignore list, groups, PR limit) ([#2279](https://github.com/openfoodfacts/open-prices-frontend/issues/2279)) ([ff8b4be](https://github.com/openfoodfacts/open-prices-frontend/commit/ff8b4be77bed52bc0cfbe694fa1913a395fee939))
+* **deps:** bump actions/setup-node from 6 to 7 ([#2291](https://github.com/openfoodfacts/open-prices-frontend/issues/2291)) ([dd700a1](https://github.com/openfoodfacts/open-prices-frontend/commit/dd700a194031be39b57c71195606190d3881ee60))
+* **Location Chip:** better manage when location is missing ([#2280](https://github.com/openfoodfacts/open-prices-frontend/issues/2280)) ([0c1fff3](https://github.com/openfoodfacts/open-prices-frontend/commit/0c1fff32c15c00d848a0276e3f267367b979537f))
+
 ## [1.169.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.168.3...v1.169.0) (2026-07-18)
 
 
