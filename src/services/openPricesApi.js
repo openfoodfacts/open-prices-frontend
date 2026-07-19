@@ -491,6 +491,23 @@ export default {
     .then((response) => response.json())
   },
 
+  getBadgeById(badgeId) {
+    const endpointWithParams = `/badges/${badgeId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'GET',
+    })
+    .then((response) => response.json())
+  },
+
+  getBadgeUsers(badgeId, params = {}) {
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
+    const endpointWithParams = `/badges/${badgeId}/users?${buildURLParams({...defaultParams, ...params})}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'GET',
+    })
+    .then((response) => response.json())
+  },
+
   getFlags(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
     const endpointWithParams = `/flags?${buildURLParams({...defaultParams, ...params})}`
