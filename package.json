@@ -45,7 +45,7 @@
     "vue-matomo": "^4.2.0",
     "vue-router": "^4.6.4",
     "vue-zoomable": "^1.2.8",
-    "vuetify": "^3.11.8"
+    "vuetify": "^4.1.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
