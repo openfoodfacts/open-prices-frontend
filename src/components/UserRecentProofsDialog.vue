@@ -8,9 +8,7 @@
       <v-divider />
 
       <v-card-title>
-        <v-chip label variant="text" prepend-icon="mdi-image">
-          {{ $t('Common.ProofCount', { count: userProofTotal }) }}
-        </v-chip>
+        <CountTextChip kind="proof" :count="userProofTotal" />
         <template v-if="!loading">
           <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
           <FilterMenu v-if="!hideFilterMenu" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
@@ -46,6 +44,7 @@ import constants from '../constants'
 
 export default {
   components: {
+    CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),

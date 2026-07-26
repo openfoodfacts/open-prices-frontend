@@ -4,9 +4,9 @@
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <span class="chip-group">
-            <ProductCountChip v-if="sourceIsCategory" :count="productCount" :withLabel="true" />
+            <CountChip v-if="sourceIsCategory" kind="product" :count="productCount" :withLabel="true" />
             <PriceCountChip v-else-if="sourceIsProduct" :count="priceCount" />
-            <CategoryTagChip v-if="showProductCategoryTag" :category="category" :readonly="true" />
+            <CategoryTagChip v-if="showProductCategoryTag" :category="category.id" :readonly="true" />
           </span>
         </v-col>
         <v-col v-if="!hideActionMenuButton" cols="1">
@@ -24,7 +24,7 @@ import { useAppStore } from '../store'
 
 export default {
   components: {
-    ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
+    CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
     CategoryActionMenuButton: defineAsyncComponent(() => import('../components/CategoryActionMenuButton.vue')),

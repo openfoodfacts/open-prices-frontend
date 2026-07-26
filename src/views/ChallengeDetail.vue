@@ -11,7 +11,7 @@
         {{ $t('Challenge.Subtitle', {challenge_title: `${challenge.icon} ${challenge.title} ${challenge.icon}`, challenge_subtitle: challenge.subtitle}) }}
       </p>
       <p v-if="challenge.categories.length">
-        <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
+        <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="category" class="mr-1" />
       </p>
       <p v-if="challenge.locations.length">
         <LocationChip v-for="location in challenge.locations" :key="location.id" :location="location" :locationId="location.id" class="mr-1" />

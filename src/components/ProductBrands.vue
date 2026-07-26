@@ -1,9 +1,7 @@
 <template>
   <template v-if="productBrands">
     <template v-if="productBrandsList.length <= 2">
-      <v-chip v-for="brand in productBrandsList" :key="brand" label size="small" density="comfortable" @click="goToBrand(brand)">
-        {{ brand }}
-      </v-chip>
+      <BrandChip v-for="brand in productBrandsList" :key="brand" :brand="brand" :readonly="readonly" />
     </template>
     <v-chip v-else label size="small" density="comfortable" @click="showProductBrandsDialog">
       <i>{{ $t('ProductCard.BrandTotal', { count: productBrandsList.length }) }}</i>
@@ -12,6 +10,7 @@
       v-if="productBrands.length && productBrandsDialog"
       v-model="productBrandsDialog"
       :brands="productBrandsList"
+      :readonly="readonly"
       @close="productBrandsDialog = false"
     />
   </template>
@@ -28,6 +27,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
+    BrandChip: defineAsyncComponent(() => import('../components/BrandChip.vue')),
     ProductBrandsDialog: defineAsyncComponent(() => import('../components/ProductBrandsDialog.vue')),
   },
   props: {
@@ -51,12 +51,6 @@ export default {
     }
   },
   methods: {
-    goToBrand(brand) {
-      if (this.readonly) {
-        return
-      }
-      this.$router.push({ path: `/brands/${brand}` })
-    },
     showProductBrandsDialog() {
       this.productBrandsDialog = true
     },

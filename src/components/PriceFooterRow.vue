@@ -3,7 +3,7 @@
     <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <span class="chip-group">
         <ProofChip v-if="price.proof && !hidePriceProof" :proof="price.proof" />
-        <LocationChip v-if="!hidePriceLocation" :location="price.location" :locationId="price.location_id" :readonly="readonly" />
+        <LocationChip v-if="!hidePriceLocation" :location="price.location" :locationId="price.location_id" :showErrorIfLocationMissing="true" :readonly="readonly" />
         <UserChip v-if="!hidePriceOwner" :username="price.owner" :readonly="readonly" />
         <DateChip v-if="!hidePriceDate" :date="price.date" :readonly="readonly" />
         <UserCommentChip v-if="price.owner_comment" :comment="price.owner_comment" />

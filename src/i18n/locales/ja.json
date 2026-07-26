@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "{url}によって提供"
-		}
+		},
+		"SimilarBarcodes": "類似のバーコード",
+		"SimilarBarcodesExplanation": "これらの製品は、検出されたバーコードに近いバーコードを持っています。 もしかすると、そのうちの一つがお探しの製品かもしれません"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "バーコード",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "コミュニティチャレンジ",
-		"Subtitle": "他の食品価格愛好家と一緒に、 {challenge_title} {challenge_subtitle}についての情報を収集しましょう。",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "店内の値札の写真を撮る",
 			"line1": "写真には1つまたは複数の値札を含めることができます。バーコードは読み取り可能なものでなければなりません。例：",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} あなたによる価格",
 		"PricesAddedByYou": "あなたが追加した価格",
 		"MostRecentContributions": "最近の投稿",
-		"ChallengeCount": "{count} 課題 | {count} 課題 | {count} 課題",
 		"ChallengeStatuses": {
 			"DRAFT": "下書き",
 			"UPCOMING": "今後の予定",
@@ -184,6 +185,10 @@
 		"Added": "追加した",
 		"AdditionalInfo": "追加情報",
 		"All": "全て",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "バーコード",
 		"Barcodes": "バーコード",
 		"BarcodeScan": "バーコードをスキャンする",
@@ -238,7 +243,9 @@
 		"CurrencyCount": "{count} 通貨 | {count} 通貨 | {count} 通貨",
 		"CurrencyProofHelpTextSettings": "設定で通貨を追加できます。",
 		"Dashboard": "ダッシュボード",
-		"Display": "画面",
+		"DisplayNoun": "画面",
+		"DisplayVerb": "画面",
+		"Displays": "Displays",
 		"DisplayList": "リスト",
 		"DisplayPriceList": "リスト",
 		"DisplayTable": "テーブル",
@@ -297,23 +304,31 @@
 		"Edit": "編集",
 		"End": "終わり",
 		"ErrorServer": "エラー: サーバーエラー",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "このフィールドは必須です",
-		"Filter": "フィルタ",
+		"FilterNoun": "フィルタ",
+		"FilterVerb": "フィルタ",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "すべてのチャレンジを表示",
 		"FilterWithPriceCount": "価格付き",
 		"FilterWithLocationCount": "場所付き",
 		"FilterProductWithPriceCount": "価格付き",
 		"FilterProductWithPriceCountHide": "価格付きの商品を非表示にする",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "価格なし",
 		"FilterPriceMoreThan30DaysHide": "30日以上経過した価格を非表示にする",
 		"FilterProofWithPriceCountHide": "価格の証明を隠す",
-		"FilterPriceTagWithProofOwner": "私の証明のみを表示",
-		"FilterPriceTagWithProofUserCountry": "私の国からの証明のみを表示する",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "有効なバーコード付き",
-		"FilterPriceTagWithTagPredictionProductExists": "有効な製品",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "有効なカテゴリタグ付き",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "価格付きの場所を非表示にする",
 		"FilterUserWithPriceCountHide": "価格付きの貢献者を非表示にする",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "修理",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "よくある質問",
@@ -361,7 +376,9 @@
 		"Online": "オンライン",
 		"Open": "開ける",
 		"OpenWithTheAssistant": "アシスタントで開く",
-		"Order": "注文品",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "名前",
 		"OrderLocationCountDESC": "場所数",
 		"OrderProductUniqueScansDESC": "スキャンの数:",
@@ -414,6 +431,8 @@
 		"Private": "非公開",
 		"Privacy": "プライバシー",
 		"ProductCount": "{count} 製品 | {count} 製品 | {count} 製品",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "作成された製品",
 		"ProductFind": "製品を探す",
 		"ProductMissing": "商品が見つかりません",
 		"ProductOrCategoryMissing": "商品またはカテゴリが見つかりません",
@@ -445,6 +464,7 @@
 		"Recent": "最近の",
 		"Re-open": "再開",
 		"ReportProblem": "問題を報告する",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "リセット",
 		"Resolved": "解決済み",
 		"Reuses": "再利用",
@@ -453,7 +473,7 @@
 		"Select": "選択",
 		"Send": "送信",
 		"Settings": "設定",
-		"SignInOFFAccount": "Google アカウントでログイン",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "サインインしました！",
 		"SignIn": "サインイン",
 		"SignOut": "サインアウト",
@@ -643,6 +663,7 @@
 		"PoweredBy": {
 			"text": "{url}によって提供"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "最近の場所なし | 最近の場所 {recentLocationNumber}| 最近の場所 {recentLocationNumber}",
 		"Result": "結果 {resultNumber} | 結果 {resultNumber}",
 		"SearchByName": "名前と都市でショップを検索",
@@ -734,7 +755,8 @@
 		"ReceiptAllowAI": "レシートでAIを実行して価格を抽出できるようにする",
 		"ReceiptAIWarning": "AI がレシートに基づいて価格を抽出します。",
 		"PromoProofPriceTagAddMultiple": "複数の値札（同じ店舗の場所と日付）をアップロードするには、ここをクリックしてください。",
-		"PromoReceiptAssistant": "実験: 新しいレシート アシスタントを試して、レシートから価格を自動的に抽出してみましょう。"
+		"PromoReceiptAssistant": "実験: 新しいレシート アシスタントを試して、レシートから価格を自動的に抽出してみましょう。",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "証拠",
@@ -822,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "探検する"
@@ -964,6 +989,7 @@
 		"ServerError": "エラー: サーバーエラー",
 		"Title": "サインイン",
 		"SignInOFFAccount": "Google アカウントでログイン",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "ユーザー名",
 		"WrongCredentials": "エラー: 資格情報が間違っています"
 	},
@@ -992,6 +1018,10 @@
 		"PricesProofsPerSource": "ソースごとの価格と証明",
 		"LastUpdated": "最終更新日: {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "最新価格",
 		"LatestProofs": "最新の証拠",
@@ -1019,7 +1049,6 @@
 		"ChangeLanguage": "言語の変更",
 		"CountryLabel": "国",
 		"CurrencyLabel": "通貨",
-		"DisplayTitle": "画面",
 		"BarcodeScanner": "バーコードスキャナー",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "デフォルトモード",

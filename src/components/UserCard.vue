@@ -9,6 +9,7 @@
           <v-row>
             <v-col @click="clickUser()">
               <h3>{{ getUserTitle }}</h3>
+              <DateChip v-if="badgeAchievedAt" :title="$t('Common.BadgeAchievementDate')" :date="badgeAchievedAt" :readonly="true" />
             </v-col>
           </v-row>
         </v-col>
@@ -25,12 +26,17 @@ import constants from '../constants'
 
 export default {
   components: {
+    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     UserFooterRow: defineAsyncComponent(() => import('../components/UserFooterRow.vue')),
   },
   props: {
     user: {
       type: Object,
       required: true
+    },
+    badgeAchievedAt: {
+      type: String,
+      default: null
     },
     hideUserFooterRow: {
       type: Boolean,

@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "con tecnología de {url}"
-		}
+		},
+		"SimilarBarcodes": "Códigos de barras similares",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Código de barras",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Desafíos de la comunidad",
-		"Subtitle": "Únase a otros entusiastas del precio de los alimentos para recopilar información sobre {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Toma fotos de las etiquetas de precios en las tiendas",
 			"line1": "Las fotos pueden incluir una o más etiquetas de precios. Los códigos de barras deben ser legibles. Por ejemplo:",
@@ -147,7 +149,6 @@
 		"PricesByYou": "Precios {challenge_title} por ti",
 		"PricesAddedByYou": "Precios añadidos por usted",
 		"MostRecentContributions": "Contribuciones más recientes",
-		"ChallengeCount": "Desafíos {count} | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Borrador",
 			"UPCOMING": "Próximamente",
@@ -184,6 +185,10 @@
 		"Added": "Agregado",
 		"AdditionalInfo": "Información adicional",
 		"All": "Todo",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Código de barras",
 		"Barcodes": "Códigos de barras",
 		"BarcodeScan": "Escanear un código de barras",
@@ -238,7 +243,9 @@
 		"CurrencyCount": "{count} monedas | {count} moneda | {count} monedas",
 		"CurrencyProofHelpTextSettings": "Puede agregar monedas en su configuración.",
 		"Dashboard": "Panel de control",
-		"Display": "Mostrar",
+		"DisplayNoun": "Mostrar",
+		"DisplayVerb": "Mostrar",
+		"Displays": "Displays",
 		"DisplayList": "Lista",
 		"DisplayPriceList": "Lista",
 		"DisplayTable": "Mesa",
@@ -269,7 +276,7 @@
 		"LocationFindShop": "Encuentra la ubicación de la tienda",
 		"LocationMissing": "Falta ubicación",
 		"LocationSearchByName": "Buscar por nombre y ciudad",
-		"LocationsCompare": "Compare 2 locations",
+		"LocationsCompare": "Comparar 2 ubicaciones",
 		"Date": "Fecha",
 		"DateMissing": "Falta fecha",
 		"DateProofHelpText": "Fecha de la imagen.",
@@ -297,23 +304,31 @@
 		"Edit": "Editar",
 		"End": "Fin",
 		"ErrorServer": "Error: error del servidor",
+		"Favorite": "Favorito",
+		"FavoritesAdd": "Agregar a favoritos",
+		"FavoritesRemove": "Eliminar de favoritos",
 		"FieldIsRequired": "El campo es obligatorio",
-		"Filter": "Filtro",
+		"FilterNoun": "Filtro",
+		"FilterVerb": "Filtro",
+		"Filters": "Filtros",
 		"FilterChallengesShowAllStatus": "Mostrar todos los desafíos",
 		"FilterWithPriceCount": "Con precios",
 		"FilterWithLocationCount": "Con ubicaciones",
 		"FilterProductWithPriceCount": "con precio",
 		"FilterProductWithPriceCountHide": "Ocultar productos con precios",
+		"FilterProductWithPriceOwner": "Mostrar solo productos con mis precios",
 		"FilterProductWithoutPriceCount": "Sin precios",
 		"FilterPriceMoreThan30DaysHide": "Ocultar precios de más de 30 días",
 		"FilterProofWithPriceCountHide": "Ocultar pruebas con precios",
-		"FilterPriceTagWithProofOwner": "Mostrar solo mis pruebas",
-		"FilterPriceTagWithProofUserCountry": "Mostrar solo pruebas de mi país",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Con un código de barras válido",
-		"FilterPriceTagWithTagPredictionProductExists": "Con un producto válido",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Con una etiqueta de categoría válida",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Ocultar ubicaciones con precios",
 		"FilterUserWithPriceCountHide": "Ocultar contribuyentes con precios",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Arreglar",
 		"FAQ": "Preguntas frecuentes",
 		"FrequentlyAskedQuestions": "Preguntas frecuentes",
@@ -350,7 +365,7 @@
 		"MyConsumption": "Mi consumo",
 		"MyDashboard": "Mi tablero de instrumentos",
 		"MyPrices": "Mis precios",
-		"MyProofs": "Mis pruebas",
+		"MyProofs": "Mis comprobantes",
 		"MyStats": "Mis estadísticas",
 		"New": "Nuevo",
 		"NextProof": "Siguiente prueba",
@@ -361,7 +376,9 @@
 		"Online": "En línea",
 		"Open": "Abierto",
 		"OpenWithTheAssistant": "Abrir con el asistente",
-		"Order": "Pedido",
+		"OrderNoun": "Pedido",
+		"OrderVerb": "Pedido",
+		"Orders": "Pedidos",
 		"OrderNameASC": "Nombre",
 		"OrderLocationCountDESC": "Recuento de ubicaciones",
 		"OrderProductUniqueScansDESC": "Número de escaneos",
@@ -414,6 +431,8 @@
 		"Private": "Privado",
 		"Privacy": "Privacidad",
 		"ProductCount": "{count} productos | {count} producto | {count} productos",
+		"ProductCreated": "¡Producto creado!",
+		"ProductsCreated": "Productos creados",
 		"ProductFind": "Encuentra el producto",
 		"ProductMissing": "Producto faltante",
 		"ProductOrCategoryMissing": "Falta producto o categoría",
@@ -445,6 +464,7 @@
 		"Recent": "Reciente",
 		"Re-open": "Reabrir",
 		"ReportProblem": "Informar de un problema",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Reiniciar",
 		"Resolved": "Resuelto",
 		"Reuses": "Reutilizaciones",
@@ -453,7 +473,7 @@
 		"Select": "Seleccionar",
 		"Send": "Enviar",
 		"Settings": "Configuración",
-		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
+		"SignInOFFAccount": "Inicia sesión con tus credenciales {url}",
 		"SignedIn": "¡Sesión iniciada!",
 		"SignIn": "Iniciar sesión",
 		"SignOut": "Cerrar sesión",
@@ -643,6 +663,7 @@
 		"PoweredBy": {
 			"text": "con tecnología de {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No hay ubicaciones recientes | Ubicación reciente {recentLocationNumber}| Ubicaciones recientes {recentLocationNumber}",
 		"Result": "{resultNumber} resultado | {resultNumber} resultados",
 		"SearchByName": "Busca tu tienda por nombre y ciudad",
@@ -734,7 +755,8 @@
 		"ReceiptAllowAI": "Permita que la IA se ejecute en su recibo para extraer precios",
 		"ReceiptAIWarning": "La inteligencia artificial se ejecutará en su recibo para extraer los precios.",
 		"PromoProofPriceTagAddMultiple": "¡Para cargar varias etiquetas de precio (misma ubicación de tienda y fecha), haga clic aquí!",
-		"PromoReceiptAssistant": "Experimenta: ¡prueba el nuevo asistente de recibos para extraer automáticamente los precios de tus recibos!"
+		"PromoReceiptAssistant": "Experimenta: ¡prueba el nuevo asistente de recibos para extraer automáticamente los precios de tus recibos!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Comprobante",
@@ -821,7 +843,10 @@
 			"Title": "Añadir pruebas (etiquetas de precios)"
 		},
 		"CompareLocations": {
-			"Title": "Compare 2 locations"
+			"Title": "Comparar 2 ubicaciones"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Explorar"
@@ -873,7 +898,7 @@
 		},
 		"Home": {
 			"Title": "Inicio",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "{op_name} es un proyecto para recopilar y compartir precios de productos en todo el mundo. Es un conjunto de datos disponible públicamente que puede ser utilizado para la investigación, el análisis y mucho más."
 		},
 		"Dashboard": {
 			"Title": "Panel de control"
@@ -891,7 +916,7 @@
 			"Title": "Mis precios"
 		},
 		"MyProofs": {
-			"Title": "Mis pruebas"
+			"Title": "Mis comprobantes"
 		},
 		"MyDashboard": {
 			"Title": "Mi tablero de instrumentos"
@@ -964,6 +989,7 @@
 		"ServerError": "Error: error del servidor",
 		"Title": "Iniciar sesión",
 		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
+		"SignInWithOpenFoodFactsAuth": "Iniciar sesión con la autenticación de {off_name}",
 		"UsernameLabel": "Nombre de usuario",
 		"WrongCredentials": "Error: credenciales incorrectas"
 	},
@@ -992,13 +1018,17 @@
 		"PricesProofsPerSource": "Precios y pruebas por fuente",
 		"LastUpdated": "Última actualización el {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "¡Ayúdanos a crear las próximas funciones en {op_name}!",
+		"SurveyGamification": "Responda nuestra encuesta de gamificación de 1 minuto."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Últimos precios",
 		"LatestProofs": "Últimos comprobantes",
 		"LoadMore": "Cargar más",
 		"MyDashboard": "Mi tablero de instrumentos",
 		"MyPrices": "Mis precios",
-		"MyProofs": "Mis pruebas",
+		"MyProofs": "Mis comprobantes",
 		"ProofUpdated": "¡Comprobante actualizado!",
 		"Settings": "Configuración",
 		"Title": "Panel de control",
@@ -1019,9 +1049,8 @@
 		"ChangeLanguage": "Cambiar idioma",
 		"CountryLabel": "País",
 		"CurrencyLabel": "Moneda",
-		"DisplayTitle": "Mostrar",
 		"BarcodeScanner": "Escáner de código de barras",
-		"BarcodeScannerLibrary": "Barcode scanner library",
+		"BarcodeScannerLibrary": "Biblioteca de escáneres de códigos de barras",
 		"DefaultMode": "Modo predeterminado",
 		"FavoriteCurrencies": "Divisas favoritas",
 		"CurrencyRequired": "Se necsita por lo menos una divisa",

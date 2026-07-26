@@ -1,5 +1,5 @@
 <template>
-  <v-card :title="date" prepend-icon="mdi-calendar-today" data-name="date-card">
+  <v-card :title="date" :prepend-icon="DATE_ICON" data-name="date-card">
     <v-card-text>
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
@@ -45,6 +45,11 @@ export default {
       type: Boolean,
       default: false
     },
+  },
+  data() {
+    return {
+      DATE_ICON: constants.DATE_ICON,
+    }
   },
   computed: {
     dateType() {

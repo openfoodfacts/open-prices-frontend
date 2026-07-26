@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Cod de bare",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Prețuri adăugate de dvs.",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -184,6 +185,10 @@
 		"Added": "Adăugat",
 		"AdditionalInfo": "Additional information",
 		"All": "Toate",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Cod de bare",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -238,7 +243,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "Poți adăuga valute în setări.",
 		"Dashboard": "Dashboard",
-		"Display": "Afişare",
+		"DisplayNoun": "Afişare",
+		"DisplayVerb": "Afişare",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
@@ -297,23 +304,31 @@
 		"Edit": "Modificare",
 		"End": "End",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Câmpul este obligatoriu",
-		"Filter": "Filtrare",
+		"FilterNoun": "Filtrare",
+		"FilterVerb": "Filtrare",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterWithPriceCount": "Cu prețuri",
 		"FilterWithLocationCount": "Cu locații",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithProofUserCountry": "Afișează doar dovezi din țara mea",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Cu un cod de bare valid",
-		"FilterPriceTagWithTagPredictionProductExists": "Cu un produs valid",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Cu o etichetă de categorie validă",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Fix",
 		"FAQ": "Întrebări frecvente",
 		"FrequentlyAskedQuestions": "Întrebări frecvente",
@@ -361,7 +376,9 @@
 		"Online": "Online",
 		"Open": "Deschide",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Nume",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -414,6 +431,8 @@
 		"Private": "Private",
 		"Privacy": "Confidențialitate",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Produse create",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Produs lipsă",
 		"ProductOrCategoryMissing": "Produs sau categorie lipsă",
@@ -445,6 +464,7 @@
 		"Recent": "Recent",
 		"Re-open": "Redeschide",
 		"ReportProblem": "Raportați o problemă",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Reset",
 		"Resolved": "Rezolvat",
 		"Reuses": "Reuses",
@@ -453,7 +473,7 @@
 		"Select": "Select",
 		"Send": "Trimite",
 		"Settings": "Configurări",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Conectare",
 		"SignOut": "Deconectare",
@@ -643,6 +663,7 @@
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",
@@ -734,7 +755,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "Pentru a încărca mai multe etichete de preț (aceeași locație și dată a magazinului), faceți clic aici!",
-		"PromoReceiptAssistant": "Experiment: încearcă noul asistent de chitanțe pentru a extrage automat prețurile din chitanțe!"
+		"PromoReceiptAssistant": "Experiment: încearcă noul asistent de chitanțe pentru a extrage automat prețurile din chitanțe!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Dovadă",
@@ -822,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Explora"
@@ -964,6 +989,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Conectare",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -992,6 +1018,10 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -1019,7 +1049,6 @@
 		"ChangeLanguage": "Modificați limba",
 		"CountryLabel": "Țară",
 		"CurrencyLabel": "Valută",
-		"DisplayTitle": "Afişare",
 		"BarcodeScanner": "Barcode scanner",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",

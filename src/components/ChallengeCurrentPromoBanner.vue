@@ -1,7 +1,7 @@
 <template>
   <v-banner
     class="border-grey"
-    icon="mdi-trophy-variant"
+    :icon="CHALLENGE_ICON"
     rounded
     density="compact"
     @click="$router.push(getUrl)"
@@ -22,11 +22,18 @@
 </template>
 
 <script>
+import constants from '../constants'
+
 export default {
   props: {
     challenge: {
       type: Object,
       default: () => {}
+    }
+  },
+  data() {
+    return {
+      CHALLENGE_ICON: constants.CHALLENGE_ICON,
     }
   },
   computed: {

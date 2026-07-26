@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "drevet af {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Stregkode",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Fællesskabsudfordring",
-		"Subtitle": "Slut dig til andre madprisentusiaster for at samle information om {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Tag billeder af prisskilte i butikkerne",
 			"line1": "Billeder kan indeholde et eller flere prisskilte. Stregkoder skal kunne læses. For eksempel:",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} priser fra dig",
 		"PricesAddedByYou": "Priser tilføjet af dig",
 		"MostRecentContributions": "Seneste bidrag",
-		"ChallengeCount": "{count} udfordringer | {count} udfordring | {count} udfordringer",
 		"ChallengeStatuses": {
 			"DRAFT": "Udkast",
 			"UPCOMING": "Kommende",
@@ -184,6 +185,10 @@
 		"Added": "Tilføjet",
 		"AdditionalInfo": "Yderligere information",
 		"All": "Alle",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Stregkode",
 		"Barcodes": "Stregkoder",
 		"BarcodeScan": "Scan en stregkode",
@@ -238,7 +243,9 @@
 		"CurrencyCount": "{count} valutaer | {count} valuta | {count} valutaer",
 		"CurrencyProofHelpTextSettings": "Du kan tilføje valutaer i dine indstillinger.",
 		"Dashboard": "Oversigt",
-		"Display": "Vis",
+		"DisplayNoun": "Vis",
+		"DisplayVerb": "Vis",
+		"Displays": "Displays",
 		"DisplayList": "Liste",
 		"DisplayPriceList": "Liste",
 		"DisplayTable": "Tabel",
@@ -297,23 +304,31 @@
 		"Edit": "Redigér",
 		"End": "Slut",
 		"ErrorServer": "Fejl: serverfejl",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Feltet er påkrævet",
-		"Filter": "Filtrere",
+		"FilterNoun": "Filtrere",
+		"FilterVerb": "Filtrere",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Vis alle udfordringer",
 		"FilterWithPriceCount": "Med priser",
 		"FilterWithLocationCount": "Med lokationer",
 		"FilterProductWithPriceCount": "Med en pris",
 		"FilterProductWithPriceCountHide": "Skjul produkter med priser",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Uden priser",
 		"FilterPriceMoreThan30DaysHide": "Skjul priser, der er ældre end 30 dage",
 		"FilterProofWithPriceCountHide": "Skjul beviser med priser",
-		"FilterPriceTagWithProofOwner": "Vis kun mine beviser",
-		"FilterPriceTagWithProofUserCountry": "Vis kun beviser fra mit land",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Med en gyldig stregkode",
-		"FilterPriceTagWithTagPredictionProductExists": "Med et gyldigt produkt",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Med et gyldigt kategoritag",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Skjul lokationer med priser",
 		"FilterUserWithPriceCountHide": "Skjul bidragydere med priser",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Ret",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "Ofte Stillede Spørgsmål",
@@ -361,7 +376,9 @@
 		"Online": "Online",
 		"Open": "Åben",
 		"OpenWithTheAssistant": "Åbn med assistenten",
-		"Order": "Sorter",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Navn",
 		"OrderLocationCountDESC": "Placeringsantal",
 		"OrderProductUniqueScansDESC": "Antal scanninger",
@@ -414,6 +431,8 @@
 		"Private": "Privat",
 		"Privacy": "Privatliv",
 		"ProductCount": "{count} produkter | {count} produkt | {count} produkter",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Produkter oprettet",
 		"ProductFind": "Find produktet",
 		"ProductMissing": "Produkt mangler",
 		"ProductOrCategoryMissing": "Produkt eller kategori mangler",
@@ -445,6 +464,7 @@
 		"Recent": "Seneste",
 		"Re-open": "Genåbn",
 		"ReportProblem": "Rapportér et problem",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Nulstil",
 		"Resolved": "Løst",
 		"Reuses": "Genbrug",
@@ -453,7 +473,7 @@
 		"Select": "Vælg",
 		"Send": "Indsend",
 		"Settings": "Indstillinger",
-		"SignInOFFAccount": "Log på med din {url} konto",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Logget ind!",
 		"SignIn": "Log ind",
 		"SignOut": "Log ud",
@@ -643,6 +663,7 @@
 		"PoweredBy": {
 			"text": "drevet af {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Ingen nylige placeringer | Seneste placering {recentLocationNumber}| Seneste placeringer {recentLocationNumber}",
 		"Result": "Resultat {resultNumber} | Resultater {resultNumber}",
 		"SearchByName": "Søg efter butik med navn og by",
@@ -734,7 +755,8 @@
 		"ReceiptAllowAI": "Tillad at AI unders\nger din kvittering for at udtrække priser",
 		"ReceiptAIWarning": "AI vil undersøge din kvittering for at udtrække priser.",
 		"PromoProofPriceTagAddMultiple": "For at uploade flere prismærker (samme butikslokation og dato), klik her!",
-		"PromoReceiptAssistant": "Eksperiment: Prøv den nye kvitteringsassistent til automatisk at udtrække priser fra dine kvitteringer!"
+		"PromoReceiptAssistant": "Eksperiment: Prøv den nye kvitteringsassistent til automatisk at udtrække priser fra dine kvitteringer!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Bevis",
@@ -822,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Udforske"
@@ -964,6 +989,7 @@
 		"ServerError": "Fejl: serverfejl",
 		"Title": "Log ind",
 		"SignInOFFAccount": "Log på med din {url} konto",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Brugernavn",
 		"WrongCredentials": "Fejl: forkerte loginoplysninger"
 	},
@@ -992,6 +1018,10 @@
 		"PricesProofsPerSource": "Priser og beviser pr. kilde",
 		"LastUpdated": "Sidst opdateret {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Seneste priser",
 		"LatestProofs": "Seneste beviser",
@@ -1019,7 +1049,6 @@
 		"ChangeLanguage": "Skift sprog",
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
-		"DisplayTitle": "Vis",
 		"BarcodeScanner": "Stregkodescanner",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Standardtilstand",

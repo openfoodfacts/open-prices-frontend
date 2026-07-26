@@ -11,7 +11,7 @@
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Common.LatestPrices')"
-        prepend-icon="mdi-tag-multiple-outline"
+        :prepend-icon="PRICE_ICON"
         append-icon="mdi-arrow-right"
         to="/prices"
       />
@@ -19,7 +19,7 @@
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Common.LatestProofs')"
-        prepend-icon="mdi-image-multiple"
+        :prepend-icon="PROOF_ICON"
         append-icon="mdi-arrow-right"
         to="/proofs"
       />
@@ -30,7 +30,7 @@
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Common.TopProducts')"
-        prepend-icon="mdi-database-outline"
+        :prepend-icon="PRODUCT_ICON"
         append-icon="mdi-arrow-right"
         to="/products"
       />
@@ -38,7 +38,7 @@
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Common.TopCountries')"
-        prepend-icon="mdi-earth"
+        :prepend-icon="COUNTRY_ICON"
         append-icon="mdi-arrow-right"
         to="/countries"
       />
@@ -46,7 +46,7 @@
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Common.TopLocations')"
-        prepend-icon="mdi-map-marker-star-outline"
+        :prepend-icon="LOCATION_ICON"
         append-icon="mdi-arrow-right"
         to="/locations"
       />
@@ -55,4 +55,17 @@
 </template>
 
 <script>
+import constants from '../constants'
+
+export default {
+  data() {
+    return {
+      PRICE_ICON: constants.PRICE_ICON,
+      PROOF_ICON: constants.PROOF_ICON,
+      PRODUCT_ICON: constants.PRODUCT_ICON,
+      COUNTRY_ICON: constants.COUNTRY_ICON,
+      LOCATION_ICON: constants.LOCATION_ICON,
+    }
+  },
+}
 </script>

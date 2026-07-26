@@ -1,6 +1,6 @@
 <template>
   <v-chip label size="small" density="comfortable" title="OpenStreetMap tag">
-    {{ getLocationTag(location) }}
+    {{ getLocationOSMTag(location) }}
   </v-chip>
 </template>
 
@@ -15,8 +15,8 @@ export default {
     }
   },
   methods: {
-    getLocationTag(location) {
-      return geo_utils.getLocationTag(location)
+    getLocationOSMTag(location) {
+      return geo_utils.getLocationOSMTag(location)
     },
   }
 }

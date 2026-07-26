@@ -3,7 +3,7 @@
     <v-card-text>
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
-          <ProductCountChip :count="productCount" :withLabel="true" />
+          <CountChip kind="product" :count="productCount" :withLabel="true" />
         </v-col>
         <v-col v-if="!hideActionMenuButton" cols="1">
           <BrandActionMenuButton :brand="brand" />
@@ -18,7 +18,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
+    CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
     BrandActionMenuButton: defineAsyncComponent(() => import('../components/BrandActionMenuButton.vue'))
   },
   props: {

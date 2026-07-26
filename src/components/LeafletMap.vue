@@ -1,7 +1,7 @@
 <template>
   <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :use-global-leaflet="false" @ready="initMap">
     <l-tile-layer :url="tiles" layer-type="base" name="OpenStreetMap" :attribution="attribution" />
-    <l-marker v-for="location in locations" :key="getLocationUniqueID(location)" :lat-lng="getLocationLatLng(location)">
+    <l-marker v-for="location in locations" :key="getLocationOSMUniqueId(location)" :lat-lng="getLocationOSMLatLng(location)">
       <l-popup>
         <v-card>
           <v-card-title>
@@ -12,7 +12,7 @@
           </v-card-subtitle>
           <v-card-text>
             <v-chip label size="small" density="comfortable">
-              {{ getLocationTag(location) }}
+              {{ getLocationOSMTag(location) }}
             </v-chip>
           </v-card-text>
           <v-card-actions v-if="showActions">
@@ -87,14 +87,14 @@ export default {
     getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
       return geo_utils.getLocationOSMTitle(location, withName, withRoad, withCity)
     },
-    getLocationUniqueID(location) {
-      return geo_utils.getLocationUniqueID(location)
+    getLocationOSMUniqueId(location) {
+      return geo_utils.getLocationOSMUniqueId(location)
     },
-    getLocationTag(location) {
-      return geo_utils.getLocationTag(location)
+    getLocationOSMTag(location) {
+      return geo_utils.getLocationOSMTag(location)
     },
-    getLocationLatLng(location) {
-      return geo_utils.getLocationLatLng(location)
+    getLocationOSMLatLng(location) {
+      return geo_utils.getLocationOSMLatLng(location)
     },
     locationSelected(location) {
       this.$emit('locationSelected', location)

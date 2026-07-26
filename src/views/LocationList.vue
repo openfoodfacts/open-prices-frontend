@@ -1,9 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <v-chip label variant="text" prepend-icon="mdi-map-marker-outline">
-        {{ $t('Common.LocationCount', { count: locationTotal }) }}
-      </v-chip>
+      <CountTextChip kind="location" :count="locationTotal" />
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="locationList.length" :totalCount="locationTotal" />
         <FilterMenu kind="location" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleLocationType($event)" />
@@ -33,6 +31,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
@@ -107,7 +106,7 @@ export default {
     toggleLocationType(sourceKey) {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
-      // this.initProductList() will be called in watch $route
+      // this.initLocationList() will be called in watch $route
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {

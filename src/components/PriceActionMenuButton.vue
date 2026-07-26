@@ -55,7 +55,7 @@
             {{ $t('Common.Moderation') }}
           </v-list-subheader>
           <v-divider />
-          <v-list-item :slim="true" prepend-icon="mdi-flag" @click="moderationFlagCreateDialog = true">
+          <v-list-item :slim="true" :prepend-icon="REPORT_ICON" @click="moderationFlagCreateDialog = true">
             {{ $t('Common.ReportProblem') }}
           </v-list-item>
         </v-sheet>
@@ -149,6 +149,7 @@ export default {
   data() {
     return {
       ACTION_MENU_ICON: constants.ACTION_MENU_ICON,
+      REPORT_ICON: constants.REPORT_ICON,
       // data
       loading: false,
       editDialog: false,
@@ -168,7 +169,7 @@ export default {
       if (this.price.product) {
         return `/products/${this.price.product.code}`
       } else if (this.price.category_tag) {
-        return `/categories/${this.price.category_tag}`
+        return `/products/${this.price.category_tag}`
       }
       return null
     },

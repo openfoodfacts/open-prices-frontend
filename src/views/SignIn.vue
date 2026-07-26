@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row v-if="ENV !== 'prod'">
     <v-col cols="12" md="6">
       <v-form @submit.prevent="signIn">
         <v-row>
@@ -59,13 +59,50 @@
       </v-form>
     </v-col>
   </v-row>
+
+  <v-row v-if="keycloak">
+    <v-col cols="12" md="6">
+      <v-row>
+        <v-col>
+          <v-alert
+            color="primary"
+            variant="outlined"
+            density="compact"
+            icon="mdi-information"
+          >
+            {{ $t('SignIn.SignInWithOpenFoodFactsAuth', { off_name: OFF_NAME }) }}
+          </v-alert>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <v-btn
+            type="button"
+            block
+            color="primary"
+            @click="keycloak.login()"
+          >
+            {{ $t('SignIn.Button') }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="loading">
+    <v-col align="center">
+      <v-progress-circular indeterminate :size="30" />
+    </v-col>
+  </v-row>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 import openPricesApi from '../services/openPricesApi'
+import keycloakService from '../services/keycloakService'
 
 export default {
   components: {
@@ -79,7 +116,10 @@ export default {
       },
       passwordVisible: false,
       loading: false,
-    };
+      keycloak: null,
+      ENV: import.meta.env.VITE_OPEN_PRICES_ENV,
+      OFF_NAME: constants.OFF_NAME
+    }
   },
   computed: {
     ...mapStores(useAppStore),
@@ -87,25 +127,51 @@ export default {
       return Object.values(this.signinForm).every(x => !!x)
     }
   },
+  mounted() {
+    this.loading = true
+    keycloakService.init((keycloak, error) => {
+      if (error) {
+        alert(error)
+        this.loading = false
+        return
+      }
+      if (keycloak !== null) {
+        this.loading = false
+        this.keycloak = keycloak
+        if (keycloak.authenticated) {
+          this.signInWithKeycloak(keycloak.token)
+        }
+      }
+    })
+  },
   methods: {
+    handleAuthResponse(data) {
+      this.loading = false
+      if (data['access_token']) {
+        this.appStore.signIn(data)
+        this.done()
+      } else {
+        alert(this.$t('SignIn.WrongCredentials'))
+      }
+    },
+    handleAuthError(error) {
+      alert(this.$t('Common.ServerError'))
+      console.log(error)
+      this.loading = false
+    },
     signIn() {
       this.loading = true
       openPricesApi
         .signIn(this.signinForm.username.toLowerCase().trim(), this.signinForm.password)
-        .then((data) => {
-          this.loading = false
-          if (data['access_token']) {
-            this.appStore.signIn(data)
-            this.done()
-          } else {
-            alert(this.$t('SignIn.WrongCredentials'))
-          }
-        })
-        .catch((error) => {
-          alert(this.$t('Common.ServerError'))
-          console.log(error)
-          this.loading = false
-        })
+        .then(this.handleAuthResponse)
+        .catch(this.handleAuthError)
+    },
+    signInWithKeycloak(access_token) {
+      this.loading = true
+      openPricesApi
+        .signInWithKeycloak(access_token)
+        .then(this.handleAuthResponse)
+        .catch(this.handleAuthError)
     },
     done() {
       const path = this.$route.query.next || '/dashboard'

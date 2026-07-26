@@ -1507,7 +1507,7 @@
     },
     {
         "id": "en:world",
-        "name": "World",
+        "name": "world",
         "country_code_2": "world",
         "osm_name": null
     }

@@ -1,5 +1,397 @@
 # Changelog
 
+## [1.170.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.169.0...v1.170.0) (2026-07-19)
+
+
+### Features
+
+* **Badges:** new detail page (with the list of users who achieved it, ordered by most recent) ([#2286](https://github.com/openfoodfacts/open-prices-frontend/issues/2286)) ([fb40acb](https://github.com/openfoodfacts/open-prices-frontend/commit/fb40acb237ff496967a0f341c77af4391fdbe939))
+
+
+### Bug Fixes
+
+* **Date Chip:** fix behavior when a datetime is passed (instead of a date) ([#2282](https://github.com/openfoodfacts/open-prices-frontend/issues/2282)) ([22706f6](https://github.com/openfoodfacts/open-prices-frontend/commit/22706f64eed441758dbdb79499c33a634e9ba271))
+* **Prices:** Table view: fix location link ([#2290](https://github.com/openfoodfacts/open-prices-frontend/issues/2290)) ([d18e23c](https://github.com/openfoodfacts/open-prices-frontend/commit/d18e23cfa180d37d057c85fad6cf98dcb02cf074))
+
+
+### Technical
+
+* add AGENTS.md for AI assistants ([#2274](https://github.com/openfoodfacts/open-prices-frontend/issues/2274)) ([6048659](https://github.com/openfoodfacts/open-prices-frontend/commit/6048659d08e1d6823edca64fb0b1eafb6d77d890))
+* **Badge Card:** display the metric & threshold in a chip ([#2285](https://github.com/openfoodfacts/open-prices-frontend/issues/2285)) ([bdea731](https://github.com/openfoodfacts/open-prices-frontend/commit/bdea7310ae7f2cf199b9e0719a28107470a4b90c))
+* **Chips:** improve the behavior when clickable (show url, default cursor when readonly) ([#2283](https://github.com/openfoodfacts/open-prices-frontend/issues/2283)) ([04f4194](https://github.com/openfoodfacts/open-prices-frontend/commit/04f4194221b6203b2dbdef3c51542477464c521a))
+* **Chips:** new BrandChip component ([#2284](https://github.com/openfoodfacts/open-prices-frontend/issues/2284)) ([713d0e7](https://github.com/openfoodfacts/open-prices-frontend/commit/713d0e761979688f051fa4cb382e2afc5a736211))
+* **Data:** update generated data from taxonomies ([#2287](https://github.com/openfoodfacts/open-prices-frontend/issues/2287)) ([b3d4a58](https://github.com/openfoodfacts/open-prices-frontend/commit/b3d4a584542e42bbee95b1d8ae2a1b40bd14d519))
+* **Dependabot:** reduce the number of generated PRs (ignore list, groups, PR limit) ([#2279](https://github.com/openfoodfacts/open-prices-frontend/issues/2279)) ([ff8b4be](https://github.com/openfoodfacts/open-prices-frontend/commit/ff8b4be77bed52bc0cfbe694fa1913a395fee939))
+* **deps:** bump actions/setup-node from 6 to 7 ([#2291](https://github.com/openfoodfacts/open-prices-frontend/issues/2291)) ([dd700a1](https://github.com/openfoodfacts/open-prices-frontend/commit/dd700a194031be39b57c71195606190d3881ee60))
+* **Location Chip:** better manage when location is missing ([#2280](https://github.com/openfoodfacts/open-prices-frontend/issues/2280)) ([0c1fff3](https://github.com/openfoodfacts/open-prices-frontend/commit/0c1fff32c15c00d848a0276e3f267367b979537f))
+
+## [1.169.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.168.3...v1.169.0) (2026-07-18)
+
+
+### Features
+
+* **Badges:** new user-specific page that lists their badge achivements ([#2262](https://github.com/openfoodfacts/open-prices-frontend/issues/2262)) ([49bf249](https://github.com/openfoodfacts/open-prices-frontend/commit/49bf2493db169a9ba58923ded135a338cb0a72af))
+* **Badges:** simple list page with cards ([#2258](https://github.com/openfoodfacts/open-prices-frontend/issues/2258)) ([74f86cc](https://github.com/openfoodfacts/open-prices-frontend/commit/74f86cc954e139f56ba686635615bd83655c7d76))
+
+
+### Bug Fixes
+
+* **Location Selector:** fix how we detect if a location is favorite or not ([#2278](https://github.com/openfoodfacts/open-prices-frontend/issues/2278)) ([b1e9f13](https://github.com/openfoodfacts/open-prices-frontend/commit/b1e9f13e61c3d053a528915669f33bcd2ee6d0bf))
+* Update lint-and-test.yml ([edafcc7](https://github.com/openfoodfacts/open-prices-frontend/commit/edafcc7a9c83900ad464f3eeeb6f9551ae19011f))
+
+
+### Technical
+
+* **Constants:** reuse icon constants everywhere ([#2263](https://github.com/openfoodfacts/open-prices-frontend/issues/2263)) ([3ea21b5](https://github.com/openfoodfacts/open-prices-frontend/commit/3ea21b5286c96c4fbefc58e540e8d04b0f3be9b5))
+* **Count Chips:** new generic `CountChip` component. replace all existing. ([#2276](https://github.com/openfoodfacts/open-prices-frontend/issues/2276)) ([4461c4f](https://github.com/openfoodfacts/open-prices-frontend/commit/4461c4f4b26dab687764f4b7673f324ee5d3f80d))
+* **Count Chips:** new generic `CountTextChip` component. use everywhere possible ([#2277](https://github.com/openfoodfacts/open-prices-frontend/issues/2277)) ([f35645a](https://github.com/openfoodfacts/open-prices-frontend/commit/f35645a5fe50b464a4a1fe3f10f5dfc3ee004361))
+* **Data:** update generated data from taxonomies ([#2266](https://github.com/openfoodfacts/open-prices-frontend/issues/2266)) ([b505eae](https://github.com/openfoodfacts/open-prices-frontend/commit/b505eaecc45432e633559fe013b2c3f81cfab4c3))
+* **deps-dev:** bump autoprefixer from 10.5.0 to 10.5.2 ([#2059](https://github.com/openfoodfacts/open-prices-frontend/issues/2059)) ([a65ca93](https://github.com/openfoodfacts/open-prices-frontend/commit/a65ca93508c905da120e3e5ca94c6b31f27950a8))
+* **deps-dev:** bump eslint from 9.39.2 to 10.6.0 in the eslint group across 1 directory ([#2049](https://github.com/openfoodfacts/open-prices-frontend/issues/2049)) ([a8c1a73](https://github.com/openfoodfacts/open-prices-frontend/commit/a8c1a730707494058d0d24411b161172259d6dfd))
+* **deps:** bump actions/checkout from 6 to 7 ([#2251](https://github.com/openfoodfacts/open-prices-frontend/issues/2251)) ([742c1a8](https://github.com/openfoodfacts/open-prices-frontend/commit/742c1a845d64a78f7945cd318ee9f3bc1a39605d))
+* **deps:** bump diff from 8.0.2 to 8.0.4 ([#2092](https://github.com/openfoodfacts/open-prices-frontend/issues/2092)) ([cf40e41](https://github.com/openfoodfacts/open-prices-frontend/commit/cf40e41754a3ce734a1e0e40887d9187ba4ddc53))
+* **deps:** bump dompurify from 3.2.7 to 3.4.11 ([#2244](https://github.com/openfoodfacts/open-prices-frontend/issues/2244)) ([7ecc29c](https://github.com/openfoodfacts/open-prices-frontend/commit/7ecc29cd5fa3a9b58a2cc39358b8fa7af0a3479f))
+* **deps:** bump follow-redirects from 1.15.11 to 1.16.0 ([#2146](https://github.com/openfoodfacts/open-prices-frontend/issues/2146)) ([015d344](https://github.com/openfoodfacts/open-prices-frontend/commit/015d344a1613c07f51bcb9cbc5d1c024bae35131))
+* **deps:** bump form-data from 4.0.4 to 4.0.6 ([#2239](https://github.com/openfoodfacts/open-prices-frontend/issues/2239)) ([2a05da5](https://github.com/openfoodfacts/open-prices-frontend/commit/2a05da56777de98ff0bdc1e870c4d8dd046b9f6a))
+* **deps:** bump js-yaml from 4.1.0 to 4.3.0 ([#2250](https://github.com/openfoodfacts/open-prices-frontend/issues/2250)) ([6ff8307](https://github.com/openfoodfacts/open-prices-frontend/commit/6ff830716eaed0452f64716b44e1efcb08178f09))
+* **deps:** bump lodash from 4.17.21 to 4.18.1 ([#2115](https://github.com/openfoodfacts/open-prices-frontend/issues/2115)) ([bd7a4d8](https://github.com/openfoodfacts/open-prices-frontend/commit/bd7a4d82b27113d9c7cbbdfc740d5762e79497a8))
+* **deps:** bump pinia-plugin-persistedstate from 3.2.3 to 4.7.1 ([#2063](https://github.com/openfoodfacts/open-prices-frontend/issues/2063)) ([87c519e](https://github.com/openfoodfacts/open-prices-frontend/commit/87c519efcfe60ef4ba159141bfb1be7bfe2fd35c))
+* **deps:** bump rollup from 4.51.0 to 4.62.2 ([#2245](https://github.com/openfoodfacts/open-prices-frontend/issues/2245)) ([3461b0b](https://github.com/openfoodfacts/open-prices-frontend/commit/3461b0b8940f788942b719a393fba081acb6eb60))
+* **deps:** bump tmp from 0.2.5 to 0.2.7 ([#2209](https://github.com/openfoodfacts/open-prices-frontend/issues/2209)) ([758c220](https://github.com/openfoodfacts/open-prices-frontend/commit/758c220bb420b64b7352662cab6c5856bdc68605))
+* **deps:** bump toshimaru/auto-author-assign from 3.0.2 to 3.0.3 ([#2252](https://github.com/openfoodfacts/open-prices-frontend/issues/2252)) ([87c47bf](https://github.com/openfoodfacts/open-prices-frontend/commit/87c47bf48949e9365cdf7b6bb09b67c3dd2b8647))
+* **deps:** bump yaml from 2.8.1 to 2.8.3 ([#2097](https://github.com/openfoodfacts/open-prices-frontend/issues/2097)) ([6e27083](https://github.com/openfoodfacts/open-prices-frontend/commit/6e2708341c1dc570ee3ea3878b645c82b787fcb0))
+* **deps:** Update packages (and fix the CI) ([#2269](https://github.com/openfoodfacts/open-prices-frontend/issues/2269)) ([3dda990](https://github.com/openfoodfacts/open-prices-frontend/commit/3dda990d2b445a06754ddc80faa115ecc003d960))
+* **l10n:** New Crowdin translations to review and merge ([#2261](https://github.com/openfoodfacts/open-prices-frontend/issues/2261)) ([1f2af56](https://github.com/openfoodfacts/open-prices-frontend/commit/1f2af569d95512aa9d3c9557b2f51b624ae1d10a))
+* **l10n:** New Crowdin translations to review and merge ([#2267](https://github.com/openfoodfacts/open-prices-frontend/issues/2267)) ([c8c8d17](https://github.com/openfoodfacts/open-prices-frontend/commit/c8c8d17555f34202cbab6652942cf16f9d8dfec2))
+* **Moderation:** allow filtering by reason ([#2273](https://github.com/openfoodfacts/open-prices-frontend/issues/2273)) ([ddde1c0](https://github.com/openfoodfacts/open-prices-frontend/commit/ddde1c0524e76fb289c23c3c8bd46f35940d286c))
+* **Moderation:** allow filtering by type (Proof or Price) ([#2271](https://github.com/openfoodfacts/open-prices-frontend/issues/2271)) ([3c483cd](https://github.com/openfoodfacts/open-prices-frontend/commit/3c483cddbd366de5456241113f19c11dad9d3996))
+* **Moderation:** allow ordering by date or reason ([#2275](https://github.com/openfoodfacts/open-prices-frontend/issues/2275)) ([7743a5a](https://github.com/openfoodfacts/open-prices-frontend/commit/7743a5a15ca99da44ea41394bcbabc5456cf5072))
+* **Moderation:** hide closed reports by default. New filter menu to include them ([#2270](https://github.com/openfoodfacts/open-prices-frontend/issues/2270)) ([b7faeb3](https://github.com/openfoodfacts/open-prices-frontend/commit/b7faeb31d08fc0746516441359ca36df0387548d))
+* **Moderation:** show the total count and the loaded count ([#2268](https://github.com/openfoodfacts/open-prices-frontend/issues/2268)) ([41d10cb](https://github.com/openfoodfacts/open-prices-frontend/commit/41d10cb62074134a99323cff22bd8bb278e4a6cd))
+* **Stats:** new badge_count stat ([#2260](https://github.com/openfoodfacts/open-prices-frontend/issues/2260)) ([4605061](https://github.com/openfoodfacts/open-prices-frontend/commit/4605061bc74ba5a4fc41e330c4ae38f0cd65ff82))
+* **User Card:** new badge_count chip ([#2259](https://github.com/openfoodfacts/open-prices-frontend/issues/2259)) ([5b7b916](https://github.com/openfoodfacts/open-prices-frontend/commit/5b7b916c85efa332ed7bc644fffbf31aab1881ef))
+
+## [1.168.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.168.2...v1.168.3) (2026-07-05)
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2246](https://github.com/openfoodfacts/open-prices-frontend/issues/2246)) ([a8d2d7a](https://github.com/openfoodfacts/open-prices-frontend/commit/a8d2d7a81bbef994a8bdf8f1b7a05e46cd322409))
+* **l10n:** New Crowdin translations to review and merge ([#2247](https://github.com/openfoodfacts/open-prices-frontend/issues/2247)) ([58c5c53](https://github.com/openfoodfacts/open-prices-frontend/commit/58c5c533565f8fa52dea2146fa53a176c3cbb789))
+
+## [1.168.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.168.1...v1.168.2) (2026-06-19)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#2240](https://github.com/openfoodfacts/open-prices-frontend/issues/2240)) ([d4692dd](https://github.com/openfoodfacts/open-prices-frontend/commit/d4692dd418a68310086e8c02075192d029b1c6a9))
+* **Price Validation:** add a new filter to show hidden-by-default price tags classified as 'invalid' ([#2241](https://github.com/openfoodfacts/open-prices-frontend/issues/2241)) ([5445013](https://github.com/openfoodfacts/open-prices-frontend/commit/5445013345b2a877e8eb711cc501b77765ff55cd))
+
+## [1.168.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.168.0...v1.168.1) (2026-06-16)
+
+
+### Bug Fixes
+
+* **Moderation:** fix Proofs should be flaggable by non-moderators ([#2238](https://github.com/openfoodfacts/open-prices-frontend/issues/2238)) ([2af8602](https://github.com/openfoodfacts/open-prices-frontend/commit/2af8602a44a81b2afb9e35adb4c355fdc4c3eedb))
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2234](https://github.com/openfoodfacts/open-prices-frontend/issues/2234)) ([94cc9c0](https://github.com/openfoodfacts/open-prices-frontend/commit/94cc9c0f61c46ff1dc51d8a038bbc260544a40e4))
+* **deps:** Update some packages ([#2235](https://github.com/openfoodfacts/open-prices-frontend/issues/2235)) ([70fc0ca](https://github.com/openfoodfacts/open-prices-frontend/commit/70fc0cafd6366f84cfb855108ea89a76650d8b0c))
+* **Location Selector:** avoid key=index. rename utils to specify OSM. Hopefully fix some strange fav behavior ([#2232](https://github.com/openfoodfacts/open-prices-frontend/issues/2232)) ([fed5057](https://github.com/openfoodfacts/open-prices-frontend/commit/fed505798067698b9aa7d89f9220fde3d055b76c))
+
+## [1.168.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.167.0...v1.168.0) (2026-06-13)
+
+
+### Features
+
+* **Home:** new dynamic `SurveyBanner` + link to current Gamification survey ([#2228](https://github.com/openfoodfacts/open-prices-frontend/issues/2228)) ([9e164ec](https://github.com/openfoodfacts/open-prices-frontend/commit/9e164ec8553bac21feffe5dc2384016dce5996d1))
+
+## [1.167.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.166.0...v1.167.0) (2026-06-07)
+
+
+### Features
+
+* **Location Selector:** allow users to set locations as favorites + new tab ([#2222](https://github.com/openfoodfacts/open-prices-frontend/issues/2222)) ([4e0a69b](https://github.com/openfoodfacts/open-prices-frontend/commit/4e0a69b29af20e26733c79c408d1d9765ee9fc6e))
+
+
+### Technical
+
+* add Sentry to the project ([#2075](https://github.com/openfoodfacts/open-prices-frontend/issues/2075)) ([d5f96f4](https://github.com/openfoodfacts/open-prices-frontend/commit/d5f96f46a93c54696c99165d37db491bbf06473e))
+* **Data:** update generated data from taxonomies ([#2214](https://github.com/openfoodfacts/open-prices-frontend/issues/2214)) ([43825f3](https://github.com/openfoodfacts/open-prices-frontend/commit/43825f30298160560e01a572ddab5a3f1bedba9c))
+* **Data:** update generated data from taxonomies ([#2224](https://github.com/openfoodfacts/open-prices-frontend/issues/2224)) ([3ac8cda](https://github.com/openfoodfacts/open-prices-frontend/commit/3ac8cdae2ea0498edd5270e4171a0a81858e6fa0))
+* increase the size of edit button in Location & Product cards. following [#1818](https://github.com/openfoodfacts/open-prices-frontend/issues/1818) & [#1871](https://github.com/openfoodfacts/open-prices-frontend/issues/1871) ([439ffbf](https://github.com/openfoodfacts/open-prices-frontend/commit/439ffbfabdd65dd9b4c6eb2c1736c111e73c8b5b))
+* **l10n:** New Crowdin translations to review and merge ([#2212](https://github.com/openfoodfacts/open-prices-frontend/issues/2212)) ([370d4d0](https://github.com/openfoodfacts/open-prices-frontend/commit/370d4d012608d2eab2cb44af0dee2bde1d370a7a))
+* **l10n:** New Crowdin translations to review and merge ([#2223](https://github.com/openfoodfacts/open-prices-frontend/issues/2223)) ([d95078d](https://github.com/openfoodfacts/open-prices-frontend/commit/d95078d06e7a18231de723677a8912e203f91420))
+* **Location Selector:** only store the 10 most recent locations ([#2221](https://github.com/openfoodfacts/open-prices-frontend/issues/2221)) ([6661f0a](https://github.com/openfoodfacts/open-prices-frontend/commit/6661f0af7aec642816aa53f36973b10d27a4b766))
+* **Location Selector:** reduce the size of icon-only tabs (on small screens) ([#2225](https://github.com/openfoodfacts/open-prices-frontend/issues/2225)) ([111d70f](https://github.com/openfoodfacts/open-prices-frontend/commit/111d70f1dd44d9ca7df00a107caa4e1422c6d7f4))
+
+## [1.166.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.165.0...v1.166.0) (2026-05-29)
+
+
+### Features
+
+* **Proofs:** when uploading, add alert message to avoid closing the page ([#2208](https://github.com/openfoodfacts/open-prices-frontend/issues/2208)) ([4fdf919](https://github.com/openfoodfacts/open-prices-frontend/commit/4fdf9196ba3f01c33e6aa461cbe1e2870089861b))
+* **UX:** improve the page meta title displayed (use translated page title when available) ([#2189](https://github.com/openfoodfacts/open-prices-frontend/issues/2189)) ([4e07aa2](https://github.com/openfoodfacts/open-prices-frontend/commit/4e07aa20834dfa8f68d0b01548fa4dd17bedafe1))
+
+
+### Bug Fixes
+
+* **Proofs:** fix translation in new uploading alert. ref [#2208](https://github.com/openfoodfacts/open-prices-frontend/issues/2208) ([d0508ec](https://github.com/openfoodfacts/open-prices-frontend/commit/d0508ec4331ae60fadb8c67162efc47492d35393))
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2166](https://github.com/openfoodfacts/open-prices-frontend/issues/2166)) ([567e230](https://github.com/openfoodfacts/open-prices-frontend/commit/567e23015d932c23733e6b357eb0765b4fca26e0))
+* **l10n:** New Crowdin translations to review and merge ([#2201](https://github.com/openfoodfacts/open-prices-frontend/issues/2201)) ([9c51351](https://github.com/openfoodfacts/open-prices-frontend/commit/9c513519a978c47ee731d6367a34613e3afef346))
+
+## [1.165.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.164.0...v1.165.0) (2026-05-16)
+
+
+### Features
+
+* **ProofPriceTagAssistant:** allow users to edit price tags without extraction prediction ([#2188](https://github.com/openfoodfacts/open-prices-frontend/issues/2188)) ([6ea0535](https://github.com/openfoodfacts/open-prices-frontend/commit/6ea053594d57475cd24c8841ecf7ea87c85283df))
+
+
+### Bug Fixes
+
+* **Product Detail:** fix typo in [#2195](https://github.com/openfoodfacts/open-prices-frontend/issues/2195) ([a76bf10](https://github.com/openfoodfacts/open-prices-frontend/commit/a76bf10eb1282789f4cf3614d15233f08d90f5d8))
+
+
+### Technical
+
+* **CategoryTagChip:** use in ProductCategoriesChip component ([#2198](https://github.com/openfoodfacts/open-prices-frontend/issues/2198)) ([da2f53a](https://github.com/openfoodfacts/open-prices-frontend/commit/da2f53a6d2b873a025a5633ac0a2ef3da27aa9dd))
+* **CategoryTagChip:** use instead of PriceCategoryChip. new localize prop. simplify ([#2197](https://github.com/openfoodfacts/open-prices-frontend/issues/2197)) ([0ce4eec](https://github.com/openfoodfacts/open-prices-frontend/commit/0ce4eec37ae9fe2ab4f34eab05ed1cb85b8e3f22))
+* **Label Chip:** new LabelTagChip, similar to CategoryTagChip ([#2199](https://github.com/openfoodfacts/open-prices-frontend/issues/2199)) ([c2c2abc](https://github.com/openfoodfacts/open-prices-frontend/commit/c2c2abc9636de721c2993e223846e9b0686c2341))
+* **Origin Chip:** new OriginTagChip, similar to LabelTagChip & CategoryTagChip ([#2200](https://github.com/openfoodfacts/open-prices-frontend/issues/2200)) ([1c295d9](https://github.com/openfoodfacts/open-prices-frontend/commit/1c295d921b596bca36e03471ba1cdefad2ea4ded))
+* **Product Detail:** if unknown, show only 1 banner to add the product ([#2195](https://github.com/openfoodfacts/open-prices-frontend/issues/2195)) ([b621d3c](https://github.com/openfoodfacts/open-prices-frontend/commit/b621d3c840992724a2a45a0647f49c253e2bcbb4))
+
+## [1.164.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.163.1...v1.164.0) (2026-05-15)
+
+
+### Features
+
+* **Stats:** display the new `product_created_count` ([#2191](https://github.com/openfoodfacts/open-prices-frontend/issues/2191)) ([e51eded](https://github.com/openfoodfacts/open-prices-frontend/commit/e51eded2bc180d440adb8d0b54024b820cce4dc4))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#2190](https://github.com/openfoodfacts/open-prices-frontend/issues/2190)) ([01b60e2](https://github.com/openfoodfacts/open-prices-frontend/commit/01b60e2f745e909d937af45b61e87cac3ce753a6))
+* **Location Card:** Use the new `osm_brand_logo_url` for OP locations ([#2194](https://github.com/openfoodfacts/open-prices-frontend/issues/2194)) ([7e11db5](https://github.com/openfoodfacts/open-prices-frontend/commit/7e11db5521f22f68e005cad5c3c5c0afd87ed255))
+* **Stats:** new Challenge sections. add Price & Proof count in challenges ([#2193](https://github.com/openfoodfacts/open-prices-frontend/issues/2193)) ([c83a5c7](https://github.com/openfoodfacts/open-prices-frontend/commit/c83a5c7e922781ad05857b7e9da7e949f223e8bc))
+
+## [1.163.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.163.0...v1.163.1) (2026-05-14)
+
+
+### Bug Fixes
+
+* keep en:breads in category list ([#2185](https://github.com/openfoodfacts/open-prices-frontend/issues/2185)) ([0190902](https://github.com/openfoodfacts/open-prices-frontend/commit/019090248f3a161d56be21e712bbb7be99908f5d))
+* **Price Validation:** Avoid loading price tags without extraction prediction (fixes blank screen) ([#2187](https://github.com/openfoodfacts/open-prices-frontend/issues/2187)) ([1866a59](https://github.com/openfoodfacts/open-prices-frontend/commit/1866a59ba529a7a6f31862f1fab5eb3e77dddcb4))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#2175](https://github.com/openfoodfacts/open-prices-frontend/issues/2175)) ([8dfee2b](https://github.com/openfoodfacts/open-prices-frontend/commit/8dfee2bf2c2476692caeb7505f4ee1b39908d74e))
+
+## [1.163.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.162.3...v1.163.0) (2026-05-05)
+
+
+### Features
+
+* **UI:** Use the new official Open Prices favicon ([#2178](https://github.com/openfoodfacts/open-prices-frontend/issues/2178)) ([8310522](https://github.com/openfoodfacts/open-prices-frontend/commit/83105222485f05f4eead7eb7938565c073d93d0f))
+
+
+### Bug Fixes
+
+* **Price Validation Assistant:** filter price tag based on PRICE_TAG_EXTRACTION predictions ([#2174](https://github.com/openfoodfacts/open-prices-frontend/issues/2174)) ([b88d5bb](https://github.com/openfoodfacts/open-prices-frontend/commit/b88d5bbf7ffd223fd3f10760cb793d133bb078db))
+* **Proofs:** fix bug when changing receipt to price tag if owner_consumption was set ([#2179](https://github.com/openfoodfacts/open-prices-frontend/issues/2179)) ([0874fdf](https://github.com/openfoodfacts/open-prices-frontend/commit/0874fdf1d6167452488b16822b9340bcbe7fe915))
+
+
+### Technical
+
+* **deps:** bump googleapis/release-please-action from 4 to 5 ([#2177](https://github.com/openfoodfacts/open-prices-frontend/issues/2177)) ([5b06f56](https://github.com/openfoodfacts/open-prices-frontend/commit/5b06f56c79f16dece0911f3129fdf5c21ef1948d))
+* **deps:** bump toshimaru/auto-author-assign from 3.0.1 to 3.0.2 ([#2176](https://github.com/openfoodfacts/open-prices-frontend/issues/2176)) ([e89ca22](https://github.com/openfoodfacts/open-prices-frontend/commit/e89ca22438b53801af70a9fe731cf56a522a3901))
+
+## [1.162.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.162.2...v1.162.3) (2026-04-21)
+
+
+### Bug Fixes
+
+* **LocationSelectorDialog:** hide info messages in result display. following [#2154](https://github.com/openfoodfacts/open-prices-frontend/issues/2154) ([85f6161](https://github.com/openfoodfacts/open-prices-frontend/commit/85f6161a9fff0260390041131acad26f7823978f))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#2158](https://github.com/openfoodfacts/open-prices-frontend/issues/2158)) ([ab5758a](https://github.com/openfoodfacts/open-prices-frontend/commit/ab5758a9ebdf1afe503d5c0dfa2e4cc876f6fd72))
+* **Locations:** improve fallback to png logo (or default) ([#2168](https://github.com/openfoodfacts/open-prices-frontend/issues/2168)) ([5719835](https://github.com/openfoodfacts/open-prices-frontend/commit/571983561d142e0085d0eef2ae14055011da9a0b))
+
+## [1.162.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.162.1...v1.162.2) (2026-04-18)
+
+
+### Bug Fixes
+
+* **LocationSelectorDialog:** fix big in result display. following [#2154](https://github.com/openfoodfacts/open-prices-frontend/issues/2154) ([06046a5](https://github.com/openfoodfacts/open-prices-frontend/commit/06046a54f74c136a96deb7ac5276d7e45e655877))
+
+
+### Technical
+
+* **CreateOffProduct:** improve barcode input UI (full width) ([#2162](https://github.com/openfoodfacts/open-prices-frontend/issues/2162)) ([0fd9a62](https://github.com/openfoodfacts/open-prices-frontend/commit/0fd9a6237e4a7a9490ba899b222c09903fd2597d))
+
+## [1.162.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.162.0...v1.162.1) (2026-04-18)
+
+
+### Bug Fixes
+
+* **BarcodeScannerDialog:** digit-only barcodes are allowed ([#2159](https://github.com/openfoodfacts/open-prices-frontend/issues/2159)) ([839583a](https://github.com/openfoodfacts/open-prices-frontend/commit/839583aac7e12d2458a8234be7ed6d20fc03038d))
+* **CreateOffProduct:** digit-only barcodes are allowed ([#2156](https://github.com/openfoodfacts/open-prices-frontend/issues/2156)) ([2cd53b2](https://github.com/openfoodfacts/open-prices-frontend/commit/2cd53b291f5eb15b2c171c90bd4e9e7af755e408))
+
+
+### Technical
+
+* **CreateOffProduct:** update URL when changing filter & order. Add loading spinner ([#2160](https://github.com/openfoodfacts/open-prices-frontend/issues/2160)) ([9cc8067](https://github.com/openfoodfacts/open-prices-frontend/commit/9cc8067b87c98dbc243ae7e4a3e79a9b41b99b9c))
+* **Price Card:** when product is missing, turn default image to red ([#2161](https://github.com/openfoodfacts/open-prices-frontend/issues/2161)) ([f2b83e7](https://github.com/openfoodfacts/open-prices-frontend/commit/f2b83e7b5ce042bbabc867bc8435306d9b80c554))
+
+## [1.162.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.161.2...v1.162.0) (2026-04-17)
+
+
+### Features
+
+* **BarcodeScannerDialog:** Display similar barcodes as choices ([#1724](https://github.com/openfoodfacts/open-prices-frontend/issues/1724)) ([a944d26](https://github.com/openfoodfacts/open-prices-frontend/commit/a944d260855b177a255b715503c9a3144d55534f))
+* **BarcodeScannerDialog:** if the barcode search has a prefill value, fetch the product on mount ([#2152](https://github.com/openfoodfacts/open-prices-frontend/issues/2152)) ([12690ed](https://github.com/openfoodfacts/open-prices-frontend/commit/12690ed09d4e4194862b4b0f4bbe04e87bf02c38))
+
+
+### Bug Fixes
+
+* move punctuation before challenge subtitle ([#2142](https://github.com/openfoodfacts/open-prices-frontend/issues/2142)) ([e6b524c](https://github.com/openfoodfacts/open-prices-frontend/commit/e6b524c36af0de4c711d7622ea0fef0b6e8c0fb8))
+
+
+### Technical
+
+* **Auth:** API: stop sending domain cookies to the API, they conflict with the token authentication ([#2148](https://github.com/openfoodfacts/open-prices-frontend/issues/2148)) ([541cda5](https://github.com/openfoodfacts/open-prices-frontend/commit/541cda5e0f76e751207db4c5a0f89be26c70cb05))
+* **Auth:** improve fetchOpenPrices to manage different headers depending on token & content-type ([#2151](https://github.com/openfoodfacts/open-prices-frontend/issues/2151)) ([e38c47e](https://github.com/openfoodfacts/open-prices-frontend/commit/e38c47e866c53ef125eeeee57f2b32b985d83226))
+* **Auth:** new fetchOpenPrices to call fetch with the same URL and avoid repeating ([#2150](https://github.com/openfoodfacts/open-prices-frontend/issues/2150)) ([ce66768](https://github.com/openfoodfacts/open-prices-frontend/commit/ce6676895b67bc41433ac030484f1a6629c8134c))
+* **Auth:** on signOut, clear is_moderator info ([#2149](https://github.com/openfoodfacts/open-prices-frontend/issues/2149)) ([5207faf](https://github.com/openfoodfacts/open-prices-frontend/commit/5207faf7667613f2f67744b904cee989b9d03eb8))
+* **BarcodeScannerDialog:** remove old component BarcodeManualInputDialog ([#2153](https://github.com/openfoodfacts/open-prices-frontend/issues/2153)) ([f125df7](https://github.com/openfoodfacts/open-prices-frontend/commit/f125df72909ebacfc2ff522269bc15ee84eef7b8))
+* **l10n:** New Crowdin translations to review and merge ([#2145](https://github.com/openfoodfacts/open-prices-frontend/issues/2145)) ([eee3579](https://github.com/openfoodfacts/open-prices-frontend/commit/eee3579bfeb3d8a04c8510a0a07b7c3a228d068f))
+* **LocationSelectorDialog:** disable submit button if online is empty or invalid ([#2155](https://github.com/openfoodfacts/open-prices-frontend/issues/2155)) ([74f302c](https://github.com/openfoodfacts/open-prices-frontend/commit/74f302c6da5289e6b4726591a0093f27ccb85e67))
+* **LocationSelectorDialog:** remove 'Results' title and show the list of cards directly (like the BarcodeScannerDialog) ([#2154](https://github.com/openfoodfacts/open-prices-frontend/issues/2154)) ([2c385af](https://github.com/openfoodfacts/open-prices-frontend/commit/2c385afb46d4588f4744949f4a6b2b9a0536ec14))
+
+## [1.161.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.161.1...v1.161.2) (2026-04-12)
+
+
+### Bug Fixes
+
+* **CreateOffProduct:** fix flavor key missing from API call (following [#2131](https://github.com/openfoodfacts/open-prices-frontend/issues/2131)) ([#2141](https://github.com/openfoodfacts/open-prices-frontend/issues/2141)) ([d286645](https://github.com/openfoodfacts/open-prices-frontend/commit/d28664590eb11bb0a557e9595feddb053f25bad0))
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2112](https://github.com/openfoodfacts/open-prices-frontend/issues/2112)) ([f979452](https://github.com/openfoodfacts/open-prices-frontend/commit/f9794522ed50e8d57dae1c0649a1717f60392d83))
+* **l10n:** New Crowdin translations to review and merge ([#2139](https://github.com/openfoodfacts/open-prices-frontend/issues/2139)) ([124518c](https://github.com/openfoodfacts/open-prices-frontend/commit/124518c96d9be2c433481b15289ac465f186b53e))
+
+## [1.161.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.161.0...v1.161.1) (2026-04-10)
+
+
+### Bug Fixes
+
+* **CI:** bump Node heap size limit to fix vite build ([#2132](https://github.com/openfoodfacts/open-prices-frontend/issues/2132)) ([1cb45fd](https://github.com/openfoodfacts/open-prices-frontend/commit/1cb45fd5e73bdc1d0f09cebec13087c9c31af64b))
+
+
+### Technical
+
+* **CI:** move unplugin-vue-i18n to devDependencies ([#2137](https://github.com/openfoodfacts/open-prices-frontend/issues/2137)) ([1ed21f4](https://github.com/openfoodfacts/open-prices-frontend/commit/1ed21f44c8da8bb6b65fd348d555064051b20c44))
+* **Release Please:** avoid having the component name in the release version ([#2138](https://github.com/openfoodfacts/open-prices-frontend/issues/2138)) ([ceac83d](https://github.com/openfoodfacts/open-prices-frontend/commit/ceac83d4d9637a6034b637e8ad54cded7283ac78))
+* **Release Please:** update package.json version on release ([#2135](https://github.com/openfoodfacts/open-prices-frontend/issues/2135)) ([4783364](https://github.com/openfoodfacts/open-prices-frontend/commit/47833647cac5238644244c4e239f20c8b6c086f4))
+
+## [1.161.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.160.0...v1.161.0) (2026-04-10)
+
+
+### Features
+
+* **CreateOffProduct:** Load new products from the prices API. Add filtering and ordering ([#2119](https://github.com/openfoodfacts/open-prices-frontend/issues/2119)) ([66bcbfd](https://github.com/openfoodfacts/open-prices-frontend/commit/66bcbfd595e0712f4369c950df2f3e2241dda93c))
+
+
+### Bug Fixes
+
+* **Action Menu:** fix link to category_tag detail page ([#2124](https://github.com/openfoodfacts/open-prices-frontend/issues/2124)) ([1ab3f4e](https://github.com/openfoodfacts/open-prices-frontend/commit/1ab3f4eb4f39ef9369bcd97197ed2468a1c41105))
+* **Data:** fix credentials for the weekly task to run ([#2108](https://github.com/openfoodfacts/open-prices-frontend/issues/2108)) ([718cbaf](https://github.com/openfoodfacts/open-prices-frontend/commit/718cbafae1bbfe57a0bc2d3b7471a633de87e301))
+* **Data:** fix peter-evans/create-pull-request config (add-paths) (again) ([#2111](https://github.com/openfoodfacts/open-prices-frontend/issues/2111)) ([f7e0827](https://github.com/openfoodfacts/open-prices-frontend/commit/f7e0827783dd6d191b54892c176b783dd04b6507))
+* **Data:** weekly task: bump peter-evans/create-pull-request version & revert credentials/permissions ([#2109](https://github.com/openfoodfacts/open-prices-frontend/issues/2109)) ([baa0c0a](https://github.com/openfoodfacts/open-prices-frontend/commit/baa0c0a74619caee212ad874245013b84ee2c9eb))
+* **Data:** weekly task: fix peter-evans/create-pull-request config (add-paths) ([#2110](https://github.com/openfoodfacts/open-prices-frontend/issues/2110)) ([e796a45](https://github.com/openfoodfacts/open-prices-frontend/commit/e796a45b6c9a63adbc2becddb5df0179fabf67cf))
+* **Utils:** fix path to data JSON following refactor in [#2120](https://github.com/openfoodfacts/open-prices-frontend/issues/2120) ([#2122](https://github.com/openfoodfacts/open-prices-frontend/issues/2122)) ([ca3df39](https://github.com/openfoodfacts/open-prices-frontend/commit/ca3df398cea5b01ae6e1dc5462abe9526c543d5a))
+
+
+### Technical
+
+* **CreateOffProduct:** for country input, use JSON localized data ([#2130](https://github.com/openfoodfacts/open-prices-frontend/issues/2130)) ([27c135d](https://github.com/openfoodfacts/open-prices-frontend/commit/27c135df4c576113a2470ec0a72b9426853999cc))
+* **CreateOffProduct:** simplify flavor input mgmt ([#2131](https://github.com/openfoodfacts/open-prices-frontend/issues/2131)) ([133fb6c](https://github.com/openfoodfacts/open-prices-frontend/commit/133fb6c8d7d690a558cace7ed92a45e7f15e2f66))
+* **Data:** move script generation shared logic to utils ([#2104](https://github.com/openfoodfacts/open-prices-frontend/issues/2104)) ([4b07890](https://github.com/openfoodfacts/open-prices-frontend/commit/4b07890274ab9847e508329c4cdb8469c374868c))
+* **Data:** new utils to fetch country JSON for the specified locale ([#2121](https://github.com/openfoodfacts/open-prices-frontend/issues/2121)) ([28df2ee](https://github.com/openfoodfacts/open-prices-frontend/commit/28df2ee0cf64231e8bf79da89c098a7fc9f0490b))
+* **Data:** on script generation run, compute & store basic stats in the README ([#2107](https://github.com/openfoodfacts/open-prices-frontend/issues/2107)) ([fbca9e7](https://github.com/openfoodfacts/open-prices-frontend/commit/fbca9e748b4d909ff939e0b7f401dcbf03643abb))
+* **Data:** update categories ([#2105](https://github.com/openfoodfacts/open-prices-frontend/issues/2105)) ([b5599fd](https://github.com/openfoodfacts/open-prices-frontend/commit/b5599fd8cc46e7e72dc8ace3ef32506ab97ee1c7))
+* **l10n:** improve translations for Filter, Order & Display (seperate noun, verb & plural) ([#2126](https://github.com/openfoodfacts/open-prices-frontend/issues/2126)) ([a54a860](https://github.com/openfoodfacts/open-prices-frontend/commit/a54a8604a7defab7bfe0390af154d297ece1e419))
+* **l10n:** New Crowdin translations to review and merge ([#2118](https://github.com/openfoodfacts/open-prices-frontend/issues/2118)) ([6426dbe](https://github.com/openfoodfacts/open-prices-frontend/commit/6426dbeba90b8a934f4b9bb1c5e537bace7b20b7))
+* org is now on scaleway-docker-prod-2 ([#2117](https://github.com/openfoodfacts/open-prices-frontend/issues/2117)) ([c22c8e2](https://github.com/openfoodfacts/open-prices-frontend/commit/c22c8e2c6ec2fd6aff5c3bd955fa902357d7be6c))
+* **Settings:** for country input, used JSON localized data ([#2128](https://github.com/openfoodfacts/open-prices-frontend/issues/2128)) ([0e7a11f](https://github.com/openfoodfacts/open-prices-frontend/commit/0e7a11fc1be34d4d38e21871094d38d87d3df320))
+* **Settings:** for localized country input, order alphabetically (instead of contry_code) ([#2129](https://github.com/openfoodfacts/open-prices-frontend/issues/2129)) ([539d384](https://github.com/openfoodfacts/open-prices-frontend/commit/539d38440ff71c8bbfc4087a0ece180ff49c81af))
+* **Settings:** move language input above country (more important) ([#2127](https://github.com/openfoodfacts/open-prices-frontend/issues/2127)) ([0e79656](https://github.com/openfoodfacts/open-prices-frontend/commit/0e79656820ae221b721974f7be5a969c97eb7688))
+* **Utils:** avoid fetching localized JSON data in components ([#2123](https://github.com/openfoodfacts/open-prices-frontend/issues/2123)) ([adfa160](https://github.com/openfoodfacts/open-prices-frontend/commit/adfa160e186136d0f96c84572b5c4b94a55b7f7a))
+* **Utils:** move data stuff to a dedicated file ([#2120](https://github.com/openfoodfacts/open-prices-frontend/issues/2120)) ([81ce1ab](https://github.com/openfoodfacts/open-prices-frontend/commit/81ce1ab33412ac68f825ee76f6c9d104ea6e86fc))
+
+## [1.160.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.159.0...v1.160.0) (2026-03-28)
+
+
+### Features
+
+* **Data:** script to filter and generate countries (with translations) ([#2102](https://github.com/openfoodfacts/open-prices-frontend/issues/2102)) ([8971a1f](https://github.com/openfoodfacts/open-prices-frontend/commit/8971a1f331e790ff20e302b7528f56d7dc58a0a2))
+
+## [1.159.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.158.1...v1.159.0) (2026-03-28)
+
+
+### Features
+
+* **Data:** run data generation scripts (from taxonomies) on a weekly basis + open a PR if changes ([#2096](https://github.com/openfoodfacts/open-prices-frontend/issues/2096)) ([af38c83](https://github.com/openfoodfacts/open-prices-frontend/commit/af38c8357870c03a2a33bcf59d3ece83c861151a))
+* **Search:** added UPC to EAN 13 normalisation when searching ([#2082](https://github.com/openfoodfacts/open-prices-frontend/issues/2082)) ([62895f7](https://github.com/openfoodfacts/open-prices-frontend/commit/62895f7b0513802e4a2060e0d4e177c38042aba3))
+
+
+### Technical
+
+* **Data:** clarify countries & languages script name ([#2101](https://github.com/openfoodfacts/open-prices-frontend/issues/2101)) ([fe58ff2](https://github.com/openfoodfacts/open-prices-frontend/commit/fe58ff254550a85f79a4faf4ae25c7e281a8447b))
+* **Locations:** Logos: Improve matching by slufigying osm_brand. Try both svg & png. ([#2099](https://github.com/openfoodfacts/open-prices-frontend/issues/2099)) ([4e6c048](https://github.com/openfoodfacts/open-prices-frontend/commit/4e6c048c137874755aae14a2f41ec26f197fe9d9))
+
+## [1.158.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.158.0...v1.158.1) (2026-03-23)
+
+
+### Bug Fixes
+
+* **Auth:** show old login form in local & staging envs (fallback) ([#2090](https://github.com/openfoodfacts/open-prices-frontend/issues/2090)) ([f53ae86](https://github.com/openfoodfacts/open-prices-frontend/commit/f53ae86a57236ecb7182df5cce8b48632ecee614))
+
+
+### Technical
+
+* **Challenge List:** load 25 challenges. order by id desc ([#2087](https://github.com/openfoodfacts/open-prices-frontend/issues/2087)) ([683570e](https://github.com/openfoodfacts/open-prices-frontend/commit/683570e8a9d4256bc93b654ae8485ea3fddeb64d))
+
+## [1.158.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.157.1...v1.158.0) (2026-03-23)
+
+
+### Features
+
+* **Auth:** Enable keycloak login in production ([#2083](https://github.com/openfoodfacts/open-prices-frontend/issues/2083)) ([58246cf](https://github.com/openfoodfacts/open-prices-frontend/commit/58246cfc163fca27d526692b9af970588b39f85f))
+* **Auth:** Sign in with Keycloak ([#2039](https://github.com/openfoodfacts/open-prices-frontend/issues/2039)) ([0080d15](https://github.com/openfoodfacts/open-prices-frontend/commit/0080d15a977f5c5c4ae1a7ef269118c0a5817b32))
+
+
+### Bug Fixes
+
+* **CreateOffProduct:** vertical crop mode text in mobile view ([#2074](https://github.com/openfoodfacts/open-prices-frontend/issues/2074)) ([5ecb92f](https://github.com/openfoodfacts/open-prices-frontend/commit/5ecb92fa757dfa52310d037326d12d6e6919d8be))
+
+
+### Technical
+
+* **Auth:** make Keycloak login the unique login in prod. Return error if config not correctly set. Show old form only in local & staging ([#2088](https://github.com/openfoodfacts/open-prices-frontend/issues/2088)) ([e495fa6](https://github.com/openfoodfacts/open-prices-frontend/commit/e495fa65bee9209de4dbb94ab17764647fc313ec))
+* **Data:** add new parent category 'cakes' ([#2081](https://github.com/openfoodfacts/open-prices-frontend/issues/2081)) ([330f9ea](https://github.com/openfoodfacts/open-prices-frontend/commit/330f9eac9efb2b9b08d52d249d3fe3176cbe3c1d))
+* **l10n:** New Crowdin translations to review and merge ([#2040](https://github.com/openfoodfacts/open-prices-frontend/issues/2040)) ([105ed5f](https://github.com/openfoodfacts/open-prices-frontend/commit/105ed5f5cdfbb330b39a2f7f1c00fb055291e845))
+
 ## [1.157.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.157.0...v1.157.1) (2026-02-22)
 
 

@@ -18,7 +18,7 @@
             />
           </v-col>
           <v-col cols="12">
-            <v-btn class="mb-2" size="small" prepend-icon="mdi-cog-outline" to="/settings">
+            <v-btn class="mb-2" size="small" :prepend-icon="SETTINGS_ICON" to="/settings">
               <span>{{ $t('ChangeCurrencyDialog.AddCurrencies') }}</span>
             </v-btn>
             <p class="text-caption text-warning">
@@ -41,6 +41,7 @@
 
 <script>
 import { useAppStore } from '../store'
+import constants from '../constants'
 
 export default {
   emits: ['newCurrencySelected', 'close'],
@@ -48,6 +49,7 @@ export default {
     return {
       userFavoriteCurrencies: [],
       userLastCurrencyUsed: null,
+      SETTINGS_ICON: constants.SETTINGS_ICON,
     }
   },
   computed: {

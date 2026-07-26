@@ -6,7 +6,6 @@ The translation for all openfoodfacts GitHub repositories, including this one, i
 
 In Crowdin, after selecting the target language, add `open-prices-frontend` as a filter to check the translations that only belong to this GitHub repository.
 
-
 ## Help with developing
 
 ### Installation
@@ -30,6 +29,8 @@ We use the [yarn](https://yarnpkg.com/getting-started/install) for package manag
 ```sh
 yarn build
 ```
+
+The build script sets `NODE_OPTIONS=--max-old-space-size=8192` to give Vite/Rollup enough heap for production bundling. This frontend includes a large generated locale data set under `src/data`, and the default Node.js heap limit can otherwise fail with `JavaScript heap out of memory` during build.
 
 ### Lint
 

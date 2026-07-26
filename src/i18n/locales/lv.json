@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "nodrošina {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Svītrkods",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Kopienas izaicinājums",
-		"Subtitle": "Pievienojieties citiem pārtikas cenu entuziastiem informācijas vākšanā par {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Fotografējiet cenu zīmes veikalos",
 			"line1": "Attēlos var būt iekļauta viena vai vairākas cenu zīmes. Svītrkodiem jābūt salasāmiem. Piemēram:",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} cenas no jums",
 		"PricesAddedByYou": "Jūsu pievienotās cenas",
 		"MostRecentContributions": "Jaunākie ieguldījumi",
-		"ChallengeCount": "{count} izaicinājumi | {count} izaicinājums | {count} izaicinājumi",
 		"ChallengeStatuses": {
 			"DRAFT": "Melnraksts",
 			"UPCOMING": "Gaidāmie",
@@ -184,6 +185,10 @@
 		"Added": "Pievienots",
 		"AdditionalInfo": "Papildinformācija",
 		"All": "Visi",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Svītrkods",
 		"Barcodes": "Svītrkodi",
 		"BarcodeScan": "Skenēt svītrkodu",
@@ -238,7 +243,9 @@
 		"CurrencyCount": "{count} valūtas | {count} valūta | {count} valūtas",
 		"CurrencyProofHelpTextSettings": "Valūtas var pievienot iestatījumos.",
 		"Dashboard": "Informācijas panelis",
-		"Display": "Reklāmas",
+		"DisplayNoun": "Reklāmas",
+		"DisplayVerb": "Reklāmas",
+		"Displays": "Displays",
 		"DisplayList": "Saraksts",
 		"DisplayPriceList": "Saraksts",
 		"DisplayTable": "Galds",
@@ -297,23 +304,31 @@
 		"Edit": "Rediģēt",
 		"End": "Beigas",
 		"ErrorServer": "Kļūda: servera kļūda",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Lauks ir obligāts",
-		"Filter": "Filtrs",
+		"FilterNoun": "Filtrs",
+		"FilterVerb": "Filtrs",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Rādīt visus izaicinājumus",
 		"FilterWithPriceCount": "Ar cenām",
 		"FilterWithLocationCount": "Ar atrašanās vietām",
 		"FilterProductWithPriceCount": "Ar cenu",
 		"FilterProductWithPriceCountHide": "Slēpt produktus ar cenām",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Bez cenām",
 		"FilterPriceMoreThan30DaysHide": "Slēpt cenas, kas vecākas par 30 dienām",
 		"FilterProofWithPriceCountHide": "Slēpt pierādījumus ar cenām",
-		"FilterPriceTagWithProofOwner": "Rādīt tikai manus pierādījumus",
-		"FilterPriceTagWithProofUserCountry": "Rādīt tikai pierādījumus no manas valsts",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Ar derīgu svītrkodu",
-		"FilterPriceTagWithTagPredictionProductExists": "Ar derīgu produktu",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Ar derīgu kategorijas tagu",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Slēpt atrašanās vietas ar cenām",
 		"FilterUserWithPriceCountHide": "Slēpt līdzautorus ar cenām",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Labot",
 		"FAQ": "Bieži uzdotie jautājumi",
 		"FrequentlyAskedQuestions": "Bieži uzdotie jautājumi",
@@ -361,7 +376,9 @@
 		"Online": "Tiešsaistē",
 		"Open": "Atvērt",
 		"OpenWithTheAssistant": "Atvērt ar palīgu",
-		"Order": "Pasūtījums",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Nosaukums",
 		"OrderLocationCountDESC": "Atrašanās vietu skaits",
 		"OrderProductUniqueScansDESC": "Skenējumu skaits",
@@ -414,6 +431,8 @@
 		"Private": "Privāts",
 		"Privacy": "Privātums",
 		"ProductCount": "{count} produkti | {count} produkts | {count} produkti",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "Izveidotie produkti",
 		"ProductFind": "Atrodiet produktu",
 		"ProductMissing": "Trūkst produkta",
 		"ProductOrCategoryMissing": "Trūkst produkta vai kategorijas",
@@ -445,6 +464,7 @@
 		"Recent": "Jaunākie",
 		"Re-open": "Atkārtoti atvērt",
 		"ReportProblem": "Ziņot par problēmu",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Atiestatīt",
 		"Resolved": "Atrisināts",
 		"Reuses": "Atkārtota izmantošana",
@@ -453,7 +473,7 @@
 		"Select": "Atlasīt",
 		"Send": "Sūtīt",
 		"Settings": "Iestatījumi",
-		"SignInOFFAccount": "Pierakstieties ar savu {url} kontu",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Pierakstījies!",
 		"SignIn": "Ieiet",
 		"SignOut": "Izrakstīties",
@@ -643,6 +663,7 @@
 		"PoweredBy": {
 			"text": "nodrošina {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "Nav nesenu atrašanās vietu | Nesenā atrašanās vieta {recentLocationNumber}| Nesenās atrašanās vietas {recentLocationNumber}",
 		"Result": "Rezultāts {resultNumber} | Rezultāti {resultNumber}",
 		"SearchByName": "Meklējiet savu veikalu pēc nosaukuma un pilsētas",
@@ -734,7 +755,8 @@
 		"ReceiptAllowAI": "Atļaujiet čekā darbināt mākslīgo intelektu, lai iegūtu cenas",
 		"ReceiptAIWarning": "Mākslīgais intelekts (AI) veiks pārbaudi, lai iegūtu cenas jūsu čekā.",
 		"PromoProofPriceTagAddMultiple": "Lai augšupielādētu vairākas cenu zīmes (viena un tā pati veikala atrašanās vieta un datums), noklikšķiniet šeit!",
-		"PromoReceiptAssistant": "Eksperiments: izmēģiniet jauno čeku palīgu, lai automātiski iegūtu cenas no jūsu čekiem!"
+		"PromoReceiptAssistant": "Eksperiments: izmēģiniet jauno čeku palīgu, lai automātiski iegūtu cenas no jūsu čekiem!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Pierādījums",
@@ -822,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "Izpētīt"
@@ -964,6 +989,7 @@
 		"ServerError": "Kļūda: servera kļūda",
 		"Title": "Ieiet",
 		"SignInOFFAccount": "Pierakstieties ar savu {url} kontu",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Lietotājvārds",
 		"WrongCredentials": "Kļūda: nepareizi akreditācijas dati"
 	},
@@ -992,6 +1018,10 @@
 		"PricesProofsPerSource": "Cenas un pierādījumi katram avotam",
 		"LastUpdated": "Pēdējoreiz atjaunināts {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Jaunākās cenas",
 		"LatestProofs": "Jaunākie pierādījumi",
@@ -1019,7 +1049,6 @@
 		"ChangeLanguage": "Mainīt valodu",
 		"CountryLabel": "Valsts",
 		"CurrencyLabel": "Valūta",
-		"DisplayTitle": "Reklāmas",
 		"BarcodeScanner": "Svītrkodu skeneris",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Noklusējuma režīms",

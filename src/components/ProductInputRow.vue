@@ -72,6 +72,7 @@
     :hideBarcodeScannerTab="hideBarcodeScannerTab"
     :barcodeManualInputPrefillValue="productForm.product_code"
     :barcodeManualInputCroppedImage="productForm.image_path"
+    :barcodeManualInputSimilarBarcodeList="productForm.similar_barcodes"
     @barcode="setProductCode($event)"
     @close="barcodeScannerDialog = false"
   />
@@ -83,6 +84,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
+import data_utils from '../utils/data.js'
 import utils from '../utils.js'
 
 export default {
@@ -123,9 +125,9 @@ export default {
   emits: ['filled'],
   data() {
     return {
-      categoryTags: [],  // list of category tags for autocomplete  // see initPriceMultipleForm
-      originTags: [],  // list of origins tags for autocomplete  // see initPriceMultipleForm
-      labelTags: [],  // list of labels tags for checkboxes  // see initPriceMultipleForm
+      categoryTags: [],  // list of category tags for autocomplete  // see mounted
+      originTags: [],  // list of origins tags for autocomplete  // see mounted
+      labelTags: [],  // list of labels tags for checkboxes  // see mounted
       barcodeScannerDialog: false,
     }
   },
@@ -171,21 +173,30 @@ export default {
         this.productForm.product_code = this.$route.query.code
       }
     }
-    utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
-      this.categoryTags = module.default
-    })
-    utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
-      this.originTags = module.default
-    })
-    utils.getLocaleLabelTags(this.appStore.getUserLanguage).then((module) => {
-      this.labelTags = module.default
-    })
+    this.setCategoryTags()
+    this.setOriginTags()
+    this.setLabelTags()
     this.productForm.type = this.productForm.type ? this.productForm.type : (this.productForm.product_code ? constants.PRICE_TYPE_PRODUCT : this.appStore.user.last_product_product_used)
     if (this.productForm.product_code) {
       this.getProduct(this.productForm.product_code)
     }
   },
   methods: {
+    setCategoryTags() {
+      data_utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
+        this.categoryTags = module.default
+      })
+    },
+    setOriginTags() {
+      data_utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
+        this.originTags = module.default
+      })
+    },
+    setLabelTags() {
+      data_utils.getLocaleLabelTags(this.appStore.getUserLanguage).then((module) => {
+        this.labelTags = module.default
+      })
+    },
     showBarcodeScannerDialog() {
       this.barcodeScannerDialog = true
     },

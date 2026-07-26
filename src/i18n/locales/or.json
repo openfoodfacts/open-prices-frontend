@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Barcode",
@@ -127,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -147,7 +149,6 @@
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "ଆପଣଙ୍କ ଦ୍ୱାରା ଯୋଗ କରାଯାଇଥିବା ମୂଲ୍ୟ",
 		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
@@ -184,6 +185,10 @@
 		"Added": "ଯୋଡାଗଲା",
 		"AdditionalInfo": "Additional information",
 		"All": "All",
+		"Badge": "Badge",
+		"Badges": "Badges",
+		"BadgeCount": "{count} badges | {count} badge | {count} badges",
+		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -238,7 +243,9 @@
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"CurrencyProofHelpTextSettings": "ଆପଣ ଆପଣଙ୍କର ସେଟିଂସରେ ମୁଦ୍ରା ଯୋଡିପାରିବେ।",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"DisplayNoun": "Display",
+		"DisplayVerb": "Display",
+		"Displays": "Displays",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
@@ -297,23 +304,31 @@
 		"Edit": "Edit",
 		"End": "End",
 		"ErrorServer": "Error: server error",
+		"Favorite": "Favorite",
+		"FavoritesAdd": "Add to favorites",
+		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "କ୍ଷେତ୍ର ଆବଶ୍ୟକ ଅଟେ",
-		"Filter": "Filter",
+		"FilterNoun": "Filter",
+		"FilterVerb": "Filter",
+		"Filters": "Filters",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterWithPriceCount": "ମୂଲ୍ୟ ସହିତ",
 		"FilterWithLocationCount": "ଲୋକେସନ୍ ସହିତ",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceOwner": "Show only products with my prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithProofUserCountry": "ମୋ ଦେଶରୁ କେବଳ ପ୍ରମାଣ ଦେଖାନ୍ତୁ",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "ଏକ ବୈଧ ବାରକୋଡ୍ ସହିତ",
-		"FilterPriceTagWithTagPredictionProductExists": "ଏକ ବୈଧ ଉତ୍ପାଦ ସହିତ",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "ଏକ ବୈଧ ବର୍ଗ ଟ୍ୟାଗ୍ ସହିତ",
+		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
+		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
+		"FilterFlagShowClosed": "Include closed reports",
 		"Fix": "Fix",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
@@ -361,7 +376,9 @@
 		"Online": "Online",
 		"Open": "ଖୋଲନ୍ତୁ",
 		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OrderNoun": "Order",
+		"OrderVerb": "Order",
+		"Orders": "Orders",
 		"OrderNameASC": "Name",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -414,6 +431,8 @@
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProductCreated": "Product created!",
+		"ProductsCreated": "ତିଆରି ହୋଇଥିବା ଉତ୍ପାଦଗୁଡ଼ିକ",
 		"ProductFind": "Find the product",
 		"ProductMissing": "ଉତ୍ପାଦ ଉପଲବ୍ଧ ନାହିଁ",
 		"ProductOrCategoryMissing": "ଉତ୍ପାଦ କିମ୍ବା ବର୍ଗ ଉପଲବ୍ଧ ନାହିଁ",
@@ -445,6 +464,7 @@
 		"Recent": "Recent",
 		"Re-open": "ପୁଣି ଖୋଲନ୍ତୁ",
 		"ReportProblem": "Report a problem",
+		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Reset",
 		"Resolved": "ସମାଧାନ ହୋଇଛି",
 		"Reuses": "Reuses",
@@ -453,7 +473,7 @@
 		"Select": "Select",
 		"Send": "Send",
 		"Settings": "Settings",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Signed in!",
 		"SignIn": "Sign in",
 		"SignOut": "Sign out",
@@ -643,6 +663,7 @@
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
+		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",
@@ -734,7 +755,8 @@
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
 		"PromoProofPriceTagAddMultiple": "ଏକାଧିକ ମୂଲ୍ୟ ଟ୍ୟାଗ୍ (ସମାନ ଦୋକାନର ସ୍ଥାନ ଏବଂ ତାରିଖ) ଅପଲୋଡ୍ କରିବାକୁ, ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ!",
-		"PromoReceiptAssistant": "ପରୀକ୍ଷଣ: ଆପଣଙ୍କର ରସିଦରୁ ସ୍ୱଚାଳିତ ଭାବରେ ମୂଲ୍ୟ ବାହାର କରିବା ପାଇଁ ନୂତନ ରସିଦ ସହାୟକ ଚେଷ୍ଟା କରନ୍ତୁ!"
+		"PromoReceiptAssistant": "ପରୀକ୍ଷଣ: ଆପଣଙ୍କର ରସିଦରୁ ସ୍ୱଚାଳିତ ଭାବରେ ମୂଲ୍ୟ ବାହାର କରିବା ପାଇଁ ନୂତନ ରସିଦ ସହାୟକ ଚେଷ୍ଟା କରନ୍ତୁ!",
+		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
@@ -822,6 +844,9 @@
 		},
 		"CompareLocations": {
 			"Title": "Compare 2 locations"
+		},
+		"Badges": {
+			"Title": "Badges"
 		},
 		"Explore": {
 			"Title": "ଏକ୍ସପ୍ଲୋର୍‍ କରନ୍ତୁ"
@@ -964,6 +989,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Sign in",
 		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -992,6 +1018,10 @@
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
+	"Surveys": {
+		"HelpFeatures": "Help us build the next features in {op_name}!",
+		"SurveyGamification": "Take our 1-minute gamification survey."
+	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -1019,7 +1049,6 @@
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",

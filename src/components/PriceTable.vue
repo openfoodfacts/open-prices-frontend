@@ -4,14 +4,14 @@
       <span v-if="item.product">
         {{ getPriceProductTitle(item) }}
       </span>
-      <PriceCategoryChip v-else :priceCategory="item.category_tag" />
+      <CategoryTagChip v-else :category="item.category_tag" :localize="true" />
     </template>
     <template #[`item.product_details`]="{ item }">
       <ProductDetailsRow v-if="item.product" :product="item.product" :hideActionMenuButton="true" :readonly="true" />
       <PriceCategoryDetailsRow v-else :price="item" />
     </template>
     <template #[`item.location`]="{ item }">
-      <LocationChip :location="item.location" :locationId="item.location_id" :readonly="true" />
+      <LocationChip :location="item.location" :locationId="item.location_id" />
     </template>
     <template #[`item.date`]="{ item }">
       <DateChip :date="item.date" :readonly="true" />
@@ -36,7 +36,7 @@ import constants from '../constants'
 
 export default {
   components: {
-    PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
+    CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
     ProductDetailsRow: defineAsyncComponent(() => import('../components/ProductDetailsRow.vue')),
     PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
     LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),

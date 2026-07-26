@@ -1,11 +1,13 @@
 <template>
-  <v-chip label size="small" density="comfortable" @click="goToUser()">
-    <v-icon start icon="mdi-account" />
+  <v-chip label size="small" density="comfortable" :to="getUserUrl">
+    <v-icon start :icon="USER_ICON" />
     {{ username }}
   </v-chip>
 </template>
 
 <script>
+import constants from '../constants'
+
 export default {
   props: {
     username: {
@@ -17,13 +19,15 @@ export default {
       default: false
     },
   },
-  methods: {
-    goToUser() {
-      if (this.readonly) {
-        return
-      }
-      this.$router.push({ path: `/users/${this.username}` })
-    },
+  data() {
+    return {
+      USER_ICON: constants.USER_ICON
+    }
+  },
+  computed: {
+    getUserUrl() {
+      return this.username && !this.readonly ? `/users/${this.username}` : null
+    }
   }
 }
 </script>
