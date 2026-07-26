@@ -16,7 +16,8 @@
           {{ $t('Common.Details') }}
         </v-list-item>
         <v-list-item :slim="true" prepend-icon="mdi-open-in-new" :href="getProofImageFullUrl" target="_blank">
-          {{ $t('Common.PictureFull') }}
+          <span v-if="proof.file_path && proof.file_path.toLowerCase().endsWith('.pdf')">{{ $t('Common.OpenPDF') }}</span>
+          <span v-else>{{ $t('Common.PictureFull') }}</span>
         </v-list-item>
         <v-list-item v-if="proof.priceTagsBoundingBoxes" :slim="true" prepend-icon="mdi-star-box-multiple-outline" @click="toggleShowPriceTagsBoundingBoxes">
           <span v-if="showPriceTagsBoundingBoxes">{{ $t('Common.PriceTagsBoundingBoxesHide') }}</span>

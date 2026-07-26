@@ -41,7 +41,7 @@
             :multiple="multiple" :loading="loading" @click:clear="clearProof"
           />
           <v-file-input
-            ref="proofGallery" v-model="proofImageList" class="d-none overflow-hidden" accept="image/*, .heic"
+            ref="proofGallery" v-model="proofImageList" class="d-none overflow-hidden" accept="image/*, .heic, .pdf, application/pdf"
             :multiple="multiple" :loading="loading" @click:clear="clearProof"
           />
         </v-col>
@@ -51,7 +51,13 @@
         <v-col v-for="(proofImagePreview, index) in proofImagePreviewList" :key="proofImagePreview" cols="6">
           <v-card class="d-flex flex-column" height="100%">
             <v-card-text class="flex-grow-1 pa-2">
-              <v-img :src="proofImagePreview" max-height="200px" />
+              <v-img v-if="!isPdf(proofImageList[index])" :src="proofImagePreview" max-height="200px" />
+              <div v-else class="d-flex flex-column align-center justify-center fill-height py-4">
+                <v-icon size="64" color="red" icon="mdi-file-pdf-box" />
+                <div class="text-caption text-truncate mt-2" style="max-width: 100%;">
+                  {{ proofImageList[index]?.name || proofImageList[index]?.file_path || 'PDF' }}
+                </div>
+              </div>
             </v-card-text>
             <v-divider />
             <v-card-actions>
@@ -186,7 +192,17 @@ export default {
       if (blob.image_thumb_path) {
         return proof_utils.getImageFullUrl(blob.image_thumb_path)
       }
+      if (blob.type === 'application/pdf') {
+        return ''
+      }
       return URL.createObjectURL(blob)
+    },
+    isPdf(file) {
+      if (!file) return false
+      if (file.type === 'application/pdf') return true
+      if (file.name && file.name.toLowerCase().endsWith('.pdf')) return true
+      if (file.file_path && file.file_path.toLowerCase().endsWith('.pdf')) return true
+      return false
     }
   }
 }

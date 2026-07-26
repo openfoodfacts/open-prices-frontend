@@ -80,8 +80,8 @@
 			"UploadProof": "Upload a proof",
 			"Picture": "Picture",
 			"TakePicture": "Take a picture",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
+			"Gallery": "File / Gallery",
+			"SelectFromGallery": "Select from files or gallery",
 			"RecentProof": "Recent proof",
 			"SelectRecentProof": "Select a recent proof"
 		},
@@ -407,6 +407,7 @@
 		"PictureSelected": "Picture selected!",
 		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
 		"PictureFull": "Full-size picture",
+		"OpenPDF": "Open PDF",
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
