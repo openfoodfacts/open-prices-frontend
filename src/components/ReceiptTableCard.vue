@@ -21,6 +21,10 @@
             <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.ProductMissing')" />
             <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.ProductMissing') }}</span>
           </v-sheet>
+          <v-sheet v-else-if="itemHasInvalidDiscount(item)">
+            <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.PriceDiscountInvalid')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.PriceDiscountInvalid') }}</span>
+          </v-sheet>
           <v-sheet v-else>
             <v-icon icon="mdi-tag-plus-outline" color="success" :title="$t('Common.PriceReadyToBeUploaded')" />
             <span v-if="$vuetify.display.smAndDown" class="text-success ml-2">{{ $t('Common.PriceReadyToBeUploaded') }}</span>
@@ -58,7 +62,7 @@
           <template v-else>
             <v-text-field
               v-model="item.price"
-              :class="item.price ? 'outline-border-success' : 'outline-border-error'"
+              :class="(item.price && !itemHasInvalidDiscount(item)) ? 'outline-border-success' : 'outline-border-error'"
               density="compact"
               variant="outlined"
               type="text"
@@ -317,6 +321,9 @@ export default {
     },
     itemHasDiscount(item) {
       return item.price_is_discounted
+    },
+    itemHasInvalidDiscount(item) {
+      return this.itemHasDiscount(item) && item.price_without_discount && (Number(item.price) >= Number(item.price_without_discount))
     },
     findProduct(item) {
       openPricesApi
