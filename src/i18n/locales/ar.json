@@ -795,6 +795,16 @@
 		"Save": "حفظ",
 		"Success": "تمت مراجعة النص وتدقيقه!"
 	},
+	"ReceiptAnonymize": {
+		"Title": "Anonymize a receipt",
+		"Save": "حفظ",
+		"EditRedactBoxes": "Edit & redact boxes",
+		"EnableBoxDrawMode": "Enable box draw mode",
+		"EnableBoxRemoveMode": "Enable box remove mode",
+		"WaitingForReceiptUpload": "Waiting for receipt upload...",
+		"WaitingForAnonymizationPrediction": "Waiting for anonymization prediction...",
+		"Anonymize": "Anonymize"
+	},
 	"ReceiptAssistant": {
 		"AddNewItem": "إضافة عنصر جديد",
 		"NoItemsFound": "لم يتم استخراج أي عناصر من الإيصال، يرجى المحاولة مرة أخرى.",
