@@ -535,6 +535,14 @@ export default {
     .then((response) => response.json())
   },
 
+  getHistory(objectType, objectId, params = {}) {
+    const endpointWithParams = `/${objectType}s/${objectId}/history?${buildURLParams({...params})}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'GET',
+    })
+    .then((response) => response.json())
+  },
+
   getStats() {
     const endpointWithParams = `/stats?${buildURLParams()}`
     return fetchOpenPrices(endpointWithParams, {
