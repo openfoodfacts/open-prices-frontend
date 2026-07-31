@@ -113,6 +113,40 @@ function fetchOpenPrices(endpointWithParams, options, withToken = false) {
   })
 }
 
+function fillCreateProofFormData(formData, data) {
+  if (data.location_id) {
+    formData.append('location_id', data.location_id ? data.location_id : '')
+  }
+  if (data.location_osm_id && data.location_osm_type) {
+    formData.append('location_osm_id', data.location_osm_id ? data.location_osm_id : '')
+    formData.append('location_osm_type', data.location_osm_type ? data.location_osm_type : '')
+  }
+  formData.append('date', data.date ? data.date : '')
+  formData.append('currency', data.currency ? data.currency : '')
+  if (data.type === constants.PROOF_TYPE_RECEIPT) {
+    if (data.receipt_price_count) {
+      formData.append('receipt_price_count', data.receipt_price_count)
+    }
+    if (data.receipt_price_total) {
+      formData.append('receipt_price_total', data.receipt_price_total)
+    }
+    if (data.receipt_online_delivery_costs) {
+      formData.append('receipt_online_delivery_costs', data.receipt_online_delivery_costs)
+    }
+    if (data.owner_consumption === true || data.owner_consumption === false) {
+      formData.append('owner_consumption', data.owner_consumption)
+    }
+    if (data.owner_comment) {
+      formData.append('owner_comment', data.owner_comment)
+    }
+  }
+  else if (data.type === constants.PROOF_TYPE_PRICE_TAG) {
+    if (data.ready_for_price_tag_validation) {
+      formData.append('ready_for_price_tag_validation', data.ready_for_price_tag_validation)
+    }
+  }
+  return formData
+}
 
 export default {
   signIn(username, password) {
@@ -172,37 +206,7 @@ export default {
     let formData = new FormData()
     formData.append('file', image, image.name)
     formData.append('type', data.type)
-    if (data.location_id) {
-      formData.append('location_id', data.location_id ? data.location_id : '')
-    }
-    if (data.location_osm_id && data.location_osm_type) {
-      formData.append('location_osm_id', data.location_osm_id ? data.location_osm_id : '')
-      formData.append('location_osm_type', data.location_osm_type ? data.location_osm_type : '')
-    }
-    formData.append('date', data.date ? data.date : '')
-    formData.append('currency', data.currency ? data.currency : '')
-    if (data.type === constants.PROOF_TYPE_RECEIPT) {
-      if (data.receipt_price_count) {
-        formData.append('receipt_price_count', data.receipt_price_count)
-      }
-      if (data.receipt_price_total) {
-        formData.append('receipt_price_total', data.receipt_price_total)
-      }
-      if (data.receipt_online_delivery_costs) {
-        formData.append('receipt_online_delivery_costs', data.receipt_online_delivery_costs)
-      }
-      if (data.owner_consumption === true || data.owner_consumption === false) {
-        formData.append('owner_consumption', data.owner_consumption)
-      }
-      if (data.owner_comment) {
-        formData.append('owner_comment', data.owner_comment)
-      }
-    }
-    else if (data.type === constants.PROOF_TYPE_PRICE_TAG) {
-      if (data.ready_for_price_tag_validation) {
-        formData.append('ready_for_price_tag_validation', data.ready_for_price_tag_validation)
-      }
-    }
+    formData = fillCreateProofFormData(formData, data)
     // update store
     if (data.currency) {
       store.setLastCurrencyUsed(data.currency)
@@ -212,6 +216,58 @@ export default {
     return fetchOpenPrices(endpointWithParams, {
       method: 'POST',
       body: formData,
+    }, true)
+    .then((response) => response.json())
+  },
+
+  createDraftProof(image, type) {
+    let formData = new FormData()
+    formData.append('file', image, image.name)
+    formData.append('type', type)
+    const endpointWithParams = `/proofs/drafts/upload?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'POST',
+      body: formData,
+    }, true)
+    .then((response) => response.json())
+  },
+
+  finalizeDraftProof(proofId, inputData = {}, source = null) {
+    const store = useAppStore()
+    // build body
+    let data = filterBodyWithAllowedKeys(inputData, PROOF_CREATE_FIELDS)
+    data = extraProofCreateOrUpdateFiltering(data)
+    // build form
+    let formData = new FormData()
+    formData = fillCreateProofFormData(formData, data)
+    // update store
+    if (data.currency) {
+      store.setLastCurrencyUsed(data.currency)
+    }
+    // API call
+    const endpointWithParams = `/proofs/drafts/${proofId}?${buildURLParams({'app_page': source})}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'PATCH',
+      body: formData,
+    }, true)
+    .then((response) => response.json())
+  },
+
+  anonymizeDraftProof(proofId, boundingBoxes) {
+    const endpointWithParams = `/proofs/drafts/${proofId}/anonymize?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'POST',
+      body: JSON.stringify({
+        bounding_boxes: boundingBoxes
+      }),
+    }, true)
+    // .then((response) => response.json())
+  },
+  
+  getDraftProofById(proofId) {
+    const endpointWithParams = `/proofs/drafts/${proofId}?${buildURLParams()}`
+    return fetchOpenPrices(endpointWithParams, {
+      method: 'GET',
     }, true)
     .then((response) => response.json())
   },
