@@ -186,7 +186,7 @@
 		"AdditionalInfo": "מידע נוסף",
 		"All": "הכול",
 		"Badge": "Badge",
-		"Badges": "Badges",
+		"Badges": "עיטורים",
 		"BadgeCount": "{count} badges | {count} badge | {count} badges",
 		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "ברקוד",
@@ -337,6 +337,8 @@
 		"Help": "עזרה",
 		"Here": "כָּאן",
 		"History": "היסטוריה",
+		"HistoryPrice": "Price history",
+		"HistoryProof": "Proof history",
 		"Image": "תמונה",
 		"ImageSelect": "בחירת תמונה",
 		"ImageSelectMultiple": "בחירת תמונות",
@@ -379,12 +381,15 @@
 		"OrderNoun": "Order",
 		"OrderVerb": "Order",
 		"Orders": "Orders",
+		"OrderFlagCreatedDESC": "Report date",
+		"OrderFlagReasonASC": "Report reason",
 		"OrderNameASC": "שם",
 		"OrderLocationCountDESC": "כמות מקומות",
 		"OrderProductUniqueScansDESC": "מספר הסריקות",
 		"OrderProductPriceCountDESC": "מספר המחירים",
 		"OrderPriceCountDESC": "כמות מחירים",
 		"OrderPriceASC": "מחיר",
+		"OrderPriceDESC": "מחיר",
 		"OrderPriceCreatedDESC": "תאריך ההוספה",
 		"OrderPriceDateDESC": "תאריך המחיר",
 		"OrderProductCountDESC": "כמות מוצרים",
@@ -418,6 +423,7 @@
 		"PriceCreated": "המחיר נוצר!",
 		"PriceMissing": "מחיר חסר",
 		"PricePerMissing": "מחיר לכל חסר",
+		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "המחיר כבר הועלה",
 		"PriceReadyToBeUploaded": "המחיר מוכן להעלאה",
 		"PricesAlreadyUploaded": "המחירים כבר הועלו",
@@ -846,7 +852,7 @@
 			"Title": "Compare 2 locations"
 		},
 		"Badges": {
-			"Title": "Badges"
+			"Title": "עיטורים"
 		},
 		"Explore": {
 			"Title": "לַחקוֹר"
@@ -898,7 +904,7 @@
 		},
 		"Home": {
 			"Title": "ראשי",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "{op_name} הוא מיזם לאיסוף ושיתוף מחירי מוצרים מכל רחבי העולם. זאת סדרת נתונים שזמינה לציבור ואפשר להשתמש בה למחקר, ניתוח ועוד!"
 		},
 		"Dashboard": {
 			"Title": "לוח בקרה"
@@ -1050,7 +1056,7 @@
 		"CountryLabel": "מדינה",
 		"CurrencyLabel": "מטבע",
 		"BarcodeScanner": "סורק ברקודים",
-		"BarcodeScannerLibrary": "Barcode scanner library",
+		"BarcodeScannerLibrary": "ספריית סורק ברקוד",
 		"DefaultMode": "מצב ברירת מחדל",
 		"FavoriteCurrencies": "מטבעות מועדפים",
 		"CurrencyRequired": "חובה לציין לפחות מטבע אחד",
