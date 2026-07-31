@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.171.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.170.0...v1.171.0) (2026-07-31)
+
+
+### Features
+
+* **History Card:** show full price/product history if available ([#2304](https://github.com/openfoodfacts/open-prices-frontend/issues/2304)) ([0c11fd2](https://github.com/openfoodfacts/open-prices-frontend/commit/0c11fd2747a4928d171fedf8628d77177ce6b348))
+
+
+### Bug Fixes
+
+* **ReceiptAssistant:** display an error when discounts are &gt;= full price ([#2080](https://github.com/openfoodfacts/open-prices-frontend/issues/2080)) ([e9879cc](https://github.com/openfoodfacts/open-prices-frontend/commit/e9879ccb13504099e08e2522e1bfa442d6dcb62d))
+
+
+### Technical
+
+* **History Card:** show as a list. improve card title ([#2303](https://github.com/openfoodfacts/open-prices-frontend/issues/2303)) ([975e5d7](https://github.com/openfoodfacts/open-prices-frontend/commit/975e5d7cea7d5998f79852429e9637e070a610c2))
+* **SignIn:** sign-in redirect: improve next management (keep params) ([#2305](https://github.com/openfoodfacts/open-prices-frontend/issues/2305)) ([08426e3](https://github.com/openfoodfacts/open-prices-frontend/commit/08426e3c8152e65b658931f0ab8ed8700c7b4198))
+
 ## [1.170.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.169.0...v1.170.0) (2026-07-19)
 
 
