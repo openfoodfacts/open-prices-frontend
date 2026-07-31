@@ -1,14 +1,19 @@
 <template>
-  <v-card :title="$t('Common.History')" data-name="history-card">
-    <v-card-text>
-      <span>{{ getDateTimeFormatted(price.created) }} ({{ getRelativeDateTimeFormatted(price.created) }})</span>
-      <span> - </span>
-      <a :href="getUserDetailUrl">{{ price.owner }}</a>
-      <span> ({{ price.source }})</span>
-      <span v-if="price.owner_comment">
-        <span> - </span>
-        <span>{{ price.owner_comment }}</span>
-      </span>
+  <v-card :title="getTitle" data-name="history-card">
+    <v-card-text class="ml-4">
+      <ul>
+        <!-- object creation -->
+        <li>
+          <span>{{ getDateTimeFormatted(object.created) }} ({{ getRelativeDateTimeFormatted(object.created) }})</span>
+          <span> - </span>
+          <a :href="getUserDetailUrl">{{ object.owner }}</a>
+          <span> ({{ object.source }})</span>
+          <span v-if="object.owner_comment">
+            <span> - </span>
+            <span>{{ object.owner_comment }}</span>
+          </span>
+        </li>
+      </ul>
     </v-card-text>
   </v-card>
 </template>
@@ -18,14 +23,28 @@ import date_utils from '../utils/date.js'
 
 export default {
   props: {
-    price: {
-      type: Object,
+    object: {
+      type: Object,  // Price or Proof
       required: true
+    },
+    kind: {
+      type: String,
+      default: null,
+      examples: ['price', 'proof']
     }
   },
   computed: {
+    getTitle() {
+      if (this.kind === 'price') {
+        return this.$t('Common.HistoryPrice')
+      } else if (this.kind === 'proof') {
+        return this.$t('Common.HistoryProof')
+      } else {
+        return this.$t('Common.History')
+      }
+    },
     getUserDetailUrl() {
-      return `/users/${this.price.owner}`
+      return `/users/${this.object.owner}`
     }
   },
   methods: {

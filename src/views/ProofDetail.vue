@@ -46,7 +46,7 @@
 
   <v-row v-if="proof">
     <v-col cols="12" sm="6">
-      <HistoryCard :price="proof" />
+      <HistoryCard :object="proof" kind="proof" />
     </v-col>
   </v-row>
 </template>

@@ -10,7 +10,7 @@
 
   <v-row v-if="price">
     <v-col cols="12" sm="6">
-      <HistoryCard :price="price" />
+      <HistoryCard :object="price" kind="price" />
     </v-col>
   </v-row>
 </template>
