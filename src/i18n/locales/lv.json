@@ -795,6 +795,16 @@
 		"Save": "Saglabāt",
 		"Success": "Korekcija rediģēta!"
 	},
+	"ReceiptAnonymize": {
+		"Title": "Anonymize a receipt",
+		"Save": "Saglabāt",
+		"EditRedactBoxes": "Edit & redact boxes",
+		"EnableBoxDrawMode": "Enable box draw mode",
+		"EnableBoxRemoveMode": "Enable box remove mode",
+		"WaitingForReceiptUpload": "Waiting for receipt upload...",
+		"WaitingForAnonymizationPrediction": "Waiting for anonymization prediction...",
+		"Anonymize": "Anonymize"
+	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Pievienot jaunu vienumu",
 		"NoItemsFound": "No čeka nevarēja izvilkt nevienu vienumu, lūdzu, mēģiniet vēlreiz.",
