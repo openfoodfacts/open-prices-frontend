@@ -120,8 +120,8 @@
 		"Htlm5-qrcode": {
 			"Text": "με την υποστήριξη του {url}"
 		},
-		"SimilarBarcodes": "Similar barcodes",
-		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
+		"SimilarBarcodes": "Παρόμοιοι γραμμωτοί κώδικες",
+		"SimilarBarcodesExplanation": "Αυτά τα προϊόντα έχουν γραμμωτούς κώδικες που είναι κοντά στον ανιχνευμένο γραμμωτό κώδικα. Ίσως ένας από αυτούς να είναι το προϊόν που ψάχνετε;"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Γραμμικός κωδικός",
@@ -129,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Πρόκληση κοινότητας",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
+		"Subtitle": "Συμμετέχετε μαζί με άλλους λάτρεις των τιμών των τροφίμων στη συλλογή πληροφοριών σχετικά με {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Βγάλτε φωτογραφίες από τις ετικέτες τιμών στα καταστήματα",
 			"line1": "Οι εικόνες μπορούν να περιλαμβάνουν μία ή περισσότερες ετικέτες τιμών. Οι γραμμωτοί κώδικες θα πρέπει να είναι ευανάγνωστοι. Για παράδειγμα:",
@@ -185,10 +185,10 @@
 		"Added": "Προστέθηκε",
 		"AdditionalInfo": "Πρόσθετες πληροφορίες",
 		"All": "Όλα",
-		"Badge": "Badge",
-		"Badges": "Badges",
-		"BadgeCount": "{count} badges | {count} badge | {count} badges",
-		"BadgeAchievementDate": "Achievement date",
+		"Badge": "Ετικέτα",
+		"Badges": "Ετικέτες",
+		"BadgeCount": "{count} ετικέτες | {count} ετικέτα | {count} ετικέτες",
+		"BadgeAchievementDate": "Ημερομηνία επίτευξης",
 		"Barcode": "Γραμμικός κωδικός",
 		"Barcodes": "Γραμμωτοί κώδικες",
 		"BarcodeScan": "Σάρωση ενός γραμμωτού κώδικα",
@@ -245,7 +245,7 @@
 		"Dashboard": "Ταμπλό",
 		"DisplayNoun": "Προβολή",
 		"DisplayVerb": "Προβολή",
-		"Displays": "Displays",
+		"Displays": "Προβολές",
 		"DisplayList": "Λίστα",
 		"DisplayPriceList": "Λίστα",
 		"DisplayTable": "Τραπέζι",
@@ -304,31 +304,31 @@
 		"Edit": "Επεξεργασία",
 		"End": "Τέλος",
 		"ErrorServer": "Σφάλμα: σφάλμα διακομιστή",
-		"Favorite": "Favorite",
-		"FavoritesAdd": "Add to favorites",
-		"FavoritesRemove": "Remove from favorites",
+		"Favorite": "Αγαπημένο",
+		"FavoritesAdd": "Προσθήκη στα αγαπημένα",
+		"FavoritesRemove": "Αφαίρεση από τα αγαπημένα",
 		"FieldIsRequired": "Απαιτείται πεδίο",
 		"FilterNoun": "Φίλτρο",
 		"FilterVerb": "Φίλτρο",
-		"Filters": "Filters",
+		"Filters": "Φίλτρα",
 		"FilterChallengesShowAllStatus": "Εμφάνιση όλων των προκλήσεων",
 		"FilterWithPriceCount": "Με τιμές",
 		"FilterWithLocationCount": "Με τοποθεσίες",
 		"FilterProductWithPriceCount": "Με τιμή",
 		"FilterProductWithPriceCountHide": "Απόκρυψη προϊόντων με τιμές",
-		"FilterProductWithPriceOwner": "Show only products with my prices",
+		"FilterProductWithPriceOwner": "Εμφάνιση προϊόντων μόνο με τις τιμές μου",
 		"FilterProductWithoutPriceCount": "Χωρίς τιμές",
 		"FilterPriceMoreThan30DaysHide": "Απόκρυψη τιμών παλαιότερων των 30 ημερών",
 		"FilterProofWithPriceCountHide": "Απόκρυψη αποδείξεων με τιμές",
-		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
-		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
-		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
-		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
-		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
-		"FilterPriceTagWithTagInvalidInclude": "Include prices flagged as invalid (AI)",
+		"FilterPriceTagWithProofOwner": "Εμφάνιση τιμών μόνο από τις αποδείξεις μου",
+		"FilterPriceTagWithProofUserCountry": "Εμφάνιση τιμών μόνο από τη χώρα μου",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Εμφάνιση τιμών μόνο με έγκυρο γραμμωτό κώδικα",
+		"FilterPriceTagWithTagPredictionProductExists": "Εμφάνιση τιμών μόνο με έγκυρο προϊόν",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Εμφάνιση τιμών μόνο με έγκυρη ετικέτα κατηγορίας",
+		"FilterPriceTagWithTagInvalidInclude": "Συμπερίληψη τιμών που επισημαίνονται ως μη έγκυρες (AI)",
 		"FilterLocationWithPriceCountHide": "Απόκρυψη τοποθεσιών με τιμές",
 		"FilterUserWithPriceCountHide": "Απόκρυψη συνεισφερόντων με τιμές",
-		"FilterFlagShowClosed": "Include closed reports",
+		"FilterFlagShowClosed": "Συμπερίληψη κλειστών αναφορών",
 		"Fix": "Επιδιόρθωση",
 		"FAQ": "Συχνές ερωτήσεις",
 		"FrequentlyAskedQuestions": "Συχνές ερωτήσεις",
@@ -337,6 +337,8 @@
 		"Help": "Βοήθεια",
 		"Here": "Εδώ",
 		"History": "Ιστορικό",
+		"HistoryPrice": "Price history",
+		"HistoryProof": "Proof history",
 		"Image": "Εικόνα",
 		"ImageSelect": "Επιλέξτε μια εικόνα",
 		"ImageSelectMultiple": "Επιλογή εικόνων",
@@ -376,15 +378,18 @@
 		"Online": "Διαδικτυακά",
 		"Open": "Ανοιχτό",
 		"OpenWithTheAssistant": "Άνοιγμα με τον βοηθό",
-		"OrderNoun": "Order",
-		"OrderVerb": "Order",
-		"Orders": "Orders",
+		"OrderNoun": "Παραγγελία",
+		"OrderVerb": "Παραγγελία",
+		"Orders": "Παραγγελίες",
+		"OrderFlagCreatedDESC": "Report date",
+		"OrderFlagReasonASC": "Report reason",
 		"OrderNameASC": "Όνομα",
 		"OrderLocationCountDESC": "Αριθμός τοποθεσιών",
 		"OrderProductUniqueScansDESC": "Αριθμός σαρώσεων",
 		"OrderProductPriceCountDESC": "Αριθμός τιμών",
 		"OrderPriceCountDESC": "Αριθμός τιμών",
 		"OrderPriceASC": "Τιμή",
+		"OrderPriceDESC": "Τιμή",
 		"OrderPriceCreatedDESC": "Ημερομηνία προσθήκης",
 		"OrderPriceDateDESC": "Ημερομηνία τιμής",
 		"OrderProductCountDESC": "Αριθμός προϊόντων",
@@ -418,6 +423,7 @@
 		"PriceCreated": "Η τιμή δημιουργήθηκε!",
 		"PriceMissing": "Λείπει η τιμή",
 		"PricePerMissing": "Τιμή ανά λείπον",
+		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Η τιμή έχει ήδη μεταφορτωθεί.",
 		"PriceReadyToBeUploaded": "Τιμή έτοιμη για μεταφόρτωση",
 		"PricesAlreadyUploaded": "Οι τιμές έχουν ήδη ανεβάσει",
@@ -431,7 +437,7 @@
 		"Private": "Ιδιωτικός",
 		"Privacy": "Απόρρητο",
 		"ProductCount": "{count} προϊόντα | {count} προϊόν | {count} προϊόντα",
-		"ProductCreated": "Product created!",
+		"ProductCreated": "Το προϊόν ενημερώθηκε!",
 		"ProductsCreated": "Προϊόντα που δημιουργήθηκαν",
 		"ProductFind": "Βρείτε το προϊόν",
 		"ProductMissing": "Λείπει προϊόν",
@@ -464,7 +470,7 @@
 		"Recent": "Πρόσφατος",
 		"Re-open": "Ξανανοίγω",
 		"ReportProblem": "Αναφορά πρόβληματος",
-		"ReportCount": "{count} reports | {count} report | {count} reports",
+		"ReportCount": "{count} αναφορές | {count} αναφορά | {count} αναφορές",
 		"Reset": "Επαναφορά",
 		"Resolved": "Αποφασισμένος",
 		"Reuses": "Επαναχρήσεις",
@@ -473,7 +479,7 @@
 		"Select": "Επιλέγω",
 		"Send": "Αποστολή",
 		"Settings": "Ρυθμίσεις",
-		"SignInOFFAccount": "Sign in with your {url} credentials",
+		"SignInOFFAccount": "Συνδεθείτε με τα διαπιστευτήριά σας {url}",
 		"SignedIn": "Συνδεδεμένος/η!",
 		"SignIn": "Σύνδεση",
 		"SignOut": "Αποσύνδεση",
@@ -663,7 +669,7 @@
 		"PoweredBy": {
 			"text": "με την υποστήριξη του {url}"
 		},
-		"FavoriteLocations": "No favorite locations | Favorite location {favoriteLocationNumber} | Favorite locations {favoriteLocationNumber}",
+		"FavoriteLocations": "Δεν υπάρχουν αγαπημένες τοποθεσίες | Αγαπημένη τοποθεσία {favoriteLocationNumber} | Αγαπημένες τοποθεσίες {favoriteLocationNumber}",
 		"RecentLocations": "Δεν υπάρχουν πρόσφατες τοποθεσίες | Πρόσφατη τοποθεσία {recentLocationNumber}| Πρόσφατες τοποθεσίες {recentLocationNumber}",
 		"Result": "Αποτέλεσμα {resultNumber} | Αποτελέσματα {resultNumber}",
 		"SearchByName": "Αναζητήστε το κατάστημά σας με βάση το όνομα και την πόλη",
@@ -756,7 +762,7 @@
 		"ReceiptAIWarning": "Η Τεχνητή Νοημοσύνη θα εκτελεστεί με βάση την απόδειξή σας για να εξαγάγει τιμές.",
 		"PromoProofPriceTagAddMultiple": "Για να ανεβάσετε πολλές ετικέτες τιμών (ίδια τοποθεσία και ημερομηνία καταστήματος), κάντε κλικ εδώ!",
 		"PromoReceiptAssistant": "Πείραμα: δοκιμάστε τον νέο βοηθό αποδείξεων για να εξάγετε αυτόματα τιμές από τις αποδείξεις σας!",
-		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
+		"ProofUploadProgressWarning": "Μην κλείσετε αυτήν την καρτέλα ή ανανεώστε τη σελίδα κατά την αποστολή των φωτογραφιών σας!"
 	},
 	"ProofCard": {
 		"Proof": "Επαλήθευση",
@@ -846,7 +852,7 @@
 			"Title": "Συγκρίνετε 2 τοποθεσίες"
 		},
 		"Badges": {
-			"Title": "Badges"
+			"Title": "Ετικέτες"
 		},
 		"Explore": {
 			"Title": "Εξερευνώ"
@@ -989,7 +995,7 @@
 		"ServerError": "Σφάλμα: σφάλμα διακομιστή",
 		"Title": "Σύνδεση",
 		"SignInOFFAccount": "Συνδεθείτε με τον λογαριασμό σας {url}",
-		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
+		"SignInWithOpenFoodFactsAuth": "Συνδεθείτε με {off_name} auth",
 		"UsernameLabel": "Όνομα χρήστη",
 		"WrongCredentials": "Σφάλμα: λανθασμένα διαπιστευτήρια"
 	},
@@ -1019,8 +1025,8 @@
 		"LastUpdated": "Τελευταία ενημέρωση στις {date}"
 	},
 	"Surveys": {
-		"HelpFeatures": "Help us build the next features in {op_name}!",
-		"SurveyGamification": "Take our 1-minute gamification survey."
+		"HelpFeatures": "Βοηθήστε μας να δημιουργήσουμε τις επόμενες λειτουργίες στο {op_name}!",
+		"SurveyGamification": "Συμμετέχετε στην έρευνα gamification διάρκειας 1 λεπτού."
 	},
 	"UserDashboard": {
 		"LatestPrices": "Τελευταίες τιμές",
