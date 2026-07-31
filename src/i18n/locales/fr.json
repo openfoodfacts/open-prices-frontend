@@ -795,6 +795,16 @@
 		"Save": "Enregistrer",
 		"Success": "Preuve modifiée !"
 	},
+	"ReceiptAnonymize": {
+		"Title": "Anonymize a receipt",
+		"Save": "Enregistrer",
+		"EditRedactBoxes": "Edit & redact boxes",
+		"EnableBoxDrawMode": "Enable box draw mode",
+		"EnableBoxRemoveMode": "Enable box remove mode",
+		"WaitingForReceiptUpload": "Waiting for receipt upload...",
+		"WaitingForAnonymizationPrediction": "Waiting for anonymization prediction...",
+		"Anonymize": "Anonymize"
+	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Ajouter un nouvel article",
 		"NoItemsFound": "Aucun élément n'a pu être extrait du ticket de caisse, veuillez réessayer.",
