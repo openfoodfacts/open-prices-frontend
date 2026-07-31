@@ -177,18 +177,21 @@ export default {
       const nextParam = this.$route.query.next
       let path = '/dashboard'
       let query = { signinSuccess: 'true' }
-      
+
+      // see src/router.js > router.beforeEach
       if (nextParam) {
         const [nextParamPath, nextParamQuery] = nextParam.split('?')
-        path = nextParamPath || '/dashboard'
-        if (nextParamQuery) {
-          query = Object.fromEntries(new URLSearchParams(nextParamQuery))
-          query.signinSuccess = 'true'
+        if (nextParamPath) {
+          path = nextParamPath
+          if (nextParamQuery) {
+            query = Object.fromEntries(new URLSearchParams(nextParamQuery))
+            query.signinSuccess = 'true'
+          }
         }
       }
       
       this.$router.push({ path, query })
     }
   },
-};
+}
 </script>
