@@ -1,12 +1,15 @@
 <template>
-  <v-chip label size="small" :prepend-icon="CURRENCY_ICON" density="comfortable" :color="currencyMissingAndShowError ? 'error' : 'default'" :to="getCurrencyUrl">
-    <span v-if="currency">{{ currency }}</span>
-    <span v-else-if="currencyMissingAndShowError">
-      <i class="text-lowercase">{{ $t('Common.Currency') }}</i>
-      <v-tooltip activator="parent" open-on-click location="top">
-        {{ $t('Common.CurrencyMissing') }}
-      </v-tooltip>
+  <v-chip label size="small" density="comfortable" :color="currencyMissingAndShowError ? 'error' : 'default'" :to="getCurrencyUrl">
+    <v-icon :start="withLabel" :icon="CURRENCY_ICON" />
+    <span v-if="currency" :title="currency">
+      <span v-if="withLabel">{{ currency }}</span>
     </span>
+    <span v-else-if="currencyMissingAndShowError">
+      <i v-if="withLabel" class="text-lowercase">{{ $t('Common.Currency') }}</i>
+    </span>
+    <v-tooltip v-if="currencyMissingAndShowError" activator="parent" open-on-click location="top">
+      {{ $t('Common.CurrencyMissing') }}
+    </v-tooltip>
   </v-chip>
 </template>
 
@@ -20,6 +23,10 @@ export default {
       default: null
     },
     showErrorIfCurrencyMissing: {
+      type: Boolean,
+      default: false
+    },
+    withLabel: {
       type: Boolean,
       default: false
     },

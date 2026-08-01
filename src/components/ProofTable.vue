@@ -13,7 +13,7 @@
       <DateChip :date="item.date" :readonly="true" />
     </template>
     <template #[`item.currency`]="{ item }">
-      <CurrencyChip :currency="item.currency" :readonly="true" />
+      <CurrencyChip :currency="item.currency" :withLabel="true" :readonly="true" />
     </template>
     <template #[`item.created`]="{ item }">
       <RelativeDateTimeChip :dateTime="item.created" />

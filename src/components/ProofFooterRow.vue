@@ -11,7 +11,7 @@
         <PriceCountChip v-if="!hidePriceCount" :count="proof.price_count" :withLabel="true" source="proof" @click="goToProof()" />
         <LocationChip :location="proof.location" :locationId="proof.location_id" :readonly="readonly" :showErrorIfLocationMissing="true" />
         <DateChip :date="proof.date" :showErrorIfDateMissing="true" :readonly="readonly" />
-        <CurrencyChip :currency="proof.currency" :showErrorIfCurrencyMissing="true" :readonly="readonly" />
+        <CurrencyChip :currency="proof.currency" :showErrorIfCurrencyMissing="true" :withLabel="true" :readonly="readonly" />
         <UserChip v-if="!hideProofOwner" :username="proof.owner" :readonly="readonly" />
         <UserCommentChip v-if="proof.owner_comment" :comment="proof.owner_comment" />
         <RelativeDateTimeChip :dateTime="proof.created" />
