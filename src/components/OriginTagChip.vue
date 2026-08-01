@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable" :to="getOriginUrl">
+  <v-chip label size="small" density="comfortable">
     {{ originLocalizedName || origin }}
   </v-chip>
 </template>
@@ -32,9 +32,6 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    getOriginUrl() {
-      return this.origin && !this.readonly ? `/origins/${this.origin}` : null
-    },
   },
   mounted() {
     this.setOriginLocalizedName(this.origin)
