@@ -5,7 +5,7 @@
         <ProofChip v-if="price.proof && !hidePriceProof" :proof="price.proof" />
         <LocationChip v-if="!hidePriceLocation" :location="price.location" :locationId="price.location_id" :showErrorIfLocationMissing="true" :readonly="readonly" />
         <UserChip v-if="!hidePriceOwner" :username="price.owner" :readonly="readonly" />
-        <DateChip v-if="!hidePriceDate" :date="price.date" :readonly="readonly" />
+        <DateChip v-if="!hidePriceDate" :date="price.date" :showErrorIfDateMissing="true" :withLabel="false" :readonly="readonly" />
         <UserCommentChip v-if="price.owner_comment" :comment="price.owner_comment" />
         <RelativeDateTimeChip v-if="!hidePriceCreated" :dateTime="price.created" />
       </span>

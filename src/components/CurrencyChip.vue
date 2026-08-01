@@ -28,7 +28,7 @@ export default {
     },
     withLabel: {
       type: Boolean,
-      default: false
+      default: true
     },
     readonly: {
       type: Boolean,
