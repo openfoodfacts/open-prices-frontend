@@ -264,8 +264,8 @@
 		"Label": "Rótulo",
 		"Labels": "Rótulos",
 		"LabelTotal": "{count} rótulos | {count} rótulo | {count} rótulos",
-		"Language": "Línguas",
-		"Languages": "Línguas",
+		"Language": "Idiomas",
+		"Languages": "Idiomas",
 		"LatestPrices": "Preços mais recentes",
 		"LatestProofs": "Últimas demonstrações",
 		"LearnMore": "Saiba mais",
@@ -337,6 +337,8 @@
 		"Help": "Ajuda",
 		"Here": "Aqui",
 		"History": "Histórico",
+		"HistoryPrice": "Price history",
+		"HistoryProof": "Proof history",
 		"Image": "Imagem",
 		"ImageSelect": "Selecionar uma imagem",
 		"ImageSelectMultiple": "Selecionar imagens",
@@ -379,12 +381,15 @@
 		"OrderNoun": "Order",
 		"OrderVerb": "Order",
 		"Orders": "Orders",
+		"OrderFlagCreatedDESC": "Report date",
+		"OrderFlagReasonASC": "Report reason",
 		"OrderNameASC": "Nome",
 		"OrderLocationCountDESC": "Contagem de localizações",
 		"OrderProductUniqueScansDESC": "Número de digitalizações",
 		"OrderProductPriceCountDESC": "Número de preços",
 		"OrderPriceCountDESC": "Contagem de preços",
 		"OrderPriceASC": "Preço",
+		"OrderPriceDESC": "Preço",
 		"OrderPriceCreatedDESC": "Data de adição",
 		"OrderPriceDateDESC": "Data do preço",
 		"OrderProductCountDESC": "Contagem de Produtos",
@@ -418,6 +423,7 @@
 		"PriceCreated": "Preço criado!",
 		"PriceMissing": "Preço faltando",
 		"PricePerMissing": "Preço por unidade faltante",
+		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Preço já carregado",
 		"PriceReadyToBeUploaded": "Preço pronto para ser carregado",
 		"PricesAlreadyUploaded": "Preços já carregados",
@@ -472,7 +478,7 @@
 		"Search": "Procurar",
 		"Select": "Selecionar",
 		"Send": "Enviar",
-		"Settings": "Definições",
+		"Settings": "Configurações",
 		"SignInOFFAccount": "Sign in with your {url} credentials",
 		"SignedIn": "Conectado!",
 		"SignIn": "Iniciar sessão",
@@ -629,7 +635,7 @@
 	},
 	"Header": {
 		"Dashboard": "Painel de controle",
-		"Settings": "Definições",
+		"Settings": "Configurações",
 		"SignIn": "Iniciar sessão",
 		"SignOut": "Sair"
 	},
@@ -691,7 +697,7 @@
 		"Title": "Excluir um preço"
 	},
 	"PriceEdit": {
-		"Save": "Guardar",
+		"Save": "Salvar",
 		"Success": "Preço editado!",
 		"Title": "Editar um preço"
 	},
@@ -786,8 +792,18 @@
 	},
 	"ProofEdit": {
 		"Title": "Editar comprovante",
-		"Save": "Guardar",
+		"Save": "Salvar",
 		"Success": "Comprovante editado!"
+	},
+	"ReceiptAnonymize": {
+		"Title": "Anonymize a receipt",
+		"Save": "Salvar",
+		"EditRedactBoxes": "Edit & redact boxes",
+		"EnableBoxDrawMode": "Enable box draw mode",
+		"EnableBoxRemoveMode": "Enable box remove mode",
+		"WaitingForReceiptUpload": "Waiting for receipt upload...",
+		"WaitingForAnonymizationPrediction": "Waiting for anonymization prediction...",
+		"Anonymize": "Anonymize"
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Adicionar novo item",
@@ -928,7 +944,7 @@
 			"Title": "Procurar"
 		},
 		"Settings": {
-			"Title": "Definições"
+			"Title": "Configurações"
 		},
 		"SignIn": {
 			"Title": "Iniciar sessão"
@@ -1030,7 +1046,7 @@
 		"MyPrices": "Meus valores",
 		"MyProofs": "Minhas demonstrações",
 		"ProofUpdated": "Comprovante atualizado!",
-		"Settings": "Definições",
+		"Settings": "Configurações",
 		"Title": "Painel de controle",
 		"UserPriceTotal": "{count} valores",
 		"UserProofTotal": "{count} demonstrações"
@@ -1054,7 +1070,7 @@
 		"DefaultMode": "Modo Padrão",
 		"FavoriteCurrencies": "Moedas favoritas",
 		"CurrencyRequired": "Pelo menos uma moeda é necessária",
-		"LanguageLabel": "Línguas",
+		"LanguageLabel": "Idiomas",
 		"LocationFinder": "Pesquisa de localização",
 		"LocationDisplayOSMID": "Exibir ID do OSM",
 		"PriceListDisplay": "Mostrar lista de preços",
@@ -1063,8 +1079,8 @@
 		"ProductDisplayCategoryTag": "Mostrar marcadores de categoria",
 		"ProductDisplaySource": "Exibir fonte",
 		"SideMenuExperimentsDisplay": "Exibir 'Experimentos'",
-		"Save": "Guardar",
-		"Title": "Definições",
+		"Save": "Salvar",
+		"Title": "Configurações",
 		"TranslationCompletion": "Tradução está {completion}% completa.",
 		"TranslationHelp": "Ajude-nos a traduzir mais idiomas"
 	}
