@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.172.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.171.0...v1.172.0) (2026-08-01)
+
+
+### Features
+
+* **ProofUpload:** Receipt Anonymizer ([#2255](https://github.com/openfoodfacts/open-prices-frontend/issues/2255)) ([bdb5c8d](https://github.com/openfoodfacts/open-prices-frontend/commit/bdb5c8ddc6d7fb99c35c6595e701c1c53714b3db))
+
+
+### Bug Fixes
+
+* **Origin Chip:** remove the link (origin detail page does not exist) ([#2313](https://github.com/openfoodfacts/open-prices-frontend/issues/2313)) ([bee0f94](https://github.com/openfoodfacts/open-prices-frontend/commit/bee0f94cdf36704dd034102880fdf7c79a24752f))
+* **Price Card:** better manage when price currency is missing ([#2314](https://github.com/openfoodfacts/open-prices-frontend/issues/2314)) ([a52640a](https://github.com/openfoodfacts/open-prices-frontend/commit/a52640a706e04882bbcaaf3073d48033abcfea90))
+* **Price Card:** better manage when price date is missing ([#2315](https://github.com/openfoodfacts/open-prices-frontend/issues/2315)) ([0637362](https://github.com/openfoodfacts/open-prices-frontend/commit/0637362b47687fc8e49224ac810726eed6be1510))
+
+
+### Technical
+
+* **deps:** bump actions/labeler from 6 to 7 ([#2308](https://github.com/openfoodfacts/open-prices-frontend/issues/2308)) ([ca5c567](https://github.com/openfoodfacts/open-prices-frontend/commit/ca5c567c8b2d113d9336e98e2593e3a57ae01540))
+* **deps:** bump actions/setup-python from 6 to 7 ([#2309](https://github.com/openfoodfacts/open-prices-frontend/issues/2309)) ([b165ec0](https://github.com/openfoodfacts/open-prices-frontend/commit/b165ec07c743a224cc82328ed44b41d62aa95a1c))
+* **l10n:** New Crowdin translations to review and merge ([#2306](https://github.com/openfoodfacts/open-prices-frontend/issues/2306)) ([7b28c9f](https://github.com/openfoodfacts/open-prices-frontend/commit/7b28c9f60c261a0b797b630891453989e434cb59))
+
 ## [1.171.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.170.0...v1.171.0) (2026-07-31)
 
 
