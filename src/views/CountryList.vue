@@ -11,6 +11,19 @@
   </v-row>
 
   <v-row class="mt-0">
+    <v-col cols="12" sm="6" md="4">
+      <v-text-field
+        v-model="searchQuery"
+        :label="$t('Search.SearchCountry')"
+        prepend-inner-icon="mdi-magnify"
+        clearable
+        hide-details
+        density="compact"
+      />
+    </v-col>
+  </v-row>
+
+  <v-row class="mt-0">
     <v-col v-for="country in countryList" :key="country" cols="12" sm="6" md="4" xl="3">
       <CountryCard :country="country.name" :priceCount="country.price_count" :locationCount="country.location_count" height="100%" @click="goToCountry(country)" />
     </v-col>
@@ -40,12 +53,14 @@ export default {
   data() {
     return {
       // data
+      allCountries: [],
       countryList: [],
       countryTotal: null,
       loading: false,
       // filter & order
       currentFilterList: [],
       currentOrder: constants.LOCATION_COUNTRY_ORDER_LIST[1].key,  // price_count
+      searchQuery: '',
     }
   },
   watch: {
@@ -53,6 +68,9 @@ export default {
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
         this.initCountryList()
       }
+    },
+    searchQuery() {
+      this.filterAndOrderCountries()
     }
   },
   mounted() {
@@ -62,6 +80,7 @@ export default {
   },
   methods: {
     initCountryList() {
+      this.allCountries = []
       this.countryList = []
       this.getCountries()
     },
@@ -69,25 +88,35 @@ export default {
       this.loading = true
       return openPricesApi.getCountries()
         .then((data) => {
-          this.countryTotal = data.length  // all the countries are loaded at once
-          // we filter client-side
-          if (this.currentFilterList.includes('price_count_gte_1')) {
-            data = data.filter(country => country.price_count > 0)
-          }
-          if (this.currentFilterList.includes('location_count_gte_1')) {
-            data = data.filter(country => country.location_count > 0)
-          }
-          // we order client-side
-          if (this.currentOrder === 'name') {
-            data.sort((a, b) => a.name.localeCompare(b.name))
-          } else if (this.currentOrder === '-price_count') {
-            data.sort((a, b) => b.price_count - a.price_count)
-          } else if (this.currentOrder === '-location_count') {
-            data.sort((a, b) => b.location_count - a.location_count)
-          }
-          this.countryList = data
+          this.allCountries = data
+          this.filterAndOrderCountries()
           this.loading = false
         })
+    },
+    filterAndOrderCountries() {
+      let data = [...this.allCountries]
+      // we filter client-side
+      if (this.currentFilterList.includes('price_count_gte_1')) {
+        data = data.filter(country => country.price_count > 0)
+      }
+      if (this.currentFilterList.includes('location_count_gte_1')) {
+        data = data.filter(country => country.location_count > 0)
+      }
+      // search query filter
+      if (this.searchQuery) {
+        const query = this.searchQuery.trim().toLowerCase()
+        data = data.filter(country => country.name.toLowerCase().includes(query))
+      }
+      // we order client-side
+      if (this.currentOrder === 'name') {
+        data.sort((a, b) => a.name.localeCompare(b.name))
+      } else if (this.currentOrder === '-price_count') {
+        data.sort((a, b) => b.price_count - a.price_count)
+      } else if (this.currentOrder === '-location_count') {
+        data.sort((a, b) => b.location_count - a.location_count)
+      }
+      this.countryList = data
+      this.countryTotal = this.allCountries.length
     },
     goToCountry(country) {
       this.$router.push(`/countries/${country.osm_name}`)

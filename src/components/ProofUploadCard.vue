@@ -1,4 +1,4 @@
-<template>
+;<template>
   <v-card
     v-if="step !== 3"
     height="100%"
