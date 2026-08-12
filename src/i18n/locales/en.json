@@ -337,6 +337,8 @@
 		"Help": "Help",
 		"Here": "Here",
 		"History": "History",
+		"HistoryPrice": "Price history",
+		"HistoryProof": "Proof history",
 		"Image": "Image",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
@@ -422,7 +424,7 @@
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Price missing",
 		"PricePerMissing": "Price per missing",
-    	"PriceDiscountInvalid": "Discounted price is higher than full price",
+		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Price already uploaded",
 		"PriceReadyToBeUploaded": "Price ready to be uploaded",
 		"PricesAlreadyUploaded": "Prices already uploaded",
@@ -793,6 +795,16 @@
 		"Title": "Edit a proof",
 		"Save": "Save",
 		"Success": "Proof edited!"
+	},
+	"ReceiptAnonymize": {
+		"Title": "Anonymize a receipt",
+		"Save": "Save",
+		"EditRedactBoxes": "Edit & redact boxes",
+		"EnableBoxDrawMode": "Enable box draw mode",
+		"EnableBoxRemoveMode": "Enable box remove mode",
+		"WaitingForReceiptUpload": "Waiting for receipt upload...",
+		"WaitingForAnonymizationPrediction": "Waiting for anonymization prediction...",
+		"Anonymize": "Anonymize"
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",

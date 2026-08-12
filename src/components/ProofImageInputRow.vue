@@ -72,6 +72,17 @@
               >
                 {{ $t('Common.Delete') }}
               </v-btn>
+              <v-btn v-if="typeReceiptOnly && !$vuetify.display.smAndUp" color="warning" variant="outlined" icon="mdi-account-off" size="small" density="comfortable" :aria-label="$t('XXX.Anonymize')" @click="anonymize" />
+              <v-btn
+                v-else-if="typeReceiptOnly"
+                color="warning"
+                variant="outlined"
+                prepend-icon="mdi-account-off"
+                size="small"
+                @click="anonymizeReceipt"
+              >
+                {{ $t('ReceiptAnonymize.Anonymize') }}
+              </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -127,7 +138,7 @@ export default {
       default: false
     }
   },
-  emits: ['proofList'],
+  emits: ['proofList', 'anonymizeReceipt'],
   data() {
     return {
       PROOF_ICON: constants.PROOF_ICON,
@@ -170,6 +181,9 @@ export default {
     }
   },
   methods: {
+    anonymizeReceipt() {
+      this.$emit('anonymizeReceipt')
+    },
     recentProofSelected(proof) {
       this.proofImageList = [proof]
     },

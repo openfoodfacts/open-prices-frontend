@@ -2,10 +2,21 @@ import i18n from '@/i18n'
 import constants from '../constants'
 
 /**
- * fr: 4,00 €
- * en-US: €4.00
+ * Formats a price with currency symbol according to locale.
+ *
+ * Examples:
+ * - price: 4, currency: 'EUR' => "4,00 €" (fr) or "€4.00" (en-US)
+ * - price: 4, currency: null => "4.00" (fallback without currency symbol)
  */
 function prettyPrice(price, currency) {
+  if (!currency) {
+    // Fallback to plain number formatting without currency
+    return price.toLocaleString(navigator.language, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })
+  }
+
   return price.toLocaleString(navigator.language, {
     style: 'currency',
     currency: currency,

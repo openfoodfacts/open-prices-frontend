@@ -1,12 +1,15 @@
 <template>
-  <v-chip label size="small" :prepend-icon="DATE_ICON" density="comfortable" :color="dateMissingAndShowError ? 'error' : 'default'" :to="getDateUrl">
-    <span v-if="date">{{ getDateFormatted(date) }}</span>
-    <span v-else-if="dateMissingAndShowError">
-      <i class="text-lowercase">{{ $t('Common.Date') }}</i>
-      <v-tooltip activator="parent" open-on-click location="top">
-        {{ $t('Common.DateMissing') }}
-      </v-tooltip>
+  <v-chip label size="small" density="comfortable" :color="dateMissingAndShowError ? 'error' : 'default'" :to="getDateUrl">
+    <v-icon :start="withLabel" :icon="DATE_ICON" />
+    <span v-if="date" :title="date">
+      <span v-if="withLabel">{{ getDateFormatted(date) }}</span>
     </span>
+    <span v-else-if="dateMissingAndShowError">
+      <i v-if="withLabel" class="text-lowercase">{{ $t('Common.Date') }}</i>
+    </span>
+    <v-tooltip v-if="dateMissingAndShowError" activator="parent" open-on-click location="top">
+      {{ $t('Common.DateMissing') }}
+    </v-tooltip>
   </v-chip>
 </template>
 
@@ -23,6 +26,10 @@ export default {
     showErrorIfDateMissing: {
       type: Boolean,
       default: false
+    },
+    withLabel: {
+      type: Boolean,
+      default: true
     },
     readonly: {
       type: Boolean,

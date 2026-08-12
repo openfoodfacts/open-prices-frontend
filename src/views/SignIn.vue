@@ -174,9 +174,24 @@ export default {
         .catch(this.handleAuthError)
     },
     done() {
-      const path = this.$route.query.next || '/dashboard'
-      this.$router.push({ path: path, query: { signinSuccess: 'true' } })
+      const nextParam = this.$route.query.next
+      let path = '/dashboard'
+      let query = { signinSuccess: 'true' }
+
+      // see src/router.js > router.beforeEach
+      if (nextParam) {
+        const [nextParamPath, nextParamQuery] = nextParam.split('?')
+        if (nextParamPath) {
+          path = nextParamPath
+          if (nextParamQuery) {
+            query = Object.fromEntries(new URLSearchParams(nextParamQuery))
+            query.signinSuccess = 'true'
+          }
+        }
+      }
+      
+      this.$router.push({ path, query })
     }
   },
-};
+}
 </script>
