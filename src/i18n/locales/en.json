@@ -973,6 +973,9 @@
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
 		},
+		"ReceiptBulkUpload": {
+			"Title": "Bulk Receipt Upload"
+		},
 		"Challenge": {
 			"Title": "Challenge"
 		},

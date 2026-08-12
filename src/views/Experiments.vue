@@ -35,6 +35,14 @@
     </v-col>
     <v-col cols="12" sm="6" lg="4">
       <v-card
+        :title="$t('Router.ReceiptBulkUpload.Title')"
+        prepend-icon="mdi-image-multiple"
+        append-icon="mdi-arrow-right"
+        to="/experiments/receipt-bulk-upload"
+      />
+    </v-col>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
         :title="$t('Router.CreateOffProduct.Title')"
         prepend-icon="mdi-plus"
         append-icon="mdi-arrow-right"
