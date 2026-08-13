@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.172.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.172.0...v1.172.1) (2026-08-13)
+
+
+### Bug Fixes
+
+* **City Chip:** fix link when city ([#2325](https://github.com/openfoodfacts/open-prices-frontend/issues/2325)) ([f76008c](https://github.com/openfoodfacts/open-prices-frontend/commit/f76008c5d1340e6ca9838c8779901d63b3711d18))
+* **Currency Chip:** when currency is missing, never display label (remove withLabel prop) ([#2328](https://github.com/openfoodfacts/open-prices-frontend/issues/2328)) ([fddf3b8](https://github.com/openfoodfacts/open-prices-frontend/commit/fddf3b85b1e46175ec5af1e84b13523662cf5244))
+* **Date Chip:** when date is missing, never display label (remove withLabel prop) ([#2327](https://github.com/openfoodfacts/open-prices-frontend/issues/2327)) ([d132c84](https://github.com/openfoodfacts/open-prices-frontend/commit/d132c84d4b1b3d4ce9c50bec87f886aad473270d))
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2298](https://github.com/openfoodfacts/open-prices-frontend/issues/2298)) ([6b979a0](https://github.com/openfoodfacts/open-prices-frontend/commit/6b979a0dd5ff2262cee2211eae76ef3d05500c4b))
+* **Location Chip:** don't display label if location missing (same as date & currency) ([#2329](https://github.com/openfoodfacts/open-prices-frontend/issues/2329)) ([f6ed79f](https://github.com/openfoodfacts/open-prices-frontend/commit/f6ed79f104f0d26cb175c9a7f9bc66867ba01550))
+
 ## [1.172.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.171.0...v1.172.0) (2026-08-01)
 
 
