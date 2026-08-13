@@ -1,12 +1,7 @@
 <template>
   <v-chip label size="small" density="comfortable" :color="currencyMissingAndShowError ? 'error' : 'default'" :to="getCurrencyUrl">
-    <v-icon :start="withLabel" :icon="CURRENCY_ICON" />
-    <span v-if="currency" :title="currency">
-      <span v-if="withLabel">{{ currency }}</span>
-    </span>
-    <span v-else-if="currencyMissingAndShowError">
-      <i v-if="withLabel" class="text-lowercase">{{ $t('Common.Currency') }}</i>
-    </span>
+    <v-icon :start="!currencyMissingAndShowError" :icon="CURRENCY_ICON" />
+    <span v-if="currency" :title="currency">{{ currency }}</span>
     <v-tooltip v-if="currencyMissingAndShowError" activator="parent" open-on-click location="top">
       {{ $t('Common.CurrencyMissing') }}
     </v-tooltip>
@@ -25,10 +20,6 @@ export default {
     showErrorIfCurrencyMissing: {
       type: Boolean,
       default: false
-    },
-    withLabel: {
-      type: Boolean,
-      default: true
     },
     readonly: {
       type: Boolean,
