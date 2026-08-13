@@ -23,7 +23,7 @@ export default {
       type: Number,
       default: null
     },
-    showErrorIfLocationMissing: {
+    showErrorIfMissing: {
       type: Boolean,
       default: false
     },
@@ -58,7 +58,7 @@ export default {
       return this.location || this.locationId
     },
     locationMissingAndShowError() {
-      return !this.locationNotMissing && this.showErrorIfLocationMissing
+      return !this.locationNotMissing && this.showErrorIfMissing
     },
     getLocationUrl() {
       return this.locationId && !this.readonly ? `/locations/${this.locationId}` : null
