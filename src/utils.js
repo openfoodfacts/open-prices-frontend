@@ -120,6 +120,20 @@ function replaceStringWithList(value) {
 }
 
 /**
+ * Create or update a meta tag by attribute name/value.
+ */
+function setMeta(attrName, attrValue, content) {
+  const selector = `meta[${attrName}="${attrValue}"]`
+  let el = document.querySelector(selector)
+  if (!el) {
+    el = document.createElement('meta')
+    el.setAttribute(attrName, attrValue)
+    document.head.appendChild(el)
+  }
+  el.content = content
+}
+
+/**
  * OFF auth token format: 'username__uuid'
  */
 function getOFFUsernameFromAuthToken(token) {
@@ -142,5 +156,6 @@ export default {
   toTitleCase,
   replaceCommaWithDot,
   replaceStringWithList,
+  setMeta,
   getOFFUsernameFromAuthToken,
 }
