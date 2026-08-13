@@ -1,13 +1,11 @@
 <template>
-  <v-chip label size="small" :prepend-icon="getLocationIcon" density="comfortable" :color="locationMissingAndShowError ? 'error' : 'default'" :to="getLocationUrl">
+  <v-chip label size="small" density="comfortable" :color="locationMissingAndShowError ? 'error' : 'default'" :to="getLocationUrl">
+    <v-icon :start="!locationMissingAndShowError" :icon="getLocationIcon" />
     <span v-if="locationNotMissing">{{ getLocationTitle }}</span>
     <span v-if="getLocationEmoji" style="margin-inline-start:5px">{{ getLocationEmoji }}</span>
-    <span v-else-if="locationMissingAndShowError">
-      <i class="text-lowercase">{{ $t('Common.Location') }}</i>
-      <v-tooltip activator="parent" open-on-click location="top">
-        {{ $t('Common.LocationMissing') }}
-      </v-tooltip>
-    </span>
+    <v-tooltip v-if="locationMissingAndShowError" activator="parent" open-on-click location="top">
+      {{ $t('Common.LocationMissing') }}
+    </v-tooltip>
   </v-chip>
 </template>
 
@@ -25,14 +23,14 @@ export default {
       type: Number,
       default: null
     },
+    showErrorIfMissing: {
+      type: Boolean,
+      default: false
+    },
     readonly: {
       type: Boolean,
       default: false
     },
-    showErrorIfLocationMissing: {
-      type: Boolean,
-      default: false
-    }
   },
   computed: {
     getLocationTitle() {
@@ -60,7 +58,7 @@ export default {
       return this.location || this.locationId
     },
     locationMissingAndShowError() {
-      return !this.locationNotMissing && this.showErrorIfLocationMissing
+      return !this.locationNotMissing && this.showErrorIfMissing
     },
     getLocationUrl() {
       return this.locationId && !this.readonly ? `/locations/${this.locationId}` : null

@@ -17,7 +17,7 @@ export default {
       type: String,
       default: null
     },
-    showErrorIfCurrencyMissing: {
+    showErrorIfMissing: {
       type: Boolean,
       default: false
     },
@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     currencyMissingAndShowError() {
-      return !this.currency && this.showErrorIfCurrencyMissing
+      return !this.currency && this.showErrorIfMissing
     },
     getCurrencyUrl() {
       return this.currency && !this.readonly ? `/currencies/${this.currency}` : null

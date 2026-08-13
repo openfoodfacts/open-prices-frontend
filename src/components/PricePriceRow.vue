@@ -3,7 +3,7 @@
     <v-col cols="12" class="pt-2 pb-2">
       <span class="mr-1">{{ getPriceValueDisplay(price.price) }}</span>
       <span v-if="showPriceProductPerUnit" class="mr-1">({{ getPricePerUnit(price.price) }})</span>
-      <CurrencyChip v-if="!price.currency" :currency="price.currency" :showErrorIfCurrencyMissing="true" :readonly="readonly" />
+      <CurrencyChip v-if="!price.currency" :currency="price.currency" :showErrorIfMissing="true" :readonly="readonly" />
       <PriceDiscountChip v-if="hasDiscount" class="ml-1 mr-1" :price="price" />
       <PriceQuantityPurchasedChip v-if="showReceiptQuantity" class="ml-1" :priceQuantityPurchased="price.receipt_quantity" />
     </v-col>

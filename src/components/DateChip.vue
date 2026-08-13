@@ -18,7 +18,7 @@ export default {
       type: String,
       default: null
     },
-    showErrorIfDateMissing: {
+    showErrorIfMissing: {
       type: Boolean,
       default: false
     },
@@ -34,7 +34,7 @@ export default {
   },
   computed: {
     dateMissingAndShowError() {
-      return !this.date && this.showErrorIfDateMissing
+      return !this.date && this.showErrorIfMissing
     },
     dateShort() {
       return date_utils.dateShort(this.date)
