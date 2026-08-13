@@ -39,7 +39,7 @@ export default {
       if (this.type === 'country') {
         return this.country && !this.readonly ? countryUrl : null
       } else if (this.type === 'city') {
-        return this.city && !this.readonly ? `/cities/${this.country}/${this.city}` : null
+        return this.city && !this.readonly ? `${countryUrl}/cities/${this.city}` : null
       }
       return null
     }
