@@ -2,6 +2,13 @@ import constants from '../constants'
 import utils from '../utils'
 
 
+const NEARBY_FILTER_PARAMETER_NAMES = ['lat', 'lon', 'radius_km']
+// the API sets no maximum radius: this list is a UI choice, and the largest
+// option doubles as the bound getNearbyFilter() accepts from the URL
+const NEARBY_FILTER_RADIUS_OPTIONS = Object.freeze([1, 2, 5, 10, 20, 50, 100])
+const NEARBY_FILTER_MAX_RADIUS_KM = Math.max(...NEARBY_FILTER_RADIUS_OPTIONS)
+
+
 function getMapBounds(results) {
   if (results.length > 0) {
     // Nominatim
@@ -215,6 +222,55 @@ function getLocationOSMLatLng(locationObject) {
   return [locationObject.osm_lat, locationObject.osm_lon]
 }
 
+function toFiniteNumber(value) {
+  const normalizedValue = Array.isArray(value) ? value[0] : value
+  if (
+    normalizedValue === null
+    || normalizedValue === undefined
+    || (typeof normalizedValue === 'string' && normalizedValue.trim() === '')
+  ) {
+    return null
+  }
+  const numberValue = Number(normalizedValue)
+  return Number.isFinite(numberValue) ? numberValue : null
+}
+
+function hasLocationCoordinates(locationObject) {
+  const [lat, lon] = getLocationOSMLatLng(locationObject)
+  return toFiniteNumber(lat) !== null && toFiniteNumber(lon) !== null
+}
+
+function getNearbyFilter(query) {
+  const lat = toFiniteNumber(query.lat)
+  const lon = toFiniteNumber(query.lon)
+  const radius_km = toFiniteNumber(query.radius_km)
+  if (
+    lat === null
+    || lon === null
+    || radius_km === null
+    || lat < -90
+    || lat > 90
+    || lon < -180
+    || lon > 180
+    || radius_km < 0
+    || radius_km > NEARBY_FILTER_MAX_RADIUS_KM
+  ) {
+    return null
+  }
+  return { lat, lon, radius_km }
+}
+
+function buildNearbyFilterQuery(query, nearbyFilter) {
+  const updatedQuery = { ...query }
+  NEARBY_FILTER_PARAMETER_NAMES.forEach(name => delete updatedQuery[name])
+
+  const normalizedFilter = getNearbyFilter(nearbyFilter || {})
+  if (normalizedFilter) {
+    Object.assign(updatedQuery, normalizedFilter)
+  }
+  return updatedQuery
+}
+
 function getLocationOSMBrandLogoPathName(locationObject) {
   const BRAND_URL_PREFIX = 'https://raw.githubusercontent.com/openfoodfacts/brand-images/refs/heads/main/xx/stores/'
   let nameCleaned = null
@@ -279,6 +335,10 @@ export default {
   getLocationOSMUniqueId,
   getLocationOSMTag,
   getLocationOSMLatLng,
+  hasLocationCoordinates,
+  NEARBY_FILTER_RADIUS_OPTIONS,
+  getNearbyFilter,
+  buildNearbyFilterQuery,
   getLocationOSMBrandLogoPathName,
   getLocationONLINETitle,
   getLocationId,

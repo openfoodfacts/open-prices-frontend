@@ -5,7 +5,21 @@
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
         <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="togglePriceType($event)" />
+        <NearbyPriceFilter :currentFilter="nearbyFilter" @update:currentFilter="updateNearbyFilter($event)" />
       </template>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="priceListError">
+    <v-col>
+      <v-alert data-name="price-list-error" type="error" variant="outlined" density="compact">
+        {{ priceListError }}
+        <template #append>
+          <v-btn size="small" variant="text" @click="retryPrices">
+            {{ $t('Common.Retry') }}
+          </v-btn>
+        </template>
+      </v-alert>
     </v-col>
   </v-row>
 
@@ -24,9 +38,10 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
+import priceListMixin from '../mixins/priceList.js'
 import date_utils from '../utils/date.js'
+import geo_utils from '../utils/geo.js'
 import utils from '../utils.js'
 
 export default {
@@ -34,14 +49,12 @@ export default {
     CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    NearbyPriceFilter: defineAsyncComponent(() => import('../components/NearbyPriceFilter.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
+  mixins: [priceListMixin],
   data() {
     return {
-      priceList: [],
-      priceTotal: null,
-      pricePage: 0,
-      loading: false,
       // filter & order
       currentFilterList: [],
       currentType: '',
@@ -49,13 +62,19 @@ export default {
     }
   },
   computed: {
+    nearbyFilter() {
+      return geo_utils.getNearbyFilter(this.$route.query)
+    },
     getPricesParams() {
-      let defaultParams = { order_by: this.currentOrder, page: this.pricePage }
+      let defaultParams = { order_by: this.currentOrder }
       if (this.currentFilterList.includes('show_last_month')) {
         defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
       }
       if (this.currentType) {
         defaultParams[constants.TYPE_PARAM] = this.currentType
+      }
+      if (this.nearbyFilter) {
+        Object.assign(defaultParams, this.nearbyFilter)
       }
       return defaultParams
     },
@@ -79,26 +98,13 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    initPrices() {
-      this.priceList = []
-      this.priceTotal = null
-      this.pricePage = 0
-      this.getPrices()
-    },
-    getPrices() {
-      if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
-      this.loading = true
-      this.pricePage += 1
-      return openPricesApi.getPrices(this.getPricesParams)
-        .then((data) => {
-          this.priceList.push(...data.items)
-          this.priceTotal = data.total
-          this.loading = false
-        })
-    },
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      // this.initPrices() will be called in watch $route
+    },
+    updateNearbyFilter(nearbyFilter) {
+      this.$router.push({ query: geo_utils.buildNearbyFilterQuery(this.$route.query, nearbyFilter) })
       // this.initPrices() will be called in watch $route
     },
     togglePriceType(sourceKey) {

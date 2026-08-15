@@ -24,9 +24,23 @@
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
         <FilterMenu kind="price" :hideType="true" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
+        <NearbyPriceFilter :currentFilter="nearbyFilter" @update:currentFilter="updateNearbyFilter($event)" />
         <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
         <DisplayMenu :show="['list', 'table', 'map', 'chart']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
       </template>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="priceListError">
+    <v-col>
+      <v-alert data-name="price-list-error" type="error" variant="outlined" density="compact">
+        {{ priceListError }}
+        <template #append>
+          <v-btn size="small" variant="text" @click="retryPrices">
+            {{ $t('Common.Retry') }}
+          </v-btn>
+        </template>
+      </v-alert>
     </v-col>
   </v-row>
 
@@ -70,8 +84,10 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
+import priceListMixin from '../mixins/priceList.js'
 import data_utils from '../utils/data.js'
 import date_utils from '../utils/date.js'
+import geo_utils from '../utils/geo.js'
 import utils from '../utils.js'
 
 export default {
@@ -83,6 +99,7 @@ export default {
     CategoryNotFoundAlert: defineAsyncComponent(() => import('../components/CategoryNotFoundAlert.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    NearbyPriceFilter: defineAsyncComponent(() => import('../components/NearbyPriceFilter.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
@@ -90,17 +107,14 @@ export default {
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
     PriceChart: defineAsyncComponent(() => import('../components/PriceChart.vue')),
   },
+  mixins: [priceListMixin],
   data() {
     return {
       productId: this.$route.params.id,  // product_code or product_category
       // data
       product: null,
       category: null,
-      priceList: [],
-      priceTotal: null,
-      pricePage: 0,
       priceLocationList: [],
-      loading: false,
       // share
       shareLinkCopySuccessMessage: false,
       // filter, order & display
@@ -126,10 +140,16 @@ export default {
     productOrCategoryNotFound() {
       return !this.loading && (this.productNotFound || this.categoryNotFound)
     },
+    nearbyFilter() {
+      return geo_utils.getNearbyFilter(this.$route.query)
+    },
     getPricesParams() {
-      let defaultParams = { [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, order_by: `${this.currentOrder}`, page: this.pricePage }
+      let defaultParams = { [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, order_by: `${this.currentOrder}` }
       if (this.currentFilterList.includes('show_last_month')) {
         defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
+      }
+      if (this.nearbyFilter) {
+        Object.assign(defaultParams, this.nearbyFilter)
       }
       return defaultParams
     },
@@ -161,13 +181,9 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    initPrices() {
+    beforeInitPrices() {
       this.productId = this.$route.params.id
-      this.priceList = []
-      this.priceTotal = null
-      this.pricePage = 0
       this.priceLocationList = []
-      this.getPrices()
     },
     getProduct() {
       if (this.productIsCategory) {
@@ -186,27 +202,20 @@ export default {
           })
       }
     },
-    getPrices() {
-      if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
-      this.loading = true
-      this.pricePage += 1
-      return openPricesApi.getPrices(this.getPricesParams)
-        .then((data) => {
-          this.loading = false
-          // product not found: the API will return an empty list
-          // if (!data.items) return
-          this.priceList.push(...data.items)
-          this.priceTotal = data.total
-          data.items.forEach((price) => {
-            if (price.location) {
-              utils.addObjectToArray(this.priceLocationList, price.location)
-            }
-          })
-        })
+    onPricesLoaded(prices) {
+      prices.forEach((price) => {
+        if (price.location) {
+          utils.addObjectToArray(this.priceLocationList, price.location)
+        }
+      })
     },
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      // this.initPrices() will be called in watch $route
+    },
+    updateNearbyFilter(nearbyFilter) {
+      this.$router.push({ query: geo_utils.buildNearbyFilterQuery(this.$route.query, nearbyFilter) })
       // this.initPrices() will be called in watch $route
     },
     updateOrder(orderKey) {

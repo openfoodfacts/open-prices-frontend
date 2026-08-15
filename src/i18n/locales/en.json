@@ -34,6 +34,21 @@
 		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
 		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
 	},
+	"NearbyPriceFilter": {
+		"ActiveButton": "Nearby ({radius} km)",
+		"Button": "Nearby",
+		"ChooseArea": "Choose an area",
+		"CurrentPosition": "Current position",
+		"GeolocationFailed": "Your position could not be retrieved. Check the browser location permission or choose an area instead.",
+		"GeolocationUnsupported": "Location is not supported by this browser. Choose an area instead.",
+		"LocationSourceHelp": "The selected place is used only for its coordinates. Price addresses come from the Open Prices location data enriched from OpenStreetMap.",
+		"MissingCoordinates": "This place has no usable coordinates.",
+		"Radius": "Radius",
+		"RadiusValue": "{radius} km",
+		"SelectedArea": "Selected area",
+		"Title": "Prices near a location",
+		"UseCurrentPosition": "Use my position"
+	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
 			"Subtitle": "A shelf with multiple price tags",
@@ -428,6 +443,7 @@
 		"PriceMissing": "Price missing",
 		"PricePerMissing": "Price per missing",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
+		"PriceLoadingFailed": "Prices could not be loaded. Check your connection and try again.",
 		"PriceAlreadyUploaded": "Price already uploaded",
 		"PriceReadyToBeUploaded": "Price ready to be uploaded",
 		"PricesAlreadyUploaded": "Prices already uploaded",
@@ -477,6 +493,7 @@
 		"ReportCount": "{count} reports | {count} report | {count} reports",
 		"Reset": "Reset",
 		"Resolved": "Resolved",
+		"Retry": "Retry",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Search",

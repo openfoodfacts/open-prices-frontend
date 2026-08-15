@@ -33,6 +33,8 @@ const LOCATION_TYPE_OSM = 'OSM'
 const LOCATION_TYPE_OSM_ICON = 'mdi-map-marker-outline'
 const LOCATION_TYPE_ONLINE = 'ONLINE'
 const LOCATION_TYPE_ONLINE_ICON = 'mdi-web'
+const LOCATION_SELECTOR_DISPLAY_OSM = 'osm'
+const LOCATION_SELECTOR_DISPLAY_ONLINE = 'online'
 const COUNTRY_ICON = 'mdi-map-outline'
 const USER_ICON = 'mdi-account'
 const USER_CONSUMPTION = 'CONSUMPTION'
@@ -188,6 +190,8 @@ export default {
   LOCATION_TYPE_OSM_ICON: LOCATION_TYPE_OSM_ICON,
   LOCATION_TYPE_ONLINE: LOCATION_TYPE_ONLINE,
   LOCATION_TYPE_ONLINE_ICON: LOCATION_TYPE_ONLINE_ICON,
+  LOCATION_SELECTOR_DISPLAY_OSM: LOCATION_SELECTOR_DISPLAY_OSM,
+  LOCATION_SELECTOR_DISPLAY_ONLINE: LOCATION_SELECTOR_DISPLAY_ONLINE,
   LOCATION_UNKNOWN_ICON: 'mdi-map-marker-remove-variant',
   LOCATION_TYPE_LIST: [
     {key: LOCATION_TYPE_OSM, value: LOCATION_TYPE_OSM, icon: LOCATION_TYPE_OSM_ICON},
@@ -304,8 +308,8 @@ export default {
   LOCATION_SELECTOR_DISPLAY_LIST: [
     { key: 'favorite', value: 'Favorite', valueSmallScreen: '', icon: 'mdi-star' },
     { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },
-    { key: 'osm', value: 'Physical', valueSmallScreen: 'Physical', icon: LOCATION_TYPE_OSM_ICON },
-    { key: 'online', value: 'Online', valueSmallScreen: 'Online', icon: LOCATION_TYPE_ONLINE_ICON },
+    { key: LOCATION_SELECTOR_DISPLAY_OSM, value: 'Physical', valueSmallScreen: 'Physical', icon: LOCATION_TYPE_OSM_ICON },
+    { key: LOCATION_SELECTOR_DISPLAY_ONLINE, value: 'Online', valueSmallScreen: 'Online', icon: LOCATION_TYPE_ONLINE_ICON },
   ],
   PRODUCT_SELECTOR_DISPLAY_LIST: [
     // { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },
