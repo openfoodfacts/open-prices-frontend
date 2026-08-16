@@ -52,6 +52,7 @@ const OSM_NAME = 'OpenStreetMap'
 
 export default {
   APP_NAME: 'Open Prices',
+  APP_DESCRIPTION: 'An open crowdsourced database of prices',
   APP_URL: import.meta.env.VITE_OPEN_PRICES_APP_URL,
   APP_API_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/api/docs`,
   APP_USER_AGENT: 'Open Prices Web App',
