@@ -10,6 +10,7 @@
       <h3 class="text-h6 mb-1">
         {{ $t('Challenge.Title') }}
         <NewChip v-if="isNew" />
+        <EndingSoonChip v-else-if="isEndingSoon" />
       </h3>
       <p>
         {{ $t('Challenge.Subtitle', {challenge_title: `${challenge.icon} ${challenge.title} ${challenge.icon}`, challenge_subtitle: challenge.subtitle}) }}
@@ -28,7 +29,8 @@ import constants from '../constants'
 
 export default {
   components: {
-    NewChip: defineAsyncComponent(() => import('./NewChip.vue'))
+    NewChip: defineAsyncComponent(() => import('./NewChip.vue')),
+    EndingSoonChip: defineAsyncComponent(() => import('./EndingSoonChip.vue')),
   },
   props: {
     challenge: {
@@ -49,6 +51,14 @@ export default {
       const startDate = new Date(this.challenge.start_date)
       const sevenDaysFromStartDate = new Date(startDate.getTime() + 7 * 24 * 60 * 60 * 1000)
       return today <= sevenDaysFromStartDate
+    },
+    isEndingSoon() {
+      // a challenge usually lasts 1 month
+      // ending soon = last 7 days of the challenge
+      const today = new Date()
+      const endDate = new Date(this.challenge.end_date)
+      const sevenDaysBeforeEndDate = new Date(endDate.getTime() - 7 * 24 * 60 * 60 * 1000)
+      return today >= sevenDaysBeforeEndDate
     },
     getUrl() {
       return `/challenge`
