@@ -121,7 +121,7 @@
 			"Text": "didukung oleh {url}"
 		},
 		"SimilarBarcodes": "Similar barcodes",
-		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
+		"SimilarBarcodesExplanation": "Kode batang produk berikut mirip dengan hasil deteksi. Apakah ini produk yang Anda maksud?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Kode batang",
@@ -129,7 +129,7 @@
 	},
 	"Challenge": {
 		"Title": "Tantangan komunitas",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title}. {challenge_subtitle}",
+		"Subtitle": "Bergabunglah dengan para penggemar harga pangan lainnya untuk mengumpulkan informasi tentang {challenge_title}. {challenge_subtitle}",
 		"StepTakePictures": {
 			"Title": "Ambil foto label harga di toko",
 			"line1": "Foto dapat berisi satu atau beberapa label harga. Barcode harus dapat dibaca. Contohnya:",
@@ -186,7 +186,7 @@
 		"AdditionalInfo": "Informasi tambahan",
 		"All": "Semua",
 		"Badge": "Badge",
-		"Badges": "Badges",
+		"Badges": "Lencana",
 		"BadgeCount": "{count} badges | {count} badge | {count} badges",
 		"BadgeAchievementDate": "Achievement date",
 		"Barcode": "Kode batang",
@@ -253,6 +253,7 @@
 		"DisplayPriceMap": "Peta",
 		"DisplayPriceChart": "Grafik",
 		"Done": "Selesai",
+		"EndingSoon": "Ending soon",
 		"Error": "Kesalahan",
 		"Experiment": "Percobaan",
 		"Experiments": "Eksperimen",
@@ -762,7 +763,7 @@
 		"ReceiptAIWarning": "AI akan memproses struk belanja Anda untuk mengekstrak harga.",
 		"PromoProofPriceTagAddMultiple": "Untuk mengunggah beberapa label harga (lokasi toko dan tanggal yang sama), klik di sini!",
 		"PromoReceiptAssistant": "Eksperimen: cobalah asisten struk baru untuk secara otomatis mengekstrak harga dari struk Anda!",
-		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
+		"ProofUploadProgressWarning": "Jangan tutup tab ini atau muat ulang halaman saat gambar Anda sedang diunggah!"
 	},
 	"ProofCard": {
 		"Proof": "Bukti",
@@ -862,7 +863,7 @@
 			"Title": "Compare 2 locations"
 		},
 		"Badges": {
-			"Title": "Badges"
+			"Title": "Lencana"
 		},
 		"Explore": {
 			"Title": "Mengeksplorasi"
@@ -907,14 +908,14 @@
 			"Title": "Negara"
 		},
 		"CreateOffProduct": {
-			"Title": "Create Product"
+			"Title": "Buat Produk"
 		},
 		"Experiments": {
 			"Title": "Eksperimen"
 		},
 		"Home": {
 			"Title": "Beranda",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "{op_name} adalah proyek untuk mengumpulkan dan membagikan harga produk di seluruh dunia. Ini adalah dataset terbuka yang dapat digunakan untuk penelitian, analisis, dan lainnya!"
 		},
 		"Dashboard": {
 			"Title": "Dasbor"
@@ -978,7 +979,7 @@
 		},
 		"Challenges": {
 			"Title": "Tantangan",
-			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
+			"Help": "Tantangan adalah cara bagi komunitas untuk memfokuskan upaya dan mengumpulkan harga produk tertentu. Tantangan biasanya berlangsung selama satu bulan, dan kontributor diberi peringkat berdasarkan kontribusi mereka.\n\nPeriksa tantangan yang sedang berlangsung di bawah ini untuk berpartisipasi, atau lihat data tantangan sebelumnya."
 		},
 		"CommunityChallenge": {
 			"Title": "Tantangan komunitas"
@@ -1035,8 +1036,8 @@
 		"LastUpdated": "Terakhir diperbarui pada {date}"
 	},
 	"Surveys": {
-		"HelpFeatures": "Help us build the next features in {op_name}!",
-		"SurveyGamification": "Take our 1-minute gamification survey."
+		"HelpFeatures": "Bantu kami membangun fitur berikutnya di {op_name}!",
+		"SurveyGamification": "Ikuti survei gamifikasi kami yang hanya membutuhkan 1 menit."
 	},
 	"UserDashboard": {
 		"LatestPrices": "Harga terbaru",
