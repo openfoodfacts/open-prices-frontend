@@ -273,7 +273,7 @@ export default {
           proof_id: this.proofObject.id,
           currency: this.proofObject.currency,
           price: receiptItems[i].price || receiptItems[i].predicted_data.price,
-          product_name: receiptItems[i].product_name || receiptItems[i].predicted_data.product_name
+          product_name: receiptItems[i].product_name || receiptItems[i]?.predicted_data?.product_name
         }
         if (receiptItems[i].price_id) {
           openPricesApi.updatePrice(receiptItems[i].price_id, priceData).then((price) => {
