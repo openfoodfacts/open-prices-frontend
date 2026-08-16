@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.172.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.172.1...v1.172.2) (2026-08-16)
+
+
+### Bug Fixes
+
+* **Receipt Assistant:** allow prices with an empty product_name ([#2334](https://github.com/openfoodfacts/open-prices-frontend/issues/2334)) ([13e217e](https://github.com/openfoodfacts/open-prices-frontend/commit/13e217e3d7df361629aac17e2efd8d8030d0ccaf))
+
+
+### Technical
+
+* **Challenge:** Home: show 'Ending soon' chip on promo banner if ending in less than 7 days ([#2337](https://github.com/openfoodfacts/open-prices-frontend/issues/2337)) ([bc44c91](https://github.com/openfoodfacts/open-prices-frontend/commit/bc44c917ab1425312683c33fd8e66ef6f51f19e4))
+* **Challenge:** Home: show 'New' chip on promo banner if started less than 7 days ago ([#2335](https://github.com/openfoodfacts/open-prices-frontend/issues/2335)) ([38289dc](https://github.com/openfoodfacts/open-prices-frontend/commit/38289dc83ce10b0da48dc8c503451445f4ba6063))
+* **Data:** update generated data from taxonomies ([#2331](https://github.com/openfoodfacts/open-prices-frontend/issues/2331)) ([14b855b](https://github.com/openfoodfacts/open-prices-frontend/commit/14b855b9de67dfdaebba438dd7e37d1221eb9863))
+* **l10n:** New Crowdin translations to review and merge ([#2318](https://github.com/openfoodfacts/open-prices-frontend/issues/2318)) ([eed0930](https://github.com/openfoodfacts/open-prices-frontend/commit/eed09308a3535c9aa46f18ec3fde084db335cdec))
+* **SEO:** update more metatags on route change ([#2330](https://github.com/openfoodfacts/open-prices-frontend/issues/2330)) ([a52c2c9](https://github.com/openfoodfacts/open-prices-frontend/commit/a52c2c9cb916d257d4c70117c9850e2d80d88956))
+* **User Comment Chip:** replace 'title' with explicit tooltip (fixes interaction on mobile) ([#2340](https://github.com/openfoodfacts/open-prices-frontend/issues/2340)) ([8fa791e](https://github.com/openfoodfacts/open-prices-frontend/commit/8fa791e9a6cb99081dabb67592773d09ed198b63))
+
 ## [1.172.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.172.0...v1.172.1) (2026-08-13)
 
 
