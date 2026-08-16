@@ -1,6 +1,9 @@
 <template>
-  <v-chip label size="small" variant="flat" density="comfortable" :title="comment">
+  <v-chip label size="small" variant="flat" density="comfortable">
     <v-icon :icon="USER_COMMENT_ICON" />
+    <v-tooltip activator="parent" open-on-click location="top">
+      {{ comment }}
+    </v-tooltip>
   </v-chip>
 </template>
 
