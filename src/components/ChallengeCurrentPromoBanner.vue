@@ -9,6 +9,7 @@
     <v-banner-text>
       <h3 class="text-h6 mb-1">
         {{ $t('Challenge.Title') }}
+        <NewChip v-if="isNew" />
       </h3>
       <p>
         {{ $t('Challenge.Subtitle', {challenge_title: `${challenge.icon} ${challenge.title} ${challenge.icon}`, challenge_subtitle: challenge.subtitle}) }}
@@ -22,9 +23,13 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
 
 export default {
+  components: {
+    NewChip: defineAsyncComponent(() => import('./NewChip.vue'))
+  },
   props: {
     challenge: {
       type: Object,
@@ -37,6 +42,14 @@ export default {
     }
   },
   computed: {
+    isNew() {
+      // a challenge usually lasts 1 month
+      // new = first 7 days of the challenge
+      const today = new Date()
+      const startDate = new Date(this.challenge.start_date)
+      const sevenDaysFromStartDate = new Date(startDate.getTime() + 7 * 24 * 60 * 60 * 1000)
+      return today <= sevenDaysFromStartDate
+    },
     getUrl() {
       return `/challenge`
     }
