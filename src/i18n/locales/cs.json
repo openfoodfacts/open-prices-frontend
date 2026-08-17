@@ -803,7 +803,7 @@
 		"EnableBoxDrawMode": "Povolit režim kreslení rámečku",
 		"EnableBoxRemoveMode": "Enable box remove mode",
 		"WaitingForReceiptUpload": "Čekání na nahrání účtenky...",
-		"WaitingForAnonymizationPrediction": "Waiting for anonymization prediction...",
+		"WaitingForAnonymizationPrediction": "Čekání na predikci anonymizace...",
 		"Anonymize": "Anonymizovat"
 	},
 	"ReceiptAssistant": {
