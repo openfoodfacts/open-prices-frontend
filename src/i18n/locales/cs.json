@@ -253,7 +253,7 @@
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Graf",
 		"Done": "Hotovo",
-		"EndingSoon": "Ending soon",
+		"EndingSoon": "Brzy končí",
 		"Error": "Chyba",
 		"Experiment": "Experimentovat",
 		"Experiments": "Experimenty",
@@ -338,7 +338,7 @@
 		"Help": "Nápověda",
 		"Here": "Zde",
 		"History": "Historie",
-		"HistoryPrice": "Price history",
+		"HistoryPrice": "Historie cen",
 		"HistoryProof": "Proof history",
 		"Image": "Obrázek",
 		"ImageSelect": "Vyberte obrázek",
@@ -800,11 +800,11 @@
 		"Title": "Anonymize a receipt",
 		"Save": "Uložit",
 		"EditRedactBoxes": "Edit & redact boxes",
-		"EnableBoxDrawMode": "Enable box draw mode",
+		"EnableBoxDrawMode": "Povolit režim kreslení rámečku",
 		"EnableBoxRemoveMode": "Enable box remove mode",
 		"WaitingForReceiptUpload": "Waiting for receipt upload...",
 		"WaitingForAnonymizationPrediction": "Waiting for anonymization prediction...",
-		"Anonymize": "Anonymize"
+		"Anonymize": "Anonymizovat"
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Přidat novou položku",
