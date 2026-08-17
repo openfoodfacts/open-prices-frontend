@@ -797,12 +797,12 @@
 		"Success": "Doklad upraven!"
 	},
 	"ReceiptAnonymize": {
-		"Title": "Anonymize a receipt",
+		"Title": "Anonymizovat účtenku",
 		"Save": "Uložit",
 		"EditRedactBoxes": "Edit & redact boxes",
 		"EnableBoxDrawMode": "Povolit režim kreslení rámečku",
 		"EnableBoxRemoveMode": "Enable box remove mode",
-		"WaitingForReceiptUpload": "Waiting for receipt upload...",
+		"WaitingForReceiptUpload": "Čekání na nahrání účtenky...",
 		"WaitingForAnonymizationPrediction": "Waiting for anonymization prediction...",
 		"Anonymize": "Anonymizovat"
 	},
