@@ -193,6 +193,7 @@ export default {
     {key: LOCATION_TYPE_OSM, value: LOCATION_TYPE_OSM, icon: LOCATION_TYPE_OSM_ICON},
     {key: LOCATION_TYPE_ONLINE, value: LOCATION_TYPE_ONLINE, icon: LOCATION_TYPE_ONLINE_ICON},
   ],
+  CITY_ICON: COUNTRY_ICON,
   COUNTRY_ICON: COUNTRY_ICON,
   // users
   USER_ICON: USER_ICON,
@@ -208,6 +209,7 @@ export default {
   BADGE_IMAGE_DEFAULT_URL: '/icon-mdi-medal-outline.svg',
   // dates
   DATE_ICON: DATE_ICON,
+  YEAR_ICON: DATE_ICON,
   // currencies
   CURRENCY_ICON: CURRENCY_ICON,
   // filter
