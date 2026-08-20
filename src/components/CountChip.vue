@@ -15,7 +15,7 @@ export default {
     kind: {
       type: String,
       default: null,
-      examples: ['price', 'product', 'proof', 'location', 'user', 'currency', 'country', 'challenge', 'badge']
+      examples: ['price', 'product', 'proof', 'location', 'user', 'currency', 'city', 'country', 'challenge', 'badge', 'year']
     },
     count: {
       type: Number,

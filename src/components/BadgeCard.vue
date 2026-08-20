@@ -10,8 +10,7 @@
             <v-col cols="12" @click="clickBadge()">
               <h3>{{ badge.name }}</h3>
               <p>{{ badge.description }}</p>
-              <CountChip v-if="badge.metric === 'price_count'" class="mr-2" kind="price" :count="badge.threshold" :withLabel="true" />
-              <CountChip v-if="badge.metric === 'proof_count'" class="mr-2" kind="proof" :count="badge.threshold" :withLabel="true" />
+              <CountChip v-if="getCountChipKindFromBadgeMetric(badge.metric)" class="mr-2" :kind="getCountChipKindFromBadgeMetric(badge.metric)" :count="badge.threshold" :withLabel="true" />
               <DateChip v-if="achievedAt" :title="$t('Common.BadgeAchievementDate')" :date="achievedAt" :readonly="true" />
             </v-col>
           </v-row>
@@ -67,6 +66,24 @@ export default {
     }
   },
   methods: {
+    getCountChipKindFromBadgeMetric(metric) {
+      switch (metric) {
+        case 'price_count':
+          return 'price'
+        case 'proof_count':
+          return 'proof'
+        case 'location_count':
+          return 'location'
+        case 'location_type_osm_country_count':
+          return 'country'
+        case 'year_count':
+          return 'year'
+        case 'challenge_count':
+          return 'challenge'
+        default:
+          return null
+      }
+    },
     clickBadge() {
       if (this.readonly) {
         return
