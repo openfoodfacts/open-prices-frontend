@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.172.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.172.2...v1.172.3) (2026-08-21)
+
+
+### Technical
+
+* **Badge Card:** display more metrics & thresholds (new badges) ([#2347](https://github.com/openfoodfacts/open-prices-frontend/issues/2347)) ([42eb2b3](https://github.com/openfoodfacts/open-prices-frontend/commit/42eb2b3d3372a6dbcaee1ffddca881d37ed47f01))
+* **l10n:** New Crowdin translations to review and merge ([#2342](https://github.com/openfoodfacts/open-prices-frontend/issues/2342)) ([3f7ccf4](https://github.com/openfoodfacts/open-prices-frontend/commit/3f7ccf47c1ceb271505aec8f88745b03a2de13ef))
+
 ## [1.172.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.172.1...v1.172.2) (2026-08-16)
 
 
