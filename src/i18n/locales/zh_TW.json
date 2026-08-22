@@ -681,6 +681,21 @@
 		"Title": "找到您的商店位置",
 		"Warning": "搜尋商店的引擎目前還不是很準確。{newline}歡迎添加街道名稱以縮小搜尋範圍。{newline}範例：Carrefour City 15e Paris ; Sainsbury's Camden London"
 	},
+	"NearbyPriceFilter": {
+		"ActiveButton": "Nearby ({radius} km)",
+		"Button": "Nearby",
+		"ChooseLocation": "Choose a location",
+		"CurrentPosition": "Current position",
+		"GeolocationFailed": "Your position could not be retrieved. Check the browser location permission or choose a location instead.",
+		"GeolocationUnsupported": "Location is not supported by this browser. Choose a location instead.",
+		"LocationSourceHelp": "The selected place is used only for its coordinates. Price addresses come from the Open Prices location data enriched from OpenStreetMap.",
+		"MissingCoordinates": "This place has no usable coordinates.",
+		"Radius": "Radius",
+		"RadiusValue": "{radius} km",
+		"SelectedLocation": "Selected location",
+		"Title": "Prices near a location",
+		"UseCurrentPosition": "Use my position"
+	},
 	"NotFound": {
 		"Subtitle": "您想造訪的頁面似乎不存在⋯⋯",
 		"Title": "找不到項目"

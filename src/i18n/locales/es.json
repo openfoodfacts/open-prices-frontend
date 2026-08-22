@@ -681,6 +681,21 @@
 		"Title": "Encuentra la ubicación de tu tienda",
 		"Warning": "El motor de búsqueda para encontrar una tienda no es muy preciso.{newline}No dudes en agregar el nombre de la calle para limitar los resultados.{newline}Ejemplos: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},
+	"NearbyPriceFilter": {
+		"ActiveButton": "Nearby ({radius} km)",
+		"Button": "Nearby",
+		"ChooseLocation": "Choose a location",
+		"CurrentPosition": "Current position",
+		"GeolocationFailed": "Your position could not be retrieved. Check the browser location permission or choose a location instead.",
+		"GeolocationUnsupported": "Location is not supported by this browser. Choose a location instead.",
+		"LocationSourceHelp": "The selected place is used only for its coordinates. Price addresses come from the Open Prices location data enriched from OpenStreetMap.",
+		"MissingCoordinates": "This place has no usable coordinates.",
+		"Radius": "Radius",
+		"RadiusValue": "{radius} km",
+		"SelectedLocation": "Selected location",
+		"Title": "Prices near a location",
+		"UseCurrentPosition": "Use my position"
+	},
 	"NotFound": {
 		"Subtitle": "Parece que la página que buscas no existe...",
 		"Title": "Extraviado"
