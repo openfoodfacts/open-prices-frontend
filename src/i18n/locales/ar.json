@@ -681,6 +681,21 @@
 		"Title": "ابحث عن موقع متجرك",
 		"Warning": "محرك البحث للعثور على متجر ليس دقيقًا جدًا حاليًا.{newline}لا تتردد في إضافة اسم الشارع لتضييق نطاق النتائج.{newline}أمثلة: كارفور سيتي 15e باريس؛ سينسبري كامدن لندن"
 	},
+	"NearbyPriceFilter": {
+		"ActiveButton": "Nearby ({radius} km)",
+		"Button": "Nearby",
+		"ChooseLocation": "Choose a location",
+		"CurrentPosition": "Current position",
+		"GeolocationFailed": "Your position could not be retrieved. Check the browser location permission or choose a location instead.",
+		"GeolocationUnsupported": "Location is not supported by this browser. Choose a location instead.",
+		"LocationSourceHelp": "The selected place is used only for its coordinates. Price addresses come from the Open Prices location data enriched from OpenStreetMap.",
+		"MissingCoordinates": "This place has no usable coordinates.",
+		"Radius": "Radius",
+		"RadiusValue": "{radius} km",
+		"SelectedLocation": "Selected location",
+		"Title": "Prices near a location",
+		"UseCurrentPosition": "Use my position"
+	},
 	"NotFound": {
 		"Subtitle": "يبدو أن الصفحة التي طلبتها غير موجودة...",
 		"Title": "غير موجود"
