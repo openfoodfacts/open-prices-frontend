@@ -20,9 +20,23 @@
           <PricePriceRow class="mt-0" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
         </v-col>
       </v-row>
-
-      <PriceFooterRow v-if="showPriceFooterRow" class="mt-0" :price="price" :hidePriceProof="hidePriceProof" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceCreated="hidePriceCreated" :hideProductDetailsRow="hideProductDetailsRow" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
     </v-card-text>
+
+    <v-divider v-if="showPriceFooterRow" />
+
+    <v-card-actions v-if="showPriceFooterRow">
+      <PriceFooterRow
+        :price="price"
+        :hidePriceProof="hidePriceProof"
+        :hidePriceLocation="hidePriceLocation"
+        :hidePriceOwner="hidePriceOwner"
+        :hidePriceDate="hidePriceDate"
+        :hidePriceCreated="hidePriceCreated"
+        :hideProductDetailsRow="hideProductDetailsRow"
+        :hideActionMenuButton="hideActionMenuButton"
+        :readonly="readonly"
+      />
+    </v-card-actions>
   </v-card>
 </template>
 
