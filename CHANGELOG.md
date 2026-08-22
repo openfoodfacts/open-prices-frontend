@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.173.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.172.3...v1.173.0) (2026-08-22)
+
+
+### Features
+
+* **Prices:** new nearby filter (lat, lon & radius_km) ([#2332](https://github.com/openfoodfacts/open-prices-frontend/issues/2332)) ([dfa6887](https://github.com/openfoodfacts/open-prices-frontend/commit/dfa6887baf470cdd0947b6163aff24213edd2458))
+
 ## [1.172.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.172.2...v1.172.3) (2026-08-21)
 
 
