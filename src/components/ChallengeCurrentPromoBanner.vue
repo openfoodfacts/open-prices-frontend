@@ -1,6 +1,7 @@
 <template>
   <v-banner
     class="border-grey"
+    style="cursor:pointer;"
     :icon="CHALLENGE_ICON"
     rounded
     density="compact"
