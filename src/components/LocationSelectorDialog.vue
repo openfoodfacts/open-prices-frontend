@@ -175,6 +175,12 @@ export default {
     LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
   },
+  props: {
+    physicalOnly: {
+      type: Boolean,
+      default: false
+    },
+  },
   emits: ['location', 'close'],
   data() {
     return {
@@ -189,7 +195,6 @@ export default {
       results: null,
       // config
       searchProvider: constants.LOCATION_SEARCH_PROVIDER_LIST[1].key,  // photon
-      displayItems: constants.LOCATION_SELECTOR_DISPLAY_LIST,
       currentDisplay: null,  // see mounted
       OSM_EXAMPLES: 'Carrefour rue la fayette 75010 paris ; Auchan Grenoble ; N12208020359',
       OSM_NAME: constants.OSM_NAME,
@@ -202,6 +207,12 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    displayItems() {
+      if (this.physicalOnly) {
+        return constants.LOCATION_SELECTOR_DISPLAY_LIST.filter(item => item.key !== constants.LOCATION_SELECTOR_DISPLAY_ONLINE)
+      }
+      return constants.LOCATION_SELECTOR_DISPLAY_LIST
+    },
     dialogHeight() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
@@ -209,10 +220,10 @@ export default {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
     favoriteLocations() {
-      return this.appStore.getFavoriteLocations
-     },
+      return this.filterPhysicalLocations(this.appStore.getFavoriteLocations)
+    },
     recentLocations() {
-      return this.appStore.getRecentLocations
+      return this.filterPhysicalLocations(this.appStore.getRecentLocations)
     },
     locationOnlineFormFilled() {
       return !!this.locationOnlineForm.website_url && this.urlRules.every(rule => rule(this.locationOnlineForm.website_url) === true)
@@ -226,15 +237,16 @@ export default {
   },
   watch: {
     currentDisplay(value) {
-      if (value === constants.LOCATION_SELECTOR_DISPLAY_LIST[2].key) {  // Physical
+      if (value === constants.LOCATION_SELECTOR_DISPLAY_OSM) {
         window.setTimeout(() => this.$refs.locationOsmSearchInput.focus(), 200)
-      } else if (value === constants.LOCATION_SELECTOR_DISPLAY_LIST[3].key) {  // Online
+      } else if (value === constants.LOCATION_SELECTOR_DISPLAY_ONLINE) {
         window.setTimeout(() => this.$refs.locationOnlineFormInput.focus(), 200)
       }
     }
   },
   mounted() {
-    this.currentDisplay = this.appStore.user.location_finder_default_mode
+    const defaultMode = this.appStore.user.location_finder_default_mode
+    this.currentDisplay = this.displayItems.some(item => item.key === defaultMode) ? defaultMode : constants.LOCATION_SELECTOR_DISPLAY_OSM
   },
   methods: {
     fieldRequired(v) {
@@ -242,6 +254,9 @@ export default {
     },
     getLocationId(location) {
       return geo_utils.getLocationId(location)
+    },
+    filterPhysicalLocations(locations) {
+      return this.physicalOnly ? locations.filter(location => geo_utils.hasLocationCoordinates(location)) : locations
     },
     locationOsmSearch() {
       this.$refs.locationOsmSearchInput.blur()
@@ -278,10 +293,18 @@ export default {
       this.close()
     },
     clearFavoriteLocations() {
-      this.appStore.clearFavoriteLocations()
+      if (this.physicalOnly) {
+        this.favoriteLocations.forEach(location => this.appStore.removeFavoriteLocation(location))
+      } else {
+        this.appStore.clearFavoriteLocations()
+      }
     },
     clearRecentLocations() {
-      this.appStore.clearRecentLocations()
+      if (this.physicalOnly) {
+        this.recentLocations.forEach(location => this.appStore.removeRecentLocation(location))
+      } else {
+        this.appStore.clearRecentLocations()
+      }
     },
     close() {
       this.$emit('close')

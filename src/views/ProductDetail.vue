@@ -24,6 +24,7 @@
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
         <FilterMenu kind="price" :hideType="true" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
+        <NearbyPriceFilter :currentFilter="nearbyFilter" @update:currentFilter="updateNearbyFilter($event)" />
         <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
         <DisplayMenu :show="['list', 'table', 'map', 'chart']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
       </template>
@@ -72,6 +73,7 @@ import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import data_utils from '../utils/data.js'
 import date_utils from '../utils/date.js'
+import geo_utils from '../utils/geo.js'
 import utils from '../utils.js'
 
 export default {
@@ -83,6 +85,7 @@ export default {
     CategoryNotFoundAlert: defineAsyncComponent(() => import('../components/CategoryNotFoundAlert.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    NearbyPriceFilter: defineAsyncComponent(() => import('../components/NearbyPriceFilter.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
@@ -126,10 +129,16 @@ export default {
     productOrCategoryNotFound() {
       return !this.loading && (this.productNotFound || this.categoryNotFound)
     },
+    nearbyFilter() {
+      return geo_utils.getNearbyFilter(this.$route.query)
+    },
     getPricesParams() {
       let defaultParams = { [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, order_by: `${this.currentOrder}`, page: this.pricePage }
       if (this.currentFilterList.includes('show_last_month')) {
         defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
+      }
+      if (this.nearbyFilter) {
+        Object.assign(defaultParams, this.nearbyFilter)
       }
       return defaultParams
     },
@@ -207,6 +216,10 @@ export default {
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      // this.initPrices() will be called in watch $route
+    },
+    updateNearbyFilter(nearbyFilter) {
+      this.$router.push({ query: geo_utils.buildNearbyFilterQuery(this.$route.query, nearbyFilter) })
       // this.initPrices() will be called in watch $route
     },
     updateOrder(orderKey) {

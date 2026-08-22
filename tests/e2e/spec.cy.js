@@ -30,6 +30,57 @@ describe('Basic tests', () => {
     cy.contains('Load more')
   })
 
+  it('filters prices using the current position', () => {
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?*', { fixture: 'prices.json' }).as('prices')
+
+    cy.visit('/prices', {
+      onBeforeLoad(win) {
+        cy.stub(win.navigator.geolocation, 'getCurrentPosition').callsFake((success) => {
+          success({ coords: { latitude: 48.8566, longitude: 2.3522 } })
+        })
+      }
+    })
+    // the chip row sits behind v-if="!loading", so it only appears once the
+    // initial load is over
+    cy.wait('@prices')
+    cy.get('[data-name="nearby-price-filter-button"]').click()
+    cy.get('[data-name="nearby-price-use-position-button"]').click()
+    cy.get('[data-name="nearby-price-filter-apply-button"]').click()
+
+    cy.wait('@prices').then(({ request }) => {
+      expect(request.query.lat).to.equal('48.8566')
+      expect(request.query.lon).to.equal('2.3522')
+      expect(request.query.radius_km).to.equal('5')
+    })
+    cy.url().should('include', 'lat=48.8566')
+    cy.get('[data-name="nearby-price-filter-button"]').contains('Nearby (5 km)')
+
+    cy.contains('button', 'Filter').click()
+    // FilterMenu is a v-menu with scroll-strategy="close", so the scroll Cypress
+    // performs before a click would close the menu and detach the item
+    cy.contains('Hide prices older than 30 days').click({ scrollBehavior: false })
+    // the geo filter travels with the other filters, in one single request
+    cy.wait('@prices').then(({ request }) => {
+      expect(request.query.date__gte).to.exist
+      expect(request.query.radius_km).to.equal('5')
+    })
+  })
+
+  it('ignores a nearby filter whose radius is outside the supported range', () => {
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?*', { fixture: 'prices.json' }).as('prices')
+
+    ;[0, 101].forEach((radius) => {
+      cy.visit(`/prices?lat=48.8566&lon=2.3522&radius_km=${radius}`)
+
+      cy.wait('@prices').then(({ request }) => {
+        expect(request.query).not.to.have.property('lat')
+        expect(request.query).not.to.have.property('lon')
+        expect(request.query).not.to.have.property('radius_km')
+      })
+      cy.get('[data-name="nearby-price-filter-button"]').should('not.contain', 'Nearby (')
+    })
+  })
+
   it('displays the top products', () => {
     cy.visit('/products')
     cy.contains('Welcome to Open Prices!').should('not.exist')
