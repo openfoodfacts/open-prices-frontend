@@ -4271,10 +4271,10 @@ vue@^3.2.25, vue@^3.5.40:
     "@vue/server-renderer" "3.5.40"
     "@vue/shared" "3.5.40"
 
-vuetify@^3.11.8:
-  version "3.12.10"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-3.12.10.tgz#1de66b4779fbc232871daedcee232ef99c9cb094"
-  integrity sha512-6u/sWsIoUqWap3FxaIXZ/JObN/E2Z/BWAaliHh3GEl3Ik162zkpcIFYYLTnQiJ8PcyvMSFr+Lzyz7VoERob7JA==
+vuetify@^4.1.6:
+  version "4.1.6"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-4.1.6.tgz#064e73b6df829c90da15f3f7101527073ad87d83"
+  integrity sha512-VOsRTsNfs+FE4JXMONZkqX2yznSqC/FXG9/pgVVjsoqIjUvJg+CfFTuOlgyWVFrZYY+crk7LV9uaiN8bZREV/g==
 
 wait-on@9.0.4:
   version "9.0.4"
