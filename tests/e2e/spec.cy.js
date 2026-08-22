@@ -66,17 +66,19 @@ describe('Basic tests', () => {
     })
   })
 
-  it('ignores a nearby filter whose radius is above the maximum', () => {
+  it('ignores a nearby filter whose radius is outside the supported range', () => {
     cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?*', { fixture: 'prices.json' }).as('prices')
 
-    cy.visit('/prices?lat=48.8566&lon=2.3522&radius_km=101')
+    ;[0, 101].forEach((radius) => {
+      cy.visit(`/prices?lat=48.8566&lon=2.3522&radius_km=${radius}`)
 
-    cy.wait('@prices').then(({ request }) => {
-      expect(request.query).not.to.have.property('lat')
-      expect(request.query).not.to.have.property('lon')
-      expect(request.query).not.to.have.property('radius_km')
+      cy.wait('@prices').then(({ request }) => {
+        expect(request.query).not.to.have.property('lat')
+        expect(request.query).not.to.have.property('lon')
+        expect(request.query).not.to.have.property('radius_km')
+      })
+      cy.get('[data-name="nearby-price-filter-button"]').should('not.contain', 'Nearby (')
     })
-    cy.get('[data-name="nearby-price-filter-button"]').should('not.contain', 'Nearby (')
   })
 
   it('displays the top products', () => {

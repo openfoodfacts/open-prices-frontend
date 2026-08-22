@@ -252,7 +252,7 @@ function getNearbyFilter(query) {
     && lat <= 90
     && lon >= -180
     && lon <= 180
-    && radius_km >= 0
+    && radius_km > 0
     && radius_km <= NEARBY_FILTER_MAX_RADIUS_KM
   ) {
     return { lat, lon, radius_km }
