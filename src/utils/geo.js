@@ -245,19 +245,19 @@ function getNearbyFilter(query) {
   const lon = toFiniteNumber(query.lon)
   const radius_km = toFiniteNumber(query.radius_km)
   if (
-    lat === null
-    || lon === null
-    || radius_km === null
-    || lat < -90
-    || lat > 90
-    || lon < -180
-    || lon > 180
-    || radius_km < 0
-    || radius_km > NEARBY_FILTER_MAX_RADIUS_KM
+    lat !== null
+    && lon !== null
+    && radius_km !== null
+    && lat >= -90
+    && lat <= 90
+    && lon >= -180
+    && lon <= 180
+    && radius_km >= 0
+    && radius_km <= NEARBY_FILTER_MAX_RADIUS_KM
   ) {
-    return null
+    return { lat, lon, radius_km }
   }
-  return { lat, lon, radius_km }
+  return null
 }
 
 function buildNearbyFilterQuery(query, nearbyFilter) {

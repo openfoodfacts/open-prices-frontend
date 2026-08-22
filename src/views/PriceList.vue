@@ -10,19 +10,6 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="priceListError">
-    <v-col>
-      <v-alert data-name="price-list-error" type="error" variant="outlined" density="compact">
-        {{ priceListError }}
-        <template #append>
-          <v-btn size="small" variant="text" @click="retryPrices">
-            {{ $t('Common.Retry') }}
-          </v-btn>
-        </template>
-      </v-alert>
-    </v-col>
-  </v-row>
-
   <v-row class="mt-0">
     <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
@@ -38,8 +25,8 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
-import priceListMixin from '../mixins/priceList.js'
 import date_utils from '../utils/date.js'
 import geo_utils from '../utils/geo.js'
 import utils from '../utils.js'
@@ -52,9 +39,12 @@ export default {
     NearbyPriceFilter: defineAsyncComponent(() => import('../components/NearbyPriceFilter.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
-  mixins: [priceListMixin],
   data() {
     return {
+      priceList: [],
+      priceTotal: null,
+      pricePage: 0,
+      loading: false,
       // filter & order
       currentFilterList: [],
       currentType: '',
@@ -66,7 +56,7 @@ export default {
       return geo_utils.getNearbyFilter(this.$route.query)
     },
     getPricesParams() {
-      let defaultParams = { order_by: this.currentOrder }
+      let defaultParams = { order_by: this.currentOrder, page: this.pricePage }
       if (this.currentFilterList.includes('show_last_month')) {
         defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
       }
@@ -98,6 +88,23 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
+    initPrices() {
+      this.priceList = []
+      this.priceTotal = null
+      this.pricePage = 0
+      this.getPrices()
+    },
+    getPrices() {
+      if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
+      this.loading = true
+      this.pricePage += 1
+      return openPricesApi.getPrices(this.getPricesParams)
+        .then((data) => {
+          this.priceList.push(...data.items)
+          this.priceTotal = data.total
+          this.loading = false
+        })
+    },
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })

@@ -24,18 +24,6 @@
 
       <v-card-text>
         <v-alert
-          v-if="centerSelected"
-          class="mb-4"
-          color="primary"
-          variant="outlined"
-          density="compact"
-          icon="mdi-map-marker-check-outline"
-        >
-          <strong>{{ centerLabel }}</strong><br>
-          <span class="text-caption">{{ centerCoordinates }}</span>
-        </v-alert>
-
-        <v-alert
           v-if="errorMessage"
           class="mb-4"
           type="error"
@@ -59,15 +47,27 @@
           </v-col>
           <v-col cols="12" sm="6">
             <v-btn
-              data-name="nearby-price-choose-area-button"
+              data-name="nearby-price-choose-location-button"
               block
               prepend-icon="mdi-map-search-outline"
               @click="locationSelectorDialog = true"
             >
-              {{ $t('NearbyPriceFilter.ChooseArea') }}
+              {{ $t('NearbyPriceFilter.ChooseLocation') }}
             </v-btn>
           </v-col>
         </v-row>
+
+        <v-alert
+          v-if="centerSelected"
+          class="mt-4"
+          color="primary"
+          variant="outlined"
+          density="compact"
+          icon="mdi-map-marker-check-outline"
+        >
+          <strong>{{ centerLabel }}</strong><br>
+          <span class="text-caption">{{ centerCoordinates }}</span>
+        </v-alert>
 
         <v-select
           v-model="form.radius_km"
@@ -96,9 +96,6 @@
           {{ $t('Common.Clear') }}
         </v-btn>
         <v-spacer />
-        <v-btn variant="text" @click="closeDialog">
-          {{ $t('Common.Close') }}
-        </v-btn>
         <v-btn
           data-name="nearby-price-filter-apply-button"
           color="primary"
@@ -173,7 +170,7 @@ export default {
     openDialog() {
       const nearbyFilter = geo_utils.getNearbyFilter(this.currentFilter || {})
       this.form = nearbyFilter ? { ...nearbyFilter } : { lat: null, lon: null, radius_km: 5 }
-      this.centerLabel = nearbyFilter ? this.$t('NearbyPriceFilter.SelectedArea') : ''
+      this.centerLabel = nearbyFilter ? this.$t('NearbyPriceFilter.SelectedLocation') : ''
       this.errorMessage = ''
       this.dialog = true
     },
@@ -213,7 +210,7 @@ export default {
       const [lat, lon] = geo_utils.getLocationOSMLatLng(location)
       this.form.lat = Number(lat)
       this.form.lon = Number(lon)
-      this.centerLabel = geo_utils.getLocationOSMTitle(location, true, false, true) || this.$t('NearbyPriceFilter.SelectedArea')
+      this.centerLabel = geo_utils.getLocationOSMTitle(location, true, false, true) || this.$t('NearbyPriceFilter.SelectedLocation')
       this.errorMessage = ''
     },
     applyFilter() {

@@ -79,33 +79,6 @@ describe('Basic tests', () => {
     cy.get('[data-name="nearby-price-filter-button"]').should('not.contain', 'Nearby (')
   })
 
-  it('can retry a failed prices request', () => {
-    let priceRequestCount = 0
-    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?*', (request) => {
-      priceRequestCount += 1
-      if (priceRequestCount === 1) {
-        request.reply({statusCode: 500, body: {detail: 'temporary error'}})
-      } else {
-        request.reply({fixture: 'prices.json'})
-      }
-    }).as('prices')
-
-    cy.visit('/prices?lat=48.8566&lon=2.3522&radius_km=5')
-    cy.wait('@prices')
-    // scrolling must not silently replay a request that is showing an error
-    cy.document().then((document) => {
-      const spacer = document.createElement('div')
-      spacer.style.height = '2000px'
-      document.body.appendChild(spacer)
-    })
-    cy.scrollTo('bottom')
-    cy.wait(300)
-    cy.then(() => expect(priceRequestCount).to.equal(1))
-    cy.get('[data-name="price-list-error"]').contains('Retry').click()
-    cy.wait('@prices')
-    cy.then(() => expect(priceRequestCount).to.equal(2))
-  })
-
   it('displays the top products', () => {
     cy.visit('/products')
     cy.contains('Welcome to Open Prices!').should('not.exist')

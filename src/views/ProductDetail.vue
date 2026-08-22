@@ -31,19 +31,6 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="priceListError">
-    <v-col>
-      <v-alert data-name="price-list-error" type="error" variant="outlined" density="compact">
-        {{ priceListError }}
-        <template #append>
-          <v-btn size="small" variant="text" @click="retryPrices">
-            {{ $t('Common.Retry') }}
-          </v-btn>
-        </template>
-      </v-alert>
-    </v-col>
-  </v-row>
-
   <v-window v-model="currentDisplay" disabled>
     <v-window-item value="list">
       <v-row class="mt-0 mb-1">
@@ -84,7 +71,6 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
-import priceListMixin from '../mixins/priceList.js'
 import data_utils from '../utils/data.js'
 import date_utils from '../utils/date.js'
 import geo_utils from '../utils/geo.js'
@@ -107,14 +93,17 @@ export default {
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
     PriceChart: defineAsyncComponent(() => import('../components/PriceChart.vue')),
   },
-  mixins: [priceListMixin],
   data() {
     return {
       productId: this.$route.params.id,  // product_code or product_category
       // data
       product: null,
       category: null,
+      priceList: [],
+      priceTotal: null,
+      pricePage: 0,
       priceLocationList: [],
+      loading: false,
       // share
       shareLinkCopySuccessMessage: false,
       // filter, order & display
@@ -144,7 +133,7 @@ export default {
       return geo_utils.getNearbyFilter(this.$route.query)
     },
     getPricesParams() {
-      let defaultParams = { [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, order_by: `${this.currentOrder}` }
+      let defaultParams = { [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, order_by: `${this.currentOrder}`, page: this.pricePage }
       if (this.currentFilterList.includes('show_last_month')) {
         defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
       }
@@ -181,9 +170,13 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    beforeInitPrices() {
+    initPrices() {
       this.productId = this.$route.params.id
+      this.priceList = []
+      this.priceTotal = null
+      this.pricePage = 0
       this.priceLocationList = []
+      this.getPrices()
     },
     getProduct() {
       if (this.productIsCategory) {
@@ -202,12 +195,23 @@ export default {
           })
       }
     },
-    onPricesLoaded(prices) {
-      prices.forEach((price) => {
-        if (price.location) {
-          utils.addObjectToArray(this.priceLocationList, price.location)
-        }
-      })
+    getPrices() {
+      if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
+      this.loading = true
+      this.pricePage += 1
+      return openPricesApi.getPrices(this.getPricesParams)
+        .then((data) => {
+          this.loading = false
+          // product not found: the API will return an empty list
+          // if (!data.items) return
+          this.priceList.push(...data.items)
+          this.priceTotal = data.total
+          data.items.forEach((price) => {
+            if (price.location) {
+              utils.addObjectToArray(this.priceLocationList, price.location)
+            }
+          })
+        })
     },
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList
