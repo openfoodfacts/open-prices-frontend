@@ -75,7 +75,7 @@
 			"Proof": "Bevis",
 			"ProofDateChanged": "Datum uppdaterat!",
 			"ProofSelected": "Proof selected!",
-			"ProofUploaded": "Proof uploaded!",
+			"ProofUploaded": "Bevis uppladdat!",
 			"Title": "Prisdetaljer",
 			"UploadProof": "Ladda upp ett bevis",
 			"Picture": "Bild",
@@ -88,7 +88,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Ursprung",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Produktens streckkod",
 			"Scan": "Skanna",
 			"ScanBarcode": "Skanna en streckkod",
 			"ScanBarcodeShort": "Skanna",
@@ -177,7 +177,7 @@
 		"AddNewPrices": "Lägg till nya priser",
 		"AddProof": "Add a proof",
 		"AddProofs": "Lägg till bevis",
-		"AddNewProof": "Add a new proof",
+		"AddNewProof": "Lägg till ett nytt bevis",
 		"AddNewProofs": "Lägg till nya bevis",
 		"AddNewProofPriceTags": "Lägg till nya prislappar",
 		"AddNewProofReceipt": "Lägg till ett nytt kvitto",
@@ -389,7 +389,7 @@
 		"OrderFlagReasonASC": "Rapportorsak",
 		"OrderNameASC": "Namn",
 		"OrderLocationCountDESC": "Location count",
-		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductUniqueScansDESC": "Antal skanningar",
 		"OrderProductPriceCountDESC": "Antal priser",
 		"OrderPriceCountDESC": "Price count",
 		"OrderPriceASC": "Pris",
@@ -457,7 +457,7 @@
 		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} bevis uppladdade",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Bevis idag",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "Bevis hittades inte",
 		"Public": "Public",
 		"Quantity": "Kvantitet",
 		"QuantityBought": "Quantity bought",
@@ -694,7 +694,7 @@
 		"RadiusValue": "{radius} km",
 		"SelectedLocation": "Selected location",
 		"Title": "Prices near a location",
-		"UseCurrentPosition": "Use my position"
+		"UseCurrentPosition": "Använd min position"
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
@@ -805,7 +805,7 @@
 	"ProofDetail": {
 		"LoadMore": "Ladda fler",
 		"Prices": "Priser",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "Bevis hittades inte",
 		"Public": "Public",
 		"Private": "Privat",
 		"Privacy": "Integritet"
@@ -1012,7 +1012,7 @@
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Produktens streckkod",
 		"Title": "Sök"
 	},
 	"ShareButton": {
