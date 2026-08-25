@@ -150,7 +150,7 @@
 		"PricesAddedByYou": "Priser som du har lagt till",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
+			"DRAFT": "Utkast",
 			"UPCOMING": "Kommande",
 			"ONGOING": "Pågående",
 			"COMPLETED": "Slutförd"
@@ -176,7 +176,7 @@
 		"AddNewPrice": "Lägg till ett nytt pris",
 		"AddNewPrices": "Lägg till nya priser",
 		"AddProof": "Add a proof",
-		"AddProofs": "Add proofs",
+		"AddProofs": "Lägg till bevis",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Lägg till nya bevis",
 		"AddNewProofPriceTags": "Lägg till nya prislappar",
@@ -249,8 +249,8 @@
 		"DisplayNoun": "Display",
 		"DisplayVerb": "Display",
 		"Displays": "Displays",
-		"DisplayList": "List",
-		"DisplayPriceList": "List",
+		"DisplayList": "Lista",
+		"DisplayPriceList": "Lista",
 		"DisplayTable": "Tabell",
 		"DisplayMap": "Karta",
 		"DisplayPriceMap": "Karta",
@@ -308,7 +308,7 @@
 		"Edit": "Redigera",
 		"End": "End",
 		"ErrorServer": "Fel: serverfel",
-		"Favorite": "Favorite",
+		"Favorite": "Favorit",
 		"FavoritesAdd": "Add to favorites",
 		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Fältet är obligatoriskt",
@@ -374,7 +374,7 @@
 		"MyProofs": "Mina bevis",
 		"MyStats": "Min statistik",
 		"New": "Ny",
-		"NextProof": "Next proof",
+		"NextProof": "Nästa bevis",
 		"NoBarcode": "Ingen streckkod",
 		"NotAnError": "Inte ett fel",
 		"NotAPrice": "Inte ett pris",
@@ -456,7 +456,7 @@
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} bevis uppladdade",
 		"ProofsAddedToday": "Proofs added today",
-		"ProofsToday": "Proofs today",
+		"ProofsToday": "Bevis idag",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Quantity": "Kvantitet",
@@ -584,10 +584,10 @@
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Vänta på uppladdning",
 		"GoToProof": "Go to proof",
-		"NextProof": "Next proof",
+		"NextProof": "Nästa bevis",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatisk",
-		"ManualBoundingBoxSource": "manual",
+		"ManualBoundingBoxSource": "manuell",
 		"DetectedBarcode": "Upptäckt streckkod: {barcode}",
 		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
 		"PriceTagLabels": {
@@ -621,7 +621,7 @@
 		"CreateProduct": "Skapa produkt",
 		"EnableCropMode": "Aktivera beskärningsläge",
 		"Flavor": "Välj det projekt där produkten ska skapas",
-		"NextProof": "Next proof",
+		"NextProof": "Nästa bevis",
 		"PreviousProof": "Tidigare bevis",
 		"ProductAlreadyExists": "Produkten finns redan",
 		"ProductLanguage": "Product language",
@@ -683,14 +683,14 @@
 	},
 	"NearbyPriceFilter": {
 		"ActiveButton": "Nearby ({radius} km)",
-		"Button": "Nearby",
+		"Button": "Nära",
 		"ChooseLocation": "Choose a location",
 		"CurrentPosition": "Current position",
 		"GeolocationFailed": "Your position could not be retrieved. Check the browser location permission or choose a location instead.",
 		"GeolocationUnsupported": "Location is not supported by this browser. Choose a location instead.",
 		"LocationSourceHelp": "The selected place is used only for its coordinates. Price addresses come from the Open Prices location data enriched from OpenStreetMap.",
 		"MissingCoordinates": "This place has no usable coordinates.",
-		"Radius": "Radius",
+		"Radius": "Radie",
 		"RadiusValue": "{radius} km",
 		"SelectedLocation": "Selected location",
 		"Title": "Prices near a location",
@@ -811,7 +811,7 @@
 		"Privacy": "Integritet"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
+		"Title": "Redigera ett bevis",
 		"Save": "Spara",
 		"Success": "Bevis redigerat!"
 	},
@@ -864,7 +864,7 @@
 			"Title": "Add a proof"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "Lägg till bevis"
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
