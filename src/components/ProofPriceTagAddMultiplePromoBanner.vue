@@ -1,5 +1,6 @@
 <template>
   <v-banner
+    style="cursor:pointer;"
     icon="mdi-image-multiple"
     bg-color="primary"
     rounded
