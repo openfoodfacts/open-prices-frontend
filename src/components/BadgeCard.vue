@@ -11,7 +11,7 @@
               <h3>{{ badge.name }}</h3>
               <p>{{ badge.description }}</p>
               <CountChip v-if="getCountChipKindFromBadgeMetric(badge.metric)" class="mr-2" :kind="getCountChipKindFromBadgeMetric(badge.metric)" :count="badge.threshold" :withLabel="true" />
-              <ProofTypeChip v-if="getProofTypeFromBadgeMetric(badge.metric)" class="mr-2" :kind="getProofTypeFromBadgeMetric(badge.metric)" />
+              <ProofTypeChip v-if="getProofTypeFromBadgeMetric(badge.metric)" class="mr-2" :proofType="getProofTypeFromBadgeMetric(badge.metric)" />
               <DateChip v-if="achievedAt" :title="$t('Common.BadgeAchievementDate')" :date="achievedAt" :readonly="true" />
             </v-col>
           </v-row>
