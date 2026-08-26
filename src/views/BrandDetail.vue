@@ -101,9 +101,11 @@ export default {
       this.brandProductPage += 1
       return openPricesApi.getProducts(this.getProductsParams)
         .then((data) => {
+          this.loading = false
+          // error payload (e.g. 404 "Invalid page." or 400 "Maximum page reached"): no items to add
+          if (!data.items) return
           this.brandProductList.push(...data.items)
           this.brandProductTotal = data.total
-          this.loading = false
         })
     },
     updateFilterList(newFilterList) {
