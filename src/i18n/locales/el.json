@@ -681,6 +681,21 @@
 		"Title": "Βρείτε την τοποθεσία του καταστήματός σας",
 		"Warning": "Η μηχανή αναζήτησης για την εύρεση ενός καταστήματος δεν είναι προς το παρόν πολύ ακριβής.{newline}Μην διστάσετε να προσθέσετε το όνομα της οδού για να περιορίσετε τα αποτελέσματα.{newline}Παραδείγματα: Carrefour City 15e Παρίσι; Sainsbury's Camden Λονδίνο"
 	},
+	"NearbyPriceFilter": {
+		"ActiveButton": "Nearby ({radius} km)",
+		"Button": "Nearby",
+		"ChooseLocation": "Choose a location",
+		"CurrentPosition": "Current position",
+		"GeolocationFailed": "Your position could not be retrieved. Check the browser location permission or choose a location instead.",
+		"GeolocationUnsupported": "Location is not supported by this browser. Choose a location instead.",
+		"LocationSourceHelp": "The selected place is used only for its coordinates. Price addresses come from the Open Prices location data enriched from OpenStreetMap.",
+		"MissingCoordinates": "This place has no usable coordinates.",
+		"Radius": "Radius",
+		"RadiusValue": "{radius} km",
+		"SelectedLocation": "Selected location",
+		"Title": "Prices near a location",
+		"UseCurrentPosition": "Use my position"
+	},
 	"NotFound": {
 		"Subtitle": "Η σελίδα που ζητήσατε δεν φαίνεται να υπάρχει...",
 		"Title": "Δεν βρέθηκε"

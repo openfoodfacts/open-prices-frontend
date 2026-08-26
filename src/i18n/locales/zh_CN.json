@@ -681,6 +681,21 @@
 		"Title": "找到您的商店位置",
 		"Warning": "目前搜索引擎找店铺还不是很精准。{newline}请毫不犹豫地添加街道名称以缩小结果范围。{newline}示例：Carrefour City 15e Paris；塞恩斯伯里卡姆登 伦敦"
 	},
+	"NearbyPriceFilter": {
+		"ActiveButton": "Nearby ({radius} km)",
+		"Button": "Nearby",
+		"ChooseLocation": "Choose a location",
+		"CurrentPosition": "Current position",
+		"GeolocationFailed": "Your position could not be retrieved. Check the browser location permission or choose a location instead.",
+		"GeolocationUnsupported": "Location is not supported by this browser. Choose a location instead.",
+		"LocationSourceHelp": "The selected place is used only for its coordinates. Price addresses come from the Open Prices location data enriched from OpenStreetMap.",
+		"MissingCoordinates": "This place has no usable coordinates.",
+		"Radius": "Radius",
+		"RadiusValue": "{radius} km",
+		"SelectedLocation": "Selected location",
+		"Title": "Prices near a location",
+		"UseCurrentPosition": "Use my position"
+	},
 	"NotFound": {
 		"Subtitle": "您请求的页面似乎不存在...",
 		"Title": "未找到"

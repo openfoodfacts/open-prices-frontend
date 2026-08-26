@@ -681,6 +681,21 @@
 		"Title": "உங்கள் கடையின் இருப்பிடத்தைக் கண்டறியவும்",
 		"Warning": "கடையைக் கண்டுபிடிப்பதற்கான தேடுபொறி தற்போது மிகவும் துல்லியமாக இல்லை.{newline}முடிவுகளைக் குறைக்க தெருவின் பெயரைச் சேர்க்க தயங்க வேண்டாம்.{newline}எடுத்துக்காட்டுகள்: Carrefour City 15e பாரிஸ் ; சைன்ஸ்பரியின் கேம்டன் லண்டன்"
 	},
+	"NearbyPriceFilter": {
+		"ActiveButton": "Nearby ({radius} km)",
+		"Button": "Nearby",
+		"ChooseLocation": "Choose a location",
+		"CurrentPosition": "Current position",
+		"GeolocationFailed": "Your position could not be retrieved. Check the browser location permission or choose a location instead.",
+		"GeolocationUnsupported": "Location is not supported by this browser. Choose a location instead.",
+		"LocationSourceHelp": "The selected place is used only for its coordinates. Price addresses come from the Open Prices location data enriched from OpenStreetMap.",
+		"MissingCoordinates": "This place has no usable coordinates.",
+		"Radius": "Radius",
+		"RadiusValue": "{radius} km",
+		"SelectedLocation": "Selected location",
+		"Title": "Prices near a location",
+		"UseCurrentPosition": "Use my position"
+	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
 		"Title": "Not found"
