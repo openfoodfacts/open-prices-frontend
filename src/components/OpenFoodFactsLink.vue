@@ -63,7 +63,9 @@ export default {
       return this.OFF_URL
     },
     getUrlWithLocale() {
-      return this.getSourceUrl.replace('world', this.appStore.user.country.toLowerCase())
+      // user.country can be null/undefined (unset in settings, older persisted state): keep the 'world' URL
+      const country = this.appStore.user.country
+      return country ? this.getSourceUrl.replace('world', country.toLowerCase()) : this.getSourceUrl
     },
     getUrl() {
       if (this.facet && this.value) {

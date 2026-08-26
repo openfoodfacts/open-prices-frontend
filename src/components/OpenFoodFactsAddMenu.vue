@@ -57,7 +57,9 @@ export default {
     },
     getSourceAddUrlWithLocale(source) {
       const SOURCE_ADD_URL = `${this.getSourceUrl(source)}/cgi/product.pl?type=search_or_add&action=process&code=${this.productCode}`
-      return SOURCE_ADD_URL.replace('world', this.appStore.user.country.toLowerCase())
+      // user.country can be null/undefined (unset in settings, older persisted state): keep the 'world' URL
+      const country = this.appStore.user.country
+      return country ? SOURCE_ADD_URL.replace('world', country.toLowerCase()) : SOURCE_ADD_URL
     },
   }
 }
