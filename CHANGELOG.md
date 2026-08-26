@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.173.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.172.3...v1.173.0) (2026-08-26)
+
+
+### Features
+
+* **Prices:** new nearby filter (lat, lon & radius_km) ([#2332](https://github.com/openfoodfacts/open-prices-frontend/issues/2332)) ([dfa6887](https://github.com/openfoodfacts/open-prices-frontend/commit/dfa6887baf470cdd0947b6163aff24213edd2458))
+
+
+### Bug Fixes
+
+* **Badge Card:** forgot commit for [#2350](https://github.com/openfoodfacts/open-prices-frontend/issues/2350) ([5d2f8d9](https://github.com/openfoodfacts/open-prices-frontend/commit/5d2f8d9c6d78e0aa0894d192c958ec77b8633dca))
+* **OFF Link:** fallback to the world URL when the user country is unset ([#2354](https://github.com/openfoodfacts/open-prices-frontend/issues/2354)) ([27c8281](https://github.com/openfoodfacts/open-prices-frontend/commit/27c8281fa0da2dbf1a1b791ab434ab80e24cf7ba))
+
+
+### Technical
+
+* **Badge Card:** display more metrics & thresholds (new badges) (more complex) ([#2350](https://github.com/openfoodfacts/open-prices-frontend/issues/2350)) ([2314d18](https://github.com/openfoodfacts/open-prices-frontend/commit/2314d18b44fa96922f42651f75a877f3f6183762))
+* **Banners:** show `cursor:pointer` if clickable ([#2336](https://github.com/openfoodfacts/open-prices-frontend/issues/2336)) ([497e25c](https://github.com/openfoodfacts/open-prices-frontend/commit/497e25c19fae62c16082c726ad3ad21b39243e1e))
+* **l10n:** New Crowdin translations to review and merge ([#2352](https://github.com/openfoodfacts/open-prices-frontend/issues/2352)) ([68a4f73](https://github.com/openfoodfacts/open-prices-frontend/commit/68a4f732d94dc2c25b6cf7002a7985b708488700))
+
 ## [1.172.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.172.2...v1.172.3) (2026-08-21)
 
 
