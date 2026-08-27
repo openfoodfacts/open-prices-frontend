@@ -28,11 +28,14 @@
         {{ $t('About.HowContribute') }}
       </h2>
     </v-col>
-    <v-col cols="12" md="6">
+    <v-col cols="12" md="4">
       <ChallengeTakePicturesCard :challenge="challenge" />
     </v-col>
-    <v-col cols="12" md="6">
+    <v-col cols="12" md="4">
       <ChallengeValidateCard :challenge="challenge" height="100%" />
+    </v-col>
+    <v-col v-if="challenge.categories.length" cols="12" md="4">
+      <ChallengeCategoriesCard :challenge="challenge" height="100%" />
     </v-col>
   </v-row>
 
@@ -120,6 +123,7 @@ export default {
     ChallengeTimeline: defineAsyncComponent(() => import('../components/ChallengeTimeline.vue')),
     ChallengeTakePicturesCard: defineAsyncComponent(() => import('../components/ChallengeTakePicturesCard.vue')),
     ChallengeValidateCard: defineAsyncComponent(() => import('../components/ChallengeValidateCard.vue')),
+    ChallengeCategoriesCard: defineAsyncComponent(() => import('../components/ChallengeCategoriesCard.vue')),
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
     RankingTableCard: defineAsyncComponent(() => import('../components/RankingTableCard.vue')),
     StatsLastUpdatedAlert: defineAsyncComponent(() => import('../components/StatsLastUpdatedAlert.vue')),
