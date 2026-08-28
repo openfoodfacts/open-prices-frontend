@@ -136,6 +136,8 @@ export default {
       this.proofPage += 1
       return openPricesApi.getProofs(this.getProofsParams)
         .then((data) => {
+          this.loading = false
+          if (!data.items) return
           this.proofList.push(...data.items)
           this.proofTotal = data.total
           data.items.forEach((proof) => {
@@ -143,7 +145,6 @@ export default {
               utils.addObjectToArray(this.proofLocationList, proof.location)
             }
           })
-          this.loading = false
         })
     },
     handleProofUpdated() {

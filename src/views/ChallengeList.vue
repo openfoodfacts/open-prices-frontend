@@ -121,9 +121,10 @@ export default {
       this.challengePage += 1
       return openPricesApi.getChallenges(this.getChallengesParams)
         .then((data) => {
+          this.loading = false
+          if (!data.items) return
           this.challengeList.push(...data.items)
           this.challengeTotal = data.total
-          this.loading = false
         })
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars

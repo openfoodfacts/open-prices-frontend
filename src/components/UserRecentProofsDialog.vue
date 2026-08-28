@@ -121,9 +121,10 @@ export default {
       this.userProofPage += 1
       return openPricesApi.getProofs(this.getProofParams)
         .then((data) => {
+          this.loading = false
+          if (!data.items) return
           this.userProofList.push(...data.items)
           this.userProofTotal = data.total
-          this.loading = false
         })
         .catch((error) => {
           console.error(error)

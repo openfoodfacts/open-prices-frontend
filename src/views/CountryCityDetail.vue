@@ -113,9 +113,10 @@ export default {
       this.countryCityLocationPage += 1
       return openPricesApi.getLocations(this.getLocationsParams)
         .then((data) => {
+          this.loading = false
+          if (!data.items) return
           this.countryCityLocationList.push(...data.items)
           this.countryCityLocationTotal = data.total
-          this.loading = false
         })
     },
     updateDisplay(displayKey) {

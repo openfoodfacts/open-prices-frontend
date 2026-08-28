@@ -93,9 +93,10 @@ export default {
       this.locationPage += 1
       return openPricesApi.getLocations(this.getLocationsParams)
         .then((data) => {
+          this.loading = false
+          if (!data.items) return
           this.locationList.push(...data.items)
           this.locationTotal = data.total
-          this.loading = false
         })
     },
     updateFilterList(newFilterList) {

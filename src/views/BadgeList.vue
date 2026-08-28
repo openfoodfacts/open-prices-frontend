@@ -60,9 +60,10 @@ export default {
       this.badgePage += 1
       openPricesApi.getBadges(this.getBadgesParams)
         .then((data) => {
+          this.loading = false
+          if (!data.items) return
           this.badgeList.push(...data.items)
           this.badgeTotal = data.total
-          this.loading = false
         })
     },
   },
