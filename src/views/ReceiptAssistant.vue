@@ -56,54 +56,60 @@
 
   <!-- Step 3: actions -->
   <template v-if="step === 3">
-    <v-row>
-      <v-col>
-        <v-row>
-          <v-col cols="12">
-            <v-progress-linear
-              v-if="!finishedUploading"
-              v-model="numberOfPricesAdded"
-              :max="totalNumberOfPricesToAdd"
-              :color="totalNumberOfPricesToAdd === numberOfPricesAdded ? 'success' : 'primary'"
-              height="25"
-              :striped="totalNumberOfPricesToAdd !== numberOfPricesAdded"
-              rounded
-            />
-            <v-alert
-              v-if="finishedUploading"
-              type="success"
-              variant="outlined"
-              density="compact"
-              :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
-            />
-          </v-col>
-        </v-row>
-        <v-row v-if="finishedUploading">
-          <v-col cols="12" sm="6" lg="4">
-            <v-card
-              :title="$t('Common.AddNewProof')"
-              prepend-icon="mdi-image-plus"
-              append-icon="mdi-arrow-right"
-              @click="reloadPage"
-            />
-          </v-col>
-          <v-col cols="12" sm="6" lg="4">
-            <v-card
-              :title="$t('Common.GoToProof')"
-              prepend-icon="mdi-image"
-              append-icon="mdi-arrow-right"
-              :to="'/proofs/' + proofObject.id"
-            />
-          </v-col>
-          <v-col cols="12" sm="6" lg="4">
-            <v-card
-              :title="$t('Common.MyDashboard')"
-              prepend-icon="mdi-account-circle"
-              append-icon="mdi-arrow-right"
-              :to="getUserDashboardUrl"
-            />
-          </v-col>
-        </v-row>
+    <v-row v-if="!finishedUploading">
+      <v-col cols="12">
+        <v-progress-linear
+          v-model="numberOfPricesAdded"
+          :max="totalNumberOfPricesToAdd"
+          :color="totalNumberOfPricesToAdd === numberOfPricesAdded ? 'success' : 'primary'"
+          height="25"
+          :striped="totalNumberOfPricesToAdd !== numberOfPricesAdded"
+          rounded
+        />
+      </v-col>
+    </v-row>
+    <v-row v-else>
+      <v-col cols="12">
+        <v-alert
+          type="success"
+          variant="outlined"
+          density="compact"
+          :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
+        />
+        <v-alert
+          v-if="numberOfPricesAdded > 0 && proofObject?.location?.price_count === 0"
+          class="mt-4"
+          color="primary"
+          variant="outlined"
+          density="compact"
+          icon="mdi-medal-outline"
+        >
+          Congratulations, you're the first contributor in this location!
+        </v-alert>
+      </v-col>
+      <v-col cols="12" sm="6" lg="4">
+        <v-card
+          :title="$t('Common.AddNewProof')"
+          prepend-icon="mdi-image-plus"
+          append-icon="mdi-arrow-right"
+          @click="reloadPage"
+        />
+      </v-col>
+      <v-col cols="12" sm="6" lg="4">
+        <v-card
+          :title="$t('Common.GoToProof')"
+          prepend-icon="mdi-image"
+          append-icon="mdi-arrow-right"
+          :to="'/proofs/' + proofObject.id"
+        />
+      </v-col>
+      <v-col cols="12" sm="6" lg="4">
+        <v-card
+          :title="$t('Common.MyDashboard')"
+          prepend-icon="mdi-account-circle"
+          append-icon="mdi-arrow-right"
+          :to="getUserDashboardUrl"
+        />
       </v-col>
     </v-row>
   </template>
@@ -201,6 +207,7 @@ export default {
       this.step = 2
       // store the proof
       this.proofObject = proof
+      console.log('onProofUploaded', proof)
       // load the receipt items
       this.loadingPredictions = true
       this.loadProofWithReceiptItems(receiptItems => {
