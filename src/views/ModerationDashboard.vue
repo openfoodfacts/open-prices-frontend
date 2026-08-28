@@ -134,9 +134,10 @@ export default {
       this.flagPage += 1
       return openPricesApi.getFlags(this.getFlagsParams)
         .then((data) => {
+          this.loading = false
+          if (!data.items) return
           this.flagList.push(...data.items)
           this.flagTotal = data.total
-          this.loading = false
         })
     },
     getFlagObjectUrl(flag) {

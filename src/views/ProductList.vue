@@ -96,9 +96,10 @@ export default {
       this.productPage += 1
       return openPricesApi.getProducts(this.getProductsParams)
         .then((data) => {
+          this.loading = false
+          if (!data.items) return
           this.productList.push(...data.items)
           this.productTotal = data.total
-          this.loading = false
         })
     },
     updateFilterList(newFilterList) {

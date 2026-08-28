@@ -134,8 +134,7 @@ export default {
       return openPricesApi.getPrices(this.getPricesParams)
         .then((data) => {
           this.loading = false
-          // user not found: the API will return an empty list
-          // if (!data.items) return
+          if (!data.items) return
           this.priceList.push(...data.items)
           this.priceTotal = data.total
         })

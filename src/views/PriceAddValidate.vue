@@ -179,9 +179,10 @@ export default {
       this.priceTagPage += 1
       return openPricesApi.getPriceTags(this.getPriceTagsParams)
         .then((data) => {
+          this.loading = false
+          if (!data.items) return
           this.priceTagList.push(...data.items)
           this.priceTagTotal = data.total
-          this.loading = false
           for (let i = 0; i < data.items.length; i++) {
             // only validate price tags with predictions
             if (data.items[i]['predictions'].filter(prediction => prediction.type === 'PRICE_TAG_EXTRACTION').length > 0) {
