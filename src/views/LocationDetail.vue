@@ -20,7 +20,7 @@
       </h2>
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
-        <FilterMenu kind="price" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
+        <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="updateCurrentType($event)" />
         <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
         <DisplayMenu :show="['list', 'table']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
       </template>
@@ -79,6 +79,7 @@ export default {
       currentFilterList: [],
       currentOrder: constants.PRICE_ORDER_LIST[2].key,  // date
       currentDisplay: constants.DISPLAY_LIST[0].key,  // list
+      currentType: '',
     }
   },
   computed: {
@@ -87,6 +88,9 @@ export default {
       let defaultParams = { location_id: this.locationId, order_by: this.currentOrder, page: this.pricePage }
       if (this.currentFilterList.includes('show_last_month')) {
         defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
+      }
+      if (this.currentType) {
+        defaultParams['type'] = this.currentType
       }
       return defaultParams
     },
@@ -100,6 +104,7 @@ export default {
   },
   mounted() {
     this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
+    this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.appStore.user.price_list_display_default_mode || this.currentDisplay
     this.getLocation()
@@ -142,6 +147,11 @@ export default {
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      // this.initPrices() will be called in watch $route
+    },
+    updateCurrentType(typeKey) {
+      this.currentType = (this.currentType !== typeKey) ? typeKey : ''
+        this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
       // this.initPrices() will be called in watch $route
     },
     updateOrder(orderKey) {
