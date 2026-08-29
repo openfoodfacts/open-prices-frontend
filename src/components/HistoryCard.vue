@@ -6,11 +6,12 @@
         <li v-for="history in historyList" :key="history.history_id">
           <span>{{ getDateTimeFormatted(history.history_date) }} ({{ getRelativeDateTimeFormatted(history.history_date) }})</span>
           <span> - </span>
-          <a :href="getUserDetailUrl">{{ history.history_user_id }}</a>
+          <router-link :to="getUserDetailUrl">{{ history.history_user_id }}</router-link>
           <span v-if="history.history_change_reason">
             <span> - </span>
             <span>{{ history.history_change_reason }}</span>
           </span>
+          <router-link :to="getUserDetailUrl">{{ history.history_user_id }}</router-link>
           <ul v-if="history.changes" class="ml-4">
             <li v-for="change in history.changes" :key="change.field">
               <span>{{ change.field }}: </span>
@@ -24,7 +25,7 @@
         <li>
           <span>{{ getDateTimeFormatted(object.created) }} ({{ getRelativeDateTimeFormatted(object.created) }})</span>
           <span> - </span>
-          <a :href="getUserDetailUrl">{{ object.owner }}</a>
+          <router-link :to="getUserDetailUrl">{{ object.owner }}</router-link>
           <span> ({{ object.source }})</span>
           <span v-if="object.owner_comment">
             <span> - </span>
