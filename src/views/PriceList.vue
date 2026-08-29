@@ -115,8 +115,8 @@ export default {
       this.$router.push({ query: geo_utils.buildNearbyFilterQuery(this.$route.query, nearbyFilter) })
       // this.initPrices() will be called in watch $route
     },
-    togglePriceType(sourceKey) {
-      this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
+    togglePriceType(typeKey) {
+      this.currentType = (this.currentType !== typeKey) ? typeKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
       // this.initPrices() will be called in watch $route
     },

@@ -104,9 +104,9 @@ export default {
   },
   mounted() {
     this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
+    this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.appStore.user.price_list_display_default_mode || this.currentDisplay
-    this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.getUser()
     this.getPrices()
     // load more
@@ -149,6 +149,11 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initPrices() will be called in watch $route
     },
+    togglePriceType(typeKey) {
+      this.currentType = (this.currentType !== typeKey) ? typeKey : ''
+      this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
+      // this.initPrices() will be called in watch $route
+    },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
@@ -160,11 +165,6 @@ export default {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
       // this.initPrices() will NOT be called in watch $route
-    },
-    togglePriceType(sourceKey) {
-      this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
-      this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
-      // this.initPrices() will be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
