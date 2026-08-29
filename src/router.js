@@ -60,7 +60,7 @@ const routes = [
   { path: '/experiments/proof-price-tag-assistant', name: 'price-tag-assistant', component: () => import('./views/ProofPriceTagAssistant.vue'), meta: { title: 'ProofPriceTagAssistant', description: 'AI assistant for identifying price tags in photos', icon: 'mdi-draw', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'ProofPriceTagAssistant', disabled: true }] }},
   { path: '/experiments/receipt-assistant', name: 'receipt-assistant', component: () => import('./views/ReceiptAssistant.vue'), meta: { title: 'ReceiptAssistant', description: 'AI assistant for processing receipt photos', icon: 'mdi-draw', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'ReceiptAssistant', disabled: true }] }},
   { path: '/experiments/create-off-product', name: 'create-off-product', component: () => import('./views/CreateOffProduct.vue'), meta: { title: 'CreateOffProduct', description: 'Create a new Open Food Facts product', icon: 'mdi-draw', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'CreateOffProduct', disabled: true }] }},
-  { path: '/moderation', name: 'moderation-dashboard', component: () => import('./views/ModerationDashboard.vue'), meta: { title: 'Moderation', description: 'Moderation dashboard', icon: constants.MODERATION_ICON, drawerMenu: true, requiresModerator: true, breadcrumbs: [{title: 'Moderation', disabled: true }] }},
+  { path: '/moderation', name: 'moderation-dashboard', component: () => import('./views/ModerationDashboard.vue'), meta: { title: 'Moderation', description: 'Moderation dashboard', icon: constants.MODERATION_ICON, drawerMenu: true, requiresAuth: true, requiresModerator: true, breadcrumbs: [{title: 'Moderation', disabled: true }] }},
   { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats', description: 'View statistics about the Open Prices database', icon: constants.STATS_ICON, drawerMenu: true, breadcrumbs: [{title: 'Stats', disabled: true }] }},
   { path: '/settings', name: 'settings', component: () => import('./views/Settings.vue'), meta: { title: 'Settings', description: 'Manage your account settings', icon: constants.SETTINGS_ICON, drawerMenu: true, breadcrumbs: [{title: 'Settings', disabled: true }] }},
   { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', description: 'Learn about Open Prices and its mission', icon: constants.ABOUT_ICON, drawerMenu: true, breadcrumbs: [{title: 'About', disabled: true }] }},
@@ -80,16 +80,22 @@ const routes = [
   { path: '/:path(.*)', component: () => import('./views/NotFound.vue') },
 ]
 
+/**
+ * Create the Vue Router instance with the defined routes and history mode.
+ */
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: routes,
 })
 
 /**
- * Before each page change, check if it needs authentication.
- * If required, but the user is not authenticated (token unknown):
- * - then redirect to 'sign-in'
- * - the initial url is passed as query parameter ?next=, in order to redirect back after login
+ * Before each page change:
+ * - check the user's preferred language and update the app's language if necessary
+ * - check if it needs authentication. If required, but the user is not authenticated (token unknown):
+ *   - then redirect to 'sign-in'
+ *   - the initial url is passed as query parameter ?next=, in order to redirect back after login
+ * - check if it needs moderator privileges. If required, but the user is not a moderator:
+ *   - then redirect to 'home'
  */
  router.beforeEach(async (to, from, next) => {
   const store = useAppStore()
@@ -99,6 +105,9 @@ const router = createRouter({
   }
   if (to.meta.requiresAuth && !store.user.token) {
     return next({ name: 'sign-in', query: { next: to.fullPath } })
+  }
+  else if (to.meta.requiresModerator && !store.user.is_moderator) {
+    return next({ name: 'home' })
   }
 
   next()
