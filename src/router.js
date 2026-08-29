@@ -89,6 +89,16 @@ const router = createRouter({
 })
 
 /**
+ * When a new version is deployed, the (hashed) js chunks of the previous version disappear from the server.
+ * Users who still have the previous version open then fail to lazy-load any view they haven't visited yet
+ * ("Failed to fetch dynamically imported module"), and the navigation silently does nothing.
+ * In that case, do a full page load of the target route (see router.onError below): it picks up the new version.
+ * The sessionStorage key avoids a reload loop if the chunk is still missing after the reload.
+ */
+const CHUNK_LOAD_ERROR_RELOAD_KEY = 'chunk-load-error-reload'
+const CHUNK_LOAD_ERROR_REGEX = /Failed to fetch dynamically imported module|error loading dynamically imported module|Importing a module script failed/i  // Chrome / Firefox / Safari
+
+/**
  * Before each page change:
  * - check the user's preferred language and update the app's language if necessary
  * - check if it needs authentication. If required, but the user is not authenticated (token unknown):
@@ -114,17 +124,8 @@ const router = createRouter({
 })
 
 /**
- * When a new version is deployed, the (hashed) js chunks of the previous version disappear from the server.
- * Users who still have the previous version open then fail to lazy-load any view they haven't visited yet
- * ("Failed to fetch dynamically imported module"), and the navigation silently does nothing.
- * In that case, do a full page load of the target route (see router.onError below): it picks up the new version.
- * The sessionStorage key avoids a reload loop if the chunk is still missing after the reload.
- */
-const CHUNK_LOAD_ERROR_RELOAD_KEY = 'chunk-load-error-reload'
-const CHUNK_LOAD_ERROR_REGEX = /Failed to fetch dynamically imported module|error loading dynamically imported module|Importing a module script failed/i  // Chrome / Firefox / Safari
-
-/**
- * After each page change, update the document title and meta tags based on the route meta.
+ * After each page change:
+ * - update the document title and meta tags based on the route meta
  */
 router.afterEach((to) => {
   const routeTitle = to.meta?.title
@@ -155,14 +156,15 @@ router.afterEach((to) => {
 })
 
 /**
- * On navigation error: reload the page if a view's js chunk couldn't be loaded (see CHUNK_LOAD_ERROR_REGEX above).
+ * On navigation error:
+ * - reload the page if a view's js chunk couldn't be loaded
  */
 router.onError((error, to) => {
   if (!CHUNK_LOAD_ERROR_REGEX.test(error?.message)) {
     return
   }
+  // already reloaded once for this route: don't loop, let the error surface
   if (sessionStorage.getItem(CHUNK_LOAD_ERROR_RELOAD_KEY) === to.fullPath) {
-    // already reloaded once for this route: don't loop, let the error surface
     return
   }
   sessionStorage.setItem(CHUNK_LOAD_ERROR_RELOAD_KEY, to.fullPath)
