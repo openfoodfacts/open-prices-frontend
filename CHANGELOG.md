@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.173.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.173.0...v1.173.1) (2026-08-29)
+
+
+### Bug Fixes
+
+* **Brand Detail:** don't crash when the API returns an error payload ([#2357](https://github.com/openfoodfacts/open-prices-frontend/issues/2357)) ([532afa3](https://github.com/openfoodfacts/open-prices-frontend/commit/532afa373e1d481ffcb4e1e157a25017000631c1))
+* **History:** fix internal link to user ([#2363](https://github.com/openfoodfacts/open-prices-frontend/issues/2363)) ([a6a22e6](https://github.com/openfoodfacts/open-prices-frontend/commit/a6a22e6a4e7076166dc5eab3b663dde470c70614))
+* **Lists:** don't crash when the API returns an error payload ([#2360](https://github.com/openfoodfacts/open-prices-frontend/issues/2360)) ([9b07ad1](https://github.com/openfoodfacts/open-prices-frontend/commit/9b07ad1538bdfa4a55185ec8eb211715ebf01dab))
+* **Moderation:** only give access to `/moderation` to moderators ([#2362](https://github.com/openfoodfacts/open-prices-frontend/issues/2362)) ([6585dad](https://github.com/openfoodfacts/open-prices-frontend/commit/6585dad06dcb8a26b5da7904ac2cd0e63a99ec9a))
+* **Price List:** fix price type filter management in 2 pages ([#2364](https://github.com/openfoodfacts/open-prices-frontend/issues/2364)) ([e311d5f](https://github.com/openfoodfacts/open-prices-frontend/commit/e311d5f4e71856084287ce69e68f288144bb5e41))
+
 ## [1.173.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.172.3...v1.173.0) (2026-08-26)
 
 
