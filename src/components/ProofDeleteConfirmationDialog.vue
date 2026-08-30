@@ -101,10 +101,12 @@ export default {
         .deleteProof(this.proof.id)
         .then((response) => {  // eslint-disable-line no-unused-vars
           // if response.status == 204
-          this.loading = false
           this.deleteSuccessMessage = true
           this.$emit('delete')
           this.close()
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
     close() {

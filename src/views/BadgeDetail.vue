@@ -79,10 +79,12 @@ export default {
       this.badgeUserPage += 1
       openPricesApi.getBadgeUsers(this.badgeId, this.getBadgeUsersParams)
         .then((data) => {
-          this.loading = false
           if (!data.items) return
           this.badgeUserList.push(...data.items)
           this.badgeUserTotal = data.total
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars

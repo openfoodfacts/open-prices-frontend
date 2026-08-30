@@ -158,9 +158,11 @@ export default {
       openPricesApi
         .createFlag(this.objectType, this.objectId, this.flagForm)
         .then((response) => {  // eslint-disable-line no-unused-vars
-          this.loading = false
           this.$emit('flag')
           this.close()
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
     close() {

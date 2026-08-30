@@ -264,6 +264,8 @@ export default {
       return openPricesApi.getUserById(this.username)
         .then((data) => {
           this.user = data
+        })
+        .finally(() => {
           this.loading = false
         })
     },
@@ -286,11 +288,13 @@ export default {
             this.userPriceList = data.items
             this.userPriceCount = data.total
           }
-          this.loading = false
           // check if the user added a price today
           if (data.items.length && data.items[0].created > date_utils.currentStartOfDay()) {
             this.getUserPriceCount(true)
           }
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
     getUserPriceCount(today=false) {
@@ -318,6 +322,8 @@ export default {
               this.userPriceCount = data.total
             }
           }
+        })
+        .finally(() => {
           this.loading = false
         })
     },
@@ -350,6 +356,8 @@ export default {
               this.getUserProofCount(true)
             }
           }
+        })
+        .finally(() => {
           this.loading = false
         })
     },

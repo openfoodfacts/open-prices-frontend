@@ -167,12 +167,14 @@ export default {
       }
       openPricesApi.getChallenges(params)
       .then((data) => {
-        this.loading = false
         if (data.items.length) {
           this.challenge = data.items[0]
           this.getStats()
           this.getLatestPrices()
         }
+      })
+      .finally(() => {
+        this.loading = false
       })
     },
     getStats() {
@@ -180,6 +182,8 @@ export default {
       openPricesApi.getPriceStats(this.defaultParams)
       .then((data) => {
         this.challenge.numberOfContributions = data.price__count
+      })
+      .finally(() => {
         this.loading = false
       })
 

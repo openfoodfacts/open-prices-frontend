@@ -104,10 +104,12 @@ export default {
       this.proofPage += 1
       return openPricesApi.getProofs(this.getProofsParams)
         .then((data) => {
-          this.loading = false
           if (!data.items) return
           this.proofList.push(...data.items)
           this.proofTotal = data.total
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
     handleProofUpdated() {

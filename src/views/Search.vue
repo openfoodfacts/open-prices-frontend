@@ -108,13 +108,15 @@ export default {
         const code = barcodeUtils.normalizeBarcode(this.productSearchForm.q)
         return openPricesApi.getProducts({ code: code })
           .then((data) => {
-            this.loading = false
             if (!data.items) return
             this.productList.push(...data.items)
             this.productTotal = data.total
             if (data.items.length) {
               this.getProductLatestPrices()
             }
+          })
+          .finally(() => {
+            this.loading = false
           })
       }
     },

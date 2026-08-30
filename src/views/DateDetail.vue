@@ -133,7 +133,6 @@ export default {
       this.pricePage += 1
       return openPricesApi.getPrices(this.getPricesParams)
         .then((data) => {
-          this.loading = false
           if (!data.items) return
           this.priceList.push(...data.items)
           this.priceTotal = data.total
@@ -142,6 +141,9 @@ export default {
               utils.addObjectToArray(this.priceLocationList, price.location)
             }
           })
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
     updateOrder(orderKey) {

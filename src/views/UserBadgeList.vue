@@ -66,6 +66,8 @@ export default {
           if (!data.items) return
           this.userBadgeList.push(...data.items)
           this.userBadgeTotal = data.total
+        })
+        .finally(() => {
           this.loading = false
         })
     },
