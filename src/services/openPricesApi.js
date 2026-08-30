@@ -85,6 +85,22 @@ function extraProofCreateOrUpdateFiltering(data) {
 }
 
 /**
+ * Error rejected by fetchOpenPrices when the API answers with a non-2xx status
+ * - status: the HTTP status code
+ * - data: the error payload returned by the API (usually {detail: ...}), or null if it isn't JSON
+ * - message: the payload's "detail" when it is a string, otherwise the whole payload
+ */
+export class OpenPricesApiError extends Error {
+  constructor(response, data) {
+    const detail = data && data.detail
+    super(typeof detail === 'string' ? detail : (data ? JSON.stringify(data) : `${response.status} ${response.statusText}`))
+    this.name = 'OpenPricesApiError'
+    this.status = response.status
+    this.data = data
+  }
+}
+
+/**
  * Wrapper around fetch
  * 1. to avoid repeating the URL prefix (VITE_OPEN_PRICES_API_URL)
  * 2. to avoid repeating headers (e.g. Authorization & Content-Type)
@@ -92,6 +108,8 @@ function extraProofCreateOrUpdateFiltering(data) {
  * - Open Prices backend API allows both cookie & token authentication
  * - but Open Prices frontend (this app) only uses token authentication
  * - sending both can lead to issues (e.g. the cookie coming from Django admin)
+ * 4. to reject with an OpenPricesApiError when the API answers with a non-2xx status,
+ *    so that API errors end up in the callers' .catch() instead of in their .then()
  */
 function fetchOpenPrices(endpointWithParams, options, withToken = false) {
   // set URL
@@ -110,6 +128,12 @@ function fetchOpenPrices(endpointWithParams, options, withToken = false) {
     ...options,
     headers: headers,
     credentials: 'omit'
+  })
+  .then((response) => {
+    if (response.ok) return response
+    return response.json()
+      .catch(() => null)
+      .then((data) => { throw new OpenPricesApiError(response, data) })
   })
 }
 

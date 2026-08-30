@@ -66,7 +66,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import openPricesApi from '../services/openPricesApi'
+import openPricesApi, { OpenPricesApiError } from '../services/openPricesApi'
 import date_utils from '../utils/date.js'
 
 export default {
@@ -132,18 +132,14 @@ export default {
       this.loading = true
       openPricesApi
         .createPrice(this.addPriceSingleForm, this.$route.path)
-        .then((data) => {
-          this.loading = false
-          if (data.id) {
-            this.goToUserDashboard()
-          } else {
-            alert(`Error: ${JSON.stringify(data)}`)
-            console.log(JSON.stringify(data))
-          }
+        .then(() => {
+          this.goToUserDashboard()
         })
         .catch((error) => {
-          alert(this.$t('Common.ServerError'))
+          alert(error instanceof OpenPricesApiError ? `Error: ${error.message}` : this.$t('Common.ServerError'))
           console.log(error)
+        })
+        .finally(() => {
           this.loading = false
         })
     },

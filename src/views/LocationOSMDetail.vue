@@ -49,13 +49,14 @@ export default {
     getLocation() {
       return openPricesApi.getLocationByOsmTypeAndId(this.locationOsmType, this.locationOsmId)
         .then((data) => {
-          if (data.id) {
-            this.$router.replace({ name: 'location-detail', params: { id: data.id } })
-          } else {
-            this.location = {
-              osm_type: this.locationOsmType,
-              osm_id: this.locationOsmId,
-            }
+          this.$router.replace({ name: 'location-detail', params: { id: data.id } })
+        })
+        .catch((error) => {
+          if (error.status !== 404) throw error
+          // location not in Open Prices (yet): display it from its OSM type & id
+          this.location = {
+            osm_type: this.locationOsmType,
+            osm_id: this.locationOsmId,
           }
         })
     },

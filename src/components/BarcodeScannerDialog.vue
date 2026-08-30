@@ -253,8 +253,11 @@ export default {
       }
       openPricesApi
         .getProductByCode(code)
-        .then((data) => {
-          const product = data.id ? data : {'code': code, 'price_count': 0}
+        .catch((error) => {
+          if (error.status === 404) return {'code': code, 'price_count': 0}  // product not in Open Prices (yet)
+          throw error
+        })
+        .then((product) => {
           if (search) {
             this.productSearchResultList.push(product)
           } else {

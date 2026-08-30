@@ -186,12 +186,12 @@ export default {
       } else {
         return openPricesApi.getProductByCode(this.productId)
           .then((data) => {
-            if (data.id) {
-              this.product = data
-            } else {
-              // product not found: set a minimal product to display the ProductCard
-              this.product = { code: this.productId, price_count: this.priceTotal }
-            }
+            this.product = data
+          })
+          .catch((error) => {
+            if (error.status !== 404) throw error
+            // product not found: set a minimal product to display the ProductCard
+            this.product = { code: this.productId, price_count: this.priceTotal }
           })
       }
     },
