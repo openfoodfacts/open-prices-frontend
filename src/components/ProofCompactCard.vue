@@ -3,7 +3,10 @@
     <v-card-text class="pa-2">
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
-          <v-img v-if="proof.file_path" :src="getProofImageFullUrl" max-height="100px" />
+          <div v-if="proof.file_path && proof.file_path.toLowerCase().endsWith('.pdf')">
+            <v-icon size="40" color="red" icon="mdi-file-pdf-box" />
+          </div>
+          <v-img v-else-if="proof.file_path" :src="getProofImageFullUrl" max-height="100px" />
           <v-img v-else :src="productImageDefault" height="50px" width="50px" style="filter:invert(.9);" />
         </v-col>
         <v-col style="max-width:80%;">

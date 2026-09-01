@@ -1,4 +1,4 @@
-<template>
+;<template>
   <v-card
     v-if="step !== 3"
     height="100%"
@@ -308,7 +308,7 @@ export default {
         this.proofObjectList = [this.proofImageList[0]]
       }
       // new proof: extract exif data from file
-      else {
+      else if (this.proofImageList[0].type !== 'application/pdf') {
         ExifReader.load(this.proofImageList[0]).then((tags) => {
           if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
             // exif DateTimeOriginal format: '2024:01:31 20:23:52'
@@ -318,10 +318,15 @@ export default {
               this.proofDateSuccessMessage = true
             }
           }
+        }).catch((err) => {
+          console.warn('ExifReader failed to read tags from image', err)
         })
       }
     },
     compressProof(proofImage) {
+      if (proofImage.type === 'application/pdf') {
+        return Promise.resolve(proofImage)
+      }
       return new Promise((resolve, reject) => {
         new Compressor(proofImage, {
           success: resolve,

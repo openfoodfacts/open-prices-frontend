@@ -21,6 +21,12 @@
         :preventDrawing="true"
         :forceFullImageHeight="true"
       />
+      <div v-else-if="proof.file_path && proof.file_path.toLowerCase().endsWith('.pdf')" class="d-flex flex-column align-center justify-center fill-height py-4">
+        <a :href="getProofImageFullUrl" target="_blank" class="text-decoration-none d-flex flex-column align-center">
+          <v-icon size="64" color="red" icon="mdi-file-pdf-box" />
+          <div class="text-caption mt-2">{{ $t('Common.OpenPDF') }}</div>
+        </a>
+      </div>
       <v-img v-else-if="proof.file_path" :src="getProofImageFullUrl" :height="imageHeight" />
     </v-card-text>
 

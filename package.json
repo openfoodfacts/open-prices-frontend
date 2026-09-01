@@ -19,7 +19,7 @@
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
-      "yarn lint --max-warnings=0 --no-warn-ignored"
+      "npm run lint --max-warnings=0 --no-warn-ignored"
     ]
   },
   "dependencies": {
