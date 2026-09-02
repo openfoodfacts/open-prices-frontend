@@ -143,6 +143,13 @@
 			"line3": "إذا كنت تواجه صعوبة في قراءة الملصق، فضع علامة عليه بأنه غير قابل للقراءة.",
 			"line4": "هذا جهد تعاوني، حتى لو لم ترسل صورًا، فلا يزال بإمكانك مساعدة الآخرين من خلال التحقق."
 		},
+		"StepCategories": {
+			"Title": "Add products to the categories",
+			"line1": "Many products belong to the challenge categories but are not yet categorized as such in {name}, so their prices don't count towards the challenge.",
+			"line2": "Hunger Games is a game where you confirm the categories our robots have guessed for products. Answering the questions for the challenge categories will add the missing products.",
+			"line3": "Questions are grouped by sub-category, so the game will first show you a list of sub-categories to choose from.",
+			"line4": "Pick a category to start playing!"
+		},
 		"PicturesAddedByYou": "الصور التي أضفتها أنت",
 		"Prices": "{challenge_title} الأسعار",
 		"PricesAdded": "تمت إضافة الأسعار {challenge_title}",
