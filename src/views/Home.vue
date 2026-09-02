@@ -115,6 +115,8 @@ export default {
         .then((data) => {
           this.latestPriceList = data.items
           this.totalPriceCount = data.total
+        })
+        .finally(() => {
           this.loading = false
         })
     },
@@ -123,6 +125,8 @@ export default {
       return openPricesApi.getPrices({ created__gte: date_utils.currentStartOfDay(), size: 1 })
         .then((data) => {
           this.todayPriceCount = data.total
+        })
+        .finally(() => {
           this.loading = false
         })
     },

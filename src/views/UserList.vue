@@ -88,10 +88,12 @@ export default {
       this.userPage += 1
       return openPricesApi.getUsers(this.getUsersParams)
         .then((data) => {
-          this.loading = false
           if (!data.items) return
           this.userList.push(...data.items)
           this.userTotal = data.total
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
     updateFilterList(newFilterList) {

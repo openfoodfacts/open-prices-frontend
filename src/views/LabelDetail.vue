@@ -103,10 +103,12 @@ export default {
       this.labelProductPage += 1
       return openPricesApi.getProducts(this.getProductsParams)
         .then((data) => {
-          this.loading = false
           if (!data.items) return
           this.labelProductList.push(...data.items)
           this.labelProductTotal = data.total
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
     updateFilterList(newFilterList) {

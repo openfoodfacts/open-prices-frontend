@@ -86,6 +86,8 @@ export default {
             data.sort((a, b) => b.location_count - a.location_count)
           }
           this.countryList = data
+        })
+        .finally(() => {
           this.loading = false
         })
     },

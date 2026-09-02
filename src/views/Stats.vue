@@ -317,6 +317,8 @@ export default {
           for (const key in this.stats) {
             this.stats[key] = (key in data) ? data[key] : this.stats[key]
           }
+        })
+        .finally(() => {
           this.loading = false
         })
     },

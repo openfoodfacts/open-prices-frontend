@@ -195,7 +195,6 @@ export default {
       this.selectedLocationB.totalPrice = 0
 
       openPricesApi.getLocationsCompare(this.selectedLocationA.id, this.selectedLocationB.id).then((response) => {
-        this.loading = false
         if (!response.shared_products || response.shared_products.length === 0) {
           this.productsList = []
           return
@@ -210,6 +209,9 @@ export default {
         })
         this.selectedLocationA.totalPrice = response.total_sum_location_a
         this.selectedLocationB.totalPrice = response.total_sum_location_b
+      })
+      .finally(() => {
+        this.loading = false
       })
     },
     // Step 4: reset comparison = clear query params

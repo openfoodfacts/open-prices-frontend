@@ -43,6 +43,8 @@ export default {
           if (data.id) {
             this.price = data
           }
+        })
+        .finally(() => {
           this.loading = false
         })
     },

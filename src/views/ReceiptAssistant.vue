@@ -206,8 +206,10 @@ export default {
       this.loadProofWithReceiptItems(receiptItems => {
         this.receiptItems = receiptItems
         openPricesApi.getPrices({proof_id: this.proofObject.id}).then(data => {
-          this.loadingPredictions = false
           this.proofPriceExistingList = data.items
+        })
+        .finally(() => {
+          this.loadingPredictions = false
         })
       })
     },

@@ -289,9 +289,11 @@ export default {
       this.loading = true
       return openPricesApi.getPrices({ proof_id: this.proofObject.id, size: this.proofObject.price_count, order_by: 'created' })
         .then((data) => {
-          this.loading = false
           if (!data.items) return
           this.proofPriceExistingList.push(...data.items)
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
     clearProductPriceForm() {

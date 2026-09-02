@@ -461,6 +461,8 @@ export default {
             })
             this.missingProductsWithPrices = Array.from(productMap.values())
             this.productTotal = data.total // Only true if products have only one price, but it's good enough ..
+          })
+          .finally(() => {
             this.loading = false
           })
       }
@@ -470,6 +472,8 @@ export default {
         .then((data) => {
           this.missingProductsWithPrices = data.items
           this.productTotal = data.total
+        })
+        .finally(() => {
           this.loading = false
         })
     },

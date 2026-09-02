@@ -227,8 +227,10 @@ export default {
     save() {
       this.loading = true
       openPricesApi.anonymizeDraftProof(this.draftProof.id, this.extractedBoundings).then((response) => {  // eslint-disable-line no-unused-vars
-        this.loading = false
         this.$emit('done', this.draftProof)
+      })
+      .finally(() => {
+        this.loading = false
       })
     }
   },

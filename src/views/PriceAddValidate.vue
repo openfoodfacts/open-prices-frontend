@@ -179,7 +179,6 @@ export default {
       this.priceTagPage += 1
       return openPricesApi.getPriceTags(this.getPriceTagsParams)
         .then((data) => {
-          this.loading = false
           if (!data.items) return
           this.priceTagList.push(...data.items)
           this.priceTagTotal = data.total
@@ -189,6 +188,9 @@ export default {
               this.handlePriceTag(data.items[i])
             }
           }
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
     handlePriceTag(priceTag) {

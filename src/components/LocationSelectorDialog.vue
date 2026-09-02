@@ -284,8 +284,10 @@ export default {
       const website_url_cleaned = utils.getURLOrigin(this.locationOnlineForm.website_url)
       openPricesApi.createLocationOnline({website_url: website_url_cleaned})
         .then((location) => {
-          this.loading = false
           this.selectLocation(location)
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
     selectLocation(location) {
