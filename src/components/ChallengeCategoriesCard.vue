@@ -17,21 +17,23 @@
         {{ $t('Challenge.StepCategories.line4') }}
       </p>
       <p class="mb-2">
-        <v-chip
-          v-for="category in challenge.categories"
-          :key="category"
-          label
-          color="primary"
-          variant="flat"
-          size="small"
-          density="comfortable"
-          append-icon="mdi-open-in-new"
-          class="mr-1 mb-1"
-          :href="getHungerGamesCategoryUrl(category)"
-          target="_blank"
-        >
-          {{ categoryLocalizedNames[category] || category }}
-        </v-chip>
+        <span class="chip-group">
+          <v-chip
+            v-for="category in challenge.categories"
+            :key="category"
+            label
+            color="primary"
+            variant="flat"
+            size="small"
+            density="comfortable"
+            append-icon="mdi-open-in-new"
+            class="mr-1 mb-1"
+            :href="getHungerGamesCategoryUrl(category)"
+            target="_blank"
+          >
+            {{ categoryLocalizedNames[category] || category }}
+          </v-chip>
+        </span>
       </p>
     </v-card-text>
   </v-card>
