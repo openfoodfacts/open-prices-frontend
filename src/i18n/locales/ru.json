@@ -143,6 +143,13 @@
 			"line3": "Если у вас возникли трудности с чтением этикетки, отметьте ее как нечитаемую.",
 			"line4": "Это совместная работа. Даже если вы не отправляли фотографии, вы все равно можете помочь другим, подтвердив свое участие."
 		},
+		"StepCategories": {
+			"Title": "Add products to the categories",
+			"line1": "Many products belong to the challenge categories but are not yet categorized as such in {name}, so their prices don't count towards the challenge.",
+			"line2": "Hunger Games is a game where you confirm the categories our robots have guessed for products. Answering the questions for the challenge categories will add the missing products.",
+			"line3": "Questions are grouped by sub-category, so the game will first show you a list of sub-categories to choose from.",
+			"line4": "Pick a category to start playing!"
+		},
 		"PicturesAddedByYou": "Фотографии добавлены вами",
 		"Prices": "{challenge_title} цены",
 		"PricesAdded": "{challenge_title} цены добавлены",
