@@ -28,10 +28,10 @@
         {{ $t('About.HowContribute') }}
       </h2>
     </v-col>
-    <v-col cols="12" md="4">
+    <v-col cols="12" :md="challenge.categories.length ? '4' : '6'">
       <ChallengeTakePicturesCard :challenge="challenge" />
     </v-col>
-    <v-col cols="12" md="4">
+    <v-col cols="12" :md="challenge.categories.length ? '4' : '6'">
       <ChallengeValidateCard :challenge="challenge" height="100%" />
     </v-col>
     <v-col v-if="challenge.categories.length" cols="12" md="4">
