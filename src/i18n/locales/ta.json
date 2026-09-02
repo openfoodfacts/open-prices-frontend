@@ -143,6 +143,13 @@
 			"line3": "லேபிளைப் படிப்பதில் சிக்கல் இருந்தால், அதைப் படிக்க முடியாததாகக் குறிக்கவும்.",
 			"line4": "இது ஒரு கூட்டு முயற்சியாகும், நீங்கள் அதிக படங்களை அனுப்பாவிட்டாலும், சரிபார்த்து மற்றவர்களுக்கு உதவலாம்."
 		},
+		"StepCategories": {
+			"Title": "Add products to the categories",
+			"line1": "Many products belong to the challenge categories but are not yet categorized as such in {name}, so their prices don't count towards the challenge.",
+			"line2": "Hunger Games is a game where you confirm the categories our robots have guessed for products. Answering the questions for the challenge categories will add the missing products.",
+			"line3": "Questions are grouped by sub-category, so the game will first show you a list of sub-categories to choose from.",
+			"line4": "Pick a category to start playing!"
+		},
 		"PicturesAddedByYou": "நீங்கள் சேர்த்த படங்கள்",
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} விலைகள் சேர்க்கப்பட்டன",
