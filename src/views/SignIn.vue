@@ -155,7 +155,11 @@ export default {
       }
     },
     handleAuthError(error) {
-      alert(this.$t('Common.ServerError'))
+      if (error.status === 401) {
+        alert(this.$t('SignIn.WrongCredentials'))
+      } else {
+        alert(this.$t('Common.ServerError'))
+      }
       console.log(error)
       this.loading = false
     },

@@ -149,7 +149,7 @@ import { defineAsyncComponent } from 'vue'
 import { useGoTo } from 'vuetify'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import openPricesApi from '../services/openPricesApi'
+import openPricesApi, { OpenPricesApiError } from '../services/openPricesApi'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
 
@@ -315,19 +315,17 @@ export default {
       openPricesApi
         .createPrice(Object.assign({}, this.addPriceMultipleForm, this.productPriceForm), this.$route.path)
         .then((data) => {
-          this.loading = false
-          if (data.id) {
-            this.proofPriceNewList.push(JSON.parse(JSON.stringify(data)))  // deep copy
-            this.priceSuccessMessage = true
-            // show new price form immediately
-            this.initNewProductPriceForm()
-          } else {
-            alert(`Error: ${JSON.stringify(data)}`)
-          }
+          this.proofPriceNewList.push(JSON.parse(JSON.stringify(data)))  // deep copy
+          this.priceSuccessMessage = true
+          // show new price form immediately
+          this.initNewProductPriceForm()
         })
         .catch((error) => {
-          alert(this.$t('Common.ServerError'))
+          alert(error instanceof OpenPricesApiError ? `Error: ${error.message}` : this.$t('Common.ServerError'))
           console.log(error)
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
     done() {

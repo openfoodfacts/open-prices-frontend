@@ -171,17 +171,12 @@ export default {
             .createDraftProof(proofImageCompressed, constants.PROOF_TYPE_RECEIPT)
             .then((data) => {
               this.loading = false
-              if (data.id) {
-                this.draftProof = data
-                this.loadProofAnonymizationPrediction()
-              } else {
-                alert(`Error: ${JSON.stringify(data)}`)
-                console.log(JSON.stringify(data))
-              }
+              this.draftProof = data
+              this.loadProofAnonymizationPrediction()
             })
             .catch((error) => {
-              alert(`Error: ${JSON.stringify(error)}`)
-              console.log(JSON.stringify(error))
+              alert(`Error: ${error.message}`)
+              console.log(error)
               this.loading = false
             })
         })

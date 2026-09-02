@@ -221,8 +221,12 @@ export default {
       this.productForm.product = null
       openPricesApi
         .getProductByCode(code)
-        .then((data) => {
-          this.productForm.product = data.id ? data : {'code': code, 'price_count': 0}
+        .catch((error) => {
+          if (error.status === 404) return {'code': code, 'price_count': 0}  // product not in Open Prices (yet)
+          throw error
+        })
+        .then((product) => {
+          this.productForm.product = product
         })
         .catch((error) => {
           alert(this.$t('Common.ServerError'))

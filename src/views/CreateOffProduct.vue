@@ -501,6 +501,10 @@ export default {
     },
     getProduct(callback) {
       return openPricesApi.getProductByCode(this.productForm.product_code)
+        .catch((error) => {
+          if (error.status === 404) return { code: this.productForm.product_code, price_count: 0 }  // product not in Open Prices (yet)
+          throw error
+        })
         .then((product) => {
           this.product = product
           if(callback) callback(product)

@@ -328,8 +328,11 @@ export default {
     findProduct(item) {
       openPricesApi
         .getProductByCode(item.product_code)
-        .then((data) => {
-          const product = data.id ? data : {'code': item.product_code, 'price_count': 0}
+        .catch((error) => {
+          if (error.status === 404) return {'code': item.product_code, 'price_count': 0}  // product not in Open Prices (yet)
+          throw error
+        })
+        .then((product) => {
           item.product = product
         })
         .catch((error) => {

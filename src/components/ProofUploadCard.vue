@@ -363,16 +363,11 @@ export default {
               .createProof(proofImageCompressed, this.proofForm, this.$route.path)
               .then((data) => {
                 this.loading = false
-                if (data.id) {
-                  resolve(data)
-                } else {
-                  alert(`Error: ${JSON.stringify(data)}`)
-                  console.log(JSON.stringify(data))
-                }
+                resolve(data)
               })
               .catch((error) => {
-                alert(`Error: ${JSON.stringify(error)}`)
-                console.log(JSON.stringify(error))
+                alert(`Error: ${error.message}`)
+                console.log(error)
                 this.loading = false
               })
           })
@@ -387,16 +382,11 @@ export default {
         .finalizeDraftProof(proofDraft.id, this.proofForm, this.$route.path)
         .then((data) => {
           this.loading = false
-          if (data.id) {
-            this.proofObjectList = this.proofObjectList.concat(data)
-          } else {
-            alert(`Error: ${JSON.stringify(data)}`)
-            console.log(JSON.stringify(data))
-          }
+          this.proofObjectList = this.proofObjectList.concat(data)
         })
         .catch((error) => {
-          alert(`Error: ${JSON.stringify(error)}`)
-          console.log(JSON.stringify(error))
+          alert(`Error: ${error.message}`)
+          console.log(error)
           this.loading = false
         })
     },
