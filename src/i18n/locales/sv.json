@@ -143,6 +143,13 @@
 			"line3": "Om du har svårt att läsa etiketten, markera den som oläsbar.",
 			"line4": "Det här är ett samarbete. Även om du inte har skickat in några bilder kan du hjälpa andra genom att validera."
 		},
+		"StepCategories": {
+			"Title": "Add products to the categories",
+			"line1": "Many products belong to the challenge categories but are not yet categorized as such in {name}, so their prices don't count towards the challenge.",
+			"line2": "Hunger Games is a game where you confirm the categories our robots have guessed for products. Answering the questions for the challenge categories will add the missing products.",
+			"line3": "Questions are grouped by sub-category, so the game will first show you a list of sub-categories to choose from.",
+			"line4": "Pick a category to start playing!"
+		},
 		"PicturesAddedByYou": "Bilder tillagda av dig",
 		"Prices": "{challenge_title}-priser",
 		"PricesAdded": "Tillagda priser för {challenge_title}",
