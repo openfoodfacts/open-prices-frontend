@@ -84,7 +84,7 @@
           density="compact"
           icon="mdi-medal-outline"
         >
-          Congratulations, you're the first contributor in this location!
+          {{ $t('Common.CongratulationsFirstPriceInLocation') }}
         </v-alert>
       </v-col>
       <v-col cols="12" sm="6" lg="4">
@@ -207,7 +207,6 @@ export default {
       this.step = 2
       // store the proof
       this.proofObject = proof
-      console.log('onProofUploaded', proof)
       // load the receipt items
       this.loadingPredictions = true
       this.loadProofWithReceiptItems(receiptItems => {
