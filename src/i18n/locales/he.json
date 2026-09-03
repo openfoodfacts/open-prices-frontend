@@ -144,11 +144,11 @@
 			"line4": "זה מאמץ שיתופי, אפילו אם לא שלחת תמונות, עדיין אפשר לסייע לאחרים בעזרת אימות."
 		},
 		"StepCategories": {
-			"Title": "Add products to the categories",
-			"line1": "Many products belong to the challenge categories but are not yet categorized as such in {name}, so their prices don't count towards the challenge.",
-			"line2": "Hunger Games is a game where you confirm the categories our robots have guessed for products. Answering the questions for the challenge categories will add the missing products.",
-			"line3": "Questions are grouped by sub-category, so the game will first show you a list of sub-categories to choose from.",
-			"line4": "Pick a category to start playing!"
+			"Title": "הוספת מוצרים לקטגוריות",
+			"line1": "מוצרים רבים שייכים לקטגוריות האתגר אך עדיין לא מסווגים ככאלה ב־{name}, כך שמחיריהם אינם נחשבים לאתגר.",
+			"line2": "משחקי הרעב הוא משחק שבו יש לאשר את הקטגוריות שהרובוטים שלנו ניחשו עבור מוצרים. מענה על השאלות בקטגוריות האתגר יוסיף את המוצרים החסרים.",
+			"line3": "השאלות מקובצות לפי תת־קטגוריות, כך שהמשחק יציג תחילה רשימה של תת־קטגוריות לבחירה.",
+			"line4": "נא לבחור קטגוריה כדי להתחיל לשחק!"
 		},
 		"PicturesAddedByYou": "תמונות שהעלית",
 		"Prices": "{challenge_title} מחירים",
