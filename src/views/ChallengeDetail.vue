@@ -24,19 +24,22 @@
 
   <v-row v-if="challenge">
     <v-col cols="12" class="pb-0">
-      <h2 class="text-h6">
+      <h2 class="text-h6 cursor-pointer" role="button" tabindex="0" :aria-expanded="showHowContribute" @click="showHowContribute = !showHowContribute" @keydown.enter="showHowContribute = !showHowContribute">
+        <v-icon :icon="showHowContribute ? 'mdi-chevron-down' : 'mdi-chevron-right'" size="small" />
         {{ $t('About.HowContribute') }}
       </h2>
     </v-col>
-    <v-col cols="12" :md="challenge.categories.length ? '4' : '6'">
-      <ChallengeTakePicturesCard :challenge="challenge" />
-    </v-col>
-    <v-col cols="12" :md="challenge.categories.length ? '4' : '6'">
-      <ChallengeValidateCard :challenge="challenge" height="100%" />
-    </v-col>
-    <v-col v-if="challenge.categories.length" cols="12" md="4">
-      <ChallengeCategoriesCard :challenge="challenge" height="100%" />
-    </v-col>
+    <template v-if="showHowContribute">
+      <v-col cols="12" :md="challenge.categories.length ? '4' : '6'">
+        <ChallengeTakePicturesCard :challenge="challenge" />
+      </v-col>
+      <v-col cols="12" :md="challenge.categories.length ? '4' : '6'">
+        <ChallengeValidateCard :challenge="challenge" height="100%" />
+      </v-col>
+      <v-col v-if="challenge.categories.length" cols="12" md="4">
+        <ChallengeCategoriesCard :challenge="challenge" height="100%" />
+      </v-col>
+    </template>
   </v-row>
 
   <v-row v-if="challenge?.stats">
@@ -132,7 +135,8 @@ export default {
   data() {
     return {
       loading: false,
-      challenge: null
+      challenge: null,
+      showHowContribute: true,
     }
   },
   computed: {
