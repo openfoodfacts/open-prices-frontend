@@ -23,19 +23,30 @@
   </v-row>
 
   <v-row v-if="challenge">
-    <v-col cols="12" class="pb-0">
-      <h2 class="text-h6">
-        {{ $t('About.HowContribute') }}
-      </h2>
-    </v-col>
-    <v-col cols="12" :md="challenge.categories.length ? '4' : '6'">
-      <ChallengeTakePicturesCard :challenge="challenge" />
-    </v-col>
-    <v-col cols="12" :md="challenge.categories.length ? '4' : '6'">
-      <ChallengeValidateCard :challenge="challenge" height="100%" />
-    </v-col>
-    <v-col v-if="challenge.categories.length" cols="12" md="4">
-      <ChallengeCategoriesCard :challenge="challenge" height="100%" />
+    <v-col cols="12">
+      <v-expansion-panels v-model="helpPanel">
+        <v-expansion-panel>
+          <v-expansion-panel-title>
+            <h2 class="text-h6 mb-0">
+              <v-icon icon="mdi-information-outline" size="small" class="mr-1" />
+              {{ $t('About.HowContribute') }}
+            </h2>
+          </v-expansion-panel-title>
+          <v-expansion-panel-text class="p-0">
+            <v-row>
+              <v-col cols="12" :md="challenge.categories.length ? '4' : '6'" class="pa-0">
+                <ChallengeTakePicturesCard :challenge="challenge" />
+              </v-col>
+              <v-col cols="12" :md="challenge.categories.length ? '4' : '6'" class="pa-0">
+                <ChallengeValidateCard :challenge="challenge" height="100%" />
+              </v-col>
+              <v-col v-if="challenge.categories.length" cols="12" md="4" class="pa-0">
+                <ChallengeCategoriesCard :challenge="challenge" height="100%" />
+              </v-col>
+            </v-row>
+          </v-expansion-panel-text>
+        </v-expansion-panel>
+      </v-expansion-panels>
     </v-col>
   </v-row>
 
@@ -132,7 +143,8 @@ export default {
   data() {
     return {
       loading: false,
-      challenge: null
+      challenge: null,
+      helpPanel: 0,
     }
   },
   computed: {
