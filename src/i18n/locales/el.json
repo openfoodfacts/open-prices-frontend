@@ -143,6 +143,13 @@
 			"line3": "Εάν αντιμετωπίζετε πρόβλημα με την ανάγνωση της ετικέτας, επισημάνετέ την ως μη αναγνώσιμη.",
 			"line4": "Αυτή είναι μια συλλογική προσπάθεια, ακόμα κι αν δεν στείλατε φωτογραφίες, μπορείτε να βοηθήσετε άλλους επικυρώνοντας."
 		},
+		"StepCategories": {
+			"Title": "Add products to the categories",
+			"line1": "Many products belong to the challenge categories but are not yet categorized as such in {name}, so their prices don't count towards the challenge.",
+			"line2": "Hunger Games is a game where you confirm the categories our robots have guessed for products. Answering the questions for the challenge categories will add the missing products.",
+			"line3": "Questions are grouped by sub-category, so the game will first show you a list of sub-categories to choose from.",
+			"line4": "Pick a category to start playing!"
+		},
 		"PicturesAddedByYou": "Εικόνες που προσθέσατε εσείς",
 		"Prices": "{challenge_title} τιμές",
 		"PricesAdded": "{challenge_title} τιμές που προστέθηκαν",
