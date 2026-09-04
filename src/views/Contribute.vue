@@ -14,10 +14,10 @@
     </v-col>
     <v-col>
       <ul class="pl-4">
-        <li>You have a fidelty card? You can <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank">make a GDPR request and upload the list of prices</a></li>
+        <li>You have a fidelty card? You can <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank" rel="noopener noreferrer">make a GDPR request and upload the list of prices</a></li>
         <li><router-link to="/challenges">Participate in one of our challenges</router-link></li>
         <li><router-link to="/community">Learn more about the Open Prices project and its community</router-link></li>
-        <li><a :href="OFF_CONTRIBUTE_URL" target="_blank">Contribute to Open Food Facts</a></li>
+        <li><a :href="OFF_CONTRIBUTE_URL" target="_blank" rel="noopener noreferrer">Contribute to Open Food Facts</a></li>
       </ul>
     </v-col>
   </v-row>

@@ -108,7 +108,7 @@
                       {{ OSM_NAME }}
                     </template>
                     <template #osm_url>
-                      <a :href="OSM_URL" target="_blank">
+                      <a :href="OSM_URL" target="_blank" rel="noopener noreferrer">
                         {{ OSM_URL }}
                       </a>
                     </template>
@@ -146,10 +146,10 @@
         <div>
           <i18n-t keypath="LocationSelector.PoweredBy.text" tag="span">
             <template #url>
-              <a v-if="searchProvider === 'nominatim'" :href="OSM_NOMINATIM_URL" target="_blank">
+              <a v-if="searchProvider === 'nominatim'" :href="OSM_NOMINATIM_URL" target="_blank" rel="noopener noreferrer">
                 {{ OSM_NOMINATIM_ATTRIBUTION }}
               </a>
-              <a v-if="searchProvider === 'photon'" :href="OSM_PHOTON_URL" target="_blank">
+              <a v-if="searchProvider === 'photon'" :href="OSM_PHOTON_URL" target="_blank" rel="noopener noreferrer">
                 {{ OSM_PHOTON_ATTRIBUTION }}
               </a>
             </template>

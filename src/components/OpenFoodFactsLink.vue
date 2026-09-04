@@ -1,11 +1,11 @@
 <template>
-  <a v-if="display === 'link'" :href="getUrl" target="_blank" :disabled="disabled">
+  <a v-if="display === 'link'" :href="getUrl" target="_blank" rel="noopener noreferrer" :disabled="disabled">
     {{ getSourceName }}
   </a>
-  <v-btn v-else-if="display === 'button'" size="small" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank" :disabled="disabled">
+  <v-btn v-else-if="display === 'button'" size="small" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank" rel="noopener noreferrer" :disabled="disabled">
     {{ getSourceName }}
   </v-btn>
-  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank" :disabled="disabled">
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank" rel="noopener noreferrer" :disabled="disabled">
     {{ getSourceName }}
   </v-list-item>
 </template>

@@ -4,7 +4,7 @@
       <p class="mb-2">
         {{ $t('Challenge.StepTakePictures.line1') }}
       </p>
-      <a :href="challenge.example_proof_url" target="_blank">
+      <a :href="challenge.example_proof_url" target="_blank" rel="noopener noreferrer">
         <v-img :src="challenge.example_proof_url" max-height="200px" />
       </a>
       <p class="mb-2 mt-2">

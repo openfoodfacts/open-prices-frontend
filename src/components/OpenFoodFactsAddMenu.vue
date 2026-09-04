@@ -11,7 +11,7 @@
     </template>
     <v-list>
       <template v-for="(source, index) in sourceList" :key="source.key">
-        <v-list-item :slim="true" :href="getSourceAddUrlWithLocale(source)" target="_blank">
+        <v-list-item :slim="true" :href="getSourceAddUrlWithLocale(source)" target="_blank" rel="noopener noreferrer">
           <template #prepend>
             <v-icon :icon="source.icon" />
           </template>

@@ -15,7 +15,7 @@
         <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
           {{ $t('Common.Details') }}
         </v-list-item>
-        <v-list-item :slim="true" prepend-icon="mdi-open-in-new" :href="getProofImageFullUrl" target="_blank">
+        <v-list-item :slim="true" prepend-icon="mdi-open-in-new" :href="getProofImageFullUrl" target="_blank" rel="noopener noreferrer">
           {{ $t('Common.PictureFull') }}
         </v-list-item>
         <v-list-item v-if="proof.priceTagsBoundingBoxes" :slim="true" prepend-icon="mdi-star-box-multiple-outline" @click="toggleShowPriceTagsBoundingBoxes">

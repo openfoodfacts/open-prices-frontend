@@ -1,7 +1,7 @@
 <template>
   <v-chip label size="small" :prepend-icon="getProofTypeIcon" density="comfortable">
     <span v-if="proofType === PROOF_TYPE_GDPR_REQUEST">
-      <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank">
+      <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank" rel="noopener noreferrer">
         {{ getProofTypeName }}
         <v-icon size="x-small" icon="mdi-open-in-new" />
       </a>

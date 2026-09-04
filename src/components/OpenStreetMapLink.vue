@@ -1,11 +1,11 @@
 <template>
-  <a v-if="display === 'link'" :href="getLocationOSMUrl" target="_blank">
+  <a v-if="display === 'link'" :href="getLocationOSMUrl" target="_blank" rel="noopener noreferrer">
     {{ OSM_NAME }}
   </a>
-  <v-btn v-else-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl" target="_blank">
+  <v-btn v-else-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl" target="_blank" rel="noopener noreferrer">
     {{ OSM_NAME }}
   </v-btn>
-  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="LOCATION_TYPE_OSM_ICON" append-icon="mdi-open-in-new" :href="getLocationOSMUrl" target="_blank">
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="LOCATION_TYPE_OSM_ICON" append-icon="mdi-open-in-new" :href="getLocationOSMUrl" target="_blank" rel="noopener noreferrer">
     {{ OSM_NAME }}
   </v-list-item>
 </template>

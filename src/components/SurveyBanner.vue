@@ -12,7 +12,7 @@
         </template>
       </i18n-t>
       <p>
-        <a :href="survey.url" target="_blank">
+        <a :href="survey.url" target="_blank" rel="noopener noreferrer">
           {{ $t(`Surveys.Survey${survey.name}`) }}
         </a>
       </p>

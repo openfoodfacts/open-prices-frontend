@@ -20,6 +20,7 @@
         append-icon="mdi-open-in-new"
         :href="reuse.url"
         target="_blank"
+        rel="noopener noreferrer"
         :title="$t('Common.View')"
       >
         {{ $t('Common.View') }}
@@ -30,6 +31,7 @@
         icon="mdi-xml"
         :href="reuse.code_url"
         target="_blank"
+        rel="noopener noreferrer"
         :title="$t('Common.SourceCode')"
       />
     </v-card-actions>

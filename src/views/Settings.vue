@@ -42,7 +42,7 @@
             hide-details="auto"
           />
           <p class="mt-1">
-            <a :href="OFF_CROWDIN_URL" target="_blank">
+            <a :href="OFF_CROWDIN_URL" target="_blank" rel="noopener noreferrer">
               {{ $t('UserSettings.TranslationHelp') }}
               <v-icon size="small" icon="mdi-open-in-new" />
             </a>

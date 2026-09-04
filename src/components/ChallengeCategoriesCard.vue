@@ -30,6 +30,7 @@
             class="mr-1 mb-1"
             :href="getHungerGamesCategoryUrl(category)"
             target="_blank"
+            rel="noopener noreferrer"
           >
             {{ categoryLocalizedNames[category] || category }}
           </v-chip>

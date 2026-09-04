@@ -79,8 +79,8 @@
         <div>
           <i18n-t keypath="BarcodeScanner.Htlm5-qrcode.Text" tag="span">
             <template #url>
-              <a v-if="barcodeScannerLibrary === 'html5-qrcode'" :href="HTML5_QRCODE_URL" target="_blank">{{ HTML5_QRCODE_NAME }}</a>
-              <a v-else :href="BARCODE_SCANNER_URL" target="_blank">{{ BARCODE_SCANNER_NAME }}</a>
+              <a v-if="barcodeScannerLibrary === 'html5-qrcode'" :href="HTML5_QRCODE_URL" target="_blank" rel="noopener noreferrer">{{ HTML5_QRCODE_NAME }}</a>
+              <a v-else :href="BARCODE_SCANNER_URL" target="_blank" rel="noopener noreferrer">{{ BARCODE_SCANNER_NAME }}</a>
             </template>
           </i18n-t>
         </div>
