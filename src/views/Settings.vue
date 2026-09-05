@@ -190,6 +190,17 @@
             density="compact"
             hide-details="auto"
           />
+          <!-- Create Off Product -->
+          <h3 class="mt-4 mb-1">
+            {{ $t('Router.CreateOffProduct.Title') }}
+          </h3>
+          <v-switch
+            v-model="appStore.user.use_own_account_to_create_off_products"
+            color="success"
+            :label="$t('CreateOffProduct.UseOwnAccountToCreateOffProduct')"
+            density="compact"
+            hide-details="auto"
+          />
         </v-card-text>
       </v-card>
     </v-col>
