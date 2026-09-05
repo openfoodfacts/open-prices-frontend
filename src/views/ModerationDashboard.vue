@@ -14,7 +14,7 @@
     <v-col cols="12">
       <v-data-table :headers="tableHeaders" :items="flagList" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
         <template #[`item.object`]="{ item }">
-          <router-link :to="getFlagObjectUrl(item)" target="_blank">
+          <router-link :to="getFlagObjectUrl(item)" target="_blank" rel="noopener noreferrer">
             {{ item.content_type }} {{ item.object_id }}
           </router-link>
         </template>

@@ -10,16 +10,16 @@
         {{ APP_NAME }}
       </template>
       <template #op_api_url>
-        <a :href="APP_API_URL" target="_blank">API</a>
+        <a :href="APP_API_URL" target="_blank" rel="noopener noreferrer">API</a>
       </template>
       <template #off_url>
         <OpenFoodFactsLink display="link" />
       </template>
       <template #odbl_url>
-        <a :href="LICENSE_ODBL_URL" target="_blank">{{ LICENSE_ODBL_NAME }}</a>
+        <a :href="LICENSE_ODBL_URL" target="_blank" rel="noopener noreferrer">{{ LICENSE_ODBL_NAME }}</a>
       </template>
       <template #ccbysa_url>
-        <a :href="LICENSE_CC_BY_SA_URL" target="_blank">{{ LICENSE_CC_BY_SA_NAME }}</a>
+        <a :href="LICENSE_CC_BY_SA_URL" target="_blank" rel="noopener noreferrer">{{ LICENSE_CC_BY_SA_NAME }}</a>
       </template>
     </i18n-t>
   </v-sheet>
@@ -46,16 +46,16 @@
           {{ APP_NAME }}
         </template>
         <template #op_api_url>
-          <a :href="APP_API_URL" target="_blank">API</a>
+          <a :href="APP_API_URL" target="_blank" rel="noopener noreferrer">API</a>
         </template>
         <template #op_dumb_prices_url>
-          <a :href="APP_DUMP_PRICES_URL" class="text-lowercase" target="_blank">{{ $t('Common.Prices') }}</a>
+          <a :href="APP_DUMP_PRICES_URL" class="text-lowercase" target="_blank" rel="noopener noreferrer">{{ $t('Common.Prices') }}</a>
         </template>
         <template #op_dumb_proofs_url>
-          <a :href="APP_DUMP_PROOFS_URL" class="text-lowercase" target="_blank">{{ $t('Common.Proofs') }}</a>
+          <a :href="APP_DUMP_PROOFS_URL" class="text-lowercase" target="_blank" rel="noopener noreferrer">{{ $t('Common.Proofs') }}</a>
         </template>
         <template #op_dumb_locations_url>
-          <a :href="APP_DUMP_LOCATIONS_URL" class="text-lowercase" target="_blank">{{ $t('Common.Locations') }}</a>
+          <a :href="APP_DUMP_LOCATIONS_URL" class="text-lowercase" target="_blank" rel="noopener noreferrer">{{ $t('Common.Locations') }}</a>
         </template>
         <template #off_url>
           <OpenFoodFactsLink display="link" />
@@ -70,7 +70,7 @@
           {{ OSM_NAME }}
         </template>
         <template #odbl_url>
-          <a :href="LICENSE_ODBL_URL" target="_blank">{{ LICENSE_ODBL_NAME }}</a>
+          <a :href="LICENSE_ODBL_URL" target="_blank" rel="noopener noreferrer">{{ LICENSE_ODBL_NAME }}</a>
         </template>
       </i18n-t>
     </v-sheet>

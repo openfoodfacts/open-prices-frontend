@@ -7,8 +7,8 @@
     </v-col>
     <v-col>
       <ul class="pl-4">
-        <li><a :href="APP_GITHUB_BACKEND_URL" target="_blank">Github</a></li>
-        <li><a :href="OFF_SLACK_URL" target="_blank">Open Food Facts Slack (#prices)</a></li>
+        <li><a :href="APP_GITHUB_BACKEND_URL" target="_blank" rel="noopener noreferrer">Github</a></li>
+        <li><a :href="OFF_SLACK_URL" target="_blank" rel="noopener noreferrer">Open Food Facts Slack (#prices)</a></li>
       </ul>
     </v-col>
   </v-row>
@@ -21,10 +21,10 @@
     </v-col>
     <v-col>
       <ul class="pl-4">
-        <li><a :href="APP_API_URL" target="_blank">API</a></li>
-        <li><a :href="APP_HUGGING_FACE_URL" target="_blank">Hugging Face</a></li>
-        <li><a :href="APP_DATA_GOUV_URL" target="_blank">data.gouv</a></li>
-        <li><a :href="APP_DUMP_PRICES_URL" target="_blank">prices.jsonl.gz</a> | <a :href="APP_DUMP_PROOFS_URL" target="_blank">proofs.jsonl.gz</a> | <a :href="APP_DUMP_LOCATIONS_URL" target="_blank">locations.jsonl.gz</a></li>
+        <li><a :href="APP_API_URL" target="_blank" rel="noopener noreferrer">API</a></li>
+        <li><a :href="APP_HUGGING_FACE_URL" target="_blank" rel="noopener noreferrer">Hugging Face</a></li>
+        <li><a :href="APP_DATA_GOUV_URL" target="_blank" rel="noopener noreferrer">data.gouv</a></li>
+        <li><a :href="APP_DUMP_PRICES_URL" target="_blank" rel="noopener noreferrer">prices.jsonl.gz</a> | <a :href="APP_DUMP_PROOFS_URL" target="_blank" rel="noopener noreferrer">proofs.jsonl.gz</a> | <a :href="APP_DUMP_LOCATIONS_URL" target="_blank" rel="noopener noreferrer">locations.jsonl.gz</a></li>
       </ul>
     </v-col>
   </v-row>

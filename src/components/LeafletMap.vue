@@ -65,7 +65,7 @@ export default {
       mapBounds: null,
       theme: useTheme(),
       tiles: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      attribution: '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      attribution: '&copy; <a target="_blank" rel="noopener noreferrer" href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }
   },
   mounted() {
