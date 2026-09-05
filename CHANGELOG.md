@@ -1,5 +1,32 @@
 # Changelog
 
+## [1.174.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.173.1...v1.174.0) (2026-09-05)
+
+
+### Features
+
+* **Challenge:** add a card linking to Hunger Games to categorize products ([#2358](https://github.com/openfoodfacts/open-prices-frontend/issues/2358)) ([ca2ed66](https://github.com/openfoodfacts/open-prices-frontend/commit/ca2ed66fef73daeac4aa7def31c62456788457f6))
+* **Price Addition:** show a 'Congrats' alert if user is first to add prices in this location ([#2361](https://github.com/openfoodfacts/open-prices-frontend/issues/2361)) ([1bd376c](https://github.com/openfoodfacts/open-prices-frontend/commit/1bd376c9bd98936c31f2bf180d316ce786fe3324))
+
+
+### Bug Fixes
+
+* **Links:** add rel="noopener noreferrer" to every target="_blank" link ([#2380](https://github.com/openfoodfacts/open-prices-frontend/issues/2380)) ([065713e](https://github.com/openfoodfacts/open-prices-frontend/commit/065713e97ead593cbcef8ff582513b5afac24a20))
+* **Router:** do a full page load when a view's js chunk can't be loaded (after a new deploy) ([#2366](https://github.com/openfoodfacts/open-prices-frontend/issues/2366)) ([7f46ea1](https://github.com/openfoodfacts/open-prices-frontend/commit/7f46ea172d757a872f6bebcf12b65e8d6a1d529b))
+
+
+### Technical
+
+* Add missing license file (AGPL v3) ([#2301](https://github.com/openfoodfacts/open-prices-frontend/issues/2301)) ([c9a7f86](https://github.com/openfoodfacts/open-prices-frontend/commit/c9a7f86a7c4852405095fe22cbfc8302647eda41))
+* **API:** reject with an OpenPricesApiError when the API answers with a non-2xx status ([#2368](https://github.com/openfoodfacts/open-prices-frontend/issues/2368)) ([1c66c83](https://github.com/openfoodfacts/open-prices-frontend/commit/1c66c83a2c2819b41ba8c6a40abe2cb2f6df314f))
+* **API:** reset loading flags in .finally() instead of .then() ([#2369](https://github.com/openfoodfacts/open-prices-frontend/issues/2369)) ([3468629](https://github.com/openfoodfacts/open-prices-frontend/commit/34686294efabe61f5c67e9f21a8b82f1e24b86dd))
+* **Challenge:** make the "How can I contribute?" section collapsible ([#2375](https://github.com/openfoodfacts/open-prices-frontend/issues/2375)) ([4a5d06c](https://github.com/openfoodfacts/open-prices-frontend/commit/4a5d06c4cbcab37de86c4ff376af3337b3f95c62))
+* **Data:** update generated data from taxonomies ([#2353](https://github.com/openfoodfacts/open-prices-frontend/issues/2353)) ([8952b0c](https://github.com/openfoodfacts/open-prices-frontend/commit/8952b0c0266bcc63122aae59c931567d56f43b00))
+* **deps:** bump toshimaru/auto-author-assign from 3.0.3 to 3.1.0 ([#2371](https://github.com/openfoodfacts/open-prices-frontend/issues/2371)) ([f758a41](https://github.com/openfoodfacts/open-prices-frontend/commit/f758a417945896a811ad21e79cce852dbe35acf2))
+* **l10n:** New Crowdin translations to review and merge ([#2356](https://github.com/openfoodfacts/open-prices-frontend/issues/2356)) ([356524d](https://github.com/openfoodfacts/open-prices-frontend/commit/356524dcb90ae519371af2db142b26c53eea04f8))
+* **l10n:** New Crowdin translations to review and merge ([#2374](https://github.com/openfoodfacts/open-prices-frontend/issues/2374)) ([56bb16d](https://github.com/openfoodfacts/open-prices-frontend/commit/56bb16d9c6e6abc18f5ebe3d4ef3dc0910d7f3ae))
+* **l10n:** New Crowdin translations to review and merge ([#2377](https://github.com/openfoodfacts/open-prices-frontend/issues/2377)) ([c3d25c5](https://github.com/openfoodfacts/open-prices-frontend/commit/c3d25c57761ee165c773b2f88ec1737f87f388ff))
+
 ## [1.173.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.173.0...v1.173.1) (2026-08-29)
 
 
