@@ -224,7 +224,7 @@
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
-		"City": "City",
+		"City": "城市",
 		"Cities": "Cities",
 		"CityCount": "{count} cities | {count} city | {count} cities",
 		"Chart": "Chart",
@@ -234,6 +234,8 @@
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
 		"CommunityProofs": "Community proofs",
+		"Congratulations": "Congratulations",
+		"CongratulationsFirstPriceInLocation": "Congratulations, you're the first contributor in this location!",
 		"Consumption": "Consumption",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
@@ -456,7 +458,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "选择一个证明",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -800,7 +802,7 @@
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "选择一个证明",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
