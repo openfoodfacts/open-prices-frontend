@@ -366,7 +366,7 @@
 		"Map": "מפה",
 		"Miscellaneous": "שונות",
 		"MobileApp": "יישומון לניידים",
-		"Moderation": "מְתִינוּת",
+		"Moderation": "פיקוח",
 		"ModerationFlagReasonWrongType": "סוג שגוי",
 		"ModerationFlagReasonWrongPriceValue": "ערך מחיר שגוי",
 		"ModerationFlagReasonWrongCurrency": "מטבע שגוי",
@@ -956,7 +956,7 @@
 			"Title": "ההוכחות העדכניות ביותר"
 		},
 		"Moderation": {
-			"Title": "מְתִינוּת"
+			"Title": "פיקוח"
 		},
 		"MyPrices": {
 			"Title": "המחירים שלי"
