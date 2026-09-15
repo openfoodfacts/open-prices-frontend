@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.174.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.174.0...v1.174.1) (2026-09-15)
+
+
+### Technical
+
+* **deps:** bump baseline-browser-mapping from 2.10.43 to 2.11.23 ([#2389](https://github.com/openfoodfacts/open-prices-frontend/issues/2389)) ([c1c2c89](https://github.com/openfoodfacts/open-prices-frontend/commit/c1c2c898d61f04362d0a7bf13d90a673b4f496ae))
+* **deps:** bump browserslist from 4.28.6 to 4.28.9 ([#2385](https://github.com/openfoodfacts/open-prices-frontend/issues/2385)) ([0470085](https://github.com/openfoodfacts/open-prices-frontend/commit/0470085c4f0a2870185a462e57bc1083ae54d6ec))
+
 ## [1.174.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.173.1...v1.174.0) (2026-09-05)
 
 
