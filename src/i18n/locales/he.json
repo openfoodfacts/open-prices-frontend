@@ -234,8 +234,8 @@
 		"Community": "קהילה",
 		"CommunityPrices": "מחירי הקהילה",
 		"CommunityProofs": "הוכחות הקהילה",
-		"Congratulations": "Congratulations",
-		"CongratulationsFirstPriceInLocation": "Congratulations, you're the first contributor in this location!",
+		"Congratulations": "ברכותינו",
+		"CongratulationsFirstPriceInLocation": "ברכותינו, עוד לא היו מתנדבים לפניך במקום הזה!",
 		"Consumption": "צריכה",
 		"ConsumptionPrices": "מחירי צריכה",
 		"ConsumptionProofs": "הוכחות צריכה",
@@ -366,7 +366,7 @@
 		"Map": "מפה",
 		"Miscellaneous": "שונות",
 		"MobileApp": "יישומון לניידים",
-		"Moderation": "מְתִינוּת",
+		"Moderation": "פיקוח",
 		"ModerationFlagReasonWrongType": "סוג שגוי",
 		"ModerationFlagReasonWrongPriceValue": "ערך מחיר שגוי",
 		"ModerationFlagReasonWrongCurrency": "מטבע שגוי",
@@ -956,7 +956,7 @@
 			"Title": "ההוכחות העדכניות ביותר"
 		},
 		"Moderation": {
-			"Title": "מְתִינוּת"
+			"Title": "פיקוח"
 		},
 		"MyPrices": {
 			"Title": "המחירים שלי"
