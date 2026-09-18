@@ -30,10 +30,20 @@
           density="compact"
           :text="$t('Common.ProofUploadedCount', { count: proofUploadCount })"
         />
+        <v-alert
+          v-if="firstProofObject?.location.proof_count === 0"
+          class="mt-4"
+          color="primary"
+          variant="outlined"
+          density="compact"
+          icon="mdi-medal-outline"
+        >
+          {{ $t('Common.CongratulationsFirstProofInLocation') }}
+        </v-alert>
       </v-col>
-      <v-col v-if="firstProofUploaded" cols="12" sm="6" lg="4">
+      <v-col v-if="firstProofObject" cols="12" sm="6" lg="4">
         <v-card
-          v-if="firstProofUploaded.ready_for_price_tag_validation"
+          v-if="firstProofObject.ready_for_price_tag_validation"
           :title="$t('Common.ValidatePrices')"
           prepend-icon="mdi-checkbox-marked-circle-plus-outline"
           append-icon="mdi-arrow-right"
@@ -90,13 +100,13 @@ export default {
           value: 2
         }
       ],
-      firstProofUploaded: null,
+      firstProofObject: null,
       proofUploadCount: 0
     }
   },
   computed: {
     getPriceAddMultipleProofIdUrl() {
-      return `/prices/add/multiple?proof_id=${this.firstProofUploaded.id}`
+      return `/prices/add/multiple?proof_id=${this.firstProofObject.id}`
     },
     getUserDashboardUrl() {
       const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
@@ -105,7 +115,7 @@ export default {
   },
   methods: {
     onProofUploaded(proof) {
-      this.firstProofUploaded = proof
+      this.firstProofObject = proof
     },
     proofUploadDone(proofUploadCount) {
       this.proofUploadCount = proofUploadCount

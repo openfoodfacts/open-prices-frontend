@@ -77,7 +77,6 @@
     <v-divider v-if="step === 1" />
     <v-card-actions v-if="step === 1">
       <v-spacer v-if="$vuetify.display.smAndUp" />
-
       <v-btn
         class="float-right"
         color="primary"
