@@ -129,6 +129,11 @@ export default {
   },
   mounted() {
     this.loading = true
+    // Before checking keycloak, let's check if user is already signed in
+    if (this.appStore.user.username) {
+      this.loading = false
+      return this.done()
+    }
     keycloakService.init((keycloak, error) => {
       if (error) {
         alert(error)
