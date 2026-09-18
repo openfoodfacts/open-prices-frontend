@@ -1,5 +1,5 @@
 <template>
-  <v-card :id="'challenge_' + challenge.id" :to="getChallengeUrl" class="d-flex flex-column h-100">
+  <v-card :id="'challenge_' + challenge.id" :to="getChallengeUrl" class="d-flex flex-column" height="100%">
     <template #title>
       <span :title="getChallengeTitle">{{ getChallengeTitle }}</span>
     </template>
@@ -21,6 +21,7 @@
         </span>
       </div>
     </v-card-text>
+
     <v-divider v-if="challenge.status !== 'UPCOMING'" />
 
     <v-card-actions v-if="challenge.status !== 'UPCOMING'">
