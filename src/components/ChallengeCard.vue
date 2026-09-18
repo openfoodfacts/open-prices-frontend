@@ -1,5 +1,5 @@
 <template>
-  <v-card :id="'challenge_' + challenge.id" :to="getChallengeUrl">
+  <v-card :id="'challenge_' + challenge.id" :to="getChallengeUrl" class="d-flex flex-column" height="100%">
     <template #title>
       <span :title="getChallengeTitle">{{ getChallengeTitle }}</span>
     </template>
@@ -24,14 +24,14 @@
 
     <v-divider v-if="challenge.status !== 'UPCOMING'" />
 
-    <v-card-text v-if="challenge.status !== 'UPCOMING'">
+    <v-card-actions v-if="challenge.status !== 'UPCOMING'">
       <span class="chip-group">
         <CountChip kind="price" :count="challenge.stats.price_count" :withLabel="true" />
         <CountChip kind="proof" :count="challenge.stats.proof_count" :withLabel="true" />
         <CountChip kind="location" :count="challenge.stats.proof_location_count" :withLabel="true" />
         <CountChip kind="product" :count="challenge.stats.price_product_count" :withLabel="true" />
       </span>
-    </v-card-text>
+    </v-card-actions>
   </v-card>
 </template>
 
