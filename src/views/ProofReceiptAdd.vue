@@ -30,8 +30,18 @@
           density="compact"
           :text="$t('Common.ProofUploadedCount', { count: 1 })"
         />
+        <v-alert
+          v-if="proofObject?.location.proof_count === 0"
+          class="mt-4"
+          color="primary"
+          variant="outlined"
+          density="compact"
+          icon="mdi-medal-outline"
+        >
+          {{ $t('Common.CongratulationsFirstProofInLocation') }}
+        </v-alert>
       </v-col>
-      <v-col v-if="proofUploaded" cols="12" sm="6" lg="4">
+      <v-col cols="12" sm="6" lg="4">
         <v-card
           :title="$t('Common.AddPrices')"
           prepend-icon="mdi-tag-plus-outline"
@@ -40,8 +50,6 @@
           :to="getReceiptAssistantProofIdsUrl"
         />
       </v-col>
-    </v-row>
-    <v-row>
       <v-col cols="12" sm="6" lg="4">
         <v-card
           :title="$t('Common.AddNewProofReceipt')"
@@ -83,12 +91,12 @@ export default {
           value: 2
         }
       ],
-      proofUploaded: null,
+      proofObject: null,
     }
   },
   computed: {
     getReceiptAssistantProofIdsUrl() {
-      return `/experiments/receipt-assistant?proof_ids=${this.proofUploaded.id}`
+      return `/experiments/receipt-assistant?proof_ids=${this.proofObject.id}`
     },
     getUserDashboardUrl() {
       const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
@@ -97,7 +105,7 @@ export default {
   },
   methods: {
     onProofUploaded(proof) {
-      this.proofUploaded = proof
+      this.proofObject = proof
       this.step = 2
     },
     reloadPage() {
