@@ -2116,10 +2116,10 @@ executable@^4.1.1:
   dependencies:
     pify "^2.2.0"
 
-exifreader@^4.41.0:
-  version "4.41.0"
-  resolved "https://registry.yarnpkg.com/exifreader/-/exifreader-4.41.0.tgz#a463c0ad484243a20c44e165ee7e3bedf13e7af7"
-  integrity sha512-P3nPeh6GWs5D5RZdRZ6q/LorHPmmeDgKsowduqRabtTFiqMD2bc5eTN+Dhq00O9BCuV2eksu3oOJh4ZaZvkK0A==
+exifreader@^4.41.1:
+  version "4.41.1"
+  resolved "https://registry.yarnpkg.com/exifreader/-/exifreader-4.41.1.tgz#82acf3865ea74602c8a065e68a3e0cd637274783"
+  integrity sha512-cHEtwlt6OmqEnWO906/ZURHym4gzRJ2VNQObeSEqhoBRk9oPFoHyPsrermUZ4JHE4T4o46mLbcJfF3r9PPVXdg==
   optionalDependencies:
     "@xmldom/xmldom" "^0.9.10"
 
