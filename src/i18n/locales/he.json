@@ -234,8 +234,9 @@
 		"Community": "קהילה",
 		"CommunityPrices": "מחירי הקהילה",
 		"CommunityProofs": "הוכחות הקהילה",
-		"Congratulations": "Congratulations",
-		"CongratulationsFirstPriceInLocation": "Congratulations, you're the first contributor in this location!",
+		"Congratulations": "ברכותינו",
+		"CongratulationsFirstPriceInLocation": "Congratulations, you're the first contributor to upload a price in this location!",
+		"CongratulationsFirstProofInLocation": "Congratulations, you're the first contributor to upload a proof in this location!",
 		"Consumption": "צריכה",
 		"ConsumptionPrices": "מחירי צריכה",
 		"ConsumptionProofs": "הוכחות צריכה",
@@ -271,6 +272,7 @@
 		"Experiments": "ניסויים",
 		"Explore": "לַחקוֹר",
 		"FromPriceTag": "מתוך תג מחיר",
+		"FromPriceTags": "From price tags",
 		"FromReceipt": "מתוך קבלה",
 		"GoToProof": "מעבר להוכחה",
 		"Join": "הצטרפות",
@@ -366,7 +368,7 @@
 		"Map": "מפה",
 		"Miscellaneous": "שונות",
 		"MobileApp": "יישומון לניידים",
-		"Moderation": "מְתִינוּת",
+		"Moderation": "פיקוח",
 		"ModerationFlagReasonWrongType": "סוג שגוי",
 		"ModerationFlagReasonWrongPriceValue": "ערך מחיר שגוי",
 		"ModerationFlagReasonWrongCurrency": "מטבע שגוי",
@@ -956,7 +958,7 @@
 			"Title": "ההוכחות העדכניות ביותר"
 		},
 		"Moderation": {
-			"Title": "מְתִינוּת"
+			"Title": "פיקוח"
 		},
 		"MyPrices": {
 			"Title": "המחירים שלי"
