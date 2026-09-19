@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col v-for="contribute in contributeCommonList" :key="contribute.url" cols="12" sm="6" md="4" xl="3">
+    <v-col v-for="contribute in contributeCommonList" :key="contribute.url" cols="12" md="6" lg="4">
       <ContributeCard :contribute="contribute" height="100%" />
     </v-col>
   </v-row>
@@ -35,7 +35,7 @@ export default {
     return {
       contributeCommonList: [
         {
-          name: this.$t('Common.FromPriceTag'),
+          name: this.$t('Common.FromPriceTags'),
           description: '',
           background_image_url: constants.PROOF_TYPE_PRICE_TAG_IMAGE_THUMB_URL,
           url: '/proofs/add/price-tags'
@@ -47,10 +47,11 @@ export default {
           url: '/proofs/add/receipt'
         },
         {
-          name: this.$t('Common.ValidatePricesFromCommunity'),
+          name: this.$t('Common.ValidatePrices'),
           description: '',
           background_image_url: 'https://imgur.com/s0lenjt.png',
-          url: '/prices/add/validate'
+          url: '/prices/add/validate',
+          community: true
         }
       ],
       PROOF_TYPE_PRICE_TAG_ICON: constants.PROOF_TYPE_PRICE_TAG_ICON,
