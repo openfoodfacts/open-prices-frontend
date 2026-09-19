@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col>
+    <v-col cols="12" sm="6">
       <v-form @submit.prevent="search">
         <v-text-field
           ref="searchInput"
@@ -22,6 +22,17 @@
           </template>
         </v-text-field>
       </v-form>
+    </v-col>
+    <v-col cols="12" sm="6">
+      <v-autocomplete
+        data-name="category-search-input"
+        :label="$t('Common.Category')"
+        :items="categoryTags"
+        item-title="name"
+        item-value="id"
+        hide-details="auto"
+        @update:modelValue="searchCategory"
+      />
     </v-col>
   </v-row>
 
@@ -46,9 +57,12 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import constants from '../constants'
 import openPricesApi from '../services/openPricesApi'
 import barcodeUtils from '../utils/barcode'
+import data_utils from '../utils/data.js'
 
 export default {
   components: {
@@ -57,6 +71,7 @@ export default {
   },
   data() {
     return {
+      categoryTags: [],
       productSearchForm: {
         q: ''
       },
@@ -68,6 +83,7 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
     formFilled() {
       return Object.values(this.productSearchForm).every(x => !!x)
     }
@@ -80,10 +96,18 @@ export default {
     }
   },
   mounted() {
+    data_utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
+      this.categoryTags = module.default
+    })
     this.productSearchForm.q = this.$route.query[constants.QUERY_PARAM] || ''
     this.getProducts()
   },
   methods: {
+    searchCategory(categoryTag) {
+      if (categoryTag) {
+        this.$router.push({ name: 'product-detail', params: { id: categoryTag } })
+      }
+    },
     fieldRequired(v) {
       return !!v
     },
