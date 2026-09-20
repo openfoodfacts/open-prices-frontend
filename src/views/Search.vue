@@ -1,7 +1,16 @@
 <template>
-  <v-row>
-    <v-col cols="12" sm="6">
-      <v-form @submit.prevent="search">
+  <v-tabs v-model="currentTab" :grow="!$vuetify.display.smAndUp" class="mb-3">
+    <v-tab value="product" prepend-icon="mdi-barcode" data-name="product-search-tab">
+      {{ $t('Common.Product') }}
+    </v-tab>
+    <v-tab value="category" prepend-icon="mdi-basket-outline" data-name="category-search-tab">
+      {{ $t('Common.Category') }}
+    </v-tab>
+  </v-tabs>
+
+  <v-tabs-window v-model="currentTab" disabled>
+    <v-tabs-window-item value="product">
+      <v-form class="mb-3" @submit.prevent="search">
         <v-text-field
           ref="searchInput"
           v-model="productSearchForm.q"
@@ -22,29 +31,46 @@
           </template>
         </v-text-field>
       </v-form>
-    </v-col>
-    <v-col cols="12" sm="6">
+      <p v-if="productTotal === 0" class="text-red">
+        <i>{{ $t('ProductDetail.ProductNotFound') }}</i>
+      </p>
+
+      <v-row v-if="productTotal > 0" class="mt-0">
+        <v-col v-for="product in productList" :key="product" cols="12" sm="6" md="4" xl="3">
+          <ProductCard :product="product" :latestPrice="product.latest_price" elevation="1" height="100%" />
+        </v-col>
+      </v-row>
+    </v-tabs-window-item>
+    <v-tabs-window-item value="category">
       <v-autocomplete
+        v-model="category"
         data-name="category-search-input"
         :label="$t('Common.Category')"
         :items="categoryTags"
         item-title="name"
         item-value="id"
+        return-object
+        clearable
         hide-details="auto"
+        :loading="categoryLoading"
+        :error-messages="categoryError ? $t('Common.ErrorServer') : []"
         @update:modelValue="searchCategory"
       />
-    </v-col>
-  </v-row>
-
-  <p v-if="productTotal === 0" class="text-red">
-    <i>{{ $t('ProductDetail.ProductNotFound') }}</i>
-  </p>
-
-  <v-row v-if="productTotal > 0" class="mt-0">
-    <v-col v-for="product in productList" :key="product" cols="12" sm="6" md="4" xl="3">
-      <ProductCard :product="product" :latestPrice="product.latest_price" elevation="1" height="100%" />
-    </v-col>
-  </v-row>
+      <v-row v-if="category && !categoryError" class="mt-0">
+        <v-col cols="12" sm="6" md="4" xl="3">
+          <CategoryCard
+            :category="category"
+            source="product"
+            :priceCount="categoryPriceTotal"
+            :loading="categoryLoading"
+            :hideActionMenuButton="true"
+            :to="{ name: 'product-detail', params: { id: category.id } }"
+            elevation="1"
+          />
+        </v-col>
+      </v-row>
+    </v-tabs-window-item>
+  </v-tabs-window>
 
   <BarcodeScannerDialog
     v-if="barcodeScannerDialog"
@@ -67,11 +93,17 @@ import data_utils from '../utils/data.js'
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
     BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue'))
   },
   data() {
     return {
+      currentTab: 'product',
       categoryTags: [],
+      category: null,
+      categoryPriceTotal: null,
+      categoryLoading: false,
+      categoryError: false,
       productSearchForm: {
         q: ''
       },
@@ -103,10 +135,21 @@ export default {
     this.getProducts()
   },
   methods: {
-    searchCategory(categoryTag) {
-      if (categoryTag) {
-        this.$router.push({ name: 'product-detail', params: { id: categoryTag } })
-      }
+    searchCategory(category) {
+      this.categoryPriceTotal = null
+      this.categoryError = false
+      this.categoryLoading = !!category
+      if (!category) return
+      return openPricesApi.getPrices({ category_tag: category.id, size: 1 })
+        .then((data) => {
+          if (this.category?.id === category.id) this.categoryPriceTotal = data.total
+        })
+        .catch(() => {
+          if (this.category?.id === category.id) this.categoryError = true
+        })
+        .finally(() => {
+          if (this.category?.id === category.id) this.categoryLoading = false
+        })
     },
     fieldRequired(v) {
       return !!v
