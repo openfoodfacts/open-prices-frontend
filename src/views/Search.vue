@@ -1,10 +1,7 @@
 <template>
-  <v-tabs v-model="currentTab" :grow="!$vuetify.display.smAndUp" class="mb-3">
-    <v-tab value="product" prepend-icon="mdi-barcode" data-name="product-search-tab">
-      {{ $t('Common.Product') }}
-    </v-tab>
-    <v-tab value="category" prepend-icon="mdi-basket-outline" data-name="category-search-tab">
-      {{ $t('Common.Category') }}
+  <v-tabs v-model="currentTab" :grow="!$vuetify.display.smAndUp">
+    <v-tab v-for="tab in tabItems" :key="tab.key" :value="tab.key" :prepend-icon="tab.icon" :data-name="`${tab.key}-search-tab`">
+      {{ $t(`Common.${tab.value}`) }}
     </v-tab>
   </v-tabs>
 
@@ -66,6 +63,7 @@
             :hideActionMenuButton="true"
             :to="{ name: 'product-detail', params: { id: category.id } }"
             elevation="1"
+            height="100%"
           />
         </v-col>
       </v-row>
@@ -98,7 +96,6 @@ export default {
   },
   data() {
     return {
-      currentTab: 'product',
       categoryTags: [],
       category: null,
       categoryPriceTotal: null,
@@ -110,6 +107,9 @@ export default {
       productList: [],
       productTotal: null,
       loading: false,
+      // config
+      currentTab: 'product',
+      tabItems: constants.SEARCH_TAB_LIST,
       // barcode scanner
       barcodeScannerDialog: false,
     }
