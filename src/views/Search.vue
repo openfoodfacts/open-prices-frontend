@@ -1,7 +1,13 @@
 <template>
-  <v-row>
-    <v-col>
-      <v-form @submit.prevent="search">
+  <v-tabs v-model="currentTab" :grow="!$vuetify.display.smAndUp">
+    <v-tab v-for="tab in tabItems" :key="tab.key" :value="tab.key" :prepend-icon="tab.icon" :data-name="`${tab.key}-search-tab`">
+      {{ $t(`Common.${tab.value}`) }}
+    </v-tab>
+  </v-tabs>
+
+  <v-tabs-window v-model="currentTab" disabled>
+    <v-tabs-window-item value="product">
+      <v-form class="mb-3" @submit.prevent="search">
         <v-text-field
           ref="searchInput"
           v-model="productSearchForm.q"
@@ -22,18 +28,47 @@
           </template>
         </v-text-field>
       </v-form>
-    </v-col>
-  </v-row>
+      <p v-if="productTotal === 0" class="text-red">
+        <i>{{ $t('ProductDetail.ProductNotFound') }}</i>
+      </p>
 
-  <p v-if="productTotal === 0" class="text-red">
-    <i>{{ $t('ProductDetail.ProductNotFound') }}</i>
-  </p>
-
-  <v-row v-if="productTotal > 0" class="mt-0">
-    <v-col v-for="product in productList" :key="product" cols="12" sm="6" md="4" xl="3">
-      <ProductCard :product="product" :latestPrice="product.latest_price" elevation="1" height="100%" />
-    </v-col>
-  </v-row>
+      <v-row v-if="productTotal > 0" class="mt-0">
+        <v-col v-for="product in productList" :key="product" cols="12" sm="6" md="4" xl="3">
+          <ProductCard :product="product" :latestPrice="product.latest_price" elevation="1" height="100%" />
+        </v-col>
+      </v-row>
+    </v-tabs-window-item>
+    <v-tabs-window-item value="category">
+      <v-autocomplete
+        v-model="category"
+        data-name="category-search-input"
+        :label="$t('Common.Category')"
+        :items="categoryTags"
+        item-title="name"
+        item-value="id"
+        return-object
+        clearable
+        hide-details="auto"
+        :loading="categoryLoading"
+        :error-messages="categoryError ? $t('Common.ErrorServer') : []"
+        @update:modelValue="searchCategory"
+      />
+      <v-row v-if="category && !categoryError" class="mt-0">
+        <v-col cols="12" sm="6" md="4" xl="3">
+          <CategoryCard
+            :category="category"
+            source="product"
+            :priceCount="categoryPriceTotal"
+            :loading="categoryLoading"
+            :hideActionMenuButton="true"
+            :to="{ name: 'product-detail', params: { id: category.id } }"
+            elevation="1"
+            height="100%"
+          />
+        </v-col>
+      </v-row>
+    </v-tabs-window-item>
+  </v-tabs-window>
 
   <BarcodeScannerDialog
     v-if="barcodeScannerDialog"
@@ -46,28 +81,41 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import constants from '../constants'
 import openPricesApi from '../services/openPricesApi'
 import barcodeUtils from '../utils/barcode'
+import data_utils from '../utils/data.js'
 
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
     BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue'))
   },
   data() {
     return {
+      categoryTags: [],
+      category: null,
+      categoryPriceTotal: null,
+      categoryLoading: false,
+      categoryError: false,
       productSearchForm: {
         q: ''
       },
       productList: [],
       productTotal: null,
       loading: false,
+      // config
+      currentTab: 'product',
+      tabItems: constants.SEARCH_TAB_LIST,
       // barcode scanner
       barcodeScannerDialog: false,
     }
   },
   computed: {
+    ...mapStores(useAppStore),
     formFilled() {
       return Object.values(this.productSearchForm).every(x => !!x)
     }
@@ -80,10 +128,29 @@ export default {
     }
   },
   mounted() {
+    data_utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
+      this.categoryTags = module.default
+    })
     this.productSearchForm.q = this.$route.query[constants.QUERY_PARAM] || ''
     this.getProducts()
   },
   methods: {
+    searchCategory(category) {
+      this.categoryPriceTotal = null
+      this.categoryError = false
+      this.categoryLoading = !!category
+      if (!category) return
+      return openPricesApi.getPrices({ category_tag: category.id, size: 1 })
+        .then((data) => {
+          if (this.category?.id === category.id) this.categoryPriceTotal = data.total
+        })
+        .catch(() => {
+          if (this.category?.id === category.id) this.categoryError = true
+        })
+        .finally(() => {
+          if (this.category?.id === category.id) this.categoryLoading = false
+        })
+    },
     fieldRequired(v) {
       return !!v
     },

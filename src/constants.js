@@ -326,6 +326,10 @@ export default {
     { key: 'off-barcode-scanner', value: 'Off Barcode Scanner', valueSmallScreen: 'Off Scanner', icon: 'mdi-barcode-scan' },
     { key: 'html5-qrcode', value: 'Html5-Qrcode', valueSmallScreen: 'Html5-Qrcode', icon: 'mdi-barcode-scan' },
   ],
+  SEARCH_TAB_LIST: [
+    { key: PRICE_TYPE_PRODUCT.toLowerCase(), value: 'Product', icon: PRICE_TYPE_PRODUCT_ICON },
+    { key: PRICE_TYPE_CATEGORY.toLowerCase(), value: 'Category', icon: PRICE_TYPE_CATEGORY_ICON },
+  ],
   USER_DASHBOARD_TAB_LIST: [
     { key: 'all', value: 'All', icon: 'mdi-home' },
     { key: USER_CONSUMPTION.toLowerCase(), value: 'MyConsumption', icon: USER_CONSUMPTION_ICON },
