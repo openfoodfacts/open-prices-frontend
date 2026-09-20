@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.175.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.174.0...v1.175.0) (2026-09-20)
+
+
+### Features
+
+* **Proof Addition:** show a 'Congrats' alert if user is first to add a proof in this location ([#2397](https://github.com/openfoodfacts/open-prices-frontend/issues/2397)) ([1690a79](https://github.com/openfoodfacts/open-prices-frontend/commit/1690a79f3ce7607d6d2f13ecb419592f28178699))
+* **Search:** search prices by category ([#2399](https://github.com/openfoodfacts/open-prices-frontend/issues/2399)) ([f8986fb](https://github.com/openfoodfacts/open-prices-frontend/commit/f8986fbec00b08e7aeea43bd9b6d280f6faa2134))
+
+
+### Bug Fixes
+
+* **Sign In:** redirect users already signed in ([#2394](https://github.com/openfoodfacts/open-prices-frontend/issues/2394)) ([d519994](https://github.com/openfoodfacts/open-prices-frontend/commit/d519994a8b50a75d569456df17eb67213475ff29))
+
+
+### Technical
+
+* **Challenges:** harmonize cards height ([#2393](https://github.com/openfoodfacts/open-prices-frontend/issues/2393)) ([c69015e](https://github.com/openfoodfacts/open-prices-frontend/commit/c69015e643dd211bb32fbe5875fa963618759e29))
+* **Contribute Page:** change the cards to horizontal to improve layout ([#2398](https://github.com/openfoodfacts/open-prices-frontend/issues/2398)) ([7b4e7c5](https://github.com/openfoodfacts/open-prices-frontend/commit/7b4e7c55559c342c07b72e654307aee87908b9aa))
+* **Data:** update generated data from taxonomies ([#2382](https://github.com/openfoodfacts/open-prices-frontend/issues/2382)) ([c2bf25f](https://github.com/openfoodfacts/open-prices-frontend/commit/c2bf25f43de6c41c6450de542daeaa9c0c7fb00c))
+* **deps:** bump baseline-browser-mapping from 2.10.43 to 2.11.23 ([#2389](https://github.com/openfoodfacts/open-prices-frontend/issues/2389)) ([c1c2c89](https://github.com/openfoodfacts/open-prices-frontend/commit/c1c2c898d61f04362d0a7bf13d90a673b4f496ae))
+* **deps:** bump browserslist from 4.28.6 to 4.28.9 ([#2385](https://github.com/openfoodfacts/open-prices-frontend/issues/2385)) ([0470085](https://github.com/openfoodfacts/open-prices-frontend/commit/0470085c4f0a2870185a462e57bc1083ae54d6ec))
+* **deps:** bump exifreader from 4.41.0 to 4.41.1 ([#2395](https://github.com/openfoodfacts/open-prices-frontend/issues/2395)) ([a927440](https://github.com/openfoodfacts/open-prices-frontend/commit/a9274407744da3e6869eeb62687eaa58c6143d88))
+* **deps:** bump the visualization group across 1 directory with 3 updates ([#2294](https://github.com/openfoodfacts/open-prices-frontend/issues/2294)) ([5d00bd6](https://github.com/openfoodfacts/open-prices-frontend/commit/5d00bd680d54c8110ae08ef3e13c210c333e817e))
+* **l10n:** New Crowdin translations to review and merge ([#2381](https://github.com/openfoodfacts/open-prices-frontend/issues/2381)) ([5318ce8](https://github.com/openfoodfacts/open-prices-frontend/commit/5318ce8c91559370de25245935b149c915d04261))
+
 ## [1.174.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.173.1...v1.174.0) (2026-09-05)
 
 
