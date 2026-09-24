@@ -106,7 +106,7 @@
 			"PerKg": "Prezzo per kg",
 			"PerUnit": "Prezzo unitario"
 		},
-		"Title": "Aggiungi un prezzo unico",
+		"Title": "Aggiungi un singolo prezzo",
 		"WhereWhen": {
 			"Date": "Data",
 			"DateLabel": "Data",
@@ -867,7 +867,7 @@
 			"Title": "Add prices"
 		},
 		"AddPriceSingle": {
-			"Title": "Aggiungi un prezzo unico"
+			"Title": "Aggiungi un singolo prezzo"
 		},
 		"AddPriceMultiple": {
 			"Title": "Aggiungi più prezzi"
@@ -906,7 +906,7 @@
 			"Title": "Aggiungi un prezzo"
 		},
 		"PriceAddSingle": {
-			"Title": "Aggiungi un prezzo unico"
+			"Title": "Aggiungi un singolo prezzo"
 		},
 		"PriceAddMultiple": {
 			"Title": "Aggiungi più prezzi"
