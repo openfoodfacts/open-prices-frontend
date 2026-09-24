@@ -102,7 +102,7 @@
           this.boundingBoxes = [] // reset boundingBoxes
         }
         if (this.boundingBoxesFromServer) {
-          this.boundingBoxes = this.boundingBoxes.concat(this.boundingBoxesFromServer.map(({boundingBox, id, status, created_by	}) => {
+          this.boundingBoxes = this.boundingBoxes.concat(this.boundingBoxesFromServer.map(({boundingBox, id, status, created_by, labelText, text}) => {
             return {
               startY: boundingBox[0] * this.image.height,
               startX: boundingBox[1] * this.image.width,
@@ -110,7 +110,8 @@
               endX: boundingBox[3] * this.image.width,
               boundingSource: created_by ? this.$t('ContributionAssistant.ManualBoundingBoxSource') : this.$t('ContributionAssistant.AutomaticBoundingBoxSource'),
               id: id,
-              status: status
+              status: status,
+              text: text || labelText || null
             }
           }))
           this.extractLabels()
@@ -179,15 +180,20 @@
         const width = endX - startX
         const height = endY - startY
         // set text & color
-        let text = ""
-        constants.PRICE_TAG_STATUS_LIST.some(statusObj => {
-          if (rect.status === statusObj.key) {
-            text = this.$t(statusObj.text)
-            ctx.strokeStyle = statusObj.color
-            ctx.fillStyle = statusObj.color
-            return true
-          }
-        })
+        let text = rect.text || ""
+        if (!text) {
+          constants.PRICE_TAG_STATUS_LIST.some(statusObj => {
+            if (rect.status === statusObj.key) {
+              text = this.$t(statusObj.text)
+              ctx.strokeStyle = statusObj.color
+              ctx.fillStyle = statusObj.color
+              return true
+            }
+          })
+        } else {
+          ctx.strokeStyle = "#2e7d32"
+          ctx.fillStyle = "#2e7d32"
+        }
         ctx.strokeRect(startX, startY, width, height)
         ctx.font = `bold ${8/this.scale}px sans-serif `
         const textWidth = ctx.measureText(text).width + 4

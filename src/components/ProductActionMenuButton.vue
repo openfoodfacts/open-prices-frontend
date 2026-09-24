@@ -9,10 +9,13 @@
         <v-divider />
         <PriceAddLink :productCode="product.code" display="list-item" />
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
-        <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProductDetailUrl">
-          {{ $t('Common.Details') }}
+        <OpenFoodFactsLink v-if="product.source" :source="product.source" facet="product" :value="product.code" display="list-item" />
+        <v-list-item v-if="!product.source" :slim="true" prepend-icon="mdi-plus" :to="getCreateProductUrl">
+          {{ $t('CreateOffProduct.CreateProduct') }}
         </v-list-item>
-        <OpenFoodFactsLink :source="product.source" facet="product" :value="product.code" display="list-item" />
+        <v-list-item v-else :slim="true" prepend-icon="mdi-database-edit-outline" :to="getCreateProductUrl">
+          {{ $t('CreateOffProduct.EnrichProduct') }}
+        </v-list-item>
       </v-list>
     </v-menu>
   </v-btn>
@@ -49,6 +52,9 @@ export default {
     },
     getShareLinkUrl() {
       return this.getProductDetailUrl
+    },
+    getCreateProductUrl() {
+      return `/create-product?product_code=${this.product.code}`
     },
   }
 }

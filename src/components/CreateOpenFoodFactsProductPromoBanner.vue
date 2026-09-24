@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      url: `/experiments/create-off-product?product_code=${this.productCode}`,
+      url: `/create-product?product_code=${this.productCode}`,
     }
   },
 }

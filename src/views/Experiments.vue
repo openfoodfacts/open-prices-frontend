@@ -38,7 +38,7 @@
         :title="$t('Router.CreateOffProduct.Title')"
         prepend-icon="mdi-plus"
         append-icon="mdi-arrow-right"
-        to="/experiments/create-off-product"
+        to="/create-product"
       />
     </v-col>
   </v-row>

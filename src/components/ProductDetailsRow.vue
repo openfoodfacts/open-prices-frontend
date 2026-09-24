@@ -11,7 +11,7 @@
             <ProductLabelsChip :productLabels="product.labels_tags" />
           </template>
         </template>
-        <ProductMissingChip v-else />
+        <ProductMissingChip v-else :productCode="product.code" />
         <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
         <ProductBarcodeTooLongChip v-if="!hideBarcodeErrors && barcodeTooLong" :barcode="product.code" />
         <ProductBarcodeInvalidChip v-if="!hideBarcodeErrors && barcodeInvalid" />

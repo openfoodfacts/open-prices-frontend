@@ -13,7 +13,12 @@
             {{ $t('Common.Details') }}
           </v-list-item>
           <v-sheet v-if="price.product">
-            <OpenFoodFactsLink v-if="price.product.source" :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
+            <template v-if="price.product.source">
+              <OpenFoodFactsLink :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
+              <v-list-item :slim="true" prepend-icon="mdi-database-edit-outline" :to="getCreateProductUrl">
+                {{ $t('CreateOffProduct.EnrichProduct') }}
+              </v-list-item>
+            </template>
             <v-list-item v-else :slim="true" prepend-icon="mdi-plus" :to="getCreateProductUrl">
               {{ $t('CreateOffProduct.CreateProduct') }}
             </v-list-item>
@@ -179,7 +184,7 @@ export default {
       return `/proofs/${this.price.proof.id}`
     },
     getCreateProductUrl() {
-      return `/experiments/create-off-product?product_code=${this.price.product.code}`
+      return `/create-product?product_code=${this.price.product.code}`
     },
     showPriceShare() {
       return this.$route.path === this.getPriceDetailUrl
