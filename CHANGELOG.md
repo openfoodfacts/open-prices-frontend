@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.176.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.175.0...v1.176.0) (2026-09-26)
+
+
+### Features
+
+* **Challenge:** Banner image ([#2401](https://github.com/openfoodfacts/open-prices-frontend/issues/2401)) ([550f11d](https://github.com/openfoodfacts/open-prices-frontend/commit/550f11d880919b73f250f048286499a274efb405))
+
+
+### Technical
+
+* **Label Chip:** move icon to start (instead of end) ([#2407](https://github.com/openfoodfacts/open-prices-frontend/issues/2407)) ([d92626a](https://github.com/openfoodfacts/open-prices-frontend/commit/d92626a5843876e0b9cfb61065a6e79eafdfd035))
+
 ## [1.175.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.174.0...v1.175.0) (2026-09-20)
 
 
