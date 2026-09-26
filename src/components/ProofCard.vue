@@ -13,20 +13,20 @@
 
     <v-divider v-if="!hideProofHeader" />
 
-    <v-card-text>
-      <ContributionAssistantDrawCanvas 
-        v-if="canDisplayPriceTagsBoundingBoxes" 
-        :imageSrc="getProofImageFullUrl" 
-        :boundingBoxesFromServer="proof.priceTagsBoundingBoxes" 
+    <v-card-text class="pa-2">
+      <ContributionAssistantDrawCanvas
+        v-if="canDisplayPriceTagsBoundingBoxes"
+        :imageSrc="getProofImageFullUrl"
+        :boundingBoxesFromServer="proof.priceTagsBoundingBoxes"
         :preventDrawing="true"
         :forceFullImageHeight="true"
       />
-      <v-img v-else-if="proof.file_path" :src="getProofImageFullUrl" :height="imageHeight" />
+      <v-img v-else-if="proof.file_path" :src="getProofImageFullUrl" :height="imageHeight" :width="imageWidth" />
     </v-card-text>
 
-    <v-divider />
+    <v-divider v-if="showPriceFooterRow" />
 
-    <v-card-actions>
+    <v-card-actions v-if="showPriceFooterRow">
       <ProofFooterRow 
         :proof="proof" 
         :hideActionMenuButton="hideActionMenuButton" 
@@ -62,6 +62,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    hideProofFooterRow: {
+      type: Boolean,
+      default: false,
+    },
     showImageThumb: {
       type: Boolean,
       default: false,
@@ -79,6 +83,10 @@ export default {
       default: false,
     },
     imageHeight: {
+      type: String,
+      default: '100%',
+    },
+    imageWidth: {
       type: String,
       default: '100%',
     },
@@ -101,6 +109,9 @@ export default {
     canDisplayPriceTagsBoundingBoxes() {
       return this.showPriceTagsBoundingBoxes && this.proof?.priceTagsBoundingBoxes?.length > 0
     },
+    showPriceFooterRow() {
+      return !this.hideProofFooterRow
+    }
   },
   mounted() {
     this.showPriceTagsBoundingBoxes = this.appStore?.user?.display_price_tags_bounding_boxes || false
