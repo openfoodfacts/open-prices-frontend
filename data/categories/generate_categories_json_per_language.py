@@ -62,6 +62,20 @@ EXTRA_NODE_ID_LIST = [
     "en:candies",
     "en:sprouts",
     "en:acar",
+    "en:cooked-shrimps",
+    "en:squid-rings",
+    "en:scallop",
+    "en:garlic-sausage",
+    "en:cooked-sausage-with-smoked-garlic",
+    "en:mortadella",
+    "en:cooked-pork-roast",
+    "en:assortments-of-meat-roulades",
+    "en:specks",
+    "en:cured-hams",
+    "en:cooked-ham-of-superior-quality",
+    "en:smoked-cooked-ham-of-superior-quality",
+    "en:white-hams",
+    "en:white-smoked-hams",
 ]
 
 EXCLUDE_LIST = [
@@ -102,8 +116,8 @@ def filter_categories(taxonomy):
     """
     Rules:
     - keep only nodes that are descendants of some parent nodes (see PARENT_NODE_ID_LIST) (sometimes including the parent itself)
-    - add extra nodes from EXTRA_NODE_ID_LIST
     - remove some nodes based on id or name substring
+    - add extra nodes from EXTRA_NODE_ID_LIST, bypassing the generic exclusions
     """
     # filter on parent nodes
     PARENT_NODES: list[TaxonomyNode] = utils.get_taxonomy_node_list_by_id_list(
@@ -112,10 +126,6 @@ def filter_categories(taxonomy):
     # get all descendants for the parent categories
     categories_filtered: list[TaxonomyNode] = utils.get_all_descendants_for_node_list(
         taxonomy, PARENT_NODES, parent_node_id_list_to_keep=[node["id"] for node in PARENT_NODE_ID_LIST if node["keep_node"]]
-    )
-    # add extra nodes
-    categories_filtered.extend(
-        utils.get_taxonomy_node_list_by_id_list(taxonomy, EXTRA_NODE_ID_LIST)
     )
     # exclude
     # remove nodes in EXCLUDE_NODE_ID_LIST
@@ -126,6 +136,10 @@ def filter_categories(taxonomy):
     ]
     categories_filtered = utils.filter_node_list_by_exclude_string_list(
         categories_filtered, EXCLUDE_LIST
+    )
+    # add explicitly selected nodes after exclusions so they always remain included
+    categories_filtered.extend(
+        utils.get_taxonomy_node_list_by_id_list(taxonomy, EXTRA_NODE_ID_LIST)
     )
     return categories_filtered
 
