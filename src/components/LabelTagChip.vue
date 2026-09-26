@@ -29,20 +29,21 @@ export default {
   },
   data() {
     return {
-      PRODUCT_LABEL_LIST: constants.PRODUCT_LABEL_LIST,
       labelLocalizedName: null,  // see mounted
-      labelIcon: null,  // see mounted
     }
   },
   computed: {
     ...mapStores(useAppStore),
     getLabelUrl() {
       return this.label && !this.readonly ? `/labels/${this.label}` : null
+    },
+    labelIcon() {
+      const labelObj = constants.PRODUCT_LABEL_LIST.find(item => item.key === this.label)
+      return labelObj ? labelObj.icon : null
     }
   },
   mounted() {
     this.setLabelLocalizedName(this.label)
-    this.setLabelIcon(this.label)
   },
   methods: {
     setLabelLocalizedName() {
@@ -53,10 +54,6 @@ export default {
       } else {
         this.labelLocalizedName = null
       }
-    },
-    setLabelIcon() {
-      const labelObj = this.PRODUCT_LABEL_LIST.find(item => item.key === this.label)
-      this.labelIcon = labelObj ? labelObj.icon : null
     }
   }
 }
