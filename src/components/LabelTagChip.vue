@@ -1,13 +1,14 @@
 <template>
   <v-chip label size="small" density="comfortable" :to="getLabelUrl">
+    <v-icon v-if="labelIcon" :icon="labelIcon" start />
     {{ labelLocalizedName || label }}
-    <v-icon v-if="label === 'en:organic'" icon="mdi-leaf-circle-outline" end />
   </v-chip>
 </template>
 
 <script>
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 import data_utils from '../utils/data.js'
 
 export default {
@@ -28,7 +29,9 @@ export default {
   },
   data() {
     return {
+      PRODUCT_LABEL_LIST: constants.PRODUCT_LABEL_LIST,
       labelLocalizedName: null,  // see mounted
+      labelIcon: null,  // see mounted
     }
   },
   computed: {
@@ -39,6 +42,7 @@ export default {
   },
   mounted() {
     this.setLabelLocalizedName(this.label)
+    this.setLabelIcon(this.label)
   },
   methods: {
     setLabelLocalizedName() {
@@ -50,6 +54,10 @@ export default {
         this.labelLocalizedName = null
       }
     },
+    setLabelIcon() {
+      const labelObj = this.PRODUCT_LABEL_LIST.find(item => item.key === this.label)
+      this.labelIcon = labelObj ? labelObj.icon : null
+    }
   }
 }
 </script>

@@ -159,6 +159,9 @@ export default {
   // products
   PRODUCT_ICON: PRODUCT_ICON,
   PRODUCT_IMAGE_DEFAULT_URL: '/icon-off-packaging.svg',
+  PRODUCT_LABEL_LIST: [
+    { key: 'en:organic', value: 'Organic', icon: 'mdi-leaf-circle-outline' },
+  ],
   PRODUCT_CATEGORY_LABEL_ORGANIC: PRODUCT_CATEGORY_LABEL_ORGANIC,
   PRODUCT_QUANTITY_UNIT_G: 'g',
   PRODUCT_QUANTITY_UNIT_ML: 'ml',
