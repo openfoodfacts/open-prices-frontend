@@ -22,6 +22,25 @@
     </v-col>
   </v-row>
 
+  <v-row v-if="challenge?.promo_banner_image_url">
+    <v-col cols="12">
+      <a
+        :href="challenge.promo_banner_url"
+        target="_blank"
+        rel="noopener noreferrer"
+        :title="challenge.promo_banner_alt_text"
+        :aria-label="challenge.promo_banner_alt_text"
+      >
+        <v-img
+          :src="challenge.promo_banner_image_url"
+          max-height="300px"
+          :alt="challenge.promo_banner_alt_text"
+          contain
+        />
+      </a>
+    </v-col>
+  </v-row>
+
   <v-row v-if="challenge">
     <v-col cols="12">
       <v-expansion-panels v-model="helpPanel">
