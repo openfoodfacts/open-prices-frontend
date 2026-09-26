@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v7
       # Install npm dependencies, cache them correctly
       - name: Cypress run
-        uses: cypress-io/github-action@v7.4.1
+        uses: cypress-io/github-action@v7.4.3
         with:
           # just perform install
           runTests: false
