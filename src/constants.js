@@ -207,6 +207,9 @@ export default {
   ],
   CITY_ICON: COUNTRY_ICON,
   COUNTRY_ICON: COUNTRY_ICON,
+  LOCATION_TAG_LIST: [
+    { key: 'organic:only', value: 'Organic (only)', icon: 'mdi-leaf-circle-outline' },
+  ],
   // users
   USER_ICON: USER_ICON,
   USER_IMAGE_DEFAULT_URL: '/icon-account-outline.svg',

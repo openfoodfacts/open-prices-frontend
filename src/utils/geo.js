@@ -209,6 +209,14 @@ function getLocationOSMTag(locationObject) {
   return `${locationObject.osm_tag_key}:${locationObject.osm_tag_value}`
 }
 
+function hasLocationOSMTagFromName(locationObject, tagName) {
+  // OP
+  if (locationObject.osm_tags) {
+    return locationObject.osm_tags.indexOf(tagName) !== -1
+  }
+  return false
+}
+
 function getLocationOSMLatLng(locationObject) {
   // Nominatim
   if (locationObject.lat && locationObject.lon) {
@@ -334,6 +342,7 @@ export default {
   buildLocationOSMUniqueId,
   getLocationOSMUniqueId,
   getLocationOSMTag,
+  hasLocationOSMTagFromName,
   getLocationOSMLatLng,
   hasLocationCoordinates,
   NEARBY_FILTER_RADIUS_OPTIONS,

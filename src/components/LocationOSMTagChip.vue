@@ -1,23 +1,34 @@
 <template>
   <v-chip label size="small" density="comfortable" title="OpenStreetMap tag">
-    {{ getLocationOSMTag(location) }}
+    <v-icon v-if="labelIcon" :icon="labelIcon" start />
+    {{ tag }}
   </v-chip>
 </template>
 
 <script>
-import geo_utils from '../utils/geo.js'
+import constants from '../constants'
 
 export default {
   props: {
-    location: {
-      type: Object,
+    tag: {
+      type: String,
       default: null
     }
   },
+  data() {
+    return {
+      LOCATION_TAG_LIST: constants.LOCATION_TAG_LIST,
+      labelIcon: null,  // see mounted
+    }
+  },
+  mounted() {
+    this.setLabelIcon()
+  },
   methods: {
-    getLocationOSMTag(location) {
-      return geo_utils.getLocationOSMTag(location)
-    },
+    setLabelIcon() {
+      const labelObj = this.LOCATION_TAG_LIST.find(item => item.key === this.tag)
+      this.labelIcon = labelObj ? labelObj.icon : null
+    }
   }
 }
 </script>
