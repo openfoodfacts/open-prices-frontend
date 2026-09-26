@@ -165,6 +165,12 @@
           } else if (this.mode === 'Redact') {
             ctx.fillStyle = "black"
             ctx.fillRect(this.startX, this.startY, width, height)
+          } else if (this.mode === 'Crop') {
+            ctx.strokeStyle = "#2196F3"
+            ctx.lineWidth = 2 / this.scale
+            ctx.setLineDash([6 / this.scale, 4 / this.scale])
+            ctx.strokeRect(this.startX, this.startY, width, height)
+            ctx.setLineDash([])
           }
         }
       },
@@ -185,7 +191,9 @@
         const endY = event.offsetY / this.scale
         // ignore bounding boxes that are too small
         if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) > 10) {
-          this.boundingBoxes.push({ startX: this.startX, startY: this.startY, endX, endY, boundingSource: this.$t('ContributionAssistant.ManualBoundingBoxSource'), status: -1 })
+          const newBoundingBox = { startX: this.startX, startY: this.startY, endX, endY, boundingSource: this.$t('ContributionAssistant.ManualBoundingBoxSource'), status: -1 }
+          // only one crop area can be defined at a time
+          this.boundingBoxes = this.mode === 'Crop' ? [newBoundingBox] : this.boundingBoxes.concat(newBoundingBox)
         }
         this.extractLabels()
         this.drawSingleBoundingBox(this.boundingBoxes[this.boundingBoxes.length - 1])
@@ -217,6 +225,12 @@
         } else if (this.mode === 'Redact') {
           ctx.fillStyle = "black"
           ctx.fillRect(startX, startY, width, height)
+        } else if (this.mode === 'Crop') {
+          ctx.strokeStyle = "#2196F3"
+          ctx.lineWidth = 2 / this.scale
+          ctx.setLineDash([6 / this.scale, 4 / this.scale])
+          ctx.strokeRect(startX, startY, width, height)
+          ctx.setLineDash([])
         }
       },
       drawBoundingBoxes() {

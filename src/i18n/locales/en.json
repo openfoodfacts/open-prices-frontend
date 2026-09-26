@@ -849,6 +849,13 @@
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
 		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
 	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt",
+		"DrawCropArea": "Draw the area to keep",
+		"Save": "Save",
+		"Crop": "Crop",
+		"Discard": "Discard crop"
+	},
 	"Reuses": {
 		"AlertNew": "Your reuse is missing? Let us know {url}!",
 		"Here": "here"

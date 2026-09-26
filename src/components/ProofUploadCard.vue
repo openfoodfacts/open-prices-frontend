@@ -26,7 +26,7 @@
         </v-row>
         <ProofTypeInputRow :class="showTopAlertOrBanner ? 'mt-0' : ''" :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
         <LocationInputRow class="mt-0" :locationForm="proofForm" @location="locationObject = $event" />
-        <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :hideProofImagePreview="receiptDraftProof !== null" :multiple="multiple" @proofList="proofImageList = $event" @anonymizeReceipt="showReceiptAnonymizeDialog = true" />
+        <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :hideProofImagePreview="receiptDraftProof !== null || croppedProofImage !== null" :multiple="multiple" @proofList="proofImageList = $event" @anonymizeReceipt="showReceiptAnonymizeDialog = true" @cropReceipt="showReceiptCropDialog = true" />
         <v-row v-if="receiptDraftProof" class="mt-0">
           <v-col cols="6">
             <v-card class="d-flex flex-column" height="100%">
@@ -45,6 +45,29 @@
                   @click="deleteReceiptDraftProof"
                 >
                   {{ $t('Common.Delete') }}
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
+        <v-row v-if="croppedProofImage" class="mt-0">
+          <v-col cols="6">
+            <v-card class="d-flex flex-column" height="100%">
+              <v-card-text class="flex-grow-1 pa-2">
+                <v-img :src="croppedProofImage.imagePreview" max-height="200px" />
+              </v-card-text>
+              <v-divider />
+              <v-card-actions>
+                <v-btn v-if="!$vuetify.display.smAndUp" color="error" variant="outlined" icon="mdi-close" size="small" density="comfortable" :aria-label="$t('ReceiptCrop.Discard')" @click="discardCroppedProofImage" />
+                <v-btn
+                  v-else
+                  color="error"
+                  variant="outlined"
+                  prepend-icon="mdi-close"
+                  size="small"
+                  @click="discardCroppedProofImage"
+                >
+                  {{ $t('ReceiptCrop.Discard') }}
                 </v-btn>
               </v-card-actions>
             </v-card>
@@ -97,6 +120,7 @@
   </v-sheet>
 
   <ReceiptAnonymizerDialog v-if="showReceiptAnonymizeDialog" v-model="showReceiptAnonymizeDialog" :proofImage="proofImageList[0]" @done="receiptAnonymizeDone" />
+  <ReceiptCropDialog v-if="showReceiptCropDialog" v-model="showReceiptCropDialog" :proofImage="proofImageList[0]" @done="receiptCropDone" />
   <v-snackbar
     v-model="proofDateSuccessMessage"
     color="primary"
@@ -144,6 +168,7 @@ export default {
     ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     ReceiptAnonymizerDialog: defineAsyncComponent(() => import('../components/ReceiptAnonymizerDialog.vue')),
+    ReceiptCropDialog: defineAsyncComponent(() => import('../components/ReceiptCropDialog.vue')),
   },
   props: {
     hideHeader: {
@@ -201,6 +226,8 @@ export default {
       loading: false,
       receiptDraftProof: null,
       showReceiptAnonymizeDialog: false,
+      croppedProofImage: null,
+      showReceiptCropDialog: false,
     }
   },
   computed: {
@@ -240,10 +267,14 @@ export default {
     },
     proofCardShowImageThumb() {
       return this.multiple ? true : false
+    },
+    uploadableProofImageList() {
+      return this.croppedProofImage ? [this.croppedProofImage.file] : this.proofImageList
     }
   },
   watch: {
     proofImageList(newProofImageList, oldProofImageList) {  // eslint-disable-line no-unused-vars
+      this.discardCroppedProofImage()
       this.handleProofImageList()
     },
     proofObjectList(newProofObjectList, oldProofObjectList) {  // eslint-disable-line no-unused-vars
@@ -339,7 +370,7 @@ export default {
         return
       }
       // chain uploads sequentially
-      this.proofImageList.reduce((promise, proofImage) => {
+      this.uploadableProofImageList.reduce((promise, proofImage) => {
         return promise.then(() =>
           this.uploadProof(proofImage)
             .then((data) => {
@@ -393,6 +424,16 @@ export default {
       this.showReceiptAnonymizeDialog = false
       this.receiptDraftProof = draftProof
       this.receiptDraftProof.imagePreview = proof_utils.getImageFullUrl(this.receiptDraftProof.file_path)
+    },
+    receiptCropDone(croppedProofImage) {
+      this.showReceiptCropDialog = false
+      this.croppedProofImage = { file: croppedProofImage, imagePreview: URL.createObjectURL(croppedProofImage) }
+    },
+    discardCroppedProofImage() {
+      if (this.croppedProofImage) {
+        URL.revokeObjectURL(this.croppedProofImage.imagePreview)
+      }
+      this.croppedProofImage = null
     },
     deleteReceiptDraftProof() {
       this.receiptDraftProof = null
