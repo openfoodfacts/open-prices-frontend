@@ -28,6 +28,7 @@
         :href="challenge.promo_banner_url"
         target="_blank"
         rel="noopener noreferrer"
+        :title="challenge.promo_banner_alt_text"
         :aria-label="challenge.promo_banner_alt_text"
       >
         <v-img
