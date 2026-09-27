@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.176.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.175.0...v1.176.0) (2026-09-27)
+
+
+### Features
+
+* **Challenge:** Banner image ([#2401](https://github.com/openfoodfacts/open-prices-frontend/issues/2401)) ([550f11d](https://github.com/openfoodfacts/open-prices-frontend/commit/550f11d880919b73f250f048286499a274efb405))
+
+
+### Bug Fixes
+
+* **Proof Upload:** fix typo in receipt anonymization workflow (on mobile) ([#2409](https://github.com/openfoodfacts/open-prices-frontend/issues/2409)) ([94bad1d](https://github.com/openfoodfacts/open-prices-frontend/commit/94bad1d2ba2b5655c6a7098b8348a9236324e6d0))
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2410](https://github.com/openfoodfacts/open-prices-frontend/issues/2410)) ([c02254d](https://github.com/openfoodfacts/open-prices-frontend/commit/c02254dce7f402ca8903f6d21353dffcc83fa5e9))
+* **Label Chip:** move icon to start (instead of end) ([#2407](https://github.com/openfoodfacts/open-prices-frontend/issues/2407)) ([d92626a](https://github.com/openfoodfacts/open-prices-frontend/commit/d92626a5843876e0b9cfb61065a6e79eafdfd035))
+* **Location Card:** if `organic:only` then display the info in a chip ([#2408](https://github.com/openfoodfacts/open-prices-frontend/issues/2408)) ([745a7ba](https://github.com/openfoodfacts/open-prices-frontend/commit/745a7ba67078e63c3087d76b988487da8ba7ecff))
+
 ## [1.175.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.174.0...v1.175.0) (2026-09-20)
 
 
