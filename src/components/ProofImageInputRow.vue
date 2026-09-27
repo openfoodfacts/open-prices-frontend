@@ -66,7 +66,7 @@
               >
                 {{ $t('Common.Delete') }}
               </v-btn>
-              <v-btn v-if="typeReceiptOnly && !$vuetify.display.smAndUp" color="warning" variant="outlined" icon="mdi-account-off" size="small" density="comfortable" :aria-label="$t('XXX.Anonymize')" @click="anonymize" />
+              <v-btn v-if="typeReceiptOnly && !$vuetify.display.smAndUp" color="warning" variant="outlined" icon="mdi-account-off" size="small" density="comfortable" :aria-label="$t('ReceiptAnonymize.Anonymize')" @click="anonymizeReceipt" />
               <v-btn
                 v-else-if="typeReceiptOnly"
                 color="warning"
