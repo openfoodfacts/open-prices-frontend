@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.176.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.176.0...v1.176.1) (2026-09-28)
+
+
+### Technical
+
+* **Proof Upload:** avoid proof image action icons to overflow ([#2411](https://github.com/openfoodfacts/open-prices-frontend/issues/2411)) ([f0fb2d2](https://github.com/openfoodfacts/open-prices-frontend/commit/f0fb2d2f54386fa9637fe56bf60184bcf396adde))
+
 ## [1.176.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.175.0...v1.176.0) (2026-09-27)
 
 
