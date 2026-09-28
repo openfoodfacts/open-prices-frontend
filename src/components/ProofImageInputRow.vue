@@ -48,27 +48,16 @@
       </v-row>
 
       <v-row v-if="showProofImagePreviewList" class="mt-0">
-        <v-col v-for="(proofImagePreview, index) in proofImagePreviewList" :key="proofImagePreview" cols="6">
+        <v-col v-for="(proofImagePreview, index) in proofImagePreviewList" :key="proofImagePreview" :cols="proofImagePreviewList.length === 1 ? 12 : 6">
           <v-card class="d-flex flex-column" height="100%">
             <v-card-text class="flex-grow-1 pa-2">
               <v-img :src="proofImagePreview" max-height="200px" />
             </v-card-text>
             <v-divider />
             <v-card-actions>
-              <v-btn v-if="!$vuetify.display.smAndUp" color="error" variant="outlined" icon="mdi-delete" size="small" density="comfortable" :aria-label="$t('Common.Delete')" @click="removeImage(index)" />
+              <v-spacer />
               <v-btn
-                v-else
-                color="error"
-                variant="outlined"
-                prepend-icon="mdi-delete"
-                size="small"
-                @click="removeImage(index)"
-              >
-                {{ $t('Common.Delete') }}
-              </v-btn>
-              <v-btn v-if="typeReceiptOnly && !$vuetify.display.smAndUp" color="warning" variant="outlined" icon="mdi-account-off" size="small" density="comfortable" :aria-label="$t('ReceiptAnonymize.Anonymize')" @click="anonymizeReceipt" />
-              <v-btn
-                v-else-if="typeReceiptOnly"
+                v-if="typeReceiptOnly"
                 color="warning"
                 variant="outlined"
                 prepend-icon="mdi-account-off"
@@ -76,6 +65,15 @@
                 @click="anonymizeReceipt"
               >
                 {{ $t('ReceiptAnonymize.Anonymize') }}
+              </v-btn>
+              <v-btn
+                color="error"
+                variant="outlined"
+                prepend-icon="mdi-delete"
+                size="small"
+                @click="removeImage(index)"
+              >
+                {{ $t('Common.Delete') }}
               </v-btn>
             </v-card-actions>
           </v-card>
