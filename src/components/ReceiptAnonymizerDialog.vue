@@ -74,7 +74,7 @@
                     :loading="loading"
                     @click="save"
                   >
-                    {{ $t('ReceiptAnonymize.Save') }}
+                    {{ $t('Common.Save') }}
                   </v-btn>
                 </v-col>
               </v-row>
