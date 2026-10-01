@@ -144,11 +144,11 @@
 			"line4": "Jedná se o společné úsilí, i když jste neposlali obrázky, stále můžete pomáhat ostatním s ověřením."
 		},
 		"StepCategories": {
-			"Title": "Add products to the categories",
+			"Title": "Přidejte produkty do kategorií",
 			"line1": "Many products belong to the challenge categories but are not yet categorized as such in {name}, so their prices don't count towards the challenge.",
-			"line2": "Hunger Games is a game where you confirm the categories our robots have guessed for products. Answering the questions for the challenge categories will add the missing products.",
-			"line3": "Questions are grouped by sub-category, so the game will first show you a list of sub-categories to choose from.",
-			"line4": "Pick a category to start playing!"
+			"line2": "Hunger Games je hra, ve které ověřujete kategorie produktů, které naši roboti uhodli. Odpovídáním na otázky v daných kategoriích doplníte chybějící produkty.",
+			"line3": "Otázky jsou seskupeny podle podkategorií, takže hra vám nejprve zobrazí seznam podkategorií, ze kterých si můžete vybrat.",
+			"line4": "Vyberte si kategorii a začněte hrát!"
 		},
 		"PicturesAddedByYou": "Vámi přidané obrázky",
 		"Prices": "Ceny {challenge_title}",
