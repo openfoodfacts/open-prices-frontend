@@ -92,7 +92,7 @@
           :title="$t('Common.AddNewProof')"
           prepend-icon="mdi-image-plus"
           append-icon="mdi-arrow-right"
-          to="/proofs/add/receipt"
+          @click="reloadPage"
         />
       </v-col>
       <v-col cols="12" sm="6" lg="4">
@@ -295,6 +295,9 @@ export default {
           })
         }
       }
+    },
+    reloadPage() {
+      window.location = window.location.pathname
     },
   }
 }
