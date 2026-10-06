@@ -1,5 +1,16 @@
 [
     {
+        "name": "Amni-Price",
+        "description": "Free, open-source Android price scanner (shelf tags, receipts, restaurant menus) made to push back on algorithmic pricing. Its optional Community prices download fills in nearby stores with recent Open Prices prices, from tiles rebuilt nightly from the Open Prices export and the products API",
+        "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/amniprice.png",
+        "url": "https://amni-scient.com/amni-price",
+        "code_url": "https://github.com/Amnibro/Amni-Price",
+        "tags": ["API"],
+        "date": "2026",
+        "author": "Amnibro",
+        "display": true
+    },
+    {
         "name": "Popotam",
         "description": "Free meal planner and shopping list, without account or ads. Its ingredient price base is recalibrated every week on median Open Prices prices, so the weekly grocery budget it estimates follows real in-store prices (in french)",
         "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/popotam.png",
