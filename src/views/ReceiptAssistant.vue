@@ -297,7 +297,7 @@ export default {
       }
     },
     reloadPage() {
-      window.location.reload()
+      window.location = window.location.pathname
     },
   }
 }

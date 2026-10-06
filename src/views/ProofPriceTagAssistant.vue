@@ -572,7 +572,7 @@ export default {
       this.getNextProofSuggestions()
     },
     reloadPage() {
-      window.location.reload()
+      window.location = window.location.pathname
     },
     getNextProofSuggestions() {
       const params = {
