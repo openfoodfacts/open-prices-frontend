@@ -106,7 +106,7 @@
 			"PerKg": "Prezzo per kg",
 			"PerUnit": "Prezzo unitario"
 		},
-		"Title": "Aggiungi un prezzo unico",
+		"Title": "Aggiungi un singolo prezzo",
 		"WhereWhen": {
 			"Date": "Data",
 			"DateLabel": "Data",
@@ -240,7 +240,7 @@
 		"Consumption": "Consumo",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
-		"Contribute": "Contribuire",
+		"Contribute": "Contribuisci",
 		"Contributors": "Contributori",
 		"Contributions": "Contributi",
 		"Confirm": "Conferma",
@@ -867,7 +867,7 @@
 			"Title": "Add prices"
 		},
 		"AddPriceSingle": {
-			"Title": "Aggiungi un prezzo unico"
+			"Title": "Aggiungi un singolo prezzo"
 		},
 		"AddPriceMultiple": {
 			"Title": "Aggiungi più prezzi"
@@ -906,7 +906,7 @@
 			"Title": "Aggiungi un prezzo"
 		},
 		"PriceAddSingle": {
-			"Title": "Aggiungi un prezzo unico"
+			"Title": "Aggiungi un singolo prezzo"
 		},
 		"PriceAddMultiple": {
 			"Title": "Aggiungi più prezzi"
@@ -933,7 +933,7 @@
 			"Title": "Community"
 		},
 		"Contribute": {
-			"Title": "Contribuire"
+			"Title": "Contribuisci"
 		},
 		"Countries": {
 			"Title": "Paesi"
