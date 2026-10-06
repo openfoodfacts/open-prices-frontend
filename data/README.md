@@ -43,9 +43,9 @@ What it does:
 
 ### Stats
 
-- Last run: 2026-09-27
-- Input (Taxonomy): 14698 categories
-- Output (JSON): 3165 categories x 150 languages
+- Last run: 2026-10-04
+- Input (Taxonomy): 14718 categories
+- Output (JSON): 3170 categories x 150 languages
 
 ## Countries (with translations)
 
@@ -71,7 +71,7 @@ What it does:
 
 ### Stats
 
-- Last run: 2026-09-27
+- Last run: 2026-10-04
 - Input (Taxonomy): 268 countries
 - Output (JSON): 252 countries x 150 languages
 
@@ -132,7 +132,7 @@ What it does:
 
 ### Stats
 
-- Last run: 2026-09-27
+- Last run: 2026-10-04
 - Input (Taxonomy): 3074 labels
 - Output (JSON): 1 labels x 150 languages
 
@@ -172,7 +172,7 @@ What it does:
 
 ### Stats
 
-- Last run: 2026-09-27
+- Last run: 2026-10-04
 - Input (Taxonomy): 724 origins
 - Output (JSON): 264 origins x 150 languages
 
