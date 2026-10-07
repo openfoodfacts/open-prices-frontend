@@ -1,0 +1,5 @@
+# Commits ignored by `git blame` (formatting-only changes)
+# GitHub uses this file automatically. Locally: git config blame.ignoreRevsFile .git-blame-ignore-revs
+
+# chore: run prettier on the codebase (#2429)
+92c1273bd871762b4a56f577e594f776dcf1ef17

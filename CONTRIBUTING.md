@@ -32,13 +32,24 @@ yarn build
 
 The build script sets `NODE_OPTIONS=--max-old-space-size=8192` to give Vite/Rollup enough heap for production bundling. This frontend includes a large generated locale data set under `src/data`, and the default Node.js heap limit can otherwise fail with `JavaScript heap out of memory` during build.
 
-### Lint
+### Lint & format
+
+We use [ESLint](https://eslint.org/) for linting and [Prettier](https://prettier.io/) for formatting.
 
 ```sh
-yarn lint
+yarn lint          # or yarn lint:fix
+yarn format        # or yarn format:check
 ```
 
 There is also a pre-commit configuration set up with [husky](https://typicode.github.io/husky/) and [lint-staged](https://github.com/lint-staged/lint-staged).
+
+### Git blame
+
+Formatting-only commits (such as the Prettier reformat) are listed in `.git-blame-ignore-revs`. GitHub skips them automatically; to skip them locally as well, run once:
+
+```sh
+git config blame.ignoreRevsFile .git-blame-ignore-revs
+```
 
 ### Tests
 
