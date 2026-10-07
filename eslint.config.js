@@ -2,6 +2,7 @@ import js from '@eslint/js'
 import pluginVue from 'eslint-plugin-vue'
 import vueI18n from '@intlify/eslint-plugin-vue-i18n'
 import pluginVueA11y from 'eslint-plugin-vuejs-accessibility'
+import prettierConfig from 'eslint-config-prettier'
 
 export default [
   js.configs.recommended,
@@ -37,5 +38,7 @@ export default [
     rules: {
       'no-irregular-whitespace': 'off',
     },
-  }
+  },
+  // must be last: turns off rules that conflict with Prettier (formatting is handled by Prettier)
+  prettierConfig,
 ]
