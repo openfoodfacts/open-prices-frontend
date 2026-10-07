@@ -490,6 +490,7 @@
 		"Resolved": "Riješeno",
 		"Reuses": "Ponovna uporaba",
 		"ReusesKnown": "Poznate ponovne upotrebe",
+		"Save": "Spremi",
 		"Search": "Pretraži",
 		"Select": "Odaberi",
 		"Send": "Pošalji",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Učitaj samo nove cijene ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Učitaj ili ažurir sve važeće cijene ({nbPrices})",
 		"WaitForExtraction": "Automatsko izdvajanje stavki s računa, molimo pričekajte..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Vaša ponovna upotreba nedostaje? Javite nam {url}!",

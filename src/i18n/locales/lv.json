@@ -490,6 +490,7 @@
 		"Resolved": "Atrisināts",
 		"Reuses": "Atkārtota izmantošana",
 		"ReusesKnown": "Zināmi atkārtoti izmantošanas veidi",
+		"Save": "Saglabāt",
 		"Search": "Meklēt",
 		"Select": "Atlasīt",
 		"Send": "Sūtīt",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Augšupielādēt tikai jaunas cenas ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Augšupielādējiet vai atjauniniet visas derīgās cenas ({nbPrices})",
 		"WaitForExtraction": "Automātiska preču izvilkšana no čeka, lūdzu, uzgaidiet..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Trūkst jūsu atkārtotas izmantošanas? Paziņojiet mums {url}!",

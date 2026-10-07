@@ -490,6 +490,7 @@
 		"Resolved": "Çözüldü",
 		"Reuses": "Yeniden kullanımlar",
 		"ReusesKnown": "Bilinen yeniden kullanımlar",
+		"Save": "Kaydet",
 		"Search": "Ara",
 		"Select": "Seçiniz",
 		"Send": "Gönder",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Yalnızca yeni fiyatları yükleyin ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Tüm geçerli fiyatları yükleyin veya güncelleyin ({nbPrices})",
 		"WaitForExtraction": "Fişten otomatik olarak ürün çıkarılıyor, lütfen bekleyin..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Yeniden kullanımınız eksik mi? Bize bildirin {url}!",

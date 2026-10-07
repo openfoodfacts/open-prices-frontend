@@ -490,6 +490,7 @@
 		"Resolved": "נפתר",
 		"Reuses": "גזירות",
 		"ReusesKnown": "נגזרות ידועות",
+		"Save": "שמירה",
 		"Search": "חיפוש",
 		"Select": "בחירה",
 		"Send": "שליחה",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "להעלות מחירים חדשים בלבד ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "להעלות או לעדכן את כל המחירים התקפים ({nbPrices})",
 		"WaitForExtraction": "הפריטים מחולצים אוטומטית מהקבלה, נא להמתין…"
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "הגזירה שלך חסרה? נשמח לשמוע על כך דרך {url}!",

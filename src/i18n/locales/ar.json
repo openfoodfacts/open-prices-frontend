@@ -490,6 +490,7 @@
 		"Resolved": "تم الحل",
 		"Reuses": "إعادة الاستخدام",
 		"ReusesKnown": "الاستخدامات المعروفة",
+		"Save": "حفظ",
 		"Search": "بحث",
 		"Select": "يختار",
 		"Send": "إرسال",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "قم بتحميل الأسعار الجديدة فقط ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "قم بتحميل أو تحديث جميع الأسعار الصالحة ({nbPrices})",
 		"WaitForExtraction": "جارٍ استخراج العناصر من الإيصال تلقائياً، يرجى الانتظار..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "إعادة الاستخدام الخاصة بك مفقودة؟ دعنا نعرف {url}!",

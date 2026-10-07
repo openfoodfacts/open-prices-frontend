@@ -490,6 +490,7 @@
 		"Resolved": "Αποφασισμένος",
 		"Reuses": "Επαναχρήσεις",
 		"ReusesKnown": "Γνωστές επαναχρήσεις",
+		"Save": "Αποθήκευση",
 		"Search": "Αναζήτηση",
 		"Select": "Επιλέγω",
 		"Send": "Αποστολή",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Μεταφόρτωση μόνο νέων τιμών ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Μεταφόρτωση ή ενημέρωση όλων των έγκυρων τιμών ({nbPrices})",
 		"WaitForExtraction": "Αυτόματη εξαγωγή στοιχείων από την απόδειξη, παρακαλώ περιμένετε..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Λείπει η επαναχρησιμοποίησή σας; Ενημερώστε μας {url}!",

@@ -490,6 +490,7 @@
 		"Resolved": "Vyřešeno",
 		"Reuses": "Opakované použití",
 		"ReusesKnown": "Známá opakovaná použití",
+		"Save": "Uložit",
 		"Search": "Vyhledat",
 		"Select": "Vybrat",
 		"Send": "Odeslat",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Nahrát pouze nové ceny ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Nahrajte nebo aktualizujte všechny platné ceny ({nbPrices})",
 		"WaitForExtraction": "Automatické extrahování položek z účtenky, čekejte prosím..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Chybí vaše opětovné použití? Dejte nám vědět {url}!",

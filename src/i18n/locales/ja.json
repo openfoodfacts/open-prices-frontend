@@ -490,6 +490,7 @@
 		"Resolved": "解決済み",
 		"Reuses": "再利用",
 		"ReusesKnown": "既知の再利用",
+		"Save": "保存",
 		"Search": "検索",
 		"Select": "選択",
 		"Send": "送信",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "新しい価格のみをアップロードする（{nbPrices}）",
 		"UploadOrUpdateAllValidPrices": "有効な価格をすべてアップロードまたは更新します（{nbPrices}）",
 		"WaitForExtraction": "領収書から項目を自動的に抽出しています。お待ちください..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "再利用が見つかりませんか？お知らせください {url}!",

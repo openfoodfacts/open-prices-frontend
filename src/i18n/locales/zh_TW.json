@@ -490,6 +490,7 @@
 		"Resolved": "已解決",
 		"Reuses": "重複使用",
 		"ReusesKnown": "Known reuses",
+		"Save": "儲存",
 		"Search": "搜尋",
 		"Select": "Select",
 		"Send": "發送",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
 		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "你的重複使用資訊遺失了嗎？告訴我們 {url}！",
