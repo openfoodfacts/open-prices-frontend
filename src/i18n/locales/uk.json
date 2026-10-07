@@ -490,6 +490,7 @@
 		"Resolved": "Вирішено",
 		"Reuses": "Повторне використання",
 		"ReusesKnown": "Відомі повторні використання",
+		"Save": "Зберегти",
 		"Search": "Пошук",
 		"Select": "Обрати",
 		"Send": "Надіслати",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Завантажити лише нові ціни ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Завантажте або оновіть усі дійсні ціни ({nbPrices})",
 		"WaitForExtraction": "Автоматичне вилучення елементів з чека, зачекайте..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Немає повторного використання? Дайте нам знати {url}!",
