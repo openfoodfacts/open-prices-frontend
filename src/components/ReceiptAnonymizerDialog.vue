@@ -12,38 +12,41 @@
           <div v-if="step === 1">
             <v-card-text>
               <h2 class="text-h6">
-                {{ $t('ReceiptAnonymize.WaitingForReceiptUpload') }}
+                {{ $t("ReceiptAnonymize.WaitingForReceiptUpload") }}
               </h2>
-              <v-progress-linear
-                indeterminate
-              />
+              <v-progress-linear indeterminate />
             </v-card-text>
           </div>
           <div v-if="step === 2">
             <v-card-text>
               <h2 class="text-h6">
-                {{ $t('ReceiptAnonymize.WaitingForAnonymizationPrediction') }}
+                {{ $t("ReceiptAnonymize.WaitingForAnonymizationPrediction") }}
               </h2>
-              <v-progress-linear
-                indeterminate
-              />
+              <v-progress-linear indeterminate />
             </v-card-text>
           </div>
           <div v-else-if="step === 3">
             <v-card-text>
               <h2 class="text-h6">
-                {{ $t('ReceiptAnonymize.EditRedactBoxes') }}
+                {{ $t("ReceiptAnonymize.EditRedactBoxes") }}
               </h2>
-              <VueZoomable v-if="proofImageSrc" v-model:zoom="zoomLevel" v-model:pan="panLevel" :maxZoom="10" :panEnabled="!imageEditMode" selector="#content">
-                <div id="content" style="width: 100%;">
-                  <ContributionAssistantDrawCanvas 
-                    ref="ContributionAssistantDrawCanvas" 
-                    :imageSrc="proofImageSrc" 
-                    :boundingBoxesFromServer="boundingBoxesFromServer" 
+              <VueZoomable
+                v-if="proofImageSrc"
+                v-model:zoom="zoomLevel"
+                v-model:pan="panLevel"
+                :maxZoom="10"
+                :panEnabled="!imageEditMode"
+                selector="#content"
+              >
+                <div id="content" style="width: 100%">
+                  <ContributionAssistantDrawCanvas
+                    ref="ContributionAssistantDrawCanvas"
+                    :imageSrc="proofImageSrc"
+                    :boundingBoxesFromServer="boundingBoxesFromServer"
                     :preventDrawing="!imageEditMode"
                     :removeMode="boxRemoveMode"
                     mode="Redact"
-                    @extractedLabels="onProductImageDraw($event)" 
+                    @extractedLabels="onProductImageDraw($event)"
                   />
                 </div>
               </VueZoomable>
@@ -74,7 +77,7 @@
                     :loading="loading"
                     @click="save"
                   >
-                    {{ $t('Common.Save') }}
+                    {{ $t("Common.Save") }}
                   </v-btn>
                 </v-col>
               </v-row>
@@ -87,28 +90,27 @@
 </template>
 
 <script>
-
-import { defineAsyncComponent } from 'vue'
-import Compressor from 'compressorjs'
-import constants from '../constants'
-import openPricesApi from '../services/openPricesApi'
-import proof_utils from '../utils/proof.js'
-import "vue-zoomable/dist/style.css"
+import { defineAsyncComponent } from "vue";
+import Compressor from "compressorjs";
+import constants from "../constants";
+import openPricesApi from "../services/openPricesApi";
+import proof_utils from "../utils/proof.js";
+import "vue-zoomable/dist/style.css";
 
 export default {
   components: {
-    ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
-    VueZoomable: defineAsyncComponent(() => import('vue-zoomable')),
+    ContributionAssistantDrawCanvas: defineAsyncComponent(
+      () => import("../components/ContributionAssistantDrawCanvas.vue"),
+    ),
+    VueZoomable: defineAsyncComponent(() => import("vue-zoomable")),
   },
   props: {
     proofImage: {
       type: Object,
-      default: () => ({
-
-      })
+      default: () => ({}),
     },
   },
-  emits: ['done'],
+  emits: ["done"],
   data() {
     return {
       step: 0,
@@ -116,38 +118,42 @@ export default {
       extractedBoundings: [],
       imageEditMode: false,
       boxRemoveMode: false,
-      panLevel: {x: 0, y: 0},
+      panLevel: { x: 0, y: 0 },
       proofImageSrc: null,
       zoomLevel: 1,
       loading: false,
-      draftProof: null
-    }
+      draftProof: null,
+    };
   },
   computed: {
     dialogHeight() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
     dialogWidth() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
   },
   watch: {
-    boxRemoveMode(newBoxRemoveMode, oldBoxRemoveMode) {  // eslint-disable-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
+    boxRemoveMode(newBoxRemoveMode, oldBoxRemoveMode) {
       if (newBoxRemoveMode) {
-        this.imageEditMode = false
+        this.imageEditMode = false;
       }
     },
-    imageEditMode(newImageEditMode, oldImageEditMode) {  // eslint-disable-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
+    imageEditMode(newImageEditMode, oldImageEditMode) {
       if (newImageEditMode) {
-        this.boxRemoveMode = false
+        this.boxRemoveMode = false;
       }
-    }
+    },
   },
   mounted() {
     if (this.proofImage) {
-      this.proofImageSrc = proof_utils.getImageFullUrl(this.proofImage.file_path)
-      this.step = 1
-      this.uploadProofAsDraft(this.proofImage)
+      this.proofImageSrc = proof_utils.getImageFullUrl(
+        this.proofImage.file_path,
+      );
+      this.step = 1;
+      this.uploadProofAsDraft(this.proofImage);
     }
   },
   methods: {
@@ -155,79 +161,91 @@ export default {
       return new Promise((resolve, reject) => {
         new Compressor(proofImage, {
           success: resolve,
-          error: reject
-        })
-      })
-      .catch((error) => {
-        alert('Error: compression')
-        console.log(JSON.stringify(error))
-      })
+          error: reject,
+        });
+      }).catch((error) => {
+        alert("Error: compression");
+        console.log(JSON.stringify(error));
+      });
     },
     uploadProofAsDraft(proofImage) {
-      this.loading = true
-      this.compressProof(proofImage)
-        .then((proofImageCompressed) => {
-          openPricesApi
-            .createDraftProof(proofImageCompressed, constants.PROOF_TYPE_RECEIPT)
-            .then((data) => {
-              this.loading = false
-              this.draftProof = data
-              this.loadProofAnonymizationPrediction()
-            })
-            .catch((error) => {
-              alert(`Error: ${error.message}`)
-              console.log(error)
-              this.loading = false
-            })
-        })
+      this.loading = true;
+      this.compressProof(proofImage).then((proofImageCompressed) => {
+        openPricesApi
+          .createDraftProof(proofImageCompressed, constants.PROOF_TYPE_RECEIPT)
+          .then((data) => {
+            this.loading = false;
+            this.draftProof = data;
+            this.loadProofAnonymizationPrediction();
+          })
+          .catch((error) => {
+            alert(`Error: ${error.message}`);
+            console.log(error);
+            this.loading = false;
+          });
+      });
     },
     loadProofAnonymizationPrediction() {
-      this.step = 2
-      this.loading = true
-      let tries = 0
-      const maxTries = 5
+      this.step = 2;
+      this.loading = true;
+      let tries = 0;
+      const maxTries = 5;
       const load = () => {
-        openPricesApi.getDraftProofById(this.draftProof.id).then(draftProof => {
-          this.draftProof = draftProof
-          this.proofImageSrc = proof_utils.getImageFullUrl(this.draftProof.file_path)
-          const anonymizationPrediction = (draftProof?.predictions || []).find(prediction => prediction.type === "RECEIPT_ANONYMIZATION")
-          if (anonymizationPrediction?.data?.words) {
-            this.boundingBoxesFromServer = anonymizationPrediction.data.words.map(word => {
-              return { boundingBox: [
-                word.bounding_box[1], // y_min
-                word.bounding_box[0], // x_min
-                word.bounding_box[3], // y_max
-                word.bounding_box[2], // x_max
-              ]}
-            })
-            this.loading = false
-            this.step = 3
-          } else {
-            tries += 1
-            if (tries < maxTries) {
-              setTimeout(load, 5000) 
+        openPricesApi
+          .getDraftProofById(this.draftProof.id)
+          .then((draftProof) => {
+            this.draftProof = draftProof;
+            this.proofImageSrc = proof_utils.getImageFullUrl(
+              this.draftProof.file_path,
+            );
+            const anonymizationPrediction = (
+              draftProof?.predictions || []
+            ).find((prediction) => prediction.type === "RECEIPT_ANONYMIZATION");
+            if (anonymizationPrediction?.data?.words) {
+              this.boundingBoxesFromServer =
+                anonymizationPrediction.data.words.map((word) => {
+                  return {
+                    boundingBox: [
+                      word.bounding_box[1], // y_min
+                      word.bounding_box[0], // x_min
+                      word.bounding_box[3], // y_max
+                      word.bounding_box[2], // x_max
+                    ],
+                  };
+                });
+              this.loading = false;
+              this.step = 3;
             } else {
-              this.boundingBoxesFromServer = []
-              this.loading = false
-              this.step = 3
+              tries += 1;
+              if (tries < maxTries) {
+                setTimeout(load, 5000);
+              } else {
+                this.boundingBoxesFromServer = [];
+                this.loading = false;
+                this.step = 3;
+              }
             }
-          }
-        })
-      }
-      load()
+          });
+      };
+      load();
     },
     onProductImageDraw(extractedBoundings) {
-      this.extractedBoundings = extractedBoundings.map(extract => extract.redactBoundingBox)
+      this.extractedBoundings = extractedBoundings.map(
+        (extract) => extract.redactBoundingBox,
+      );
     },
     save() {
-      this.loading = true
-      openPricesApi.anonymizeDraftProof(this.draftProof.id, this.extractedBoundings).then((response) => {  // eslint-disable-line no-unused-vars
-        this.$emit('done', this.draftProof)
-      })
-      .finally(() => {
-        this.loading = false
-      })
-    }
+      this.loading = true;
+      openPricesApi
+        .anonymizeDraftProof(this.draftProof.id, this.extractedBoundings)
+        // eslint-disable-next-line no-unused-vars
+        .then((response) => {
+          this.$emit("done", this.draftProof);
+        })
+        .finally(() => {
+          this.loading = false;
+        });
+    },
   },
-}
+};
 </script>

@@ -1,6 +1,12 @@
 <template>
-  <v-chip v-if="hasProductLabels" label size="small" density="comfortable" @click="showProductLabelsDialog">
-    <i>{{ $t('ProductCard.LabelTotal', { count: productLabels.length }) }}</i>
+  <v-chip
+    v-if="hasProductLabels"
+    label
+    size="small"
+    density="comfortable"
+    @click="showProductLabelsDialog"
+  >
+    <i>{{ $t("ProductCard.LabelTotal", { count: productLabels.length }) }}</i>
     <ProductLabelsDialog
       v-if="productLabelsDialog"
       v-model="productLabelsDialog"
@@ -10,37 +16,39 @@
   </v-chip>
   <v-chip v-else label size="small" density="comfortable">
     <!-- prepend-icon="mdi-help" color="warning" -->
-    <i>{{ $t('ProductCard.LabelTotal', { count: 0 }) }}</i>
+    <i>{{ $t("ProductCard.LabelTotal", { count: 0 }) }}</i>
   </v-chip>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from "vue";
 
 export default {
   components: {
-    ProductLabelsDialog: defineAsyncComponent(() => import('../components/ProductLabelsDialog.vue')),
+    ProductLabelsDialog: defineAsyncComponent(
+      () => import("../components/ProductLabelsDialog.vue"),
+    ),
   },
   props: {
     productLabels: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   data() {
     return {
-      productLabelsDialog: false
-    }
+      productLabelsDialog: false,
+    };
   },
   computed: {
     hasProductLabels() {
-      return this.productLabels && this.productLabels.length
-    }
+      return this.productLabels && this.productLabels.length;
+    },
   },
   methods: {
     showProductLabelsDialog() {
-      this.productLabelsDialog = true
+      this.productLabelsDialog = true;
     },
-  }
-}
+  },
+};
 </script>

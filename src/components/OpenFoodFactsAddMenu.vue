@@ -1,7 +1,12 @@
 <template>
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
-      <v-btn v-bind="props" size="small" prepend-icon="mdi-plus" append-icon="mdi-menu-down">
+      <v-btn
+        v-bind="props"
+        size="small"
+        prepend-icon="mdi-plus"
+        append-icon="mdi-menu-down"
+      >
         <i18n-t keypath="Common.AddToOFF" tag="span">
           <template #name>
             {{ OFF_NAME }}
@@ -11,7 +16,12 @@
     </template>
     <v-list>
       <template v-for="(source, index) in sourceList" :key="source.key">
-        <v-list-item :slim="true" :href="getSourceAddUrlWithLocale(source)" target="_blank" rel="noopener noreferrer">
+        <v-list-item
+          :slim="true"
+          :href="getSourceAddUrlWithLocale(source)"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <template #prepend>
             <v-icon :icon="source.icon" />
           </template>
@@ -31,36 +41,38 @@
 </template>
 
 <script>
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import constants from '../constants'
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import constants from "../constants";
 
 export default {
   props: {
     productCode: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       OFF_NAME: constants.OFF_NAME,
       sourceList: constants.PRODUCT_SOURCE_LIST,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
   },
   methods: {
     getSourceUrl(source) {
-      return constants[`${source.key.toUpperCase()}_URL`]
+      return constants[`${source.key.toUpperCase()}_URL`];
     },
     getSourceAddUrlWithLocale(source) {
-      const SOURCE_ADD_URL = `${this.getSourceUrl(source)}/cgi/product.pl?type=search_or_add&action=process&code=${this.productCode}`
+      const SOURCE_ADD_URL = `${this.getSourceUrl(source)}/cgi/product.pl?type=search_or_add&action=process&code=${this.productCode}`;
       // user.country can be null/undefined (unset in settings, older persisted state): keep the 'world' URL
-      const country = this.appStore.user.country
-      return country ? SOURCE_ADD_URL.replace('world', country.toLowerCase()) : SOURCE_ADD_URL
+      const country = this.appStore.user.country;
+      return country
+        ? SOURCE_ADD_URL.replace("world", country.toLowerCase())
+        : SOURCE_ADD_URL;
     },
-  }
-}
+  },
+};
 </script>

@@ -19,16 +19,15 @@
   </v-row>
 </template>
 
-
 <script>
-import constants from '../constants'
+import constants from "../constants";
 
 export default {
   data() {
     return {
       PROOF_TYPE_PRICE_TAG_ICON: constants.PROOF_TYPE_PRICE_TAG_ICON,
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
-    }
+    };
   },
-}
+};
 </script>

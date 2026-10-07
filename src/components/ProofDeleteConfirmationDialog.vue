@@ -10,7 +10,12 @@
       <v-card-text>
         <v-row>
           <v-col cols="12">
-            <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />
+            <ProofCard
+              :proof="proof"
+              :hideProofHeader="true"
+              :hideActionMenuButton="true"
+              :readonly="true"
+            />
           </v-col>
         </v-row>
         <!-- moderator-only alerts -->
@@ -28,7 +33,7 @@
         <v-row>
           <v-col cols="12">
             <p>
-              {{ $t('ProofDelete.Confirmation') }}
+              {{ $t("ProofDelete.Confirmation") }}
             </p>
           </v-col>
         </v-row>
@@ -46,7 +51,7 @@
           :loading="loading"
           @click="deleteProof"
         >
-          {{ $t('ProofDelete.Delete') }}
+          {{ $t("ProofDelete.Delete") }}
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -54,64 +59,69 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openPricesApi from '../services/openPricesApi'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openPricesApi from "../services/openPricesApi";
 
 export default {
   components: {
-    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
-    ModerationAlert: defineAsyncComponent(() => import('../components/ModerationAlert.vue')),
+    ProofCard: defineAsyncComponent(
+      () => import("../components/ProofCard.vue"),
+    ),
+    ModerationAlert: defineAsyncComponent(
+      () => import("../components/ModerationAlert.vue"),
+    ),
   },
   props: {
     proof: {
       type: Object,
-      default: null
+      default: null,
     },
   },
-  emits: ['delete', 'close'],
+  emits: ["delete", "close"],
   data() {
     return {
       loading: false,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     username() {
-      return this.appStore.user.username
+      return this.appStore.user.username;
     },
     userIsProofOwner() {
-      return this.username && this.proof && this.proof.owner === this.username
+      return this.username && this.proof && this.proof.owner === this.username;
     },
     userIsModerator() {
-      return this.username && this.appStore.user.is_moderator
+      return this.username && this.appStore.user.is_moderator;
     },
     dialogHeight() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
     dialogWidth() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
   },
   methods: {
     deleteProof() {
-      this.loading = true
+      this.loading = true;
       openPricesApi
         .deleteProof(this.proof.id)
-        .then((response) => {  // eslint-disable-line no-unused-vars
+        // eslint-disable-next-line no-unused-vars
+        .then((response) => {
           // if response.status == 204
-          this.deleteSuccessMessage = true
-          this.$emit('delete')
-          this.close()
+          this.deleteSuccessMessage = true;
+          this.$emit("delete");
+          this.close();
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     close() {
-      this.$emit('close')
-    }
-  }
-}
+      this.$emit("close");
+    },
+  },
+};
 </script>

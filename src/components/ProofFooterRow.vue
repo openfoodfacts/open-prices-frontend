@@ -2,66 +2,136 @@
   <v-row>
     <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <span class="chip-group">
-        <ProofChip v-if="showProofChip" :proof="proof" :withLabel="showProofChip" :readonly="true" />
+        <ProofChip
+          v-if="showProofChip"
+          :proof="proof"
+          :withLabel="showProofChip"
+          :readonly="true"
+        />
         <ProofTypeChip v-if="!hideProofType" :proofType="proof.type" />
         <ProofUserConsumptionChip v-if="showReceiptOwnerConsumption" />
-        <ProofReceiptPriceCountChip v-if="showReceiptPriceCount" :totalCount="proof.receipt_price_count" />
-        <ProofReceiptPriceTotalChip v-if="showReceiptPriceTotal" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
-        <ProofReceiptOnlineDeliveryCostsChip v-if="showReceiptOnlineDeliveryCosts" :price="proof.receipt_online_delivery_costs" :currency="proof.currency" />
-        <PriceCountChip v-if="!hidePriceCount" :count="proof.price_count" :withLabel="true" source="proof" @click="goToProof()" />
-        <LocationChip :location="proof.location" :locationId="proof.location_id" :readonly="readonly" :showErrorIfMissing="true" />
-        <DateChip :date="proof.date" :showErrorIfMissing="true" :readonly="readonly" />
-        <CurrencyChip :currency="proof.currency" :showErrorIfMissing="true" :readonly="readonly" />
-        <UserChip v-if="!hideProofOwner" :username="proof.owner" :readonly="readonly" />
-        <UserCommentChip v-if="proof.owner_comment" :comment="proof.owner_comment" />
+        <ProofReceiptPriceCountChip
+          v-if="showReceiptPriceCount"
+          :totalCount="proof.receipt_price_count"
+        />
+        <ProofReceiptPriceTotalChip
+          v-if="showReceiptPriceTotal"
+          :totalCount="proof.receipt_price_total"
+          :currency="proof.currency"
+        />
+        <ProofReceiptOnlineDeliveryCostsChip
+          v-if="showReceiptOnlineDeliveryCosts"
+          :price="proof.receipt_online_delivery_costs"
+          :currency="proof.currency"
+        />
+        <PriceCountChip
+          v-if="!hidePriceCount"
+          :count="proof.price_count"
+          :withLabel="true"
+          source="proof"
+          @click="goToProof()"
+        />
+        <LocationChip
+          :location="proof.location"
+          :locationId="proof.location_id"
+          :readonly="readonly"
+          :showErrorIfMissing="true"
+        />
+        <DateChip
+          :date="proof.date"
+          :showErrorIfMissing="true"
+          :readonly="readonly"
+        />
+        <CurrencyChip
+          :currency="proof.currency"
+          :showErrorIfMissing="true"
+          :readonly="readonly"
+        />
+        <UserChip
+          v-if="!hideProofOwner"
+          :username="proof.owner"
+          :readonly="readonly"
+        />
+        <UserCommentChip
+          v-if="proof.owner_comment"
+          :comment="proof.owner_comment"
+        />
         <RelativeDateTimeChip :dateTime="proof.created" />
       </span>
     </v-col>
     <v-col v-if="!hideActionMenuButton" cols="1">
-      <ProofActionMenuButton :proof="proof" :showPriceTagsBoundingBoxes="showPriceTagsBoundingBoxes" @update:showPriceTagsBoundingBoxes="handleShowPriceTagsBoundingBoxes" />
+      <ProofActionMenuButton
+        :proof="proof"
+        :showPriceTagsBoundingBoxes="showPriceTagsBoundingBoxes"
+        @update:showPriceTagsBoundingBoxes="handleShowPriceTagsBoundingBoxes"
+      />
     </v-col>
   </v-row>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import constants from '../constants'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import constants from "../constants";
 
 export default {
   components: {
-    ProofChip: defineAsyncComponent(() => import('../components/ProofChip.vue')),
-    ProofTypeChip: defineAsyncComponent(() => import('../components/ProofTypeChip.vue')),
-    ProofUserConsumptionChip: defineAsyncComponent(() => import('../components/ProofUserConsumptionChip.vue')),
-    ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
-    ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
-    ProofReceiptOnlineDeliveryCostsChip: defineAsyncComponent(() => import('../components/ProofReceiptOnlineDeliveryCostsChip.vue')),
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
-    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
-    CurrencyChip: defineAsyncComponent(() => import('../components/CurrencyChip.vue')),
-    UserChip: defineAsyncComponent(() => import('../components/UserChip.vue')),
-    UserCommentChip: defineAsyncComponent(() => import('../components/UserCommentChip.vue')),
-    RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
-    ProofActionMenuButton: defineAsyncComponent(() => import('../components/ProofActionMenuButton.vue'))
+    ProofChip: defineAsyncComponent(
+      () => import("../components/ProofChip.vue"),
+    ),
+    ProofTypeChip: defineAsyncComponent(
+      () => import("../components/ProofTypeChip.vue"),
+    ),
+    ProofUserConsumptionChip: defineAsyncComponent(
+      () => import("../components/ProofUserConsumptionChip.vue"),
+    ),
+    ProofReceiptPriceCountChip: defineAsyncComponent(
+      () => import("../components/ProofReceiptPriceCountChip.vue"),
+    ),
+    ProofReceiptPriceTotalChip: defineAsyncComponent(
+      () => import("../components/ProofReceiptPriceTotalChip.vue"),
+    ),
+    ProofReceiptOnlineDeliveryCostsChip: defineAsyncComponent(
+      () => import("../components/ProofReceiptOnlineDeliveryCostsChip.vue"),
+    ),
+    PriceCountChip: defineAsyncComponent(
+      () => import("../components/PriceCountChip.vue"),
+    ),
+    LocationChip: defineAsyncComponent(
+      () => import("../components/LocationChip.vue"),
+    ),
+    DateChip: defineAsyncComponent(() => import("../components/DateChip.vue")),
+    CurrencyChip: defineAsyncComponent(
+      () => import("../components/CurrencyChip.vue"),
+    ),
+    UserChip: defineAsyncComponent(() => import("../components/UserChip.vue")),
+    UserCommentChip: defineAsyncComponent(
+      () => import("../components/UserCommentChip.vue"),
+    ),
+    RelativeDateTimeChip: defineAsyncComponent(
+      () => import("../components/RelativeDateTimeChip.vue"),
+    ),
+    ProofActionMenuButton: defineAsyncComponent(
+      () => import("../components/ProofActionMenuButton.vue"),
+    ),
   },
   props: {
     proof: {
       type: Object,
-      default: null
+      default: null,
     },
     hideProofType: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hidePriceCount: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideProofOwner: {
       type: Boolean,
-      default: true
+      default: true,
     },
     hideActionMenuButton: {
       type: Boolean,
@@ -78,43 +148,59 @@ export default {
     showPriceTagsBoundingBoxes: {
       type: Boolean,
       default: false,
-    }
+    },
   },
-  emits: ['update:showPriceTagsBoundingBoxes'],
+  emits: ["update:showPriceTagsBoundingBoxes"],
   computed: {
     ...mapStores(useAppStore),
     username() {
-      return this.appStore.user.username
+      return this.appStore.user.username;
     },
     userIsProofOwner() {
-      return this.username && this.proof && (this.proof.owner === this.username)
+      return this.username && this.proof && this.proof.owner === this.username;
     },
     proofIsTypeReceipt() {
-      return this.proof && (this.proof.type === constants.PROOF_TYPE_RECEIPT)
+      return this.proof && this.proof.type === constants.PROOF_TYPE_RECEIPT;
     },
     showReceiptOwnerConsumption() {
-      return this.userIsProofOwner && this.proofIsTypeReceipt && this.proof.owner_consumption
+      return (
+        this.userIsProofOwner &&
+        this.proofIsTypeReceipt &&
+        this.proof.owner_consumption
+      );
     },
     showReceiptPriceCount() {
-      return this.userIsProofOwner && this.proofIsTypeReceipt && this.proof.receipt_price_count
+      return (
+        this.userIsProofOwner &&
+        this.proofIsTypeReceipt &&
+        this.proof.receipt_price_count
+      );
     },
     showReceiptPriceTotal() {
-      return this.userIsProofOwner && this.proofIsTypeReceipt && this.proof.receipt_price_total
+      return (
+        this.userIsProofOwner &&
+        this.proofIsTypeReceipt &&
+        this.proof.receipt_price_total
+      );
     },
     showReceiptOnlineDeliveryCosts() {
-      return this.userIsProofOwner && this.proofIsTypeReceipt && this.proof.receipt_online_delivery_costs
+      return (
+        this.userIsProofOwner &&
+        this.proofIsTypeReceipt &&
+        this.proof.receipt_online_delivery_costs
+      );
     },
   },
   methods: {
     goToProof() {
       if (this.readonly) {
-        return
+        return;
       }
-      this.$router.push({ path: `/proofs/${this.proof.id}` })
+      this.$router.push({ path: `/proofs/${this.proof.id}` });
     },
     handleShowPriceTagsBoundingBoxes($event) {
-      this.$emit('update:showPriceTagsBoundingBoxes', $event)
+      this.$emit("update:showPriceTagsBoundingBoxes", $event);
     },
-  }
-}
+  },
+};
 </script>

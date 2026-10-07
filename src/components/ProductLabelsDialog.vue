@@ -17,23 +17,25 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from "vue";
 
 export default {
   components: {
-    LabelTagChip: defineAsyncComponent(() => import('../components/LabelTagChip.vue')),
+    LabelTagChip: defineAsyncComponent(
+      () => import("../components/LabelTagChip.vue"),
+    ),
   },
   props: {
     labels: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
-  emits: ['close'],
+  emits: ["close"],
   methods: {
     close() {
-      this.$emit('close')
+      this.$emit("close");
     },
-  }
-}
+  },
+};
 </script>

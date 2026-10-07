@@ -10,37 +10,60 @@
       <v-card-text>
         <v-row>
           <v-col cols="12">
-            <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="false" :hideActionMenuButton="true" :readonly="true" />
-            <ProofCard v-else-if="proof" :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />
+            <PriceCard
+              v-if="price"
+              :price="price"
+              :product="price.product"
+              :hidePriceFooterRow="false"
+              :hideActionMenuButton="true"
+              :readonly="true"
+            />
+            <ProofCard
+              v-else-if="proof"
+              :proof="proof"
+              :hideProofHeader="true"
+              :hideActionMenuButton="true"
+              :readonly="true"
+            />
           </v-col>
         </v-row>
         <!-- form -->
         <v-row>
           <v-col cols="12">
             <div class="text-body-2 required">
-              {{ $t('Common.Reason') }}
+              {{ $t("Common.Reason") }}
             </div>
             <v-select
               v-model="flagForm.reason"
-              :class="flagForm.reason ? 'outline-border-success' : 'outline-border-error'"
+              :class="
+                flagForm.reason
+                  ? 'outline-border-success'
+                  : 'outline-border-error'
+              "
               density="compact"
               variant="outlined"
               :items="moderationFlagReasonList"
-              :item-title="item => $t('Common.' + item.value)"
-              :item-value="item => item.key"
+              :item-title="(item) => $t('Common.' + item.value)"
+              :item-value="(item) => item.key"
               hide-details="auto"
             />
           </v-col>
         </v-row>
         <v-row class="mt-0">
           <v-col v-if="!displayCommentField" cols="12">
-            <a class="fake-link text-body-2" role="link" tabindex="0" @click="displayCommentField = true" @keydown.enter="displayOwnerCommentField = true">
-              {{ $t('Common.AddComment') }}
+            <a
+              class="fake-link text-body-2"
+              role="link"
+              tabindex="0"
+              @click="displayCommentField = true"
+              @keydown.enter="displayOwnerCommentField = true"
+            >
+              {{ $t("Common.AddComment") }}
             </a>
           </v-col>
           <v-col v-else cols="12">
             <div class="text-body-2">
-              {{ $t('Common.Comment') }}
+              {{ $t("Common.Comment") }}
             </div>
             <v-textarea
               v-model="flagForm.comment"
@@ -68,7 +91,7 @@
           :disabled="!formFilled"
           @click="createFlag"
         >
-          {{ $t('Common.Send') }}
+          {{ $t("Common.Send") }}
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -76,98 +99,103 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
 
 export default {
   components: {
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue'))
+    PriceCard: defineAsyncComponent(
+      () => import("../components/PriceCard.vue"),
+    ),
+    ProofCard: defineAsyncComponent(
+      () => import("../components/ProofCard.vue"),
+    ),
   },
   props: {
     price: {
       type: Object,
-      default: null
+      default: null,
     },
     proof: {
       type: Object,
-      default: null
-    }
+      default: null,
+    },
   },
-  emits: ['flag', 'close'],
+  emits: ["flag", "close"],
   data() {
     return {
       flagForm: {
         reason: null,
-        comment: '',
+        comment: "",
       },
       // moderationFlagReasonList: constants.MODERATION_FLAG_REASON_LIST,  // see below
       displayCommentField: false,
       loading: false,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     username() {
-      return this.appStore.user.username
+      return this.appStore.user.username;
     },
     dialogHeight() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
     dialogWidth() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
     formFilled() {
-      return !!this.flagForm.reason
+      return !!this.flagForm.reason;
     },
     objectType() {
       if (this.price) {
-        return 'price'
+        return "price";
       } else if (this.proof) {
-        return 'proof'
+        return "proof";
       }
-      return null
+      return null;
     },
     objectId() {
       if (this.price) {
-        return this.price.id
+        return this.price.id;
       } else if (this.proof) {
-        return this.proof.id
+        return this.proof.id;
       }
-      return null
+      return null;
     },
     moderationFlagReasonList() {
       // filter reasons based on object type
-      return constants.MODERATION_FLAG_REASON_LIST.filter(reason => {
+      return constants.MODERATION_FLAG_REASON_LIST.filter((reason) => {
         if (!reason.restrictTo) {
-          return true
+          return true;
         }
         if (this.objectType && reason.restrictTo.includes(this.objectType)) {
-          return true
+          return true;
         }
-        return false
-      })
-    }
+        return false;
+      });
+    },
   },
   methods: {
     createFlag() {
-      this.loading = true
+      this.loading = true;
       openPricesApi
         .createFlag(this.objectType, this.objectId, this.flagForm)
-        .then((response) => {  // eslint-disable-line no-unused-vars
-          this.$emit('flag')
-          this.close()
+        // eslint-disable-next-line no-unused-vars
+        .then((response) => {
+          this.$emit("flag");
+          this.close();
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     close() {
-      this.$emit('close')
+      this.$emit("close");
     },
-  }
-}
+  },
+};
 </script>

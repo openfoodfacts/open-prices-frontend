@@ -1,10 +1,14 @@
 <template>
   <v-btn :style="style" icon size="small" density="comfortable" variant="text">
     <v-icon :icon="ACTION_MENU_ICON" />
-    <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
+    <v-menu
+      activator="parent"
+      scroll-strategy="close"
+      transition="slide-y-transition"
+    >
       <v-list>
         <v-list-subheader class="text-uppercase" :slim="true" disabled>
-          {{ $t('Common.Currency') }}
+          {{ $t("Common.Currency") }}
         </v-list-subheader>
         <v-divider />
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
@@ -14,32 +18,34 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
+import { defineAsyncComponent } from "vue";
+import constants from "../constants";
 
 export default {
   components: {
-    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue'))
+    ShareLink: defineAsyncComponent(
+      () => import("../components/ShareLink.vue"),
+    ),
   },
   props: {
     currency: {
       type: String,
-      default: null
+      default: null,
     },
     style: {
       type: String,
-      default: 'position:absolute;bottom:6px;right:0;'
-    }
+      default: "position:absolute;bottom:6px;right:0;",
+    },
   },
   data() {
     return {
-      ACTION_MENU_ICON: constants.ACTION_MENU_ICON
-    }
+      ACTION_MENU_ICON: constants.ACTION_MENU_ICON,
+    };
   },
   computed: {
     getShareLinkUrl() {
-      return `/currencies/${this.currency}`
-    }
-  }
-}
+      return `/currencies/${this.currency}`;
+    },
+  },
+};
 </script>

@@ -1,27 +1,53 @@
 <template>
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
-      <v-btn v-bind="props" size="x-small" class="mr-2" prepend-icon="mdi-filter-variant" :append-icon="getCurrentFilterIcon" :active="hasCurrentFilter">
-        <span v-if="$vuetify.display.smAndUp">{{ $t('Common.FilterNoun') }}</span>
+      <v-btn
+        v-bind="props"
+        size="x-small"
+        class="mr-2"
+        prepend-icon="mdi-filter-variant"
+        :append-icon="getCurrentFilterIcon"
+        :active="hasCurrentFilter"
+      >
+        <span v-if="$vuetify.display.smAndUp">{{
+          $t("Common.FilterNoun")
+        }}</span>
       </v-btn>
     </template>
     <v-list>
       <!-- title -->
       <v-list-item class="d-sm-none text-uppercase" :slim="true" disabled>
-        {{ $t('Common.FilterNoun') }}
+        {{ $t("Common.FilterNoun") }}
       </v-list-item>
       <v-divider class="d-sm-none" />
       <!-- default filters -->
-      <v-list-item v-for="filter in filterList" :key="filter.key" :slim="true" :prepend-icon="(currentFilterList.includes(filter.key)) ? 'mdi-checkbox-marked' : 'mdi-checkbox-blank-outline'" :active="currentFilterList.includes(filter.key)" @click="selectFilter(filter.key)">
-        {{ $t('Common.' + filter.value) }}
+      <v-list-item
+        v-for="filter in filterList"
+        :key="filter.key"
+        :slim="true"
+        :prepend-icon="
+          currentFilterList.includes(filter.key)
+            ? 'mdi-checkbox-marked'
+            : 'mdi-checkbox-blank-outline'
+        "
+        :active="currentFilterList.includes(filter.key)"
+        @click="selectFilter(filter.key)"
+      >
+        {{ $t("Common." + filter.value) }}
       </v-list-item>
       <!-- extra filters -->
       <v-sheet v-if="showProductSourceFilter">
         <v-divider />
         <v-list-subheader class="text-uppercase">
-          {{ $t('Common.Source') }}
+          {{ $t("Common.Source") }}
         </v-list-subheader>
-        <v-list-item v-for="item in productSourceList" :key="item.key" :slim="true" :active="currentSource === item.key" @click="selectSource(item.key)">
+        <v-list-item
+          v-for="item in productSourceList"
+          :key="item.key"
+          :slim="true"
+          :active="currentSource === item.key"
+          @click="selectSource(item.key)"
+        >
           <v-icon>{{ item.icon }}</v-icon>
           {{ item.value }}
         </v-list-item>
@@ -29,29 +55,47 @@
       <v-sheet v-if="showPriceTypeFilter">
         <v-divider />
         <v-list-subheader class="text-uppercase">
-          {{ $t('Common.Type') }}
+          {{ $t("Common.Type") }}
         </v-list-subheader>
-        <v-list-item v-for="item in priceTypeList" :key="item.key" :slim="true" :active="currentType === item.key" @click="selectType(item.key)">
+        <v-list-item
+          v-for="item in priceTypeList"
+          :key="item.key"
+          :slim="true"
+          :active="currentType === item.key"
+          @click="selectType(item.key)"
+        >
           <v-icon>{{ item.icon }}</v-icon>
-          {{ $t('Common.' + item.value) }}
+          {{ $t("Common." + item.value) }}
         </v-list-item>
       </v-sheet>
       <v-sheet v-if="showProofTypeFilter">
         <v-divider />
         <v-list-subheader class="text-uppercase">
-          {{ $t('Common.Type') }}
+          {{ $t("Common.Type") }}
         </v-list-subheader>
-        <v-list-item v-for="item in proofTypeList" :key="item.key" :slim="true" :active="currentType === item.key" @click="selectType(item.key)">
+        <v-list-item
+          v-for="item in proofTypeList"
+          :key="item.key"
+          :slim="true"
+          :active="currentType === item.key"
+          @click="selectType(item.key)"
+        >
           <v-icon>{{ item.icon }}</v-icon>
-          {{ $t('Common.' + item.value) }}
+          {{ $t("Common." + item.value) }}
         </v-list-item>
       </v-sheet>
       <v-sheet v-if="showLocationTypeFilter">
         <v-divider />
         <v-list-subheader class="text-uppercase">
-          {{ $t('Common.Type') }}
+          {{ $t("Common.Type") }}
         </v-list-subheader>
-        <v-list-item v-for="item in locationTypeList" :key="item.key" :slim="true" :active="currentType === item.key" @click="selectType(item.key)">
+        <v-list-item
+          v-for="item in locationTypeList"
+          :key="item.key"
+          :slim="true"
+          :active="currentType === item.key"
+          @click="selectType(item.key)"
+        >
           <v-icon>{{ item.icon }}</v-icon>
           {{ item.value }}
         </v-list-item>
@@ -59,9 +103,15 @@
       <v-sheet v-if="showPriceProofKindFilter">
         <v-divider />
         <v-list-subheader class="text-uppercase">
-          {{ $t('Common.Group') }}
+          {{ $t("Common.Group") }}
         </v-list-subheader>
-        <v-list-item v-for="item in priceProofKindList" :key="item.key" :slim="true" :active="currentKind === item.key" @click="selectKind(item.key)">
+        <v-list-item
+          v-for="item in priceProofKindList"
+          :key="item.key"
+          :slim="true"
+          :active="currentKind === item.key"
+          @click="selectKind(item.key)"
+        >
           <v-icon>{{ item.icon }}</v-icon>
           {{ item.value }}
         </v-list-item>
@@ -69,9 +119,15 @@
       <v-sheet v-if="showFlagTypeFilter">
         <v-divider />
         <v-list-subheader class="text-uppercase">
-          {{ $t('Common.Type') }}
+          {{ $t("Common.Type") }}
         </v-list-subheader>
-        <v-list-item v-for="item in flagTypeList" :key="item.key" :slim="true" :active="currentType === item.key" @click="selectType(item.key)">
+        <v-list-item
+          v-for="item in flagTypeList"
+          :key="item.key"
+          :slim="true"
+          :active="currentType === item.key"
+          @click="selectType(item.key)"
+        >
           <v-icon>{{ item.icon }}</v-icon>
           {{ item.value }}
         </v-list-item>
@@ -79,10 +135,16 @@
       <v-sheet v-if="showFlagReasonFilter">
         <v-divider />
         <v-list-subheader class="text-uppercase">
-          {{ $t('Common.Reason') }}
+          {{ $t("Common.Reason") }}
         </v-list-subheader>
-        <v-list-item v-for="item in flagReasonList" :key="item.key" :slim="true" :active="currentKind === item.key" @click="selectKind(item.key)">
-          {{ $t('Common.' + item.value) }}
+        <v-list-item
+          v-for="item in flagReasonList"
+          :key="item.key"
+          :slim="true"
+          :active="currentKind === item.key"
+          @click="selectKind(item.key)"
+        >
+          {{ $t("Common." + item.value) }}
         </v-list-item>
       </v-sheet>
     </v-list>
@@ -90,45 +152,60 @@
 </template>
 
 <script>
-import constants from '../constants'
+import constants from "../constants";
 
 export default {
   props: {
     kind: {
       type: String,
-      default: 'product',
-      examples: ['product', 'productCreate', 'price', 'proof', 'priceTag', 'location', 'country', 'user', 'flag']
+      default: "product",
+      examples: [
+        "product",
+        "productCreate",
+        "price",
+        "proof",
+        "priceTag",
+        "location",
+        "country",
+        "user",
+        "flag",
+      ],
     },
     currentFilterList: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     currentSource: {
       type: String,
-      default: null
+      default: null,
     },
     currentType: {
       type: String,
-      default: null
+      default: null,
     },
     currentKind: {
       type: String,
-      default: null
+      default: null,
     },
     hideSource: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideType: {
       type: Boolean,
-      default: false
+      default: false,
     },
     showKind: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
-  emits: ['update:currentFilterList', 'update:currentSource', 'update:currentType', 'update:currentKind'],
+  emits: [
+    "update:currentFilterList",
+    "update:currentSource",
+    "update:currentType",
+    "update:currentKind",
+  ],
   data() {
     return {
       // default filters
@@ -149,70 +226,81 @@ export default {
       priceProofKindList: constants.PRICE_PROOF_KIND_LIST,
       flagTypeList: constants.MODERATION_FLAG_TYPE_LIST,
       flagReasonList: constants.MODERATION_FLAG_REASON_LIST,
-    }
+    };
   },
   computed: {
     showProductSourceFilter() {
-      return this.kind === 'product' && !this.hideSource
+      return this.kind === "product" && !this.hideSource;
     },
     showPriceTypeFilter() {
-      return this.kind === 'price' && !this.hideType
+      return this.kind === "price" && !this.hideType;
     },
     showProofTypeFilter() {
-      return this.kind === 'proof' && !this.hideType
+      return this.kind === "proof" && !this.hideType;
     },
     showLocationTypeFilter() {
-      return this.kind === 'location' && !this.hideType
+      return this.kind === "location" && !this.hideType;
     },
     showFlagTypeFilter() {
-      return this.kind === 'flag' && !this.hideType
+      return this.kind === "flag" && !this.hideType;
     },
     showPriceProofKindFilter() {
-      return ['price', 'proof'].includes(this.kind) && this.showKind
+      return ["price", "proof"].includes(this.kind) && this.showKind;
     },
     showFlagReasonFilter() {
-      return this.kind === 'flag' && this.showKind
+      return this.kind === "flag" && this.showKind;
     },
     filterList() {
-      return this[`${this.kind}FilterList`]
+      return this[`${this.kind}FilterList`];
     },
     hasCurrentFilter() {
-      return !!this.currentFilterList.length || !!this.currentSource || !!this.currentType || !!this.currentKind
+      return (
+        !!this.currentFilterList.length ||
+        !!this.currentSource ||
+        !!this.currentType ||
+        !!this.currentKind
+      );
     },
     getCurrentFilterIcon() {
-      if (this.kind === 'product') {
-        let source = this.productSourceList.find(o => o.key === this.currentSource)
-        return source ? source.icon : ''
-      } else if (this.kind === 'price') {
-        let type = this.priceTypeList.find(o => o.key === this.currentType)
-        return type ? type.icon : ''
-      } else if (this.kind === 'proof') {
-        let type = this.proofTypeList.find(o => o.key === this.currentType)
-        return type ? type.icon : ''
-      } else if (this.kind === 'location') {
-        let type = this.locationTypeList.find(o => o.key === this.currentType)
-        return type ? type.icon : ''
-      } else if (this.kind === 'flag') {
-        let type = this.flagTypeList.find(o => o.key === this.currentType)
-        return type ? type.icon : ''
+      if (this.kind === "product") {
+        let source = this.productSourceList.find(
+          (o) => o.key === this.currentSource,
+        );
+        return source ? source.icon : "";
+      } else if (this.kind === "price") {
+        let type = this.priceTypeList.find((o) => o.key === this.currentType);
+        return type ? type.icon : "";
+      } else if (this.kind === "proof") {
+        let type = this.proofTypeList.find((o) => o.key === this.currentType);
+        return type ? type.icon : "";
+      } else if (this.kind === "location") {
+        let type = this.locationTypeList.find(
+          (o) => o.key === this.currentType,
+        );
+        return type ? type.icon : "";
+      } else if (this.kind === "flag") {
+        let type = this.flagTypeList.find((o) => o.key === this.currentType);
+        return type ? type.icon : "";
       }
-      return ''
+      return "";
     },
   },
   methods: {
     selectFilter(filter) {
-      let newFilterList = this.currentFilterList.includes(filter) ? this.currentFilterList.filter(f => f !== filter) : [...this.currentFilterList, filter]
-      this.$emit('update:currentFilterList', newFilterList)
+      let newFilterList = this.currentFilterList.includes(filter)
+        ? this.currentFilterList.filter((f) => f !== filter)
+        : [...this.currentFilterList, filter];
+      this.$emit("update:currentFilterList", newFilterList);
     },
     selectSource(source) {
-      this.$emit('update:currentSource', source)
+      this.$emit("update:currentSource", source);
     },
     selectType(type) {
-      this.$emit('update:currentType', type)
+      this.$emit("update:currentType", type);
     },
     selectKind(kind) {
-      this.$emit('update:currentKind', kind)
-    }
-  }
-}
+      this.$emit("update:currentKind", kind);
+    },
+  },
+};
 </script>

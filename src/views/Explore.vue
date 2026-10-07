@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import constants from '../constants'
+import constants from "../constants";
 
 export default {
   data() {
@@ -65,7 +65,7 @@ export default {
       PRODUCT_ICON: constants.PRODUCT_ICON,
       COUNTRY_ICON: constants.COUNTRY_ICON,
       LOCATION_ICON: constants.LOCATION_ICON,
-    }
+    };
   },
-}
+};
 </script>

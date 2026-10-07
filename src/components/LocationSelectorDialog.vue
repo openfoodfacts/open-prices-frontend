@@ -10,12 +10,18 @@
       <v-card-text>
         <v-tabs v-model="currentDisplay" :grow="!$vuetify.display.smAndUp">
           <v-tab v-for="item in displayItems" :key="item.key" :value="item.key">
-            <v-icon :start="$vuetify.display.smAndUp || !!item.valueSmallScreen">
+            <v-icon
+              :start="$vuetify.display.smAndUp || !!item.valueSmallScreen"
+            >
               {{ item.icon }}
             </v-icon>
-            <span v-if="$vuetify.display.smAndUp">{{ $t('Common.' + item.value) }}</span>
+            <span v-if="$vuetify.display.smAndUp">{{
+              $t("Common." + item.value)
+            }}</span>
             <span v-else>
-              <span v-if="item.valueSmallScreen">{{ $t('Common.' + item.valueSmallScreen) }}</span>
+              <span v-if="item.valueSmallScreen">{{
+                $t("Common." + item.valueSmallScreen)
+              }}</span>
             </span>
           </v-tab>
         </v-tabs>
@@ -24,40 +30,85 @@
           <v-tabs-window-item value="favorite">
             <template v-if="favoriteLocations.length">
               <v-row>
-                <v-col v-for="location in favoriteLocations" :key="getLocationId(location)" cols="12" sm="6">
-                  <LocationCard class="mb-2" :location="location" :hideLocationFooterRow="true" :showFavoriteButton="true" :readonly="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
+                <v-col
+                  v-for="location in favoriteLocations"
+                  :key="getLocationId(location)"
+                  cols="12"
+                  sm="6"
+                >
+                  <LocationCard
+                    class="mb-2"
+                    :location="location"
+                    :hideLocationFooterRow="true"
+                    :showFavoriteButton="true"
+                    :readonly="true"
+                    height="100%"
+                    width="100%"
+                    elevation="1"
+                    @click="selectLocation(location)"
+                  />
                 </v-col>
               </v-row>
               <v-row>
                 <v-col cols="12">
-                  <v-btn size="small" color="primary" @click="clearFavoriteLocations">
-                    {{ $t('Common.Clear') }}
+                  <v-btn
+                    size="small"
+                    color="primary"
+                    @click="clearFavoriteLocations"
+                  >
+                    {{ $t("Common.Clear") }}
                   </v-btn>
                 </v-col>
               </v-row>
             </template>
             <p v-else>
-              {{ $t('LocationSelector.FavoriteLocations', favoriteLocations.length) }}
+              {{
+                $t(
+                  "LocationSelector.FavoriteLocations",
+                  favoriteLocations.length,
+                )
+              }}
             </p>
           </v-tabs-window-item>
 
           <v-tabs-window-item value="recent">
             <template v-if="recentLocations.length">
               <v-row>
-                <v-col v-for="location in recentLocations" :key="getLocationId(location)" cols="12" sm="6">
-                  <LocationCard class="mb-2" :location="location" :hideLocationFooterRow="true" :showFavoriteButton="true" :readonly="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
+                <v-col
+                  v-for="location in recentLocations"
+                  :key="getLocationId(location)"
+                  cols="12"
+                  sm="6"
+                >
+                  <LocationCard
+                    class="mb-2"
+                    :location="location"
+                    :hideLocationFooterRow="true"
+                    :showFavoriteButton="true"
+                    :readonly="true"
+                    height="100%"
+                    width="100%"
+                    elevation="1"
+                    @click="selectLocation(location)"
+                  />
                 </v-col>
               </v-row>
               <v-row>
                 <v-col cols="12">
-                  <v-btn size="small" color="primary" @click="clearRecentLocations">
-                    {{ $t('Common.Clear') }}
+                  <v-btn
+                    size="small"
+                    color="primary"
+                    @click="clearRecentLocations"
+                  >
+                    {{ $t("Common.Clear") }}
                   </v-btn>
                 </v-col>
               </v-row>
             </template>
             <p v-else>
-              {{ $t('LocationSelector.RecentLocations', recentLocations.length) }}
+              {{
+                $t("LocationSelector.RecentLocations", recentLocations.length)
+              }}
             </p>
           </v-tabs-window-item>
 
@@ -67,22 +118,34 @@
                 ref="locationOsmSearchInput"
                 v-model="locationOsmSearchForm.q"
                 :label="$t('Common.LocationSearchByName')"
-                :hint="$t('Common.ExamplesWithColonAndValue', { value: OSM_EXAMPLES })"
+                :hint="
+                  $t('Common.ExamplesWithColonAndValue', {
+                    value: OSM_EXAMPLES,
+                  })
+                "
                 type="text"
                 :loading="loading"
                 clearable
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-btn color="primary" icon="mdi-magnify" :disabled="!locationOsmSearchForm.q" @click="locationOsmSearch" />
+                  <v-btn
+                    color="primary"
+                    icon="mdi-magnify"
+                    :disabled="!locationOsmSearchForm.q"
+                    @click="locationOsmSearch"
+                  />
                 </template>
               </v-text-field>
             </v-form>
 
-            <p v-if="searchProvider === 'osm'" class="text-caption text-warning mt-2">
+            <p
+              v-if="searchProvider === 'osm'"
+              class="text-caption text-warning mt-2"
+            >
               <i18n-t keypath="LocationSelector.Warning" tag="i">
                 <template #newline>
-                  <br>
+                  <br />
                 </template>
               </i18n-t>
             </p>
@@ -91,24 +154,54 @@
             <v-sheet v-if="results !== null">
               <v-row v-if="results.length">
                 <v-col cols="12" sm="6">
-                  <LocationCard v-for="location in results" :key="getLocationId(location)" :location="location" :hideLocationFooterRow="true" :readonly="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
+                  <LocationCard
+                    v-for="location in results"
+                    :key="getLocationId(location)"
+                    :location="location"
+                    :hideLocationFooterRow="true"
+                    :readonly="true"
+                    class="mb-2"
+                    width="100%"
+                    elevation="1"
+                    @click="selectLocation(location)"
+                  />
                 </v-col>
-                <v-col cols="12" sm="6" style="min-height:400px">
-                  <LeafletMap :locations="results" :showActions="true" @locationSelected="selectLocation" />
+                <v-col cols="12" sm="6" style="min-height: 400px">
+                  <LeafletMap
+                    :locations="results"
+                    :showActions="true"
+                    @locationSelected="selectLocation"
+                  />
                 </v-col>
               </v-row>
 
               <p v-else>
-                <v-alert class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
-                  {{ $t('LocationSelector.NoResultHelpKeywords') }}
+                <v-alert
+                  class="mb-2"
+                  color="primary"
+                  variant="outlined"
+                  density="compact"
+                  icon="mdi-information"
+                >
+                  {{ $t("LocationSelector.NoResultHelpKeywords") }}
                 </v-alert>
-                <v-alert class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
+                <v-alert
+                  class="mb-2"
+                  color="primary"
+                  variant="outlined"
+                  density="compact"
+                  icon="mdi-information"
+                >
                   <i18n-t keypath="LocationSelector.NoResultHelpOSM" tag="span">
                     <template #osm_name>
                       {{ OSM_NAME }}
                     </template>
                     <template #osm_url>
-                      <a :href="OSM_URL" target="_blank" rel="noopener noreferrer">
+                      <a
+                        :href="OSM_URL"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {{ OSM_URL }}
                       </a>
                     </template>
@@ -124,7 +217,11 @@
                 ref="locationOnlineFormInput"
                 v-model="locationOnlineForm.website_url"
                 :label="$t('Common.Website')"
-                :hint="$t('Common.ExampleWithColonAndValue', { value: 'https://www.example.com' })"
+                :hint="
+                  $t('Common.ExampleWithColonAndValue', {
+                    value: 'https://www.example.com',
+                  })
+                "
                 type="text"
                 :rules="urlRules"
                 :loading="loading"
@@ -132,7 +229,12 @@
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-btn color="primary" icon="mdi-plus" :disabled="!locationOnlineFormFilled" @click="createOnline" />
+                  <v-btn
+                    color="primary"
+                    icon="mdi-plus"
+                    :disabled="!locationOnlineFormFilled"
+                    @click="createOnline"
+                  />
                 </template>
               </v-text-field>
             </v-form>
@@ -146,10 +248,20 @@
         <div>
           <i18n-t keypath="LocationSelector.PoweredBy.text" tag="span">
             <template #url>
-              <a v-if="searchProvider === 'nominatim'" :href="OSM_NOMINATIM_URL" target="_blank" rel="noopener noreferrer">
+              <a
+                v-if="searchProvider === 'nominatim'"
+                :href="OSM_NOMINATIM_URL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {{ OSM_NOMINATIM_ATTRIBUTION }}
               </a>
-              <a v-if="searchProvider === 'photon'" :href="OSM_PHOTON_URL" target="_blank" rel="noopener noreferrer">
+              <a
+                v-if="searchProvider === 'photon'"
+                :href="OSM_PHOTON_URL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {{ OSM_PHOTON_ATTRIBUTION }}
               </a>
             </template>
@@ -161,156 +273,191 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openStreetMapApi from '../services/openStreetMapApi'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
-import utils from '../utils.js'
-import geo_utils from '../utils/geo.js'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openStreetMapApi from "../services/openStreetMapApi";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
+import utils from "../utils.js";
+import geo_utils from "../utils/geo.js";
 
 export default {
   components: {
-    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
-    LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
+    LocationCard: defineAsyncComponent(
+      () => import("../components/LocationCard.vue"),
+    ),
+    LeafletMap: defineAsyncComponent(
+      () => import("../components/LeafletMap.vue"),
+    ),
   },
   props: {
     physicalOnly: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
-  emits: ['location', 'close'],
+  emits: ["location", "close"],
   data() {
     return {
       // location forms
       locationOsmSearchForm: {
-        q: ''
+        q: "",
       },
       locationOnlineForm: {
-        website_url: '',
+        website_url: "",
       },
       loading: false,
       results: null,
       // config
-      searchProvider: constants.LOCATION_SEARCH_PROVIDER_LIST[1].key,  // photon
-      currentDisplay: null,  // see mounted
-      OSM_EXAMPLES: 'Carrefour rue la fayette 75010 paris ; Auchan Grenoble ; N12208020359',
+      searchProvider: constants.LOCATION_SEARCH_PROVIDER_LIST[1].key, // photon
+      currentDisplay: null, // see mounted
+      OSM_EXAMPLES:
+        "Carrefour rue la fayette 75010 paris ; Auchan Grenoble ; N12208020359",
       OSM_NAME: constants.OSM_NAME,
       OSM_URL: constants.OSM_URL,
       OSM_NOMINATIM_URL: constants.OSM_NOMINATIM_URL,
       OSM_NOMINATIM_ATTRIBUTION: constants.OSM_NOMINATIM_ATTRIBUTION,
       OSM_PHOTON_URL: constants.OSM_PHOTON_URL,
       OSM_PHOTON_ATTRIBUTION: constants.OSM_PHOTON_ATTRIBUTION,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     displayItems() {
       if (this.physicalOnly) {
-        return constants.LOCATION_SELECTOR_DISPLAY_LIST.filter(item => item.key !== constants.LOCATION_SELECTOR_DISPLAY_ONLINE)
+        return constants.LOCATION_SELECTOR_DISPLAY_LIST.filter(
+          (item) => item.key !== constants.LOCATION_SELECTOR_DISPLAY_ONLINE,
+        );
       }
-      return constants.LOCATION_SELECTOR_DISPLAY_LIST
+      return constants.LOCATION_SELECTOR_DISPLAY_LIST;
     },
     dialogHeight() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
     dialogWidth() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
     favoriteLocations() {
-      return this.filterPhysicalLocations(this.appStore.getFavoriteLocations)
+      return this.filterPhysicalLocations(this.appStore.getFavoriteLocations);
     },
     recentLocations() {
-      return this.filterPhysicalLocations(this.appStore.getRecentLocations)
+      return this.filterPhysicalLocations(this.appStore.getRecentLocations);
     },
     locationOnlineFormFilled() {
-      return !!this.locationOnlineForm.website_url && this.urlRules.every(rule => rule(this.locationOnlineForm.website_url) === true)
+      return (
+        !!this.locationOnlineForm.website_url &&
+        this.urlRules.every(
+          (rule) => rule(this.locationOnlineForm.website_url) === true,
+        )
+      );
     },
     urlRules() {
       return [
         // v => !!v || this.$t('Common.FieldIsRequired'),
-        v => !v || utils.isURL(v) || this.$t('Common.URLInvalid'),
-      ]
+        (v) => !v || utils.isURL(v) || this.$t("Common.URLInvalid"),
+      ];
     },
   },
   watch: {
     currentDisplay(value) {
       if (value === constants.LOCATION_SELECTOR_DISPLAY_OSM) {
-        window.setTimeout(() => this.$refs.locationOsmSearchInput.focus(), 200)
+        window.setTimeout(() => this.$refs.locationOsmSearchInput.focus(), 200);
       } else if (value === constants.LOCATION_SELECTOR_DISPLAY_ONLINE) {
-        window.setTimeout(() => this.$refs.locationOnlineFormInput.focus(), 200)
+        window.setTimeout(
+          () => this.$refs.locationOnlineFormInput.focus(),
+          200,
+        );
       }
-    }
+    },
   },
   mounted() {
-    const defaultMode = this.appStore.user.location_finder_default_mode
-    this.currentDisplay = this.displayItems.some(item => item.key === defaultMode) ? defaultMode : constants.LOCATION_SELECTOR_DISPLAY_OSM
+    const defaultMode = this.appStore.user.location_finder_default_mode;
+    this.currentDisplay = this.displayItems.some(
+      (item) => item.key === defaultMode,
+    )
+      ? defaultMode
+      : constants.LOCATION_SELECTOR_DISPLAY_OSM;
   },
   methods: {
     fieldRequired(v) {
-      return !!v
+      return !!v;
     },
     getLocationId(location) {
-      return geo_utils.getLocationId(location)
+      return geo_utils.getLocationId(location);
     },
     filterPhysicalLocations(locations) {
-      return this.physicalOnly ? locations.filter(location => geo_utils.hasLocationCoordinates(location)) : locations
+      return this.physicalOnly
+        ? locations.filter((location) =>
+            geo_utils.hasLocationCoordinates(location),
+          )
+        : locations;
     },
     locationOsmSearch() {
-      this.$refs.locationOsmSearchInput.blur()
-      this.results = null
-      this.loading = true
+      this.$refs.locationOsmSearchInput.blur();
+      this.results = null;
+      this.loading = true;
       // search by id (N12208020359, 12208020359)
       if (utils.isNumber(this.locationOsmSearchForm.q.substring(1))) {
-        const id = utils.isNumber(this.locationOsmSearchForm.q.substring(0, 1)) ? this.locationOsmSearchForm.q : this.locationOsmSearchForm.q.substring(1)
-        openStreetMapApi.openstreetmapNominatimLookup(id)
-          .then((data) => {
-            this.loading = false
-            this.results = data
-          })
+        const id = utils.isNumber(this.locationOsmSearchForm.q.substring(0, 1))
+          ? this.locationOsmSearchForm.q
+          : this.locationOsmSearchForm.q.substring(1);
+        openStreetMapApi.openstreetmapNominatimLookup(id).then((data) => {
+          this.loading = false;
+          this.results = data;
+        });
         // search by name
       } else {
-        openStreetMapApi.openstreetmapSearch(this.locationOsmSearchForm.q, this.searchProvider)
+        openStreetMapApi
+          .openstreetmapSearch(
+            this.locationOsmSearchForm.q,
+            this.searchProvider,
+          )
           .then((data) => {
-            this.loading = false
-            this.results = data
-          })
+            this.loading = false;
+            this.results = data;
+          });
       }
     },
     createOnline() {
-      this.loading = true
-      const website_url_cleaned = utils.getURLOrigin(this.locationOnlineForm.website_url)
-      openPricesApi.createLocationOnline({website_url: website_url_cleaned})
+      this.loading = true;
+      const website_url_cleaned = utils.getURLOrigin(
+        this.locationOnlineForm.website_url,
+      );
+      openPricesApi
+        .createLocationOnline({ website_url: website_url_cleaned })
         .then((location) => {
-          this.selectLocation(location)
+          this.selectLocation(location);
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     selectLocation(location) {
-      this.$emit('location', location)
-      this.close()
+      this.$emit("location", location);
+      this.close();
     },
     clearFavoriteLocations() {
       if (this.physicalOnly) {
-        this.favoriteLocations.forEach(location => this.appStore.removeFavoriteLocation(location))
+        this.favoriteLocations.forEach((location) =>
+          this.appStore.removeFavoriteLocation(location),
+        );
       } else {
-        this.appStore.clearFavoriteLocations()
+        this.appStore.clearFavoriteLocations();
       }
     },
     clearRecentLocations() {
       if (this.physicalOnly) {
-        this.recentLocations.forEach(location => this.appStore.removeRecentLocation(location))
+        this.recentLocations.forEach((location) =>
+          this.appStore.removeRecentLocation(location),
+        );
       } else {
-        this.appStore.clearRecentLocations()
+        this.appStore.clearRecentLocations();
       }
     },
     close() {
-      this.$emit('close')
+      this.$emit("close");
     },
   },
-}
+};
 </script>

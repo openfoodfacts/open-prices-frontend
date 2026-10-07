@@ -9,40 +9,42 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'country',
-      examples: ['country', 'city']
+      default: "country",
+      examples: ["country", "city"],
     },
     country: {
       type: String,
-      default: null
+      default: null,
     },
     city: {
       type: String,
-      default: null
+      default: null,
     },
     readonly: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   computed: {
     getCountryCityName() {
-      if (this.type === 'country') {
-        return this.country
-      } else if (this.type === 'city') {
-        return this.city
+      if (this.type === "country") {
+        return this.country;
+      } else if (this.type === "city") {
+        return this.city;
       }
-      return ''
+      return "";
     },
     getCountryCityUrl() {
-      const countryUrl = `/countries/${this.country}`
-      if (this.type === 'country') {
-        return this.country && !this.readonly ? countryUrl : null
-      } else if (this.type === 'city') {
-        return this.city && !this.readonly ? `${countryUrl}/cities/${this.city}` : null
+      const countryUrl = `/countries/${this.country}`;
+      if (this.type === "country") {
+        return this.country && !this.readonly ? countryUrl : null;
+      } else if (this.type === "city") {
+        return this.city && !this.readonly
+          ? `${countryUrl}/cities/${this.city}`
+          : null;
       }
-      return null
-    }
+      return null;
+    },
   },
-}
+};
 </script>

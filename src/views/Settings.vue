@@ -6,7 +6,7 @@
         <v-card-text>
           <!-- Theme -->
           <h3 class="mb-1">
-            {{ $t('Common.Theme') }}
+            {{ $t("Common.Theme") }}
           </h3>
           <v-switch
             v-model="appStore.user.preferedTheme"
@@ -19,19 +19,19 @@
             <template #prepend>
               <v-icon :icon="getThemeInfo('light').icon" />
               <v-label>
-                {{ getThemeInfo('light').label }}
+                {{ getThemeInfo("light").label }}
               </v-label>
             </template>
             <template #label>
-              <v-label style="padding-inline-end:10px">
-                {{ getThemeInfo('dark').label }}
+              <v-label style="padding-inline-end: 10px">
+                {{ getThemeInfo("dark").label }}
               </v-label>
               <v-icon :icon="getThemeInfo('dark').icon" />
             </template>
           </v-switch>
           <!-- Language -->
           <h3 class="mt-4 mb-1">
-            {{ $t('Common.Language') }}
+            {{ $t("Common.Language") }}
           </h3>
           <v-autocomplete
             v-model="appStore.user.language"
@@ -42,14 +42,18 @@
             hide-details="auto"
           />
           <p class="mt-1">
-            <a :href="OFF_CROWDIN_URL" target="_blank" rel="noopener noreferrer">
-              {{ $t('UserSettings.TranslationHelp') }}
+            <a
+              :href="OFF_CROWDIN_URL"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ $t("UserSettings.TranslationHelp") }}
               <v-icon size="small" icon="mdi-open-in-new" />
             </a>
           </p>
           <!-- Country -->
           <h3 class="mt-4 mb-1">
-            {{ $t('Common.Country') }}
+            {{ $t("Common.Country") }}
           </h3>
           <v-autocomplete
             v-model="appStore.user.country"
@@ -61,14 +65,14 @@
           />
           <!-- Price list display -->
           <h3 class="mt-4 mb-1">
-            {{ $t('UserSettings.PriceListDisplay') }}
+            {{ $t("UserSettings.PriceListDisplay") }}
           </h3>
           <v-select
             v-model="appStore.user.price_list_display_default_mode"
             :label="$t('UserSettings.DefaultMode')"
             :items="priceListDisplayList"
-            :item-title="item => $t('Common.' + item.value)"
-            :item-value="item => item.key"
+            :item-title="(item) => $t('Common.' + item.value)"
+            :item-value="(item) => item.key"
             hide-details="auto"
           />
         </v-card-text>
@@ -77,17 +81,24 @@
 
     <!-- Prices -->
     <v-col cols="12" sm="6">
-      <v-card :title="$t('UserSettings.AddingPrices')" prepend-icon="mdi-tag-multiple-outline">
+      <v-card
+        :title="$t('UserSettings.AddingPrices')"
+        prepend-icon="mdi-tag-multiple-outline"
+      >
         <v-divider />
         <v-card-text>
           <h3 class="mb-1">
-            {{ $t('UserSettings.FavoriteCurrencies') }}
+            {{ $t("UserSettings.FavoriteCurrencies") }}
           </h3>
           <v-autocomplete
             v-model="appStore.user.favorite_currencies"
             :label="$t('UserSettings.CurrencyLabel')"
             :items="currencyList"
-            :rules="[value => !!(value && value.length) || $t('UserSettings.CurrencyRequired')]"
+            :rules="[
+              (value) =>
+                !!(value && value.length) ||
+                $t('UserSettings.CurrencyRequired'),
+            ]"
             chips
             closable-chips
             multiple
@@ -95,34 +106,34 @@
           />
           <!-- Location selector -->
           <h3 class="mt-4 mb-1">
-            {{ $t('UserSettings.LocationFinder') }}
+            {{ $t("UserSettings.LocationFinder") }}
           </h3>
           <v-select
             v-model="appStore.user.location_finder_default_mode"
             :label="$t('UserSettings.DefaultMode')"
             :items="locationSelectorDisplayList"
-            :item-title="item => $t('Common.' + item.value)"
-            :item-value="item => item.key"
+            :item-title="(item) => $t('Common.' + item.value)"
+            :item-value="(item) => item.key"
             hide-details="auto"
           />
           <!-- Barcode scanner -->
           <h3 class="mt-4 mb-1">
-            {{ $t('UserSettings.BarcodeScanner') }}
+            {{ $t("UserSettings.BarcodeScanner") }}
           </h3>
           <v-select
             v-model="appStore.user.barcode_scanner_default_mode"
             :label="$t('UserSettings.DefaultMode')"
             :items="productSelectorDisplayList"
-            :item-title="item => $t('Common.' + item.valueSmallScreen)"
-            :item-value="item => item.key"
+            :item-title="(item) => $t('Common.' + item.valueSmallScreen)"
+            :item-value="(item) => item.key"
             hide-details="auto"
           />
           <v-select
             v-model="appStore.user.barcode_scanner_library"
             :label="$t('UserSettings.BarcodeScannerLibrary')"
             :items="barcodeScannerDisplayList"
-            :item-title="item => item.value"
-            :item-value="item => item.key"
+            :item-title="(item) => item.value"
+            :item-value="(item) => item.key"
             hide-details="auto"
           />
         </v-card-text>
@@ -130,19 +141,24 @@
     </v-col>
 
     <v-col cols="12" sm="6">
-      <v-card :title="$t('Common.DeveloperMode')" :prepend-icon="EXPERIMENTS_ICON">
+      <v-card
+        :title="$t('Common.DeveloperMode')"
+        :prepend-icon="EXPERIMENTS_ICON"
+      >
         <v-divider />
         <v-card-text>
           <!-- Products -->
           <h3 class="mt-4 mb-1">
-            {{ $t('Common.Products') }}
+            {{ $t("Common.Products") }}
           </h3>
           <v-switch
             v-model="appStore.user.product_display_barcode"
             class="mb-4"
             color="success"
             :label="$t('UserSettings.ProductDisplayBarcode')"
-            :hint="$t('Common.ExampleWithColonAndValue', { value: '1234567890123' })"
+            :hint="
+              $t('Common.ExampleWithColonAndValue', { value: '1234567890123' })
+            "
             density="compact"
             persistent-hint
             hide-details="auto"
@@ -152,7 +168,9 @@
             class="mb-4"
             color="success"
             :label="$t('UserSettings.ProductDisplayCategoryTag')"
-            :hint="$t('Common.ExampleWithColonAndValue', { value: 'en:oranges' })"
+            :hint="
+              $t('Common.ExampleWithColonAndValue', { value: 'en:oranges' })
+            "
             density="compact"
             persistent-hint
             hide-details="auto"
@@ -168,20 +186,22 @@
           />
           <!-- Locations -->
           <h3 class="mt-4 mb-1">
-            {{ $t('Common.Locations') }}
+            {{ $t("Common.Locations") }}
           </h3>
           <v-switch
             v-model="appStore.user.location_display_osm_id"
             color="success"
             :label="$t('UserSettings.LocationDisplayOSMID')"
-            :hint="$t('Common.ExampleWithColonAndValue', { value: 'N652825274' })"
+            :hint="
+              $t('Common.ExampleWithColonAndValue', { value: 'N652825274' })
+            "
             density="compact"
             persistent-hint
             hide-details="auto"
           />
           <!-- Proofs -->
           <h3 class="mt-4 mb-1">
-            {{ $t('Common.Proofs') }}
+            {{ $t("Common.Proofs") }}
           </h3>
           <v-switch
             v-model="appStore.user.display_price_tags_bounding_boxes"
@@ -197,14 +217,14 @@
 </template>
 
 <script>
-import { useTheme } from 'vuetify'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import languageList from '../i18n/data/languages.json'
-import countryList from '../i18n/data/countries.json'  // still needed for currencies
-import localeManager from '../i18n/localeManager.js'
-import constants from '../constants'
-import data_utils from '../utils/data.js'
+import { useTheme } from "vuetify";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import languageList from "../i18n/data/languages.json";
+import countryList from "../i18n/data/countries.json"; // still needed for currencies
+import localeManager from "../i18n/localeManager.js";
+import constants from "../constants";
+import data_utils from "../utils/data.js";
 
 export default {
   data() {
@@ -213,53 +233,63 @@ export default {
       languageList,
       OFF_CROWDIN_URL: constants.OFF_CROWDIN_URL,
       EXPERIMENTS_ICON: constants.EXPERIMENTS_ICON,
-      countryTags: [],  // list of country tags for autocomplete  // see mounted
+      countryTags: [], // list of country tags for autocomplete  // see mounted
       // currencyList,
       priceListDisplayList: constants.DISPLAY_LIST,
       locationSelectorDisplayList: constants.LOCATION_SELECTOR_DISPLAY_LIST,
       productSelectorDisplayList: constants.PRODUCT_SELECTOR_DISPLAY_LIST,
       barcodeScannerDisplayList: constants.BARCODE_SCANNER_DISPLAY_LIST,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     currencyList() {
-      return [...new Set(countryList
-        .map(country => country.currency)
-        .flat()
-        .filter(currency => currency !== null && currency.length !== 0))]
-      }
+      return [
+        ...new Set(
+          countryList
+            .map((country) => country.currency)
+            .flat()
+            .filter((currency) => currency !== null && currency.length !== 0),
+        ),
+      ];
+    },
   },
   watch: {
-    'appStore.user.preferedTheme': function (newTheme, oldTheme) {  // eslint-disable-line no-unused-vars
-      this.theme.change(newTheme)
+    // eslint-disable-next-line no-unused-vars
+    "appStore.user.preferedTheme": function (newTheme, oldTheme) {
+      this.theme.change(newTheme);
     },
-    'appStore.user.language': function (newLanguage, oldLanguage) {  // eslint-disable-line no-unused-vars
-      localeManager.changeLanguage(newLanguage)
-      this.setCountryTags()
+    // eslint-disable-next-line no-unused-vars
+    "appStore.user.language": function (newLanguage, oldLanguage) {
+      localeManager.changeLanguage(newLanguage);
+      this.setCountryTags();
     },
   },
   mounted() {
-    this.setCountryTags()
+    this.setCountryTags();
   },
   methods: {
     getThemeInfo(themeName) {
-      if (themeName === 'light') {
+      if (themeName === "light") {
         return {
           icon: constants.THEME_LIGHT_ICON,
-          label: this.$t('Common.ThemeLight')
-        }
+          label: this.$t("Common.ThemeLight"),
+        };
       }
       return {
         icon: constants.THEME_DARK_ICON,
-        label: this.$t('Common.ThemeDark')
-      }
+        label: this.$t("Common.ThemeDark"),
+      };
     },
     setCountryTags() {
-      data_utils.getLocaleCountryTags(this.appStore.getUserLanguage).then((module) => {
-        this.countryTags = module.default.sort((a, b) => a.name.localeCompare(b.name))
-      })
-    }
+      data_utils
+        .getLocaleCountryTags(this.appStore.getUserLanguage)
+        .then((module) => {
+          this.countryTags = module.default.sort((a, b) =>
+            a.name.localeCompare(b.name),
+          );
+        });
+    },
   },
-}
+};
 </script>

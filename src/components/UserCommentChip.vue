@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import constants from '../constants.js'
+import constants from "../constants.js";
 
 export default {
   props: {
@@ -20,7 +20,7 @@ export default {
   data() {
     return {
       USER_COMMENT_ICON: constants.USER_COMMENT_ICON,
-    }
+    };
   },
-}
+};
 </script>

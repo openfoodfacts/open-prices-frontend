@@ -1,5 +1,10 @@
 <template>
-  <v-alert data-name="product-not-found-alert" type="error" variant="outlined" density="compact">
+  <v-alert
+    data-name="product-not-found-alert"
+    type="error"
+    variant="outlined"
+    density="compact"
+  >
     <p>
       <i18n-t keypath="ProductDetail.ProductNotFound" tag="span">
         <template #name>
@@ -7,22 +12,27 @@
         </template>
       </i18n-t>
     </p>
-    <OpenFoodFactsAddMenu v-if="showOpenFoodFactsAddMenu" :productCode="productCode" />
+    <OpenFoodFactsAddMenu
+      v-if="showOpenFoodFactsAddMenu"
+      :productCode="productCode"
+    />
   </v-alert>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
+import { defineAsyncComponent } from "vue";
+import constants from "../constants";
 
 export default {
   components: {
-    OpenFoodFactsAddMenu: defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),
+    OpenFoodFactsAddMenu: defineAsyncComponent(
+      () => import("../components/OpenFoodFactsAddMenu.vue"),
+    ),
   },
   props: {
     productCode: {
       type: String,
-      default: '',
+      default: "",
     },
     showOpenFoodFactsAddMenu: {
       type: Boolean,
@@ -32,7 +42,7 @@ export default {
   data() {
     return {
       OFF_NAME: constants.OFF_NAME,
-    }
-  }
-}
+    };
+  },
+};
 </script>

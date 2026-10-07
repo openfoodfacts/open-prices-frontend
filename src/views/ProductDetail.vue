@@ -2,31 +2,62 @@
   <v-row>
     <v-col cols="12" sm="6">
       <ProductCard v-if="!productIsCategory" :product="product" />
-      <CategoryCard v-else :category="category" source="product" :priceCount="priceTotal" />
+      <CategoryCard
+        v-else
+        :category="category"
+        source="product"
+        :priceCount="priceTotal"
+      />
     </v-col>
   </v-row>
 
   <v-row v-if="productOrCategoryNotFound" class="mt-0">
     <v-col cols="12" sm="6">
       <template v-if="productNotFound">
-        <CreateOpenFoodFactsProductPromoBanner v-if="priceTotal" class="mt-3" :productCode="productId" />
+        <CreateOpenFoodFactsProductPromoBanner
+          v-if="priceTotal"
+          class="mt-3"
+          :productCode="productId"
+        />
         <ProductNotFoundAlert v-else :productCode="productId" />
       </template>
-      <CategoryNotFoundAlert v-else-if="categoryNotFound" :categoryTag="productId" />
+      <CategoryNotFoundAlert
+        v-else-if="categoryNotFound"
+        :categoryTag="productId"
+      />
     </v-col>
   </v-row>
 
   <v-row>
     <v-col>
       <h2 class="text-h6 d-inline mr-1">
-        {{ $t('Common.LatestPrices') }}
+        {{ $t("Common.LatestPrices") }}
       </h2>
       <template v-if="!loading">
-        <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
-        <FilterMenu kind="price" :hideType="true" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
-        <NearbyPriceFilter :currentFilter="nearbyFilter" @update:currentFilter="updateNearbyFilter($event)" />
-        <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
-        <DisplayMenu :show="['list', 'table', 'map', 'chart']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+        <LoadedCountChip
+          :loadedCount="priceList.length"
+          :totalCount="priceTotal"
+        />
+        <FilterMenu
+          kind="price"
+          :hideType="true"
+          :currentFilterList="currentFilterList"
+          @update:currentFilterList="updateFilterList($event)"
+        />
+        <NearbyPriceFilter
+          :currentFilter="nearbyFilter"
+          @update:currentFilter="updateNearbyFilter($event)"
+        />
+        <OrderMenu
+          kind="price"
+          :currentOrder="currentOrder"
+          @update:currentOrder="updateOrder($event)"
+        />
+        <DisplayMenu
+          :show="['list', 'table', 'map', 'chart']"
+          :currentDisplay="currentDisplay"
+          @update:currentDisplay="updateDisplay($event)"
+        />
       </template>
     </v-col>
   </v-row>
@@ -34,8 +65,23 @@
   <v-window v-model="currentDisplay" disabled>
     <v-window-item value="list">
       <v-row class="mt-0 mb-1">
-        <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
-          <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductTitle="true" :hideProductDetailsRow="productIsCategory ? false : true" elevation="1" height="100%" />
+        <v-col
+          v-for="price in priceList"
+          :key="price"
+          cols="12"
+          sm="6"
+          md="4"
+          xl="3"
+        >
+          <PriceCard
+            :price="price"
+            :product="product"
+            :hideProductImage="true"
+            :hideProductTitle="true"
+            :hideProductDetailsRow="productIsCategory ? false : true"
+            elevation="1"
+            height="100%"
+          />
         </v-col>
       </v-row>
     </v-window-item>
@@ -44,7 +90,7 @@
     </v-window-item>
     <v-window-item value="map">
       <v-row class="mt-0 mb-1">
-        <v-col style="height:400px">
+        <v-col style="height: 400px">
           <LeafletMap :locations="priceLocationList" />
         </v-col>
       </v-row>
@@ -66,36 +112,64 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
-import data_utils from '../utils/data.js'
-import date_utils from '../utils/date.js'
-import geo_utils from '../utils/geo.js'
-import utils from '../utils.js'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
+import data_utils from "../utils/data.js";
+import date_utils from "../utils/date.js";
+import geo_utils from "../utils/geo.js";
+import utils from "../utils.js";
 
 export default {
   components: {
-    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
-    CreateOpenFoodFactsProductPromoBanner: defineAsyncComponent(() => import('../components/CreateOpenFoodFactsProductPromoBanner.vue')),
-    ProductNotFoundAlert: defineAsyncComponent(() => import('../components/ProductNotFoundAlert.vue')),
-    CategoryNotFoundAlert: defineAsyncComponent(() => import('../components/CategoryNotFoundAlert.vue')),
-    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
-    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    NearbyPriceFilter: defineAsyncComponent(() => import('../components/NearbyPriceFilter.vue')),
-    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    PriceTable: defineAsyncComponent(() => import('../components/PriceTable.vue')),
-    LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
-    PriceChart: defineAsyncComponent(() => import('../components/PriceChart.vue')),
+    ProductCard: defineAsyncComponent(
+      () => import("../components/ProductCard.vue"),
+    ),
+    CategoryCard: defineAsyncComponent(
+      () => import("../components/CategoryCard.vue"),
+    ),
+    CreateOpenFoodFactsProductPromoBanner: defineAsyncComponent(
+      () => import("../components/CreateOpenFoodFactsProductPromoBanner.vue"),
+    ),
+    ProductNotFoundAlert: defineAsyncComponent(
+      () => import("../components/ProductNotFoundAlert.vue"),
+    ),
+    CategoryNotFoundAlert: defineAsyncComponent(
+      () => import("../components/CategoryNotFoundAlert.vue"),
+    ),
+    LoadedCountChip: defineAsyncComponent(
+      () => import("../components/LoadedCountChip.vue"),
+    ),
+    FilterMenu: defineAsyncComponent(
+      () => import("../components/FilterMenu.vue"),
+    ),
+    NearbyPriceFilter: defineAsyncComponent(
+      () => import("../components/NearbyPriceFilter.vue"),
+    ),
+    OrderMenu: defineAsyncComponent(
+      () => import("../components/OrderMenu.vue"),
+    ),
+    DisplayMenu: defineAsyncComponent(
+      () => import("../components/DisplayMenu.vue"),
+    ),
+    PriceCard: defineAsyncComponent(
+      () => import("../components/PriceCard.vue"),
+    ),
+    PriceTable: defineAsyncComponent(
+      () => import("../components/PriceTable.vue"),
+    ),
+    LeafletMap: defineAsyncComponent(
+      () => import("../components/LeafletMap.vue"),
+    ),
+    PriceChart: defineAsyncComponent(
+      () => import("../components/PriceChart.vue"),
+    ),
   },
   data() {
     return {
-      productId: this.$route.params.id,  // product_code or product_category
+      productId: this.$route.params.id, // product_code or product_category
       // data
       product: null,
       category: null,
@@ -108,138 +182,191 @@ export default {
       shareLinkCopySuccessMessage: false,
       // filter, order & display
       currentFilterList: [],
-      currentOrder: constants.PRICE_ORDER_LIST[2].key,  // date
+      currentOrder: constants.PRICE_ORDER_LIST[2].key, // date
       currentDisplay: constants.DISPLAY_LIST[0].key,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     productIsCategory() {
-      return this.productId.includes(':')
+      return this.productId.includes(":");
     },
     productNotFound() {
-      return !this.productIsCategory && this.product && !this.product.source
+      return !this.productIsCategory && this.product && !this.product.source;
     },
     categoryFound() {
-      return this.category && !this.category.status
+      return this.category && !this.category.status;
     },
     categoryNotFound() {
-      return this.productIsCategory && !this.categoryFound
+      return this.productIsCategory && !this.categoryFound;
     },
     productOrCategoryNotFound() {
-      return !this.loading && (this.productNotFound || this.categoryNotFound)
+      return !this.loading && (this.productNotFound || this.categoryNotFound);
     },
     nearbyFilter() {
-      return geo_utils.getNearbyFilter(this.$route.query)
+      return geo_utils.getNearbyFilter(this.$route.query);
     },
     getPricesParams() {
-      let defaultParams = { [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, order_by: `${this.currentOrder}`, page: this.pricePage }
-      if (this.currentFilterList.includes('show_last_month')) {
-        defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
+      let defaultParams = {
+        [this.productIsCategory ? "category_tag" : "product_code"]:
+          this.productId,
+        order_by: `${this.currentOrder}`,
+        page: this.pricePage,
+      };
+      if (this.currentFilterList.includes("show_last_month")) {
+        defaultParams["date__gte"] = date_utils.oneMonthAgoDate();
       }
       if (this.nearbyFilter) {
-        Object.assign(defaultParams, this.nearbyFilter)
+        Object.assign(defaultParams, this.nearbyFilter);
       }
-      return defaultParams
+      return defaultParams;
     },
   },
   watch: {
-    $route (newRoute, oldRoute) {
+    $route(newRoute, oldRoute) {
       // only called when query changes to avoid having an API call when the path changes
       // but ignore 'display' changes
       if (oldRoute.path === newRoute.path) {
-        const oldRouteQueryFiltered = Object.fromEntries(Object.entries(oldRoute.query).filter(([key, value]) => key !== constants.DISPLAY_PARAM))  // eslint-disable-line no-unused-vars
-        const newRouteQueryFiltered = Object.fromEntries(Object.entries(newRoute.query).filter(([key, value]) => key !== constants.DISPLAY_PARAM))  // eslint-disable-line no-unused-vars
-        if (JSON.stringify(oldRouteQueryFiltered) !== JSON.stringify(newRouteQueryFiltered)) {
-          this.initPrices()
+        const oldRouteQueryFiltered = Object.fromEntries(
+          Object.entries(oldRoute.query).filter(
+            // eslint-disable-next-line no-unused-vars
+            ([key, value]) => key !== constants.DISPLAY_PARAM,
+          ),
+        );
+        const newRouteQueryFiltered = Object.fromEntries(
+          Object.entries(newRoute.query).filter(
+            // eslint-disable-next-line no-unused-vars
+            ([key, value]) => key !== constants.DISPLAY_PARAM,
+          ),
+        );
+        if (
+          JSON.stringify(oldRouteQueryFiltered) !==
+          JSON.stringify(newRouteQueryFiltered)
+        ) {
+          this.initPrices();
         }
       }
-    }
+    },
   },
   mounted() {
-    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
-    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.appStore.user.price_list_display_default_mode || this.currentDisplay
-    this.getProduct()
-    this.initPrices()
+    this.currentFilterList =
+      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
+      this.currentFilterList;
+    this.currentOrder =
+      this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
+    this.currentDisplay =
+      this.$route.query[constants.DISPLAY_PARAM] ||
+      this.appStore.user.price_list_display_default_mode ||
+      this.currentDisplay;
+    this.getProduct();
+    this.initPrices();
     // load more
-    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
-    window.addEventListener('scroll', this.handleDebouncedScroll)
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
+    window.addEventListener("scroll", this.handleDebouncedScroll);
   },
   unmounted() {
-    window.removeEventListener('scroll', this.handleDebouncedScroll)
+    window.removeEventListener("scroll", this.handleDebouncedScroll);
   },
   methods: {
     initPrices() {
-      this.productId = this.$route.params.id
-      this.priceList = []
-      this.priceTotal = null
-      this.pricePage = 0
-      this.priceLocationList = []
-      this.getPrices()
+      this.productId = this.$route.params.id;
+      this.priceList = [];
+      this.priceTotal = null;
+      this.pricePage = 0;
+      this.priceLocationList = [];
+      this.getPrices();
     },
     getProduct() {
       if (this.productIsCategory) {
-        data_utils.getLocaleCategoryTag(this.appStore.getUserLanguage, this.productId).then((category) => {
-          this.category = category
-        })
+        data_utils
+          .getLocaleCategoryTag(this.appStore.getUserLanguage, this.productId)
+          .then((category) => {
+            this.category = category;
+          });
       } else {
-        return openPricesApi.getProductByCode(this.productId)
+        return openPricesApi
+          .getProductByCode(this.productId)
           .then((data) => {
-            this.product = data
+            this.product = data;
           })
           .catch((error) => {
-            if (error.status !== 404) throw error
+            if (error.status !== 404) throw error;
             // product not found: set a minimal product to display the ProductCard
-            this.product = { code: this.productId, price_count: this.priceTotal }
-          })
+            this.product = {
+              code: this.productId,
+              price_count: this.priceTotal,
+            };
+          });
       }
     },
     getPrices() {
-      if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
-      this.loading = true
-      this.pricePage += 1
-      return openPricesApi.getPrices(this.getPricesParams)
+      if (this.priceTotal != null && this.priceList.length >= this.priceTotal)
+        return;
+      this.loading = true;
+      this.pricePage += 1;
+      return openPricesApi
+        .getPrices(this.getPricesParams)
         .then((data) => {
-          if (!data.items) return
-          this.priceList.push(...data.items)
-          this.priceTotal = data.total
+          if (!data.items) return;
+          this.priceList.push(...data.items);
+          this.priceTotal = data.total;
           data.items.forEach((price) => {
             if (price.location) {
-              utils.addObjectToArray(this.priceLocationList, price.location)
+              utils.addObjectToArray(this.priceLocationList, price.location);
             }
-          })
+          });
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      this.currentFilterList = newFilterList;
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.FILTER_PARAM]: this.currentFilterList,
+        },
+      });
       // this.initPrices() will be called in watch $route
     },
     updateNearbyFilter(nearbyFilter) {
-      this.$router.push({ query: geo_utils.buildNearbyFilterQuery(this.$route.query, nearbyFilter) })
+      this.$router.push({
+        query: geo_utils.buildNearbyFilterQuery(
+          this.$route.query,
+          nearbyFilter,
+        ),
+      });
       // this.initPrices() will be called in watch $route
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
-        this.currentOrder = orderKey
-        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        this.currentOrder = orderKey;
+        this.$router.push({
+          query: {
+            ...this.$route.query,
+            [constants.ORDER_PARAM]: this.currentOrder,
+          },
+        });
         // this.initPrices() will be called in watch $route
       }
     },
     updateDisplay(displayKey) {
-      this.currentDisplay = displayKey
-      this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
+      this.currentDisplay = displayKey;
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.DISPLAY_PARAM]: this.currentDisplay,
+        },
+      });
       // this.initPrices() will NOT be called in watch $route
     },
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
+    handleScroll(event) {
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getPrices()
+        this.getPrices();
       }
     },
-  }
-}
+  },
+};
 </script>

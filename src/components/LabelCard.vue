@@ -1,5 +1,9 @@
 <template>
-  <v-card :title="label" prepend-icon="mdi-sticker-text-outline" data-name="label-card">
+  <v-card
+    :title="label"
+    prepend-icon="mdi-sticker-text-outline"
+    data-name="label-card"
+  >
     <v-card-text>
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
@@ -14,26 +18,30 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from "vue";
 
 export default {
   components: {
-    CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
-    LabelActionMenuButton: defineAsyncComponent(() => import('../components/LabelActionMenuButton.vue'))
+    CountChip: defineAsyncComponent(
+      () => import("../components/CountChip.vue"),
+    ),
+    LabelActionMenuButton: defineAsyncComponent(
+      () => import("../components/LabelActionMenuButton.vue"),
+    ),
   },
   props: {
     label: {
       type: String,
-      default: null
+      default: null,
     },
     productCount: {
       type: Number,
-      default: 0
+      default: 0,
     },
     hideActionMenuButton: {
       type: Boolean,
-      default: false
+      default: false,
     },
-  }
-}
+  },
+};
 </script>

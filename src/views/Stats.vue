@@ -3,28 +3,47 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="PRICE_ICON" />
-        {{ $t('Common.Prices') }}
+        {{ $t("Common.Prices") }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_count" :subtitle="$t('Stats.Total')" to="/prices" />
+      <StatCard
+        :value="stats.price_count"
+        :subtitle="$t('Stats.Total')"
+        to="/prices"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_type_product_code_count" :subtitle="$t('Stats.WithBarcode')" />
+      <StatCard
+        :value="stats.price_type_product_code_count"
+        :subtitle="$t('Stats.WithBarcode')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_type_category_tag_count" :subtitle="$t('Stats.WithCategory')" />
+      <StatCard
+        :value="stats.price_type_category_tag_count"
+        :subtitle="$t('Stats.WithCategory')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_with_discount_count" :subtitle="$t('Stats.WithDiscount')" />
+      <StatCard
+        :value="stats.price_with_discount_count"
+        :subtitle="$t('Stats.WithDiscount')"
+      />
     </v-col>
   </v-row>
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_kind_community_count" :subtitle="$t('Common.Community')" />
+      <StatCard
+        :value="stats.price_kind_community_count"
+        :subtitle="$t('Common.Community')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_kind_consumption_count" :subtitle="$t('Common.Consumption')" />
+      <StatCard
+        :value="stats.price_kind_consumption_count"
+        :subtitle="$t('Common.Consumption')"
+      />
     </v-col>
   </v-row>
 
@@ -32,11 +51,15 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="PRODUCT_ICON" />
-        {{ $t('Common.Products') }}
+        {{ $t("Common.Products") }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_with_price_count" :subtitle="$t('Stats.WithPrice')" to="/products" />
+      <StatCard
+        :value="stats.product_with_price_count"
+        :subtitle="$t('Stats.WithPrice')"
+        to="/products"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.product_count" :subtitle="$t('Stats.Total')" />
@@ -44,16 +67,48 @@
   </v-row>
   <v-row>
     <v-col cols="12" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_source_off_with_price_count.toString() + ' / ' + stats.product_source_off_count.toString()" :subtitle="$t('Common.Food')" :subtitle-prepend-icon="OFF_ICON" />
+      <StatCard
+        :value="
+          stats.product_source_off_with_price_count.toString() +
+          ' / ' +
+          stats.product_source_off_count.toString()
+        "
+        :subtitle="$t('Common.Food')"
+        :subtitle-prepend-icon="OFF_ICON"
+      />
     </v-col>
     <v-col cols="12" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_source_obf_with_price_count.toString() + ' / ' + stats.product_source_obf_count.toString()" :subtitle="$t('Common.Beauty')" :subtitle-prepend-icon="OBF_ICON" />
+      <StatCard
+        :value="
+          stats.product_source_obf_with_price_count.toString() +
+          ' / ' +
+          stats.product_source_obf_count.toString()
+        "
+        :subtitle="$t('Common.Beauty')"
+        :subtitle-prepend-icon="OBF_ICON"
+      />
     </v-col>
     <v-col cols="12" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_source_opf_with_price_count.toString() + ' / ' + stats.product_source_opf_count.toString()" :subtitle="$t('Common.Products')" :subtitle-prepend-icon="OPF_ICON" />
+      <StatCard
+        :value="
+          stats.product_source_opf_with_price_count.toString() +
+          ' / ' +
+          stats.product_source_opf_count.toString()
+        "
+        :subtitle="$t('Common.Products')"
+        :subtitle-prepend-icon="OPF_ICON"
+      />
     </v-col>
     <v-col cols="12" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_source_opff_with_price_count.toString() + ' / ' + stats.product_source_opff_count.toString()" :subtitle="$t('Common.PetFood')" :subtitle-prepend-icon="OPFF_ICON" />
+      <StatCard
+        :value="
+          stats.product_source_opff_with_price_count.toString() +
+          ' / ' +
+          stats.product_source_opff_count.toString()
+        "
+        :subtitle="$t('Common.PetFood')"
+        :subtitle-prepend-icon="OPFF_ICON"
+      />
     </v-col>
   </v-row>
 
@@ -61,20 +116,31 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="LOCATION_TYPE_OSM_ICON" />
-        {{ $t('Common.Locations') }}
+        {{ $t("Common.Locations") }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_count" :subtitle="$t('Stats.Total')" to="/locations" />
+      <StatCard
+        :value="stats.location_count"
+        :subtitle="$t('Stats.Total')"
+        to="/locations"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.location_type_osm_count" :subtitle="OSM_NAME" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_type_online_count" :subtitle="$t('Common.Online')" />
+      <StatCard
+        :value="stats.location_type_online_count"
+        :subtitle="$t('Common.Online')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_type_osm_country_count" :subtitle="$t('Common.Countries')" to="/countries?filter=location_count_gte_1" />
+      <StatCard
+        :value="stats.location_type_osm_country_count"
+        :subtitle="$t('Common.Countries')"
+        to="/countries?filter=location_count_gte_1"
+      />
     </v-col>
   </v-row>
 
@@ -82,23 +148,39 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="PROOF_ICON" />
-        {{ $t('Common.Proofs') }}
+        {{ $t("Common.Proofs") }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_count" :subtitle="$t('Stats.Total')" to="/proofs" />
+      <StatCard
+        :value="stats.proof_count"
+        :subtitle="$t('Stats.Total')"
+        to="/proofs"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_type_price_tag_count" :subtitle="$t('ProofCard.PRICE_TAG')" />
+      <StatCard
+        :value="stats.proof_type_price_tag_count"
+        :subtitle="$t('ProofCard.PRICE_TAG')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_type_receipt_count" :subtitle="$t('ProofCard.RECEIPT')" />
+      <StatCard
+        :value="stats.proof_type_receipt_count"
+        :subtitle="$t('ProofCard.RECEIPT')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_type_gdpr_request_count" :subtitle="$t('ProofCard.GDPR_REQUEST')" />
+      <StatCard
+        :value="stats.proof_type_gdpr_request_count"
+        :subtitle="$t('ProofCard.GDPR_REQUEST')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_type_shop_import_count" :subtitle="$t('ProofCard.SHOP_IMPORT')" />
+      <StatCard
+        :value="stats.proof_type_shop_import_count"
+        :subtitle="$t('ProofCard.SHOP_IMPORT')"
+      />
     </v-col>
   </v-row>
 
@@ -106,11 +188,15 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="USER_ICON" />
-        {{ $t('Common.Contributors') }}
+        {{ $t("Common.Contributors") }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.user_with_price_count" :subtitle="$t('Stats.Total')" to="/users" />
+      <StatCard
+        :value="stats.user_with_price_count"
+        :subtitle="$t('Stats.Total')"
+        to="/users"
+      />
     </v-col>
   </v-row>
 
@@ -118,17 +204,27 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="CHALLENGE_ICON" />
-        {{ $t('Common.Challenges') }}
+        {{ $t("Common.Challenges") }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.challenge_count" :subtitle="$t('Stats.Total')" to="/challenges" />
+      <StatCard
+        :value="stats.challenge_count"
+        :subtitle="$t('Stats.Total')"
+        to="/challenges"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_in_challenge_count" :subtitle="$t('Common.Prices')" />
+      <StatCard
+        :value="stats.price_in_challenge_count"
+        :subtitle="$t('Common.Prices')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_in_challenge_count" :subtitle="$t('Common.Proofs')" />
+      <StatCard
+        :value="stats.proof_in_challenge_count"
+        :subtitle="$t('Common.Proofs')"
+      />
     </v-col>
   </v-row>
 
@@ -136,11 +232,15 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="BADGE_ICON" />
-        {{ $t('Common.Badges') }}
+        {{ $t("Common.Badges") }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.badge_count" :subtitle="$t('Stats.Total')" to="/badges" />
+      <StatCard
+        :value="stats.badge_count"
+        :subtitle="$t('Stats.Total')"
+        to="/badges"
+      />
     </v-col>
   </v-row>
 
@@ -148,14 +248,20 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="EXPERIMENTS_ICON" />
-        {{ $t('Common.Experiments') }}
+        {{ $t("Common.Experiments") }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_tag_status_linked_to_price_count" :subtitle="$t('UserSettings.PriceValidation')" />
+      <StatCard
+        :value="stats.price_tag_status_linked_to_price_count"
+        :subtitle="$t('UserSettings.PriceValidation')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_created_count" :subtitle="$t('Common.ProductsCreated')" />
+      <StatCard
+        :value="stats.product_created_count"
+        :subtitle="$t('Common.ProductsCreated')"
+      />
     </v-col>
   </v-row>
 
@@ -163,17 +269,26 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-tune-vertical" />
-        {{ $t('Common.Miscellaneous') }}
+        {{ $t("Common.Miscellaneous") }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_location_country_count" :subtitle="$t('Common.Countries')" />
+      <StatCard
+        :value="stats.price_location_country_count"
+        :subtitle="$t('Common.Countries')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_currency_count" :subtitle="$t('Common.Currencies')" />
+      <StatCard
+        :value="stats.price_currency_count"
+        :subtitle="$t('Common.Currencies')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_year_count" :subtitle="$t('Common.Years')" />
+      <StatCard
+        :value="stats.price_year_count"
+        :subtitle="$t('Common.Years')"
+      />
     </v-col>
   </v-row>
 
@@ -181,20 +296,32 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-circle-small" />
-        {{ $t('Stats.PricesPerSource') }}
+        {{ $t("Stats.PricesPerSource") }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_source_web_count.toString()" :subtitle="$t('Common.Website')" />
+      <StatCard
+        :value="stats.price_source_web_count.toString()"
+        :subtitle="$t('Common.Website')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_source_mobile_count.toString()" :subtitle="$t('Common.MobileApp')" />
+      <StatCard
+        :value="stats.price_source_mobile_count.toString()"
+        :subtitle="$t('Common.MobileApp')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_source_api_count.toString()" subtitle="API" />
+      <StatCard
+        :value="stats.price_source_api_count.toString()"
+        subtitle="API"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_source_other_count.toString()" :subtitle="$t('Common.Other')" />
+      <StatCard
+        :value="stats.price_source_other_count.toString()"
+        :subtitle="$t('Common.Other')"
+      />
     </v-col>
   </v-row>
 
@@ -202,41 +329,58 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-circle-small" />
-        {{ $t('Stats.ProofsPerSource') }}
+        {{ $t("Stats.ProofsPerSource") }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_source_web_count.toString()" :subtitle="$t('Common.Website')" />
+      <StatCard
+        :value="stats.proof_source_web_count.toString()"
+        :subtitle="$t('Common.Website')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_source_mobile_count.toString()" :subtitle="$t('Common.MobileApp')" />
+      <StatCard
+        :value="stats.proof_source_mobile_count.toString()"
+        :subtitle="$t('Common.MobileApp')"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_source_api_count.toString()" subtitle="API" />
+      <StatCard
+        :value="stats.proof_source_api_count.toString()"
+        subtitle="API"
+      />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_source_other_count.toString()" :subtitle="$t('Common.Other')" />
+      <StatCard
+        :value="stats.proof_source_other_count.toString()"
+        :subtitle="$t('Common.Other')"
+      />
     </v-col>
   </v-row>
 
-  <br>
+  <br />
 
   <v-row>
     <v-col cols="12">
-      <StatsLastUpdatedAlert v-if="stats.updated" :lastUpdated="stats.updated" />
+      <StatsLastUpdatedAlert
+        v-if="stats.updated"
+        :lastUpdated="stats.updated"
+      />
     </v-col>
   </v-row>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
+import { defineAsyncComponent } from "vue";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
 
 export default {
   components: {
-    StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
-    StatsLastUpdatedAlert: defineAsyncComponent(() => import('../components/StatsLastUpdatedAlert.vue')),
+    StatCard: defineAsyncComponent(() => import("../components/StatCard.vue")),
+    StatsLastUpdatedAlert: defineAsyncComponent(
+      () => import("../components/StatsLastUpdatedAlert.vue"),
+    ),
   },
   data() {
     return {
@@ -280,11 +424,11 @@ export default {
         proof_source_api_count: 0,
         proof_source_other_count: 0,
         price_tag_status_linked_to_price_count: 0,
-        user_count: 0,  // not displayed
+        user_count: 0, // not displayed
         user_with_price_count: 0,
         challenge_count: 0,
         badge_count: 0,
-        badge_with_user_count: 0,  // not displayed
+        badge_with_user_count: 0, // not displayed
         price_in_challenge_count: 0,
         proof_in_challenge_count: 0,
         product_created_count: 0,
@@ -304,24 +448,25 @@ export default {
       CHALLENGE_ICON: constants.CHALLENGE_ICON,
       BADGE_ICON: constants.BADGE_ICON,
       EXPERIMENTS_ICON: constants.EXPERIMENTS_ICON,
-    }
+    };
   },
   mounted() {
-    this.getStats()
+    this.getStats();
   },
   methods: {
     getStats() {
-      this.loading = true
-      return openPricesApi.getStats()
+      this.loading = true;
+      return openPricesApi
+        .getStats()
         .then((data) => {
           for (const key in this.stats) {
-            this.stats[key] = (key in data) ? data[key] : this.stats[key]
+            this.stats[key] = key in data ? data[key] : this.stats[key];
           }
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
-  }
-}
+  },
+};
 </script>

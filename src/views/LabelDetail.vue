@@ -8,18 +8,37 @@
   <v-row>
     <v-col>
       <h2 class="text-h6 d-inline mr-1">
-        {{ $t('Common.TopProducts') }}
+        {{ $t("Common.TopProducts") }}
       </h2>
       <template v-if="!loading">
-        <LoadedCountChip :loadedCount="labelProductList.length" :totalCount="labelProductTotal" />
-        <FilterMenu kind="product" :currentFilterList="currentFilterList" :hideSource="true" @update:currentFilterList="updateFilterList($event)" />
-        <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+        <LoadedCountChip
+          :loadedCount="labelProductList.length"
+          :totalCount="labelProductTotal"
+        />
+        <FilterMenu
+          kind="product"
+          :currentFilterList="currentFilterList"
+          :hideSource="true"
+          @update:currentFilterList="updateFilterList($event)"
+        />
+        <OrderMenu
+          kind="product"
+          :currentOrder="currentOrder"
+          @update:currentOrder="updateOrder($event)"
+        />
       </template>
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="product in labelProductList" :key="product" cols="12" sm="6" md="4" xl="3">
+    <v-col
+      v-for="product in labelProductList"
+      :key="product"
+      cols="12"
+      sm="6"
+      md="4"
+      xl="3"
+    >
       <ProductCard :product="product" elevation="1" height="100%" />
     </v-col>
   </v-row>
@@ -32,102 +51,140 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
-import utils from '../utils.js'
+import { defineAsyncComponent } from "vue";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
+import utils from "../utils.js";
 
 export default {
   components: {
-    LabelCard: defineAsyncComponent(() => import('../components/LabelCard.vue')),
-    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
-    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue'))
+    LabelCard: defineAsyncComponent(
+      () => import("../components/LabelCard.vue"),
+    ),
+    LoadedCountChip: defineAsyncComponent(
+      () => import("../components/LoadedCountChip.vue"),
+    ),
+    FilterMenu: defineAsyncComponent(
+      () => import("../components/FilterMenu.vue"),
+    ),
+    OrderMenu: defineAsyncComponent(
+      () => import("../components/OrderMenu.vue"),
+    ),
+    ProductCard: defineAsyncComponent(
+      () => import("../components/ProductCard.vue"),
+    ),
   },
   data() {
     return {
       labelId: this.$route.params.id,
       // data
-      label: null,  // see init
+      label: null, // see init
       labelProductList: [],
       labelProductTotal: null,
       labelProductPage: 0,
       loading: false,
       // filter & order
       currentFilterList: [],
-      currentOrder: constants.PRODUCT_ORDER_LIST[0].key,  // price_count
-    }
+      currentOrder: constants.PRODUCT_ORDER_LIST[0].key, // price_count
+    };
   },
   computed: {
     getProductsParams() {
-      let defaultParams = { labels_tags__contains: this.label.id, order_by: `${this.currentOrder}`, page: this.labelProductPage }
-      if (this.currentFilterList.includes('price_count_gte_1')) {
-        defaultParams['price_count__gte'] = 1
-      } else if (this.currentFilterList.includes('price_count_0')) {
-        defaultParams['price_count'] = 0
+      let defaultParams = {
+        labels_tags__contains: this.label.id,
+        order_by: `${this.currentOrder}`,
+        page: this.labelProductPage,
+      };
+      if (this.currentFilterList.includes("price_count_gte_1")) {
+        defaultParams["price_count__gte"] = 1;
+      } else if (this.currentFilterList.includes("price_count_0")) {
+        defaultParams["price_count"] = 0;
       }
-      return defaultParams
+      return defaultParams;
     },
   },
   watch: {
-    $route (newRoute, oldRoute) {
-      if (oldRoute && newRoute && newRoute.name == 'label-detail' && oldRoute.fullPath != newRoute.fullPath) {
-        this.initLabel()
+    $route(newRoute, oldRoute) {
+      if (
+        oldRoute &&
+        newRoute &&
+        newRoute.name == "label-detail" &&
+        oldRoute.fullPath != newRoute.fullPath
+      ) {
+        this.initLabel();
       }
-    }
+    },
   },
   mounted() {
-    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
-    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.initLabel()
+    this.currentFilterList =
+      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
+      this.currentFilterList;
+    this.currentOrder =
+      this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
+    this.initLabel();
     // load more
-    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
-    window.addEventListener('scroll', this.handleDebouncedScroll)
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
+    window.addEventListener("scroll", this.handleDebouncedScroll);
   },
   unmounted() {
-    window.removeEventListener('scroll', this.handleDebouncedScroll)
+    window.removeEventListener("scroll", this.handleDebouncedScroll);
   },
   methods: {
     initLabel() {
-      this.labelId = this.$route.params.id
-      this.label = {'id': this.labelId, 'name': this.labelId}
-      this.labelProductList = []
-      this.labelProductTotal = null
-      this.labelProductPage = 0
-      this.getLabelProducts()
+      this.labelId = this.$route.params.id;
+      this.label = { id: this.labelId, name: this.labelId };
+      this.labelProductList = [];
+      this.labelProductTotal = null;
+      this.labelProductPage = 0;
+      this.getLabelProducts();
     },
     getLabelProducts() {
-      if ((this.labelProductTotal != null) && (this.labelProductList.length >= this.labelProductTotal)) return
-      this.loading = true
-      this.labelProductPage += 1
-      return openPricesApi.getProducts(this.getProductsParams)
+      if (
+        this.labelProductTotal != null &&
+        this.labelProductList.length >= this.labelProductTotal
+      )
+        return;
+      this.loading = true;
+      this.labelProductPage += 1;
+      return openPricesApi
+        .getProducts(this.getProductsParams)
         .then((data) => {
-          if (!data.items) return
-          this.labelProductList.push(...data.items)
-          this.labelProductTotal = data.total
+          if (!data.items) return;
+          this.labelProductList.push(...data.items);
+          this.labelProductTotal = data.total;
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      this.currentFilterList = newFilterList;
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.FILTER_PARAM]: this.currentFilterList,
+        },
+      });
       // this.initLabel() will be called in watch $route
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
-        this.currentOrder = orderKey
-        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        this.currentOrder = orderKey;
+        this.$router.push({
+          query: {
+            ...this.$route.query,
+            [constants.ORDER_PARAM]: this.currentOrder,
+          },
+        });
         // this.initLabel() will be called in watch $route
       }
     },
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
+    handleScroll(event) {
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getLabelProducts()
+        this.getLabelProducts();
       }
     },
-  }
-}
+  },
+};
 </script>

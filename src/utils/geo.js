@@ -1,44 +1,48 @@
-import constants from '../constants'
-import utils from '../utils'
+import constants from "../constants";
+import utils from "../utils";
 
-
-const NEARBY_FILTER_PARAMETER_NAMES = ['lat', 'lon', 'radius_km']
+const NEARBY_FILTER_PARAMETER_NAMES = ["lat", "lon", "radius_km"];
 // the API sets no maximum radius: this list is a UI choice, and the largest
 // option doubles as the bound getNearbyFilter() accepts from the URL
-const NEARBY_FILTER_RADIUS_OPTIONS = Object.freeze([1, 2, 5, 10, 20, 50, 100])
-const NEARBY_FILTER_MAX_RADIUS_KM = Math.max(...NEARBY_FILTER_RADIUS_OPTIONS)
-
+const NEARBY_FILTER_RADIUS_OPTIONS = Object.freeze([1, 2, 5, 10, 20, 50, 100]);
+const NEARBY_FILTER_MAX_RADIUS_KM = Math.max(...NEARBY_FILTER_RADIUS_OPTIONS);
 
 function getMapBounds(results) {
   if (results.length > 0) {
     // Nominatim
     if (results[0].lat && results[0].lon) {
-      return results.map(l => [l.lat, l.lon])
+      return results.map((l) => [l.lat, l.lon]);
     }
     // Photon
     else if (results[0].geometry && results[0].geometry.coordinates) {
-      return results.map(l => [l.geometry.coordinates[1], l.geometry.coordinates[0]])
+      return results.map((l) => [
+        l.geometry.coordinates[1],
+        l.geometry.coordinates[0],
+      ]);
     }
     // OP
-    return results.map(l => [l.osm_lat, l.osm_lon])
+    return results.map((l) => [l.osm_lat, l.osm_lon]);
   }
-  return null
+  return null;
 }
 
 function getMapCenter(results) {
   if (results.length > 0) {
     // Nominatim
     if (results[0].lat && results[0].lon) {
-      return [results[0].lat, results[0].lon]
+      return [results[0].lat, results[0].lon];
     }
     // Photon
     else if (results[0].geometry && results[0].geometry.coordinates) {
-      return [results[0].geometry.coordinates[1], results[0].geometry.coordinates[0]]
+      return [
+        results[0].geometry.coordinates[1],
+        results[0].geometry.coordinates[0],
+      ];
     }
     // OP
-    return [results[0].osm_lat, results[0].osm_lon]
+    return [results[0].osm_lat, results[0].osm_lon];
   }
-  return [45, 5]
+  return [45, 5];
 }
 
 /**
@@ -49,284 +53,333 @@ function getMapCenter(results) {
  * @return {String}             The flag emoji
  */
 function getCountryEmojiFromCode(countryCode) {
-  let codePoints = countryCode.toUpperCase().split('').map(char =>  127397 + char.charCodeAt())
-	return String.fromCodePoint(...codePoints)
+  let codePoints = countryCode
+    .toUpperCase()
+    .split("")
+    .map((char) => 127397 + char.charCodeAt());
+  return String.fromCodePoint(...codePoints);
 }
 
 function getLocationOSMName(locationObject) {
   // Photon
   if (locationObject.properties) {
-    return locationObject.properties.name
+    return locationObject.properties.name;
   }
   // Nominatim or OP
-  return locationObject.name || locationObject.osm_name || ''
+  return locationObject.name || locationObject.osm_name || "";
 }
 
 function getLocationOSMRoad(locationObject) {
   // Nominatim
   if (locationObject.address) {
-    let locationRoad = locationObject.address.house_number ? `${locationObject.address.house_number}, ` : ''
-    locationRoad += locationObject.address.road || ''
-    return locationRoad
+    let locationRoad = locationObject.address.house_number
+      ? `${locationObject.address.house_number}, `
+      : "";
+    locationRoad += locationObject.address.road || "";
+    return locationRoad;
   }
   // Photon
   else if (locationObject.properties) {
-    let locationRoad = locationObject.properties.housenumber ? `${locationObject.properties.housenumber}, ` : ''
-    locationRoad += locationObject.properties.street || ''
-    return locationRoad
+    let locationRoad = locationObject.properties.housenumber
+      ? `${locationObject.properties.housenumber}, `
+      : "";
+    locationRoad += locationObject.properties.street || "";
+    return locationRoad;
   }
   // OP
   // return everything from osm_display_name between locationName & locationCity
   else if (locationObject.osm_display_name) {
-    const locationName = getLocationOSMName(locationObject)
-    const locationCity = getLocationOSMCity(locationObject)
-    let startIndex = locationObject.osm_display_name.indexOf(locationName)
+    const locationName = getLocationOSMName(locationObject);
+    const locationCity = getLocationOSMCity(locationObject);
+    let startIndex = locationObject.osm_display_name.indexOf(locationName);
     if (startIndex !== -1) {
-      startIndex += locationName.length
-      let endIndex = locationObject.osm_display_name.indexOf(locationCity, startIndex)
+      startIndex += locationName.length;
+      let endIndex = locationObject.osm_display_name.indexOf(
+        locationCity,
+        startIndex,
+      );
       if (endIndex === -1) {
-        endIndex = locationObject.osm_display_name.length
+        endIndex = locationObject.osm_display_name.length;
       }
-      let locationRoad = locationObject.osm_display_name.substring(startIndex, endIndex).trim()
+      let locationRoad = locationObject.osm_display_name
+        .substring(startIndex, endIndex)
+        .trim();
       // remove leading and trailing commas
-      locationRoad = locationRoad.replace(/^,|,$/g, '').trim()
-      return locationRoad
+      locationRoad = locationRoad.replace(/^,|,$/g, "").trim();
+      return locationRoad;
     }
   }
-  return ''
+  return "";
 }
 
 function getLocationOSMCity(locationObject) {
   // Nominatim
   if (locationObject.address) {
-    return locationObject.address.village || locationObject.address.town || locationObject.address.city || locationObject.address.municipality
+    return (
+      locationObject.address.village ||
+      locationObject.address.town ||
+      locationObject.address.city ||
+      locationObject.address.municipality
+    );
   }
   // Photon
   else if (locationObject.properties) {
-    return locationObject.properties.village || locationObject.properties.town || locationObject.properties.city || locationObject.properties.municipality
+    return (
+      locationObject.properties.village ||
+      locationObject.properties.town ||
+      locationObject.properties.city ||
+      locationObject.properties.municipality
+    );
   }
   // OP
-  return locationObject.osm_address_city || ''
+  return locationObject.osm_address_city || "";
 }
 
 function getLocationOSMCountry(locationObject) {
   // Nominatim
   if (locationObject.address) {
-    return locationObject.address.country || ''
+    return locationObject.address.country || "";
   }
   // Photon
   else if (locationObject.properties) {
-    return locationObject.properties.country || ''
+    return locationObject.properties.country || "";
   }
   // OP
-  return locationObject.osm_address_country || ''
+  return locationObject.osm_address_country || "";
 }
 
 function getLocationOSMCountryCode(locationObject) {
   // Nominatim
   if (locationObject.address) {
-    return locationObject.address.country_code || ''
+    return locationObject.address.country_code || "";
   }
   // Photon
   else if (locationObject.properties) {
-    return locationObject.properties.countrycode || ''
+    return locationObject.properties.countrycode || "";
   }
   // OP
-  return locationObject.osm_address_country_code || ''
+  return locationObject.osm_address_country_code || "";
 }
 
 /**
  * input: {"geometry":{"coordinates":[2.3548062,48.8301752],"type":"Point"},"type":"Feature","properties":{"osm_id":11112946989,"country":"France","city":"Paris","countrycode":"FR","postcode":"75013","locality":"Quartier de la Maison-Blanche","type":"house","osm_type":"N","osm_key":"shop","housenumber":"30","street":"Avenue d'Italie","district":"Paris","osm_value":"department_store","name":"HEMA","state":"Ile-de-France"}}
  * output: HEMA ; 30, Avenue d'Italie, Paris
  */
-function getLocationOSMTitle(locationObject, withName=true, withRoad=false, withCity=true, withCountry=false, withEmoji=false) {
-  let locationTitle = ''
+function getLocationOSMTitle(
+  locationObject,
+  withName = true,
+  withRoad = false,
+  withCity = true,
+  withCountry = false,
+  withEmoji = false,
+) {
+  let locationTitle = "";
   if (withName) {
-    locationTitle += `${getLocationOSMName(locationObject)}`
+    locationTitle += `${getLocationOSMName(locationObject)}`;
   }
-  if (withRoad && (locationObject.address || locationObject.properties || locationObject.osm_display_name)) {
-    locationTitle += locationTitle ? ', ' : ''
-    locationTitle += getLocationOSMRoad(locationObject)
+  if (
+    withRoad &&
+    (locationObject.address ||
+      locationObject.properties ||
+      locationObject.osm_display_name)
+  ) {
+    locationTitle += locationTitle ? ", " : "";
+    locationTitle += getLocationOSMRoad(locationObject);
   }
   if (withCity) {
-    locationTitle += locationTitle ? ', ' : ''
-    locationTitle += getLocationOSMCity(locationObject)
+    locationTitle += locationTitle ? ", " : "";
+    locationTitle += getLocationOSMCity(locationObject);
   }
   if (withCountry) {
-    locationTitle += locationTitle ? ', ' : ''
-    locationTitle += getLocationOSMCountry(locationObject)
+    locationTitle += locationTitle ? ", " : "";
+    locationTitle += getLocationOSMCountry(locationObject);
   }
   if (withEmoji) {
-    locationTitle += ` ${getCountryEmojiFromCode(getLocationOSMCountryCode(locationObject)) || ''}`
+    locationTitle += ` ${getCountryEmojiFromCode(getLocationOSMCountryCode(locationObject)) || ""}`;
   }
   if (!locationTitle) {
-    locationTitle = locationObject.id
+    locationTitle = locationObject.id;
   }
-  return locationTitle
+  return locationTitle;
 }
 
 function getLocationOSMId(locationObject) {
   // Photon
   if (locationObject.properties) {
-    return locationObject.properties.osm_id
+    return locationObject.properties.osm_id;
   }
   // Nominatim or OP
-  return locationObject.osm_id
+  return locationObject.osm_id;
 }
 
 function getLocationOSMType(locationObject) {
   if (locationObject.properties) {
-    const OSM_TYPE_MAPPING = {"N": "Node", "W": "Way", "R": "Relation"}
-    return OSM_TYPE_MAPPING[locationObject.properties.osm_type].toUpperCase()
+    const OSM_TYPE_MAPPING = { N: "Node", W: "Way", R: "Relation" };
+    return OSM_TYPE_MAPPING[locationObject.properties.osm_type].toUpperCase();
   }
   // Nominatim or OP
-  return locationObject.osm_type.toUpperCase()
+  return locationObject.osm_type.toUpperCase();
 }
 
 function buildLocationOSMUniqueId(locationId, locationType) {
   // examples: N12345, W12345, R12345
   if (locationId && locationType) {
-    return `${locationType[0]}${locationId.toString()}`
+    return `${locationType[0]}${locationId.toString()}`;
   }
-  return null
+  return null;
 }
 
 function getLocationOSMUniqueId(locationObject) {
-  return buildLocationOSMUniqueId(getLocationOSMId(locationObject), getLocationOSMType(locationObject))
+  return buildLocationOSMUniqueId(
+    getLocationOSMId(locationObject),
+    getLocationOSMType(locationObject),
+  );
 }
 
 function getLocationOSMTag(locationObject) {
   // examples: shop:supermarket, shop:convenience, shop:bakery, shop:doityourself
   // Photon
   if (locationObject.properties) {
-    return `${locationObject.properties.osm_key}:${locationObject.properties.osm_value}`
+    return `${locationObject.properties.osm_key}:${locationObject.properties.osm_value}`;
   }
   // Nominatim
   else if (locationObject.address) {
-    return `${locationObject.class}:${locationObject.type}`
+    return `${locationObject.class}:${locationObject.type}`;
   }
   // OP
-  return `${locationObject.osm_tag_key}:${locationObject.osm_tag_value}`
+  return `${locationObject.osm_tag_key}:${locationObject.osm_tag_value}`;
 }
 
 function hasLocationOSMTagFromName(locationObject, tagName) {
   // OP
   if (locationObject.osm_tags) {
-    return locationObject.osm_tags.indexOf(tagName) !== -1
+    return locationObject.osm_tags.indexOf(tagName) !== -1;
   }
-  return false
+  return false;
 }
 
 function getLocationOSMLatLng(locationObject) {
   // Nominatim
   if (locationObject.lat && locationObject.lon) {
-    return [locationObject.lat, locationObject.lon]
+    return [locationObject.lat, locationObject.lon];
   }
   // Photon
   else if (locationObject.geometry && locationObject.geometry.coordinates) {
-    return [locationObject.geometry.coordinates[1], locationObject.geometry.coordinates[0]]
+    return [
+      locationObject.geometry.coordinates[1],
+      locationObject.geometry.coordinates[0],
+    ];
   }
   // OP
-  return [locationObject.osm_lat, locationObject.osm_lon]
+  return [locationObject.osm_lat, locationObject.osm_lon];
 }
 
 function toFiniteNumber(value) {
-  const normalizedValue = Array.isArray(value) ? value[0] : value
+  const normalizedValue = Array.isArray(value) ? value[0] : value;
   if (
-    normalizedValue === null
-    || normalizedValue === undefined
-    || (typeof normalizedValue === 'string' && normalizedValue.trim() === '')
+    normalizedValue === null ||
+    normalizedValue === undefined ||
+    (typeof normalizedValue === "string" && normalizedValue.trim() === "")
   ) {
-    return null
+    return null;
   }
-  const numberValue = Number(normalizedValue)
-  return Number.isFinite(numberValue) ? numberValue : null
+  const numberValue = Number(normalizedValue);
+  return Number.isFinite(numberValue) ? numberValue : null;
 }
 
 function hasLocationCoordinates(locationObject) {
-  const [lat, lon] = getLocationOSMLatLng(locationObject)
-  return toFiniteNumber(lat) !== null && toFiniteNumber(lon) !== null
+  const [lat, lon] = getLocationOSMLatLng(locationObject);
+  return toFiniteNumber(lat) !== null && toFiniteNumber(lon) !== null;
 }
 
 function getNearbyFilter(query) {
-  const lat = toFiniteNumber(query.lat)
-  const lon = toFiniteNumber(query.lon)
-  const radius_km = toFiniteNumber(query.radius_km)
+  const lat = toFiniteNumber(query.lat);
+  const lon = toFiniteNumber(query.lon);
+  const radius_km = toFiniteNumber(query.radius_km);
   if (
-    lat !== null
-    && lon !== null
-    && radius_km !== null
-    && lat >= -90
-    && lat <= 90
-    && lon >= -180
-    && lon <= 180
-    && radius_km > 0
-    && radius_km <= NEARBY_FILTER_MAX_RADIUS_KM
+    lat !== null &&
+    lon !== null &&
+    radius_km !== null &&
+    lat >= -90 &&
+    lat <= 90 &&
+    lon >= -180 &&
+    lon <= 180 &&
+    radius_km > 0 &&
+    radius_km <= NEARBY_FILTER_MAX_RADIUS_KM
   ) {
-    return { lat, lon, radius_km }
+    return { lat, lon, radius_km };
   }
-  return null
+  return null;
 }
 
 function buildNearbyFilterQuery(query, nearbyFilter) {
-  const updatedQuery = { ...query }
-  NEARBY_FILTER_PARAMETER_NAMES.forEach(name => delete updatedQuery[name])
+  const updatedQuery = { ...query };
+  NEARBY_FILTER_PARAMETER_NAMES.forEach((name) => delete updatedQuery[name]);
 
-  const normalizedFilter = getNearbyFilter(nearbyFilter || {})
+  const normalizedFilter = getNearbyFilter(nearbyFilter || {});
   if (normalizedFilter) {
-    Object.assign(updatedQuery, normalizedFilter)
+    Object.assign(updatedQuery, normalizedFilter);
   }
-  return updatedQuery
+  return updatedQuery;
 }
 
 function getLocationOSMBrandLogoPathName(locationObject) {
-  const BRAND_URL_PREFIX = 'https://raw.githubusercontent.com/openfoodfacts/brand-images/refs/heads/main/xx/stores/'
-  let nameCleaned = null
+  const BRAND_URL_PREFIX =
+    "https://raw.githubusercontent.com/openfoodfacts/brand-images/refs/heads/main/xx/stores/";
+  let nameCleaned = null;
   // Photon
   if (locationObject.properties && locationObject.properties.name) {
-    nameCleaned = utils.slugify(locationObject.properties.name)
-  // Nominatim
+    nameCleaned = utils.slugify(locationObject.properties.name);
+    // Nominatim
   } else if (locationObject.address && locationObject.name) {
-    nameCleaned = utils.slugify(locationObject.name)
-  // OP
+    nameCleaned = utils.slugify(locationObject.name);
+    // OP
   } else if (locationObject.osm_brand) {
     // See https://github.com/openfoodfacts/open-prices/issues/1148
-    return locationObject.osm_brand_logo_url.replace('.png', '').replace('.svg', '')
+    return locationObject.osm_brand_logo_url
+      .replace(".png", "")
+      .replace(".svg", "");
   }
   if (nameCleaned) {
-    nameCleaned = `${BRAND_URL_PREFIX}${nameCleaned}`
+    nameCleaned = `${BRAND_URL_PREFIX}${nameCleaned}`;
   }
-  return nameCleaned
+  return nameCleaned;
 }
 
 function getLocationONLINETitle(locationObject) {
   // OP location
-  return locationObject.website_url
+  return locationObject.website_url;
 }
 
 function getLocationId(locationObject) {
-  return getLocationOSMId(locationObject) || getLocationONLINETitle(locationObject) || locationObject.id
+  return (
+    getLocationOSMId(locationObject) ||
+    getLocationONLINETitle(locationObject) ||
+    locationObject.id
+  );
 }
 
 function getLocationIcon(locationObject) {
   if (!locationObject) {
-    return constants.LOCATION_UNKNOWN_ICON
+    return constants.LOCATION_UNKNOWN_ICON;
   }
   // Photon location
   if (locationObject.properties) {
-    return constants.LOCATION_TYPE_OSM_ICON
+    return constants.LOCATION_TYPE_OSM_ICON;
   }
   // Nominatim location
   else if (locationObject.address) {
-    return constants.LOCATION_TYPE_OSM_ICON
+    return constants.LOCATION_TYPE_OSM_ICON;
   }
   // OP location
   else if (locationObject.type) {
-    return constants[`LOCATION_TYPE_${locationObject.type}_ICON`] || constants.LOCATION_UNKNOWN_ICON
+    return (
+      constants[`LOCATION_TYPE_${locationObject.type}_ICON`] ||
+      constants.LOCATION_UNKNOWN_ICON
+    );
   }
-  return constants.LOCATION_UNKNOWN_ICON
+  return constants.LOCATION_UNKNOWN_ICON;
 }
-
 
 export default {
   getMapBounds,
@@ -352,4 +405,4 @@ export default {
   getLocationONLINETitle,
   getLocationId,
   getLocationIcon,
-}
+};

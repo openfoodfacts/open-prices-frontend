@@ -10,7 +10,14 @@
       <v-card-text>
         <v-row>
           <v-col cols="12">
-            <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="false" :hideActionMenuButton="true" :readonly="true" />
+            <PriceCard
+              v-if="price"
+              :price="price"
+              :product="price.product"
+              :hidePriceFooterRow="false"
+              :hideActionMenuButton="true"
+              :readonly="true"
+            />
           </v-col>
         </v-row>
         <!-- moderator-only alerts -->
@@ -25,8 +32,15 @@
           </v-col>
         </v-row>
         <!-- form -->
-        <ProductInputRow :productForm="updatePriceForm" :hideProductTypeInput="true" />
-        <PriceInputRow :priceForm="updatePriceForm" :product="price.product" :proofType="price.proof ? price.proof.type : null" />
+        <ProductInputRow
+          :productForm="updatePriceForm"
+          :hideProductTypeInput="true"
+        />
+        <PriceInputRow
+          :priceForm="updatePriceForm"
+          :product="price.product"
+          :proofType="price.proof ? price.proof.type : null"
+        />
       </v-card-text>
 
       <v-divider />
@@ -40,7 +54,7 @@
           :loading="loading"
           @click="updatePrice"
         >
-          {{ $t('PriceEdit.Save') }}
+          {{ $t("PriceEdit.Save") }}
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -48,31 +62,39 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openPricesApi from '../services/openPricesApi'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openPricesApi from "../services/openPricesApi";
 
 export default {
   components: {
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    ModerationAlert: defineAsyncComponent(() => import('../components/ModerationAlert.vue')),
-    ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
-    PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
+    PriceCard: defineAsyncComponent(
+      () => import("../components/PriceCard.vue"),
+    ),
+    ModerationAlert: defineAsyncComponent(
+      () => import("../components/ModerationAlert.vue"),
+    ),
+    ProductInputRow: defineAsyncComponent(
+      () => import("../components/ProductInputRow.vue"),
+    ),
+    PriceInputRow: defineAsyncComponent(
+      () => import("../components/PriceInputRow.vue"),
+    ),
   },
   props: {
     price: {
       type: Object,
-      default: null
+      default: null,
     },
   },
-  emits: ['update', 'close'],
+  emits: ["update", "close"],
   data() {
     return {
       updatePriceForm: {
         type: null,
         product: null,
-        product_code: '',
+        product_code: "",
         category_tag: null,
         origins_tags: [],
         labels_tags: [],
@@ -87,52 +109,52 @@ export default {
         // date: null,
       },
       productMode: null,
-      loading: false
-    }
+      loading: false,
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     username() {
-      return this.appStore.user.username
+      return this.appStore.user.username;
     },
     userIsPriceOwner() {
-      return this.username && this.price && this.price.owner === this.username
+      return this.username && this.price && this.price.owner === this.username;
     },
     userIsModerator() {
-      return this.username && this.appStore.user.is_moderator
+      return this.username && this.appStore.user.is_moderator;
     },
     dialogHeight() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
     dialogWidth() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
   },
   mounted() {
-    this.initUpdatePriceForm()
+    this.initUpdatePriceForm();
   },
   methods: {
     initUpdatePriceForm() {
-      this.productMode = this.price.product_code ? 'barcode' : 'category'
+      this.productMode = this.price.product_code ? "barcode" : "category";
       Object.keys(this.updatePriceForm).forEach((key) => {
-        this.updatePriceForm[key] = this.price[key]
-      })
+        this.updatePriceForm[key] = this.price[key];
+      });
     },
     updatePrice() {
       openPricesApi
         .updatePrice(this.price.id, this.updatePriceForm)
         .then((response) => {
           // if response.status == 204
-          this.$emit('update', response.data)
-          this.close()
+          this.$emit("update", response.data);
+          this.close();
         })
         .catch((error) => {
-          console.log(error)
-        })
+          console.log(error);
+        });
     },
     close() {
-      this.$emit('close')
+      this.$emit("close");
     },
-  }
-}
+  },
+};
 </script>

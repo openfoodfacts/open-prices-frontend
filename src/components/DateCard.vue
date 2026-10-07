@@ -8,7 +8,10 @@
             <v-chip
               v-for="dp in dateParentList"
               :key="dp.name"
-              label size="small" density="comfortable" @click="$router.push(dp.path)"
+              label
+              size="small"
+              density="comfortable"
+              @click="$router.push(dp.path)"
             >
               {{ dp.name }}
             </v-chip>
@@ -23,53 +26,57 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
-import date_utils from '../utils/date.js'
+import { defineAsyncComponent } from "vue";
+import constants from "../constants";
+import date_utils from "../utils/date.js";
 
 export default {
   components: {
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    DateActionMenuButton: defineAsyncComponent(() => import('../components/DateActionMenuButton.vue')),
+    PriceCountChip: defineAsyncComponent(
+      () => import("../components/PriceCountChip.vue"),
+    ),
+    DateActionMenuButton: defineAsyncComponent(
+      () => import("../components/DateActionMenuButton.vue"),
+    ),
   },
   props: {
     date: {
       type: String,
-      default: null
+      default: null,
     },
     priceCount: {
       type: Number,
-      default: 0
+      default: 0,
     },
     hideActionMenuButton: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   data() {
     return {
       DATE_ICON: constants.DATE_ICON,
-    }
+    };
   },
   computed: {
     dateType() {
-      return date_utils.dateType(this.date)
+      return date_utils.dateType(this.date);
     },
     dateParentList() {
-      let dateParentList = []
-      if (this.dateType === 'DAY') {
-        const matches = this.date.match(constants.DATE_FULL_REGEX_MATCH)
-        const year = matches[1]
-        const month = `${year}-${matches[2]}`
-        dateParentList.push({ name: month, path: `/dates/${month}` })
-        dateParentList.push({ name: year, path: `/dates/${year}` })
-      } else if (this.dateType === 'MONTH') {
-        const matches = this.date.match(constants.DATE_YEAR_MONTH_REGEX_MATCH)
-        const year = matches[1]
-        dateParentList.push({ name: year, path: `/dates/${year}` })
+      let dateParentList = [];
+      if (this.dateType === "DAY") {
+        const matches = this.date.match(constants.DATE_FULL_REGEX_MATCH);
+        const year = matches[1];
+        const month = `${year}-${matches[2]}`;
+        dateParentList.push({ name: month, path: `/dates/${month}` });
+        dateParentList.push({ name: year, path: `/dates/${year}` });
+      } else if (this.dateType === "MONTH") {
+        const matches = this.date.match(constants.DATE_YEAR_MONTH_REGEX_MATCH);
+        const year = matches[1];
+        dateParentList.push({ name: year, path: `/dates/${year}` });
       }
-      return dateParentList
+      return dateParentList;
     },
-  }
-}
+  },
+};
 </script>

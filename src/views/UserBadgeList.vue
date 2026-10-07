@@ -6,8 +6,20 @@
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="userBadge in userBadgeList" :key="userBadge.id" cols="12" sm="6" md="4" xl="3">
-      <BadgeCard :badge="userBadge.badge" :achievedAt="userBadge.achieved_at" :hideBadgeFooterRow="true" height="100%" />
+    <v-col
+      v-for="userBadge in userBadgeList"
+      :key="userBadge.id"
+      cols="12"
+      sm="6"
+      md="4"
+      xl="3"
+    >
+      <BadgeCard
+        :badge="userBadge.badge"
+        :achievedAt="userBadge.achieved_at"
+        :hideBadgeFooterRow="true"
+        height="100%"
+      />
     </v-col>
   </v-row>
 
@@ -19,14 +31,18 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import openPricesApi from '../services/openPricesApi'
-import utils from '../utils.js'
+import { defineAsyncComponent } from "vue";
+import openPricesApi from "../services/openPricesApi";
+import utils from "../utils.js";
 
 export default {
   components: {
-    CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
-    BadgeCard: defineAsyncComponent(() => import('../components/BadgeCard.vue')),
+    CountTextChip: defineAsyncComponent(
+      () => import("../components/CountTextChip.vue"),
+    ),
+    BadgeCard: defineAsyncComponent(
+      () => import("../components/BadgeCard.vue"),
+    ),
   },
   data() {
     return {
@@ -36,46 +52,52 @@ export default {
       userBadgeTotal: null,
       userBadgePage: 0,
       loading: false,
-    }
+    };
   },
   computed: {
     getUserBadgesParams() {
-      return { page: this.userBadgePage }
+      return { page: this.userBadgePage };
     },
   },
   mounted() {
-    this.getBadges()
+    this.getBadges();
     // load more
-    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
-    window.addEventListener('scroll', this.handleDebouncedScroll)
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
+    window.addEventListener("scroll", this.handleDebouncedScroll);
   },
   unmounted() {
-    window.removeEventListener('scroll', this.handleDebouncedScroll)
+    window.removeEventListener("scroll", this.handleDebouncedScroll);
   },
   methods: {
     initBadgeList() {
-      this.userBadgeList = []
-      this.getBadges()
+      this.userBadgeList = [];
+      this.getBadges();
     },
     getBadges() {
-      if ((this.userBadgeTotal != null) && (this.userBadgeList.length >= this.userBadgeTotal)) return
-      this.loading = true
-      this.userBadgePage += 1
-      openPricesApi.getUserBadges(this.username, this.getUserBadgesParams)
+      if (
+        this.userBadgeTotal != null &&
+        this.userBadgeList.length >= this.userBadgeTotal
+      )
+        return;
+      this.loading = true;
+      this.userBadgePage += 1;
+      openPricesApi
+        .getUserBadges(this.username, this.getUserBadgesParams)
         .then((data) => {
-          if (!data.items) return
-          this.userBadgeList.push(...data.items)
-          this.userBadgeTotal = data.total
+          if (!data.items) return;
+          this.userBadgeList.push(...data.items);
+          this.userBadgeTotal = data.total;
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
+    handleScroll(event) {
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getBadges()
+        this.getBadges();
       }
     },
   },
-}
+};
 </script>

@@ -1,5 +1,5 @@
-import i18n from '@/i18n'
-import constants from '../constants'
+import i18n from "@/i18n";
+import constants from "../constants";
 
 /**
  * Formats a price with currency symbol according to locale.
@@ -13,16 +13,16 @@ function prettyPrice(price, currency) {
     // Fallback to plain number formatting without currency
     return price.toLocaleString(navigator.language, {
       minimumFractionDigits: 2,
-      maximumFractionDigits: 2
-    })
+      maximumFractionDigits: 2,
+    });
   }
 
   return price.toLocaleString(navigator.language, {
-    style: 'currency',
+    style: "currency",
     currency: currency,
     minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  })
+    maximumFractionDigits: 2,
+  });
 }
 
 /**
@@ -34,41 +34,58 @@ function prettyPrice(price, currency) {
  */
 function pricePerQuantity(price, quantity) {
   if (!quantity || quantity === 0) {
-    return price
+    return price;
   }
-  return (price / quantity) * 1000
+  return (price / quantity) * 1000;
 }
 
 /**
- * 
+ *
  */
-function priceProductPerUnit(price, currency, product_quantity, product_quantity_unit) {
-  const price_per_quantity = pricePerQuantity(price, product_quantity)
+function priceProductPerUnit(
+  price,
+  currency,
+  product_quantity,
+  product_quantity_unit,
+) {
+  const price_per_quantity = pricePerQuantity(price, product_quantity);
   if (product_quantity_unit === constants.PRODUCT_QUANTITY_UNIT_ML) {
-    return i18n.global.t('PriceCard.PriceValueDisplayLitre', [prettyPrice(price_per_quantity, currency)])
+    return i18n.global.t("PriceCard.PriceValueDisplayLitre", [
+      prettyPrice(price_per_quantity, currency),
+    ]);
   }
-  return i18n.global.t('PriceCard.PriceValueDisplayKilogram', [prettyPrice(price_per_quantity, currency)])
+  return i18n.global.t("PriceCard.PriceValueDisplayKilogram", [
+    prettyPrice(price_per_quantity, currency),
+  ]);
 }
 
 /**
- * 
+ *
  */
 function priceCategoryPerUnit(price, currency, price_per) {
-  if (price_per === 'UNIT') {
-    return i18n.global.t('PriceCard.PriceValueDisplayUnit', [prettyPrice(price, currency)])
+  if (price_per === "UNIT") {
+    return i18n.global.t("PriceCard.PriceValueDisplayUnit", [
+      prettyPrice(price, currency),
+    ]);
   }
   // default to 'KILOGRAM'
-  return i18n.global.t('PriceCard.PriceValueDisplayKilogram', [prettyPrice(price, currency)])
+  return i18n.global.t("PriceCard.PriceValueDisplayKilogram", [
+    prettyPrice(price, currency),
+  ]);
 }
 
 function priceSum(priceList) {
   return priceList.reduce((acc, price) => {
-    return acc + parseFloat(price.price) * (price.receipt_quantity ? parseFloat(price.receipt_quantity) : 1)
-  }, 0)
+    return (
+      acc +
+      parseFloat(price.price) *
+        (price.receipt_quantity ? parseFloat(price.receipt_quantity) : 1)
+    );
+  }, 0);
 }
 
 function getPriceTypeIcon(priceType) {
-  return constants[`PRICE_TYPE_${priceType}_ICON`] || constants.PRICE_ICON
+  return constants[`PRICE_TYPE_${priceType}_ICON`] || constants.PRICE_ICON;
 }
 
 export default {
@@ -77,5 +94,5 @@ export default {
   priceProductPerUnit,
   priceCategoryPerUnit,
   priceSum,
-  getPriceTypeIcon
-}
+  getPriceTypeIcon,
+};

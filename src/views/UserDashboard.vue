@@ -15,41 +15,69 @@
     <v-tabs v-if="user" v-model="currentTab" :grow="!$vuetify.display.smAndUp">
       <v-tab v-for="item in tabItems" :key="item.key" :value="item.key">
         <v-icon :icon="item.icon" :start="item.key !== 'all'" />
-        <span v-if="item.key !== 'all'">{{ $t('Common.' + item.value) }}</span>
+        <span v-if="item.key !== 'all'">{{ $t("Common." + item.value) }}</span>
       </v-tab>
     </v-tabs>
   </v-row>
 
-  <br>
+  <br />
 
   <v-tabs-window v-if="user" v-model="currentTab" disabled>
     <v-tabs-window-item value="all">
       <v-row v-if="displayTodayStats">
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userTodayPriceCount" :subtitle="$t('Common.PricesToday')" />
+          <StatCard
+            :value="userTodayPriceCount"
+            :subtitle="$t('Common.PricesToday')"
+          />
         </v-col>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userTodayProofCount" :subtitle="$t('Common.ProofsToday')" />
+          <StatCard
+            :value="userTodayProofCount"
+            :subtitle="$t('Common.ProofsToday')"
+          />
         </v-col>
       </v-row>
       <v-row>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userPriceCount" :subtitle="$t('Common.Prices')" :to="getUserDashboardPriceUrl" />
+          <StatCard
+            :value="userPriceCount"
+            :subtitle="$t('Common.Prices')"
+            :to="getUserDashboardPriceUrl"
+          />
         </v-col>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userProofCount" :subtitle="$t('Common.Proofs')" :to="getUserDashboardProofUrl" />
+          <StatCard
+            :value="userProofCount"
+            :subtitle="$t('Common.Proofs')"
+            :to="getUserDashboardProofUrl"
+          />
         </v-col>
       </v-row>
 
-      <br>
+      <br />
 
       <v-row>
-        <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
-          <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+        <v-col
+          v-for="price in displayedPriceList"
+          :key="price"
+          cols="12"
+          sm="6"
+          md="4"
+          xl="3"
+        >
+          <PriceCard
+            :price="price"
+            :product="price.product"
+            elevation="1"
+            height="100%"
+          />
         </v-col>
         <v-col cols="12" sm="6" md="4" xl="3" align="center">
-          <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
-          <br v-if="$vuetify.display.smAndUp">
+          <br
+            v-if="$vuetify.display.smAndUp"
+          /><!-- TODO: center vertically instead of br -->
+          <br v-if="$vuetify.display.smAndUp" />
           <v-btn
             v-if="userPriceList.length"
             color="primary"
@@ -58,7 +86,7 @@
             prepend-icon="mdi-tag-multiple-outline"
             append-icon="mdi-arrow-right"
           >
-            {{ $t('UserDashboard.MyPrices') }}
+            {{ $t("UserDashboard.MyPrices") }}
           </v-btn>
         </v-col>
       </v-row>
@@ -67,30 +95,58 @@
     <v-tabs-window-item value="consumption">
       <v-row v-if="displayTodayStats">
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userTodayConsumptionPriceCount" :subtitle="$t('Common.PricesToday')" />
+          <StatCard
+            :value="userTodayConsumptionPriceCount"
+            :subtitle="$t('Common.PricesToday')"
+          />
         </v-col>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userTodayConsumptionProofCount" :subtitle="$t('Common.ProofsToday')" />
+          <StatCard
+            :value="userTodayConsumptionProofCount"
+            :subtitle="$t('Common.ProofsToday')"
+          />
         </v-col>
       </v-row>
       <v-row>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userConsumptionPriceCount" :subtitle="$t('Common.Prices')" :to="getUserDashboardPriceUrl" />
+          <StatCard
+            :value="userConsumptionPriceCount"
+            :subtitle="$t('Common.Prices')"
+            :to="getUserDashboardPriceUrl"
+          />
         </v-col>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userConsumptionProofCount" :subtitle="$t('Common.Proofs')" :to="getUserDashboardProofUrl" />
+          <StatCard
+            :value="userConsumptionProofCount"
+            :subtitle="$t('Common.Proofs')"
+            :to="getUserDashboardProofUrl"
+          />
         </v-col>
       </v-row>
 
-      <br>
+      <br />
 
       <v-row>
-        <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
-          <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+        <v-col
+          v-for="price in displayedPriceList"
+          :key="price"
+          cols="12"
+          sm="6"
+          md="4"
+          xl="3"
+        >
+          <PriceCard
+            :price="price"
+            :product="price.product"
+            elevation="1"
+            height="100%"
+          />
         </v-col>
         <v-col cols="12" sm="6" md="4" xl="3" align="center">
-          <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
-          <br v-if="$vuetify.display.smAndUp">
+          <br
+            v-if="$vuetify.display.smAndUp"
+          /><!-- TODO: center vertically instead of br -->
+          <br v-if="$vuetify.display.smAndUp" />
           <v-btn
             v-if="userConsumptionPriceList.length"
             color="primary"
@@ -99,7 +155,7 @@
             prepend-icon="mdi-tag-multiple-outline"
             append-icon="mdi-arrow-right"
           >
-            {{ $t('UserDashboard.MyPrices') }}
+            {{ $t("UserDashboard.MyPrices") }}
           </v-btn>
         </v-col>
       </v-row>
@@ -108,30 +164,58 @@
     <v-tabs-window-item value="community">
       <v-row v-if="displayTodayStats">
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userTodayCommunityPriceCount" :subtitle="$t('Common.PricesToday')" />
+          <StatCard
+            :value="userTodayCommunityPriceCount"
+            :subtitle="$t('Common.PricesToday')"
+          />
         </v-col>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userTodayCommunityProofCount" :subtitle="$t('Common.ProofsToday')" />
+          <StatCard
+            :value="userTodayCommunityProofCount"
+            :subtitle="$t('Common.ProofsToday')"
+          />
         </v-col>
       </v-row>
       <v-row>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userCommunityPriceCount" :subtitle="$t('Common.Prices')" :to="getUserDashboardPriceUrl" />
+          <StatCard
+            :value="userCommunityPriceCount"
+            :subtitle="$t('Common.Prices')"
+            :to="getUserDashboardPriceUrl"
+          />
         </v-col>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userCommunityProofCount" :subtitle="$t('Common.Proofs')" :to="getUserDashboardProofUrl" />
+          <StatCard
+            :value="userCommunityProofCount"
+            :subtitle="$t('Common.Proofs')"
+            :to="getUserDashboardProofUrl"
+          />
         </v-col>
       </v-row>
 
-      <br>
+      <br />
 
       <v-row>
-        <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
-          <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+        <v-col
+          v-for="price in displayedPriceList"
+          :key="price"
+          cols="12"
+          sm="6"
+          md="4"
+          xl="3"
+        >
+          <PriceCard
+            :price="price"
+            :product="price.product"
+            elevation="1"
+            height="100%"
+          />
         </v-col>
         <v-col cols="12" sm="6" md="4" xl="3" align="center">
-          <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
-          <br v-if="$vuetify.display.smAndUp">
+          <br
+            v-if="$vuetify.display.smAndUp"
+          /><!-- TODO: center vertically instead of br -->
+          <br v-if="$vuetify.display.smAndUp" />
           <v-btn
             v-if="userConsumptionPriceList.length"
             color="primary"
@@ -140,7 +224,7 @@
             prepend-icon="mdi-tag-multiple-outline"
             append-icon="mdi-arrow-right"
           >
-            {{ $t('UserDashboard.MyPrices') }}
+            {{ $t("UserDashboard.MyPrices") }}
           </v-btn>
         </v-col>
       </v-row>
@@ -149,19 +233,23 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
-import date_utils from '../utils/date.js'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
+import date_utils from "../utils/date.js";
 
 export default {
   components: {
-    UserCard: defineAsyncComponent(() => import('../components/UserCard.vue')),
-    ModerationAlert: defineAsyncComponent(() => import('../components/ModerationAlert.vue')),
-    StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
+    UserCard: defineAsyncComponent(() => import("../components/UserCard.vue")),
+    ModerationAlert: defineAsyncComponent(
+      () => import("../components/ModerationAlert.vue"),
+    ),
+    StatCard: defineAsyncComponent(() => import("../components/StatCard.vue")),
+    PriceCard: defineAsyncComponent(
+      () => import("../components/PriceCard.vue"),
+    ),
   },
   data() {
     return {
@@ -184,183 +272,210 @@ export default {
       userCommunityPriceList: [],
       loading: false,
       // config
-      currentTab: null,  // see mounted  // 'all' | 'consumption' | 'community'
+      currentTab: null, // see mounted  // 'all' | 'consumption' | 'community'
       tabItems: constants.USER_DASHBOARD_TAB_LIST,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     username() {
-      return this.appStore.user.username
+      return this.appStore.user.username;
     },
     userIsModerator() {
-      return this.appStore.user.is_moderator
+      return this.appStore.user.is_moderator;
     },
     displayTodayStats() {
-      if (this.currentTab === 'consumption') {
-        return (this.userTodayConsumptionPriceCount > 0) || (this.userTodayConsumptionProofCount > 0)
-      } else if (this.currentTab === 'community') {
-        return (this.userTodayCommunityPriceCount > 0) || (this.userTodayCommunityProofCount > 0)
+      if (this.currentTab === "consumption") {
+        return (
+          this.userTodayConsumptionPriceCount > 0 ||
+          this.userTodayConsumptionProofCount > 0
+        );
+      } else if (this.currentTab === "community") {
+        return (
+          this.userTodayCommunityPriceCount > 0 ||
+          this.userTodayCommunityProofCount > 0
+        );
       }
       // all
-      return (this.userTodayPriceCount > 0) || (this.userTodayProofCount > 0)
+      return this.userTodayPriceCount > 0 || this.userTodayProofCount > 0;
     },
     displayedPriceList() {
-      if (this.currentTab === 'consumption') {
-        return (!this.$vuetify.display.smAndUp) ? this.userConsumptionPriceList.slice(0, 5) : this.userConsumptionPriceList
-      } else if (this.currentTab === 'community') {
-        return (!this.$vuetify.display.smAndUp) ? this.userCommunityPriceList.slice(0, 5) : this.userCommunityPriceList
+      if (this.currentTab === "consumption") {
+        return !this.$vuetify.display.smAndUp
+          ? this.userConsumptionPriceList.slice(0, 5)
+          : this.userConsumptionPriceList;
+      } else if (this.currentTab === "community") {
+        return !this.$vuetify.display.smAndUp
+          ? this.userCommunityPriceList.slice(0, 5)
+          : this.userCommunityPriceList;
       }
       // all
-      return (!this.$vuetify.display.smAndUp) ? this.userPriceList.slice(0, 5) : this.userPriceList
+      return !this.$vuetify.display.smAndUp
+        ? this.userPriceList.slice(0, 5)
+        : this.userPriceList;
     },
     getPriceParams() {
-      let defaultParams = { owner: this.username }
-      if (this.currentTab && this.currentTab !== 'all') {
-        defaultParams['kind'] = this.currentTab.toUpperCase()
+      let defaultParams = { owner: this.username };
+      if (this.currentTab && this.currentTab !== "all") {
+        defaultParams["kind"] = this.currentTab.toUpperCase();
       }
-      return defaultParams
+      return defaultParams;
     },
     getProofParams() {
-      let defaultParams = { owner: this.username }
-      if (this.currentTab && this.currentTab !== 'all') {
-        defaultParams['kind'] = this.currentTab.toUpperCase()
+      let defaultParams = { owner: this.username };
+      if (this.currentTab && this.currentTab !== "all") {
+        defaultParams["kind"] = this.currentTab.toUpperCase();
       }
-      return defaultParams
+      return defaultParams;
     },
     getUserDashboardPriceUrl() {
-      if (this.currentTab && this.currentTab !== 'all') {
-        return `/dashboard/prices?${constants.KIND_PARAM}=${this.currentTab.toUpperCase()}`
+      if (this.currentTab && this.currentTab !== "all") {
+        return `/dashboard/prices?${constants.KIND_PARAM}=${this.currentTab.toUpperCase()}`;
       }
       // all
-      return `/dashboard/prices`
+      return `/dashboard/prices`;
     },
     getUserDashboardProofUrl() {
-      if (this.currentTab && this.currentTab !== 'all') {
-        return `/dashboard/proofs?${constants.KIND_PARAM}=${this.currentTab.toUpperCase()}`
+      if (this.currentTab && this.currentTab !== "all") {
+        return `/dashboard/proofs?${constants.KIND_PARAM}=${this.currentTab.toUpperCase()}`;
       }
       // all
-      return `/dashboard/proofs`
+      return `/dashboard/proofs`;
     },
   },
   watch: {
-    currentTab(newTab, oldTab) {  // eslint-disable-line no-unused-vars
-      this.$router.push({ query: { [constants.TAB_PARAM]: newTab } })
+    // eslint-disable-next-line no-unused-vars
+    currentTab(newTab, oldTab) {
+      this.$router.push({ query: { [constants.TAB_PARAM]: newTab } });
     },
-    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
-      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initTabData()
+    $route(newRoute, oldRoute) {
+      // only called when query changes to avoid having an API call when the path changes
+      if (
+        oldRoute.path === newRoute.path &&
+        JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)
+      ) {
+        this.initTabData();
       }
-    }
+    },
   },
   mounted() {
-    this.currentTab = this.$route.query[constants.TAB_PARAM] || this.currentTab
-    this.getUser()
-    this.initTabData()
+    this.currentTab = this.$route.query[constants.TAB_PARAM] || this.currentTab;
+    this.getUser();
+    this.initTabData();
   },
   methods: {
     getUser() {
-      this.loading = true
-      return openPricesApi.getUserById(this.username)
+      this.loading = true;
+      return openPricesApi
+        .getUserById(this.username)
         .then((data) => {
-          this.user = data
+          this.user = data;
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     initTabData() {
-      this.getUserPrices()
-      this.getUserProofCount()
+      this.getUserPrices();
+      this.getUserProofCount();
     },
     getUserPrices() {
-      this.loading = true
-      const params = {...this.getPriceParams, size: 25 }
-      return openPricesApi.getPrices(params)
+      this.loading = true;
+      const params = { ...this.getPriceParams, size: 25 };
+      return openPricesApi
+        .getPrices(params)
         .then((data) => {
-          if (this.currentTab === 'consumption') {
-            this.userConsumptionPriceList = data.items
-            this.userConsumptionPriceCount = data.total
-          } else if (this.currentTab === 'community') {
-            this.userCommunityPriceList = data.items
-            this.userCommunityPriceCount = data.total
+          if (this.currentTab === "consumption") {
+            this.userConsumptionPriceList = data.items;
+            this.userConsumptionPriceCount = data.total;
+          } else if (this.currentTab === "community") {
+            this.userCommunityPriceList = data.items;
+            this.userCommunityPriceCount = data.total;
           } else {
-            this.userPriceList = data.items
-            this.userPriceCount = data.total
+            this.userPriceList = data.items;
+            this.userPriceCount = data.total;
           }
           // check if the user added a price today
-          if (data.items.length && data.items[0].created > date_utils.currentStartOfDay()) {
-            this.getUserPriceCount(true)
+          if (
+            data.items.length &&
+            data.items[0].created > date_utils.currentStartOfDay()
+          ) {
+            this.getUserPriceCount(true);
           }
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
-    getUserPriceCount(today=false) {
-      this.loading = true
-      const params = {...this.getPriceParams, size: 1 }
+    getUserPriceCount(today = false) {
+      this.loading = true;
+      const params = { ...this.getPriceParams, size: 1 };
       if (today) {
-        params.created__gte = date_utils.currentStartOfDay()
+        params.created__gte = date_utils.currentStartOfDay();
       }
-      return openPricesApi.getPrices(params)
+      return openPricesApi
+        .getPrices(params)
         .then((data) => {
           if (today) {
-            if (this.currentTab === 'consumption') {
-              this.userTodayConsumptionPriceCount = data.total
-            } else if (this.currentTab === 'community') {
-              this.userTodayCommunityPriceCount = data.total
+            if (this.currentTab === "consumption") {
+              this.userTodayConsumptionPriceCount = data.total;
+            } else if (this.currentTab === "community") {
+              this.userTodayCommunityPriceCount = data.total;
             } else {
-              this.userTodayPriceCount = data.total
+              this.userTodayPriceCount = data.total;
             }
           } else {
-            if (this.currentTab === 'consumption') {
-              this.userConsumptionPriceCount = data.total
-            } else if (this.currentTab === 'community') {
-              this.userCommunityPriceCount = data.total
+            if (this.currentTab === "consumption") {
+              this.userConsumptionPriceCount = data.total;
+            } else if (this.currentTab === "community") {
+              this.userCommunityPriceCount = data.total;
             } else {
-              this.userPriceCount = data.total
+              this.userPriceCount = data.total;
             }
           }
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
-    getUserProofCount(today=false) {
-      this.loading = true
-      const params = {...this.getProofParams, size: 1 }
+    getUserProofCount(today = false) {
+      this.loading = true;
+      const params = { ...this.getProofParams, size: 1 };
       if (today) {
-        params.created__gte = date_utils.currentStartOfDay()
+        params.created__gte = date_utils.currentStartOfDay();
       }
-      return openPricesApi.getProofs(params)
+      return openPricesApi
+        .getProofs(params)
         .then((data) => {
           if (today) {
-            if (this.currentTab === 'consumption') {
-              this.userTodayConsumptionProofCount = data.total
-            } else if (this.currentTab === 'community') {
-              this.userTodayCommunityProofCount = data.total
+            if (this.currentTab === "consumption") {
+              this.userTodayConsumptionProofCount = data.total;
+            } else if (this.currentTab === "community") {
+              this.userTodayCommunityProofCount = data.total;
             } else {
-              this.userTodayProofCount = data.total
+              this.userTodayProofCount = data.total;
             }
           } else {
-            if (this.currentTab === 'consumption') {
-              this.userConsumptionProofCount = data.total
-            } else if (this.currentTab === 'community') {
-              this.userCommunityProofCount = data.total
+            if (this.currentTab === "consumption") {
+              this.userConsumptionProofCount = data.total;
+            } else if (this.currentTab === "community") {
+              this.userCommunityProofCount = data.total;
             } else {
-              this.userProofCount = data.total
+              this.userProofCount = data.total;
             }
             // check if the user added a proof today
-            if (data.items.length && data.items[0].created > date_utils.currentStartOfDay()) {
-              this.getUserProofCount(true)
+            if (
+              data.items.length &&
+              data.items[0].created > date_utils.currentStartOfDay()
+            ) {
+              this.getUserProofCount(true);
             }
           }
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
-  }
-}
+  },
+};
 </script>

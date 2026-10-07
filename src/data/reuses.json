@@ -1,101 +1,101 @@
 [
-    {
-        "name": "Amni-Price",
-        "description": "Free, open-source Android price scanner (shelf tags, receipts, restaurant menus) made to push back on algorithmic pricing. Its optional Community prices download fills in nearby stores with recent Open Prices prices, from tiles rebuilt nightly from the Open Prices export and the products API",
-        "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/amniprice.png",
-        "url": "https://amni-scient.com/amni-price",
-        "code_url": "https://github.com/Amnibro/Amni-Price",
-        "tags": ["API"],
-        "date": "2026",
-        "author": "Amnibro",
-        "display": true
-    },
-    {
-        "name": "Popotam",
-        "description": "Free meal planner and shopping list, without account or ads. Its ingredient price base is recalibrated every week on median Open Prices prices, so the weekly grocery budget it estimates follows real in-store prices (in french)",
-        "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/popotam.png",
-        "url": "https://popotam.fr",
-        "code_url": null,
-        "tags": ["API", "Ciqual"],
-        "date": "2026",
-        "author": "Jérémy",
-        "display": true
-    },
-    {
-        "name": "World map",
-        "description": "A world map of all the contributions in Open Prices, with clickable locations to inspect prices.",
-        "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/openpricesmap.png",
-        "url": "https://albertaillet.github.io/open-prices-map/",
-        "code_url": "https://github.com/albertaillet/open-prices-map",
-        "tags": ["API"],
-        "date": "2025",
-        "author": "Albert",
-        "display": true
-    },
-    {
-        "name": "Diet optimization",
-        "description": "A web app to choose the most nutritious and cheapest products",
-        "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/dietoptimization.png",
-        "url": "https://dietoptimization.com",
-        "code_url": null,
-        "tags": ["Hugging Face", "Open Food Facts Database Dump", "Ciqual"],
-        "date": "2025",
-        "author": "Albert",
-        "display": true
-    },
-    {
-        "name": "World map",
-        "description": "A world map of all the contributions in Open Prices",
-        "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/worldmap.png",
-        "url": "https://dmayaux.shinyapps.io/open_prices",
-        "code_url": null,
-        "tags": ["API"],
-        "date": "2024",
-        "author": "Damien",
-        "display": true
-    },
-    {
-        "name": "Le prix des carottes",
-        "description": "Simple price index of fruits and vegetables (in french)",
-        "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/leprixdescarottes.png",
-        "url": "https://leprixdescarottes.fr",
-        "code_url": "https://github.com/TTalex/leprixdescarottes",
-        "tags": ["API"],
-        "date": "2024-10",
-        "author": "Alex",
-        "display": true
-    },
-    {
-        "name": "Do you want your receipt?",
-        "description": "Compare prices between 2 shops",
-        "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/doyouwantyourreceipt.png",
-        "url": "https://www.doyouwantyourreceipt.info",
-        "code_url": "https://github.com/qloridant/shop_prices_comparaison",
-        "tags": ["API"],
-        "date": "2024-11",
-        "author": "Quentin",
-        "display": true
-    },
-    {
-        "name": "Product price evolution",
-        "description": null,
-        "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/productpriceevolution.png",
-        "url": "https://project.med3d.eu/fooddata/price_plot.html?ean=5000159451666",
-        "code_url": null,
-        "tags": ["API"],
-        "date": "2024",
-        "author": null,
-        "display": true
-    },
-    {
-        "name": "Prixdle",
-        "description": "Guess the product's price",
-        "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/prixdle.png",
-        "url": "https://prixdle.com",
-        "code_url": null,
-        "tags": ["API"],
-        "date": "2024",
-        "author": null,
-        "display": true
-    }
+  {
+    "name": "Amni-Price",
+    "description": "Free, open-source Android price scanner (shelf tags, receipts, restaurant menus) made to push back on algorithmic pricing. Its optional Community prices download fills in nearby stores with recent Open Prices prices, from tiles rebuilt nightly from the Open Prices export and the products API",
+    "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/amniprice.png",
+    "url": "https://amni-scient.com/amni-price",
+    "code_url": "https://github.com/Amnibro/Amni-Price",
+    "tags": ["API"],
+    "date": "2026",
+    "author": "Amnibro",
+    "display": true
+  },
+  {
+    "name": "Popotam",
+    "description": "Free meal planner and shopping list, without account or ads. Its ingredient price base is recalibrated every week on median Open Prices prices, so the weekly grocery budget it estimates follows real in-store prices (in french)",
+    "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/popotam.png",
+    "url": "https://popotam.fr",
+    "code_url": null,
+    "tags": ["API", "Ciqual"],
+    "date": "2026",
+    "author": "Jérémy",
+    "display": true
+  },
+  {
+    "name": "World map",
+    "description": "A world map of all the contributions in Open Prices, with clickable locations to inspect prices.",
+    "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/openpricesmap.png",
+    "url": "https://albertaillet.github.io/open-prices-map/",
+    "code_url": "https://github.com/albertaillet/open-prices-map",
+    "tags": ["API"],
+    "date": "2025",
+    "author": "Albert",
+    "display": true
+  },
+  {
+    "name": "Diet optimization",
+    "description": "A web app to choose the most nutritious and cheapest products",
+    "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/dietoptimization.png",
+    "url": "https://dietoptimization.com",
+    "code_url": null,
+    "tags": ["Hugging Face", "Open Food Facts Database Dump", "Ciqual"],
+    "date": "2025",
+    "author": "Albert",
+    "display": true
+  },
+  {
+    "name": "World map",
+    "description": "A world map of all the contributions in Open Prices",
+    "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/worldmap.png",
+    "url": "https://dmayaux.shinyapps.io/open_prices",
+    "code_url": null,
+    "tags": ["API"],
+    "date": "2024",
+    "author": "Damien",
+    "display": true
+  },
+  {
+    "name": "Le prix des carottes",
+    "description": "Simple price index of fruits and vegetables (in french)",
+    "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/leprixdescarottes.png",
+    "url": "https://leprixdescarottes.fr",
+    "code_url": "https://github.com/TTalex/leprixdescarottes",
+    "tags": ["API"],
+    "date": "2024-10",
+    "author": "Alex",
+    "display": true
+  },
+  {
+    "name": "Do you want your receipt?",
+    "description": "Compare prices between 2 shops",
+    "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/doyouwantyourreceipt.png",
+    "url": "https://www.doyouwantyourreceipt.info",
+    "code_url": "https://github.com/qloridant/shop_prices_comparaison",
+    "tags": ["API"],
+    "date": "2024-11",
+    "author": "Quentin",
+    "display": true
+  },
+  {
+    "name": "Product price evolution",
+    "description": null,
+    "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/productpriceevolution.png",
+    "url": "https://project.med3d.eu/fooddata/price_plot.html?ean=5000159451666",
+    "code_url": null,
+    "tags": ["API"],
+    "date": "2024",
+    "author": null,
+    "display": true
+  },
+  {
+    "name": "Prixdle",
+    "description": "Guess the product's price",
+    "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/prixdle.png",
+    "url": "https://prixdle.com",
+    "code_url": null,
+    "tags": ["API"],
+    "date": "2024",
+    "author": null,
+    "display": true
+  }
 ]

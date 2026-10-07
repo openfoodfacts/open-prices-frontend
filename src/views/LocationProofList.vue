@@ -3,16 +3,42 @@
     <v-col>
       <CountTextChip kind="proof" :count="proofTotal" />
       <template v-if="!loading">
-        <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
-        <FilterMenu kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
-        <OrderMenu kind="proof" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+        <LoadedCountChip
+          :loadedCount="proofList.length"
+          :totalCount="proofTotal"
+        />
+        <FilterMenu
+          kind="proof"
+          :currentFilterList="currentFilterList"
+          :currentType="currentType"
+          @update:currentFilterList="updateFilterList($event)"
+          @update:currentType="toggleProofType($event)"
+        />
+        <OrderMenu
+          kind="proof"
+          :currentOrder="currentOrder"
+          @update:currentOrder="updateOrder($event)"
+        />
       </template>
     </v-col>
   </v-row>
 
   <v-row>
-    <v-col v-for="proof in proofList" :key="proof" cols="12" sm="6" md="4" xl="3">
-      <ProofCard :proof="proof" :hideProofHeader="true" :showImageThumb="true" height="100%" @proofUpdated="handleProofUpdated" />
+    <v-col
+      v-for="proof in proofList"
+      :key="proof"
+      cols="12"
+      sm="6"
+      md="4"
+      xl="3"
+    >
+      <ProofCard
+        :proof="proof"
+        :hideProofHeader="true"
+        :showImageThumb="true"
+        height="100%"
+        @proofUpdated="handleProofUpdated"
+      />
     </v-col>
   </v-row>
 
@@ -22,28 +48,34 @@
     </v-col>
   </v-row>
 
-  <v-snackbar
-    v-model="proofUpdated"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('UserDashboard.ProofUpdated') }}
+  <v-snackbar v-model="proofUpdated" color="success" :timeout="2000">
+    {{ $t("UserDashboard.ProofUpdated") }}
   </v-snackbar>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
-import utils from '../utils.js'
+import { defineAsyncComponent } from "vue";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
+import utils from "../utils.js";
 
 export default {
   components: {
-    CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
-    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
-    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    CountTextChip: defineAsyncComponent(
+      () => import("../components/CountTextChip.vue"),
+    ),
+    LoadedCountChip: defineAsyncComponent(
+      () => import("../components/LoadedCountChip.vue"),
+    ),
+    FilterMenu: defineAsyncComponent(
+      () => import("../components/FilterMenu.vue"),
+    ),
+    OrderMenu: defineAsyncComponent(
+      () => import("../components/OrderMenu.vue"),
+    ),
+    ProofCard: defineAsyncComponent(
+      () => import("../components/ProofCard.vue"),
+    ),
   },
   data() {
     return {
@@ -56,87 +88,117 @@ export default {
       proofUpdated: false,
       // filter & order
       currentFilterList: [],
-      currentType: '',
+      currentType: "",
       currentOrder: constants.PROOF_ORDER_LIST[2].key,
-    }
+    };
   },
   computed: {
     getProofsParams() {
-      let defaultParams = { location_id: this.locationId, order_by: this.currentOrder, page: this.proofPage }
-      if (this.currentFilterList.includes('hide_price_count_gte_1')) {
-        defaultParams['price_count'] = 0
+      let defaultParams = {
+        location_id: this.locationId,
+        order_by: this.currentOrder,
+        page: this.proofPage,
+      };
+      if (this.currentFilterList.includes("hide_price_count_gte_1")) {
+        defaultParams["price_count"] = 0;
       }
       if (this.currentType) {
-        defaultParams[constants.TYPE_PARAM] = this.currentType
+        defaultParams[constants.TYPE_PARAM] = this.currentType;
       }
-      return defaultParams
+      return defaultParams;
     },
   },
   watch: {
-    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
-      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initProofList()
+    $route(newRoute, oldRoute) {
+      // only called when query changes to avoid having an API call when the path changes
+      if (
+        oldRoute.path === newRoute.path &&
+        JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)
+      ) {
+        this.initProofList();
       }
-    }
+    },
   },
   mounted() {
-    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
-    this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
-    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.initProofList()
+    this.currentFilterList =
+      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
+      this.currentFilterList;
+    this.currentType =
+      this.$route.query[constants.TYPE_PARAM] || this.currentType;
+    this.currentOrder =
+      this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
+    this.initProofList();
     // load more
-    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
-    window.addEventListener('scroll', this.handleDebouncedScroll)
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
+    window.addEventListener("scroll", this.handleDebouncedScroll);
   },
   unmounted() {
-    window.removeEventListener('scroll', this.handleDebouncedScroll)
+    window.removeEventListener("scroll", this.handleDebouncedScroll);
   },
   methods: {
     initProofList() {
-      this.proofList = []
-      this.proofTotal = null
-      this.proofPage = 0
-      this.getProofs()
+      this.proofList = [];
+      this.proofTotal = null;
+      this.proofPage = 0;
+      this.getProofs();
     },
     getProofs() {
-      if ((this.proofTotal != null) && (this.proofList.length >= this.proofTotal)) return
-      this.loading = true
-      this.proofPage += 1
-      return openPricesApi.getProofs(this.getProofsParams)
+      if (this.proofTotal != null && this.proofList.length >= this.proofTotal)
+        return;
+      this.loading = true;
+      this.proofPage += 1;
+      return openPricesApi
+        .getProofs(this.getProofsParams)
         .then((data) => {
-          if (!data.items) return
-          this.proofList.push(...data.items)
-          this.proofTotal = data.total
+          if (!data.items) return;
+          this.proofList.push(...data.items);
+          this.proofTotal = data.total;
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     handleProofUpdated() {
-      this.proofUpdated = true
+      this.proofUpdated = true;
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      this.currentFilterList = newFilterList;
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.FILTER_PARAM]: this.currentFilterList,
+        },
+      });
       // this.initProofList() will be called in watch $route
     },
     toggleProofType(sourceKey) {
-      this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
-      this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
+      this.currentType = this.currentType !== sourceKey ? sourceKey : "";
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.TYPE_PARAM]: this.currentType,
+        },
+      });
       // this.initProofList() will be called in watch $route
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
-        this.currentOrder = orderKey
-        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        this.currentOrder = orderKey;
+        this.$router.push({
+          query: {
+            ...this.$route.query,
+            [constants.ORDER_PARAM]: this.currentOrder,
+          },
+        });
         // this.initProofList() will be called in watch $route
       }
     },
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
+    handleScroll(event) {
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getProofs()
+        this.getProofs();
       }
     },
-  }
-}
+  },
+};
 </script>

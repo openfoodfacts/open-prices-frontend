@@ -7,8 +7,13 @@
 
   <v-row v-if="!loading && locationNotFound" class="mt-0">
     <v-col cols="12">
-      <v-alert data-name="location-not-found-alert" type="error" variant="outlined" density="compact">
-        {{ $t('Common.LocationNotFound') }}
+      <v-alert
+        data-name="location-not-found-alert"
+        type="error"
+        variant="outlined"
+        density="compact"
+      >
+        {{ $t("Common.LocationNotFound") }}
       </v-alert>
     </v-col>
   </v-row>
@@ -21,12 +26,14 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import openPricesApi from '../services/openPricesApi'
+import { defineAsyncComponent } from "vue";
+import openPricesApi from "../services/openPricesApi";
 
 export default {
   components: {
-    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
+    LocationCard: defineAsyncComponent(
+      () => import("../components/LocationCard.vue"),
+    ),
   },
   data() {
     return {
@@ -35,31 +42,35 @@ export default {
       // data
       location: null,
       loading: false,
-    }
+    };
   },
   computed: {
     locationNotFound() {
-      return this.location === null || (this.location && !this.location.id)
+      return this.location === null || (this.location && !this.location.id);
     },
   },
   mounted() {
-    this.getLocation()
+    this.getLocation();
   },
   methods: {
     getLocation() {
-      return openPricesApi.getLocationByOsmTypeAndId(this.locationOsmType, this.locationOsmId)
+      return openPricesApi
+        .getLocationByOsmTypeAndId(this.locationOsmType, this.locationOsmId)
         .then((data) => {
-          this.$router.replace({ name: 'location-detail', params: { id: data.id } })
+          this.$router.replace({
+            name: "location-detail",
+            params: { id: data.id },
+          });
         })
         .catch((error) => {
-          if (error.status !== 404) throw error
+          if (error.status !== 404) throw error;
           // location not in Open Prices (yet): display it from its OSM type & id
           this.location = {
             osm_type: this.locationOsmType,
             osm_id: this.locationOsmId,
-          }
-        })
+          };
+        });
     },
-  }
-}
+  },
+};
 </script>

@@ -1,6 +1,11 @@
 <template>
-  <v-alert data-name="category-not-found-alert" type="error" variant="outlined" density="compact">
-    {{ $t('ProductDetail.CategoryNotFound') }}
+  <v-alert
+    data-name="category-not-found-alert"
+    type="error"
+    variant="outlined"
+    density="compact"
+  >
+    {{ $t("ProductDetail.CategoryNotFound") }}
   </v-alert>
 </template>
 
@@ -10,8 +15,8 @@ export default {
     // not used for now
     categoryTag: {
       type: String,
-      default: '',
+      default: "",
     },
   },
-}
+};
 </script>

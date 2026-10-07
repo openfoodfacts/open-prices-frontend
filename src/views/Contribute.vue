@@ -1,6 +1,12 @@
 <template>
   <v-row>
-    <v-col v-for="contribute in contributeCommonList" :key="contribute.url" cols="12" md="6" lg="4">
+    <v-col
+      v-for="contribute in contributeCommonList"
+      :key="contribute.url"
+      cols="12"
+      md="6"
+      lg="4"
+    >
       <ContributeCard :contribute="contribute" height="100%" />
     </v-col>
   </v-row>
@@ -14,52 +20,78 @@
     </v-col>
     <v-col>
       <ul class="pl-4">
-        <li>You have a fidelty card? You can <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank" rel="noopener noreferrer">make a GDPR request and upload the list of prices</a></li>
-        <li><router-link to="/challenges">Participate in one of our challenges</router-link></li>
-        <li><router-link to="/community">Learn more about the Open Prices project and its community</router-link></li>
-        <li><a :href="OFF_CONTRIBUTE_URL" target="_blank" rel="noopener noreferrer">Contribute to Open Food Facts</a></li>
+        <li>
+          You have a fidelty card? You can
+          <a
+            :href="OFF_WIKI_GDPR_REQUEST_URL"
+            target="_blank"
+            rel="noopener noreferrer"
+            >make a GDPR request and upload the list of prices</a
+          >
+        </li>
+        <li>
+          <router-link to="/challenges"
+            >Participate in one of our challenges</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/community"
+            >Learn more about the Open Prices project and its
+            community</router-link
+          >
+        </li>
+        <li>
+          <a
+            :href="OFF_CONTRIBUTE_URL"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Contribute to Open Food Facts</a
+          >
+        </li>
       </ul>
     </v-col>
   </v-row>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
+import { defineAsyncComponent } from "vue";
+import constants from "../constants";
 
 export default {
   components: {
-    ContributeCard: defineAsyncComponent(() => import('../components/ContributeCard.vue')),
+    ContributeCard: defineAsyncComponent(
+      () => import("../components/ContributeCard.vue"),
+    ),
   },
   data() {
     return {
       contributeCommonList: [
         {
-          name: this.$t('Common.FromPriceTags'),
-          description: '',
+          name: this.$t("Common.FromPriceTags"),
+          description: "",
           background_image_url: constants.PROOF_TYPE_PRICE_TAG_IMAGE_THUMB_URL,
-          url: '/proofs/add/price-tags'
+          url: "/proofs/add/price-tags",
         },
         {
-          name: this.$t('Common.FromReceipt'),
-          description: '',
+          name: this.$t("Common.FromReceipt"),
+          description: "",
           background_image_url: constants.PROOF_TYPE_RECEIPT_IMAGE_THUMB_URL,
-          url: '/proofs/add/receipt'
+          url: "/proofs/add/receipt",
         },
         {
-          name: this.$t('Common.ValidatePrices'),
-          description: '',
-          background_image_url: 'https://imgur.com/s0lenjt.png',
-          url: '/prices/add/validate',
-          community: true
-        }
+          name: this.$t("Common.ValidatePrices"),
+          description: "",
+          background_image_url: "https://imgur.com/s0lenjt.png",
+          url: "/prices/add/validate",
+          community: true,
+        },
       ],
       PROOF_TYPE_PRICE_TAG_ICON: constants.PROOF_TYPE_PRICE_TAG_ICON,
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
       PROOF_TYPE_GDPR_REQUEST_ICON: constants.PROOF_TYPE_GDPR_REQUEST_ICON,
       OFF_WIKI_GDPR_REQUEST_URL: constants.OFF_WIKI_GDPR_REQUEST_URL,
-      OFF_CONTRIBUTE_URL: constants.OFF_CONTRIBUTE_URL
-    }
-  }
-}
+      OFF_CONTRIBUTE_URL: constants.OFF_CONTRIBUTE_URL,
+    };
+  },
+};
 </script>

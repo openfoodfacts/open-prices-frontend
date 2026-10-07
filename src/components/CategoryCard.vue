@@ -1,12 +1,26 @@
 <template>
-  <v-card v-if="category" :title="category.name" prepend-icon="mdi-fruit-watermelon" data-name="category-card">
+  <v-card
+    v-if="category"
+    :title="category.name"
+    prepend-icon="mdi-fruit-watermelon"
+    data-name="category-card"
+  >
     <v-card-text>
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <span class="chip-group">
-            <CountChip v-if="sourceIsCategory" kind="product" :count="productCount" :withLabel="true" />
+            <CountChip
+              v-if="sourceIsCategory"
+              kind="product"
+              :count="productCount"
+              :withLabel="true"
+            />
             <PriceCountChip v-else-if="sourceIsProduct" :count="priceCount" />
-            <CategoryTagChip v-if="showProductCategoryTag" :category="category.id" :readonly="true" />
+            <CategoryTagChip
+              v-if="showProductCategoryTag"
+              :category="category.id"
+              :readonly="true"
+            />
           </span>
         </v-col>
         <v-col v-if="!hideActionMenuButton" cols="1">
@@ -18,55 +32,67 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
 
 export default {
   components: {
-    CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
-    CategoryActionMenuButton: defineAsyncComponent(() => import('../components/CategoryActionMenuButton.vue')),
+    CountChip: defineAsyncComponent(
+      () => import("../components/CountChip.vue"),
+    ),
+    PriceCountChip: defineAsyncComponent(
+      () => import("../components/PriceCountChip.vue"),
+    ),
+    CategoryTagChip: defineAsyncComponent(
+      () => import("../components/CategoryTagChip.vue"),
+    ),
+    CategoryActionMenuButton: defineAsyncComponent(
+      () => import("../components/CategoryActionMenuButton.vue"),
+    ),
   },
   props: {
     category: {
       type: Object,
       default: null,
-      example: { 'id': 'en:croissants', 'name': 'Croissants' }
+      example: { id: "en:croissants", name: "Croissants" },
     },
     source: {
       type: String,
-      default: 'category',
-      examples: ['category', 'product']
+      default: "category",
+      examples: ["category", "product"],
     },
     productCount: {
       type: Number,
-      default: 0
+      default: 0,
     },
     priceCount: {
       type: Number,
-      default: 0
+      default: 0,
     },
     hideActionMenuButton: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   computed: {
     ...mapStores(useAppStore),
     categoryFound() {
-      return this.category && !this.category.status
+      return this.category && !this.category.status;
     },
     sourceIsCategory() {
-      return this.source === 'category'
+      return this.source === "category";
     },
     sourceIsProduct() {
-      return this.source === 'product'
+      return this.source === "product";
     },
     showProductCategoryTag() {
-      return this.appStore.user.username && this.sourceIsProduct && this.appStore.user.product_display_category_tag
-    }
-  }
-}
+      return (
+        this.appStore.user.username &&
+        this.sourceIsProduct &&
+        this.appStore.user.product_display_category_tag
+      );
+    },
+  },
+};
 </script>

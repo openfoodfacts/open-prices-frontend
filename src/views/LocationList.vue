@@ -3,15 +3,35 @@
     <v-col>
       <CountTextChip kind="location" :count="locationTotal" />
       <template v-if="!loading">
-        <LoadedCountChip :loadedCount="locationList.length" :totalCount="locationTotal" />
-        <FilterMenu kind="location" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleLocationType($event)" />
-        <OrderMenu kind="location" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+        <LoadedCountChip
+          :loadedCount="locationList.length"
+          :totalCount="locationTotal"
+        />
+        <FilterMenu
+          kind="location"
+          :currentFilterList="currentFilterList"
+          :currentType="currentType"
+          @update:currentFilterList="updateFilterList($event)"
+          @update:currentType="toggleLocationType($event)"
+        />
+        <OrderMenu
+          kind="location"
+          :currentOrder="currentOrder"
+          @update:currentOrder="updateOrder($event)"
+        />
       </template>
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="location in locationList" :key="location" cols="12" sm="6" md="4" xl="3">
+    <v-col
+      v-for="location in locationList"
+      :key="location"
+      cols="12"
+      sm="6"
+      md="4"
+      xl="3"
+    >
       <LocationCard :location="location" height="100%" />
     </v-col>
   </v-row>
@@ -24,18 +44,28 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
-import utils from '../utils.js'
+import { defineAsyncComponent } from "vue";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
+import utils from "../utils.js";
 
 export default {
   components: {
-    CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
-    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
-    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
+    CountTextChip: defineAsyncComponent(
+      () => import("../components/CountTextChip.vue"),
+    ),
+    LoadedCountChip: defineAsyncComponent(
+      () => import("../components/LoadedCountChip.vue"),
+    ),
+    FilterMenu: defineAsyncComponent(
+      () => import("../components/FilterMenu.vue"),
+    ),
+    OrderMenu: defineAsyncComponent(
+      () => import("../components/OrderMenu.vue"),
+    ),
+    LocationCard: defineAsyncComponent(
+      () => import("../components/LocationCard.vue"),
+    ),
   },
   data() {
     return {
@@ -46,83 +76,115 @@ export default {
       loading: false,
       // filter & order
       currentFilterList: [],
-      currentType: '',
-      currentOrder: constants.LOCATION_ORDER_LIST[0].key,  // price_count
-    }
+      currentType: "",
+      currentOrder: constants.LOCATION_ORDER_LIST[0].key, // price_count
+    };
   },
   computed: {
     getLocationsParams() {
-      let defaultParams = { order_by: this.currentOrder, page: this.locationPage }
-      if (this.currentFilterList.includes('hide_price_count_gte_1')) {
-        defaultParams['price_count'] = 0
+      let defaultParams = {
+        order_by: this.currentOrder,
+        page: this.locationPage,
+      };
+      if (this.currentFilterList.includes("hide_price_count_gte_1")) {
+        defaultParams["price_count"] = 0;
       }
       if (this.currentType) {
-        defaultParams[constants.TYPE_PARAM] = this.currentType
+        defaultParams[constants.TYPE_PARAM] = this.currentType;
       }
-      return defaultParams
+      return defaultParams;
     },
   },
   watch: {
-    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
-      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initLocationList()
+    $route(newRoute, oldRoute) {
+      // only called when query changes to avoid having an API call when the path changes
+      if (
+        oldRoute.path === newRoute.path &&
+        JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)
+      ) {
+        this.initLocationList();
       }
-    }
+    },
   },
   mounted() {
-    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
-    this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
-    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.initLocationList()
+    this.currentFilterList =
+      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
+      this.currentFilterList;
+    this.currentType =
+      this.$route.query[constants.TYPE_PARAM] || this.currentType;
+    this.currentOrder =
+      this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
+    this.initLocationList();
     // load more
-    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
-    window.addEventListener('scroll', this.handleDebouncedScroll)
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
+    window.addEventListener("scroll", this.handleDebouncedScroll);
   },
   unmounted() {
-    window.removeEventListener('scroll', this.handleDebouncedScroll)
+    window.removeEventListener("scroll", this.handleDebouncedScroll);
   },
   methods: {
     initLocationList() {
-      this.locationList = []
-      this.locationPage = 0
-      this.getLocations()
+      this.locationList = [];
+      this.locationPage = 0;
+      this.getLocations();
     },
     getLocations() {
-      if ((this.locationTotal != null) && (this.locationList.length >= this.locationTotal)) return
-      this.loading = true
-      this.locationPage += 1
-      return openPricesApi.getLocations(this.getLocationsParams)
+      if (
+        this.locationTotal != null &&
+        this.locationList.length >= this.locationTotal
+      )
+        return;
+      this.loading = true;
+      this.locationPage += 1;
+      return openPricesApi
+        .getLocations(this.getLocationsParams)
         .then((data) => {
-          if (!data.items) return
-          this.locationList.push(...data.items)
-          this.locationTotal = data.total
+          if (!data.items) return;
+          this.locationList.push(...data.items);
+          this.locationTotal = data.total;
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      this.currentFilterList = newFilterList;
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.FILTER_PARAM]: this.currentFilterList,
+        },
+      });
       // this.initLocationList() will be called in watch $route
     },
     toggleLocationType(sourceKey) {
-      this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
-      this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
+      this.currentType = this.currentType !== sourceKey ? sourceKey : "";
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.TYPE_PARAM]: this.currentType,
+        },
+      });
       // this.initLocationList() will be called in watch $route
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
-        this.currentOrder = orderKey
-        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        this.currentOrder = orderKey;
+        this.$router.push({
+          query: {
+            ...this.$route.query,
+            [constants.ORDER_PARAM]: this.currentOrder,
+          },
+        });
         // this.initLocationList() will be called in watch $route
       }
     },
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
+    handleScroll(event) {
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getLocations()
+        this.getLocations();
       }
     },
-  }
-}
+  },
+};
 </script>

@@ -37,6 +37,7 @@ python data/categories/generate_categories_json_per_language.py
 ```
 
 What it does:
+
 1. get the OFF categories taxonomy (food only)
 2. keep only a small subset of categories (TODO: give more details)
 3. the result is exported to `/src/data/categories` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
@@ -65,6 +66,7 @@ python data/countries/generate_countries_json_per_language.py
 ```
 
 What it does:
+
 1. get the OFF country taxonomy
 2. keep only nodes with a `country_code_2:en:` property
 3. the result is exported to `/src/data/countries` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
@@ -103,6 +105,7 @@ python data/countries/generate_countries_json.py
 ```
 
 What it does:
+
 1. get the OFF country taxonomy
 2. keep only countries with a `country_code_2:en:` (will be used as pivot)
 3. enrich these countries with OSM name, and emoji
@@ -126,6 +129,7 @@ python data/labels/generate_labels_json_per_language.py
 ```
 
 What it does:
+
 1. get the OFF labels taxonomy
 2. keep only node the 'organic' label for now
 3. the result is exported to `/src/data/labels` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
@@ -166,6 +170,7 @@ python data/origins/generate_origins_json_per_language.py
 ```
 
 What it does:
+
 1. get the OFF origins taxonomy
 2. keep only nodes with a `country_code_2:en:` property, and add some extra (non-country) nodes
 3. the result is exported to `/src/data/origins` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
@@ -175,4 +180,3 @@ What it does:
 - Last run: 2026-10-04
 - Input (Taxonomy): 724 origins
 - Output (JSON): 264 origins x 150 languages
-

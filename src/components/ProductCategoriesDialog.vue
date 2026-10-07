@@ -9,7 +9,11 @@
 
       <v-card-text>
         <span class="chip-group">
-          <CategoryTagChip v-for="category in categories" :key="category" :category="category" />
+          <CategoryTagChip
+            v-for="category in categories"
+            :key="category"
+            :category="category"
+          />
         </span>
       </v-card-text>
     </v-card>
@@ -17,26 +21,28 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from "vue";
 
 export default {
   components: {
-    CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
+    CategoryTagChip: defineAsyncComponent(
+      () => import("../components/CategoryTagChip.vue"),
+    ),
   },
   props: {
     categories: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
-  emits: ['close'],
+  emits: ["close"],
   methods: {
     getCategoryUrl(category) {
-      return `/categories/${category}`
+      return `/categories/${category}`;
     },
     close() {
-      this.$emit('close')
+      this.$emit("close");
     },
-  }
-}
+  },
+};
 </script>

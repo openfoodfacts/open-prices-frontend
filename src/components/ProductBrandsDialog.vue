@@ -8,34 +8,42 @@
       <v-divider />
 
       <v-card-text>
-        <BrandChip v-for="brand in brands" :key="brand" class="mr-2 mb-2" :brand="brand" :readonly="readonly" />
+        <BrandChip
+          v-for="brand in brands"
+          :key="brand"
+          class="mr-2 mb-2"
+          :brand="brand"
+          :readonly="readonly"
+        />
       </v-card-text>
     </v-card>
   </v-dialog>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from "vue";
 
 export default {
   components: {
-    BrandChip: defineAsyncComponent(() => import('../components/BrandChip.vue')),
+    BrandChip: defineAsyncComponent(
+      () => import("../components/BrandChip.vue"),
+    ),
   },
   props: {
     brands: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     readonly: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
-  emits: ['close'],
+  emits: ["close"],
   methods: {
     close() {
-      this.$emit('close')
+      this.$emit("close");
     },
-  }
-}
+  },
+};
 </script>

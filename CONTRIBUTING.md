@@ -19,7 +19,7 @@ We use the [yarn](https://yarnpkg.com/getting-started/install) for package manag
 1. Install/update packages with command `yarn`
 2. Run in development mode with `yarn dev`
 
-    After this you should be able to access the website at <http://localhost:5173/>.
+   After this you should be able to access the website at <http://localhost:5173/>.
 
 3. Run the back-end on your device. To do so, get and run the code of the server here: <https://github.com/openfoodfacts/open-prices>.
 4. You can start your first contribution :tada:

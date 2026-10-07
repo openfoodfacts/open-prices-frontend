@@ -17,7 +17,10 @@
           </template>
           <v-divider />
           <v-card-text>
-            <ProductInputRow :productForm="addPriceSingleForm" @filled="productFormFilled = $event" />
+            <ProductInputRow
+              :productForm="addPriceSingleForm"
+              @filled="productFormFilled = $event"
+            />
           </v-card-text>
         </v-card>
       </v-col>
@@ -30,7 +33,9 @@
       <!-- Step 3: price -->
       <v-col cols="12" md="6" lg="4">
         <v-card
-          :class="pricePriceFormFilled ? 'border-success' : 'border-transparent'"
+          :class="
+            pricePriceFormFilled ? 'border-success' : 'border-transparent'
+          "
           :title="$t('AddPriceSingle.PriceDetails.Title')"
           prepend-icon="mdi-tag-plus-outline"
           height="100%"
@@ -40,7 +45,11 @@
           </template>
           <v-divider />
           <v-card-text>
-            <PriceInputRow :priceForm="addPriceSingleForm" :product="addPriceSingleForm.product" @filled="pricePriceFormFilled = $event" />
+            <PriceInputRow
+              :priceForm="addPriceSingleForm"
+              :product="addPriceSingleForm.product"
+              @filled="pricePriceFormFilled = $event"
+            />
           </v-card-text>
         </v-card>
       </v-col>
@@ -55,7 +64,7 @@
           :loading="loading"
           :disabled="!formFilled"
         >
-          {{ $t('Common.Upload') }}
+          {{ $t("Common.Upload") }}
         </v-btn>
       </v-col>
     </v-row>
@@ -63,26 +72,34 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openPricesApi, { OpenPricesApiError } from '../services/openPricesApi'
-import date_utils from '../utils/date.js'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openPricesApi, { OpenPricesApiError } from "../services/openPricesApi";
+import date_utils from "../utils/date.js";
 
 export default {
   components: {
-    DeprecatedAlert: defineAsyncComponent(() => import('../components/DeprecatedAlert.vue')),
-    ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
-    ProofUploadCard: defineAsyncComponent(() => import('../components/ProofUploadCard.vue')),
-    PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
+    DeprecatedAlert: defineAsyncComponent(
+      () => import("../components/DeprecatedAlert.vue"),
+    ),
+    ProductInputRow: defineAsyncComponent(
+      () => import("../components/ProductInputRow.vue"),
+    ),
+    ProofUploadCard: defineAsyncComponent(
+      () => import("../components/ProofUploadCard.vue"),
+    ),
+    PriceInputRow: defineAsyncComponent(
+      () => import("../components/PriceInputRow.vue"),
+    ),
   },
   data() {
     return {
       // price form
       addPriceSingleForm: {
-        type: '',
+        type: "",
         product: null,
-        product_code: '',
+        product_code: "",
         category_tag: null,
         origins_tags: [],
         labels_tags: [],
@@ -91,61 +108,74 @@ export default {
         price_is_discounted: false,
         price_without_discount: null,
         discount_type: null,
-        currency: null,  // see ProofUploadCard
+        currency: null, // see ProofUploadCard
         receipt_quantity: null,
         owner_comment: null,
         location_id: null,
         location_osm_id: null,
-        location_osm_type: '',
+        location_osm_type: "",
         date: date_utils.currentDate(),
         proof_id: null,
       },
       productFormFilled: false,
       pricePriceFormFilled: false,
       loading: false,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     proofFormFilled() {
-      let keys = ['proof_id']
-      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+      let keys = ["proof_id"];
+      return Object.keys(this.addPriceSingleForm)
+        .filter((k) => keys.includes(k))
+        .every((k) => !!this.addPriceSingleForm[k]);
     },
     formFilled() {
-      return this.productFormFilled && this.proofFormFilled && this.pricePriceFormFilled
+      return (
+        this.productFormFilled &&
+        this.proofFormFilled &&
+        this.pricePriceFormFilled
+      );
     },
   },
   methods: {
     fieldRequired(v) {
-      return !!v
+      return !!v;
     },
     onProofUploaded(proof) {
       // fill the price form with the proof data
-      this.addPriceSingleForm.proof_id = proof.id
-      this.addPriceSingleForm.location_id = proof.location_id
-      this.addPriceSingleForm.location_osm_id = proof.location_osm_id
-      this.addPriceSingleForm.location_osm_type = proof.location_osm_type
-      this.addPriceSingleForm.date = proof.date
-      this.addPriceSingleForm.currency = proof.currency
+      this.addPriceSingleForm.proof_id = proof.id;
+      this.addPriceSingleForm.location_id = proof.location_id;
+      this.addPriceSingleForm.location_osm_id = proof.location_osm_id;
+      this.addPriceSingleForm.location_osm_type = proof.location_osm_type;
+      this.addPriceSingleForm.date = proof.date;
+      this.addPriceSingleForm.currency = proof.currency;
     },
     createPrice() {
-      this.loading = true
+      this.loading = true;
       openPricesApi
         .createPrice(this.addPriceSingleForm, this.$route.path)
         .then(() => {
-          this.goToUserDashboard()
+          this.goToUserDashboard();
         })
         .catch((error) => {
-          alert(error instanceof OpenPricesApiError ? `Error: ${error.message}` : this.$t('Common.ServerError'))
-          console.log(error)
+          alert(
+            error instanceof OpenPricesApiError
+              ? `Error: ${error.message}`
+              : this.$t("Common.ServerError"),
+          );
+          console.log(error);
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     goToUserDashboard() {
-      this.$router.push({ path: '/dashboard', query: { singleSuccess: 'true' } })
-    }
-  }
-}
+      this.$router.push({
+        path: "/dashboard",
+        query: { singleSuccess: "true" },
+      });
+    },
+  },
+};
 </script>

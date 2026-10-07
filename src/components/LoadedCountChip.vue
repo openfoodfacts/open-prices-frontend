@@ -14,12 +14,12 @@ export default {
   props: {
     loadedCount: {
       type: Number,
-      default: 0
+      default: 0,
     },
     totalCount: {
       type: Number,
-      default: 0
-    }
-  }
-}
+      default: 0,
+    },
+  },
+};
 </script>

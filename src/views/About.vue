@@ -1,11 +1,22 @@
 <template>
-  <v-sheet v-for="fieldset in fieldsetsGeneral" :id="fieldset.id" :key="fieldset.title" tag="section" class="mb-4 bg-background">
+  <v-sheet
+    v-for="fieldset in fieldsetsGeneral"
+    :id="fieldset.id"
+    :key="fieldset.title"
+    tag="section"
+    class="mb-4 bg-background"
+  >
     <i18n-t :keypath="fieldset.title" tag="h2" class="mb-1">
       <template #op_name>
         {{ APP_NAME }}
       </template>
     </i18n-t>
-    <i18n-t v-for="answer in fieldset.answers" :key="answer" :keypath="answer" tag="p">
+    <i18n-t
+      v-for="answer in fieldset.answers"
+      :key="answer"
+      :keypath="answer"
+      tag="p"
+    >
       <template #op_name>
         {{ APP_NAME }}
       </template>
@@ -16,20 +27,32 @@
         <OpenFoodFactsLink display="link" />
       </template>
       <template #odbl_url>
-        <a :href="LICENSE_ODBL_URL" target="_blank" rel="noopener noreferrer">{{ LICENSE_ODBL_NAME }}</a>
+        <a :href="LICENSE_ODBL_URL" target="_blank" rel="noopener noreferrer">{{
+          LICENSE_ODBL_NAME
+        }}</a>
       </template>
       <template #ccbysa_url>
-        <a :href="LICENSE_CC_BY_SA_URL" target="_blank" rel="noopener noreferrer">{{ LICENSE_CC_BY_SA_NAME }}</a>
+        <a
+          :href="LICENSE_CC_BY_SA_URL"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ LICENSE_CC_BY_SA_NAME }}</a
+        >
       </template>
     </i18n-t>
   </v-sheet>
 
   <section id="faq" class="mb-4">
     <h2 class="mb-1">
-      {{ $t('Common.FrequentlyAskedQuestions') }}
+      {{ $t("Common.FrequentlyAskedQuestions") }}
     </h2>
 
-    <v-sheet v-for="fieldset in fieldsetsFAQ" :key="fieldset.title" tag="div" class="mb-2 bg-background">
+    <v-sheet
+      v-for="fieldset in fieldsetsFAQ"
+      :key="fieldset.title"
+      tag="div"
+      class="mb-2 bg-background"
+    >
       <i18n-t :keypath="fieldset.title" tag="h3" class="mb-1">
         <template #op_name>
           {{ APP_NAME }}
@@ -41,21 +64,46 @@
           {{ OSM_NAME }}
         </template>
       </i18n-t>
-      <i18n-t v-for="answer in fieldset.answers" :key="answer" :keypath="answer" tag="p">
+      <i18n-t
+        v-for="answer in fieldset.answers"
+        :key="answer"
+        :keypath="answer"
+        tag="p"
+      >
         <template #op_name>
           {{ APP_NAME }}
         </template>
         <template #op_api_url>
-          <a :href="APP_API_URL" target="_blank" rel="noopener noreferrer">API</a>
+          <a :href="APP_API_URL" target="_blank" rel="noopener noreferrer"
+            >API</a
+          >
         </template>
         <template #op_dumb_prices_url>
-          <a :href="APP_DUMP_PRICES_URL" class="text-lowercase" target="_blank" rel="noopener noreferrer">{{ $t('Common.Prices') }}</a>
+          <a
+            :href="APP_DUMP_PRICES_URL"
+            class="text-lowercase"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ $t("Common.Prices") }}</a
+          >
         </template>
         <template #op_dumb_proofs_url>
-          <a :href="APP_DUMP_PROOFS_URL" class="text-lowercase" target="_blank" rel="noopener noreferrer">{{ $t('Common.Proofs') }}</a>
+          <a
+            :href="APP_DUMP_PROOFS_URL"
+            class="text-lowercase"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ $t("Common.Proofs") }}</a
+          >
         </template>
         <template #op_dumb_locations_url>
-          <a :href="APP_DUMP_LOCATIONS_URL" class="text-lowercase" target="_blank" rel="noopener noreferrer">{{ $t('Common.Locations') }}</a>
+          <a
+            :href="APP_DUMP_LOCATIONS_URL"
+            class="text-lowercase"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ $t("Common.Locations") }}</a
+          >
         </template>
         <template #off_url>
           <OpenFoodFactsLink display="link" />
@@ -70,7 +118,12 @@
           {{ OSM_NAME }}
         </template>
         <template #odbl_url>
-          <a :href="LICENSE_ODBL_URL" target="_blank" rel="noopener noreferrer">{{ LICENSE_ODBL_NAME }}</a>
+          <a
+            :href="LICENSE_ODBL_URL"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ LICENSE_ODBL_NAME }}</a
+          >
         </template>
       </i18n-t>
     </v-sheet>
@@ -78,13 +131,17 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
+import { defineAsyncComponent } from "vue";
+import constants from "../constants";
 
 export default {
   components: {
-    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
-    OpenStreetMapLink: defineAsyncComponent(() => import('../components/OpenStreetMapLink.vue')),
+    OpenFoodFactsLink: defineAsyncComponent(
+      () => import("../components/OpenFoodFactsLink.vue"),
+    ),
+    OpenStreetMapLink: defineAsyncComponent(
+      () => import("../components/OpenStreetMapLink.vue"),
+    ),
   },
   data() {
     return {
@@ -102,89 +159,64 @@ export default {
       LICENSE_CC_BY_SA_URL: constants.LICENSE_CC_BY_SA_URL,
       fieldsetsGeneral: [
         {
-          id: 'why',
-          title: 'About.WhyTitle',
-          answers: [
-            'About.WhyAnswer1',
-            'About.WhyAnswer2',
-          ]
+          id: "why",
+          title: "About.WhyTitle",
+          answers: ["About.WhyAnswer1", "About.WhyAnswer2"],
         },
         {
-          id: 'how',
-          title: 'About.HowTitle',
-          answers: [
-            'About.HowAnswer1',
-          ]
+          id: "how",
+          title: "About.HowTitle",
+          answers: ["About.HowAnswer1"],
         },
         {
-          id: 'license',
-          title: 'About.LicenseTitle',
-          answers: [
-            'About.LicenseAnswer1',
-            'About.LicenseAnswer2',
-          ]
-        }
+          id: "license",
+          title: "About.LicenseTitle",
+          answers: ["About.LicenseAnswer1", "About.LicenseAnswer2"],
+        },
       ],
       fieldsetsFAQ: [
         {
-          title: 'About.WhatOFFTitle',
-          answers: [
-            'About.WhatOFFAnswer'
-          ]
+          title: "About.WhatOFFTitle",
+          answers: ["About.WhatOFFAnswer"],
         },
         {
-          title: 'About.WhyOFFTitle',
-          answers: [
-            'About.WhyOFFAnswer'
-          ]
+          title: "About.WhyOFFTitle",
+          answers: ["About.WhyOFFAnswer"],
         },
         {
-          title: 'About.HowContribute',
-          answers: [
-            'About.HowContributeAnswer'
-          ]
+          title: "About.HowContribute",
+          answers: ["About.HowContributeAnswer"],
         },
         {
-          title: 'About.HowUseData',
+          title: "About.HowUseData",
           answers: [
-            'About.HowUseDataAnswer1',
-            'About.HowUseDataAnswer2',
-            'About.HowUseDataAnswer3'
-          ]
+            "About.HowUseDataAnswer1",
+            "About.HowUseDataAnswer2",
+            "About.HowUseDataAnswer3",
+          ],
         },
         {
-          title: 'About.HowContact',
-          answers: [
-            'About.HowContactAnswer'
-          ]
+          title: "About.HowContact",
+          answers: ["About.HowContactAnswer"],
         },
         {
-          title: 'About.HowSupport',
-          answers: [
-            'About.HowSupportAnswer'
-          ]
+          title: "About.HowSupport",
+          answers: ["About.HowSupportAnswer"],
         },
         {
-          title: 'About.WhyOSM',
-          answers: [
-            'About.WhyOSMAnswer'
-          ]
+          title: "About.WhyOSM",
+          answers: ["About.WhyOSMAnswer"],
         },
         {
-          title: 'About.HowRetailer',
-          answers: [
-            'About.HowRetailerAnswer'
-          ]
+          title: "About.HowRetailer",
+          answers: ["About.HowRetailerAnswer"],
         },
         {
-          title: 'About.WhyNoScraping',
-          answers: [
-            'About.WhyNoScrapingAnswer1',
-            'About.WhyNoScrapingAnswer2'
-          ]
-        }
-      ]
-    }
-  }
-}
+          title: "About.WhyNoScraping",
+          answers: ["About.WhyNoScrapingAnswer1", "About.WhyNoScrapingAnswer2"],
+        },
+      ],
+    };
+  },
+};
 </script>

@@ -1,6 +1,12 @@
 <template>
   <v-tabs v-model="currentTab" :grow="!$vuetify.display.smAndUp">
-    <v-tab v-for="tab in tabItems" :key="tab.key" :value="tab.key" :prepend-icon="tab.icon" :data-name="`${tab.key}-search-tab`">
+    <v-tab
+      v-for="tab in tabItems"
+      :key="tab.key"
+      :value="tab.key"
+      :prepend-icon="tab.icon"
+      :data-name="`${tab.key}-search-tab`"
+    >
       {{ $t(`Common.${tab.value}`) }}
     </v-tab>
   </v-tabs>
@@ -21,7 +27,10 @@
           required
         >
           <template #prepend-inner>
-            <v-icon :icon="formFilled ? 'mdi-barcode' : 'mdi-barcode-scan'" @click="showBarcodeScannerDialog" />
+            <v-icon
+              :icon="formFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
+              @click="showBarcodeScannerDialog"
+            />
           </template>
           <template #append-inner>
             <v-btn color="primary" icon="mdi-magnify" @click="search" />
@@ -29,12 +38,24 @@
         </v-text-field>
       </v-form>
       <p v-if="productTotal === 0" class="text-red">
-        <i>{{ $t('ProductDetail.ProductNotFound') }}</i>
+        <i>{{ $t("ProductDetail.ProductNotFound") }}</i>
       </p>
 
       <v-row v-if="productTotal > 0" class="mt-0">
-        <v-col v-for="product in productList" :key="product" cols="12" sm="6" md="4" xl="3">
-          <ProductCard :product="product" :latestPrice="product.latest_price" elevation="1" height="100%" />
+        <v-col
+          v-for="product in productList"
+          :key="product"
+          cols="12"
+          sm="6"
+          md="4"
+          xl="3"
+        >
+          <ProductCard
+            :product="product"
+            :latestPrice="product.latest_price"
+            elevation="1"
+            height="100%"
+          />
         </v-col>
       </v-row>
     </v-tabs-window-item>
@@ -80,19 +101,25 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import constants from '../constants'
-import openPricesApi from '../services/openPricesApi'
-import barcodeUtils from '../utils/barcode'
-import data_utils from '../utils/data.js'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import constants from "../constants";
+import openPricesApi from "../services/openPricesApi";
+import barcodeUtils from "../utils/barcode";
+import data_utils from "../utils/data.js";
 
 export default {
   components: {
-    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
-    BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue'))
+    ProductCard: defineAsyncComponent(
+      () => import("../components/ProductCard.vue"),
+    ),
+    CategoryCard: defineAsyncComponent(
+      () => import("../components/CategoryCard.vue"),
+    ),
+    BarcodeScannerDialog: defineAsyncComponent(
+      () => import("../components/BarcodeScannerDialog.vue"),
+    ),
   },
   data() {
     return {
@@ -102,106 +129,121 @@ export default {
       categoryLoading: false,
       categoryError: false,
       productSearchForm: {
-        q: ''
+        q: "",
       },
       productList: [],
       productTotal: null,
       loading: false,
       // config
-      currentTab: 'product',
+      currentTab: "product",
       tabItems: constants.SEARCH_TAB_LIST,
       // barcode scanner
       barcodeScannerDialog: false,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     formFilled() {
-      return Object.values(this.productSearchForm).every(x => !!x)
-    }
+      return Object.values(this.productSearchForm).every((x) => !!x);
+    },
   },
   watch: {
-    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
-      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.getProducts()
+    $route(newRoute, oldRoute) {
+      // only called when query changes to avoid having an API call when the path changes
+      if (
+        oldRoute.path === newRoute.path &&
+        JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)
+      ) {
+        this.getProducts();
       }
-    }
+    },
   },
   mounted() {
-    data_utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
-      this.categoryTags = module.default
-    })
-    this.productSearchForm.q = this.$route.query[constants.QUERY_PARAM] || ''
-    this.getProducts()
+    data_utils
+      .getLocaleCategoryTags(this.appStore.getUserLanguage)
+      .then((module) => {
+        this.categoryTags = module.default;
+      });
+    this.productSearchForm.q = this.$route.query[constants.QUERY_PARAM] || "";
+    this.getProducts();
   },
   methods: {
     searchCategory(category) {
-      this.categoryPriceTotal = null
-      this.categoryError = false
-      this.categoryLoading = !!category
-      if (!category) return
-      return openPricesApi.getPrices({ category_tag: category.id, size: 1 })
+      this.categoryPriceTotal = null;
+      this.categoryError = false;
+      this.categoryLoading = !!category;
+      if (!category) return;
+      return openPricesApi
+        .getPrices({ category_tag: category.id, size: 1 })
         .then((data) => {
-          if (this.category?.id === category.id) this.categoryPriceTotal = data.total
+          if (this.category?.id === category.id)
+            this.categoryPriceTotal = data.total;
         })
         .catch(() => {
-          if (this.category?.id === category.id) this.categoryError = true
+          if (this.category?.id === category.id) this.categoryError = true;
         })
         .finally(() => {
-          if (this.category?.id === category.id) this.categoryLoading = false
-        })
+          if (this.category?.id === category.id) this.categoryLoading = false;
+        });
     },
     fieldRequired(v) {
-      return !!v
+      return !!v;
     },
     showBarcodeScannerDialog() {
-      this.$refs.searchInput.blur()
-      this.barcodeScannerDialog = true
+      this.$refs.searchInput.blur();
+      this.barcodeScannerDialog = true;
     },
     setProductCode(code) {
-      this.productSearchForm.q = code
-      this.search()
+      this.productSearchForm.q = code;
+      this.search();
     },
     search() {
-      this.$refs.searchInput.blur()
-      this.$router.push({ query: { ...this.$route.query, [constants.QUERY_PARAM]: this.productSearchForm.q } })
+      this.$refs.searchInput.blur();
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.QUERY_PARAM]: this.productSearchForm.q,
+        },
+      });
     },
     getProducts() {
       if (this.productSearchForm.q) {
-        this.productList = []
-        this.productTotal = null
-        this.loading = true
+        this.productList = [];
+        this.productTotal = null;
+        this.loading = true;
         // Normalizes UPC barcode to EAN 13 barcode
-        const code = barcodeUtils.normalizeBarcode(this.productSearchForm.q)
-        return openPricesApi.getProducts({ code: code })
+        const code = barcodeUtils.normalizeBarcode(this.productSearchForm.q);
+        return openPricesApi
+          .getProducts({ code: code })
           .then((data) => {
-            if (!data.items) return
-            this.productList.push(...data.items)
-            this.productTotal = data.total
+            if (!data.items) return;
+            this.productList.push(...data.items);
+            this.productTotal = data.total;
             if (data.items.length) {
-              this.getProductLatestPrices()
+              this.getProductLatestPrices();
             }
           })
           .finally(() => {
-            this.loading = false
-          })
+            this.loading = false;
+          });
       }
     },
     getProductLatestPrices() {
       this.productList.forEach((product) => {
         if (product.price_count && !product.latest_price) {
-          this.getPrices(product)
+          this.getPrices(product);
         }
-      })
+      });
     },
     getPrices(product) {
-      return openPricesApi.getPrices({ product_code: product.code, size: 1, order_by: '-date' })
+      return openPricesApi
+        .getPrices({ product_code: product.code, size: 1, order_by: "-date" })
         .then((data) => {
           if (data.items.length) {
-            product.latest_price = data.items[0]
+            product.latest_price = data.items[0];
           }
-        })
-    }
-  }
-}
+        });
+    },
+  },
+};
 </script>

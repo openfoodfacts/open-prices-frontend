@@ -1,6 +1,13 @@
 <template>
-  <v-chip label size="small" density="comfortable" prepend-icon="mdi-help" color="warning" data-name="product-barcode-too-long-chip">
-    {{ $t('ProductCard.BarcodeLength', { length: barcode.length }) }}
+  <v-chip
+    label
+    size="small"
+    density="comfortable"
+    prepend-icon="mdi-help"
+    color="warning"
+    data-name="product-barcode-too-long-chip"
+  >
+    {{ $t("ProductCard.BarcodeLength", { length: barcode.length }) }}
   </v-chip>
 </template>
 
@@ -9,8 +16,8 @@ export default {
   props: {
     barcode: {
       type: String,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>

@@ -1,56 +1,63 @@
 function debounce(callback, wait) {
   let timeoutId = null;
   return (...args) => {
-    window.clearTimeout(timeoutId)
+    window.clearTimeout(timeoutId);
     timeoutId = window.setTimeout(() => {
-      callback(...args)
-    }, wait)
-  }
+      callback(...args);
+    }, wait);
+  };
 }
 
 function getDocumentScrollPercentage() {
-  return (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100
+  return (
+    ((document.documentElement.scrollTop + document.body.scrollTop) /
+      (document.documentElement.scrollHeight -
+        document.documentElement.clientHeight)) *
+    100
+  );
 }
 
 function isNumber(value) {
   // return /^\d+$/.test(value)
-  return !isNaN(parseFloat(value)) && isFinite(value)
+  return !isNaN(parseFloat(value)) && isFinite(value);
 }
 
 /**
  * Remove all non-digit characters from a string
  */
 function numericOnly(value) {
-  return value.replace(/\D/g, '')
+  return value.replace(/\D/g, "");
 }
 
 /**
  * Remove all non-digit and non-wildcard characters from a string (wildcard = *)
  */
 function numericAndWildcardOnly(value) {
-  return value.replace(/[^0-9*]/g, '')
+  return value.replace(/[^0-9*]/g, "");
 }
 
 function toArray(value) {
   if (Array.isArray(value)) {
-    return value
+    return value;
   } else if (value) {
-    return [value]
+    return [value];
   } else {
-    return []
+    return [];
   }
 }
 
 function slugify(value) {
-  return value.toString().toLowerCase()
-    .normalize('NFD')               // Decompose accented characters
-    .replace(/\p{Diacritic}/gu, '') // Remove diacritics (accents)
-    .replace(/'/g, '')              // Remove apostrophes like Django
-    .replace(/\s+/g, '-')           // Replace spaces with -
-    .replace(/[^\w-]+/g, '')        // Remove all non-word chars
-    .replace(/--+/g, '-')           // Replace multiple - with single -
-    .replace(/^-+/, '')             // Trim - from start of text
-    .replace(/-+$/, '')             // Trim - from end of text
+  return value
+    .toString()
+    .toLowerCase()
+    .normalize("NFD") // Decompose accented characters
+    .replace(/\p{Diacritic}/gu, "") // Remove diacritics (accents)
+    .replace(/'/g, "") // Remove apostrophes like Django
+    .replace(/\s+/g, "-") // Replace spaces with -
+    .replace(/[^\w-]+/g, "") // Remove all non-word chars
+    .replace(/--+/g, "-") // Replace multiple - with single -
+    .replace(/^-+/, "") // Trim - from start of text
+    .replace(/-+$/, ""); // Trim - from end of text
 }
 
 /**
@@ -60,86 +67,95 @@ function slugify(value) {
  */
 function isURL(value) {
   try {
-    new URL(value)
-    return true
-  } catch (error) {  // eslint-disable-line no-unused-vars
-    return false
+    new URL(value);
+    return true;
+    // eslint-disable-next-line no-unused-vars
+  } catch (error) {
+    return false;
   }
 }
 
 function getURLOrigin(value) {
   try {
-    return new URL(value).origin
-  } catch (error) {  // eslint-disable-line no-unused-vars
-    return null
+    return new URL(value).origin;
+    // eslint-disable-next-line no-unused-vars
+  } catch (error) {
+    return null;
   }
 }
 
-function addObjectToArray(arr, obj, unshift=false, avoidDuplicates=true) {
+function addObjectToArray(arr, obj, unshift = false, avoidDuplicates = true) {
   // look for duplicate
-  let duplicateItemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
+  let duplicateItemIndex = arr.findIndex(
+    (item) => JSON.stringify(item) === JSON.stringify(obj),
+  );
   if (avoidDuplicates && duplicateItemIndex >= 0) {
-    arr.splice(duplicateItemIndex, 1)
+    arr.splice(duplicateItemIndex, 1);
   }
   // add obj to array
   if (unshift) {
-    arr.unshift(obj)
+    arr.unshift(obj);
   } else {
-    arr.push(obj)
+    arr.push(obj);
   }
-  return arr
+  return arr;
 }
 
 function removeObjectFromArray(arr, obj) {
-  let itemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
+  let itemIndex = arr.findIndex(
+    (item) => JSON.stringify(item) === JSON.stringify(obj),
+  );
   if (itemIndex >= 0) {
-    arr.splice(itemIndex, 1)
+    arr.splice(itemIndex, 1);
   }
-  return arr
+  return arr;
 }
 
 function toTitleCase(str) {
-  return str.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(' ');
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.substring(1))
+    .join(" ");
 }
 
 function replaceCommaWithDot(value) {
-  if (typeof value === 'string') {
-    return value.replace(',', '.')
+  if (typeof value === "string") {
+    return value.replace(",", ".");
   }
-  return value
+  return value;
 }
 
 function replaceStringWithList(value) {
   if (value === null) {
-    return []
+    return [];
   }
-  if (typeof value === 'string') {
-    return value ? [value] : []
+  if (typeof value === "string") {
+    return value ? [value] : [];
   }
-  return value
+  return value;
 }
 
 /**
  * Create or update a meta tag by attribute name/value.
  */
 function setMeta(attrName, attrValue, content) {
-  const selector = `meta[${attrName}="${attrValue}"]`
-  let el = document.querySelector(selector)
+  const selector = `meta[${attrName}="${attrValue}"]`;
+  let el = document.querySelector(selector);
   if (!el) {
-    el = document.createElement('meta')
-    el.setAttribute(attrName, attrValue)
-    document.head.appendChild(el)
+    el = document.createElement("meta");
+    el.setAttribute(attrName, attrValue);
+    document.head.appendChild(el);
   }
-  el.content = content
+  el.content = content;
 }
 
 /**
  * OFF auth token format: 'username__uuid'
  */
 function getOFFUsernameFromAuthToken(token) {
-  return token.split("__")[0]
+  return token.split("__")[0];
 }
-
 
 export default {
   debounce,
@@ -158,4 +174,4 @@ export default {
   replaceStringWithList,
   setMeta,
   getOFFUsernameFromAuthToken,
-}
+};

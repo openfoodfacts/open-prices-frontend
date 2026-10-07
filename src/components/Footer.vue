@@ -2,16 +2,38 @@
   <v-footer class="bg-footer py-4 flex-grow-0">
     <v-row no-gutters>
       <v-col cols="12" md="6" align="center">
-        <v-btn class="mx-2" variant="text" :prepend-icon="STATS_ICON" to="/stats">
-          {{ $t('Common.Stats') }}
+        <v-btn
+          class="mx-2"
+          variant="text"
+          :prepend-icon="STATS_ICON"
+          to="/stats"
+        >
+          {{ $t("Common.Stats") }}
         </v-btn>
-        <v-btn class="mx-2" variant="text" :prepend-icon="SETTINGS_ICON" to="/settings">
-          {{ $t('Common.Settings') }}
+        <v-btn
+          class="mx-2"
+          variant="text"
+          :prepend-icon="SETTINGS_ICON"
+          to="/settings"
+        >
+          {{ $t("Common.Settings") }}
         </v-btn>
-        <v-btn class="mx-2" variant="text" :prepend-icon="ABOUT_ICON" to="/about">
-          {{ $t('Common.About') }}
+        <v-btn
+          class="mx-2"
+          variant="text"
+          :prepend-icon="ABOUT_ICON"
+          to="/about"
+        >
+          {{ $t("Common.About") }}
         </v-btn>
-        <v-btn class="mx-2 my-2" variant="text" prepend-icon="mdi-github" :href="APP_GITHUB_FRONTEND_URL" target="_blank" rel="noopener noreferrer">
+        <v-btn
+          class="mx-2 my-2"
+          variant="text"
+          prepend-icon="mdi-github"
+          :href="APP_GITHUB_FRONTEND_URL"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {{ GITHUB_NAME }}
         </v-btn>
       </v-col>
@@ -24,8 +46,18 @@
             <OpenFoodFactsLink display="link" />
           </template>
         </i18n-t>
-        <br>
-        <v-btn v-for="source in sourceList" :key="source.source" class="mr-1 my-2" size="x-small" active :prepend-icon="source.icon" :href="source.url" target="_blank" rel="noopener noreferrer">
+        <br />
+        <v-btn
+          v-for="source in sourceList"
+          :key="source.source"
+          class="mr-1 my-2"
+          size="x-small"
+          active
+          :prepend-icon="source.icon"
+          :href="source.url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {{ source.label }}
           <v-tooltip activator="parent" open-on-click location="top">
             {{ source.name }}
@@ -37,15 +69,17 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { useTheme } from 'vuetify'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import constants from '../constants'
+import { defineAsyncComponent } from "vue";
+import { useTheme } from "vuetify";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import constants from "../constants";
 
 export default {
   components: {
-    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
+    OpenFoodFactsLink: defineAsyncComponent(
+      () => import("../components/OpenFoodFactsLink.vue"),
+    ),
   },
   data() {
     return {
@@ -57,58 +91,59 @@ export default {
       GITHUB_NAME: constants.GITHUB_NAME,
       sourceList: [
         {
-          source: 'off',
+          source: "off",
           name: constants.OFF_NAME,
-          label: this.$t('Common.Food'),
+          label: this.$t("Common.Food"),
           url: constants.OFF_URL,
           icon: constants.OFF_ICON,
         },
         {
-          source: 'obf',
+          source: "obf",
           name: constants.OBF_NAME,
-          label: this.$t('Common.Beauty'),
+          label: this.$t("Common.Beauty"),
           url: constants.OBF_URL,
           icon: constants.OBF_ICON,
         },
         {
-          source: 'opf',
+          source: "opf",
           name: constants.OPF_NAME,
-          label: this.$t('Common.Products'),
+          label: this.$t("Common.Products"),
           url: constants.OPF_URL,
           icon: constants.OPF_ICON,
         },
         {
-          source: 'opff',
+          source: "opff",
           name: constants.OPFF_NAME,
-          label: this.$t('Common.PetFood'),
+          label: this.$t("Common.PetFood"),
           url: constants.OPFF_URL,
           icon: constants.OPFF_ICON,
-        }
+        },
       ],
-      theme: useTheme()
-    }
+      theme: useTheme(),
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     themeInfo() {
       if (this.theme.global.name.value === "light") {
         return {
-          icon: 'mdi-white-balance-sunny',
-          label: 'Theme.LightMode' 
-        }
+          icon: "mdi-white-balance-sunny",
+          label: "Theme.LightMode",
+        };
       }
       return {
-        icon: 'mdi-moon-waning-crescent',
-        label: 'Theme.DarkMode' 
-      }
-    }
+        icon: "mdi-moon-waning-crescent",
+        label: "Theme.DarkMode",
+      };
+    },
   },
   methods: {
     swapTheme() {
-      const newTheme = this.theme.global.name.value === "light" ? 'dark' : 'light'
-      this.appStore.user.preferedTheme = newTheme
-      this.theme.change(newTheme)
-    }
-  }
-}
+      const newTheme =
+        this.theme.global.name.value === "light" ? "dark" : "light";
+      this.appStore.user.preferedTheme = newTheme;
+      this.theme.change(newTheme);
+    },
+  },
+};
 </script>

@@ -2,7 +2,14 @@
   <v-dialog max-height="80%" min-width="50%" width="auto">
     <v-card>
       <v-card-title>
-        {{ $t("ChangeCurrencyDialog.Title") }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
+        {{ $t("ChangeCurrencyDialog.Title") }}
+        <v-btn
+          style="float: right"
+          variant="text"
+          density="compact"
+          icon="mdi-close"
+          @click="close"
+        />
       </v-card-title>
 
       <v-divider />
@@ -18,11 +25,16 @@
             />
           </v-col>
           <v-col cols="12">
-            <v-btn class="mb-2" size="small" :prepend-icon="SETTINGS_ICON" to="/settings">
-              <span>{{ $t('ChangeCurrencyDialog.AddCurrencies') }}</span>
+            <v-btn
+              class="mb-2"
+              size="small"
+              :prepend-icon="SETTINGS_ICON"
+              to="/settings"
+            >
+              <span>{{ $t("ChangeCurrencyDialog.AddCurrencies") }}</span>
             </v-btn>
             <p class="text-caption text-warning">
-              <i>{{ $t('ChangeCurrencyDialog.AddCurrenciesWarning') }}</i>
+              <i>{{ $t("ChangeCurrencyDialog.AddCurrenciesWarning") }}</i>
             </p>
           </v-col>
         </v-row>
@@ -32,7 +44,11 @@
 
       <v-card-actions>
         <v-btn elevation="1" @click="selectedCurrency">
-          {{ $t('ChangeCurrencyDialog.Select', { currency_code: userLastCurrencyUsed }) }}
+          {{
+            $t("ChangeCurrencyDialog.Select", {
+              currency_code: userLastCurrencyUsed,
+            })
+          }}
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -40,38 +56,37 @@
 </template>
 
 <script>
-import { useAppStore } from '../store'
-import constants from '../constants'
+import { useAppStore } from "../store";
+import constants from "../constants";
 
 export default {
-  emits: ['newCurrencySelected', 'close'],
+  emits: ["newCurrencySelected", "close"],
   data() {
     return {
       userFavoriteCurrencies: [],
       userLastCurrencyUsed: null,
       SETTINGS_ICON: constants.SETTINGS_ICON,
-    }
+    };
   },
-  computed: {
-  },
+  computed: {},
   mounted() {
-    this.getCurrencyData()
+    this.getCurrencyData();
   },
   methods: {
     getCurrencyData() {
-      const appStore = useAppStore()
-      this.userFavoriteCurrencies = appStore.getUserFavoriteCurrencies
-      this.userLastCurrencyUsed = appStore.getUserLastCurrencyUsed
+      const appStore = useAppStore();
+      this.userFavoriteCurrencies = appStore.getUserFavoriteCurrencies;
+      this.userLastCurrencyUsed = appStore.getUserLastCurrencyUsed;
     },
     selectedCurrency() {
-      const appStore = useAppStore()
-      appStore.setLastCurrencyUsed(this.userLastCurrencyUsed)
-      this.$emit('newCurrencySelected', this.userLastCurrencyUsed)
-      this.close()
+      const appStore = useAppStore();
+      appStore.setLastCurrencyUsed(this.userLastCurrencyUsed);
+      this.$emit("newCurrencySelected", this.userLastCurrencyUsed);
+      this.close();
     },
     close() {
-      this.$emit('close')
+      this.$emit("close");
     },
-  }
-}
+  },
+};
 </script>

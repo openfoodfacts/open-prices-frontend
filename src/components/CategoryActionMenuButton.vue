@@ -1,63 +1,88 @@
 <template>
   <v-btn :style="style" icon size="small" density="comfortable" variant="text">
     <v-icon :icon="ACTION_MENU_ICON" />
-    <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
+    <v-menu
+      activator="parent"
+      scroll-strategy="close"
+      transition="slide-y-transition"
+    >
       <v-list>
         <v-list-subheader class="text-uppercase" :slim="true" disabled>
-          {{ $t('Common.Category') }}
+          {{ $t("Common.Category") }}
         </v-list-subheader>
         <v-divider />
-        <PriceAddLink v-if="!hidePriceAddLink" class="mr-2" :productCode="category.id" display="list-item" :disabled="!categoryFound" />
-        <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" :disabled="!categoryFound" />
-        <OpenFoodFactsLink facet="category" :value="category.id" display="list-item" :disabled="!categoryFound" />
+        <PriceAddLink
+          v-if="!hidePriceAddLink"
+          class="mr-2"
+          :productCode="category.id"
+          display="list-item"
+          :disabled="!categoryFound"
+        />
+        <ShareLink
+          :overrideUrl="getShareLinkUrl"
+          display="list-item"
+          :disabled="!categoryFound"
+        />
+        <OpenFoodFactsLink
+          facet="category"
+          :value="category.id"
+          display="list-item"
+          :disabled="!categoryFound"
+        />
       </v-list>
     </v-menu>
   </v-btn>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
+import { defineAsyncComponent } from "vue";
+import constants from "../constants";
 
 export default {
   components: {
-    PriceAddLink: defineAsyncComponent(() => import('../components/PriceAddLink.vue')),
-    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
-    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue'))
+    PriceAddLink: defineAsyncComponent(
+      () => import("../components/PriceAddLink.vue"),
+    ),
+    ShareLink: defineAsyncComponent(
+      () => import("../components/ShareLink.vue"),
+    ),
+    OpenFoodFactsLink: defineAsyncComponent(
+      () => import("../components/OpenFoodFactsLink.vue"),
+    ),
   },
   props: {
     category: {
       type: Object,
-      default: null
+      default: null,
     },
     source: {
       type: String,
-      default: 'category',
-      examples: ['category', 'product']
+      default: "category",
+      examples: ["category", "product"],
     },
     style: {
       type: String,
-      default: 'position:absolute;bottom:6px;right:0;'
-    }
+      default: "position:absolute;bottom:6px;right:0;",
+    },
   },
   data() {
     return {
-      ACTION_MENU_ICON: constants.ACTION_MENU_ICON
-    }
+      ACTION_MENU_ICON: constants.ACTION_MENU_ICON,
+    };
   },
   computed: {
     categoryFound() {
-      return this.category && !this.category.status
+      return this.category && !this.category.status;
     },
     hidePriceAddLink() {
-      return this.source === 'category'
+      return this.source === "category";
     },
     getShareLinkUrl() {
-      if (this.source === 'category') {
-        return `/categories/${this.category.id}`
+      if (this.source === "category") {
+        return `/categories/${this.category.id}`;
       }
-      return `/products/${this.category.id}`
-    }
-  }
-}
+      return `/products/${this.category.id}`;
+    },
+  },
+};
 </script>

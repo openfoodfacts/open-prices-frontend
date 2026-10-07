@@ -1,7 +1,15 @@
 <template>
-  <v-chip label size="small" :variant="totalCount ? 'flat' : 'tonal'" density="comfortable" :title="$t('Common.ReceiptPriceTotal')">
+  <v-chip
+    label
+    size="small"
+    :variant="totalCount ? 'flat' : 'tonal'"
+    density="comfortable"
+    :title="$t('Common.ReceiptPriceTotal')"
+  >
     <span v-if="uploadedCount && totalCount">
-      {{ getPriceValueDisplay(uploadedCount) }}&nbsp;/&nbsp;{{ getPriceValueDisplay(totalCount) }}
+      {{ getPriceValueDisplay(uploadedCount) }}&nbsp;/&nbsp;{{
+        getPriceValueDisplay(totalCount)
+      }}
     </span>
     <span v-else-if="uploadedCount">
       {{ getPriceValueDisplay(uploadedCount) }}
@@ -13,31 +21,31 @@
 </template>
 
 <script>
-import price_utils from '../utils/price.js'
+import price_utils from "../utils/price.js";
 
 export default {
   props: {
     uploadedCount: {
       type: Number,
-      default: null
+      default: null,
     },
     totalCount: {
       type: Number,
-      default: null
+      default: null,
     },
     currency: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   methods: {
     getPriceValue(priceValue, priceCurrency) {
-      return price_utils.prettyPrice(priceValue, priceCurrency)
+      return price_utils.prettyPrice(priceValue, priceCurrency);
     },
     getPriceValueDisplay(price) {
-      price = parseFloat(price)
-      return this.getPriceValue(price, this.currency)
+      price = parseFloat(price);
+      return this.getPriceValue(price, this.currency);
     },
-  }
-}
+  },
+};
 </script>

@@ -21,19 +21,19 @@
 </template>
 
 <script>
-import constants from '../constants'
+import constants from "../constants";
 
 export default {
   props: {
     survey: {
       type: Object,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   data() {
     return {
       APP_NAME: constants.APP_NAME,
-    }
-  }
-}
+    };
+  },
+};
 </script>

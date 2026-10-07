@@ -1,6 +1,6 @@
 <template>
   <v-banner
-    style="cursor:pointer;"
+    style="cursor: pointer"
     icon="mdi-image-multiple"
     bg-color="primary"
     rounded
@@ -8,11 +8,15 @@
     @click="$router.push(url)"
   >
     <v-banner-text>
-      {{ $t('ProofAdd.PromoProofPriceTagAddMultiple') }}
+      {{ $t("ProofAdd.PromoProofPriceTagAddMultiple") }}
     </v-banner-text>
     <v-spacer /><!-- needed to push v-banner-actions to the right on big screens -->
     <v-banner-actions>
-      <v-btn icon="mdi-arrow-right" :aria-label="$t('Router.AddProofsPriceTags.Title')" :to="url" />
+      <v-btn
+        icon="mdi-arrow-right"
+        :aria-label="$t('Router.AddProofsPriceTags.Title')"
+        :to="url"
+      />
     </v-banner-actions>
   </v-banner>
 </template>
@@ -21,8 +25,8 @@
 export default {
   data() {
     return {
-      url: '/proofs/add/price-tags',
-    }
+      url: "/proofs/add/price-tags",
+    };
   },
-}
+};
 </script>

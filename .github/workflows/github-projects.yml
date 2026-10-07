@@ -22,23 +22,23 @@ on:
 
   pull_request_target:
     types:
-    - assigned
-    - unassigned
-    - labeled
-    - unlabeled
-    - opened
-    - edited
-    - closed
-    - reopened
-    - synchronize
-    - converted_to_draft
-    - ready_for_review
-    - locked
-    - unlocked
-    - review_requested
-    - review_request_removed
-    - auto_merge_enabled
-    - auto_merge_disabled
+      - assigned
+      - unassigned
+      - labeled
+      - unlabeled
+      - opened
+      - edited
+      - closed
+      - reopened
+      - synchronize
+      - converted_to_draft
+      - ready_for_review
+      - locked
+      - unlocked
+      - review_requested
+      - review_request_removed
+      - auto_merge_enabled
+      - auto_merge_disabled
 
 jobs:
   add-to-design-project:
@@ -87,13 +87,13 @@ jobs:
           project-url: https://github.com/orgs/openfoodfacts/projects/5 # Add issue to the folksonomy project
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           labeled: 🏷️ Folksonomy Project
-          label-operator: OR         
+          label-operator: OR
       - uses: actions/add-to-project@main
         with:
           project-url: https://github.com/orgs/openfoodfacts/projects/44 # Add issue to the data quality project
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           labeled: 🧽 Data quality
-          label-operator: OR    
+          label-operator: OR
       - uses: actions/add-to-project@main
         with:
           project-url: https://github.com/orgs/openfoodfacts/projects/82 # Add issue to the search project
@@ -105,19 +105,19 @@ jobs:
           project-url: https://github.com/orgs/openfoodfacts/projects/41 # Add issue to the producer platform project
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           labeled: 🏭 Producers Platform
-          label-operator: OR    
+          label-operator: OR
       - uses: actions/add-to-project@main
         with:
           project-url: https://github.com/orgs/openfoodfacts/projects/19 # Add issue to the infrastructure project
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           labeled: infrastructure
-          label-operator: OR   
+          label-operator: OR
       - uses: actions/add-to-project@main
         with:
           project-url: https://github.com/orgs/openfoodfacts/projects/92 # Add issue to the Nutri-Score project
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           labeled: 🚦 Nutri-Score
-          label-operator: OR   
+          label-operator: OR
       - uses: actions/add-to-project@main
         with:
           project-url: https://github.com/orgs/openfoodfacts/projects/25 # Add issue to the documentation project

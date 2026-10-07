@@ -1,10 +1,5 @@
 <template>
-  <v-card
-    :title="value"
-    variant="tonal"
-    density="compact"
-    :to="to ? to : null"
-  >
+  <v-card :title="value" variant="tonal" density="compact" :to="to ? to : null">
     <template v-if="subtitle" #subtitle>
       <span v-if="subtitlePrependIcon" class="mr-1">
         <v-icon :icon="subtitlePrependIcon" size="small" />
@@ -26,28 +21,28 @@ export default {
   props: {
     value: {
       type: [Number, String],
-      default: 0
+      default: 0,
     },
     subtitle: {
       type: String,
-      default: ''
+      default: "",
     },
     subtitlePrependIcon: {
       type: String,
-      default: ''
+      default: "",
     },
     prependIcon: {
       type: String,
-      default: ''
+      default: "",
     },
     appendIcon: {
       type: String,
-      default: ''
+      default: "",
     },
     to: {
       type: String,
-      default: ''
-    }
-  }
-}
+      default: "",
+    },
+  },
+};
 </script>

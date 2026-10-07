@@ -9,17 +9,17 @@ export default {
   props: {
     brand: {
       type: String,
-      required: true
+      required: true,
     },
     readonly: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
     getBrandUrl() {
-      return this.brand && !this.readonly ? `/brands/${this.brand}` : null
-    }
-  }
-}
+      return this.brand && !this.readonly ? `/brands/${this.brand}` : null;
+    },
+  },
+};
 </script>
