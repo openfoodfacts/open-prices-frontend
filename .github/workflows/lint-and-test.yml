@@ -16,6 +16,9 @@ jobs:
           runTests: false
       - name: Lint with ESLint
         run: yarn lint
+      - name: Check formatting with Prettier
+        if: success() || failure()
+        run: yarn format:check
       # Disabled? tests are not up to date...
       # - name: Run e2e tests
       #   uses: cypress-io/github-action@v6
