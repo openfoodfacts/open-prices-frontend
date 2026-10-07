@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.177.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.176.0...v1.177.0) (2026-10-07)
+
+
+### Features
+
+* **Community:** add Amni-Price to the known reuses ([#2418](https://github.com/openfoodfacts/open-prices-frontend/issues/2418)) ([beb6a7a](https://github.com/openfoodfacts/open-prices-frontend/commit/beb6a7a3b7f9ca450d9e64e9cfce6f2564b6d18d))
+* **Community:** add Popotam to the known reuses ([#2417](https://github.com/openfoodfacts/open-prices-frontend/issues/2417)) ([233a4bb](https://github.com/openfoodfacts/open-prices-frontend/commit/233a4bbdcb9f1d1688c80dae581fe49ba339d4dd))
+* **Proof Upload:** receipt cropping tool (before upload) ([#2406](https://github.com/openfoodfacts/open-prices-frontend/issues/2406)) ([575eaf0](https://github.com/openfoodfacts/open-prices-frontend/commit/575eaf0c9e61eb4471e019094dd4b70ac41fde85))
+
+
+### Bug Fixes
+
+* **Assistants:** "Add a new proof" reopened the proof just added ([#2415](https://github.com/openfoodfacts/open-prices-frontend/issues/2415)) ([c19e656](https://github.com/openfoodfacts/open-prices-frontend/commit/c19e65697ffc2b1517198ff1d74b06018ddf0b59))
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2416](https://github.com/openfoodfacts/open-prices-frontend/issues/2416)) ([4c259b3](https://github.com/openfoodfacts/open-prices-frontend/commit/4c259b3a2799b27f1e49d9c274027ae00e80106b))
+* **l10n:** New Crowdin translations to review and merge ([#2400](https://github.com/openfoodfacts/open-prices-frontend/issues/2400)) ([715af01](https://github.com/openfoodfacts/open-prices-frontend/commit/715af01af051179aca002f6168f8854bb4187afe))
+* **l10n:** New Crowdin translations to review and merge ([#2422](https://github.com/openfoodfacts/open-prices-frontend/issues/2422)) ([2c0a652](https://github.com/openfoodfacts/open-prices-frontend/commit/2c0a6529f9895e6add7928f4754af5fb4b026276))
+* **Proof Upload:** add loading action when user is drawing ([#2419](https://github.com/openfoodfacts/open-prices-frontend/issues/2419)) ([974b811](https://github.com/openfoodfacts/open-prices-frontend/commit/974b81132163c4354eff75c328df6001dd789e2b))
+* **Proof Upload:** avoid proof image action icons to overflow ([#2411](https://github.com/openfoodfacts/open-prices-frontend/issues/2411)) ([f0fb2d2](https://github.com/openfoodfacts/open-prices-frontend/commit/f0fb2d2f54386fa9637fe56bf60184bcf396adde))
+* **Proof Upload:** move more drawing logic to the draw_utils ([#2421](https://github.com/openfoodfacts/open-prices-frontend/issues/2421)) ([c79eee0](https://github.com/openfoodfacts/open-prices-frontend/commit/c79eee087e610b070b413a38542ad024a28c38d5))
+
 ## [1.176.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.175.0...v1.176.0) (2026-09-27)
 
 
