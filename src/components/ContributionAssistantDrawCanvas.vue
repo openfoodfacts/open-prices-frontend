@@ -16,6 +16,8 @@
 
 <script>
   import constants from '../constants'
+  import draw_utils from '../utils/draw.js'
+
   export default {
     props: {
       imageSrc: {
@@ -40,7 +42,8 @@
       },
       mode: {
         type: String,
-        default: 'Labels'
+        default: 'Labels',
+        examples: ['Labels', 'Crop', 'Redact']
       }
     },
     emits: ['extractedLabels', 'loaded'],
@@ -132,8 +135,14 @@
         if (this.isDrawing || this.preventDrawing) return
         if (event.type == "touchstart") {
           const rect = event.target.getBoundingClientRect()
-          event.offsetX = event.targetTouches[0].clientX - rect.left 
-          event.offsetY = event.targetTouches[0].clientY - rect.top 
+          event.offsetX = event.targetTouches[0].clientX - rect.left
+          event.offsetY = event.targetTouches[0].clientY - rect.top
+        }
+        if (this.mode === 'Crop' && this.boundingBoxes.length) {
+          // only one crop area can exist at a time: clear the previous one before drawing a new one
+          this.boundingBoxes = []
+          const canvas = this.$refs.canvas
+          canvas.getContext("2d").drawImage(this.image, 0, 0, canvas.width, canvas.height)
         }
         this.startX = event.offsetX / this.scale
         this.startY = event.offsetY / this.scale
@@ -163,8 +172,9 @@
             ctx.strokeStyle = "red"
             ctx.strokeRect(this.startX, this.startY, width, height)
           } else if (this.mode === 'Redact') {
-            ctx.fillStyle = "black"
-            ctx.fillRect(this.startX, this.startY, width, height)
+            draw_utils.drawRedactRect(ctx, this.startX, this.startY, width, height)
+          } else if (this.mode === 'Crop') {
+            draw_utils.drawCropRect(ctx, this.startX, this.startY, width, height, this.scale)
           }
         }
       },
@@ -185,10 +195,13 @@
         const endY = event.offsetY / this.scale
         // ignore bounding boxes that are too small
         if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) > 10) {
-          this.boundingBoxes.push({ startX: this.startX, startY: this.startY, endX, endY, boundingSource: this.$t('ContributionAssistant.ManualBoundingBoxSource'), status: -1 })
+          this.boundingBoxes = this.boundingBoxes.concat({ startX: this.startX, startY: this.startY, endX, endY, boundingSource: this.$t('ContributionAssistant.ManualBoundingBoxSource'), status: -1 })
         }
         this.extractLabels()
-        this.drawSingleBoundingBox(this.boundingBoxes[this.boundingBoxes.length - 1])
+        const lastBoundingBox = this.boundingBoxes[this.boundingBoxes.length - 1]
+        if (lastBoundingBox) {
+          this.drawSingleBoundingBox(lastBoundingBox)
+        }
       },
       drawSingleBoundingBox(rect) {
         const ctx = this.$refs.canvas.getContext("2d")
@@ -215,8 +228,9 @@
           ctx.fillStyle = "white"
           ctx.fillText(text, Math.min(startX, endX) + 3, Math.min(startY, endY) - 3)
         } else if (this.mode === 'Redact') {
-          ctx.fillStyle = "black"
-          ctx.fillRect(startX, startY, width, height)
+          draw_utils.drawRedactRect(ctx, startX, startY, width, height)
+        } else if (this.mode === 'Crop') {
+          draw_utils.drawCropRect(ctx, startX, startY, width, height, this.scale)
         }
       },
       drawBoundingBoxes() {

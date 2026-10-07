@@ -56,6 +56,15 @@
             <v-divider />
             <v-card-actions>
               <v-spacer />
+              <v-btn v-if="typeReceiptOnly"
+                color="info"
+                variant="outlined"
+                prepend-icon="mdi-crop"
+                size="small"
+                @click="cropReceipt"
+              >
+                {{ $t('Common.Crop') }}
+              </v-btn>
               <v-btn
                 v-if="typeReceiptOnly"
                 color="warning"
@@ -88,6 +97,13 @@
         @recentProofSelected="recentProofSelected($event)"
         @close="userRecentProofsDialog = false"
       />
+      <ReceiptCropDialog
+        v-if="showReceiptCropDialog"
+        v-model="showReceiptCropDialog"
+        :proofImage="firstProofImage"
+        @done="cropDone"
+        @close="showReceiptCropDialog = false"
+      />
     </v-col>
   </v-row>
 </template>
@@ -100,6 +116,7 @@ import proof_utils from '../utils/proof.js'
 export default {
   components: {
     UserRecentProofsDialog: defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
+    ReceiptCropDialog: defineAsyncComponent(() => import('../components/ReceiptCropDialog.vue')),
   },
   props: {
     proofImageForm: {
@@ -139,6 +156,7 @@ export default {
       proofImageList: [],
       proofImagePreviewList: [],
       userRecentProofsDialog: false,
+      showReceiptCropDialog: false,
       loading: false
     }
   },
@@ -154,6 +172,9 @@ export default {
     },
     hasProofImageSelected() {
       return Array.isArray(this.proofImageList) ? this.proofImageList.length : !!this.proofImageList
+    },
+    firstProofImage() {
+      return Array.isArray(this.proofImageList) ? this.proofImageList[0] : this.proofImageList
     },
     showProofImagePreviewList() {
       return !this.hideProofImagePreview && this.proofImagePreviewList.length
@@ -175,6 +196,13 @@ export default {
   methods: {
     anonymizeReceipt() {
       this.$emit('anonymizeReceipt')
+    },
+    cropReceipt() {
+      this.showReceiptCropDialog = true
+    },
+    cropDone(croppedProofImage) {
+      this.showReceiptCropDialog = false
+      this.proofImageList = [croppedProofImage]
     },
     recentProofSelected(proof) {
       this.proofImageList = [proof]
