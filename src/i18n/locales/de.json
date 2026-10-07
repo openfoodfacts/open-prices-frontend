@@ -490,6 +490,7 @@
 		"Resolved": "Gelöst",
 		"Reuses": "Wiederverwendung",
 		"ReusesKnown": "Bekannte Wiederverwendungen",
+		"Save": "Speichern",
 		"Search": "Suchen",
 		"Select": "Auswählen",
 		"Send": "Senden",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Nur neue Preise ({nbPrices}) hochladen",
 		"UploadOrUpdateAllValidPrices": "Alle gültigen Preise ({nbPrices}) hochladen oder aktualisieren",
 		"WaitForExtraction": "Artikel werden automatisch aus dem Kassenzettel extrahiert, bitte warten ..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Ihre Wiederverwendung fehlt? Lassen Sie es uns wissen {url}!",
