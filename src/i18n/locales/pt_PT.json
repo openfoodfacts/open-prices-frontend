@@ -490,6 +490,7 @@
 		"Resolved": "Resolvido",
 		"Reuses": "Reutilizações",
 		"ReusesKnown": "Reutilizações conhecidas",
+		"Save": "Guardar",
 		"Search": "Procurar",
 		"Select": "Selecionar",
 		"Send": "Enviar",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Carregar apenas novos preços ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Carregar ou atualizar todos os preços válidos ({nbPrices})",
 		"WaitForExtraction": "Extraindo automaticamente os itens do recibo, aguarde..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "A sua reutilização está a faltar? Avise-nos {url}!",
