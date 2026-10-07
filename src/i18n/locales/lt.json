@@ -490,6 +490,7 @@
 		"Resolved": "Išspręsta",
 		"Reuses": "Kartotinis naudojimas",
 		"ReusesKnown": "Žinomas kartotinis naudojimas",
+		"Save": "Išsaugoti",
 		"Search": "Paieška",
 		"Select": "Pasirinkti",
 		"Send": "Siųsti",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
 		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Trūksta jūsų kartotinio naudojimo? Praneškite mums {url}!",
