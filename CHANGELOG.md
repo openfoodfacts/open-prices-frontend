@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.177.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.177.0...v1.177.1) (2026-10-07)
+
+
+### Technical
+
+* **Linting:** add prettier & eslint-config-prettier ([#2428](https://github.com/openfoodfacts/open-prices-frontend/issues/2428)) ([fcfab60](https://github.com/openfoodfacts/open-prices-frontend/commit/fcfab60f1427cfe6d3a4f5cd32f3c527c5d79908))
+* **Linting:** add prettier in the pre-commit & ci ([#2431](https://github.com/openfoodfacts/open-prices-frontend/issues/2431)) ([30058c9](https://github.com/openfoodfacts/open-prices-frontend/commit/30058c9040624eab5aaa30ca75ac6b242c5f860d))
+* **Linting:** update CONTRIBUTING.md & add a `.git-blame-ignore-revs` ([#2433](https://github.com/openfoodfacts/open-prices-frontend/issues/2433)) ([018e17e](https://github.com/openfoodfacts/open-prices-frontend/commit/018e17ef03a2e8de5fe3f0067a8adbb7d8039803))
+* run prettier on the codebase ([#2429](https://github.com/openfoodfacts/open-prices-frontend/issues/2429)) ([92c1273](https://github.com/openfoodfacts/open-prices-frontend/commit/92c1273bd871762b4a56f577e594f776dcf1ef17))
+
 ## [1.177.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.176.0...v1.177.0) (2026-10-07)
 
 
