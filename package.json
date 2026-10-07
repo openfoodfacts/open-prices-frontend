@@ -21,8 +21,10 @@
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
+      "prettier --write",
       "yarn lint --max-warnings=0 --no-warn-ignored"
-    ]
+    ],
+    "*.{json,md,css,scss,html,yml,yaml}": "prettier --write"
   },
   "dependencies": {
     "@openfoodfacts/openfoodfacts-webcomponents": "^1.16.0",
