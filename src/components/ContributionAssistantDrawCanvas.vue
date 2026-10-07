@@ -46,7 +46,7 @@
         examples: ['Labels', 'Crop', 'Redact']
       }
     },
-    emits: ['extractedLabels', 'loaded'],
+    emits: ['extractedLabels', 'extracting', 'loaded'],
     data() {
       return {
         isDrawing: false,
@@ -241,6 +241,7 @@
         })
       },
       async extractLabels() {
+        this.$emit('extracting')
         let extractedLabels = []
         const originalCanvas = document.createElement("canvas")
         const ctx = originalCanvas.getContext("2d")
