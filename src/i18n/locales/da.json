@@ -490,6 +490,7 @@
 		"Resolved": "Løst",
 		"Reuses": "Genbrug",
 		"ReusesKnown": "Kendt genbrug",
+		"Save": "Gem",
 		"Search": "Søg",
 		"Select": "Vælg",
 		"Send": "Indsend",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Upload kun nye priser ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload eller opdater alle gyldige priser ({nbPrices})",
 		"WaitForExtraction": "Udtrækker automatisk varer fra kvitteringen, vent venligst..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Mangler din genbrug? Fortæl os {url}!",
