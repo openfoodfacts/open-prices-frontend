@@ -490,6 +490,7 @@
 		"Resolved": "Rezoud",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
+		"Save": "Anrejistre",
 		"Search": "Rechèch",
 		"Select": "Select",
 		"Send": "Voye",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
 		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Your reuse is missing? Let us know {url}!",
