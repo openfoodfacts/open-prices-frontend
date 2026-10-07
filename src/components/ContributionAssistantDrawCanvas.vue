@@ -88,18 +88,17 @@
         if (!canvas) return
         const ctx = canvas.getContext("2d")
         canvas.style.width = "100%"
-        this.scale = canvas.offsetWidth / this.image.width
-        const maxHeight = window.innerHeight - 350
-
-        if (!this.forceFullImageHeight && maxHeight < this.image.height) {
-          // Image will be too tall
-          // Ajust to fit optimal height
-          const aspectRatio = this.image.height / this.image.width
-          const heightFor100PercentWidth = canvas.offsetWidth * aspectRatio
-          const idealHeight = Math.min(maxHeight, heightFor100PercentWidth)
-          canvas.style.width = "auto"
-          this.scale = idealHeight / this.image.height
-          canvas.style.height = idealHeight + "px"
+        const { scale, cssWidth, cssHeight } = draw_utils.computeCanvasFit({
+          containerWidth: canvas.offsetWidth,
+          imageWidth: this.image.width,
+          imageHeight: this.image.height,
+          maxHeight: window.innerHeight - 350,
+          forceFullImageHeight: this.forceFullImageHeight,
+        })
+        this.scale = scale
+        canvas.style.width = cssWidth
+        if (cssHeight) {
+          canvas.style.height = cssHeight
         }
 
         const newWidth = this.image.width
@@ -212,21 +211,15 @@
         // set text & color
         if (this.mode === 'Labels') {
           let text = ""
+          let color = "red"
           constants.PRICE_TAG_STATUS_LIST.some(statusObj => {
             if (rect.status === statusObj.key) {
               text = this.$t(statusObj.text)
-              ctx.strokeStyle = statusObj.color
-              ctx.fillStyle = statusObj.color
+              color = statusObj.color
               return true
             }
           })
-          ctx.strokeRect(startX, startY, width, height)
-          ctx.font = `bold ${8/this.scale}px sans-serif `
-          const textWidth = ctx.measureText(text).width + 4
-          ctx.strokeRect(Math.min(startX, endX), Math.min(startY, endY) - (8/this.scale), textWidth, (8/this.scale))
-          ctx.fillRect(Math.min(startX, endX), Math.min(startY, endY) - (8/this.scale), textWidth, (8/this.scale))
-          ctx.fillStyle = "white"
-          ctx.fillText(text, Math.min(startX, endX) + 3, Math.min(startY, endY) - 3)
+          draw_utils.drawLabelRect(ctx, startX, startY, width, height, this.scale, color, text)
         } else if (this.mode === 'Redact') {
           draw_utils.drawRedactRect(ctx, startX, startY, width, height)
         } else if (this.mode === 'Crop') {
@@ -275,15 +268,7 @@
       findBoundingBoxAndRemove(event) {
         const xPos = event.offsetX / this.scale
         const yPos = event.offsetY / this.scale
-        const box = this.boundingBoxes.find(rect => {
-          const x_min = Math.min(rect.startX, rect.endX)
-          const y_min = Math.min(rect.startY, rect.endY)
-          const x_max = Math.max(rect.startX, rect.endX)
-          const y_max = Math.max(rect.startY, rect.endY)
-          if (x_min <= xPos && xPos <= x_max && y_min <= yPos && yPos <= y_max) {
-            return true
-          }
-        })
+        const box = this.boundingBoxes.find(rect => draw_utils.isPointInRect(xPos, yPos, rect))
         if (box) {
           this.removeBoundingBox(this.boundingBoxes.indexOf(box))
         }
