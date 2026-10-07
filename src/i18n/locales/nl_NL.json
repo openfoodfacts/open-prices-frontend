@@ -490,6 +490,7 @@
 		"Resolved": "Opgelost",
 		"Reuses": "Hergebruik",
 		"ReusesKnown": "Bekende hergebruiken",
+		"Save": "Opslaan",
 		"Search": "Zoeken",
 		"Select": "Selecteren",
 		"Send": "Verzenden",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Upload alleen nieuwe prijzen ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload of update alle geldige prijzen ({nbPrices})",
 		"WaitForExtraction": "Artikelen automatisch extraheren uit het betaalbewijs, even geduld..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Ontbreekt uw hergebruik? Laat het ons weten {url}!",
