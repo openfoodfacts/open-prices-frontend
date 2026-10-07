@@ -490,6 +490,7 @@
 		"Resolved": "Terselesaikan",
 		"Reuses": "Penggunaan kembali",
 		"ReusesKnown": "Penggunaan kembali yang diketahui",
+		"Save": "Simpan",
 		"Search": "Cari",
 		"Select": "Pilih",
 		"Send": "Kirim",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Unggah hanya harga baru ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Unggah atau perbarui semua harga yang valid ({nbPrices})",
 		"WaitForExtraction": "Mengekstrak item secara otomatis dari struk, mohon tunggu..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Penggunaan ulang Anda hilang? Beri tahu kami {url}!",
