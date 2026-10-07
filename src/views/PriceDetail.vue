@@ -3,7 +3,7 @@
     <v-col cols="12" sm="6">
       <PriceCard v-if="price" :price="price" :product="price.product" />
       <p v-if="!loading && !price" class="text-red">
-        {{ $t('Common.PriceNotFound') }}
+        {{ $t("Common.PriceNotFound") }}
       </p>
     </v-col>
   </v-row>
@@ -16,13 +16,17 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import openPricesApi from '../services/openPricesApi'
+import { defineAsyncComponent } from "vue";
+import openPricesApi from "../services/openPricesApi";
 
 export default {
   components: {
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    HistoryCard: defineAsyncComponent(() => import('../components/HistoryCard.vue')),
+    PriceCard: defineAsyncComponent(
+      () => import("../components/PriceCard.vue"),
+    ),
+    HistoryCard: defineAsyncComponent(
+      () => import("../components/HistoryCard.vue"),
+    ),
   },
   data() {
     return {
@@ -30,24 +34,25 @@ export default {
       // data
       price: null,
       loading: false,
-    }
+    };
   },
   mounted() {
-    this.getPrice()
+    this.getPrice();
   },
   methods: {
     getPrice() {
-      this.loading = true
-      return openPricesApi.getPriceById(this.priceId)
+      this.loading = true;
+      return openPricesApi
+        .getPriceById(this.priceId)
         .then((data) => {
           if (data.id) {
-            this.price = data
+            this.price = data;
           }
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
-  }
-}
+  },
+};
 </script>

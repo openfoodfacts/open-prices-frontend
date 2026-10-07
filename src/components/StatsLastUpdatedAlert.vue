@@ -5,7 +5,11 @@
     density="compact"
     icon="mdi-information"
   >
-    <i18n-t keypath="Stats.LastUpdated" tag="span" :title="getRelativeDateTimeFormatted(lastUpdated)">
+    <i18n-t
+      keypath="Stats.LastUpdated"
+      tag="span"
+      :title="getRelativeDateTimeFormatted(lastUpdated)"
+    >
       <template #date>
         {{ getDateTimeFormatted(lastUpdated) }}
       </template>
@@ -14,22 +18,22 @@
 </template>
 
 <script>
-import date_utils from '../utils/date.js'
+import date_utils from "../utils/date.js";
 
 export default {
   props: {
     lastUpdated: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     getDateTimeFormatted(dateTimeString) {
-      return date_utils.offDateTime(dateTimeString)
+      return date_utils.offDateTime(dateTimeString);
     },
     getRelativeDateTimeFormatted(dateTimeString) {
-      return date_utils.prettyRelativeDateTime(dateTimeString, 'short')
+      return date_utils.prettyRelativeDateTime(dateTimeString, "short");
     },
-  }
-}
+  },
+};
 </script>

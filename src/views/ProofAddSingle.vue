@@ -3,9 +3,17 @@
     <v-col cols="12">
       <v-stepper v-model="step" hide-actions disabled>
         <v-stepper-header>
-          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" />
+          <v-stepper-item
+            :title="stepItemList[0].title"
+            :value="stepItemList[0].value"
+            :complete="step > 1"
+          />
           <v-divider />
-          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" />
+          <v-stepper-item
+            :title="stepItemList[1].title"
+            :value="stepItemList[1].value"
+            :complete="step > 2"
+          />
         </v-stepper-header>
       </v-stepper>
     </v-col>
@@ -21,7 +29,10 @@
   <template v-if="step === 1">
     <v-row>
       <v-col cols="12" md="6">
-        <ProofUploadCard :hideRecentProofChoice="true" @done="proofUploadDone($event)" />
+        <ProofUploadCard
+          :hideRecentProofChoice="true"
+          @done="proofUploadDone($event)"
+        />
       </v-col>
     </v-row>
   </template>
@@ -58,42 +69,46 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from "vue";
 
 export default {
   components: {
-    DeprecatedAlert: defineAsyncComponent(() => import('../components/DeprecatedAlert.vue')),
-    ProofUploadCard: defineAsyncComponent(() => import('../components/ProofUploadCard.vue')),
+    DeprecatedAlert: defineAsyncComponent(
+      () => import("../components/DeprecatedAlert.vue"),
+    ),
+    ProofUploadCard: defineAsyncComponent(
+      () => import("../components/ProofUploadCard.vue"),
+    ),
   },
   data() {
     return {
       step: 1,
       stepItemList: [
         {
-          title: this.$t('Common.Upload'),
-          value: 1
+          title: this.$t("Common.Upload"),
+          value: 1,
         },
         {
-          title: this.$t('Common.Actions'),
-          value: 2
-        }
+          title: this.$t("Common.Actions"),
+          value: 2,
+        },
       ],
-      proofUploadCount: 0
-    }
+      proofUploadCount: 0,
+    };
   },
   computed: {
     getUserDashboardUrl() {
-      return '/dashboard?proofSingleSuccess=true'
-    }
+      return "/dashboard?proofSingleSuccess=true";
+    },
   },
   methods: {
     proofUploadDone(proofUploadCount) {
-      this.proofUploadCount = proofUploadCount
-      this.step = 2
+      this.proofUploadCount = proofUploadCount;
+      this.step = 2;
     },
     reloadPage() {
-      window.location.reload()
+      window.location.reload();
     },
-  }
-}
+  },
+};
 </script>

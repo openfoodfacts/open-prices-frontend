@@ -1,33 +1,80 @@
 <template>
   <v-card>
     <template #title>
-      {{ $t('ReceiptAssistant.ReceiptItems') }}
+      {{ $t("ReceiptAssistant.ReceiptItems") }}
     </template>
 
     <v-divider />
 
     <v-card-text>
-      <v-data-table :headers="headers" :items="items" :row-props="setTableRowClass" :items-per-page="tablePageLimit" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
+      <v-data-table
+        :headers="headers"
+        :items="items"
+        :row-props="setTableRowClass"
+        :items-per-page="tablePageLimit"
+        fixed-header
+        hide-default-footer
+        mobile-breakpoint="md"
+        :mobile="null"
+        :disable-sort="true"
+        density="comfortable"
+      >
         <template #[`item.status`]="{ item }">
           <v-sheet v-if="item.existingPrice">
-            <v-icon icon="mdi-tag-check-outline" :disabled="true" :title="$t('Common.PriceAlreadyUploaded')" />
-            <span v-if="$vuetify.display.smAndDown" class="text-disabled ml-2">{{ $t('Common.PriceAlreadyUploaded') }}</span>
+            <v-icon
+              icon="mdi-tag-check-outline"
+              :disabled="true"
+              :title="$t('Common.PriceAlreadyUploaded')"
+            />
+            <span
+              v-if="$vuetify.display.smAndDown"
+              class="text-disabled ml-2"
+              >{{ $t("Common.PriceAlreadyUploaded") }}</span
+            >
           </v-sheet>
           <v-sheet v-else-if="!item.price">
-            <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.PriceMissing')" />
-            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.PriceMissing') }}</span>
+            <v-icon
+              icon="mdi-alert-circle"
+              color="warning"
+              :title="$t('Common.PriceMissing')"
+            />
+            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{
+              $t("Common.PriceMissing")
+            }}</span>
           </v-sheet>
-          <v-sheet v-else-if="itemIsCategory(item) ? !item.category_tag : !item.product_code">
-            <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.ProductMissing')" />
-            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.ProductMissing') }}</span>
+          <v-sheet
+            v-else-if="
+              itemIsCategory(item) ? !item.category_tag : !item.product_code
+            "
+          >
+            <v-icon
+              icon="mdi-alert-circle"
+              color="warning"
+              :title="$t('Common.ProductMissing')"
+            />
+            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{
+              $t("Common.ProductMissing")
+            }}</span>
           </v-sheet>
           <v-sheet v-else-if="itemHasInvalidDiscount(item)">
-            <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.PriceDiscountInvalid')" />
-            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.PriceDiscountInvalid') }}</span>
+            <v-icon
+              icon="mdi-alert-circle"
+              color="warning"
+              :title="$t('Common.PriceDiscountInvalid')"
+            />
+            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{
+              $t("Common.PriceDiscountInvalid")
+            }}</span>
           </v-sheet>
           <v-sheet v-else>
-            <v-icon icon="mdi-tag-plus-outline" color="success" :title="$t('Common.PriceReadyToBeUploaded')" />
-            <span v-if="$vuetify.display.smAndDown" class="text-success ml-2">{{ $t('Common.PriceReadyToBeUploaded') }}</span>
+            <v-icon
+              icon="mdi-tag-plus-outline"
+              color="success"
+              :title="$t('Common.PriceReadyToBeUploaded')"
+            />
+            <span v-if="$vuetify.display.smAndDown" class="text-success ml-2">{{
+              $t("Common.PriceReadyToBeUploaded")
+            }}</span>
           </v-sheet>
         </template>
         <template #[`item.product_name`]="{ item }">
@@ -44,11 +91,29 @@
         </template>
         <template #[`item.product`]="{ item }">
           <template v-if="!itemIsCategory(item)">
-            <ProductCard v-if="item.existingPrice" :product="item.product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
-            <ProductInputRow v-else :productForm="item" :hideProductTypeInput="true" :hideProductBarcode="false" />
+            <ProductCard
+              v-if="item.existingPrice"
+              :product="item.product"
+              :hideCategoriesAndLabels="true"
+              :hideActionMenuButton="true"
+              :readonly="true"
+              elevation="1"
+            />
+            <ProductInputRow
+              v-else
+              :productForm="item"
+              :hideProductTypeInput="true"
+              :hideProductBarcode="false"
+            />
             <div v-if="showProductCodeSuggestion(item)" class="text-caption">
-              {{ $t('Common.SuggestedBarcode') }}
-              <a class="fake-link" role="link" tabindex="0" @click="handleClickProductCodeSuggestion(item)" @keydown.enter="handleClickProductCodeSuggestion(item)">
+              {{ $t("Common.SuggestedBarcode") }}
+              <a
+                class="fake-link"
+                role="link"
+                tabindex="0"
+                @click="handleClickProductCodeSuggestion(item)"
+                @keydown.enter="handleClickProductCodeSuggestion(item)"
+              >
                 {{ item.predicted_product_code }}
               </a>
             </div>
@@ -62,7 +127,11 @@
           <template v-else>
             <v-text-field
               v-model="item.price"
-              :class="(item.price && !itemHasInvalidDiscount(item)) ? 'outline-border-success' : 'outline-border-error'"
+              :class="
+                item.price && !itemHasInvalidDiscount(item)
+                  ? 'outline-border-success'
+                  : 'outline-border-error'
+              "
               density="compact"
               variant="outlined"
               type="text"
@@ -70,17 +139,29 @@
               :rules="priceRules"
               :suffix="itemPriceSuffix(item)"
               :hide-details="true"
-              @update:modelValue="newValue => item.price = replaceCommaWithDot(newValue)"
+              @update:modelValue="
+                (newValue) => (item.price = replaceCommaWithDot(newValue))
+              "
             />
-            <PriceDiscountChip v-if="itemHasDiscount(item)" class="mt-1" :price="item" />
+            <PriceDiscountChip
+              v-if="itemHasDiscount(item)"
+              class="mt-1"
+              :price="item"
+            />
           </template>
         </template>
         <template #[`item.receipt_quantity`]="{ item }">
-          <PriceQuantityPurchasedChip :priceQuantityPurchased="item.receipt_quantity" />
+          <PriceQuantityPurchasedChip
+            :priceQuantityPurchased="item.receipt_quantity"
+          />
         </template>
         <template #[`item.actions`]="{ item }">
           <v-row class="float-right">
-            <v-btn size="x-small" icon="mdi-pencil" @click="showEditProductDialog(item)" />
+            <v-btn
+              size="x-small"
+              icon="mdi-pencil"
+              @click="showEditProductDialog(item)"
+            />
             <v-btn size="x-small" icon="mdi-delete" @click="deleteItem(item)" />
           </v-row>
         </template>
@@ -92,8 +173,18 @@
     <v-card-actions>
       <v-row>
         <v-col cols="6">
-          <ProofReceiptPriceCountChip v-if="proof && items" class="mr-1" :uploadedCount="items.length" :totalCount="proof.receipt_price_count" />
-          <ProofReceiptPriceTotalChip v-if="proof && items" :uploadedCount="proofPriceListSum" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
+          <ProofReceiptPriceCountChip
+            v-if="proof && items"
+            class="mr-1"
+            :uploadedCount="items.length"
+            :totalCount="proof.receipt_price_count"
+          />
+          <ProofReceiptPriceTotalChip
+            v-if="proof && items"
+            :uploadedCount="proofPriceListSum"
+            :totalCount="proof.receipt_price_total"
+            :currency="proof.currency"
+          />
         </v-col>
         <v-spacer />
         <v-col>
@@ -103,7 +194,7 @@
             variant="flat"
             @click="addItem"
           >
-            {{ $t('ReceiptAssistant.AddNewItem') }}
+            {{ $t("ReceiptAssistant.AddNewItem") }}
           </v-btn>
         </v-col>
       </v-row>
@@ -126,132 +217,165 @@
     />
   </v-dialog>
 </template>
-  
+
 <script>
-import { defineAsyncComponent } from 'vue'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
-import price_utils from '../utils/price.js'
-import utils from '../utils.js'
+import { defineAsyncComponent } from "vue";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
+import price_utils from "../utils/price.js";
+import utils from "../utils.js";
 
 const NEW_ITEM = {
   type: constants.PRICE_TYPE_PRODUCT,
   product: null,
-  product_name: '',
-  product_code: '',
+  product_name: "",
+  product_code: "",
   category_tag: null,
   price: null,
   receipt_quantity: 1,
-}
+};
 
 export default {
   components: {
-    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
-    PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
-    PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
-    PriceDiscountChip: defineAsyncComponent(() => import('../components/PriceDiscountChip.vue')),
-    PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
-    ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
-    ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
-    ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
+    ProductCard: defineAsyncComponent(
+      () => import("../components/ProductCard.vue"),
+    ),
+    ProductInputRow: defineAsyncComponent(
+      () => import("../components/ProductInputRow.vue"),
+    ),
+    PriceCategoryDetailsRow: defineAsyncComponent(
+      () => import("../components/PriceCategoryDetailsRow.vue"),
+    ),
+    PricePriceRow: defineAsyncComponent(
+      () => import("../components/PricePriceRow.vue"),
+    ),
+    PriceDiscountChip: defineAsyncComponent(
+      () => import("../components/PriceDiscountChip.vue"),
+    ),
+    PriceQuantityPurchasedChip: defineAsyncComponent(
+      () => import("../components/PriceQuantityPurchasedChip.vue"),
+    ),
+    ProofReceiptPriceCountChip: defineAsyncComponent(
+      () => import("../components/ProofReceiptPriceCountChip.vue"),
+    ),
+    ProofReceiptPriceTotalChip: defineAsyncComponent(
+      () => import("../components/ProofReceiptPriceTotalChip.vue"),
+    ),
+    ContributionAssistantPriceFormCard: defineAsyncComponent(
+      () => import("../components/ContributionAssistantPriceFormCard.vue"),
+    ),
   },
   props: {
     proof: {
       type: Object,
-      default: null
+      default: null,
     },
     receiptItems: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     proofPriceExistingList: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
-  emits: ['receiptItemsUpdated'],
+  emits: ["receiptItemsUpdated"],
   data() {
     return {
       items: [],
       headers: [
-        { title: this.$t('Common.Status'), key: 'status' },
-        { title: this.$t('Common.Text'), key: 'product_name', maxWidth: '150px' },
-        { title: this.$t('Common.Product'), key: 'product' },
-        { title: this.$t('Common.Price'), key: 'price', minWidth: '150px' },
-        { title: this.$t('Common.Quantity'), key: 'receipt_quantity' },
-        { title: this.$t('Common.Actions'), key: 'actions' },
+        { title: this.$t("Common.Status"), key: "status" },
+        {
+          title: this.$t("Common.Text"),
+          key: "product_name",
+          maxWidth: "150px",
+        },
+        { title: this.$t("Common.Product"), key: "product" },
+        { title: this.$t("Common.Price"), key: "price", minWidth: "150px" },
+        { title: this.$t("Common.Quantity"), key: "receipt_quantity" },
+        { title: this.$t("Common.Actions"), key: "actions" },
       ],
-      tablePageLimit: -1,  // all items
+      tablePageLimit: -1, // all items
       showInfoDetails: true,
       editProductDialog: false,
       editProductItem: null,
-      rules: [
-        value => !!value || '',
-      ],
-    }
+      rules: [(value) => !!value || ""],
+    };
   },
   computed: {
     priceRules() {
       return [
-        value => !!value && !!value.toString().trim() || this.$t('PriceRules.AmountRequired'),
-        value => !value.toString().trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
-        value => !isNaN(value) || this.$t('PriceRules.Number'),
-        value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
-        value => !value.toString().match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
-        value => !!value && !!this.proof.currency || this.$t('Common.CurrencyMissing'),
-      ]
+        (value) =>
+          (!!value && !!value.toString().trim()) ||
+          this.$t("PriceRules.AmountRequired"),
+        (value) =>
+          !value.toString().trim().match(/ /) || this.$t("PriceRules.NoSpaces"),
+        (value) => !isNaN(value) || this.$t("PriceRules.Number"),
+        (value) => Number(value) >= 0 || this.$t("PriceRules.Positive"),
+        (value) =>
+          !value.toString().match(/\.\d{3}/) ||
+          this.$t("PriceRules.TwoDecimals"),
+        (value) =>
+          (!!value && !!this.proof.currency) ||
+          this.$t("Common.CurrencyMissing"),
+      ];
     },
     proofPriceListSum() {
-      return price_utils.priceSum(this.items.map(item => {
-        return {
-          price: item.price,
-          receipt_quantity: item.receipt_quantity
-        }
-      }))
+      return price_utils.priceSum(
+        this.items.map((item) => {
+          return {
+            price: item.price,
+            receipt_quantity: item.receipt_quantity,
+          };
+        }),
+      );
     },
   },
   watch: {
     items: {
       handler(newReceiptItems) {
-        this.$emit('receiptItemsUpdated', newReceiptItems)
+        this.$emit("receiptItemsUpdated", newReceiptItems);
       },
-      deep: true
+      deep: true,
     },
     proof() {
-      this.init()
+      this.init();
     },
     proofPriceExistingList() {
-      this.init()
-    }
-  }, 
+      this.init();
+    },
+  },
   mounted() {
-    this.init()
+    this.init();
   },
   methods: {
     init() {
-      if (!this.receiptItems?.length) return
+      if (!this.receiptItems?.length) return;
       this.items = this.receiptItems.map((item) => {
         if (item.price_id) {
-          item.existingPrice = this.proofPriceExistingList.find(price => price.id === item.price_id)
-          Object.assign(item, item.existingPrice)
+          item.existingPrice = this.proofPriceExistingList.find(
+            (price) => price.id === item.price_id,
+          );
+          Object.assign(item, item.existingPrice);
         } else {
-          Object.assign(item, this.formatReceiptItem(item))
+          Object.assign(item, this.formatReceiptItem(item));
         }
-        return item
-      })
+        return item;
+      });
     },
     formatReceiptItem(item) {
       /// Format the AI prediction into a ReceiptItem ready to be edited/validated
-      const predictedData = item.predicted_data
+      const predictedData = item.predicted_data;
 
       // for backward compatibility with schema version 1.0
       if (item.schema_version === "1.0") {
-        const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
+        const categoryPredicted = ![null, "", "unknown", "other"].includes(
+          item.predicted_data.product,
+        );
         return {
           type: constants.PRICE_TYPE_PRODUCT,
           product: null,
-          product_code: '',
+          product_code: "",
           receipt_quantity: 1,
           manuallyAdded: false,
           product_name: predictedData.product_name,
@@ -261,29 +385,32 @@ export default {
           predicted_product_code: predictedData.predicted_product_code || null,
           // extra fields
           currency: this.proof.currency,
-        }
+        };
       } else {
         // assume schema version 2.0 and above
-        let pricePer = predictedData.price_per
-        if (predictedData.type === constants.PRICE_TYPE_CATEGORY && pricePer == 'LITER') {
+        let pricePer = predictedData.price_per;
+        if (
+          predictedData.type === constants.PRICE_TYPE_CATEGORY &&
+          pricePer == "LITER"
+        ) {
           // On Open Prices, we use KILOGRAM for category prices, even for liquids
-          pricePer = 'KILOGRAM'
+          pricePer = "KILOGRAM";
         }
 
-        let receipt_quantity = predictedData.quantity
+        let receipt_quantity = predictedData.quantity;
         if (receipt_quantity === undefined || receipt_quantity === null) {
-          receipt_quantity = 1
+          receipt_quantity = 1;
         }
-        
+
         // is predictedData.category_tag is other, set it to null (let the user choose)
-        let category_tag = predictedData.category_tag
-        if (category_tag === 'other') {
-          category_tag = null
+        let category_tag = predictedData.category_tag;
+        if (category_tag === "other") {
+          category_tag = null;
         }
         return {
           type: predictedData.type,
           product: null,
-          product_code: '',
+          product_code: "",
           manuallyAdded: false,
           product_name: predictedData.product_name,
           category_tag: category_tag,
@@ -296,83 +423,91 @@ export default {
           discount_type: predictedData.discount_type || null,
           // extra fields
           currency: this.proof.currency,
-        }
+        };
       }
     },
     setTableRowClass(item) {
       // grey out existing prices
       if (item.item.existingPrice) {
-        return { class: 'text-disabled' }
+        return { class: "text-disabled" };
       }
-      return { class: '' }
+      return { class: "" };
     },
     replaceCommaWithDot(input) {
-      return utils.replaceCommaWithDot(input)
+      return utils.replaceCommaWithDot(input);
     },
     itemIsCategory(item) {
-      return item.type === constants.PRICE_TYPE_CATEGORY
+      return item.type === constants.PRICE_TYPE_CATEGORY;
     },
     itemPriceSuffix(item) {
-      let suffix = this.proof.currency
+      let suffix = this.proof.currency;
       if (this.itemIsCategory(item) && item.category_tag) {
-        suffix += '/' + (item.price_per === 'UNIT' ? 'U' : 'KG')
+        suffix += "/" + (item.price_per === "UNIT" ? "U" : "KG");
       }
-      return suffix
+      return suffix;
     },
     itemHasDiscount(item) {
-      return item.price_is_discounted
+      return item.price_is_discounted;
     },
     itemHasInvalidDiscount(item) {
-      return this.itemHasDiscount(item) && item.price_without_discount && (Number(item.price) >= Number(item.price_without_discount))
+      return (
+        this.itemHasDiscount(item) &&
+        item.price_without_discount &&
+        Number(item.price) >= Number(item.price_without_discount)
+      );
     },
     findProduct(item) {
       openPricesApi
         .getProductByCode(item.product_code)
         .catch((error) => {
-          if (error.status === 404) return {'code': item.product_code, 'price_count': 0}  // product not in Open Prices (yet)
-          throw error
+          if (error.status === 404)
+            return { code: item.product_code, price_count: 0 }; // product not in Open Prices (yet)
+          throw error;
         })
         .then((product) => {
-          item.product = product
+          item.product = product;
         })
         .catch((error) => {
-          console.log(error)
-          item.product = null
-        })
+          console.log(error);
+          item.product = null;
+        });
     },
     deleteItem(item) {
-      this.items.splice(this.items.indexOf(item), 1)
+      this.items.splice(this.items.indexOf(item), 1);
     },
     addItem() {
       this.items.push({
         ...NEW_ITEM,
-        manuallyAdded: true
-      })
+        manuallyAdded: true,
+      });
     },
     showEditProductDialog(item) {
-      this.editProductDialog = true
+      this.editProductDialog = true;
       this.editProductItem = {
         index: this.items.indexOf(item),
         ...item,
         currency: this.proof.currency,
         proof: this.proof,
         proofImage: null,
-        croppedImage: null
-      }
+        croppedImage: null,
+      };
     },
     confirmProduct(product) {
-      this.editProductDialog = false
-      Object.assign(this.items[this.editProductItem.index], product)
+      this.editProductDialog = false;
+      Object.assign(this.items[this.editProductItem.index], product);
     },
     showProductCodeSuggestion(item) {
-      return item.predicted_product_code && !(item.existingPrice || item.product_code)
+      return (
+        item.predicted_product_code &&
+        !(item.existingPrice || item.product_code)
+      );
     },
     handleClickProductCodeSuggestion(item) {
-      item.product_code = item.predicted_product_code
-      this.findProduct(item)
-    }
-  }
-}
+      item.product_code = item.predicted_product_code;
+      this.findProduct(item);
+    },
+  },
+};
 </script>
 
 <style>

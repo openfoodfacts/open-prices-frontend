@@ -9,22 +9,22 @@
 </template>
 
 <script>
-import date_utils from '../utils/date.js'
+import date_utils from "../utils/date.js";
 
 export default {
   props: {
     dateTime: {
       type: String,
-      default: null
+      default: null,
     },
   },
   methods: {
     getDateTimeFormatted(dateTimeString) {
-      return date_utils.prettyDateTime(dateTimeString)
+      return date_utils.prettyDateTime(dateTimeString);
     },
     getRelativeDateTimeFormatted(dateTimeString) {
-      return date_utils.prettyRelativeDateTime(dateTimeString, 'shortest')
+      return date_utils.prettyRelativeDateTime(dateTimeString, "shortest");
     },
-  }
-}
+  },
+};
 </script>

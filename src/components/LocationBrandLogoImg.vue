@@ -11,52 +11,52 @@
     :src="locationImageDefault"
     :width="width"
     :height="height"
-    style="filter:invert(.9);"
+    style="filter: invert(0.9)"
   />
 </template>
 
 <script>
-import constants from '../constants'
+import constants from "../constants";
 
 export default {
   props: {
     logo: {
       type: String,
-      default: null
+      default: null,
     },
     width: {
       type: [String, Number],
-      default: '100px'
+      default: "100px",
     },
     height: {
       type: [String, Number],
-      default: undefined
-    }
+      default: undefined,
+    },
   },
   data() {
     return {
-      trySvgInsteadOfPng: false,  // default to png, and try svg if png fails
+      trySvgInsteadOfPng: false, // default to png, and try svg if png fails
       fallbackToDefault: false,
       locationImageDefault: constants.LOCATION_IMAGE_DEFAULT_URL,
-    }
+    };
   },
   computed: {
     logoDisplayed() {
-      return this.logo && !this.fallbackToDefault
+      return this.logo && !this.fallbackToDefault;
     },
     currentSrc() {
-      if (!this.logo) return null
-      return this.trySvgInsteadOfPng ? `${this.logo}.svg` : `${this.logo}.png`
-    }
+      if (!this.logo) return null;
+      return this.trySvgInsteadOfPng ? `${this.logo}.svg` : `${this.logo}.png`;
+    },
   },
   methods: {
     onError() {
       if (!this.trySvgInsteadOfPng && this.logo) {
-        this.trySvgInsteadOfPng = true
+        this.trySvgInsteadOfPng = true;
       } else {
-        this.fallbackToDefault = true
+        this.fallbackToDefault = true;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>

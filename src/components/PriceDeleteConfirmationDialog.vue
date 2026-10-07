@@ -10,7 +10,14 @@
       <v-card-text>
         <v-row>
           <v-col cols="12">
-            <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="false" :hideActionMenuButton="true" :readonly="true" />
+            <PriceCard
+              v-if="price"
+              :price="price"
+              :product="price.product"
+              :hidePriceFooterRow="false"
+              :hideActionMenuButton="true"
+              :readonly="true"
+            />
           </v-col>
         </v-row>
         <!-- moderator-only alerts -->
@@ -28,7 +35,7 @@
         <v-row>
           <v-col cols="12">
             <p>
-              {{ $t('PriceDelete.Confirmation') }}
+              {{ $t("PriceDelete.Confirmation") }}
             </p>
           </v-col>
         </v-row>
@@ -46,7 +53,7 @@
           :loading="loading"
           @click="deletePrice"
         >
-          {{ $t('PriceDelete.Delete') }}
+          {{ $t("PriceDelete.Delete") }}
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -54,67 +61,72 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openPricesApi from '../services/openPricesApi'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openPricesApi from "../services/openPricesApi";
 
 export default {
   components: {
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    ModerationAlert: defineAsyncComponent(() => import('../components/ModerationAlert.vue')),
+    PriceCard: defineAsyncComponent(
+      () => import("../components/PriceCard.vue"),
+    ),
+    ModerationAlert: defineAsyncComponent(
+      () => import("../components/ModerationAlert.vue"),
+    ),
   },
   props: {
     price: {
       type: Object,
-      default: null
+      default: null,
     },
   },
-  emits: ['delete', 'close'],
+  emits: ["delete", "close"],
   data() {
     return {
       loading: false,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     username() {
-      return this.appStore.user.username
+      return this.appStore.user.username;
     },
     userIsPriceOwner() {
-      return this.username && this.price && this.price.owner === this.username
+      return this.username && this.price && this.price.owner === this.username;
     },
     userIsModerator() {
-      return this.username && this.appStore.user.is_moderator
+      return this.username && this.appStore.user.is_moderator;
     },
     dialogHeight() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
     dialogWidth() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
   },
   methods: {
     deletePrice() {
-      this.loading = true
+      this.loading = true;
       openPricesApi
         .deletePrice(this.price.id)
-        .then((response) => {  // eslint-disable-line no-unused-vars
+        // eslint-disable-next-line no-unused-vars
+        .then((response) => {
           // if response.status == 204
-          this.removePriceCard()
-          this.$emit('delete')
-          this.close()
+          this.removePriceCard();
+          this.$emit("delete");
+          this.close();
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     removePriceCard() {
-      document.getElementById(`price_${this.price.id}`).remove()
+      document.getElementById(`price_${this.price.id}`).remove();
     },
     close() {
-      this.$emit('close')
+      this.$emit("close");
     },
-  }
-}
+  },
+};
 </script>

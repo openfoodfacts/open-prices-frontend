@@ -1,47 +1,67 @@
 <template>
-  <a v-if="display === 'link'" :href="getLocationOSMUrl" target="_blank" rel="noopener noreferrer">
+  <a
+    v-if="display === 'link'"
+    :href="getLocationOSMUrl"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     {{ OSM_NAME }}
   </a>
-  <v-btn v-else-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl" target="_blank" rel="noopener noreferrer">
+  <v-btn
+    v-else-if="display === 'button'"
+    size="small"
+    append-icon="mdi-open-in-new"
+    :href="getLocationOSMUrl"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     {{ OSM_NAME }}
   </v-btn>
-  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="LOCATION_TYPE_OSM_ICON" append-icon="mdi-open-in-new" :href="getLocationOSMUrl" target="_blank" rel="noopener noreferrer">
+  <v-list-item
+    v-else-if="display === 'list-item'"
+    :slim="true"
+    :prepend-icon="LOCATION_TYPE_OSM_ICON"
+    append-icon="mdi-open-in-new"
+    :href="getLocationOSMUrl"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     {{ OSM_NAME }}
   </v-list-item>
 </template>
 
 <script>
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import constants from '../constants'
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import constants from "../constants";
 
 export default {
   props: {
     location: {
       type: Object,
-      default: null
+      default: null,
     },
     display: {
       type: String,
-      default: 'link',
-      examples: ['link', 'button', 'list-item']
+      default: "link",
+      examples: ["link", "button", "list-item"],
     },
   },
   data() {
     return {
       OSM_NAME: constants.OSM_NAME,
       OSM_URL: constants.OSM_URL,
-      LOCATION_TYPE_OSM_ICON: constants.LOCATION_TYPE_OSM_ICON
-    }
+      LOCATION_TYPE_OSM_ICON: constants.LOCATION_TYPE_OSM_ICON,
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     getLocationOSMUrl() {
       if (this.location) {
-        return `https://www.openstreetmap.org/${this.location.osm_type.toLowerCase()}/${this.location.osm_id}`
+        return `https://www.openstreetmap.org/${this.location.osm_type.toLowerCase()}/${this.location.osm_id}`;
       }
-      return this.OSM_URL
-    }
+      return this.OSM_URL;
+    },
   },
-}
+};
 </script>

@@ -1,8 +1,5 @@
 <template>
-  <v-card
-    v-if="step !== 3"
-    height="100%"
-  >
+  <v-card v-if="step !== 3" height="100%">
     <template v-if="!hideHeader" #title>
       {{ cardTitle }}
     </template>
@@ -24,18 +21,49 @@
             </template>
           </v-col>
         </v-row>
-        <ProofTypeInputRow :class="showTopAlertOrBanner ? 'mt-0' : ''" :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
-        <LocationInputRow class="mt-0" :locationForm="proofForm" @location="locationObject = $event" />
-        <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :hideProofImagePreview="receiptDraftProof !== null" :multiple="multiple" @proofList="proofImageList = $event" @anonymizeReceipt="showReceiptAnonymizeDialog = true" />
+        <ProofTypeInputRow
+          :class="showTopAlertOrBanner ? 'mt-0' : ''"
+          :proofTypeForm="proofForm"
+          :typePriceTagOnly="typePriceTagOnly"
+          :typeReceiptOnly="typeReceiptOnly"
+        />
+        <LocationInputRow
+          class="mt-0"
+          :locationForm="proofForm"
+          @location="locationObject = $event"
+        />
+        <ProofImageInputRow
+          class="mt-0"
+          :proofImageForm="proofForm"
+          :typePriceTagOnly="typePriceTagOnly"
+          :typeReceiptOnly="typeReceiptOnly"
+          :hideRecentProofChoice="hideRecentProofChoice"
+          :hideProofImagePreview="receiptDraftProof !== null"
+          :multiple="multiple"
+          @proofList="proofImageList = $event"
+          @anonymizeReceipt="showReceiptAnonymizeDialog = true"
+        />
         <v-row v-if="receiptDraftProof" class="mt-0">
           <v-col cols="6">
             <v-card class="d-flex flex-column" height="100%">
               <v-card-text class="flex-grow-1 pa-2">
-                <v-img :src="receiptDraftProof.imagePreview" max-height="200px" />
+                <v-img
+                  :src="receiptDraftProof.imagePreview"
+                  max-height="200px"
+                />
               </v-card-text>
               <v-divider />
               <v-card-actions>
-                <v-btn v-if="!$vuetify.display.smAndUp" color="error" variant="outlined" icon="mdi-delete" size="small" density="comfortable" :aria-label="$t('Common.Delete')" @click="removeImage(index)" />
+                <v-btn
+                  v-if="!$vuetify.display.smAndUp"
+                  color="error"
+                  variant="outlined"
+                  icon="mdi-delete"
+                  size="small"
+                  density="comfortable"
+                  :aria-label="$t('Common.Delete')"
+                  @click="removeImage(index)"
+                />
                 <v-btn
                   v-else
                   color="error"
@@ -44,25 +72,41 @@
                   size="small"
                   @click="deleteReceiptDraftProof"
                 >
-                  {{ $t('Common.Delete') }}
+                  {{ $t("Common.Delete") }}
                 </v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
         </v-row>
-        <ProofMetadataInputRow class="mt-0" :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
+        <ProofMetadataInputRow
+          class="mt-0"
+          :proofMetadataForm="proofForm"
+          :proofType="proofForm.type"
+          :multiple="multiple"
+          :assistedByAI="assistedByAI"
+          :locationType="locationObject?.type"
+        />
       </v-sheet>
       <v-sheet v-else-if="step === 2">
         <v-progress-linear
           v-model="proofObjectList.length"
           :max="proofImageList.length"
-          :color="proofImageList.length === proofObjectList.length ? 'success' : 'primary'"
+          :color="
+            proofImageList.length === proofObjectList.length
+              ? 'success'
+              : 'primary'
+          "
           height="25"
           :indeterminate="proofObjectList.length ? false : true"
           :striped="proofImageList.length !== proofObjectList.length"
           rounded
         >
-          <strong>{{ $t('Common.ProofUploadProgress', { numberOfProofsUploaded: proofObjectList.length, totalNumberOfProofs: proofImageList.length }) }}</strong>
+          <strong>{{
+            $t("Common.ProofUploadProgress", {
+              numberOfProofsUploaded: proofObjectList.length,
+              totalNumberOfProofs: proofImageList.length,
+            })
+          }}</strong>
         </v-progress-linear>
         <v-alert
           class="mt-4"
@@ -70,7 +114,7 @@
           variant="outlined"
           density="compact"
         >
-          {{ $t('ProofAdd.ProofUploadProgressWarning') }}
+          {{ $t("ProofAdd.ProofUploadProgressWarning") }}
         </v-alert>
       </v-sheet>
     </v-card-text>
@@ -86,257 +130,322 @@
         :disabled="!proofFormFilled"
         @click="uploadProofList"
       >
-        <span v-if="multiple && proofImageList.length">{{ $t('Common.UploadMultipleProofs', { count: proofImageList.length }) }}</span>
-        <span v-else>{{ $t('Common.Upload') }}</span>
+        <span v-if="multiple && proofImageList.length">{{
+          $t("Common.UploadMultipleProofs", { count: proofImageList.length })
+        }}</span>
+        <span v-else>{{ $t("Common.Upload") }}</span>
       </v-btn>
     </v-card-actions>
   </v-card>
 
   <v-sheet v-else>
-    <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
+    <ProofCard
+      v-for="(proofObject, index) in proofObjectList"
+      :key="index"
+      mode="Uploaded"
+      :proof="proofObject"
+      :hideActionMenuButton="true"
+      :showImageThumb="proofCardShowImageThumb"
+      :readonly="true"
+    />
   </v-sheet>
 
-  <ReceiptAnonymizerDialog v-if="showReceiptAnonymizeDialog" v-model="showReceiptAnonymizeDialog" :proofImage="proofImageList[0]" @done="receiptAnonymizeDone" />
-  <v-snackbar
-    v-model="proofDateSuccessMessage"
-    color="primary"
-    :timeout="2000"
-  >
-    {{ $t('AddPriceSingle.PriceDetails.ProofDateChanged') }}
+  <ReceiptAnonymizerDialog
+    v-if="showReceiptAnonymizeDialog"
+    v-model="showReceiptAnonymizeDialog"
+    :proofImage="proofImageList[0]"
+    @done="receiptAnonymizeDone"
+  />
+  <v-snackbar v-model="proofDateSuccessMessage" color="primary" :timeout="2000">
+    {{ $t("AddPriceSingle.PriceDetails.ProofDateChanged") }}
   </v-snackbar>
   <v-snackbar
     v-model="proofSelectedSuccessMessage"
     color="success"
     :timeout="2000"
   >
-    {{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}
+    {{ $t("AddPriceSingle.PriceDetails.ProofSelected") }}
   </v-snackbar>
 </template>
 
 <script>
-import Compressor from 'compressorjs'
-import ExifReader from 'exifreader'
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
-import date_utils from '../utils/date.js'
-import proof_utils from '../utils/proof.js'
+import Compressor from "compressorjs";
+import ExifReader from "exifreader";
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
+import date_utils from "../utils/date.js";
+import proof_utils from "../utils/proof.js";
 
 Compressor.setDefaults({
-  checkOrientation: true,  // default
+  checkOrientation: true, // default
   retainExif: true,
   // quality: 0.6,
-  mimeType: 'image/webp',
+  mimeType: "image/webp",
   // maxWidth: 3000
-})
+});
 
 export default {
   components: {
-    ProofPriceTagAddMultiplePromoBanner: defineAsyncComponent(() => import('../components/ProofPriceTagAddMultiplePromoBanner.vue')),
-    ProofPriceTagMultipleAlert: defineAsyncComponent(() => import('../components/ProofPriceTagMultipleAlert.vue')),
-    ReceiptAssistantPromoBanner: defineAsyncComponent(() => import('../components/ReceiptAssistantPromoBanner.vue')),
-    ProofReceiptWarningAlert: defineAsyncComponent(() => import('../components/ProofReceiptWarningAlert.vue')),
-    ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
-    LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
-    ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
-    ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
-    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
-    ReceiptAnonymizerDialog: defineAsyncComponent(() => import('../components/ReceiptAnonymizerDialog.vue')),
+    ProofPriceTagAddMultiplePromoBanner: defineAsyncComponent(
+      () => import("../components/ProofPriceTagAddMultiplePromoBanner.vue"),
+    ),
+    ProofPriceTagMultipleAlert: defineAsyncComponent(
+      () => import("../components/ProofPriceTagMultipleAlert.vue"),
+    ),
+    ReceiptAssistantPromoBanner: defineAsyncComponent(
+      () => import("../components/ReceiptAssistantPromoBanner.vue"),
+    ),
+    ProofReceiptWarningAlert: defineAsyncComponent(
+      () => import("../components/ProofReceiptWarningAlert.vue"),
+    ),
+    ProofTypeInputRow: defineAsyncComponent(
+      () => import("../components/ProofTypeInputRow.vue"),
+    ),
+    LocationInputRow: defineAsyncComponent(
+      () => import("../components/LocationInputRow.vue"),
+    ),
+    ProofImageInputRow: defineAsyncComponent(
+      () => import("../components/ProofImageInputRow.vue"),
+    ),
+    ProofMetadataInputRow: defineAsyncComponent(
+      () => import("../components/ProofMetadataInputRow.vue"),
+    ),
+    ProofCard: defineAsyncComponent(
+      () => import("../components/ProofCard.vue"),
+    ),
+    ReceiptAnonymizerDialog: defineAsyncComponent(
+      () => import("../components/ReceiptAnonymizerDialog.vue"),
+    ),
   },
   props: {
     hideHeader: {
       type: Boolean,
-      default: false
+      default: false,
     },
     typePriceTagOnly: {
       type: Boolean,
-      default: false
+      default: false,
     },
     typeReceiptOnly: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideRecentProofChoice: {
       type: Boolean,
-      default: false
+      default: false,
     },
     multiple: {
       type: Boolean,
-      default: false
+      default: false,
     },
     assistedByAI: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
-  emits: ['proof', 'done'],
+  emits: ["proof", "done"],
   data() {
     return {
-      step: 1,  // 1: form; 2: uploading; 3: done
+      step: 1, // 1: form; 2: uploading; 3: done
       // form
       proofForm: {
-        type: null,  // see initProofForm
+        type: null, // see initProofForm
         location_id: null,
         location_osm_id: null,
-        location_osm_type: '',
+        location_osm_type: "",
         date: date_utils.currentDate(),
-        currency: null,  // see initProofForm
+        currency: null, // see initProofForm
         receipt_price_count: null,
         receipt_price_total: null,
         receipt_online_delivery_costs: null,
-        owner_consumption: true,  // will be ignored if type is not receipt
+        owner_consumption: true, // will be ignored if type is not receipt
         owner_comment: null,
-        ready_for_price_tag_validation: null,  // see initProofForm
-        proof_id: null
+        ready_for_price_tag_validation: null, // see initProofForm
+        proof_id: null,
       },
       // data
-      locationObject: null,  // location selected
+      locationObject: null, // location selected
       proofDateSuccessMessage: false,
       proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
-      proofImageList: [],  // images to upload
-      proofObjectList: [],  // images uploaded
+      proofImageList: [], // images to upload
+      proofObjectList: [], // images uploaded
       loading: false,
       receiptDraftProof: null,
       showReceiptAnonymizeDialog: false,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     cardTitle() {
-      return this.multiple ? this.$t('Common.Proofs') : this.$t('Common.Proof')
+      return this.multiple ? this.$t("Common.Proofs") : this.$t("Common.Proof");
     },
     cardPrependIcon() {
-      return this.multiple ? 'mdi-image-multiple' : 'mdi-image'
+      return this.multiple ? "mdi-image-multiple" : "mdi-image";
     },
     proofTypeFormFilled() {
-      return !!this.proofForm.type
+      return !!this.proofForm.type;
     },
     proofIsTypePriceTag() {
-      return this.proofTypeFormFilled && (this.proofForm.type === constants.PROOF_TYPE_PRICE_TAG)
+      return (
+        this.proofTypeFormFilled &&
+        this.proofForm.type === constants.PROOF_TYPE_PRICE_TAG
+      );
     },
     proofIsTypeReceipt() {
-      return this.proofTypeFormFilled && (this.proofForm.type === constants.PROOF_TYPE_RECEIPT)
+      return (
+        this.proofTypeFormFilled &&
+        this.proofForm.type === constants.PROOF_TYPE_RECEIPT
+      );
     },
     showTopAlertOrBanner() {
-      return this.proofIsTypePriceTag || this.proofIsTypeReceipt
+      return this.proofIsTypePriceTag || this.proofIsTypeReceipt;
     },
     proofImageFormFilled() {
-      return !!this.proofImageList.length
+      return !!this.proofImageList.length;
     },
     proofLocationFormFilled() {
-      let keysOSM = ['location_osm_id', 'location_osm_type']
-      let keysONLINE = ['location_id']
-      return Object.keys(this.proofForm).filter(k => keysOSM.includes(k)).every(k => !!this.proofForm[k]) || Object.keys(this.proofForm).filter(k => keysONLINE.includes(k)).every(k => !!this.proofForm[k])
+      let keysOSM = ["location_osm_id", "location_osm_type"];
+      let keysONLINE = ["location_id"];
+      return (
+        Object.keys(this.proofForm)
+          .filter((k) => keysOSM.includes(k))
+          .every((k) => !!this.proofForm[k]) ||
+        Object.keys(this.proofForm)
+          .filter((k) => keysONLINE.includes(k))
+          .every((k) => !!this.proofForm[k])
+      );
     },
     proofMetadataFormFilled() {
-      let keys = ['date', 'currency']
-      return Object.keys(this.proofForm).filter(k => keys.includes(k)).every(k => !!this.proofForm[k])
+      let keys = ["date", "currency"];
+      return Object.keys(this.proofForm)
+        .filter((k) => keys.includes(k))
+        .every((k) => !!this.proofForm[k]);
     },
     proofFormFilled() {
-      return this.proofTypeFormFilled && this.proofImageFormFilled && this.proofLocationFormFilled && this.proofMetadataFormFilled
+      return (
+        this.proofTypeFormFilled &&
+        this.proofImageFormFilled &&
+        this.proofLocationFormFilled &&
+        this.proofMetadataFormFilled
+      );
     },
     proofCardShowImageThumb() {
-      return this.multiple ? true : false
-    }
+      return this.multiple ? true : false;
+    },
   },
   watch: {
-    proofImageList(newProofImageList, oldProofImageList) {  // eslint-disable-line no-unused-vars
-      this.handleProofImageList()
+    // eslint-disable-next-line no-unused-vars
+    proofImageList(newProofImageList, oldProofImageList) {
+      this.handleProofImageList();
     },
-    proofObjectList(newProofObjectList, oldProofObjectList) {  // eslint-disable-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
+    proofObjectList(newProofObjectList, oldProofObjectList) {
       // proof uploaded
-      this.$emit('proof', newProofObjectList[0])
-      this.proofForm.proof_id = newProofObjectList[0].id
-      this.proofForm.location_id = newProofObjectList[0].location_id
+      this.$emit("proof", newProofObjectList[0]);
+      this.proofForm.proof_id = newProofObjectList[0].id;
+      this.proofForm.location_id = newProofObjectList[0].location_id;
       // all proofs uploaded
       if (this.proofObjectList.length === this.proofImageList.length) {
-        this.step = 3
-        this.$emit('done', this.proofObjectList.length)
+        this.step = 3;
+        this.$emit("done", this.proofObjectList.length);
       }
     },
-    typePriceTagOnly(newTypePriceTagOnly, oldTypePriceTagOnly) {  // eslint-disable-line no-unused-vars
-      this.initProofForm()
+    // eslint-disable-next-line no-unused-vars
+    typePriceTagOnly(newTypePriceTagOnly, oldTypePriceTagOnly) {
+      this.initProofForm();
     },
-    typeReceiptOnly(newTypeReceiptOnly, oldTypeReceiptOnly) {  // eslint-disable-line no-unused-vars
-      this.initProofForm()
-    }
+    // eslint-disable-next-line no-unused-vars
+    typeReceiptOnly(newTypeReceiptOnly, oldTypeReceiptOnly) {
+      this.initProofForm();
+    },
   },
   mounted() {
-    this.initProofForm()
+    this.initProofForm();
   },
   methods: {
     initProofForm() {
       if (this.typePriceTagOnly) {
-        this.proofForm.type = constants.PROOF_TYPE_PRICE_TAG
+        this.proofForm.type = constants.PROOF_TYPE_PRICE_TAG;
         if (this.multiple) {
-          this.proofForm.ready_for_price_tag_validation = true
+          this.proofForm.ready_for_price_tag_validation = true;
         }
       }
       if (this.typeReceiptOnly) {
-        this.proofForm.type = constants.PROOF_TYPE_RECEIPT
+        this.proofForm.type = constants.PROOF_TYPE_RECEIPT;
       }
-      this.proofForm.currency = this.appStore.getUserLastCurrencyUsed
+      this.proofForm.currency = this.appStore.getUserLastCurrencyUsed;
     },
     handleProofImageList() {
       if (this.proofImageList.length === 0) {
         // The list was fully cleared, nothing to do
-        return
+        return;
       }
       // can be an existing proof, or a file
       // existing proof: update proofForm + set proofObject
       if (this.proofImageList[0].id) {
         // update proofForm
-        this.proofForm.type = this.proofImageList[0].type
-        this.proofForm.proof_id = this.proofImageList[0].id
+        this.proofForm.type = this.proofImageList[0].type;
+        this.proofForm.proof_id = this.proofImageList[0].id;
         if (this.proofImageList[0].location) {
-          this.proofForm.location_id = this.proofImageList[0].location.id
-          this.proofForm.location_osm_id = (this.proofImageList[0].location.type === constants.LOCATION_TYPE_OSM) ? this.proofImageList[0].location_osm_id : null
-          this.proofForm.location_osm_type = (this.proofImageList[0].location.type === constants.LOCATION_TYPE_OSM) ? this.proofImageList[0].location_osm_type : ''
+          this.proofForm.location_id = this.proofImageList[0].location.id;
+          this.proofForm.location_osm_id =
+            this.proofImageList[0].location.type === constants.LOCATION_TYPE_OSM
+              ? this.proofImageList[0].location_osm_id
+              : null;
+          this.proofForm.location_osm_type =
+            this.proofImageList[0].location.type === constants.LOCATION_TYPE_OSM
+              ? this.proofImageList[0].location_osm_type
+              : "";
         }
         if (this.proofImageList[0].date) {
-          this.proofForm.date = this.proofImageList[0].date
+          this.proofForm.date = this.proofImageList[0].date;
         }
         if (this.proofImageList[0].currency) {
-          this.proofForm.currency = this.proofImageList[0].currency
+          this.proofForm.currency = this.proofImageList[0].currency;
         }
         // set proofObject
-        this.proofSelectedSuccessMessage = true
-        this.proofObjectList = [this.proofImageList[0]]
+        this.proofSelectedSuccessMessage = true;
+        this.proofObjectList = [this.proofImageList[0]];
       }
       // new proof: extract exif data from file
       else {
         ExifReader.load(this.proofImageList[0]).then((tags) => {
-          if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
+          if (
+            tags["DateTimeOriginal"] &&
+            tags["DateTimeOriginal"].description
+          ) {
             // exif DateTimeOriginal format: '2024:01:31 20:23:52'
-            const imageDateString = tags['DateTimeOriginal'].description.substring(0, 10).replaceAll(':', '-')
+            const imageDateString = tags["DateTimeOriginal"].description
+              .substring(0, 10)
+              .replaceAll(":", "-");
             if (imageDateString !== this.proofForm.date) {
-              this.proofForm.date = imageDateString
-              this.proofDateSuccessMessage = true
+              this.proofForm.date = imageDateString;
+              this.proofDateSuccessMessage = true;
             }
           }
-        })
+        });
       }
     },
     compressProof(proofImage) {
       return new Promise((resolve, reject) => {
         new Compressor(proofImage, {
           success: resolve,
-          error: reject
-        })
-      })
-      .catch((error) => {
-        alert('Error: compression')
-        console.log(JSON.stringify(error))
-      })
+          error: reject,
+        });
+      }).catch((error) => {
+        alert("Error: compression");
+        console.log(JSON.stringify(error));
+      });
     },
     uploadProofList() {
-      this.step = 2
+      this.step = 2;
       if (this.receiptDraftProof) {
-        this.finalizeDraftProof(this.receiptDraftProof)
-        return
+        this.finalizeDraftProof(this.receiptDraftProof);
+        return;
       }
       // chain uploads sequentially
       this.proofImageList.reduce((promise, proofImage) => {
@@ -344,61 +453,63 @@ export default {
           this.uploadProof(proofImage)
             .then((data) => {
               if (data.id) {
-                this.proofObjectList = this.proofObjectList.concat(data)
+                this.proofObjectList = this.proofObjectList.concat(data);
               }
             })
             .catch((error) => {
-              console.log(JSON.stringify(error))
-            })
-        )
-      }, Promise.resolve())
+              console.log(JSON.stringify(error));
+            }),
+        );
+      }, Promise.resolve());
     },
     uploadProof(proofImage) {
-      this.loading = true
-      return new Promise((resolve, reject) => {  // eslint-disable-line no-unused-vars
-        this.compressProof(proofImage)
-          .then((proofImageCompressed) => {
-            openPricesApi
-              .createProof(proofImageCompressed, this.proofForm, this.$route.path)
-              .then((data) => {
-                this.loading = false
-                resolve(data)
-              })
-              .catch((error) => {
-                alert(`Error: ${error.message}`)
-                console.log(error)
-                this.loading = false
-              })
-          })
-          // .finally(() => {
-          //   console.log('Compress complete')
-          // })
-      })
+      this.loading = true;
+      // eslint-disable-next-line no-unused-vars
+      return new Promise((resolve, reject) => {
+        this.compressProof(proofImage).then((proofImageCompressed) => {
+          openPricesApi
+            .createProof(proofImageCompressed, this.proofForm, this.$route.path)
+            .then((data) => {
+              this.loading = false;
+              resolve(data);
+            })
+            .catch((error) => {
+              alert(`Error: ${error.message}`);
+              console.log(error);
+              this.loading = false;
+            });
+        });
+        // .finally(() => {
+        //   console.log('Compress complete')
+        // })
+      });
     },
     finalizeDraftProof(proofDraft) {
-      this.loading = true
+      this.loading = true;
       openPricesApi
         .finalizeDraftProof(proofDraft.id, this.proofForm, this.$route.path)
         .then((data) => {
-          this.loading = false
-          this.proofObjectList = this.proofObjectList.concat(data)
+          this.loading = false;
+          this.proofObjectList = this.proofObjectList.concat(data);
         })
         .catch((error) => {
-          alert(`Error: ${error.message}`)
-          console.log(error)
-          this.loading = false
-        })
+          alert(`Error: ${error.message}`);
+          console.log(error);
+          this.loading = false;
+        });
     },
     receiptAnonymizeDone(draftProof) {
-      this.showReceiptAnonymizeDialog = false
-      this.receiptDraftProof = draftProof
-      this.receiptDraftProof.imagePreview = proof_utils.getImageFullUrl(this.receiptDraftProof.file_path)
+      this.showReceiptAnonymizeDialog = false;
+      this.receiptDraftProof = draftProof;
+      this.receiptDraftProof.imagePreview = proof_utils.getImageFullUrl(
+        this.receiptDraftProof.file_path,
+      );
     },
     deleteReceiptDraftProof() {
-      this.receiptDraftProof = null
-      this.proofImageList = []
+      this.receiptDraftProof = null;
+      this.proofImageList = [];
       // TODO: API call to delete draft proof. Should be clear, even if unused drafts are deleted after an hour
-    }
-  }
-}
+    },
+  },
+};
 </script>

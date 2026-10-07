@@ -5,28 +5,39 @@
 </template>
 
 <script>
-import constants from '../constants'
-import utils from '../utils'
+import constants from "../constants";
+import utils from "../utils";
 
 export default {
   props: {
     kind: {
       type: String,
       default: null,
-      examples: ['price', 'product', 'proof', 'location', 'user', 'currency', 'country', 'challenge', 'badge', 'report']
+      examples: [
+        "price",
+        "product",
+        "proof",
+        "location",
+        "user",
+        "currency",
+        "country",
+        "challenge",
+        "badge",
+        "report",
+      ],
     },
     count: {
       type: Number,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     getKindTitlecase() {
-      return utils.toTitleCase(this.kind)
+      return utils.toTitleCase(this.kind);
     },
     getKindIcon() {
-      return constants[`${this.kind.toUpperCase()}_ICON`]
-    }
-  }
-}
+      return constants[`${this.kind.toUpperCase()}_ICON`];
+    },
+  },
+};
 </script>

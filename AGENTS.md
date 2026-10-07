@@ -57,15 +57,15 @@ export default {
   props: {
     item: {
       type: Object,
-      default: null
-    }
+      default: null,
+    },
   },
   methods: {
     handleAction() {
       /* logic */
-    }
-  }
-}
+    },
+  },
+};
 </script>
 ```
 
@@ -79,24 +79,25 @@ import api from "@/services/api"; // Example service import
 export default {
   data() {
     return {
-      isLoading: false // Local state for UI only
-    }
+      isLoading: false, // Local state for UI only
+    };
   },
   mounted() {
-    this.isLoading = true
-    api.fetchPrices()
+    this.isLoading = true;
+    api
+      .fetchPrices()
       .then((data) => {
-        const store = useAppStore()
-        store.setPrices(data) // Global state goes in Pinia
+        const store = useAppStore();
+        store.setPrices(data); // Global state goes in Pinia
       })
       .catch((err) => {
-        console.error(err)
+        console.error(err);
       })
       .finally(() => {
-        this.isLoading = false
-      })
-  }
-}
+        this.isLoading = false;
+      });
+  },
+};
 </script>
 ```
 

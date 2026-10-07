@@ -5,19 +5,19 @@
 </template>
 
 <script>
-import geo_utils from '../utils/geo.js'
+import geo_utils from "../utils/geo.js";
 
 export default {
   props: {
     location: {
       type: Object,
-      default: null
-    }
+      default: null,
+    },
   },
   methods: {
     getLocationOSMUniqueId(location) {
-      return geo_utils.getLocationOSMUniqueId(location)
+      return geo_utils.getLocationOSMUniqueId(location);
     },
-  }
-}
+  },
+};
 </script>

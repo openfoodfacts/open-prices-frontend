@@ -5,50 +5,57 @@
 </template>
 
 <script>
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import data_utils from '../utils/data.js'
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import data_utils from "../utils/data.js";
 
 export default {
   props: {
     category: {
       type: String,
       default: null,
-      example: 'en:croissants'
+      example: "en:croissants",
     },
     localize: {
       type: Boolean,
-      default: false  // open-prices-frontend only has a subset of all categories, see generate_categories_json_per_language.py
+      default: false, // open-prices-frontend only has a subset of all categories, see generate_categories_json_per_language.py
     },
     readonly: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   data() {
     return {
-      categoryLocalizedName: null,  // see mounted
-    }
+      categoryLocalizedName: null, // see mounted
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     getCategoryUrl() {
-      return this.category && !this.readonly ? `/categories/${this.category}` : null
-    }
+      return this.category && !this.readonly
+        ? `/categories/${this.category}`
+        : null;
+    },
   },
   mounted() {
-    this.setCategoryLocalizedName(this.category)
+    this.setCategoryLocalizedName(this.category);
   },
   methods: {
     setCategoryLocalizedName() {
       if (this.category && this.localize) {
-        data_utils.getLocaleCategoryTagName(this.appStore.getUserLanguage, this.category).then((categoryName) => {
-        this.categoryLocalizedName = categoryName
-      })
+        data_utils
+          .getLocaleCategoryTagName(
+            this.appStore.getUserLanguage,
+            this.category,
+          )
+          .then((categoryName) => {
+            this.categoryLocalizedName = categoryName;
+          });
       } else {
-        this.categoryLocalizedName = null
+        this.categoryLocalizedName = null;
       }
     },
-  }
-}
+  },
+};
 </script>

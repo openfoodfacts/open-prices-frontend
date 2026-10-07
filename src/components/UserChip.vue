@@ -6,28 +6,28 @@
 </template>
 
 <script>
-import constants from '../constants'
+import constants from "../constants";
 
 export default {
   props: {
     username: {
       type: String,
-      default: null
+      default: null,
     },
     readonly: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   data() {
     return {
-      USER_ICON: constants.USER_ICON
-    }
+      USER_ICON: constants.USER_ICON,
+    };
   },
   computed: {
     getUserUrl() {
-      return this.username && !this.readonly ? `/users/${this.username}` : null
-    }
-  }
-}
+      return this.username && !this.readonly ? `/users/${this.username}` : null;
+    },
+  },
+};
 </script>

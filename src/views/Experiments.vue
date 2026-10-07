@@ -2,7 +2,7 @@
   <v-row>
     <v-col>
       <h2 class="text-h6">
-        {{ $t('Common.Explore') }}
+        {{ $t("Common.Explore") }}
       </h2>
     </v-col>
   </v-row>
@@ -20,7 +20,7 @@
   <v-row>
     <v-col>
       <h2 class="text-h6">
-        {{ $t('Common.Contribute') }}
+        {{ $t("Common.Contribute") }}
       </h2>
     </v-col>
   </v-row>
@@ -50,5 +50,4 @@
   -->
 </template>
 
-<script>
-</script>
+<script></script>

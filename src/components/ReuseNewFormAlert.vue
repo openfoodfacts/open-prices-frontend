@@ -7,20 +7,27 @@
   >
     <i18n-t keypath="Reuses.AlertNew" tag="span">
       <template #url>
-        <a :href="APP_GITHUB_REUSE_DISCUSSION_URL" target="_blank" rel="noopener noreferrer" class="text-lowercase">{{ $t('Common.Here') }}</a>
+        <a
+          :href="APP_GITHUB_REUSE_DISCUSSION_URL"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-lowercase"
+          >{{ $t("Common.Here") }}</a
+        >
       </template>
     </i18n-t>
   </v-alert>
 </template>
 
 <script>
-import constants from '../constants'
+import constants from "../constants";
 
 export default {
   data() {
     return {
-      APP_GITHUB_REUSE_DISCUSSION_URL: constants.APP_GITHUB_REUSE_DISCUSSION_URL,
-    }
-  }
-}
+      APP_GITHUB_REUSE_DISCUSSION_URL:
+        constants.APP_GITHUB_REUSE_DISCUSSION_URL,
+    };
+  },
+};
 </script>

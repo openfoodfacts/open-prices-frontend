@@ -2,174 +2,243 @@
   <v-card v-if="price" :id="'price_' + price.id" data-name="price-card">
     <v-card-text class="pa-2">
       <v-row>
-        <v-col v-if="!hideProductImage" class="pr-0" style="max-width:20%;">
-          <v-img v-if="product && product.image_url" :src="product.image_url" max-height="100px" @click="goToProduct()" />
-          <v-img v-else-if="product && product.source || price.category_tag" :src="productImageDefault" width="100px" style="filter: invert(0.9);" />
-          <v-img v-else :src="productImageDefault" width="100px" style="filter: invert(57%) sepia(22%) saturate(6809%) hue-rotate(314deg) brightness(96%) contrast(68%);" />
+        <v-col v-if="!hideProductImage" class="pr-0" style="max-width: 20%">
+          <v-img
+            v-if="product && product.image_url"
+            :src="product.image_url"
+            max-height="100px"
+            @click="goToProduct()"
+          />
+          <v-img
+            v-else-if="(product && product.source) || price.category_tag"
+            :src="productImageDefault"
+            width="100px"
+            style="filter: invert(0.9)"
+          />
+          <v-img
+            v-else
+            :src="productImageDefault"
+            width="100px"
+            style="
+              filter: invert(57%) sepia(22%) saturate(6809%) hue-rotate(314deg)
+                brightness(96%) contrast(68%);
+            "
+          />
         </v-col>
         <v-col :style="hideProductImage ? '' : 'max-width:80%'">
-          <h3 v-if="!hideProductTitle" id="product-title" role="link" tabindex="0" @click="goToProduct()" @keydown.enter="goToProduct()">
+          <h3
+            v-if="!hideProductTitle"
+            id="product-title"
+            role="link"
+            tabindex="0"
+            @click="goToProduct()"
+            @keydown.enter="goToProduct()"
+          >
             {{ productTitle }}
           </h3>
 
           <template v-if="showProductDetailsRow">
-            <ProductDetailsRow v-if="hasProduct" class="mt-0" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="readonly" />
+            <ProductDetailsRow
+              v-if="hasProduct"
+              class="mt-0"
+              :product="product"
+              :hideCategoriesAndLabels="true"
+              :hideProductBarcode="hideProductBarcode"
+              :hideActionMenuButton="true"
+              :readonly="readonly"
+            />
             <PriceCategoryDetailsRow v-else class="mt-0" :price="price" />
           </template>
 
-          <PricePriceRow class="mt-0" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
+          <PricePriceRow
+            class="mt-0"
+            :price="price"
+            :productQuantity="product ? product.product_quantity : null"
+            :productQuantityUnit="
+              product ? product.product_quantity_unit : null
+            "
+            :hidePriceReceiptQuantity="hidePriceReceiptQuantity"
+          />
         </v-col>
       </v-row>
 
-      <PriceFooterRow v-if="showPriceFooterRow" class="mt-0" :price="price" :hidePriceProof="hidePriceProof" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceCreated="hidePriceCreated" :hideProductDetailsRow="hideProductDetailsRow" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
+      <PriceFooterRow
+        v-if="showPriceFooterRow"
+        class="mt-0"
+        :price="price"
+        :hidePriceProof="hidePriceProof"
+        :hidePriceLocation="hidePriceLocation"
+        :hidePriceOwner="hidePriceOwner"
+        :hidePriceDate="hidePriceDate"
+        :hidePriceCreated="hidePriceCreated"
+        :hideProductDetailsRow="hideProductDetailsRow"
+        :hideActionMenuButton="hideActionMenuButton"
+        :readonly="readonly"
+      />
     </v-card-text>
   </v-card>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import constants from '../constants'
-import data_utils from '../utils/data.js'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import constants from "../constants";
+import data_utils from "../utils/data.js";
 
 export default {
   components: {
-    ProductDetailsRow: defineAsyncComponent(() => import('../components/ProductDetailsRow.vue')),
-    PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
-    PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
-    PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue'))
+    ProductDetailsRow: defineAsyncComponent(
+      () => import("../components/ProductDetailsRow.vue"),
+    ),
+    PriceCategoryDetailsRow: defineAsyncComponent(
+      () => import("../components/PriceCategoryDetailsRow.vue"),
+    ),
+    PricePriceRow: defineAsyncComponent(
+      () => import("../components/PricePriceRow.vue"),
+    ),
+    PriceFooterRow: defineAsyncComponent(
+      () => import("../components/PriceFooterRow.vue"),
+    ),
   },
   props: {
     price: {
       type: Object,
-      default: null
+      default: null,
     },
     product: {
       type: Object,
-      default: null
+      default: null,
     },
     hideProductImage: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideProductTitle: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideProductDetailsRow: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideProductBarcode: {
       type: Boolean,
-      default: true
+      default: true,
     },
     hidePriceReceiptQuantity: {
       type: Boolean,
-      default: true
+      default: true,
     },
     hidePriceFooterRow: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hidePriceLocation: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hidePriceOwner: {
       type: Boolean,
-      default: true
+      default: true,
     },
     hidePriceDate: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hidePriceProof: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hidePriceCreated: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideActionMenuButton: {
       type: Boolean,
-      default: false
+      default: false,
     },
     readonly: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   data() {
     return {
-      productTitle: null,  // see init
+      productTitle: null, // see init
       productImageDefault: constants.PRODUCT_IMAGE_DEFAULT_URL,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     hasPrice() {
-      return !!this.price
+      return !!this.price;
     },
     hasProduct() {
-      return !!this.product
+      return !!this.product;
     },
     hasCategoryTag() {
-      return !!this.price.category_tag
+      return !!this.price.category_tag;
     },
     hasProductId() {
-      return this.hasProduct && !!this.product.id
+      return this.hasProduct && !!this.product.id;
     },
     hasProductCode() {
-      return this.hasProduct && !!this.product.code
+      return this.hasProduct && !!this.product.code;
     },
     showProductDetailsRow() {
-      return !this.hideProductDetailsRow
+      return !this.hideProductDetailsRow;
     },
     showPriceFooterRow() {
-      return !this.hidePriceFooterRow
-    }
+      return !this.hidePriceFooterRow;
+    },
   },
   mounted() {
-    this.getPriceProductTitle()
+    this.getPriceProductTitle();
     // hack: add price.location object to price.proof if missing
-    if (this.price && this.price.location && this.price.proof && !this.price.proof.location) {
+    if (
+      this.price &&
+      this.price.location &&
+      this.price.proof &&
+      !this.price.proof.location
+    ) {
       if (this.price.location_id === this.price.proof.location_id) {
-        this.price.proof.location = this.price.location
+        this.price.proof.location = this.price.location;
       }
     }
   },
   methods: {
     getPriceProductTitle() {
       if (this.hasProductCode) {
-        this.productTitle = this.product.product_name || this.price.product_code
+        this.productTitle =
+          this.product.product_name || this.price.product_code;
       } else if (this.hasPrice && this.hasCategoryTag) {
-        this.getPriceCategoryTagName(this.price.category_tag)
+        this.getPriceCategoryTagName(this.price.category_tag);
       }
     },
     getPriceCategoryTagName(categoryId) {
-      data_utils.getLocaleCategoryTag(this.appStore.getUserLanguage, categoryId).then((category) => {
-        this.productTitle = category.name
-      })
+      data_utils
+        .getLocaleCategoryTag(this.appStore.getUserLanguage, categoryId)
+        .then((category) => {
+          this.productTitle = category.name;
+        });
     },
     getPriceProductCode() {
       if (this.hasProduct) {
-        return this.product.code
+        return this.product.code;
       } else if (this.price.product_code) {
-        return this.price.product_code
+        return this.price.product_code;
       } else if (this.price.category_tag) {
-        return this.price.category_tag
+        return this.price.category_tag;
       }
-      return 'product code error'
+      return "product code error";
     },
     goToProduct() {
       if (this.readonly) {
-        return
+        return;
       }
-      this.$router.push({ path: `/products/${this.getPriceProductCode()}` })
+      this.$router.push({ path: `/products/${this.getPriceProductCode()}` });
     },
   },
-}
+};
 </script>

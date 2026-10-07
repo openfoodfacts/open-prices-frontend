@@ -1,116 +1,173 @@
 <template>
-  <v-card v-if="product" :id="'product_' + product.code" :class="isSelected ? 'border-success' : ''" data-name="product-card">
+  <v-card
+    v-if="product"
+    :id="'product_' + product.code"
+    :class="isSelected ? 'border-success' : ''"
+    data-name="product-card"
+  >
     <v-card-text class="pa-2" :style="latestPrice ? 'position:relative;' : ''">
       <v-row>
-        <v-col class="pr-0" style="max-width:20%;">
-          <v-img v-if="product.image_url" :src="product.image_url" max-height="100px" @click="clickProduct()" />
-          <v-img v-else-if="product.source" :src="productImageDefault" width="100px" style="filter: invert(0.9);" />
-          <v-img v-else :src="productImageDefault" width="100px" style="filter: invert(57%) sepia(22%) saturate(6809%) hue-rotate(314deg) brightness(96%) contrast(68%);" />
+        <v-col class="pr-0" style="max-width: 20%">
+          <v-img
+            v-if="product.image_url"
+            :src="product.image_url"
+            max-height="100px"
+            @click="clickProduct()"
+          />
+          <v-img
+            v-else-if="product.source"
+            :src="productImageDefault"
+            width="100px"
+            style="filter: invert(0.9)"
+          />
+          <v-img
+            v-else
+            :src="productImageDefault"
+            width="100px"
+            style="
+              filter: invert(57%) sepia(22%) saturate(6809%) hue-rotate(314deg)
+                brightness(96%) contrast(68%);
+            "
+          />
         </v-col>
-        <v-col style="max-width:80%;">
+        <v-col style="max-width: 80%">
           <v-row>
             <v-col :cols="!showActionButton ? '12' : '10'">
-              <h3 id="product-title" role="link" tabindex="0" @click="clickProduct()" @keydown.enter="clickProduct()">
+              <h3
+                id="product-title"
+                role="link"
+                tabindex="0"
+                @click="clickProduct()"
+                @keydown.enter="clickProduct()"
+              >
                 {{ getProductTitle() }}
               </h3>
             </v-col>
             <v-col v-if="showActionButton" cols="2" class="pl-0">
-              <v-btn class="float-right" icon="mdi-pencil" size="small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickProduct()" />
+              <v-btn
+                class="float-right"
+                icon="mdi-pencil"
+                size="small"
+                density="comfortable"
+                variant="text"
+                :title="$t('Common.Edit')"
+                @click="clickProduct()"
+              />
             </v-col>
           </v-row>
 
-          <ProductDetailsRow class="mt-0" :product="product" :hidePriceCount="hidePriceCount" :hideCategoriesAndLabels="hideCategoriesAndLabels" :hideProductBarcode="hideProductBarcode" :hideBarcodeErrors="false" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
+          <ProductDetailsRow
+            class="mt-0"
+            :product="product"
+            :hidePriceCount="hidePriceCount"
+            :hideCategoriesAndLabels="hideCategoriesAndLabels"
+            :hideProductBarcode="hideProductBarcode"
+            :hideBarcodeErrors="false"
+            :hideActionMenuButton="hideActionMenuButton"
+            :readonly="readonly"
+          />
         </v-col>
       </v-row>
     </v-card-text>
 
     <v-divider v-if="latestPrice" />
     <v-card-text v-if="latestPrice" class="pa-2">
-      <h4>{{ $t('ProductCard.LatestPrice') }}</h4>
-      <PricePriceRow class="mt-0" :price="latestPrice" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
+      <h4>{{ $t("ProductCard.LatestPrice") }}</h4>
+      <PricePriceRow
+        class="mt-0"
+        :price="latestPrice"
+        :productQuantity="product.product_quantity"
+        :productQuantityUnit="product.product_quantity_unit"
+      />
       <PriceFooterRow class="mt-0" :price="latestPrice" />
     </v-card-text>
   </v-card>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import constants from '../constants'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import constants from "../constants";
 
 export default {
   components: {
-    ProductDetailsRow: defineAsyncComponent(() => import('../components/ProductDetailsRow.vue')),
-    PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
-    PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue')),
+    ProductDetailsRow: defineAsyncComponent(
+      () => import("../components/ProductDetailsRow.vue"),
+    ),
+    PricePriceRow: defineAsyncComponent(
+      () => import("../components/PricePriceRow.vue"),
+    ),
+    PriceFooterRow: defineAsyncComponent(
+      () => import("../components/PriceFooterRow.vue"),
+    ),
   },
   props: {
     product: {
       type: Object,
-      default: null
+      default: null,
     },
     latestPrice: {
       type: Object,
-      default: null
+      default: null,
     },
     hidePriceCount: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideCategoriesAndLabels: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideProductBarcode: {
       type: Boolean,
-      default: true
+      default: true,
     },
     hideActionMenuButton: {
       type: Boolean,
-      default: false
+      default: false,
     },
     isSelected: {
       type: Boolean,
-      default: false
+      default: false,
     },
     readonly: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
-  emits: ['editProduct'],
+  emits: ["editProduct"],
   data() {
     return {
       productImageDefault: constants.PRODUCT_IMAGE_DEFAULT_URL,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     hasProductName() {
-      return !!this.product.product_name
+      return !!this.product.product_name;
     },
     hasProductSource() {
-      return !!this.product.source
+      return !!this.product.source;
     },
     showActionButton() {
-      return this.isSelected
+      return this.isSelected;
     },
   },
   methods: {
     getProductTitle() {
-      return this.product.product_name || this.product.code
+      return this.product.product_name || this.product.code;
     },
     clickProduct() {
       if (this.isSelected) {
-        this.$emit('editProduct', this.product)
-        return
+        this.$emit("editProduct", this.product);
+        return;
       }
       if (this.readonly) {
-        return
+        return;
       }
-      this.$router.push({ path: `/products/${this.product.code}` })
+      this.$router.push({ path: `/products/${this.product.code}` });
     },
-  }
-}
+  },
+};
 </script>

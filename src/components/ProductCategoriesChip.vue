@@ -1,6 +1,14 @@
 <template>
-  <v-chip v-if="hasProductCategories" label size="small" density="comfortable" @click="showProductCategoriesDialog">
-    <i>{{ $t('ProductCard.CategoryTotal', { count: productCategories.length }) }}</i>
+  <v-chip
+    v-if="hasProductCategories"
+    label
+    size="small"
+    density="comfortable"
+    @click="showProductCategoriesDialog"
+  >
+    <i>{{
+      $t("ProductCard.CategoryTotal", { count: productCategories.length })
+    }}</i>
     <ProductCategoriesDialog
       v-if="productCategoriesDialog"
       v-model="productCategoriesDialog"
@@ -8,41 +16,50 @@
       @close="productCategoriesDialog = false"
     />
   </v-chip>
-  <v-chip v-else label size="small" density="comfortable" prepend-icon="mdi-help" color="warning">
-    <i>{{ $t('ProductCard.CategoriesLower') }}</i>
+  <v-chip
+    v-else
+    label
+    size="small"
+    density="comfortable"
+    prepend-icon="mdi-help"
+    color="warning"
+  >
+    <i>{{ $t("ProductCard.CategoriesLower") }}</i>
     <v-tooltip activator="parent" open-on-click location="top">
-      {{ $t('ProductCard.CategoriesMissing') }}
+      {{ $t("ProductCard.CategoriesMissing") }}
     </v-tooltip>
   </v-chip>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from "vue";
 
 export default {
   components: {
-    ProductCategoriesDialog: defineAsyncComponent(() => import('../components/ProductCategoriesDialog.vue')),
+    ProductCategoriesDialog: defineAsyncComponent(
+      () => import("../components/ProductCategoriesDialog.vue"),
+    ),
   },
   props: {
     productCategories: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   data() {
     return {
-      productCategoriesDialog: false
-    }
+      productCategoriesDialog: false,
+    };
   },
   computed: {
     hasProductCategories() {
-      return this.productCategories && this.productCategories.length
-    }
+      return this.productCategories && this.productCategories.length;
+    },
   },
   methods: {
     showProductCategoriesDialog() {
-      this.productCategoriesDialog = true
+      this.productCategoriesDialog = true;
     },
-  }
-}
+  },
+};
 </script>

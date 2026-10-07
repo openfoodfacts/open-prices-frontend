@@ -1,6 +1,7 @@
 ---
 applyTo: "**/*.vue"
 ---
+
 # Project coding standards for Vue.js
 
 ## Vue guidelines

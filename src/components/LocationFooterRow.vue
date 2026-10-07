@@ -2,10 +2,24 @@
   <v-row>
     <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <span class="chip-group">
-        <PriceCountChip :count="location.price_count" :withLabel="true" source="location" @click="goToLocation()" />
+        <PriceCountChip
+          :count="location.price_count"
+          :withLabel="true"
+          source="location"
+          @click="goToLocation()"
+        />
         <CountChip kind="user" :count="location.user_count" :withLabel="true" />
-        <CountChip kind="product" :count="location.product_count" :withLabel="true" />
-        <CountChip kind="proof" :count="location.proof_count" :withLabel="true" :to="getLocationProofListUrl" />
+        <CountChip
+          kind="product"
+          :count="location.product_count"
+          :withLabel="true"
+        />
+        <CountChip
+          kind="proof"
+          :count="location.proof_count"
+          :withLabel="true"
+          :to="getLocationProofListUrl"
+        />
       </span>
     </v-col>
     <v-col v-if="!hideActionMenuButton" cols="1">
@@ -15,18 +29,24 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from "vue";
 
 export default {
   components: {
-    CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    LocationActionMenuButton: defineAsyncComponent(() => import('../components/LocationActionMenuButton.vue'))
+    CountChip: defineAsyncComponent(
+      () => import("../components/CountChip.vue"),
+    ),
+    PriceCountChip: defineAsyncComponent(
+      () => import("../components/PriceCountChip.vue"),
+    ),
+    LocationActionMenuButton: defineAsyncComponent(
+      () => import("../components/LocationActionMenuButton.vue"),
+    ),
   },
   props: {
     location: {
       type: Object,
-      default: null
+      default: null,
     },
     hideActionMenuButton: {
       type: Boolean,
@@ -39,16 +59,16 @@ export default {
   },
   computed: {
     getLocationProofListUrl() {
-      return `/locations/${this.location.id}/proofs`
+      return `/locations/${this.location.id}/proofs`;
     },
   },
   methods: {
     goToLocation() {
       if (this.readonly) {
-        return
+        return;
       }
-      this.$router.push({ path: `/locations/${this.location.id}` })
+      this.$router.push({ path: `/locations/${this.location.id}` });
     },
-  }
-}
+  },
+};
 </script>

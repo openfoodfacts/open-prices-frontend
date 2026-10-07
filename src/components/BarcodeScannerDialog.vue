@@ -16,20 +16,34 @@
         />
         <v-tabs v-model="currentDisplay" :grow="!$vuetify.display.smAndUp">
           <v-tab v-for="item in displayItems" :key="item.key" :value="item.key">
-            <v-icon :start="$vuetify.display.smAndUp || !!item.valueSmallScreen">
+            <v-icon
+              :start="$vuetify.display.smAndUp || !!item.valueSmallScreen"
+            >
               {{ item.icon }}
             </v-icon>
-            <span v-if="$vuetify.display.smAndUp">{{ $t('Common.' + item.value) }}</span>
+            <span v-if="$vuetify.display.smAndUp">{{
+              $t("Common." + item.value)
+            }}</span>
             <span v-else>
-              <span v-if="item.valueSmallScreen">{{ $t('Common.' + item.valueSmallScreen) }}</span>
+              <span v-if="item.valueSmallScreen">{{
+                $t("Common." + item.valueSmallScreen)
+              }}</span>
             </span>
           </v-tab>
         </v-tabs>
 
         <v-tabs-window v-model="currentDisplay" disabled>
           <v-tabs-window-item value="scan">
-            <div v-if="barcodeScannerLibrary === 'html5-qrcode'" id="reader" width="500px" />
-            <barcode-scanner v-else runScanner="true" @barcode-scanner-state="onScanStateChanged" />
+            <div
+              v-if="barcodeScannerLibrary === 'html5-qrcode'"
+              id="reader"
+              width="500px"
+            />
+            <barcode-scanner
+              v-else
+              runScanner="true"
+              @barcode-scanner-state="onScanStateChanged"
+            />
           </v-tabs-window-item>
 
           <v-tabs-window-item value="type">
@@ -40,32 +54,71 @@
                 :label="$t('Common.Barcode')"
                 type="text"
                 inputmode="numeric"
-                :pattern="barcodeManualInputMode === 'search' ? '[0-9*]+' : '[0-9]+'"
+                :pattern="
+                  barcodeManualInputMode === 'search' ? '[0-9*]+' : '[0-9]+'
+                "
                 prepend-inner-icon="mdi-barcode"
                 :hint="barcodeManualInputLength"
                 clearable
                 persistent-hint
-                @update:modelValue="newValue => barcodeManualForm.barcode = numericAndWildcardOnly(newValue)"
+                @update:modelValue="
+                  (newValue) =>
+                    (barcodeManualForm.barcode =
+                      numericAndWildcardOnly(newValue))
+                "
               >
                 <template #append-inner>
-                  <v-btn color="primary" :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!barcodeManualForm.barcode" @click="barcodeSearchOrSend" />
+                  <v-btn
+                    color="primary"
+                    :icon="
+                      barcodeManualInputMode === 'search'
+                        ? 'mdi-magnify'
+                        : 'mdi-plus'
+                    "
+                    :disabled="!barcodeManualForm.barcode"
+                    @click="barcodeSearchOrSend"
+                  />
                 </template>
               </v-text-field>
             </v-form>
 
             <!-- results -->
-            <ProductCard v-for="product in productSearchResultList" :key="product" :product="product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" @click="barcodeSend(product.code)" />
+            <ProductCard
+              v-for="product in productSearchResultList"
+              :key="product"
+              :product="product"
+              :hideCategoriesAndLabels="true"
+              :hideActionMenuButton="true"
+              :readonly="true"
+              elevation="1"
+              @click="barcodeSend(product.code)"
+            />
 
             <div v-if="barcodeManualInputSimilarBarcodeList.length">
               <h3 class="mt-4 mb-1">
-                {{ $t('BarcodeScanner.SimilarBarcodes') }}
+                {{ $t("BarcodeScanner.SimilarBarcodes") }}
               </h3>
               <p class="mb-2">
-                {{ $t('BarcodeScanner.SimilarBarcodesExplanation') }}
+                {{ $t("BarcodeScanner.SimilarBarcodesExplanation") }}
               </p>
               <v-row>
-                <v-col v-for="similarProduct in productSimilarBarcodeResultList" :key="similarProduct.code" cols="12" sm="6" md="4" xl="3">
-                  <ProductCard :product="similarProduct" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :hideProductBarcode="false" :readonly="true" elevation="1" @click="barcodeSend(similarProduct.code)" />
+                <v-col
+                  v-for="similarProduct in productSimilarBarcodeResultList"
+                  :key="similarProduct.code"
+                  cols="12"
+                  sm="6"
+                  md="4"
+                  xl="3"
+                >
+                  <ProductCard
+                    :product="similarProduct"
+                    :hideCategoriesAndLabels="true"
+                    :hideActionMenuButton="true"
+                    :hideProductBarcode="false"
+                    :readonly="true"
+                    elevation="1"
+                    @click="barcodeSend(similarProduct.code)"
+                  />
                 </v-col>
               </v-row>
             </div>
@@ -79,8 +132,20 @@
         <div>
           <i18n-t keypath="BarcodeScanner.Htlm5-qrcode.Text" tag="span">
             <template #url>
-              <a v-if="barcodeScannerLibrary === 'html5-qrcode'" :href="HTML5_QRCODE_URL" target="_blank" rel="noopener noreferrer">{{ HTML5_QRCODE_NAME }}</a>
-              <a v-else :href="BARCODE_SCANNER_URL" target="_blank" rel="noopener noreferrer">{{ BARCODE_SCANNER_NAME }}</a>
+              <a
+                v-if="barcodeScannerLibrary === 'html5-qrcode'"
+                :href="HTML5_QRCODE_URL"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ HTML5_QRCODE_NAME }}</a
+              >
+              <a
+                v-else
+                :href="BARCODE_SCANNER_URL"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ BARCODE_SCANNER_NAME }}</a
+              >
             </template>
           </i18n-t>
         </div>
@@ -90,17 +155,17 @@
 </template>
 
 <script>
-import "@webcomponents/webcomponentsjs/webcomponents-loader.js"
-import "@openfoodfacts/openfoodfacts-webcomponents"
-import { Html5Qrcode, Html5QrcodeScanType } from 'html5-qrcode'
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openPricesApi from '../services/openPricesApi'
-import openFoodFactsApi from '../services/openFoodFactsApi'
-import constants from '../constants'
-import utils from '../utils.js'
-import proof_utils from '../utils/proof.js'
+import "@webcomponents/webcomponentsjs/webcomponents-loader.js";
+import "@openfoodfacts/openfoodfacts-webcomponents";
+import { Html5Qrcode, Html5QrcodeScanType } from "html5-qrcode";
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openPricesApi from "../services/openPricesApi";
+import openFoodFactsApi from "../services/openFoodFactsApi";
+import constants from "../constants";
+import utils from "../utils.js";
+import proof_utils from "../utils/proof.js";
 
 const config = {
   fps: 10,
@@ -109,200 +174,225 @@ const config = {
   // Only support camera scan type.
   supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
   // formatsToSupport: [Html5QrcodeSupportedFormats.QR_CODE, Html5QrcodeSupportedFormats.EAN_13],
-}
+};
 
 export default {
   components: {
-    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    ProductCard: defineAsyncComponent(
+      () => import("../components/ProductCard.vue"),
+    ),
   },
   props: {
     hideBarcodeScannerTab: {
       type: Boolean,
-      default: false
+      default: false,
     },
     barcodeManualInputMode: {
       type: String,
-      default: 'search'  // 'add'
+      default: "search", // 'add'
     },
     barcodeManualInputPrefillValue: {
       type: String,
-      default: ''
+      default: "",
     },
     barcodeManualInputCroppedImage: {
       type: String,
-      default: ''
+      default: "",
     },
     barcodeManualInputSimilarBarcodeList: {
       // backend sometimes returns similar_barcodes, sorted by increasing Levenshtein distance
       type: Array,
       default: () => [],
-      example: [{ barcode: '123', distance: 1}, { barcode: '456', distance: 2}]
+      example: [
+        { barcode: "123", distance: 1 },
+        { barcode: "456", distance: 2 },
+      ],
     },
   },
-  emits: ['barcode', 'close'],
+  emits: ["barcode", "close"],
   data() {
     return {
       scanner: null,
       barcodeManualForm: {
-        barcode: '',
+        barcode: "",
       },
       productSearchResultList: [],
       productSimilarBarcodeResultList: [],
       // config
-      currentDisplay: null,  // see mounted
-      HTML5_QRCODE_URL: 'https://github.com/mebjas/html5-qrcode',
-      HTML5_QRCODE_NAME: 'html5-qrcode',
-      BARCODE_SCANNER_URL: 'https://github.com/openfoodfacts/openfoodfacts-webcomponents',
-      BARCODE_SCANNER_NAME: 'openfoodfacts-webcomponents',
-      barcodeScannerLibrary: window.BarcodeDetector ? 'off-barcode-scanner' : 'html5-qrcode'
-    }
+      currentDisplay: null, // see mounted
+      HTML5_QRCODE_URL: "https://github.com/mebjas/html5-qrcode",
+      HTML5_QRCODE_NAME: "html5-qrcode",
+      BARCODE_SCANNER_URL:
+        "https://github.com/openfoodfacts/openfoodfacts-webcomponents",
+      BARCODE_SCANNER_NAME: "openfoodfacts-webcomponents",
+      barcodeScannerLibrary: window.BarcodeDetector
+        ? "off-barcode-scanner"
+        : "html5-qrcode",
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     dialogHeight() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
     dialogWidth() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
     displayItems() {
       if (this.hideBarcodeScannerTab) {
-        return constants.PRODUCT_SELECTOR_DISPLAY_LIST.filter(item => item.key !== constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key)
+        return constants.PRODUCT_SELECTOR_DISPLAY_LIST.filter(
+          (item) => item.key !== constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key,
+        );
       }
-      return constants.PRODUCT_SELECTOR_DISPLAY_LIST
+      return constants.PRODUCT_SELECTOR_DISPLAY_LIST;
     },
     getImageFullUrl() {
-      return proof_utils.getImageFullUrl(this.barcodeManualInputCroppedImage)
+      return proof_utils.getImageFullUrl(this.barcodeManualInputCroppedImage);
     },
     barcodeManualInputLength() {
-      if (!this.barcodeManualForm.barcode) return '0'
-      return this.barcodeManualForm.barcode.length.toString()
-    }
+      if (!this.barcodeManualForm.barcode) return "0";
+      return this.barcodeManualForm.barcode.length.toString();
+    },
   },
   watch: {
     currentDisplay(value) {
       if (value === constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key) {
         if (this.hideBarcodeScannerTab) {
-          this.currentDisplay = constants.PRODUCT_SELECTOR_DISPLAY_LIST[1].key
+          this.currentDisplay = constants.PRODUCT_SELECTOR_DISPLAY_LIST[1].key;
         } else {
-          if (this.barcodeScannerLibrary === 'html5-qrcode') {
-            window.setTimeout(() => this.createQrcodeScanner(), 200)
+          if (this.barcodeScannerLibrary === "html5-qrcode") {
+            window.setTimeout(() => this.createQrcodeScanner(), 200);
           }
         }
-      } else {  // type
-        window.setTimeout(() => this.$refs.barcodeManualInput?.focus?.(), 200)
+      } else {
+        // type
+        window.setTimeout(() => this.$refs.barcodeManualInput?.focus?.(), 200);
         if (this.scanner && this.scanner.getState() > 1) {
-          this.scanner.stop()
+          this.scanner.stop();
         }
       }
-    }
+    },
   },
   mounted() {
     // init tab
-    this.currentDisplay = this.appStore.user.barcode_scanner_default_mode
-    if (this.appStore.user.barcode_scanner_library != 'auto') {
-      this.barcodeScannerLibrary = this.appStore.user.barcode_scanner_library
+    this.currentDisplay = this.appStore.user.barcode_scanner_default_mode;
+    if (this.appStore.user.barcode_scanner_library != "auto") {
+      this.barcodeScannerLibrary = this.appStore.user.barcode_scanner_library;
     }
     // init search(s)
     if (this.barcodeManualInputPrefillValue) {
-      this.barcodeManualForm.barcode = this.barcodeManualInputPrefillValue
-      this.barcodeSearchOrSend()
+      this.barcodeManualForm.barcode = this.barcodeManualInputPrefillValue;
+      this.barcodeSearchOrSend();
     }
     if (this.barcodeManualInputSimilarBarcodeList.length) {
       for (let barcode of this.barcodeManualInputSimilarBarcodeList) {
-        this.productSimilarBarcodeResultList.push({'code': barcode.barcode, 'price_count': 0})
-        this.getProduct(barcode.barcode, false)
+        this.productSimilarBarcodeResultList.push({
+          code: barcode.barcode,
+          price_count: 0,
+        });
+        this.getProduct(barcode.barcode, false);
       }
     }
   },
   methods: {
     createQrcodeScanner() {
-      this.scanner = new Html5Qrcode('reader')
-      this.scanner.start({ facingMode: 'environment' }, config, this.onScanSuccess, this.onScanFailure)
+      this.scanner = new Html5Qrcode("reader");
+      this.scanner.start(
+        { facingMode: "environment" },
+        config,
+        this.onScanSuccess,
+        this.onScanFailure,
+      );
     },
     onScanStateChanged(state) {
-      if (state.detail.state === 'detected') {
-        this.barcodeSend(state.detail.barcode)
+      if (state.detail.state === "detected") {
+        this.barcodeSend(state.detail.barcode);
       }
     },
-    onScanSuccess(decodedText, decodedResult) {  // eslint-disable-line no-unused-vars
-      this.barcodeSend(decodedText)
+    // eslint-disable-next-line no-unused-vars
+    onScanSuccess(decodedText, decodedResult) {
+      this.barcodeSend(decodedText);
     },
-    onScanFailure(error) {  // eslint-disable-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
+    onScanFailure(error) {
       // console.warn(`Code scan error = ${error}`)
     },
     numericAndWildcardOnly(value) {
-      return utils.numericAndWildcardOnly(value)
+      return utils.numericAndWildcardOnly(value);
     },
     barcodeSearchOrSend() {
-      this.barcodeManualForm.barcode = this.barcodeManualForm.barcode.trim()
-      if (this.barcodeManualInputMode === 'search') {
-        this.$refs.barcodeManualInput?.blur?.()
-        if (this.barcodeManualForm.barcode.includes('*')) {
-          this.searchProduct(this.barcodeManualForm.barcode)
+      this.barcodeManualForm.barcode = this.barcodeManualForm.barcode.trim();
+      if (this.barcodeManualInputMode === "search") {
+        this.$refs.barcodeManualInput?.blur?.();
+        if (this.barcodeManualForm.barcode.includes("*")) {
+          this.searchProduct(this.barcodeManualForm.barcode);
         } else {
-          this.getProduct(this.barcodeManualForm.barcode, true)
+          this.getProduct(this.barcodeManualForm.barcode, true);
         }
       } else {
-        this.barcodeSend(this.barcodeManualForm.barcode)
+        this.barcodeSend(this.barcodeManualForm.barcode);
       }
     },
-    getProduct(code, search=true) {
+    getProduct(code, search = true) {
       if (search) {
-        this.productSearchResultList = []
+        this.productSearchResultList = [];
       }
       openPricesApi
         .getProductByCode(code)
         .catch((error) => {
-          if (error.status === 404) return {'code': code, 'price_count': 0}  // product not in Open Prices (yet)
-          throw error
+          if (error.status === 404) return { code: code, price_count: 0 }; // product not in Open Prices (yet)
+          throw error;
         })
         .then((product) => {
           if (search) {
-            this.productSearchResultList.push(product)
+            this.productSearchResultList.push(product);
           } else {
-            const similarBarcodeResultIndex = this.barcodeManualInputSimilarBarcodeList.findIndex(item => item.barcode === code)
-            this.productSimilarBarcodeResultList[similarBarcodeResultIndex] = product
+            const similarBarcodeResultIndex =
+              this.barcodeManualInputSimilarBarcodeList.findIndex(
+                (item) => item.barcode === code,
+              );
+            this.productSimilarBarcodeResultList[similarBarcodeResultIndex] =
+              product;
           }
         })
         .catch((error) => {
-          alert(this.$t('Common.ServerError'))
-          console.log(error)
-        })
+          alert(this.$t("Common.ServerError"));
+          console.log(error);
+        });
     },
     searchProduct(code) {
-      this.productSearchResultList = []
+      this.productSearchResultList = [];
       openFoodFactsApi
         .searchaliciousProductSearch(code)
         .then((data) => {
-          for (let product of data['hits']) {
-            if (product['code']) {
-              product['source'] = 'off'
-              product['brands'] = product['brands'].join(',')  // returns an array instead of a string
+          for (let product of data["hits"]) {
+            if (product["code"]) {
+              product["source"] = "off";
+              product["brands"] = product["brands"].join(","); // returns an array instead of a string
               // product['product_quantity'] = product['product_quantity'] || product['quantity']  // product_quantity not yet returned
-              if (product['quantity']) {
-                product['product_name'] += ` (${product["quantity"]})`
+              if (product["quantity"]) {
+                product["product_name"] += ` (${product["quantity"]})`;
               }
-              this.productSearchResultList.push(product)
+              this.productSearchResultList.push(product);
             }
           }
         })
         .catch((error) => {
-          alert(this.$t('Common.ServerError'))
-          console.log(error)
-        })
+          alert(this.$t("Common.ServerError"));
+          console.log(error);
+        });
     },
     barcodeSend(barcode) {
-      this.$emit('barcode', barcode)
-      this.close()
+      this.$emit("barcode", barcode);
+      this.close();
     },
     close() {
       // https://scanapp.org/html5-qrcode-docs/docs/apis/enums/Html5QrcodeScannerState
       if (this.scanner && this.scanner.getState() > 1) {
-        this.scanner.stop()
+        this.scanner.stop();
       }
-      this.$emit('close')
+      this.$emit("close");
     },
-  }
-}
+  },
+};
 </script>

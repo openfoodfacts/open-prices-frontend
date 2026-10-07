@@ -2,7 +2,7 @@ name: Update Generated Data
 
 on:
   schedule:
-    - cron: '0 3 * * 0'
+    - cron: "0 3 * * 0"
   workflow_dispatch:
 
 permissions:
@@ -24,7 +24,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -53,8 +53,8 @@ jobs:
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'chore(Data): update generated data from taxonomies'
-          title: 'chore(Data): update generated data from taxonomies'
+          commit-message: "chore(Data): update generated data from taxonomies"
+          title: "chore(Data): update generated data from taxonomies"
           body: |
             This PR was created automatically by the scheduled `Update Generated Data` workflow.
 

@@ -2,7 +2,7 @@
  * Categories per locale
  */
 function getLocaleCategoryTags(locale) {
-  return import(`@/data/categories/${locale}.json`)
+  return import(`@/data/categories/${locale}.json`);
 }
 
 /**
@@ -11,9 +11,11 @@ function getLocaleCategoryTags(locale) {
  */
 function getLocaleCategoryTag(locale, categoryId) {
   return getLocaleCategoryTags(locale).then((module) => {
-    let category = module.default.find(ct => ct.id === categoryId)
-    return category ? category : { 'id': categoryId, 'name': categoryId, 'status': 'unknown' }
-  })
+    let category = module.default.find((ct) => ct.id === categoryId);
+    return category
+      ? category
+      : { id: categoryId, name: categoryId, status: "unknown" };
+  });
 }
 
 /**
@@ -22,16 +24,16 @@ function getLocaleCategoryTag(locale, categoryId) {
  */
 function getLocaleCategoryTagName(locale, categoryId) {
   return getLocaleCategoryTags(locale).then((module) => {
-    let category = module.default.find(ct => ct.id === categoryId)
-    return category ? category.name : categoryId
-  })
+    let category = module.default.find((ct) => ct.id === categoryId);
+    return category ? category.name : categoryId;
+  });
 }
 
 /**
  * Origins per locale
  */
 function getLocaleOriginTags(locale) {
-  return import(`@/data/origins/${locale}.json`)
+  return import(`@/data/origins/${locale}.json`);
 }
 
 /**
@@ -40,16 +42,18 @@ function getLocaleOriginTags(locale) {
  */
 function getLocaleOriginTag(locale, originId) {
   return getLocaleOriginTags(locale).then((module) => {
-    let origin = module.default.find(ot => ot.id === originId)
-    return origin ? origin : { 'id': originId, 'name': originId, 'status': 'unknown' }
-  })
+    let origin = module.default.find((ot) => ot.id === originId);
+    return origin
+      ? origin
+      : { id: originId, name: originId, status: "unknown" };
+  });
 }
 
 /**
  * Labels per locale
  */
 function getLocaleLabelTags(locale) {
-  return import(`@/data/labels/${locale}.json`)
+  return import(`@/data/labels/${locale}.json`);
 }
 
 /**
@@ -58,16 +62,16 @@ function getLocaleLabelTags(locale) {
  */
 function getLocaleLabelTag(locale, labelId) {
   return getLocaleLabelTags(locale).then((module) => {
-    let label = module.default.find(ct => ct.id === labelId)
-    return label ? label : { 'id': labelId, 'name': labelId, 'status': 'unknown' }
-  })
+    let label = module.default.find((ct) => ct.id === labelId);
+    return label ? label : { id: labelId, name: labelId, status: "unknown" };
+  });
 }
 
 /**
  * Countries per locale
  */
 function getLocaleCountryTags(locale) {
-  return import(`@/data/countries/${locale}.json`)
+  return import(`@/data/countries/${locale}.json`);
 }
 
 export default {
@@ -79,4 +83,4 @@ export default {
   getLocaleLabelTags,
   getLocaleLabelTag,
   getLocaleCountryTags,
-}
+};

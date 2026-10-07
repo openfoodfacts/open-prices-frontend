@@ -1,140 +1,202 @@
 <template>
-  <v-card v-if="location" :id="'location_' + location.id" :class="isSelected ? 'border-success' : ''" data-name="location-card">
+  <v-card
+    v-if="location"
+    :id="'location_' + location.id"
+    :class="isSelected ? 'border-success' : ''"
+    data-name="location-card"
+  >
     <v-card-text class="pa-2">
       <v-row>
-        <v-col class="pr-0" style="max-width:20%;">
+        <v-col class="pr-0" style="max-width: 20%">
           <LocationBrandLogoImg
             :logo="getLocationOSMBrandLogoPathName"
             width="100px"
           />
         </v-col>
-        <v-col style="max-width:80%;">
+        <v-col style="max-width: 80%">
           <v-row>
-            <v-col :cols="!showActionButton ? '12' : '10'" @click="clickLocation()">
+            <v-col
+              :cols="!showActionButton ? '12' : '10'"
+              @click="clickLocation()"
+            >
               <h3>{{ getLocationTitle }}</h3>
               <p>{{ getLocationSubtitle }}</p>
-              <LocationDetailsRow v-if="showLocationDetailsRow" class="mt-0" :location="location" :hideLocationOSMID="hideLocationOSMID" :hideCountryCity="hideCountryCity" />
+              <LocationDetailsRow
+                v-if="showLocationDetailsRow"
+                class="mt-0"
+                :location="location"
+                :hideLocationOSMID="hideLocationOSMID"
+                :hideCountryCity="hideCountryCity"
+              />
             </v-col>
             <v-col v-if="showEditButton" cols="2" class="pl-0">
-              <v-btn class="float-right" icon="mdi-pencil" size="small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickLocation()" />
+              <v-btn
+                class="float-right"
+                icon="mdi-pencil"
+                size="small"
+                density="comfortable"
+                variant="text"
+                :title="$t('Common.Edit')"
+                @click="clickLocation()"
+              />
             </v-col>
             <v-col v-else-if="showFavoriteButton" cols="2" class="pl-0">
-              <v-btn class="float-right" :icon="isFavoriteLocation ? 'mdi-star' : 'mdi-star-outline'" size="small" density="comfortable" variant="text" :title="isFavoriteLocation ? $t('Common.FavoritesRemove') : $t('Common.FavoritesAdd')" @click.stop="toggleFavorite()" />
+              <v-btn
+                class="float-right"
+                :icon="isFavoriteLocation ? 'mdi-star' : 'mdi-star-outline'"
+                size="small"
+                density="comfortable"
+                variant="text"
+                :title="
+                  isFavoriteLocation
+                    ? $t('Common.FavoritesRemove')
+                    : $t('Common.FavoritesAdd')
+                "
+                @click.stop="toggleFavorite()"
+              />
             </v-col>
           </v-row>
         </v-col>
       </v-row>
 
-      <LocationFooterRow v-if="showLocationFooterRow" class="mt-0" :location="location" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
+      <LocationFooterRow
+        v-if="showLocationFooterRow"
+        class="mt-0"
+        :location="location"
+        :hideActionMenuButton="hideActionMenuButton"
+        :readonly="readonly"
+      />
     </v-card-text>
   </v-card>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import constants from '../constants'
-import geo_utils from '../utils/geo.js'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import constants from "../constants";
+import geo_utils from "../utils/geo.js";
 
 export default {
   components: {
-    LocationBrandLogoImg: defineAsyncComponent(() => import('./LocationBrandLogoImg.vue')),
-    LocationDetailsRow: defineAsyncComponent(() => import('../components/LocationDetailsRow.vue')),
-    LocationFooterRow: defineAsyncComponent(() => import('../components/LocationFooterRow.vue')),
+    LocationBrandLogoImg: defineAsyncComponent(
+      () => import("./LocationBrandLogoImg.vue"),
+    ),
+    LocationDetailsRow: defineAsyncComponent(
+      () => import("../components/LocationDetailsRow.vue"),
+    ),
+    LocationFooterRow: defineAsyncComponent(
+      () => import("../components/LocationFooterRow.vue"),
+    ),
   },
   props: {
     location: {
       type: Object,
-      required: true
+      required: true,
     },
     isSelected: {
       type: Boolean,
-      default: false
+      default: false,
     },
     showFavoriteButton: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideLocationOSMID: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideCountryCity: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideLocationFooterRow: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideActionMenuButton: {
       type: Boolean,
-      default: false
+      default: false,
     },
     readonly: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
-  emits: ['editLocation'],
+  emits: ["editLocation"],
   data() {
-    return {}
+    return {};
   },
   computed: {
     ...mapStores(useAppStore),
     isTypeONLINE() {
-      return this.location && this.location.type === constants.LOCATION_TYPE_ONLINE
+      return (
+        this.location && this.location.type === constants.LOCATION_TYPE_ONLINE
+      );
     },
     getLocationTitle() {
       if (this.isTypeONLINE) {
-        return geo_utils.getLocationONLINETitle(this.location)
+        return geo_utils.getLocationONLINETitle(this.location);
       }
-      return geo_utils.getLocationOSMTitle(this.location, true, false, true, false, true)
+      return geo_utils.getLocationOSMTitle(
+        this.location,
+        true,
+        false,
+        true,
+        false,
+        true,
+      );
     },
     getLocationSubtitle() {
       if (this.isTypeONLINE) {
-        return ''
+        return "";
       }
-      return geo_utils.getLocationOSMTitle(this.location, false, true, false, false, false)
+      return geo_utils.getLocationOSMTitle(
+        this.location,
+        false,
+        true,
+        false,
+        false,
+        false,
+      );
     },
     getLocationOSMBrandLogoPathName() {
-      return geo_utils.getLocationOSMBrandLogoPathName(this.location)
+      return geo_utils.getLocationOSMBrandLogoPathName(this.location);
     },
     showEditButton() {
-      return this.isSelected
+      return this.isSelected;
     },
     showActionButton() {
-      return this.showEditButton || this.showFavoriteButton
+      return this.showEditButton || this.showFavoriteButton;
     },
     isFavoriteLocation() {
-      return this.appStore.isFavoriteLocation(this.location)
+      return this.appStore.isFavoriteLocation(this.location);
     },
     showLocationDetailsRow() {
-      return !this.isTypeONLINE
+      return !this.isTypeONLINE;
     },
     showLocationFooterRow() {
-      return !this.hideLocationFooterRow
-    }
+      return !this.hideLocationFooterRow;
+    },
   },
   methods: {
     clickLocation() {
       if (this.isSelected) {
-        this.$emit('editLocation', this.location)
-        return
+        this.$emit("editLocation", this.location);
+        return;
       }
       if (this.readonly) {
-        return
+        return;
       }
-      this.$router.push({ path: `/locations/${this.location.id}` })
+      this.$router.push({ path: `/locations/${this.location.id}` });
     },
     toggleFavorite() {
       if (this.appStore.isFavoriteLocation(this.location)) {
-        this.appStore.removeFavoriteLocation(this.location)
+        this.appStore.removeFavoriteLocation(this.location);
       } else {
-        this.appStore.addFavoriteLocation(this.location)
+        this.appStore.addFavoriteLocation(this.location);
       }
-     },
-  }
-}
+    },
+  },
+};
 </script>

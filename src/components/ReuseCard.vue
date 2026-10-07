@@ -4,11 +4,20 @@
     <v-card-title>{{ reuse.name }}</v-card-title>
     <v-card-text>{{ reuse.description }}</v-card-text>
     <v-card-text>
-      <v-chip v-for="tag in reuse.tags" :key="tag" class="mr-1" density="comfortable">
+      <v-chip
+        v-for="tag in reuse.tags"
+        :key="tag"
+        class="mr-1"
+        density="comfortable"
+      >
         {{ tag }}
       </v-chip>
       <!-- <v-chip v-if="reuse.author" class="mr-1" density="comfortable" prepend-icon="mdi-account">{{ reuse.author }}</v-chip> -->
-      <v-chip v-if="reuse.date" density="comfortable" prepend-icon="mdi-clock-outline">
+      <v-chip
+        v-if="reuse.date"
+        density="comfortable"
+        prepend-icon="mdi-clock-outline"
+      >
         {{ reuse.date }}
       </v-chip>
     </v-card-text>
@@ -23,7 +32,7 @@
         rel="noopener noreferrer"
         :title="$t('Common.View')"
       >
-        {{ $t('Common.View') }}
+        {{ $t("Common.View") }}
       </v-btn>
       <v-spacer />
       <v-btn
@@ -43,8 +52,8 @@ export default {
   props: {
     reuse: {
       type: Object,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>

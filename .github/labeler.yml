@@ -1,78 +1,77 @@
 # For reference, please look at https://github.com/actions/labeler
 
 GitHub Actions:
-- changed-files:
-  - any-glob-to-any-file: '.github/**/*'
+  - changed-files:
+      - any-glob-to-any-file: ".github/**/*"
 
 Price addition:
-- changed-files:
-  - any-glob-to-any-file: 'src/views/PriceAddHome.vue'
-  - any-glob-to-any-file: 'src/views/PriceAddSingle.vue'
-  - any-glob-to-any-file: 'src/views/PriceAddMultiple.vue'
+  - changed-files:
+      - any-glob-to-any-file: "src/views/PriceAddHome.vue"
+      - any-glob-to-any-file: "src/views/PriceAddSingle.vue"
+      - any-glob-to-any-file: "src/views/PriceAddMultiple.vue"
 
 Brands:
-- changed-files:
-  - any-glob-to-any-file: 'src/views/BrandDetail.vue'
+  - changed-files:
+      - any-glob-to-any-file: "src/views/BrandDetail.vue"
 
 📍 Locations:
-- changed-files:
-  - any-glob-to-any-file: 'src/views/LocationList.vue'
-  - any-glob-to-any-file: 'src/views/LocationDetail.vue'
+  - changed-files:
+      - any-glob-to-any-file: "src/views/LocationList.vue"
+      - any-glob-to-any-file: "src/views/LocationDetail.vue"
 
 🥫 Product page:
-- changed-files:
-  - any-glob-to-any-file: 'src/views/ProductList.vue'
-  - any-glob-to-any-file: 'src/views/ProductDetail.vue'
+  - changed-files:
+      - any-glob-to-any-file: "src/views/ProductList.vue"
+      - any-glob-to-any-file: "src/views/ProductDetail.vue"
 
 🔍 Search:
-- changed-files:
-  - any-glob-to-any-file: 'src/views/Search.vue'
+  - changed-files:
+      - any-glob-to-any-file: "src/views/Search.vue"
 
 Stats:
-- changed-files:
-  - any-glob-to-any-file: 'src/views/Stats.vue'
+  - changed-files:
+      - any-glob-to-any-file: "src/views/Stats.vue"
 
 User:
-- changed-files:
-  - any-glob-to-any-file: 'src/views/UserList.vue'
-  - any-glob-to-any-file: 'src/views/UserDetail.vue'
+  - changed-files:
+      - any-glob-to-any-file: "src/views/UserList.vue"
+      - any-glob-to-any-file: "src/views/UserDetail.vue"
 
 User dashboard:
-- changed-files:
-  - any-glob-to-any-file: 'src/views/UserDashboard*.vue'
+  - changed-files:
+      - any-glob-to-any-file: "src/views/UserDashboard*.vue"
 
 ⚙️ Settings:
-- changed-files:
-  - any-glob-to-any-file: 'src/views/Settings.vue'
+  - changed-files:
+      - any-glob-to-any-file: "src/views/Settings.vue"
 
 Action menus:
-- changed-files:
-  - any-glob-to-any-file: 'src/components/*ActionMenuButton.vue'
+  - changed-files:
+      - any-glob-to-any-file: "src/components/*ActionMenuButton.vue"
 
 Translations:
-- all:
-  - changed-files:
-    - any-glob-to-any-file: 'src/i18n/**/*'
-    - all-globs-to-all-files: '!src/i18n/locales/en.json'
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "src/i18n/**/*"
+          - all-globs-to-all-files: "!src/i18n/locales/en.json"
 
 Challenges:
-- all:
-  - changed-files:
-    - any-glob-to-any-file: 'src/components/ChallengeCard.vue'
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "src/components/ChallengeCard.vue"
 
 Receipt assistant:
-- all:
-  - changed-files:
-    - any-glob-to-any-file: 'src/views/ReceiptAssistant.vue'
-    - any-glob-to-any-file: 'src/components/ReceiptTableCard.vue'
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "src/views/ReceiptAssistant.vue"
+          - any-glob-to-any-file: "src/components/ReceiptTableCard.vue"
 
 contribution assistant:
-- all:
-  - changed-files:
-    - any-glob-to-any-file: 'src/views/ProofPriceTagAssistant.vue'
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "src/views/ProofPriceTagAssistant.vue"
 
 price validation assistant:
-- all:
-  - changed-files:
-    - any-glob-to-any-file: 'src/views/PriceValidationAssistant.vue'
-    
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "src/views/PriceValidationAssistant.vue"

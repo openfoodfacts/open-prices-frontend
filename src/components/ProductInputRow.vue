@@ -1,12 +1,34 @@
 <template>
   <v-row v-if="!hideProductTypeInput">
     <v-col>
-      <v-item-group v-model="productForm.type" class="d-inline" mandatory @update:modelValue="setType($event)">
-        <v-item v-for="pt in productTypeDisplayList" :key="pt.key" v-slot="{ isSelected, toggle }" :value="pt.key">
-          <v-chip class="mr-1" :class="isSelected ? 'border-success' : ''" variant="outlined" density="comfortable" @click="toggle">
+      <v-item-group
+        v-model="productForm.type"
+        class="d-inline"
+        mandatory
+        @update:modelValue="setType($event)"
+      >
+        <v-item
+          v-for="pt in productTypeDisplayList"
+          :key="pt.key"
+          v-slot="{ isSelected, toggle }"
+          :value="pt.key"
+        >
+          <v-chip
+            class="mr-1"
+            :class="isSelected ? 'border-success' : ''"
+            variant="outlined"
+            density="comfortable"
+            @click="toggle"
+          >
             <v-icon start :icon="pt.icon" />
-            {{ $t('Common.' + pt.value) }}
-            <v-icon end :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" :color="isSelected ? 'green' : ''" />
+            {{ $t("Common." + pt.value) }}
+            <v-icon
+              end
+              :icon="
+                isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'
+              "
+              :color="isSelected ? 'green' : ''"
+            />
           </v-chip>
         </v-item>
       </v-item-group>
@@ -14,41 +36,66 @@
   </v-row>
   <v-row v-if="productIsTypeProduct" class="mt-0">
     <v-col>
-      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :isSelected="true" :readonly="true" elevation="1" @editProduct="showBarcodeScannerDialog" />
-      <v-btn v-else class="text-body-2 mb-2" block spaced="end" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
-        {{ $t('Common.ProductFind') }}
+      <ProductCard
+        v-if="productForm.product"
+        :product="productForm.product"
+        :hideCategoriesAndLabels="true"
+        :hideProductBarcode="hideProductBarcode"
+        :hideActionMenuButton="true"
+        :isSelected="true"
+        :readonly="true"
+        elevation="1"
+        @editProduct="showBarcodeScannerDialog"
+      />
+      <v-btn
+        v-else
+        class="text-body-2 mb-2"
+        block
+        spaced="end"
+        prepend-icon="mdi-barcode-scan"
+        :class="productForm.product ? 'border-success' : 'border-error'"
+        @click="showBarcodeScannerDialog"
+      >
+        {{ $t("Common.ProductFind") }}
       </v-btn>
     </v-col>
   </v-row>
   <v-row v-else-if="productIsTypeCategory" class="mt-0">
     <v-col cols="6">
       <div class="text-body-2 required">
-        {{ $t('AddPriceSingle.ProductInfo.CategoryLabel') }}
+        {{ $t("AddPriceSingle.ProductInfo.CategoryLabel") }}
       </div>
       <v-autocomplete
         v-model="productForm.category_tag"
-        :class="productForm.category_tag ? 'outline-border-success' : 'outline-border-error'"
+        :class="
+          productForm.category_tag
+            ? 'outline-border-success'
+            : 'outline-border-error'
+        "
         density="compact"
         variant="outlined"
         :items="categoryTags"
-        :item-title="item => item.name"
-        :item-value="item => item.id"
+        :item-title="(item) => item.name"
+        :item-value="(item) => item.id"
         hide-details="auto"
       />
     </v-col>
     <v-col cols="6">
       <div class="text-body-2">
-        {{ $t('AddPriceSingle.ProductInfo.OriginLabel') }}
+        {{ $t("AddPriceSingle.ProductInfo.OriginLabel") }}
       </div>
       <v-autocomplete
         v-model="productForm.origins_tags"
         density="compact"
         variant="outlined"
         :items="originTags"
-        :item-title="item => item.name"
-        :item-value="item => item.id"
+        :item-title="(item) => item.name"
+        :item-value="(item) => item.id"
         hide-details="auto"
-        @update:modelValue="newValue => productForm.origins_tags = replaceStringWithList(newValue)"
+        @update:modelValue="
+          (newValue) =>
+            (productForm.origins_tags = replaceStringWithList(newValue))
+        "
       />
     </v-col>
     <v-col class="pt-0" cols="6">
@@ -61,7 +108,10 @@
         :label="lt.name"
         :value="lt.id"
         hide-details="auto"
-        @update:modelValue="newValue => productForm.labels_tags = replaceStringWithList(newValue)"
+        @update:modelValue="
+          (newValue) =>
+            (productForm.labels_tags = replaceStringWithList(newValue))
+        "
       />
     </v-col>
   </v-row>
@@ -79,18 +129,22 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
-import data_utils from '../utils/data.js'
-import utils from '../utils.js'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
+import data_utils from "../utils/data.js";
+import utils from "../utils.js";
 
 export default {
   components: {
-    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
+    ProductCard: defineAsyncComponent(
+      () => import("../components/ProductCard.vue"),
+    ),
+    BarcodeScannerDialog: defineAsyncComponent(
+      () => import("../components/BarcodeScannerDialog.vue"),
+    ),
   },
   props: {
     productForm: {
@@ -98,144 +152,166 @@ export default {
       default: () => ({
         type: null,
         product: null,
-        product_code: '',
+        product_code: "",
         category_tag: null,
         origins_tags: [],
         labels_tags: [],
-        image_path: null,  // price tag cropped image URL
-      })
+        image_path: null, // price tag cropped image URL
+      }),
     },
     disableInitWhenSwitchingType: {
       type: Boolean,
-      default: () => false
+      default: () => false,
     },
     hideProductTypeInput: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideProductBarcode: {
       type: Boolean,
-      default: true
+      default: true,
     },
     hideBarcodeScannerTab: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
-  emits: ['filled'],
+  emits: ["filled"],
   data() {
     return {
-      categoryTags: [],  // list of category tags for autocomplete  // see mounted
-      originTags: [],  // list of origins tags for autocomplete  // see mounted
-      labelTags: [],  // list of labels tags for checkboxes  // see mounted
+      categoryTags: [], // list of category tags for autocomplete  // see mounted
+      originTags: [], // list of origins tags for autocomplete  // see mounted
+      labelTags: [], // list of labels tags for checkboxes  // see mounted
       barcodeScannerDialog: false,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     productIsTypeProduct() {
-      return this.productForm && this.productForm.type === constants.PRICE_TYPE_PRODUCT
+      return (
+        this.productForm &&
+        this.productForm.type === constants.PRICE_TYPE_PRODUCT
+      );
     },
     productIsTypeCategory() {
-      return this.productForm && this.productForm.type === constants.PRICE_TYPE_CATEGORY
+      return (
+        this.productForm &&
+        this.productForm.type === constants.PRICE_TYPE_CATEGORY
+      );
     },
     productTypeDisplayList() {
-      return constants.PRICE_TYPE_LIST
+      return constants.PRICE_TYPE_LIST;
     },
     productProductFormFilled() {
-      let keys = ['product_code']
-      return Object.keys(this.productForm).filter(k => keys.includes(k)).every(k => !!this.productForm[k])
+      let keys = ["product_code"];
+      return Object.keys(this.productForm)
+        .filter((k) => keys.includes(k))
+        .every((k) => !!this.productForm[k]);
     },
     categoryProductFormFilled() {
-      let keys = ['category_tag']  // 'origins_tags'
-      return Object.keys(this.productForm).filter(k => keys.includes(k)).every(k => !!this.productForm[k])
+      let keys = ["category_tag"]; // 'origins_tags'
+      return Object.keys(this.productForm)
+        .filter((k) => keys.includes(k))
+        .every((k) => !!this.productForm[k]);
     },
     productFormFilled() {
-      return this.productIsTypeCategory ? this.categoryProductFormFilled : this.productProductFormFilled
+      return this.productIsTypeCategory
+        ? this.categoryProductFormFilled
+        : this.productProductFormFilled;
     },
   },
   watch: {
     productFormFilled: {
-      handler(newProductFormFilled, oldProductFormFilled) {  // eslint-disable-line no-unused-vars
-        this.$emit('filled', newProductFormFilled)
+      // eslint-disable-next-line no-unused-vars
+      handler(newProductFormFilled, oldProductFormFilled) {
+        this.$emit("filled", newProductFormFilled);
       },
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   mounted() {
     if (this.$route.query.code) {
-      if (this.$route.query.code.includes(':')) {
-        this.productForm.type = constants.PRICE_TYPE_CATEGORY
-        this.productForm.category_tag = this.$route.query.code
-      }
-      else {
-        this.productForm.type = constants.PRICE_TYPE_PRODUCT
-        this.productForm.product_code = this.$route.query.code
+      if (this.$route.query.code.includes(":")) {
+        this.productForm.type = constants.PRICE_TYPE_CATEGORY;
+        this.productForm.category_tag = this.$route.query.code;
+      } else {
+        this.productForm.type = constants.PRICE_TYPE_PRODUCT;
+        this.productForm.product_code = this.$route.query.code;
       }
     }
-    this.setCategoryTags()
-    this.setOriginTags()
-    this.setLabelTags()
-    this.productForm.type = this.productForm.type ? this.productForm.type : (this.productForm.product_code ? constants.PRICE_TYPE_PRODUCT : this.appStore.user.last_product_product_used)
+    this.setCategoryTags();
+    this.setOriginTags();
+    this.setLabelTags();
+    this.productForm.type = this.productForm.type
+      ? this.productForm.type
+      : this.productForm.product_code
+        ? constants.PRICE_TYPE_PRODUCT
+        : this.appStore.user.last_product_product_used;
     if (this.productForm.product_code) {
-      this.getProduct(this.productForm.product_code)
+      this.getProduct(this.productForm.product_code);
     }
   },
   methods: {
     setCategoryTags() {
-      data_utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
-        this.categoryTags = module.default
-      })
+      data_utils
+        .getLocaleCategoryTags(this.appStore.getUserLanguage)
+        .then((module) => {
+          this.categoryTags = module.default;
+        });
     },
     setOriginTags() {
-      data_utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
-        this.originTags = module.default
-      })
+      data_utils
+        .getLocaleOriginTags(this.appStore.getUserLanguage)
+        .then((module) => {
+          this.originTags = module.default;
+        });
     },
     setLabelTags() {
-      data_utils.getLocaleLabelTags(this.appStore.getUserLanguage).then((module) => {
-        this.labelTags = module.default
-      })
+      data_utils
+        .getLocaleLabelTags(this.appStore.getUserLanguage)
+        .then((module) => {
+          this.labelTags = module.default;
+        });
     },
     showBarcodeScannerDialog() {
-      this.barcodeScannerDialog = true
+      this.barcodeScannerDialog = true;
     },
     initProductForm() {
-      this.productForm.product = null
-      this.productForm.product_code = ''
-      this.productForm.category_tag = null
-      this.productForm.origins_tags = []
-      this.productForm.labels_tags = []
+      this.productForm.product = null;
+      this.productForm.product_code = "";
+      this.productForm.category_tag = null;
+      this.productForm.origins_tags = [];
+      this.productForm.labels_tags = [];
     },
     setType(type) {
-      this.productForm.type = type
+      this.productForm.type = type;
       if (!this.disableInitWhenSwitchingType) {
-        this.initProductForm()
+        this.initProductForm();
       }
     },
     setProductCode(code) {
-      this.productForm.product_code = code
-      this.getProduct(code)
+      this.productForm.product_code = code;
+      this.getProduct(code);
     },
     getProduct(code) {
-      this.productForm.product = null
+      this.productForm.product = null;
       openPricesApi
         .getProductByCode(code)
         .catch((error) => {
-          if (error.status === 404) return {'code': code, 'price_count': 0}  // product not in Open Prices (yet)
-          throw error
+          if (error.status === 404) return { code: code, price_count: 0 }; // product not in Open Prices (yet)
+          throw error;
         })
         .then((product) => {
-          this.productForm.product = product
+          this.productForm.product = product;
         })
         .catch((error) => {
-          alert(this.$t('Common.ServerError'))
-          console.log(error)
-        })
+          alert(this.$t("Common.ServerError"));
+          console.log(error);
+        });
     },
     replaceStringWithList(value) {
-      return utils.replaceStringWithList(value)
-    }
-  }
-}
+      return utils.replaceStringWithList(value);
+    },
+  },
+};
 </script>

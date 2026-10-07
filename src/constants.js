@@ -1,111 +1,163 @@
-const OFF_NAME = 'Open Food Facts'
-const OFF_ICON = 'mdi-food-apple-outline'
-const OBF_NAME = 'Open Beauty Facts'
-const OBF_ICON = 'mdi-lotion-outline'
-const OPFF_NAME = 'Open Pet Food Facts'
-const OPFF_ICON = 'mdi-paw'
-const OPF_NAME = 'Open Products Facts'
-const OPF_ICON = 'mdi-bookshelf'
-const PRICE_ICON = 'mdi-tag-outline'
-const PRICE_TYPE_PRODUCT = 'PRODUCT'
-const PRICE_TYPE_PRODUCT_ICON = 'mdi-barcode'
-const PRICE_TYPE_CATEGORY = 'CATEGORY'
-const PRICE_TYPE_CATEGORY_ICON = 'mdi-basket-outline'
-const PRICE_TAG_STATUS_NEW = {key: -1, color: 'red', icon: '', textSmallScreen: 'Common.New', text: 'ContributionAssistant.PriceTagLabels.NewPriceTag'}
-const PRICE_TAG_STATUS_EMPTY = {key: null, color: 'blue', icon: '', textSmallScreen: 'Common.WithoutAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagWithoutPrice'}
-const PRICE_TAG_STATUS_WITH_PRICE = {key: 1, color: 'green', icon: '', textSmallScreen: 'Common.WithAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagWithPrice'}
-const PRICE_TAG_STATUS_UNREADABLE = {key: 2, color: 'orange', icon: 'mdi-eye-off-outline', textSmallScreen: 'Common.Unreadable', text: 'ContributionAssistant.PriceTagLabels.PriceTagUnreadable'}
-const PRICE_TAG_STATUS_TRUNCATED = {key: 3, color: '#883c1e', icon: 'mdi-crop', textSmallScreen: 'Common.Truncated', text: 'ContributionAssistant.PriceTagLabels.PriceTagTruncated'}
-const PRICE_TAG_STATUS_NOT_A_PRICE = {key: 4, color: '#88631e', icon: 'mdi-currency-usd-off', textSmallScreen: 'Common.NotAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagNotAPrice'}
-const PRICE_TAG_STATUS_NO_BARCODE = {key: 5, color: 'yellow', icon: 'mdi-barcode-off', textSmallScreen: 'Common.NoBarcode', text: 'ContributionAssistant.PriceTagLabels.PriceTagNoBarcode'}
-const PRICE_TAG_STATUS_OTHER = {key: 6, color: 'grey', icon: '', textSmallScreen: 'Common.Other', text: 'ContributionAssistant.PriceTagLabels.PriceTagOther'}
-const PRODUCT_ICON = 'mdi-food-outline'
-const PRODUCT_CATEGORY_LABEL_ORGANIC = 'en:organic'
-const PROOF_ICON = 'mdi-image'
-const PROOF_TYPE_PRICE_TAG = 'PRICE_TAG'
-const PROOF_TYPE_PRICE_TAG_ICON = 'mdi-library-shelves'
-const PROOF_TYPE_RECEIPT = 'RECEIPT'
-const PROOF_TYPE_RECEIPT_ICON = 'mdi-receipt-text-outline'
-const PROOF_TYPE_GDPR_REQUEST = 'GDPR_REQUEST'
-const PROOF_TYPE_GDPR_REQUEST_ICON = 'mdi-email-open-outline'
-const PROOF_TYPE_SHOP_IMPORT = 'SHOP_IMPORT'
-const PROOF_TYPE_SHOP_IMPORT_ICON = 'mdi-store-outline'
-const LOCATION_ICON = 'mdi-map-marker-outline'
-const LOCATION_TYPE_OSM = 'OSM'
-const LOCATION_TYPE_OSM_ICON = 'mdi-map-marker-outline'
-const LOCATION_TYPE_ONLINE = 'ONLINE'
-const LOCATION_TYPE_ONLINE_ICON = 'mdi-web'
-const LOCATION_SELECTOR_DISPLAY_OSM = 'osm'
-const LOCATION_SELECTOR_DISPLAY_ONLINE = 'online'
-const COUNTRY_ICON = 'mdi-map-outline'
-const USER_ICON = 'mdi-account'
-const USER_CONSUMPTION = 'CONSUMPTION'
-const USER_CONSUMPTION_ICON = 'mdi-cart-outline'
-const USER_COMMUNITY = 'COMMUNITY'
-const MODERATION_ICON = 'mdi-shield-account'
-const REPORT_ICON = 'mdi-flag'
-const CHALLENGE_ICON = 'mdi-trophy-variant'
-const BADGE_ICON = 'mdi-medal-outline'
-const DATE_ICON = 'mdi-calendar-today'
-const CURRENCY_ICON = 'mdi-cash'
-const EXPERIMENTS_ICON = 'mdi-test-tube'
-const STATS_ICON = 'mdi-chart-box-outline'
-const SETTINGS_ICON = 'mdi-cog-outline'
-const ABOUT_ICON = 'mdi-information-outline'
-const OSM_NAME = 'OpenStreetMap'
+const OFF_NAME = "Open Food Facts";
+const OFF_ICON = "mdi-food-apple-outline";
+const OBF_NAME = "Open Beauty Facts";
+const OBF_ICON = "mdi-lotion-outline";
+const OPFF_NAME = "Open Pet Food Facts";
+const OPFF_ICON = "mdi-paw";
+const OPF_NAME = "Open Products Facts";
+const OPF_ICON = "mdi-bookshelf";
+const PRICE_ICON = "mdi-tag-outline";
+const PRICE_TYPE_PRODUCT = "PRODUCT";
+const PRICE_TYPE_PRODUCT_ICON = "mdi-barcode";
+const PRICE_TYPE_CATEGORY = "CATEGORY";
+const PRICE_TYPE_CATEGORY_ICON = "mdi-basket-outline";
+const PRICE_TAG_STATUS_NEW = {
+  key: -1,
+  color: "red",
+  icon: "",
+  textSmallScreen: "Common.New",
+  text: "ContributionAssistant.PriceTagLabels.NewPriceTag",
+};
+const PRICE_TAG_STATUS_EMPTY = {
+  key: null,
+  color: "blue",
+  icon: "",
+  textSmallScreen: "Common.WithoutAPrice",
+  text: "ContributionAssistant.PriceTagLabels.PriceTagWithoutPrice",
+};
+const PRICE_TAG_STATUS_WITH_PRICE = {
+  key: 1,
+  color: "green",
+  icon: "",
+  textSmallScreen: "Common.WithAPrice",
+  text: "ContributionAssistant.PriceTagLabels.PriceTagWithPrice",
+};
+const PRICE_TAG_STATUS_UNREADABLE = {
+  key: 2,
+  color: "orange",
+  icon: "mdi-eye-off-outline",
+  textSmallScreen: "Common.Unreadable",
+  text: "ContributionAssistant.PriceTagLabels.PriceTagUnreadable",
+};
+const PRICE_TAG_STATUS_TRUNCATED = {
+  key: 3,
+  color: "#883c1e",
+  icon: "mdi-crop",
+  textSmallScreen: "Common.Truncated",
+  text: "ContributionAssistant.PriceTagLabels.PriceTagTruncated",
+};
+const PRICE_TAG_STATUS_NOT_A_PRICE = {
+  key: 4,
+  color: "#88631e",
+  icon: "mdi-currency-usd-off",
+  textSmallScreen: "Common.NotAPrice",
+  text: "ContributionAssistant.PriceTagLabels.PriceTagNotAPrice",
+};
+const PRICE_TAG_STATUS_NO_BARCODE = {
+  key: 5,
+  color: "yellow",
+  icon: "mdi-barcode-off",
+  textSmallScreen: "Common.NoBarcode",
+  text: "ContributionAssistant.PriceTagLabels.PriceTagNoBarcode",
+};
+const PRICE_TAG_STATUS_OTHER = {
+  key: 6,
+  color: "grey",
+  icon: "",
+  textSmallScreen: "Common.Other",
+  text: "ContributionAssistant.PriceTagLabels.PriceTagOther",
+};
+const PRODUCT_ICON = "mdi-food-outline";
+const PRODUCT_CATEGORY_LABEL_ORGANIC = "en:organic";
+const PROOF_ICON = "mdi-image";
+const PROOF_TYPE_PRICE_TAG = "PRICE_TAG";
+const PROOF_TYPE_PRICE_TAG_ICON = "mdi-library-shelves";
+const PROOF_TYPE_RECEIPT = "RECEIPT";
+const PROOF_TYPE_RECEIPT_ICON = "mdi-receipt-text-outline";
+const PROOF_TYPE_GDPR_REQUEST = "GDPR_REQUEST";
+const PROOF_TYPE_GDPR_REQUEST_ICON = "mdi-email-open-outline";
+const PROOF_TYPE_SHOP_IMPORT = "SHOP_IMPORT";
+const PROOF_TYPE_SHOP_IMPORT_ICON = "mdi-store-outline";
+const LOCATION_ICON = "mdi-map-marker-outline";
+const LOCATION_TYPE_OSM = "OSM";
+const LOCATION_TYPE_OSM_ICON = "mdi-map-marker-outline";
+const LOCATION_TYPE_ONLINE = "ONLINE";
+const LOCATION_TYPE_ONLINE_ICON = "mdi-web";
+const LOCATION_SELECTOR_DISPLAY_OSM = "osm";
+const LOCATION_SELECTOR_DISPLAY_ONLINE = "online";
+const COUNTRY_ICON = "mdi-map-outline";
+const USER_ICON = "mdi-account";
+const USER_CONSUMPTION = "CONSUMPTION";
+const USER_CONSUMPTION_ICON = "mdi-cart-outline";
+const USER_COMMUNITY = "COMMUNITY";
+const MODERATION_ICON = "mdi-shield-account";
+const REPORT_ICON = "mdi-flag";
+const CHALLENGE_ICON = "mdi-trophy-variant";
+const BADGE_ICON = "mdi-medal-outline";
+const DATE_ICON = "mdi-calendar-today";
+const CURRENCY_ICON = "mdi-cash";
+const EXPERIMENTS_ICON = "mdi-test-tube";
+const STATS_ICON = "mdi-chart-box-outline";
+const SETTINGS_ICON = "mdi-cog-outline";
+const ABOUT_ICON = "mdi-information-outline";
+const OSM_NAME = "OpenStreetMap";
 
 export default {
-  APP_NAME: 'Open Prices',
-  APP_DESCRIPTION: 'An open crowdsourced database of prices',
+  APP_NAME: "Open Prices",
+  APP_DESCRIPTION: "An open crowdsourced database of prices",
   APP_URL: import.meta.env.VITE_OPEN_PRICES_APP_URL,
   APP_API_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/api/docs`,
-  APP_USER_AGENT: 'Open Prices Web App',
-  APP_HOME_ICONS: '🏷🍊💲',
+  APP_USER_AGENT: "Open Prices Web App",
+  APP_HOME_ICONS: "🏷🍊💲",
   APP_DUMP_PRICES_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/data/prices.jsonl.gz`,
   APP_DUMP_PROOFS_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/data/proofs.jsonl.gz`,
   APP_DUMP_LOCATIONS_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/data/locations.jsonl.gz`,
-  APP_GITHUB_BACKEND_URL: 'https://github.com/openfoodfacts/open-prices',
-  APP_GITHUB_FRONTEND_URL: 'https://github.com/openfoodfacts/open-prices-frontend',
-  APP_GITHUB_REUSE_DISCUSSION_URL: 'https://github.com/openfoodfacts/open-prices/discussions/562',
-  APP_GITHUB_CHALLENGE_DISCUSSION_URL: 'https://github.com/openfoodfacts/open-prices/discussions/509',
-  APP_HUGGING_FACE_URL: 'https://huggingface.co/datasets/openfoodfacts/open-prices',
-  APP_DATA_GOUV_URL: 'https://www.data.gouv.fr/fr/datasets/open-prices/',
+  APP_GITHUB_BACKEND_URL: "https://github.com/openfoodfacts/open-prices",
+  APP_GITHUB_FRONTEND_URL:
+    "https://github.com/openfoodfacts/open-prices-frontend",
+  APP_GITHUB_REUSE_DISCUSSION_URL:
+    "https://github.com/openfoodfacts/open-prices/discussions/562",
+  APP_GITHUB_CHALLENGE_DISCUSSION_URL:
+    "https://github.com/openfoodfacts/open-prices/discussions/509",
+  APP_HUGGING_FACE_URL:
+    "https://huggingface.co/datasets/openfoodfacts/open-prices",
+  APP_DATA_GOUV_URL: "https://www.data.gouv.fr/fr/datasets/open-prices/",
   // OFF
   OFF_NAME: OFF_NAME,
-  OFF_URL: 'https://world.openfoodfacts.org',
-  OFF_SLACK_URL: 'https://slack.openfoodfacts.org',
-  OFF_CONTACT_EMAIL: 'contact@openfoodfacts.org',
-  OFF_SIGN_UP_URL: 'https://world.openfoodfacts.org/cgi/user.pl',
+  OFF_URL: "https://world.openfoodfacts.org",
+  OFF_SLACK_URL: "https://slack.openfoodfacts.org",
+  OFF_CONTACT_EMAIL: "contact@openfoodfacts.org",
+  OFF_SIGN_UP_URL: "https://world.openfoodfacts.org/cgi/user.pl",
   OFF_ICON: OFF_ICON,
-  OFF_CONTRIBUTE_URL: 'https://world.openfoodfacts.org/contribute',
-  OFF_WIKI_URL: 'https://wiki.openfoodfacts.org/Main_Page',
-  OFF_WIKI_APP_URL: 'https://wiki.openfoodfacts.org/Project:Open-Prices',
-  OFF_WIKI_GDPR_REQUEST_URL: 'https://wiki.openfoodfacts.org/GDPR_request',
-  OFF_API_URL: 'https://world.openfoodfacts.org/api/v2/product',
-  OFF_SEARCHALICIOUS_API_URL: 'https://search.openfoodfacts.org',
-  OFF_CROWDIN_URL: 'https://translate.openfoodfacts.org',
-  OFF_HUNGER_GAMES_URL: 'https://hunger.openfoodfacts.org',
+  OFF_CONTRIBUTE_URL: "https://world.openfoodfacts.org/contribute",
+  OFF_WIKI_URL: "https://wiki.openfoodfacts.org/Main_Page",
+  OFF_WIKI_APP_URL: "https://wiki.openfoodfacts.org/Project:Open-Prices",
+  OFF_WIKI_GDPR_REQUEST_URL: "https://wiki.openfoodfacts.org/GDPR_request",
+  OFF_API_URL: "https://world.openfoodfacts.org/api/v2/product",
+  OFF_SEARCHALICIOUS_API_URL: "https://search.openfoodfacts.org",
+  OFF_CROWDIN_URL: "https://translate.openfoodfacts.org",
+  OFF_HUNGER_GAMES_URL: "https://hunger.openfoodfacts.org",
   OBF_NAME: OBF_NAME,
-  OBF_URL: 'https://world.openbeautyfacts.org',
+  OBF_URL: "https://world.openbeautyfacts.org",
   OBF_ICON: OBF_ICON,
   OPFF_NAME: OPFF_NAME,
-  OPFF_URL: 'https://world.openpetfoodfacts.org',
+  OPFF_URL: "https://world.openpetfoodfacts.org",
   OPFF_ICON: OPFF_ICON,
   OPF_NAME: OPF_NAME,
-  OPF_URL: 'https://world.openproductsfacts.org',
+  OPF_URL: "https://world.openproductsfacts.org",
   OPF_ICON: OPF_ICON,
   // OP
-  THEME_LIGHT_ICON: 'mdi-white-balance-sunny',
-  THEME_DARK_ICON: 'mdi-moon-waning-crescent',
-  ACTION_MENU_ICON: 'mdi-dots-vertical',
-  TYPE_PARAM: 'type',
-  KIND_PARAM: 'kind',
-  SOURCE_PARAM: 'source',
-  QUERY_PARAM: 'q',
-  FILTER_PARAM: 'filter',
-  ORDER_PARAM: 'order',
-  DISPLAY_PARAM: 'display',
-  TAB_PARAM: 'tab',
+  THEME_LIGHT_ICON: "mdi-white-balance-sunny",
+  THEME_DARK_ICON: "mdi-moon-waning-crescent",
+  ACTION_MENU_ICON: "mdi-dots-vertical",
+  TYPE_PARAM: "type",
+  KIND_PARAM: "kind",
+  SOURCE_PARAM: "source",
+  QUERY_PARAM: "q",
+  FILTER_PARAM: "filter",
+  ORDER_PARAM: "order",
+  DISPLAY_PARAM: "display",
+  TAB_PARAM: "tab",
   // prices
   PRICE_ICON: PRICE_ICON,
   PRICE_TYPE_PRODUCT: PRICE_TYPE_PRODUCT,
@@ -113,23 +165,35 @@ export default {
   PRICE_TYPE_CATEGORY: PRICE_TYPE_CATEGORY,
   PRICE_TYPE_CATEGORY_ICON: PRICE_TYPE_CATEGORY_ICON,
   PRICE_TYPE_LIST: [
-    {key: PRICE_TYPE_PRODUCT, value: 'Barcode', icon: PRICE_TYPE_PRODUCT_ICON},  // PRICE_TYPE_PRODUCT
-    {key: PRICE_TYPE_CATEGORY, value: PRICE_TYPE_CATEGORY, icon: PRICE_TYPE_CATEGORY_ICON}
+    {
+      key: PRICE_TYPE_PRODUCT,
+      value: "Barcode",
+      icon: PRICE_TYPE_PRODUCT_ICON,
+    }, // PRICE_TYPE_PRODUCT
+    {
+      key: PRICE_TYPE_CATEGORY,
+      value: PRICE_TYPE_CATEGORY,
+      icon: PRICE_TYPE_CATEGORY_ICON,
+    },
   ],
   PRICE_DISCOUNT_TYPE_SELECTOR_DISPLAY_LIST: [
-    {key: null, value: ''},  // allow empty value
-    {key: 'QUANTITY', value: 'DiscountTypeQuantity'},
-    {key: 'SALE', value: 'DiscountTypeSale'},
-    {key: 'SEASONAL', value: 'DiscountTypeSeasonal'},
-    {key: 'LOYALTY_PROGRAM', value: 'DiscountTypeLoyaltyProgram'},
-    {key: 'EXPIRES_SOON', value: 'DiscountTypeExpiresSoon'},
-    {key: 'PICK_IT_YOURSELF', value: 'DiscountTypePickItYourself'},
-    {key: 'SECOND_HAND', value: 'DiscountTypeSecondHand'},
-    {key: 'OTHER', value: 'DiscountTypeOther'},
+    { key: null, value: "" }, // allow empty value
+    { key: "QUANTITY", value: "DiscountTypeQuantity" },
+    { key: "SALE", value: "DiscountTypeSale" },
+    { key: "SEASONAL", value: "DiscountTypeSeasonal" },
+    { key: "LOYALTY_PROGRAM", value: "DiscountTypeLoyaltyProgram" },
+    { key: "EXPIRES_SOON", value: "DiscountTypeExpiresSoon" },
+    { key: "PICK_IT_YOURSELF", value: "DiscountTypePickItYourself" },
+    { key: "SECOND_HAND", value: "DiscountTypeSecondHand" },
+    { key: "OTHER", value: "DiscountTypeOther" },
   ],
   PRICE_PROOF_KIND_LIST: [
-    { key: USER_CONSUMPTION, value: 'Consumption', icon: USER_CONSUMPTION_ICON },
-    { key: USER_COMMUNITY, value: 'Contributions', icon: 'mdi-account-group' },
+    {
+      key: USER_CONSUMPTION,
+      value: "Consumption",
+      icon: USER_CONSUMPTION_ICON,
+    },
+    { key: USER_COMMUNITY, value: "Contributions", icon: "mdi-account-group" },
   ],
   PRICE_TAG_STATUS_NEW: PRICE_TAG_STATUS_NEW,
   PRICE_TAG_STATUS_EMPTY: PRICE_TAG_STATUS_EMPTY,
@@ -158,70 +222,98 @@ export default {
   ],
   // products
   PRODUCT_ICON: PRODUCT_ICON,
-  PRODUCT_IMAGE_DEFAULT_URL: '/icon-off-packaging.svg',
+  PRODUCT_IMAGE_DEFAULT_URL: "/icon-off-packaging.svg",
   PRODUCT_LABEL_LIST: [
-    { key: 'en:organic', value: 'Organic', icon: 'mdi-leaf-circle-outline' },
+    { key: "en:organic", value: "Organic", icon: "mdi-leaf-circle-outline" },
   ],
   PRODUCT_CATEGORY_LABEL_ORGANIC: PRODUCT_CATEGORY_LABEL_ORGANIC,
-  PRODUCT_QUANTITY_UNIT_G: 'g',
-  PRODUCT_QUANTITY_UNIT_ML: 'ml',
+  PRODUCT_QUANTITY_UNIT_G: "g",
+  PRODUCT_QUANTITY_UNIT_ML: "ml",
   PRODUCT_SOURCE_LIST: [
-    { key: 'off', value: OFF_NAME, icon: OFF_ICON },
-    { key: 'obf', value: OBF_NAME, icon: OBF_ICON },
-    { key: 'opf', value: OPF_NAME, icon: OPF_ICON },
-    { key: 'opff', value: OPFF_NAME, icon: OPFF_ICON },
+    { key: "off", value: OFF_NAME, icon: OFF_ICON },
+    { key: "obf", value: OBF_NAME, icon: OBF_ICON },
+    { key: "opf", value: OPF_NAME, icon: OPF_ICON },
+    { key: "opff", value: OPFF_NAME, icon: OPFF_ICON },
   ],
   // proofs
   PROOF_ICON: PROOF_ICON,
   PROOF_TYPE_PRICE_TAG: PROOF_TYPE_PRICE_TAG,
   PROOF_TYPE_PRICE_TAG_ICON: PROOF_TYPE_PRICE_TAG_ICON,
-  PROOF_TYPE_PRICE_TAG_IMAGE_URL: 'https://prices.openfoodfacts.org/img/0029/nCWeCVnpQJ.webp',
-  PROOF_TYPE_PRICE_TAG_IMAGE_THUMB_URL: 'https://prices.openfoodfacts.org/img/0029/nCWeCVnpQJ.400.webp',
+  PROOF_TYPE_PRICE_TAG_IMAGE_URL:
+    "https://prices.openfoodfacts.org/img/0029/nCWeCVnpQJ.webp",
+  PROOF_TYPE_PRICE_TAG_IMAGE_THUMB_URL:
+    "https://prices.openfoodfacts.org/img/0029/nCWeCVnpQJ.400.webp",
   PROOF_TYPE_RECEIPT: PROOF_TYPE_RECEIPT,
   PROOF_TYPE_RECEIPT_ICON: PROOF_TYPE_RECEIPT_ICON,
-  PROOF_TYPE_RECEIPT_IMAGE_URL: 'https://prices.openfoodfacts.org/img/0064/B7XwYylM6V.webp',
-  PROOF_TYPE_RECEIPT_IMAGE_THUMB_URL: 'https://prices.openfoodfacts.org/img/0064/B7XwYylM6V.400.webp',
+  PROOF_TYPE_RECEIPT_IMAGE_URL:
+    "https://prices.openfoodfacts.org/img/0064/B7XwYylM6V.webp",
+  PROOF_TYPE_RECEIPT_IMAGE_THUMB_URL:
+    "https://prices.openfoodfacts.org/img/0064/B7XwYylM6V.400.webp",
   PROOF_TYPE_GDPR_REQUEST: PROOF_TYPE_GDPR_REQUEST,
   PROOF_TYPE_GDPR_REQUEST_ICON: PROOF_TYPE_GDPR_REQUEST_ICON,
   PROOF_TYPE_SHOP_IMPORT: PROOF_TYPE_SHOP_IMPORT,
   PROOF_TYPE_SHOP_IMPORT_ICON: PROOF_TYPE_SHOP_IMPORT_ICON,
   PROOF_TYPE_LIST: [
-    {key: PROOF_TYPE_PRICE_TAG, value: PROOF_TYPE_PRICE_TAG, icon: PROOF_TYPE_PRICE_TAG_ICON},
-    {key: PROOF_TYPE_RECEIPT, value: PROOF_TYPE_RECEIPT, icon: PROOF_TYPE_RECEIPT_ICON},
-    {key: PROOF_TYPE_GDPR_REQUEST, value: PROOF_TYPE_GDPR_REQUEST, icon: PROOF_TYPE_GDPR_REQUEST_ICON},
+    {
+      key: PROOF_TYPE_PRICE_TAG,
+      value: PROOF_TYPE_PRICE_TAG,
+      icon: PROOF_TYPE_PRICE_TAG_ICON,
+    },
+    {
+      key: PROOF_TYPE_RECEIPT,
+      value: PROOF_TYPE_RECEIPT,
+      icon: PROOF_TYPE_RECEIPT_ICON,
+    },
+    {
+      key: PROOF_TYPE_GDPR_REQUEST,
+      value: PROOF_TYPE_GDPR_REQUEST,
+      icon: PROOF_TYPE_GDPR_REQUEST_ICON,
+    },
   ],
   PROOF_TYPE_USER_EDITABLE_LIST: [PROOF_TYPE_PRICE_TAG, PROOF_TYPE_RECEIPT],
   // locations
   LOCATION_ICON: LOCATION_ICON,
-  LOCATION_IMAGE_DEFAULT_URL: '/icon-mdi-map-marker-outline.svg',
+  LOCATION_IMAGE_DEFAULT_URL: "/icon-mdi-map-marker-outline.svg",
   LOCATION_TYPE_OSM: LOCATION_TYPE_OSM,
   LOCATION_TYPE_OSM_ICON: LOCATION_TYPE_OSM_ICON,
   LOCATION_TYPE_ONLINE: LOCATION_TYPE_ONLINE,
   LOCATION_TYPE_ONLINE_ICON: LOCATION_TYPE_ONLINE_ICON,
   LOCATION_SELECTOR_DISPLAY_OSM: LOCATION_SELECTOR_DISPLAY_OSM,
   LOCATION_SELECTOR_DISPLAY_ONLINE: LOCATION_SELECTOR_DISPLAY_ONLINE,
-  LOCATION_UNKNOWN_ICON: 'mdi-map-marker-remove-variant',
+  LOCATION_UNKNOWN_ICON: "mdi-map-marker-remove-variant",
   LOCATION_TYPE_LIST: [
-    {key: LOCATION_TYPE_OSM, value: LOCATION_TYPE_OSM, icon: LOCATION_TYPE_OSM_ICON},
-    {key: LOCATION_TYPE_ONLINE, value: LOCATION_TYPE_ONLINE, icon: LOCATION_TYPE_ONLINE_ICON},
+    {
+      key: LOCATION_TYPE_OSM,
+      value: LOCATION_TYPE_OSM,
+      icon: LOCATION_TYPE_OSM_ICON,
+    },
+    {
+      key: LOCATION_TYPE_ONLINE,
+      value: LOCATION_TYPE_ONLINE,
+      icon: LOCATION_TYPE_ONLINE_ICON,
+    },
   ],
   CITY_ICON: COUNTRY_ICON,
   COUNTRY_ICON: COUNTRY_ICON,
   LOCATION_TAG_LIST: [
-    { key: 'organic:only', value: 'Organic (only)', icon: 'mdi-leaf-circle-outline' },
+    {
+      key: "organic:only",
+      value: "Organic (only)",
+      icon: "mdi-leaf-circle-outline",
+    },
   ],
   // users
   USER_ICON: USER_ICON,
-  USER_IMAGE_DEFAULT_URL: '/icon-account-outline.svg',
+  USER_IMAGE_DEFAULT_URL: "/icon-account-outline.svg",
   USER_CONSUMPTION: USER_CONSUMPTION,
   USER_CONSUMPTION_ICON: USER_CONSUMPTION_ICON,
   USER_COMMUNITY: USER_COMMUNITY,
-  USER_COMMENT_ICON: 'mdi-comment-text-outline',
+  USER_COMMENT_ICON: "mdi-comment-text-outline",
   // challenges
   CHALLENGE_ICON: CHALLENGE_ICON,
   // badges
   BADGE_ICON: BADGE_ICON,
-  BADGE_IMAGE_DEFAULT_URL: '/icon-mdi-medal-outline.svg',
+  BADGE_IMAGE_DEFAULT_URL: "/icon-mdi-medal-outline.svg",
   // dates
   DATE_ICON: DATE_ICON,
   YEAR_ICON: DATE_ICON,
@@ -229,140 +321,287 @@ export default {
   CURRENCY_ICON: CURRENCY_ICON,
   // filter
   PRODUCT_FILTER_LIST: [
-    { key: 'price_count_gte_1', value: 'FilterWithPriceCount' },
-    { key: 'price_count_0', value: 'FilterProductWithoutPriceCount' },
+    { key: "price_count_gte_1", value: "FilterWithPriceCount" },
+    { key: "price_count_0", value: "FilterProductWithoutPriceCount" },
   ],
   PRODUCT_CREATE_FILTER_LIST: [
-    { key: 'price__owner', value: 'FilterProductWithPriceOwner' },
+    { key: "price__owner", value: "FilterProductWithPriceOwner" },
   ],
   PRICE_FILTER_LIST: [
-    { key: 'show_last_month', value: 'FilterPriceMoreThan30DaysHide' },
+    { key: "show_last_month", value: "FilterPriceMoreThan30DaysHide" },
   ],
   PROOF_FILTER_LIST: [
-    { key: 'hide_price_count_gte_1', value: 'FilterProofWithPriceCountHide' },
+    { key: "hide_price_count_gte_1", value: "FilterProofWithPriceCountHide" },
   ],
   PRICE_TAG_FILTER_LIST: [
-    { key: 'proof__owner', value: 'FilterPriceTagWithProofOwner' },
-    { key: 'proof_user_country', value: 'FilterPriceTagWithProofUserCountry' },
+    { key: "proof__owner", value: "FilterPriceTagWithProofOwner" },
+    { key: "proof_user_country", value: "FilterPriceTagWithProofUserCountry" },
     // { key: 'tag_prediction_barcode_valid', value: 'FilterPriceTagWithTagPredictionBarcodeValid' },
-    { key: 'tag_prediction_product_exists', value: 'FilterPriceTagWithTagPredictionProductExists' },
+    {
+      key: "tag_prediction_product_exists",
+      value: "FilterPriceTagWithTagPredictionProductExists",
+    },
     // { key: 'tag_prediction_category_tag_valid', value: 'FilterPriceTagWithTagPredictionCategoryTagValid' },
-    { key: 'tag_invalid_include', value: 'FilterPriceTagWithTagInvalidInclude' },
+    {
+      key: "tag_invalid_include",
+      value: "FilterPriceTagWithTagInvalidInclude",
+    },
   ],
   LOCATION_FILTER_LIST: [
-    { key: 'hide_price_count_gte_1', value: 'FilterLocationWithPriceCountHide' },
+    {
+      key: "hide_price_count_gte_1",
+      value: "FilterLocationWithPriceCountHide",
+    },
   ],
   LOCATION_COUNTRY_FILTER_LIST: [
-    { key: 'price_count_gte_1', value: 'FilterWithPriceCount' },
-    { key: 'location_count_gte_1', value: 'FilterWithLocationCount' },
+    { key: "price_count_gte_1", value: "FilterWithPriceCount" },
+    { key: "location_count_gte_1", value: "FilterWithLocationCount" },
   ],
   USER_FILTER_LIST: [
-    { key: 'hide_price_count_gte_1', value: 'FilterUserWithPriceCountHide' },
+    { key: "hide_price_count_gte_1", value: "FilterUserWithPriceCountHide" },
   ],
   MODERATION_FLAG_FILTER_LIST: [
-    { key: 'show_closed', value: 'FilterFlagShowClosed' },
+    { key: "show_closed", value: "FilterFlagShowClosed" },
   ],
   // order
   PRODUCT_ORDER_LIST: [
-    { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-unique_scans_n', value: 'OrderProductUniqueScansDESC', icon: 'mdi-barcode-scan' },
+    {
+      key: "-price_count",
+      value: "OrderPriceCountDESC",
+      icon: "mdi-tag-multiple-outline",
+    },
+    {
+      key: "-unique_scans_n",
+      value: "OrderProductUniqueScansDESC",
+      icon: "mdi-barcode-scan",
+    },
   ],
   PRODUCT_CREATE_ORDER_LIST: [
-    { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
-    { key: '-proof_count', value: 'OrderProofCountDESC', icon: PROOF_ICON },
+    {
+      key: "-created",
+      value: "OrderPriceCreatedDESC",
+      icon: "mdi-clock-outline",
+    },
+    { key: "-proof_count", value: "OrderProofCountDESC", icon: PROOF_ICON },
   ],
   PRICE_ORDER_LIST: [
-    { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
-    { key: '-price', value: 'OrderPriceDESC', icon: 'mdi-order-numeric-descending' },
-    { key: '-date,-created', value: 'OrderPriceDateDESC', icon: DATE_ICON },
-    { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
+    {
+      key: "price",
+      value: "OrderPriceASC",
+      icon: "mdi-order-numeric-ascending",
+    },
+    {
+      key: "-price",
+      value: "OrderPriceDESC",
+      icon: "mdi-order-numeric-descending",
+    },
+    { key: "-date,-created", value: "OrderPriceDateDESC", icon: DATE_ICON },
+    {
+      key: "-created",
+      value: "OrderPriceCreatedDESC",
+      icon: "mdi-clock-outline",
+    },
   ],
   PROOF_ORDER_LIST: [
-    { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-date,-created', value: 'OrderProofDateDESC', icon: DATE_ICON },
-    { key: '-created', value: 'OrderProofCreatedDESC', icon: 'mdi-clock-outline' },
+    {
+      key: "-price_count",
+      value: "OrderPriceCountDESC",
+      icon: "mdi-tag-multiple-outline",
+    },
+    { key: "-date,-created", value: "OrderProofDateDESC", icon: DATE_ICON },
+    {
+      key: "-created",
+      value: "OrderProofCreatedDESC",
+      icon: "mdi-clock-outline",
+    },
   ],
   LOCATION_ORDER_LIST: [
     // same order as LocationCard chips
-    { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-user_count', value: 'OrderUserCountDESC', icon: USER_ICON },
-    { key: '-product_count', value: 'OrderProductCountDESC', icon: PRODUCT_ICON },
-    { key: '-proof_count', value: 'OrderProofCountDESC', icon: PROOF_ICON },
+    {
+      key: "-price_count",
+      value: "OrderPriceCountDESC",
+      icon: "mdi-tag-multiple-outline",
+    },
+    { key: "-user_count", value: "OrderUserCountDESC", icon: USER_ICON },
+    {
+      key: "-product_count",
+      value: "OrderProductCountDESC",
+      icon: PRODUCT_ICON,
+    },
+    { key: "-proof_count", value: "OrderProofCountDESC", icon: PROOF_ICON },
   ],
   LOCATION_COUNTRY_ORDER_LIST: [
-    { key: 'name', value: 'OrderNameASC', icon: 'mdi-alphabetical' },
-    { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-location_count', value: 'OrderLocationCountDESC', icon: LOCATION_TYPE_OSM_ICON },
+    { key: "name", value: "OrderNameASC", icon: "mdi-alphabetical" },
+    {
+      key: "-price_count",
+      value: "OrderPriceCountDESC",
+      icon: "mdi-tag-multiple-outline",
+    },
+    {
+      key: "-location_count",
+      value: "OrderLocationCountDESC",
+      icon: LOCATION_TYPE_OSM_ICON,
+    },
   ],
   USER_ORDER_LIST: [
     // same order as UserCard chips
-    { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-location_count', value: 'OrderLocationCountDESC', icon: LOCATION_TYPE_OSM_ICON },
-    { key: '-product_count', value: 'OrderProductCountDESC', icon: PRODUCT_ICON },
-    { key: '-proof_count', value: 'OrderProofCountDESC', icon: PROOF_ICON },
+    {
+      key: "-price_count",
+      value: "OrderPriceCountDESC",
+      icon: "mdi-tag-multiple-outline",
+    },
+    {
+      key: "-location_count",
+      value: "OrderLocationCountDESC",
+      icon: LOCATION_TYPE_OSM_ICON,
+    },
+    {
+      key: "-product_count",
+      value: "OrderProductCountDESC",
+      icon: PRODUCT_ICON,
+    },
+    { key: "-proof_count", value: "OrderProofCountDESC", icon: PROOF_ICON },
   ],
   MODERATION_FLAG_ORDER_LIST: [
-    { key: '-created', value: 'OrderFlagCreatedDESC', icon: 'mdi-clock-outline' },
-    { key: 'reason', value: 'OrderFlagReasonASC', icon: 'mdi-comment-text-outline' },
+    {
+      key: "-created",
+      value: "OrderFlagCreatedDESC",
+      icon: "mdi-clock-outline",
+    },
+    {
+      key: "reason",
+      value: "OrderFlagReasonASC",
+      icon: "mdi-comment-text-outline",
+    },
   ],
   // display
   DISPLAY_LIST: [
-    { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
-    { key: 'table', value: 'DisplayTable', icon: 'mdi-table' },
-    { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },
-    { key: 'chart', value: 'DisplayPriceChart', icon: 'mdi-chart-line' },
+    { key: "list", value: "DisplayList", icon: "mdi-format-list-bulleted" },
+    { key: "table", value: "DisplayTable", icon: "mdi-table" },
+    { key: "map", value: "DisplayPriceMap", icon: "mdi-map-marker" },
+    { key: "chart", value: "DisplayPriceChart", icon: "mdi-chart-line" },
   ],
-  LOCATION_SEARCH_PROVIDER_LIST: [
-    { key: 'nominatim' },
-    { key: 'photon' },
-  ],
+  LOCATION_SEARCH_PROVIDER_LIST: [{ key: "nominatim" }, { key: "photon" }],
   LOCATION_SELECTOR_DISPLAY_LIST: [
-    { key: 'favorite', value: 'Favorite', valueSmallScreen: '', icon: 'mdi-star' },
-    { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },
-    { key: LOCATION_SELECTOR_DISPLAY_OSM, value: 'Physical', valueSmallScreen: 'Physical', icon: LOCATION_TYPE_OSM_ICON },
-    { key: LOCATION_SELECTOR_DISPLAY_ONLINE, value: 'Online', valueSmallScreen: 'Online', icon: LOCATION_TYPE_ONLINE_ICON },
+    {
+      key: "favorite",
+      value: "Favorite",
+      valueSmallScreen: "",
+      icon: "mdi-star",
+    },
+    {
+      key: "recent",
+      value: "Recent",
+      valueSmallScreen: "",
+      icon: "mdi-history",
+    },
+    {
+      key: LOCATION_SELECTOR_DISPLAY_OSM,
+      value: "Physical",
+      valueSmallScreen: "Physical",
+      icon: LOCATION_TYPE_OSM_ICON,
+    },
+    {
+      key: LOCATION_SELECTOR_DISPLAY_ONLINE,
+      value: "Online",
+      valueSmallScreen: "Online",
+      icon: LOCATION_TYPE_ONLINE_ICON,
+    },
   ],
   PRODUCT_SELECTOR_DISPLAY_LIST: [
     // { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },
-    { key: 'scan', value: 'BarcodeScan', valueSmallScreen: 'BarcodeScanShort', icon: 'mdi-barcode-scan' },
-    { key: 'type', value: 'BarcodeType', valueSmallScreen: 'BarcodeTypeShort', icon: 'mdi-numeric' },
+    {
+      key: "scan",
+      value: "BarcodeScan",
+      valueSmallScreen: "BarcodeScanShort",
+      icon: "mdi-barcode-scan",
+    },
+    {
+      key: "type",
+      value: "BarcodeType",
+      valueSmallScreen: "BarcodeTypeShort",
+      icon: "mdi-numeric",
+    },
   ],
   BARCODE_SCANNER_DISPLAY_LIST: [
-    { key: 'auto', value: 'Auto', valueSmallScreen: 'Auto', icon: 'mdi-barcode-scan' },
-    { key: 'off-barcode-scanner', value: 'Off Barcode Scanner', valueSmallScreen: 'Off Scanner', icon: 'mdi-barcode-scan' },
-    { key: 'html5-qrcode', value: 'Html5-Qrcode', valueSmallScreen: 'Html5-Qrcode', icon: 'mdi-barcode-scan' },
+    {
+      key: "auto",
+      value: "Auto",
+      valueSmallScreen: "Auto",
+      icon: "mdi-barcode-scan",
+    },
+    {
+      key: "off-barcode-scanner",
+      value: "Off Barcode Scanner",
+      valueSmallScreen: "Off Scanner",
+      icon: "mdi-barcode-scan",
+    },
+    {
+      key: "html5-qrcode",
+      value: "Html5-Qrcode",
+      valueSmallScreen: "Html5-Qrcode",
+      icon: "mdi-barcode-scan",
+    },
   ],
   SEARCH_TAB_LIST: [
-    { key: PRICE_TYPE_PRODUCT.toLowerCase(), value: 'Product', icon: PRICE_TYPE_PRODUCT_ICON },
-    { key: PRICE_TYPE_CATEGORY.toLowerCase(), value: 'Category', icon: PRICE_TYPE_CATEGORY_ICON },
+    {
+      key: PRICE_TYPE_PRODUCT.toLowerCase(),
+      value: "Product",
+      icon: PRICE_TYPE_PRODUCT_ICON,
+    },
+    {
+      key: PRICE_TYPE_CATEGORY.toLowerCase(),
+      value: "Category",
+      icon: PRICE_TYPE_CATEGORY_ICON,
+    },
   ],
   USER_DASHBOARD_TAB_LIST: [
-    { key: 'all', value: 'All', icon: 'mdi-home' },
-    { key: USER_CONSUMPTION.toLowerCase(), value: 'MyConsumption', icon: USER_CONSUMPTION_ICON },
-    { key: USER_COMMUNITY.toLowerCase(), value: 'OtherContributions', icon: 'mdi-account-group' },
+    { key: "all", value: "All", icon: "mdi-home" },
+    {
+      key: USER_CONSUMPTION.toLowerCase(),
+      value: "MyConsumption",
+      icon: USER_CONSUMPTION_ICON,
+    },
+    {
+      key: USER_COMMUNITY.toLowerCase(),
+      value: "OtherContributions",
+      icon: "mdi-account-group",
+    },
   ],
   // moderation
   // see https://github.com/openfoodfacts/open-prices/blob/main/open_prices/moderation/models.py for reasons
   MODERATION_ICON: MODERATION_ICON,
   REPORT_ICON: REPORT_ICON,
   MODERATION_FLAG_TYPE_LIST: [
-    { key: 'PROOF', value: 'Proof', icon: PROOF_ICON },
-    { key: 'PRICE', value: 'Price', icon: PRICE_ICON },
+    { key: "PROOF", value: "Proof", icon: PROOF_ICON },
+    { key: "PRICE", value: "Price", icon: PRICE_ICON },
     // { key: 'LOCATION', value: 'Location', icon: LOCATION_TYPE_OSM_ICON },
     // { key: 'USER', value: 'User', icon: USER_ICON },
   ],
   MODERATION_FLAG_REASON_LIST: [
-    { key: 'WRONG_TYPE', value: 'ModerationFlagReasonWrongType', restrictTo: null },
-    { key: 'WRONG_PRICE_VALUE', value: 'ModerationFlagReasonWrongPriceValue', restrictTo: ['price'] },
-    { key: 'WRONG_CURRENCY', value: 'ModerationFlagReasonWrongCurrency' },
-    { key: 'WRONG_PRODUCT', value: 'ModerationFlagReasonWrongProduct', restrictTo: ['price'] },
-    { key: 'WRONG_LOCATION', value: 'ModerationFlagReasonWrongLocation' },
-    { key: 'WRONG_DATE', value: 'ModerationFlagReasonWrongDate' },
-    { key: 'OTHER', value: 'ModerationFlagReasonOther' },
+    {
+      key: "WRONG_TYPE",
+      value: "ModerationFlagReasonWrongType",
+      restrictTo: null,
+    },
+    {
+      key: "WRONG_PRICE_VALUE",
+      value: "ModerationFlagReasonWrongPriceValue",
+      restrictTo: ["price"],
+    },
+    { key: "WRONG_CURRENCY", value: "ModerationFlagReasonWrongCurrency" },
+    {
+      key: "WRONG_PRODUCT",
+      value: "ModerationFlagReasonWrongProduct",
+      restrictTo: ["price"],
+    },
+    { key: "WRONG_LOCATION", value: "ModerationFlagReasonWrongLocation" },
+    { key: "WRONG_DATE", value: "ModerationFlagReasonWrongDate" },
+    { key: "OTHER", value: "ModerationFlagReasonOther" },
   ],
   MODERATION_FLAG_STATUS_LIST: [
-    { key: 'OPEN', value: 'ModerationFlagStatusOpen', color: 'warning' },
-    { key: 'CLOSED', value: 'ModerationFlagStatusClosed', color: 'success' }
+    { key: "OPEN", value: "ModerationFlagStatusOpen", color: "warning" },
+    { key: "CLOSED", value: "ModerationFlagStatusClosed", color: "success" },
   ],
   // misc
   EXPERIMENTS_ICON: EXPERIMENTS_ICON,
@@ -375,30 +614,86 @@ export default {
   DATE_YEAR_REGEX_MATCH: /(\d{4})/,
   // OSM
   OSM_NAME: OSM_NAME,
-  OSM_URL: 'https://www.openstreetmap.org',
-  OSM_NOMINATIM_URL: 'https://nominatim.openstreetmap.org',
-  OSM_NOMINATIM_SEARCH_URL: 'https://nominatim.openstreetmap.org/search',
-  OSM_NOMINATIM_LOOKUP_URL: 'https://nominatim.openstreetmap.org/lookup',
-  OSM_NOMINATIM_ATTRIBUTION: 'Nominatim (OpenStreetMap)',
-  OSM_PHOTON_URL: 'https://photon.komoot.io',
-  OSM_PHOTON_SEARCH_URL: 'https://photon.komoot.io/api/',
-  OSM_PHOTON_ATTRIBUTION: 'Komoot Photon (OpenStreetMap)',
+  OSM_URL: "https://www.openstreetmap.org",
+  OSM_NOMINATIM_URL: "https://nominatim.openstreetmap.org",
+  OSM_NOMINATIM_SEARCH_URL: "https://nominatim.openstreetmap.org/search",
+  OSM_NOMINATIM_LOOKUP_URL: "https://nominatim.openstreetmap.org/lookup",
+  OSM_NOMINATIM_ATTRIBUTION: "Nominatim (OpenStreetMap)",
+  OSM_PHOTON_URL: "https://photon.komoot.io",
+  OSM_PHOTON_SEARCH_URL: "https://photon.komoot.io/api/",
+  OSM_PHOTON_ATTRIBUTION: "Komoot Photon (OpenStreetMap)",
   // https://wiki.openstreetmap.org/wiki/Key:place
   // https://wiki.openstreetmap.org/wiki/Key:highway
   // https://wiki.openstreetmap.org/wiki/Buildings
   NOMINATIM_RESULT_TYPE_EXCLUDE_LIST: [
-    'country', 'state', 'region', 'province', 'district', 'county', 'municipality', 'city', 'borough', 'suburb', 'quarter', 'neighbourhood', 'block', 'city_block', 'plot', 'town', 'village', 'hamlet', 'isolated_dwelling', 'allotments',
-    'continent', 'archipelago', 'island', 'islet', 'square', 'locality', 'polder', 'sea', 'ocean',
-    'administrative', 'state_district',
-    'motorway', 'trunk', 'primary', 'secondary', 'tertiary', 'unclassified', 'residential', 'living_street', 'service', 'pedestrian', 'track', 'road', 'footway',
-    'apartments', 'barracks', 'bungalow', 'cabin', 'detached', 'dormitory', 'ger', 'house', 'houseboat', 'residential',  // 'farm', 'hotel'
-    'fuel', 'gas', 'casino', 'parking', 'parking_space', 'charging_station', 'atm',
-    'car_sharing',
-    'yes',
+    "country",
+    "state",
+    "region",
+    "province",
+    "district",
+    "county",
+    "municipality",
+    "city",
+    "borough",
+    "suburb",
+    "quarter",
+    "neighbourhood",
+    "block",
+    "city_block",
+    "plot",
+    "town",
+    "village",
+    "hamlet",
+    "isolated_dwelling",
+    "allotments",
+    "continent",
+    "archipelago",
+    "island",
+    "islet",
+    "square",
+    "locality",
+    "polder",
+    "sea",
+    "ocean",
+    "administrative",
+    "state_district",
+    "motorway",
+    "trunk",
+    "primary",
+    "secondary",
+    "tertiary",
+    "unclassified",
+    "residential",
+    "living_street",
+    "service",
+    "pedestrian",
+    "track",
+    "road",
+    "footway",
+    "apartments",
+    "barracks",
+    "bungalow",
+    "cabin",
+    "detached",
+    "dormitory",
+    "ger",
+    "house",
+    "houseboat",
+    "residential", // 'farm', 'hotel'
+    "fuel",
+    "gas",
+    "casino",
+    "parking",
+    "parking_space",
+    "charging_station",
+    "atm",
+    "car_sharing",
+    "yes",
   ],
-  LICENSE_ODBL_NAME: 'Open Database License (ODbL)',
-  LICENSE_ODBL_URL: 'https://opendatacommons.org/licenses/odbl/1.0/',
-  LICENSE_CC_BY_SA_NAME: 'Creative Commons Attribution-ShareAlike 4.0 International',
-  LICENSE_CC_BY_SA_URL: 'https://creativecommons.org/licenses/by-sa/4.0/',
-  GITHUB_NAME: 'Github',
-}
+  LICENSE_ODBL_NAME: "Open Database License (ODbL)",
+  LICENSE_ODBL_URL: "https://opendatacommons.org/licenses/odbl/1.0/",
+  LICENSE_CC_BY_SA_NAME:
+    "Creative Commons Attribution-ShareAlike 4.0 International",
+  LICENSE_CC_BY_SA_URL: "https://creativecommons.org/licenses/by-sa/4.0/",
+  GITHUB_NAME: "Github",
+};

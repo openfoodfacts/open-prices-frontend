@@ -1,68 +1,85 @@
 <template>
-  <v-chip label size="small" density="comfortable" :color="locationMissingAndShowError ? 'error' : 'default'" :to="getLocationUrl">
+  <v-chip
+    label
+    size="small"
+    density="comfortable"
+    :color="locationMissingAndShowError ? 'error' : 'default'"
+    :to="getLocationUrl"
+  >
     <v-icon :start="!locationMissingAndShowError" :icon="getLocationIcon" />
     <span v-if="locationNotMissing">{{ getLocationTitle }}</span>
-    <span v-if="getLocationEmoji" style="margin-inline-start:5px">{{ getLocationEmoji }}</span>
-    <v-tooltip v-if="locationMissingAndShowError" activator="parent" open-on-click location="top">
-      {{ $t('Common.LocationMissing') }}
+    <span v-if="getLocationEmoji" style="margin-inline-start: 5px">{{
+      getLocationEmoji
+    }}</span>
+    <v-tooltip
+      v-if="locationMissingAndShowError"
+      activator="parent"
+      open-on-click
+      location="top"
+    >
+      {{ $t("Common.LocationMissing") }}
     </v-tooltip>
   </v-chip>
 </template>
 
 <script>
-import constants from '../constants'
-import geo_utils from '../utils/geo.js'
+import constants from "../constants";
+import geo_utils from "../utils/geo.js";
 
 export default {
   props: {
     location: {
       type: Object,
-      default: null
+      default: null,
     },
     locationId: {
       type: Number,
-      default: null
+      default: null,
     },
     showErrorIfMissing: {
       type: Boolean,
-      default: false
+      default: false,
     },
     readonly: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   computed: {
     getLocationTitle() {
       if (this.location) {
         if (this.location.type === constants.LOCATION_TYPE_OSM) {
-          return geo_utils.getLocationOSMTitle(this.location)
+          return geo_utils.getLocationOSMTitle(this.location);
         } else if (this.location.type === constants.LOCATION_TYPE_ONLINE) {
-          return geo_utils.getLocationONLINETitle(this.location)
+          return geo_utils.getLocationONLINETitle(this.location);
         }
       }
-      return this.locationId
+      return this.locationId;
     },
     getLocationIcon() {
-      return geo_utils.getLocationIcon(this.location)
+      return geo_utils.getLocationIcon(this.location);
     },
     getLocationEmoji() {
       if (this.location) {
         if (this.location.type === constants.LOCATION_TYPE_OSM) {
-          return geo_utils.getCountryEmojiFromCode(geo_utils.getLocationOSMCountryCode(this.location))
+          return geo_utils.getCountryEmojiFromCode(
+            geo_utils.getLocationOSMCountryCode(this.location),
+          );
         }
       }
-      return null
+      return null;
     },
     locationNotMissing() {
-      return this.location || this.locationId
+      return this.location || this.locationId;
     },
     locationMissingAndShowError() {
-      return !this.locationNotMissing && this.showErrorIfMissing
+      return !this.locationNotMissing && this.showErrorIfMissing;
     },
     getLocationUrl() {
-      return this.locationId && !this.readonly ? `/locations/${this.locationId}` : null
-    }
-  }
-}
+      return this.locationId && !this.readonly
+        ? `/locations/${this.locationId}`
+        : null;
+    },
+  },
+};
 </script>

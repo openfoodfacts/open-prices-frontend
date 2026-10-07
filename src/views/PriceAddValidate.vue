@@ -1,15 +1,29 @@
 <template>
   <v-row v-if="!loading">
     <v-col>
-      <v-chip label variant="text" prepend-icon="mdi-checkbox-marked-circle-plus-outline">
-        {{ $t('Common.PriceToValidateCount', { count: priceTagTotal }) }}
+      <v-chip
+        label
+        variant="text"
+        prepend-icon="mdi-checkbox-marked-circle-plus-outline"
+      >
+        {{ $t("Common.PriceToValidateCount", { count: priceTagTotal }) }}
       </v-chip>
-      <FilterMenu kind="priceTag" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
+      <FilterMenu
+        kind="priceTag"
+        :currentFilterList="currentFilterList"
+        @update:currentFilterList="updateFilterList($event)"
+      />
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="(productPriceForm, index) in productPriceForms" :key="index" cols="12" md="6" xl="4">
+    <v-col
+      v-for="(productPriceForm, index) in productPriceForms"
+      :key="index"
+      cols="12"
+      md="6"
+      xl="4"
+    >
       <ContributionAssistantPriceFormCard
         height="100%"
         :productPriceForm="productPriceForm"
@@ -27,66 +41,62 @@
     </v-col>
   </v-row>
 
-  <v-snackbar
-    v-model="priceRemovedMessage"
-    color="warning"
-    :timeout="1000"
-  >
-    {{ $t('Common.Thanks') }}
+  <v-snackbar v-model="priceRemovedMessage" color="warning" :timeout="1000">
+    {{ $t("Common.Thanks") }}
   </v-snackbar>
-  <v-snackbar
-    v-model="priceSuccessMessage"
-    color="success"
-    :timeout="1000"
-  >
-    {{ $t('AddPriceMultiple.ProductPriceDetails.PriceUploaded') }}
+  <v-snackbar v-model="priceSuccessMessage" color="success" :timeout="1000">
+    {{ $t("AddPriceMultiple.ProductPriceDetails.PriceUploaded") }}
   </v-snackbar>
 </template>
 
 <script>
-import { mapStores } from 'pinia'
-import { defineAsyncComponent } from 'vue'
-import constants from '../constants.js'
-import openPricesApi, { OpenPricesApiError } from '../services/openPricesApi'
-import { useAppStore } from '../store.js'
-import date_utils from '../utils/date.js'
-import proof_utils from '../utils/proof.js'
-import utils from '../utils.js'
+import { mapStores } from "pinia";
+import { defineAsyncComponent } from "vue";
+import constants from "../constants.js";
+import openPricesApi, { OpenPricesApiError } from "../services/openPricesApi";
+import { useAppStore } from "../store.js";
+import date_utils from "../utils/date.js";
+import proof_utils from "../utils/proof.js";
+import utils from "../utils.js";
 
 export default {
   components: {
-    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
+    FilterMenu: defineAsyncComponent(
+      () => import("../components/FilterMenu.vue"),
+    ),
+    ContributionAssistantPriceFormCard: defineAsyncComponent(
+      () => import("../components/ContributionAssistantPriceFormCard.vue"),
+    ),
   },
   data() {
     return {
-      currentDateTime: date_utils.currentDateTime(),  // usefull to avoid fetching duplicates during pagination
+      currentDateTime: date_utils.currentDateTime(), // usefull to avoid fetching duplicates during pagination
       // data
       priceTagList: [],
       priceTagTotal: null,
-      priceTagPage: 0,  // issue with pagination once the user starts removing/validating price tags...
+      priceTagPage: 0, // issue with pagination once the user starts removing/validating price tags...
       loading: false,
       productPriceForms: [],
       // filter & order
       currentFilterList: [],
-      currentOrder: '-proof_id',  // order by most recent proof
+      currentOrder: "-proof_id", // order by most recent proof
       // feedback
       priceRemovedMessage: false,
-      priceSuccessMessage: false
-    }
+      priceSuccessMessage: false,
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     username() {
-      return this.appStore.user.username
+      return this.appStore.user.username;
     },
     userCountry() {
-      return this.appStore.user.country
+      return this.appStore.user.country;
     },
     getApiSize() {
       // reduce size to speed up the loading
-      if (!this.$vuetify.display.smAndUp) return 2
-      return 4
+      if (!this.$vuetify.display.smAndUp) return 2;
+      return 4;
     },
     getPriceTagsParams() {
       let defaultParams = {
@@ -96,64 +106,74 @@ export default {
         created__lte: this.currentDateTime,
         order_by: this.currentOrder,
         size: this.getApiSize,
-        page: this.priceTagPage
-      }
+        page: this.priceTagPage,
+      };
       // FilterMenu filters
-      if (this.currentFilterList.includes('proof__owner')) {
-        defaultParams['proof__owner'] = this.username
+      if (this.currentFilterList.includes("proof__owner")) {
+        defaultParams["proof__owner"] = this.username;
       }
-      if (this.currentFilterList.includes('proof_user_country')) {
-        defaultParams['proof__location__osm_address_country_code'] = this.userCountry
+      if (this.currentFilterList.includes("proof_user_country")) {
+        defaultParams["proof__location__osm_address_country_code"] =
+          this.userCountry;
       }
-      if (this.currentFilterList.includes('tag_prediction_product_exists')) {
-        defaultParams['tags__contains'] = 'prediction-product-exists'
+      if (this.currentFilterList.includes("tag_prediction_product_exists")) {
+        defaultParams["tags__contains"] = "prediction-product-exists";
       }
-      if (!this.currentFilterList.includes('tag_invalid_include')) {
-        defaultParams['tags__not_contains'] = 'invalid'
+      if (!this.currentFilterList.includes("tag_invalid_include")) {
+        defaultParams["tags__not_contains"] = "invalid";
       }
-      return defaultParams
+      return defaultParams;
     },
   },
   watch: {
-    $route (newRoute, oldRoute) {  // only called when query changes to avoid having an API call when the path changes
-      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initPriceTags()
+    $route(newRoute, oldRoute) {
+      // only called when query changes to avoid having an API call when the path changes
+      if (
+        oldRoute.path === newRoute.path &&
+        JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)
+      ) {
+        this.initPriceTags();
       }
-    }
+    },
   },
   mounted() {
-    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
-    this.getPriceTags()
+    this.currentFilterList =
+      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
+      this.currentFilterList;
+    this.getPriceTags();
     // load more
-    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
-    window.addEventListener('scroll', this.handleDebouncedScroll)
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
+    window.addEventListener("scroll", this.handleDebouncedScroll);
   },
   unmounted() {
-    window.removeEventListener('scroll', this.handleDebouncedScroll)
+    window.removeEventListener("scroll", this.handleDebouncedScroll);
   },
   methods: {
     initPriceTags() {
-      this.priceTagList = []
-      this.priceTagTotal = null
-      this.priceTagPage = 0
-      this.productPriceForms = []
-      this.getPriceTags()
+      this.priceTagList = [];
+      this.priceTagTotal = null;
+      this.priceTagPage = 0;
+      this.productPriceForms = [];
+      this.getPriceTags();
     },
     updatePriceTagStatus(index, status) {
       /**
        * - update the price_tag (API)
        * - remove the price_tag (UI)
        */
-      this.productPriceForms[index].loading = true
-      this.updatePriceTag(this.priceTagList[index].id, status).then((priceTag) => {  // eslint-disable-line no-unused-vars
-        this.productPriceForms.splice(index, 1)
-        this.priceTagList.splice(index, 1)
-        this.priceTagTotal -= 1
-        this.priceRemovedMessage = true
-        if (this.priceTagList.length === 1) {
-          this.getPriceTags()
-        }
-      })
+      this.productPriceForms[index].loading = true;
+      this.updatePriceTag(this.priceTagList[index].id, status).then(
+        // eslint-disable-next-line no-unused-vars
+        (priceTag) => {
+          this.productPriceForms.splice(index, 1);
+          this.priceTagList.splice(index, 1);
+          this.priceTagTotal -= 1;
+          this.priceRemovedMessage = true;
+          if (this.priceTagList.length === 1) {
+            this.getPriceTags();
+          }
+        },
+      );
     },
     validatePriceTag(index) {
       /**
@@ -161,52 +181,61 @@ export default {
        * - update the price_tag (API)
        * - remove the price_tag (UI)
        */
-      this.productPriceForms[index].loading = true
+      this.productPriceForms[index].loading = true;
       this.createPrice(this.productPriceForms[index]).then((price) => {
-        this.updatePriceTag(this.productPriceForms[index].id, 1, price.id)
-        this.productPriceForms.splice(index, 1)
-        this.priceTagList.splice(index, 1)
-        this.priceTagTotal -= 1
-        this.priceSuccessMessage = true
+        this.updatePriceTag(this.productPriceForms[index].id, 1, price.id);
+        this.productPriceForms.splice(index, 1);
+        this.priceTagList.splice(index, 1);
+        this.priceTagTotal -= 1;
+        this.priceSuccessMessage = true;
         if (this.priceTagList.length === 1) {
-          this.getPriceTags()
+          this.getPriceTags();
         }
-      })
+      });
     },
     getPriceTags() {
-      if ((this.priceTagTotal != null) && (this.priceTagList.length >= this.priceTagTotal)) return
-      this.loading = true
-      this.priceTagPage += 1
-      return openPricesApi.getPriceTags(this.getPriceTagsParams)
+      if (
+        this.priceTagTotal != null &&
+        this.priceTagList.length >= this.priceTagTotal
+      )
+        return;
+      this.loading = true;
+      this.priceTagPage += 1;
+      return openPricesApi
+        .getPriceTags(this.getPriceTagsParams)
         .then((data) => {
-          if (!data.items) return
-          this.priceTagList.push(...data.items)
-          this.priceTagTotal = data.total
+          if (!data.items) return;
+          this.priceTagList.push(...data.items);
+          this.priceTagTotal = data.total;
           for (let i = 0; i < data.items.length; i++) {
             // only validate price tags with predictions
-            if (data.items[i]['predictions'].filter(prediction => prediction.type === 'PRICE_TAG_EXTRACTION').length > 0) {
-              this.handlePriceTag(data.items[i])
+            if (
+              data.items[i]["predictions"].filter(
+                (prediction) => prediction.type === "PRICE_TAG_EXTRACTION",
+              ).length > 0
+            ) {
+              this.handlePriceTag(data.items[i]);
             }
           }
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     handlePriceTag(priceTag) {
-      let productPriceForm = proof_utils.handlePriceTag(priceTag)
-      this.productPriceForms.push(productPriceForm)
+      let productPriceForm = proof_utils.handlePriceTag(priceTag);
+      this.productPriceForms.push(productPriceForm);
     },
     updatePriceTag(priceTagId, status, priceId) {
       return openPricesApi
         .updatePriceTag(priceTagId, { status: status, price_id: priceId })
         .then((response) => {
           // if response.status == 204
-          return response
+          return response;
         })
         .catch((error) => {
-          console.log(error)
-        })
+          console.log(error);
+        });
     },
     createPrice(productPriceData) {
       const priceData = {
@@ -216,30 +245,40 @@ export default {
         location_id: productPriceData.proof.location_id,
         location_osm_id: productPriceData.proof.location_osm_id,
         location_osm_type: productPriceData.proof.location_osm_type,
-        proof_id: productPriceData.proof.id
-      }
+        proof_id: productPriceData.proof.id,
+      };
       return openPricesApi
         .createPrice(Object.assign({}, priceData), this.$route.path)
         .then((data) => {
-          productPriceData.loading = false
-          return data
+          productPriceData.loading = false;
+          return data;
         })
         .catch((error) => {
-          alert(error instanceof OpenPricesApiError ? `Error: ${error.message}` : this.$t('Common.ServerError'))
-          console.log(error)
-          productPriceData.loading = false
-        })
+          alert(
+            error instanceof OpenPricesApiError
+              ? `Error: ${error.message}`
+              : this.$t("Common.ServerError"),
+          );
+          console.log(error);
+          productPriceData.loading = false;
+        });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      this.currentFilterList = newFilterList;
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.FILTER_PARAM]: this.currentFilterList,
+        },
+      });
       // this.initPriceTags() will be called in watch $route
     },
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
+    handleScroll(event) {
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getPriceTags()
+        this.getPriceTags();
       }
     },
-  }
-}
+  },
+};
 </script>

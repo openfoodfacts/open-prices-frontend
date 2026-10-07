@@ -1,39 +1,39 @@
-import constants from '../constants'
-import barcode_utils from './barcode.js'
+import constants from "../constants";
+import barcode_utils from "./barcode.js";
 
 function getImageFullUrl(imagePath) {
   // return constants.PROOF_TYPE_PRICE_TAG_IMAGE_THUMB_URL
   // return constants.PROOF_TYPE_RECEIPT_IMAGE_THUMB_URL
   // return constants.PROOF_TYPE_PRICE_TAG_IMAGE_URL
   // return constants.PROOF_TYPE_RECEIPT_IMAGE_URL
-  return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${imagePath}`
+  return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${imagePath}`;
 }
 
 function getProofTypeIcon(proofType) {
-  return constants[`PROOF_TYPE_${proofType}_ICON`] || constants.PROOF_ICON
+  return constants[`PROOF_TYPE_${proofType}_ICON`] || constants.PROOF_ICON;
 }
 
 function priceTagHasValidPredictions(priceTag) {
   if (!priceTag.predictions || priceTag.predictions.length === 0) {
-    return false
+    return false;
   }
   if (priceTag.predictions.length === 1) {
-    if (priceTag.predictions[0].type === 'PRICE_TAG_EXTRACTION') {
+    if (priceTag.predictions[0].type === "PRICE_TAG_EXTRACTION") {
       // The only prediction is PRICE_TAG_EXTRACTION, this is expected for old proofs
-      return true
+      return true;
     }
-    if (priceTag.predictions[0].type === 'PRICE_TAG_CLF') {
+    if (priceTag.predictions[0].type === "PRICE_TAG_CLF") {
       // The only prediction is PRICE_TAG_CLF, we're missing the PRICE_TAG_EXTRACTION prediction
-      if (priceTag.tags.includes('invalid')) {
+      if (priceTag.tags.includes("invalid")) {
         // The PRICE_TAG_CLF prediction is invalid, the lack of PRICE_TAG_EXTRACTION prediction is expected
-        return true
+        return true;
       }
       // The PRICE_TAG_CLF prediction is above average quality, a PRICE_TAG_EXTRACTION prediction is still expected
-      return false
+      return false;
     }
   }
   // The price tag has at least 2 predictions, no need to check, we should be good (PRICE_TAG_CLF & PRICE_TAG_EXTRACTION)
-  return true
+  return true;
 }
 
 /**
@@ -42,32 +42,36 @@ function priceTagHasValidPredictions(priceTag) {
  */
 function handlePriceTag(priceTag) {
   // Only keep predictions of type 'PRICE_TAG_EXTRACTION'
-  const priceTagPredictions = priceTag['predictions'].filter(prediction => prediction.type === 'PRICE_TAG_EXTRACTION')
+  const priceTagPredictions = priceTag["predictions"].filter(
+    (prediction) => prediction.type === "PRICE_TAG_EXTRACTION",
+  );
   if (!priceTagPredictions.length) {
     // Price tag extraction did not ran successfully. We create a dummy product price form for user to complete
     return {
       id: priceTag.id,
       origins_tags: [],
-      currency: priceTag['proof'].currency,
-      proof: priceTag['proof'],
-      proofImage: priceTag['proof'].file_path,
+      currency: priceTag["proof"].currency,
+      proof: priceTag["proof"],
+      proofImage: priceTag["proof"].file_path,
       type: constants.PRICE_TYPE_PRODUCT,
-      product_code: '',
-      detected_product_code: '',
-      product_name: '',
+      product_code: "",
+      detected_product_code: "",
+      product_name: "",
       bounding_box: priceTag.bounding_box,
       status: priceTag.status,
       price_id: priceTag.price_id,
-      image_path: priceTag.image_path
-    }
+      image_path: priceTag.image_path,
+    };
   }
-  const priceTagPrediction = priceTagPredictions[0]
-  const label = priceTagPrediction['data']
-  const barcodeString = label.barcode ? barcode_utils.cleanBarcode(label.barcode.toString()) : ''
+  const priceTagPrediction = priceTagPredictions[0];
+  const label = priceTagPrediction["data"];
+  const barcodeString = label.barcode
+    ? barcode_utils.cleanBarcode(label.barcode.toString())
+    : "";
 
   // The first schema was not versioned, so if the field is missing,
   // we assume it's schema version 1.0
-  const schemaVersion = priceTagPrediction.schema_version || '1.0'
+  const schemaVersion = priceTagPrediction.schema_version || "1.0";
 
   // fields that are common to all schema versions are initialized here
   let productPriceForm = {
@@ -75,71 +79,99 @@ function handlePriceTag(priceTag) {
     // type  // 'PRODUCT' or 'CATEGORY'
     // category_tag
     // labels_tags
-    origins_tags: ![null, '', 'unknown', 'other'].includes(label.origin) ? [label.origin] : [],
+    origins_tags: ![null, "", "unknown", "other"].includes(label.origin)
+      ? [label.origin]
+      : [],
     // price
     // price_per
     // price_is_discounted
     // price_without_discount
     // discount_type
-    currency: priceTag['proof'].currency, // || this.appStore.getUserLastCurrencyUsed,
-    proof: priceTag['proof'],
-    proofImage: priceTag['proof'].file_path,
+    currency: priceTag["proof"].currency, // || this.appStore.getUserLastCurrencyUsed,
+    proof: priceTag["proof"],
+    proofImage: priceTag["proof"].file_path,
     product_code: barcodeString,
     detected_product_code: barcodeString,
     product_name: label.product_name,
     bounding_box: priceTag.bounding_box,
-    status: priceTag.status,  // specific to the ProofPriceTagAssistant (vs the PriceValidationAssistant)
-    price_id: priceTag.price_id,  // specific to the ProofPriceTagAssistant (vs the PriceValidationAssistant)
+    status: priceTag.status, // specific to the ProofPriceTagAssistant (vs the PriceValidationAssistant)
+    price_id: priceTag.price_id, // specific to the ProofPriceTagAssistant (vs the PriceValidationAssistant)
     image_path: priceTag.image_path,
-    loading: false
-  }
+    loading: false,
+  };
 
-  if (schemaVersion === '1.0') {
+  if (schemaVersion === "1.0") {
     // For schema version 1.0
-    const priceType = barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
-    productPriceForm.type = priceType
+    const priceType =
+      barcodeString.length >= 8
+        ? constants.PRICE_TYPE_PRODUCT
+        : constants.PRICE_TYPE_CATEGORY;
+    productPriceForm.type = priceType;
     // we only populate category_tag and labels_tags if the price type is category
-    productPriceForm.category_tag = (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.product)) ? label.product : null
-    productPriceForm.labels_tags = (priceType === constants.PRICE_TYPE_CATEGORY && label.organic) ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : []
-    productPriceForm.price = label.price.toString()
-    productPriceForm.price_per = label.unit
+    productPriceForm.category_tag =
+      priceType === constants.PRICE_TYPE_CATEGORY &&
+      ![null, "", "unknown", "other"].includes(label.product)
+        ? label.product
+        : null;
+    productPriceForm.labels_tags =
+      priceType === constants.PRICE_TYPE_CATEGORY && label.organic
+        ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC]
+        : [];
+    productPriceForm.price = label.price.toString();
+    productPriceForm.price_per = label.unit;
     // price_is_discounted is not supported in schema version 1.0
-    productPriceForm.price_is_discounted = false
+    productPriceForm.price_is_discounted = false;
   } else {
     // version 2.0 and above
-    const priceType = label.type
+    const priceType = label.type;
     // The selected price is a price constructed by all price information available in the label,
     // including the discount price if available.
-    const selectedPrice = label.selected_price || {}
-    productPriceForm.type = priceType
+    const selectedPrice = label.selected_price || {};
+    productPriceForm.type = priceType;
     // we only populate category_tag and labels_tags if the price type is category
-    productPriceForm.category_tag = (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.category)) ? label.category : null
-    productPriceForm.labels_tags = (priceType === constants.PRICE_TYPE_CATEGORY && label.organic) ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : []
-    productPriceForm.price = selectedPrice.price ? selectedPrice.price.toString() : ""
-    productPriceForm.price_per = selectedPrice.price_per || null
+    productPriceForm.category_tag =
+      priceType === constants.PRICE_TYPE_CATEGORY &&
+      ![null, "", "unknown", "other"].includes(label.category)
+        ? label.category
+        : null;
+    productPriceForm.labels_tags =
+      priceType === constants.PRICE_TYPE_CATEGORY && label.organic
+        ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC]
+        : [];
+    productPriceForm.price = selectedPrice.price
+      ? selectedPrice.price.toString()
+      : "";
+    productPriceForm.price_per = selectedPrice.price_per || null;
     // in schema 2.0, we detect discount information (price, type)
-    productPriceForm.price_is_discounted = selectedPrice ? selectedPrice.price_is_discounted : false
-    productPriceForm.price_without_discount = selectedPrice.price_without_discount ? selectedPrice.price_without_discount.toString() : ""
-    productPriceForm.discount_type = selectedPrice.discount_type || ""
+    productPriceForm.price_is_discounted = selectedPrice
+      ? selectedPrice.price_is_discounted
+      : false;
+    productPriceForm.price_without_discount =
+      selectedPrice.price_without_discount
+        ? selectedPrice.price_without_discount.toString()
+        : "";
+    productPriceForm.discount_type = selectedPrice.discount_type || "";
 
     // Add similar barcodes if available
     if (label.similar_barcodes && label.similar_barcodes.length) {
-      productPriceForm.similar_barcodes = label.similar_barcodes.filter(similarBarcode => {
-        if (similarBarcode.barcode.length > 10) {
-          return similarBarcode.distance < 3 // Max 2 digits variance
-        } else {
-          return similarBarcode.distance < 2 // Max 1 digit variance for short barcodes
-        }
-    })
+      productPriceForm.similar_barcodes = label.similar_barcodes.filter(
+        (similarBarcode) => {
+          if (similarBarcode.barcode.length > 10) {
+            return similarBarcode.distance < 3; // Max 2 digits variance
+          } else {
+            return similarBarcode.distance < 2; // Max 1 digit variance for short barcodes
+          }
+        },
+      );
     }
   }
 
-  return productPriceForm
+  return productPriceForm;
 }
 
 export default {
   getImageFullUrl,
   getProofTypeIcon,
   priceTagHasValidPredictions,
-  handlePriceTag
-}
+  handlePriceTag,
+};

@@ -1,6 +1,7 @@
 ---
 applyTo: "**/*.js"
 ---
+
 # Project coding standards for JavaScript
 
 ## JavaScript guidelines

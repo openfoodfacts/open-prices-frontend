@@ -3,16 +3,40 @@
     <v-col>
       <CountTextChip kind="price" :count="priceTotal" />
       <template v-if="!loading">
-        <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
-        <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="togglePriceType($event)" />
-        <NearbyPriceFilter :currentFilter="nearbyFilter" @update:currentFilter="updateNearbyFilter($event)" />
+        <LoadedCountChip
+          :loadedCount="priceList.length"
+          :totalCount="priceTotal"
+        />
+        <FilterMenu
+          kind="price"
+          :currentFilterList="currentFilterList"
+          :currentType="currentType"
+          @update:currentFilterList="updateFilterList($event)"
+          @update:currentType="togglePriceType($event)"
+        />
+        <NearbyPriceFilter
+          :currentFilter="nearbyFilter"
+          @update:currentFilter="updateNearbyFilter($event)"
+        />
       </template>
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
-      <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+    <v-col
+      v-for="price in priceList"
+      :key="price"
+      cols="12"
+      sm="6"
+      md="4"
+      xl="3"
+    >
+      <PriceCard
+        :price="price"
+        :product="price.product"
+        elevation="1"
+        height="100%"
+      />
     </v-col>
   </v-row>
 
@@ -24,20 +48,30 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import openPricesApi from '../services/openPricesApi'
-import constants from '../constants'
-import date_utils from '../utils/date.js'
-import geo_utils from '../utils/geo.js'
-import utils from '../utils.js'
+import { defineAsyncComponent } from "vue";
+import openPricesApi from "../services/openPricesApi";
+import constants from "../constants";
+import date_utils from "../utils/date.js";
+import geo_utils from "../utils/geo.js";
+import utils from "../utils.js";
 
 export default {
   components: {
-    CountTextChip: defineAsyncComponent(() => import('../components/CountTextChip.vue')),
-    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
-    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    NearbyPriceFilter: defineAsyncComponent(() => import('../components/NearbyPriceFilter.vue')),
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
+    CountTextChip: defineAsyncComponent(
+      () => import("../components/CountTextChip.vue"),
+    ),
+    LoadedCountChip: defineAsyncComponent(
+      () => import("../components/LoadedCountChip.vue"),
+    ),
+    FilterMenu: defineAsyncComponent(
+      () => import("../components/FilterMenu.vue"),
+    ),
+    NearbyPriceFilter: defineAsyncComponent(
+      () => import("../components/NearbyPriceFilter.vue"),
+    ),
+    PriceCard: defineAsyncComponent(
+      () => import("../components/PriceCard.vue"),
+    ),
   },
   data() {
     return {
@@ -47,86 +81,111 @@ export default {
       loading: false,
       // filter & order
       currentFilterList: [],
-      currentType: '',
-      currentOrder: constants.PRICE_ORDER_LIST[3].key,  // created first
-    }
+      currentType: "",
+      currentOrder: constants.PRICE_ORDER_LIST[3].key, // created first
+    };
   },
   computed: {
     nearbyFilter() {
-      return geo_utils.getNearbyFilter(this.$route.query)
+      return geo_utils.getNearbyFilter(this.$route.query);
     },
     getPricesParams() {
-      let defaultParams = { order_by: this.currentOrder, page: this.pricePage }
-      if (this.currentFilterList.includes('show_last_month')) {
-        defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
+      let defaultParams = { order_by: this.currentOrder, page: this.pricePage };
+      if (this.currentFilterList.includes("show_last_month")) {
+        defaultParams["date__gte"] = date_utils.oneMonthAgoDate();
       }
       if (this.currentType) {
-        defaultParams[constants.TYPE_PARAM] = this.currentType
+        defaultParams[constants.TYPE_PARAM] = this.currentType;
       }
       if (this.nearbyFilter) {
-        Object.assign(defaultParams, this.nearbyFilter)
+        Object.assign(defaultParams, this.nearbyFilter);
       }
-      return defaultParams
+      return defaultParams;
     },
   },
   watch: {
-    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
-      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initPrices()
+    $route(newRoute, oldRoute) {
+      // only called when query changes to avoid having an API call when the path changes
+      if (
+        oldRoute.path === newRoute.path &&
+        JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)
+      ) {
+        this.initPrices();
       }
-    }
+    },
   },
   mounted() {
-    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
-    this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
-    this.initPrices()
+    this.currentFilterList =
+      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
+      this.currentFilterList;
+    this.currentType =
+      this.$route.query[constants.TYPE_PARAM] || this.currentType;
+    this.initPrices();
     // load more
-    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
-    window.addEventListener('scroll', this.handleDebouncedScroll)
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
+    window.addEventListener("scroll", this.handleDebouncedScroll);
   },
   unmounted() {
-    window.removeEventListener('scroll', this.handleDebouncedScroll)
+    window.removeEventListener("scroll", this.handleDebouncedScroll);
   },
   methods: {
     initPrices() {
-      this.priceList = []
-      this.priceTotal = null
-      this.pricePage = 0
-      this.getPrices()
+      this.priceList = [];
+      this.priceTotal = null;
+      this.pricePage = 0;
+      this.getPrices();
     },
     getPrices() {
-      if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
-      this.loading = true
-      this.pricePage += 1
-      return openPricesApi.getPrices(this.getPricesParams)
+      if (this.priceTotal != null && this.priceList.length >= this.priceTotal)
+        return;
+      this.loading = true;
+      this.pricePage += 1;
+      return openPricesApi
+        .getPrices(this.getPricesParams)
         .then((data) => {
-          if (!data.items) return
-          this.priceList.push(...data.items)
-          this.priceTotal = data.total
+          if (!data.items) return;
+          this.priceList.push(...data.items);
+          this.priceTotal = data.total;
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      this.currentFilterList = newFilterList;
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.FILTER_PARAM]: this.currentFilterList,
+        },
+      });
       // this.initPrices() will be called in watch $route
     },
     updateNearbyFilter(nearbyFilter) {
-      this.$router.push({ query: geo_utils.buildNearbyFilterQuery(this.$route.query, nearbyFilter) })
+      this.$router.push({
+        query: geo_utils.buildNearbyFilterQuery(
+          this.$route.query,
+          nearbyFilter,
+        ),
+      });
       // this.initPrices() will be called in watch $route
     },
     togglePriceType(typeKey) {
-      this.currentType = (this.currentType !== typeKey) ? typeKey : ''
-      this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
+      this.currentType = this.currentType !== typeKey ? typeKey : "";
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.TYPE_PARAM]: this.currentType,
+        },
+      });
       // this.initPrices() will be called in watch $route
     },
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
+    handleScroll(event) {
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getPrices()
+        this.getPrices();
       }
     },
-  }
-}
+  },
+};
 </script>

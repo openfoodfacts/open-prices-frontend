@@ -1,5 +1,10 @@
 <template>
-  <v-card :id="'challenge_' + challenge.id" :to="getChallengeUrl" class="d-flex flex-column" height="100%">
+  <v-card
+    :id="'challenge_' + challenge.id"
+    :to="getChallengeUrl"
+    class="d-flex flex-column"
+    height="100%"
+  >
     <template #title>
       <span :title="getChallengeTitle">{{ getChallengeTitle }}</span>
     </template>
@@ -12,12 +17,20 @@
       </span>
       <div v-if="challenge.categories.length" class="mt-1">
         <span class="chip-group">
-          <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="category" />
+          <CategoryTagChip
+            v-for="category in challenge.categories"
+            :key="category"
+            :category="category"
+          />
         </span>
       </div>
       <div v-if="challenge.locations.length" class="mt-1">
         <span class="chip-group">
-          <CountChip kind="location" :count="challenge.locations.length" :withLabel="true" />
+          <CountChip
+            kind="location"
+            :count="challenge.locations.length"
+            :withLabel="true"
+          />
         </span>
       </div>
     </v-card-text>
@@ -26,53 +39,77 @@
 
     <v-card-actions v-if="challenge.status !== 'UPCOMING'">
       <span class="chip-group">
-        <CountChip kind="price" :count="challenge.stats.price_count" :withLabel="true" />
-        <CountChip kind="proof" :count="challenge.stats.proof_count" :withLabel="true" />
-        <CountChip kind="location" :count="challenge.stats.proof_location_count" :withLabel="true" />
-        <CountChip kind="product" :count="challenge.stats.price_product_count" :withLabel="true" />
+        <CountChip
+          kind="price"
+          :count="challenge.stats.price_count"
+          :withLabel="true"
+        />
+        <CountChip
+          kind="proof"
+          :count="challenge.stats.proof_count"
+          :withLabel="true"
+        />
+        <CountChip
+          kind="location"
+          :count="challenge.stats.proof_location_count"
+          :withLabel="true"
+        />
+        <CountChip
+          kind="product"
+          :count="challenge.stats.price_product_count"
+          :withLabel="true"
+        />
       </span>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
+import { defineAsyncComponent } from "vue";
+import constants from "../constants";
 
 export default {
   components: {
-    CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
-    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
-    ChallengeStatusChip: defineAsyncComponent(() => import('../components/ChallengeStatusChip.vue')),
-    CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
+    CategoryTagChip: defineAsyncComponent(
+      () => import("../components/CategoryTagChip.vue"),
+    ),
+    DateChip: defineAsyncComponent(() => import("../components/DateChip.vue")),
+    ChallengeStatusChip: defineAsyncComponent(
+      () => import("../components/ChallengeStatusChip.vue"),
+    ),
+    CountChip: defineAsyncComponent(
+      () => import("../components/CountChip.vue"),
+    ),
   },
   props: {
     challenge: {
       type: Object,
       default: null,
       example: {
-        "id":1,
-        "title":"Nutella",
-        "icon":"🌰",
-        "subtitle":"(and other hazelnut spreads)",
-        "start_date":"2022-03-11",
-        "end_date":"2025-04-17",
-        "categories":["en:hazelnut-spreads"],
-        "example_proof_url": constants.PROOF_TYPE_PRICE_TAG_IMAGE_URL,
-        "is_published":true,
-        "status":"ONGOING",
-        "created":"2025-03-17T21:21:58.071163Z",
-        "updated":"2025-03-21T20:12:51.379142Z"
-      }
+        id: 1,
+        title: "Nutella",
+        icon: "🌰",
+        subtitle: "(and other hazelnut spreads)",
+        start_date: "2022-03-11",
+        end_date: "2025-04-17",
+        categories: ["en:hazelnut-spreads"],
+        example_proof_url: constants.PROOF_TYPE_PRICE_TAG_IMAGE_URL,
+        is_published: true,
+        status: "ONGOING",
+        created: "2025-03-17T21:21:58.071163Z",
+        updated: "2025-03-21T20:12:51.379142Z",
+      },
     },
   },
   computed: {
     getChallengeTitle() {
-      return this.challenge ? `${this.challenge.icon} ${this.challenge.title}` : ''
+      return this.challenge
+        ? `${this.challenge.icon} ${this.challenge.title}`
+        : "";
     },
     getChallengeUrl() {
-      return this.challenge ? `/challenges/${this.challenge.id}` : ''
-    }
+      return this.challenge ? `/challenges/${this.challenge.id}` : "";
+    },
   },
-}
+};
 </script>

@@ -1,7 +1,16 @@
 <template>
-  <v-chip label size="small" :prepend-icon="getProofTypeIcon" density="comfortable">
+  <v-chip
+    label
+    size="small"
+    :prepend-icon="getProofTypeIcon"
+    density="comfortable"
+  >
     <span v-if="proofType === PROOF_TYPE_GDPR_REQUEST">
-      <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank" rel="noopener noreferrer">
+      <a
+        :href="OFF_WIKI_GDPR_REQUEST_URL"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {{ getProofTypeName }}
         <v-icon size="x-small" icon="mdi-open-in-new" />
       </a>
@@ -13,29 +22,29 @@
 </template>
 
 <script>
-import constants from '../constants'
-import proof_utils from '../utils/proof.js'
+import constants from "../constants";
+import proof_utils from "../utils/proof.js";
 
 export default {
   props: {
     proofType: {
       type: String,
-      default: null
+      default: null,
     },
   },
   data() {
     return {
       PROOF_TYPE_GDPR_REQUEST: constants.PROOF_TYPE_GDPR_REQUEST,
       OFF_WIKI_GDPR_REQUEST_URL: constants.OFF_WIKI_GDPR_REQUEST_URL,
-    }
+    };
   },
   computed: {
     getProofTypeIcon() {
-      return proof_utils.getProofTypeIcon(this.proofType)
+      return proof_utils.getProofTypeIcon(this.proofType);
     },
     getProofTypeName() {
-      return this.$t(`Common.${this.proofType}`)
-    }
-  }
-}
+      return this.$t(`Common.${this.proofType}`);
+    },
+  },
+};
 </script>

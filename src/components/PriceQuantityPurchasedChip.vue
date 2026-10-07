@@ -9,13 +9,13 @@ export default {
   props: {
     priceQuantityPurchased: {
       type: Number,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     prefix() {
-      return 'x'
-    }
-  }
-}
+      return "x";
+    },
+  },
+};
 </script>

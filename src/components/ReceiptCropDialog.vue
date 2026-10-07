@@ -1,15 +1,29 @@
 <template>
   <v-dialog :height="dialogHeight" :width="dialogWidth">
-    <v-card :title="$t('ReceiptCrop.Title')" height="100%" class="d-flex flex-column">
+    <v-card
+      :title="$t('ReceiptCrop.Title')"
+      height="100%"
+      class="d-flex flex-column"
+    >
       <template #append>
         <v-icon icon="mdi-close" @click="close" />
       </template>
 
       <v-divider />
 
-      <v-card-text style="min-height: 0; overflow-y: auto;">
-        <VueZoomable v-if="proofImageSrc" v-model:zoom="zoomLevel" v-model:pan="panLevel" :maxZoom="10" :panEnabled="false" :wheelEnabled="false" :dblClickEnabled="false" :enableControlButton="false" selector="#content">
-          <div id="content" style="width: 100%;">
+      <v-card-text style="min-height: 0; overflow-y: auto">
+        <VueZoomable
+          v-if="proofImageSrc"
+          v-model:zoom="zoomLevel"
+          v-model:pan="panLevel"
+          :maxZoom="10"
+          :panEnabled="false"
+          :wheelEnabled="false"
+          :dblClickEnabled="false"
+          :enableControlButton="false"
+          selector="#content"
+        >
+          <div id="content" style="width: 100%">
             <ContributionAssistantDrawCanvas
               ref="ContributionAssistantDrawCanvas"
               :imageSrc="proofImageSrc"
@@ -31,7 +45,7 @@
           :disabled="loading"
           @click="save"
         >
-          {{ $t('Common.Save') }}
+          {{ $t("Common.Save") }}
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -39,61 +53,67 @@
 </template>
 
 <script>
-
-import { defineAsyncComponent } from 'vue'
-import "vue-zoomable/dist/style.css"
+import { defineAsyncComponent } from "vue";
+import "vue-zoomable/dist/style.css";
 
 export default {
   components: {
-    ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
-    VueZoomable: defineAsyncComponent(() => import('vue-zoomable')),
+    ContributionAssistantDrawCanvas: defineAsyncComponent(
+      () => import("../components/ContributionAssistantDrawCanvas.vue"),
+    ),
+    VueZoomable: defineAsyncComponent(() => import("vue-zoomable")),
   },
   props: {
     proofImage: {
       type: File,
-      required: true
+      required: true,
     },
   },
-  emits: ['done', 'close'],
+  emits: ["done", "close"],
   data() {
     return {
       proofImageSrc: null,
       croppedBlob: null,
-      panLevel: {x: 0, y: 0},
+      panLevel: { x: 0, y: 0 },
       zoomLevel: 1,
       loading: false,
-    }
+    };
   },
   computed: {
     dialogHeight() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
     dialogWidth() {
-      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+      return this.$vuetify.display.smAndUp ? "80%" : "100%";
     },
   },
   mounted() {
-    this.proofImageSrc = URL.createObjectURL(this.proofImage)
+    this.proofImageSrc = URL.createObjectURL(this.proofImage);
   },
   beforeUnmount() {
-    URL.revokeObjectURL(this.proofImageSrc)
+    URL.revokeObjectURL(this.proofImageSrc);
   },
   methods: {
     onCropDrawn(extractedCrops) {
-      this.croppedBlob = extractedCrops.length ? extractedCrops[0].blob : null
-      this.loading = false
+      this.croppedBlob = extractedCrops.length ? extractedCrops[0].blob : null;
+      this.loading = false;
     },
     save() {
       if (!this.croppedBlob) {
         // no crop area was drawn, keep the original picture
-        this.$emit('done', this.proofImage)
-        return
+        this.$emit("done", this.proofImage);
+        return;
       }
-      this.$emit('done', new File([this.croppedBlob], this.proofImage.name, { type: this.croppedBlob.type }))
+      this.$emit(
+        "done",
+        new File([this.croppedBlob], this.proofImage.name, {
+          type: this.croppedBlob.type,
+        }),
+      );
     },
     close() {
-      this.$emit('close')
+      this.$emit("close");
     },
   },
-}
+};
 </script>

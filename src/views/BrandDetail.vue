@@ -8,18 +8,37 @@
   <v-row>
     <v-col>
       <h2 class="text-h6 d-inline mr-1">
-        {{ $t('Common.TopProducts') }}
+        {{ $t("Common.TopProducts") }}
       </h2>
       <template v-if="!loading">
-        <LoadedCountChip :loadedCount="brandProductList.length" :totalCount="brandProductTotal" />
-        <FilterMenu kind="product" :currentFilterList="currentFilterList" :hideSource="true" @update:currentFilterList="updateFilterList($event)" />
-        <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+        <LoadedCountChip
+          :loadedCount="brandProductList.length"
+          :totalCount="brandProductTotal"
+        />
+        <FilterMenu
+          kind="product"
+          :currentFilterList="currentFilterList"
+          :hideSource="true"
+          @update:currentFilterList="updateFilterList($event)"
+        />
+        <OrderMenu
+          kind="product"
+          :currentOrder="currentOrder"
+          @update:currentOrder="updateOrder($event)"
+        />
       </template>
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="product in brandProductList" :key="product" cols="12" sm="6" md="4" xl="3">
+    <v-col
+      v-for="product in brandProductList"
+      :key="product"
+      cols="12"
+      sm="6"
+      md="4"
+      xl="3"
+    >
       <ProductCard :product="product" elevation="1" height="100%" />
     </v-col>
   </v-row>
@@ -32,18 +51,28 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
-import openPricesApi from '../services/openPricesApi'
-import utils from '../utils.js'
+import { defineAsyncComponent } from "vue";
+import constants from "../constants";
+import openPricesApi from "../services/openPricesApi";
+import utils from "../utils.js";
 
 export default {
   components: {
-    BrandCard: defineAsyncComponent(() => import('../components/BrandCard.vue')),
-    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
-    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue'))
+    BrandCard: defineAsyncComponent(
+      () => import("../components/BrandCard.vue"),
+    ),
+    LoadedCountChip: defineAsyncComponent(
+      () => import("../components/LoadedCountChip.vue"),
+    ),
+    FilterMenu: defineAsyncComponent(
+      () => import("../components/FilterMenu.vue"),
+    ),
+    OrderMenu: defineAsyncComponent(
+      () => import("../components/OrderMenu.vue"),
+    ),
+    ProductCard: defineAsyncComponent(
+      () => import("../components/ProductCard.vue"),
+    ),
   },
   data() {
     return {
@@ -55,77 +84,105 @@ export default {
       loading: false,
       // filter & order
       currentFilterList: [],
-      currentOrder: constants.PRODUCT_ORDER_LIST[0].key,  // price_count
-    }
+      currentOrder: constants.PRODUCT_ORDER_LIST[0].key, // price_count
+    };
   },
   computed: {
     getProductsParams() {
-      let defaultParams = { brands__like: this.brandId, order_by: `${this.currentOrder}`, page: this.brandProductPage }
-      if (this.currentFilterList.includes('price_count_gte_1')) {
-        defaultParams['price_count__gte'] = 1
-      } else if (this.currentFilterList.includes('price_count_0')) {
-        defaultParams['price_count'] = 0
+      let defaultParams = {
+        brands__like: this.brandId,
+        order_by: `${this.currentOrder}`,
+        page: this.brandProductPage,
+      };
+      if (this.currentFilterList.includes("price_count_gte_1")) {
+        defaultParams["price_count__gte"] = 1;
+      } else if (this.currentFilterList.includes("price_count_0")) {
+        defaultParams["price_count"] = 0;
       }
-      return defaultParams
+      return defaultParams;
     },
   },
   watch: {
-    $route (newRoute, oldRoute) {
-      if (oldRoute && newRoute && newRoute.name == 'brand-detail' && oldRoute.fullPath != newRoute.fullPath) {
-        this.initBrand()
+    $route(newRoute, oldRoute) {
+      if (
+        oldRoute &&
+        newRoute &&
+        newRoute.name == "brand-detail" &&
+        oldRoute.fullPath != newRoute.fullPath
+      ) {
+        this.initBrand();
       }
-    }
+    },
   },
   mounted() {
-    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
-    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.initBrand()
+    this.currentFilterList =
+      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
+      this.currentFilterList;
+    this.currentOrder =
+      this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
+    this.initBrand();
     // load more
-    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
-    window.addEventListener('scroll', this.handleDebouncedScroll)
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
+    window.addEventListener("scroll", this.handleDebouncedScroll);
   },
   unmounted() {
-    window.removeEventListener('scroll', this.handleDebouncedScroll)
+    window.removeEventListener("scroll", this.handleDebouncedScroll);
   },
   methods: {
     initBrand() {
-      this.brandId = this.$route.params.id
-      this.brandProductList = []
-      this.brandProductTotal = null
-      this.brandProductPage = 0
-      this.getBrandProducts()
+      this.brandId = this.$route.params.id;
+      this.brandProductList = [];
+      this.brandProductTotal = null;
+      this.brandProductPage = 0;
+      this.getBrandProducts();
     },
     getBrandProducts() {
-      if ((this.brandProductTotal != null) && (this.brandProductList.length >= this.brandProductTotal)) return
-      this.loading = true
-      this.brandProductPage += 1
-      return openPricesApi.getProducts(this.getProductsParams)
+      if (
+        this.brandProductTotal != null &&
+        this.brandProductList.length >= this.brandProductTotal
+      )
+        return;
+      this.loading = true;
+      this.brandProductPage += 1;
+      return openPricesApi
+        .getProducts(this.getProductsParams)
         .then((data) => {
-          if (!data.items) return
-          this.brandProductList.push(...data.items)
-          this.brandProductTotal = data.total
+          if (!data.items) return;
+          this.brandProductList.push(...data.items);
+          this.brandProductTotal = data.total;
         })
         .finally(() => {
-          this.loading = false
-        })
+          this.loading = false;
+        });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      this.currentFilterList = newFilterList;
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.FILTER_PARAM]: this.currentFilterList,
+        },
+      });
       // this.initBrand() will be called in watch $route
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
-        this.currentOrder = orderKey
-        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        this.currentOrder = orderKey;
+        this.$router.push({
+          query: {
+            ...this.$route.query,
+            [constants.ORDER_PARAM]: this.currentOrder,
+          },
+        });
         // this.initBrand() will be called in watch $route
       }
     },
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
+    handleScroll(event) {
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getBrandProducts()
+        this.getBrandProducts();
       }
     },
-  }
-}
+  },
+};
 </script>

@@ -14,26 +14,30 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from "vue";
 
 export default {
   components: {
-    CountChip: defineAsyncComponent(() => import('../components/CountChip.vue')),
-    BrandActionMenuButton: defineAsyncComponent(() => import('../components/BrandActionMenuButton.vue'))
+    CountChip: defineAsyncComponent(
+      () => import("../components/CountChip.vue"),
+    ),
+    BrandActionMenuButton: defineAsyncComponent(
+      () => import("../components/BrandActionMenuButton.vue"),
+    ),
   },
   props: {
     brand: {
       type: String,
-      default: null
+      default: null,
     },
     productCount: {
       type: Number,
-      default: 0
+      default: 0,
     },
     hideActionMenuButton: {
       type: Boolean,
-      default: false
+      default: false,
     },
-  }
-}
+  },
+};
 </script>

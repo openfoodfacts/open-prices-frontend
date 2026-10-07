@@ -14,7 +14,12 @@
     <v-card-text class="flex-grow-1">
       <v-row>
         <v-col cols="12" class="pt-2 pb-2">
-          <v-img v-if="productPriceForm.image_path" :src="getImageFullUrl" max-height="200px" contain />
+          <v-img
+            v-if="productPriceForm.image_path"
+            :src="getImageFullUrl"
+            max-height="200px"
+            contain
+          />
         </v-col>
       </v-row>
       <v-row v-if="showProductNameField">
@@ -27,8 +32,19 @@
           />
         </v-col>
       </v-row>
-      <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="hideProductBarcodeScannerTab" @filled="productFormFilled = $event" />
-      <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :proofType="productPriceForm.proof ? productPriceForm.proof.type : null" @filled="pricePriceFormFilled = $event" />
+      <ProductInputRow
+        :productForm="productPriceForm"
+        :disableInitWhenSwitchingType="true"
+        :hideProductBarcode="false"
+        :hideBarcodeScannerTab="hideProductBarcodeScannerTab"
+        @filled="productFormFilled = $event"
+      />
+      <PriceInputRow
+        :priceForm="productPriceForm"
+        :product="productPriceForm.product"
+        :proofType="productPriceForm.proof ? productPriceForm.proof.type : null"
+        @filled="pricePriceFormFilled = $event"
+      />
       <v-alert
         v-if="!productPriceFormValid"
         class="mt-3 mb-3"
@@ -40,26 +56,52 @@
     </v-card-text>
     <v-divider v-if="!hideProofDetails" />
     <v-card-text v-if="!hideProofDetails" class="flex-grow-0">
-      <ProofFooterRow :proof="productPriceForm.proof" :showProofChip="true" :hideProofType="true" :hideActionMenuButton="true" :readonly="true" />
+      <ProofFooterRow
+        :proof="productPriceForm.proof"
+        :showProofChip="true"
+        :hideProofType="true"
+        :hideActionMenuButton="true"
+        :readonly="true"
+      />
     </v-card-text>
     <v-divider v-if="!hideActions" />
     <v-card-actions v-if="!hideActions">
       <v-menu v-if="!hidePriceTagStatusMenu" scroll-strategy="close">
         <template #activator="{ props }">
-          <v-btn v-bind="props" color="error" variant="outlined" append-icon="mdi-menu-down">
+          <v-btn
+            v-bind="props"
+            color="error"
+            variant="outlined"
+            append-icon="mdi-menu-down"
+          >
             {{ errorButtonText }}
           </v-btn>
         </template>
         <v-list>
-          <v-list-item v-if="productPriceForm.status > 1" :slim="true" prepend-icon="mdi-check-circle-outline" @click="updatePriceTagStatus(0)">
-            {{ $t('Common.NotAnError') }}
+          <v-list-item
+            v-if="productPriceForm.status > 1"
+            :slim="true"
+            prepend-icon="mdi-check-circle-outline"
+            @click="updatePriceTagStatus(0)"
+          >
+            {{ $t("Common.NotAnError") }}
           </v-list-item>
           <v-divider v-if="productPriceForm.status > 1" class="mt-2 mb-2" />
-          <template v-for="(errorStatus, index) in PRICE_TAG_STATUS_ERROR_LIST" :key="errorStatus.key">
-            <v-list-item :slim="true" :prepend-icon="errorStatus.icon" @click="updatePriceTagStatus(errorStatus.key)">
+          <template
+            v-for="(errorStatus, index) in PRICE_TAG_STATUS_ERROR_LIST"
+            :key="errorStatus.key"
+          >
+            <v-list-item
+              :slim="true"
+              :prepend-icon="errorStatus.icon"
+              @click="updatePriceTagStatus(errorStatus.key)"
+            >
               {{ $t(errorStatus.textSmallScreen) }}
             </v-list-item>
-            <v-divider v-if="index !== PRICE_TAG_STATUS_ERROR_LIST.length - 1" class="mt-2 mb-2" />
+            <v-divider
+              v-if="index !== PRICE_TAG_STATUS_ERROR_LIST.length - 1"
+              class="mt-2 mb-2"
+            />
           </template>
         </v-list>
       </v-menu>
@@ -72,33 +114,39 @@
         :disabled="!productPriceFormValid"
         @click="validatePriceTag"
       >
-        {{ $t('Common.Confirm') }}
+        {{ $t("Common.Confirm") }}
       </v-btn>
     </v-card-actions>
 
-    <v-overlay v-model="showOverlay" class="align-center justify-center" contained persistent>
-      <v-progress-circular
-        color="primary"
-        size="small"
-        indeterminate
-      />
+    <v-overlay
+      v-model="showOverlay"
+      class="align-center justify-center"
+      contained
+      persistent
+    >
+      <v-progress-circular color="primary" size="small" indeterminate />
     </v-overlay>
   </v-card>
 </template>
 
-
 <script>
-import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import constants from '../constants'
-import proof_utils from '../utils/proof.js'
+import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import constants from "../constants";
+import proof_utils from "../utils/proof.js";
 
 export default {
   components: {
-    ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
-    PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
-    ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),
+    ProductInputRow: defineAsyncComponent(
+      () => import("../components/ProductInputRow.vue"),
+    ),
+    PriceInputRow: defineAsyncComponent(
+      () => import("../components/PriceInputRow.vue"),
+    ),
+    ProofFooterRow: defineAsyncComponent(
+      () => import("../components/ProofFooterRow.vue"),
+    ),
   },
   props: {
     productPriceForm: {
@@ -121,106 +169,126 @@ export default {
         proof: null,
         detected_product_code: null,
         image_path: null,
-      })
+      }),
     },
     showProductNameField: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideProductBarcodeScannerTab: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideProofDetails: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideActions: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hideUploadAction: {
       type: Boolean,
-      default: false
+      default: false,
     },
     loading: {
       type: Boolean,
-      default: false
+      default: false,
     },
     hidePriceTagStatusMenu: {
       type: Boolean,
-      default: false
+      default: false,
     },
     isInDialog: {
       type: Boolean,
       default: false,
-      description: 'Whether this card is displayed in a dialog'
-    }
+      description: "Whether this card is displayed in a dialog",
+    },
   },
-  emits: ['updatePriceTagStatus', 'validatePriceTag', 'close'],
+  emits: ["updatePriceTagStatus", "validatePriceTag", "close"],
   data() {
     return {
       PRICE_TAG_STATUS_ERROR_LIST: constants.PRICE_TAG_STATUS_ERROR_LIST,
       // data
       productFormFilled: false,
       pricePriceFormFilled: false,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     getImageFullUrl() {
-      return proof_utils.getImageFullUrl(this.productPriceForm.image_path)
+      return proof_utils.getImageFullUrl(this.productPriceForm.image_path);
     },
     priceTagIsTypeProduct() {
-      return this.productPriceForm.type === constants.PRICE_TYPE_PRODUCT
+      return this.productPriceForm.type === constants.PRICE_TYPE_PRODUCT;
     },
     priceTagIsTypeCategory() {
-      return this.productPriceForm.type === constants.PRICE_TYPE_CATEGORY
+      return this.productPriceForm.type === constants.PRICE_TYPE_CATEGORY;
     },
     productPriceFormValid() {
-      return this.productPriceForm && this.productFormFilled && this.pricePriceFormFilled
+      return (
+        this.productPriceForm &&
+        this.productFormFilled &&
+        this.pricePriceFormFilled
+      );
     },
     showOverlay() {
-      return this.loading
+      return this.loading;
     },
     productPriceFormInvalidAlertText() {
       if (this.priceTagIsTypeProduct && !this.productPriceForm.product_code) {
-        return this.$t('Common.ProductMissing')
-      } else if (this.priceTagIsTypeCategory && !this.productPriceForm.category_tag) {
-        return this.$t('Common.CategoryMissing')
-      } else if (this.priceTagIsTypeCategory && !this.productPriceForm.price_per) {
-        return this.$t('Common.PricePerMissing')
+        return this.$t("Common.ProductMissing");
+      } else if (
+        this.priceTagIsTypeCategory &&
+        !this.productPriceForm.category_tag
+      ) {
+        return this.$t("Common.CategoryMissing");
+      } else if (
+        this.priceTagIsTypeCategory &&
+        !this.productPriceForm.price_per
+      ) {
+        return this.$t("Common.PricePerMissing");
       } else if (!this.productPriceForm.price) {
-        return this.$t('Common.PriceMissing')
+        return this.$t("Common.PriceMissing");
       }
-      return this.$t('Common.Error')
+      return this.$t("Common.Error");
     },
     errorButtonText() {
-      if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_UNREADABLE) {
-        return this.$t('Common.Unreadable')
-      } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_TRUNCATED) {
-        return this.$t('Common.Truncated')
-      } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_NOT_A_PRICE) {
-        return this.$t('Common.NotAPrice')
-      } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_NO_BARCODE) {
-        return this.$t('Common.NoBarcode')
-      } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_OTHER) {
-        return this.$t('Common.Other')
+      if (
+        this.productPriceForm.status === constants.PRICE_TAG_STATUS_UNREADABLE
+      ) {
+        return this.$t("Common.Unreadable");
+      } else if (
+        this.productPriceForm.status === constants.PRICE_TAG_STATUS_TRUNCATED
+      ) {
+        return this.$t("Common.Truncated");
+      } else if (
+        this.productPriceForm.status === constants.PRICE_TAG_STATUS_NOT_A_PRICE
+      ) {
+        return this.$t("Common.NotAPrice");
+      } else if (
+        this.productPriceForm.status === constants.PRICE_TAG_STATUS_NO_BARCODE
+      ) {
+        return this.$t("Common.NoBarcode");
+      } else if (
+        this.productPriceForm.status === constants.PRICE_TAG_STATUS_OTHER
+      ) {
+        return this.$t("Common.Other");
       } else {
-        return this.$t('Common.Error')
+        return this.$t("Common.Error");
       }
-    }
+    },
   },
   methods: {
-    updatePriceTagStatus(status=null) {
-      this.$emit('updatePriceTagStatus', status)
+    updatePriceTagStatus(status = null) {
+      this.$emit("updatePriceTagStatus", status);
     },
     validatePriceTag() {
-      this.$emit('validatePriceTag', this.productPriceForm)
+      this.$emit("validatePriceTag", this.productPriceForm);
     },
     close() {
-      this.$emit('close')
-    }
-  }
-}
+      this.$emit("close");
+    },
+  },
+};
 </script>
