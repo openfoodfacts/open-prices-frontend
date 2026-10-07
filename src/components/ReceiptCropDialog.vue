@@ -14,6 +14,7 @@
               ref="ContributionAssistantDrawCanvas"
               :imageSrc="proofImageSrc"
               mode="Crop"
+              @extracting="loading = true"
               @extractedLabels="onCropDrawn($event)"
             />
           </div>
@@ -27,6 +28,7 @@
           variant="flat"
           :block="!$vuetify.display.smAndUp"
           :loading="loading"
+          :disabled="loading"
           @click="save"
         >
           {{ $t('Common.Save') }}
@@ -79,6 +81,7 @@ export default {
   methods: {
     onCropDrawn(extractedCrops) {
       this.croppedBlob = extractedCrops.length ? extractedCrops[0].blob : null
+      this.loading = false
     },
     save() {
       if (!this.croppedBlob) {
