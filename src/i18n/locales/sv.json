@@ -490,6 +490,7 @@
 		"Resolved": "Löst",
 		"Reuses": "Återanvändningar",
 		"ReusesKnown": "Kända återanvändningar",
+		"Save": "Spara",
 		"Search": "Sök",
 		"Select": "Välj",
 		"Send": "Skicka",
@@ -848,6 +849,9 @@
 		"UploadOnlyNewPrices": "Ladda upp endast nya priser ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Ladda upp eller uppdatera alla giltiga priser ({nbPrices})",
 		"WaitForExtraction": "Kvittoposterna extraheras automatiskt. Vänta ..."
+	},
+	"ReceiptCrop": {
+		"Title": "Crop a receipt"
 	},
 	"Reuses": {
 		"AlertNew": "Saknas din återanvändning? Hör av dig på {url}!",
