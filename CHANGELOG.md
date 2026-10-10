@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.177.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.177.1...v1.177.2) (2026-10-10)
+
+
+### Bug Fixes
+
+* **BarcodeScannerDialog:** fall back to html5-qrcode when BarcodeDetector has no detection service ([#2437](https://github.com/openfoodfacts/open-prices-frontend/issues/2437)) ([143b8cc](https://github.com/openfoodfacts/open-prices-frontend/commit/143b8cc5344b51736a34b47ad09ab0b6ca0ad2b4))
+* **BarcodeScannerDialog:** html5-qrcode scanner stopped itself right after starting ([#2441](https://github.com/openfoodfacts/open-prices-frontend/issues/2441)) ([7d0b04c](https://github.com/openfoodfacts/open-prices-frontend/commit/7d0b04c17a9e7159ce7e23f460c9805ea118e59a))
+* **BarcodeScannerDialog:** html5-qrcode: decode with ZXing only & restrict to product barcode formats. ([#2439](https://github.com/openfoodfacts/open-prices-frontend/issues/2439)) ([f58351e](https://github.com/openfoodfacts/open-prices-frontend/commit/f58351e7f231e72c9d0fdb5bd25e041541b11e35))
+* **BarcodeScannerDialog:** release the camera when the dialog is dismissed & show start errors. ([#2436](https://github.com/openfoodfacts/open-prices-frontend/issues/2436)) ([8012677](https://github.com/openfoodfacts/open-prices-frontend/commit/801267702f9ab1d68855b013fa1d80cc8dfe20fe))
+
+
+### Technical
+
+* **BarcodeScannerDialog:** move barcode scanner logic to a dedicated utils file ([#2442](https://github.com/openfoodfacts/open-prices-frontend/issues/2442)) ([02cadf3](https://github.com/openfoodfacts/open-prices-frontend/commit/02cadf30e8cc944b85016c5d596948c8372104cb))
+* **BarcodeScannerDialog:** use promises instead of async/await (and update AGENTS.md) ([#2443](https://github.com/openfoodfacts/open-prices-frontend/issues/2443)) ([82d470b](https://github.com/openfoodfacts/open-prices-frontend/commit/82d470b48d4c601aa1921edfc8cea9199a484c7b))
+* **Linting:** re-order eslint & prettier ([#2434](https://github.com/openfoodfacts/open-prices-frontend/issues/2434)) ([3159171](https://github.com/openfoodfacts/open-prices-frontend/commit/31591718e9d393629a3394c67a23562d4bc549cd))
+
 ## [1.177.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.177.0...v1.177.1) (2026-10-07)
 
 
