@@ -165,7 +165,7 @@
 <script>
 import "@webcomponents/webcomponentsjs/webcomponents-loader.js";
 import "@openfoodfacts/openfoodfacts-webcomponents";
-import { Html5Qrcode } from "html5-qrcode";
+import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
 import { defineAsyncComponent } from "vue";
 import { mapStores } from "pinia";
 import { useAppStore } from "../store";
@@ -175,10 +175,23 @@ import constants from "../constants";
 import utils from "../utils.js";
 import proof_utils from "../utils/proof.js";
 
+const decoderConfig = {
+  // product barcodes only: fewer formats for ZXing to try on each frame
+  formatsToSupport: [
+    Html5QrcodeSupportedFormats.EAN_13,
+    Html5QrcodeSupportedFormats.EAN_8,
+    Html5QrcodeSupportedFormats.UPC_A,
+    Html5QrcodeSupportedFormats.UPC_E,
+  ],
+  // in auto mode, html5-qrcode is only used when the native BarcodeDetector isn't usable
+  // (see getBarcodeScannerLibrary): don't let it alternate frames with a detector that always fails
+  useBarCodeDetectorIfSupported: false,
+  verbose: false,
+};
+
 const config = {
   fps: 10,
   qrbox: { width: 250, height: 150 },
-  // formatsToSupport: [Html5QrcodeSupportedFormats.QR_CODE, Html5QrcodeSupportedFormats.EAN_13],
 };
 
 export default {
@@ -324,7 +337,7 @@ export default {
     createQrcodeScanner() {
       this.scannerStartTimeout = null;
       this.scannerError = null;
-      const scanner = new Html5Qrcode("reader");
+      const scanner = new Html5Qrcode("reader", decoderConfig);
       this.scanner = scanner;
       scanner
         .start(
