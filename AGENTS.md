@@ -31,7 +31,7 @@ Do **NOT** modify the following files or directories:
 
 - Always prefer the Options API (`export default {}`, and keep the order `components`, `props`, `data()`, `computed`, `watch`, `mounted()`, `unmounted()`, `methods`).
 - Always import components using `defineAsyncComponent`.
-- Always prefer promises (`.then()`) over async.
+- Always prefer promises (`.then()` / `.catch()` / `.finally()`) over `async` / `await`, including in lifecycle hooks (`mounted()`) and in `/src/utils` helpers. When a function returns a Promise but already knows the result, return `Promise.resolve(value)` instead of making it `async`.
 - Always prefer Vuetify components.
 - Use `$t` function for internationalization.
 - Extract API logic to `/src/services` and keep global state in Pinia (`/src/store.js`). Use `data()` for local UI-only state (e.g., loading spinners, dialog open/close).
@@ -106,6 +106,7 @@ export default {
 - `/src/components`: Reusable Vue UI components (e.g., `PriceCard.vue`).
 - `/src/views`: Page-level components corresponding to routes (e.g., `Home.vue`).
 - `/src/services`: Modules for API interactions.
+- `/src/utils`: Helper modules with no component state (e.g., `barcode.js`, `barcodeScanner.js`).
 - `/src/store.js`: Pinia state management setup.
 
 ### Style & Accessibility

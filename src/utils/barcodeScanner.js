@@ -27,19 +27,23 @@ const HTML5_QRCODE_CAMERA_CONFIG = {
  * Resolve the barcode scanner library to use ("off-barcode-scanner" or "html5-qrcode")
  * from the user setting ("auto", or one of the libraries)
  */
-async function getBarcodeScannerLibrary(userSetting) {
+function getBarcodeScannerLibrary(userSetting) {
   if (userSetting !== "auto") {
-    return userSetting;
+    return Promise.resolve(userSetting);
+  }
+  if (!window.BarcodeDetector) {
+    return Promise.resolve("html5-qrcode");
   }
   // BarcodeDetector can exist without a working detection service
   // (e.g. Android without Google Play Services): it then supports no formats
-  try {
-    const formats = await window.BarcodeDetector?.getSupportedFormats();
-    if (formats?.includes("ean_13")) return "off-barcode-scanner";
-  } catch (error) {
-    console.warn(error);
-  }
-  return "html5-qrcode";
+  return window.BarcodeDetector.getSupportedFormats()
+    .then((formats) =>
+      formats.includes("ean_13") ? "off-barcode-scanner" : "html5-qrcode",
+    )
+    .catch((error) => {
+      console.warn(error);
+      return "html5-qrcode";
+    });
 }
 
 /**
