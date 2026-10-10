@@ -110,6 +110,7 @@ export default {
 
 ### Style & Accessibility
 
+- **Formatting**: Code is formatted by [Prettier](https://prettier.io/) (default config). Run `yarn format` instead of formatting by hand.
 - **A11y**: The project enforces `eslint-plugin-vuejs-accessibility`. Always include proper ARIA labels, `alt` tags on images, and valid anchor tags (`href`).
 - **Vuetify**: Use built-in Vuetify utility classes (e.g., `ma-4`, `d-flex`) instead of writing custom CSS whenever possible.
 
@@ -127,10 +128,11 @@ export default {
   - `fix: [description]` for bug fixes (triggers Patch release).
   - `chore: [description]` for dependency updates or routine tasks.
   - `docs: [description]` for documentation changes.
-- **Linting**: Your code must pass `yarn lint` with 0 warnings (`--max-warnings=0`) before committing. Pre-commit hooks will reject the commit otherwise.
+- **Linting & formatting**: Your code must pass `yarn lint` with 0 warnings (`--max-warnings=0`) and `yarn format:check` before committing. The pre-commit hook runs `yarn lint:fix` then Prettier on staged files, and rejects the commit if warnings remain. CI also checks both.
 
 ## 7. Common Commands (Yarn)
 
 - **Development**: `yarn dev` (local backend) or `yarn dev --mode staging` (staging backend).
 - **Build**: `yarn build` / `yarn build-staging`
-- **Linting**: `yarn lint:fix` (auto-fixes most style issues).
+- **Linting**: `yarn lint` / `yarn lint:fix` (ESLint, auto-fixes what it can).
+- **Formatting**: `yarn format` / `yarn format:check` (Prettier).
