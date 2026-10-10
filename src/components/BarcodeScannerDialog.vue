@@ -34,11 +34,19 @@
 
         <v-tabs-window v-model="currentDisplay" disabled>
           <v-tabs-window-item value="scan">
-            <div
-              v-if="barcodeScannerLibrary === 'html5-qrcode'"
-              id="reader"
-              width="500px"
-            />
+            <template v-if="barcodeScannerLibrary === 'html5-qrcode'">
+              <v-alert
+                v-if="scannerError"
+                type="error"
+                variant="outlined"
+                density="compact"
+                class="mb-2"
+                :text="
+                  $t('BarcodeScanner.CameraError', { error: scannerError })
+                "
+              />
+              <div id="reader" width="500px" />
+            </template>
             <barcode-scanner
               v-else
               runScanner="true"
@@ -157,7 +165,7 @@
 <script>
 import "@webcomponents/webcomponentsjs/webcomponents-loader.js";
 import "@openfoodfacts/openfoodfacts-webcomponents";
-import { Html5Qrcode, Html5QrcodeScanType } from "html5-qrcode";
+import { Html5Qrcode } from "html5-qrcode";
 import { defineAsyncComponent } from "vue";
 import { mapStores } from "pinia";
 import { useAppStore } from "../store";
@@ -170,9 +178,6 @@ import proof_utils from "../utils/proof.js";
 const config = {
   fps: 10,
   qrbox: { width: 250, height: 150 },
-  rememberLastUsedCamera: false,
-  // Only support camera scan type.
-  supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
   // formatsToSupport: [Html5QrcodeSupportedFormats.QR_CODE, Html5QrcodeSupportedFormats.EAN_13],
 };
 
@@ -213,6 +218,8 @@ export default {
   data() {
     return {
       scanner: null,
+      scannerStartTimeout: null,
+      scannerError: null,
       barcodeManualForm: {
         barcode: "",
       },
@@ -261,15 +268,16 @@ export default {
           this.currentDisplay = constants.PRODUCT_SELECTOR_DISPLAY_LIST[1].key;
         } else {
           if (this.barcodeScannerLibrary === "html5-qrcode") {
-            window.setTimeout(() => this.createQrcodeScanner(), 200);
+            this.scannerStartTimeout = window.setTimeout(
+              () => this.createQrcodeScanner(),
+              200,
+            );
           }
         }
       } else {
         // type
         window.setTimeout(() => this.$refs.barcodeManualInput?.focus?.(), 200);
-        if (this.scanner && this.scanner.getState() > 1) {
-          this.scanner.stop();
-        }
+        this.stopQrcodeScanner();
       }
     },
   },
@@ -294,15 +302,43 @@ export default {
       }
     }
   },
+  beforeUnmount() {
+    // the dialog can be unmounted without calling close() (click outside, back button):
+    // release the camera, otherwise it stays busy and the next scanner can't start
+    this.stopQrcodeScanner();
+  },
   methods: {
     createQrcodeScanner() {
-      this.scanner = new Html5Qrcode("reader");
-      this.scanner.start(
-        { facingMode: "environment" },
-        config,
-        this.onScanSuccess,
-        this.onScanFailure,
-      );
+      this.scannerStartTimeout = null;
+      this.scannerError = null;
+      const scanner = new Html5Qrcode("reader");
+      this.scanner = scanner;
+      scanner
+        .start(
+          { facingMode: "environment" },
+          config,
+          this.onScanSuccess,
+          this.onScanFailure,
+        )
+        .then(() => {
+          // stop was requested while the camera was starting
+          if (this.scanner !== scanner) {
+            scanner.stop().catch((error) => console.error(error));
+          }
+        })
+        .catch((error) => {
+          this.scannerError = error?.message || String(error);
+          console.error(error);
+        });
+    },
+    stopQrcodeScanner() {
+      window.clearTimeout(this.scannerStartTimeout);
+      this.scannerStartTimeout = null;
+      // https://scanapp.org/html5-qrcode-docs/docs/apis/enums/Html5QrcodeScannerState
+      if (this.scanner && this.scanner.getState() > 1) {
+        this.scanner.stop().catch((error) => console.error(error));
+      }
+      this.scanner = null;
     },
     onScanStateChanged(state) {
       if (state.detail.state === "detected") {
@@ -387,10 +423,7 @@ export default {
       this.close();
     },
     close() {
-      // https://scanapp.org/html5-qrcode-docs/docs/apis/enums/Html5QrcodeScannerState
-      if (this.scanner && this.scanner.getState() > 1) {
-        this.scanner.stop();
-      }
+      this.stopQrcodeScanner();
       this.$emit("close");
     },
   },
