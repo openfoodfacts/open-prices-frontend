@@ -958,6 +958,11 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.5.40.tgz#fc09d1871d66cd9b01959a597b41d7cb61f716a8"
   integrity sha512-WxnBtruIqOoV3rA4jeKDWzrYI5h7Cp4+pjwDi8kWGHz+IslhiN+wguLVVhtv2l8VoU02rzDCVfDjgCl1lNpZVg==
 
+"@vuetify/v0@^1.2.1":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@vuetify/v0/-/v0-1.2.3.tgz#4502d0a668db380a326def5aa644cbfa0b67b3a4"
+  integrity sha512-8qpYa88KxKrvi4jQcz+Zg4WH04un48Lt7Tj0Qq+LqvbUvHi+H177vWqBn9tQWgpxBVs1RXrTz5zw0Cy6txJHlw==
+
 "@vueuse/core@11.3.0", "@vueuse/core@^11.3.0":
   version "11.3.0"
   resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-11.3.0.tgz#bb0bd1f0edd5435d20694dbe51091cf548653a4d"
@@ -4272,10 +4277,12 @@ vue@^3.2.25, vue@^3.5.40:
     "@vue/server-renderer" "3.5.40"
     "@vue/shared" "3.5.40"
 
-vuetify@^3.11.8:
-  version "3.12.10"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-3.12.10.tgz#1de66b4779fbc232871daedcee232ef99c9cb094"
-  integrity sha512-6u/sWsIoUqWap3FxaIXZ/JObN/E2Z/BWAaliHh3GEl3Ik162zkpcIFYYLTnQiJ8PcyvMSFr+Lzyz7VoERob7JA==
+vuetify@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-4.2.2.tgz#b434ef4c4e940963c9756829eb407e5116d01fea"
+  integrity sha512-6PYw9V5bA1ug+r1gWOs+ztMnz4qJDue3WLiz5VJN/y1blW9e/oeh0D8eCw7jqc8ufjm8XSN7hf6x2odJXtzw0Q==
+  dependencies:
+    "@vuetify/v0" "^1.2.1"
 
 wait-on@9.0.4:
   version "9.0.4"
