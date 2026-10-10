@@ -166,7 +166,7 @@
 import "@webcomponents/webcomponentsjs/webcomponents-loader.js";
 import "@openfoodfacts/openfoodfacts-webcomponents";
 import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
-import { defineAsyncComponent } from "vue";
+import { defineAsyncComponent, markRaw } from "vue";
 import { mapStores } from "pinia";
 import { useAppStore } from "../store";
 import openPricesApi from "../services/openPricesApi";
@@ -272,28 +272,43 @@ export default {
       if (!this.barcodeManualForm.barcode) return "0";
       return this.barcodeManualForm.barcode.length.toString();
     },
+    qrcodeScannerActive() {
+      // the scan tab and the library are set independently (v-tabs selects a tab on mount,
+      // the library is resolved asynchronously): start the scanner once both are known
+      return (
+        this.currentDisplay ===
+          constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key &&
+        !this.hideBarcodeScannerTab &&
+        this.barcodeScannerLibrary === "html5-qrcode"
+      );
+    },
   },
   watch: {
     currentDisplay(value) {
       if (value === constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key) {
         if (this.hideBarcodeScannerTab) {
           this.currentDisplay = constants.PRODUCT_SELECTOR_DISPLAY_LIST[1].key;
-        } else {
-          if (this.barcodeScannerLibrary === "html5-qrcode") {
-            this.scannerStartTimeout = window.setTimeout(
-              () => this.createQrcodeScanner(),
-              200,
-            );
-          }
         }
       } else {
         // type
         window.setTimeout(() => this.$refs.barcodeManualInput?.focus?.(), 200);
+      }
+    },
+    qrcodeScannerActive(active) {
+      if (active) {
+        // wait for the #reader element to be rendered
+        this.scannerStartTimeout = window.setTimeout(
+          () => this.createQrcodeScanner(),
+          200,
+        );
+      } else {
         this.stopQrcodeScanner();
       }
     },
   },
   async mounted() {
+    // init tab
+    this.currentDisplay = this.appStore.user.barcode_scanner_default_mode;
     // init search(s)
     if (this.barcodeManualInputPrefillValue) {
       this.barcodeManualForm.barcode = this.barcodeManualInputPrefillValue;
@@ -308,10 +323,10 @@ export default {
         this.getProduct(barcode.barcode, false);
       }
     }
-    // init library, then tab (the tab watcher starts the scanner)
-    this.barcodeScannerLibrary = await this.getBarcodeScannerLibrary();
+    // init library (the qrcodeScannerActive watcher starts the scanner)
+    const barcodeScannerLibrary = await this.getBarcodeScannerLibrary();
     if (this.isUnmounted) return;
-    this.currentDisplay = this.appStore.user.barcode_scanner_default_mode;
+    this.barcodeScannerLibrary = barcodeScannerLibrary;
   },
   beforeUnmount() {
     this.isUnmounted = true;
@@ -337,7 +352,8 @@ export default {
     createQrcodeScanner() {
       this.scannerStartTimeout = null;
       this.scannerError = null;
-      const scanner = new Html5Qrcode("reader", decoderConfig);
+      // markRaw: otherwise this.scanner returns a reactive proxy, never === scanner
+      const scanner = markRaw(new Html5Qrcode("reader", decoderConfig));
       this.scanner = scanner;
       scanner
         .start(
