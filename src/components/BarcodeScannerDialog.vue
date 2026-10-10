@@ -48,7 +48,7 @@
               <div id="reader" width="500px" />
             </template>
             <barcode-scanner
-              v-else
+              v-else-if="barcodeScannerLibrary === 'off-barcode-scanner'"
               runScanner="true"
               @barcode-scanner-state="onScanStateChanged"
             />
@@ -220,6 +220,7 @@ export default {
       scanner: null,
       scannerStartTimeout: null,
       scannerError: null,
+      isUnmounted: false,
       barcodeManualForm: {
         barcode: "",
       },
@@ -232,9 +233,7 @@ export default {
       BARCODE_SCANNER_URL:
         "https://github.com/openfoodfacts/openfoodfacts-webcomponents",
       BARCODE_SCANNER_NAME: "openfoodfacts-webcomponents",
-      barcodeScannerLibrary: window.BarcodeDetector
-        ? "off-barcode-scanner"
-        : "html5-qrcode",
+      barcodeScannerLibrary: null, // see mounted
     };
   },
   computed: {
@@ -281,12 +280,7 @@ export default {
       }
     },
   },
-  mounted() {
-    // init tab
-    this.currentDisplay = this.appStore.user.barcode_scanner_default_mode;
-    if (this.appStore.user.barcode_scanner_library != "auto") {
-      this.barcodeScannerLibrary = this.appStore.user.barcode_scanner_library;
-    }
+  async mounted() {
     // init search(s)
     if (this.barcodeManualInputPrefillValue) {
       this.barcodeManualForm.barcode = this.barcodeManualInputPrefillValue;
@@ -301,13 +295,32 @@ export default {
         this.getProduct(barcode.barcode, false);
       }
     }
+    // init library, then tab (the tab watcher starts the scanner)
+    this.barcodeScannerLibrary = await this.getBarcodeScannerLibrary();
+    if (this.isUnmounted) return;
+    this.currentDisplay = this.appStore.user.barcode_scanner_default_mode;
   },
   beforeUnmount() {
+    this.isUnmounted = true;
     // the dialog can be unmounted without calling close() (click outside, back button):
     // release the camera, otherwise it stays busy and the next scanner can't start
     this.stopQrcodeScanner();
   },
   methods: {
+    async getBarcodeScannerLibrary() {
+      if (this.appStore.user.barcode_scanner_library !== "auto") {
+        return this.appStore.user.barcode_scanner_library;
+      }
+      // BarcodeDetector can exist without a working detection service
+      // (e.g. Android without Google Play Services): it then supports no formats
+      try {
+        const formats = await window.BarcodeDetector?.getSupportedFormats();
+        if (formats?.includes("ean_13")) return "off-barcode-scanner";
+      } catch (error) {
+        console.warn(error);
+      }
+      return "html5-qrcode";
+    },
     createQrcodeScanner() {
       this.scannerStartTimeout = null;
       this.scannerError = null;
