@@ -117,6 +117,7 @@
 		}
 	},
 	"BarcodeScanner": {
+		"CameraError": "The camera could not be started: {error}",
 		"Htlm5-qrcode": {
 			"Text": "funciona amb {url}"
 		},
