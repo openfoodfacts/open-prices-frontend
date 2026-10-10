@@ -165,34 +165,15 @@
 <script>
 import "@webcomponents/webcomponentsjs/webcomponents-loader.js";
 import "@openfoodfacts/openfoodfacts-webcomponents";
-import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
-import { defineAsyncComponent, markRaw } from "vue";
+import { defineAsyncComponent } from "vue";
 import { mapStores } from "pinia";
 import { useAppStore } from "../store";
 import openPricesApi from "../services/openPricesApi";
 import openFoodFactsApi from "../services/openFoodFactsApi";
 import constants from "../constants";
 import utils from "../utils.js";
+import barcode_scanner_utils from "../utils/barcodeScanner.js";
 import proof_utils from "../utils/proof.js";
-
-const decoderConfig = {
-  // product barcodes only: fewer formats for ZXing to try on each frame
-  formatsToSupport: [
-    Html5QrcodeSupportedFormats.EAN_13,
-    Html5QrcodeSupportedFormats.EAN_8,
-    Html5QrcodeSupportedFormats.UPC_A,
-    Html5QrcodeSupportedFormats.UPC_E,
-  ],
-  // in auto mode, html5-qrcode is only used when the native BarcodeDetector isn't usable
-  // (see getBarcodeScannerLibrary): don't let it alternate frames with a detector that always fails
-  useBarCodeDetectorIfSupported: false,
-  verbose: false,
-};
-
-const config = {
-  fps: 10,
-  qrbox: { width: 250, height: 150 },
-};
 
 export default {
   components: {
@@ -324,7 +305,10 @@ export default {
       }
     }
     // init library (the qrcodeScannerActive watcher starts the scanner)
-    const barcodeScannerLibrary = await this.getBarcodeScannerLibrary();
+    const barcodeScannerLibrary =
+      await barcode_scanner_utils.getBarcodeScannerLibrary(
+        this.appStore.user.barcode_scanner_library,
+      );
     if (this.isUnmounted) return;
     this.barcodeScannerLibrary = barcodeScannerLibrary;
   },
@@ -335,65 +319,28 @@ export default {
     this.stopQrcodeScanner();
   },
   methods: {
-    async getBarcodeScannerLibrary() {
-      if (this.appStore.user.barcode_scanner_library !== "auto") {
-        return this.appStore.user.barcode_scanner_library;
-      }
-      // BarcodeDetector can exist without a working detection service
-      // (e.g. Android without Google Play Services): it then supports no formats
-      try {
-        const formats = await window.BarcodeDetector?.getSupportedFormats();
-        if (formats?.includes("ean_13")) return "off-barcode-scanner";
-      } catch (error) {
-        console.warn(error);
-      }
-      return "html5-qrcode";
-    },
     createQrcodeScanner() {
       this.scannerStartTimeout = null;
       this.scannerError = null;
-      // markRaw: otherwise this.scanner returns a reactive proxy, never === scanner
-      const scanner = markRaw(new Html5Qrcode("reader", decoderConfig));
-      this.scanner = scanner;
-      scanner
-        .start(
-          { facingMode: "environment" },
-          config,
-          this.onScanSuccess,
-          this.onScanFailure,
-        )
-        .then(() => {
-          // stop was requested while the camera was starting
-          if (this.scanner !== scanner) {
-            scanner.stop().catch((error) => console.error(error));
-          }
-        })
-        .catch((error) => {
-          this.scannerError = error?.message || String(error);
-          console.error(error);
-        });
+      this.scanner = barcode_scanner_utils.startHtml5QrcodeScanner(
+        "reader",
+        this.barcodeSend,
+      );
+      this.scanner.started.catch((error) => {
+        this.scannerError = error?.message || String(error);
+        console.error(error);
+      });
     },
     stopQrcodeScanner() {
       window.clearTimeout(this.scannerStartTimeout);
       this.scannerStartTimeout = null;
-      // https://scanapp.org/html5-qrcode-docs/docs/apis/enums/Html5QrcodeScannerState
-      if (this.scanner && this.scanner.getState() > 1) {
-        this.scanner.stop().catch((error) => console.error(error));
-      }
+      this.scanner?.stop();
       this.scanner = null;
     },
     onScanStateChanged(state) {
       if (state.detail.state === "detected") {
         this.barcodeSend(state.detail.barcode);
       }
-    },
-    // eslint-disable-next-line no-unused-vars
-    onScanSuccess(decodedText, decodedResult) {
-      this.barcodeSend(decodedText);
-    },
-    // eslint-disable-next-line no-unused-vars
-    onScanFailure(error) {
-      // console.warn(`Code scan error = ${error}`)
     },
     numericAndWildcardOnly(value) {
       return utils.numericAndWildcardOnly(value);
