@@ -287,7 +287,7 @@ export default {
       }
     },
   },
-  async mounted() {
+  mounted() {
     // init tab
     this.currentDisplay = this.appStore.user.barcode_scanner_default_mode;
     // init search(s)
@@ -305,12 +305,12 @@ export default {
       }
     }
     // init library (the qrcodeScannerActive watcher starts the scanner)
-    const barcodeScannerLibrary =
-      await barcode_scanner_utils.getBarcodeScannerLibrary(
-        this.appStore.user.barcode_scanner_library,
-      );
-    if (this.isUnmounted) return;
-    this.barcodeScannerLibrary = barcodeScannerLibrary;
+    barcode_scanner_utils
+      .getBarcodeScannerLibrary(this.appStore.user.barcode_scanner_library)
+      .then((barcodeScannerLibrary) => {
+        if (this.isUnmounted) return;
+        this.barcodeScannerLibrary = barcodeScannerLibrary;
+      });
   },
   beforeUnmount() {
     this.isUnmounted = true;
