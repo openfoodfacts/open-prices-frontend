@@ -162,7 +162,7 @@ export default {
       this.appStore.user.price_list_display_default_mode ||
       this.currentDisplay;
     this.getProof();
-    this.getPrices();
+    this.initPrices();
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
     window.addEventListener("scroll", this.handleDebouncedScroll);
