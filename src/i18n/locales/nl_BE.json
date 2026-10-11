@@ -700,6 +700,7 @@
 		"RecentLocations": "Geen recente locaties | Recente locatie {recentLocationNumber}| Recente locaties {recentLocationNumber}",
 		"Result": "Resultaat {resultNumber} | Resultaten {resultNumber}",
 		"SearchByName": "Zoek uw winkel op naam en plaats",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Vind uw winkellocatie",
 		"Warning": "De zoekmachine om een winkel te vinden is momenteel niet erg nauwkeurig.{newline}Aarzel niet om de straatnaam toe te voegen om de resultaten te verfijnen.{newline}Voorbeelden: Carrefour City 15e Parijs; Sainsbury's Camden Londen"
 	},
