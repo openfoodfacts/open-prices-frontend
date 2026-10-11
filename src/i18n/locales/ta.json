@@ -495,6 +495,7 @@
 		"Search": "தேடுக",
 		"Select": "Select",
 		"Send": "Send",
+		"ServerError": "Error: server error",
 		"Settings": "அமைப்புகள்",
 		"SHOP_IMPORT": "Shop import",
 		"SignInOFFAccount": "Sign in with your {url} credentials",
@@ -1048,7 +1049,6 @@
 	"SignIn": {
 		"Button": "உள்நுழை",
 		"Password": "கடவுச்சொல்",
-		"ServerError": "Error: server error",
 		"Title": "உள்நுழை",
 		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
 		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
@@ -1091,7 +1091,6 @@
 		"MyDashboard": "எனது டாஷ்போர்டு",
 		"MyPrices": "எனது விலைகள்",
 		"MyProofs": "எனது சான்றுகள்",
-		"ProofUpdated": "Proof updated!",
 		"Settings": "அமைப்புகள்",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",
