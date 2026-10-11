@@ -217,7 +217,7 @@
           /><!-- TODO: center vertically instead of br -->
           <br v-if="$vuetify.display.smAndUp" />
           <v-btn
-            v-if="userConsumptionPriceList.length"
+            v-if="userCommunityPriceList.length"
             color="primary"
             :block="!$vuetify.display.smAndUp"
             :to="getUserDashboardPriceUrl"
