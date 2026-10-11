@@ -47,7 +47,6 @@
             :hideProofHeader="true"
             :showImageThumb="true"
             height="100%"
-            @proofUpdated="handleProofUpdated"
           />
         </v-col>
       </v-row>
@@ -69,10 +68,6 @@
       <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
-
-  <v-snackbar v-model="proofUpdated" color="success" :timeout="2000">
-    {{ $t("UserDashboard.ProofUpdated") }}
-  </v-snackbar>
 </template>
 
 <script>
@@ -118,7 +113,6 @@ export default {
       proofPage: 0,
       proofLocationList: [],
       loading: false,
-      proofUpdated: false,
       // filter, order & display
       currentFilterList: [],
       currentType: "",
@@ -211,9 +205,6 @@ export default {
         .finally(() => {
           this.loading = false;
         });
-    },
-    handleProofUpdated() {
-      this.proofUpdated = true;
     },
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList;
