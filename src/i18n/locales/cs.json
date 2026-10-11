@@ -620,6 +620,14 @@
 		"JoinUs": "Připojte se k nám!",
 		"HowToUseTheData": "Použijte data"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "Přispějte k Open Food Facts"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "Vyberte jednu ze svých oblíbených měn",
 		"Currency": "Měna",
