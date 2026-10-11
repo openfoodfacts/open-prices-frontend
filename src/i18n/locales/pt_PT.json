@@ -700,6 +700,7 @@
 		"RecentLocations": "Nenhuma localização recente | Localização recente {recentLocationNumber}| Localizações recentes {recentLocationNumber}",
 		"Result": "Resultado {resultNumber} | Resultados {resultNumber}",
 		"SearchByName": "Pesquisar a sua loja por nome e cidade",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Encontrar o local da sua loja",
 		"Warning": "O motor de pesquisa para encontrar uma loja não é atualmente muito preciso.{newline}Não hesite em acrescentar o nome da rua para limitar os resultados.{newline}Exemplos: Carrefour City 15e Paris ; Sainsbury's Camden Londres"
 	},
