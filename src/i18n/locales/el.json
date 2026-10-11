@@ -700,6 +700,7 @@
 		"RecentLocations": "Δεν υπάρχουν πρόσφατες τοποθεσίες | Πρόσφατη τοποθεσία {recentLocationNumber}| Πρόσφατες τοποθεσίες {recentLocationNumber}",
 		"Result": "Αποτέλεσμα {resultNumber} | Αποτελέσματα {resultNumber}",
 		"SearchByName": "Αναζητήστε το κατάστημά σας με βάση το όνομα και την πόλη",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Βρείτε την τοποθεσία του καταστήματός σας",
 		"Warning": "Η μηχανή αναζήτησης για την εύρεση ενός καταστήματος δεν είναι προς το παρόν πολύ ακριβής.{newline}Μην διστάσετε να προσθέσετε το όνομα της οδού για να περιορίσετε τα αποτελέσματα.{newline}Παραδείγματα: Carrefour City 15e Παρίσι; Sainsbury's Camden Λονδίνο"
 	},
