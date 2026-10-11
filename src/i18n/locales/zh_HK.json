@@ -495,6 +495,7 @@
 		"Search": "搜尋",
 		"Select": "Select",
 		"Send": "Send",
+		"ServerError": "Error: server error",
 		"Settings": "設定",
 		"SHOP_IMPORT": "Shop import",
 		"SignInOFFAccount": "Sign in with your {url} credentials",
@@ -1048,7 +1049,6 @@
 	"SignIn": {
 		"Button": "登录",
 		"Password": "密码",
-		"ServerError": "Error: server error",
 		"Title": "登录",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
@@ -1091,7 +1091,6 @@
 		"MyDashboard": "My dashboard",
 		"MyPrices": "我的价格",
 		"MyProofs": "我的样张",
-		"ProofUpdated": "Proof updated!",
 		"Settings": "設定",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",
