@@ -117,7 +117,7 @@
 		}
 	},
 	"BarcodeScanner": {
-		"CameraError": "The camera could not be started: {error}",
+		"CameraError": "לא ניתן להפעיל את המצלמה: {error}",
 		"Htlm5-qrcode": {
 			"Text": "מופעל על גבי {url}"
 		},
