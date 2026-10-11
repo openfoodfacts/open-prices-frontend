@@ -620,6 +620,14 @@
 		"JoinUs": "参加しませんか！",
 		"HowToUseTheData": "データを活用する"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "Open Food Facts に貢献する"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "お気に入りの通貨を 1 つ選択してください",
 		"Currency": "通貨",
