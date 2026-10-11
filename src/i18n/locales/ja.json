@@ -700,6 +700,7 @@
 		"RecentLocations": "最近の場所なし | 最近の場所 {recentLocationNumber}| 最近の場所 {recentLocationNumber}",
 		"Result": "結果 {resultNumber} | 結果 {resultNumber}",
 		"SearchByName": "名前と都市でショップを検索",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "ショップの場所を探す",
 		"Warning": "現在、お店を見つけるための検索エンジンの精度はあまり高くありません。{newline}結果を絞り込むために、迷わず通り名を追加してください。{newline}例: カルフール シティ 15e パリ ;セインズベリーズ カムデン ロンドン"
 	},
