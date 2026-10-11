@@ -9,7 +9,6 @@
         v-if="!price.currency"
         :currency="price.currency"
         :showErrorIfMissing="true"
-        :readonly="readonly"
       />
       <PriceDiscountChip v-if="hasDiscount" class="ml-1 mr-1" :price="price" />
       <PriceQuantityPurchasedChip
