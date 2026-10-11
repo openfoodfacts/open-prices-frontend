@@ -168,7 +168,7 @@ export default {
         });
     },
     updateFilterList(newFilterList) {
-      this.currentFilter = newFilterList;
+      this.currentFilterList = newFilterList;
       this.initUserProofList();
     },
     toggleProofType(sourceKey) {

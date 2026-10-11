@@ -127,7 +127,7 @@ export default {
           JSON.stringify(oldRouteQueryFiltered) !==
           JSON.stringify(newRouteQueryFiltered)
         ) {
-          this.initCountryCity();
+          this.initCountry();
         }
       }
     },
