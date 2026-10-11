@@ -63,7 +63,7 @@
           <PriceCard
             :price="price"
             :product="price.product"
-            :hideProductLocation="true"
+            :hidePriceLocation="true"
             elevation="1"
             height="100%"
           />
