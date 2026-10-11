@@ -105,6 +105,7 @@ export default {
   methods: {
     initUserList() {
       this.userList = [];
+      this.userTotal = null;
       this.userPage = 0;
       this.getUsers();
     },
