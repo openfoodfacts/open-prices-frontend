@@ -43,7 +43,8 @@ export default [
     },
     settings: {
       "vue-i18n": {
-        localeDir: "./i18n/locales/*.json",
+        localeDir: "./src/i18n/locales/*.json",
+        messageSyntaxVersion: "^9.0.0",
       },
     },
     languageOptions: {
