@@ -321,6 +321,7 @@ export default {
       loading: false,
       results: null,
       searchError: false,
+      searchRequestId: 0,
       // config
       searchProvider: constants.LOCATION_SEARCH_PROVIDER_LIST[1].key, // photon
       currentDisplay: null, // see mounted
@@ -410,6 +411,10 @@ export default {
       this.results = null;
       this.searchError = false;
       this.loading = true;
+      // tag this request so stale responses (from an earlier, slower search)
+      // don't overwrite the state of the latest one
+      const requestId = ++this.searchRequestId;
+      const isLatestRequest = () => requestId === this.searchRequestId;
       // search by id (N12208020359, 12208020359)
       if (utils.isNumber(this.locationOsmSearchForm.q.substring(1))) {
         const id = utils.isNumber(this.locationOsmSearchForm.q.substring(0, 1))
@@ -418,13 +423,13 @@ export default {
         openStreetMapApi
           .openstreetmapNominatimLookup(id)
           .then((data) => {
-            this.results = data;
+            if (isLatestRequest()) this.results = data;
           })
           .catch(() => {
-            this.searchError = true;
+            if (isLatestRequest()) this.searchError = true;
           })
           .finally(() => {
-            this.loading = false;
+            if (isLatestRequest()) this.loading = false;
           });
         // search by name
       } else {
@@ -434,13 +439,13 @@ export default {
             this.searchProvider,
           )
           .then((data) => {
-            this.results = data;
+            if (isLatestRequest()) this.results = data;
           })
           .catch(() => {
-            this.searchError = true;
+            if (isLatestRequest()) this.searchError = true;
           })
           .finally(() => {
-            this.loading = false;
+            if (isLatestRequest()) this.loading = false;
           });
       }
     },
