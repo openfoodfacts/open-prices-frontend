@@ -495,6 +495,7 @@
 		"Search": "Paieška",
 		"Select": "Pasirinkti",
 		"Send": "Siųsti",
+		"ServerError": "Error: server error",
 		"Settings": "Nustatymai",
 		"SHOP_IMPORT": "Shop import",
 		"SignInOFFAccount": "Sign in with your {url} credentials",
@@ -1048,7 +1049,6 @@
 	"SignIn": {
 		"Button": "Prisijungti",
 		"Password": "Slaptažodis",
-		"ServerError": "Error: server error",
 		"Title": "Prisijungti",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
 		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
@@ -1091,7 +1091,6 @@
 		"MyDashboard": "Mano pagrindinis meniu",
 		"MyPrices": "Mano kainos",
 		"MyProofs": "Mano įrodymai",
-		"ProofUpdated": "Įrodymas atnaujintas!",
 		"Settings": "Nustatymai",
 		"Title": "Prietaisų skydelis",
 		"UserPriceTotal": "{count} prices",
