@@ -180,4 +180,3 @@ What it does:
 - Last run: 2026-10-11
 - Input (Taxonomy): 724 origins
 - Output (JSON): 264 origins x 150 languages
-
