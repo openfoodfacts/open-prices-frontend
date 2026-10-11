@@ -60,7 +60,7 @@ export default {
     },
   },
   mounted() {
-    this.getBadges();
+    this.initBadgeList();
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
     window.addEventListener("scroll", this.handleDebouncedScroll);
@@ -71,6 +71,8 @@ export default {
   methods: {
     initBadgeList() {
       this.userBadgeList = [];
+      this.userBadgeTotal = null;
+      this.userBadgePage = 0;
       this.getBadges();
     },
     getBadges() {

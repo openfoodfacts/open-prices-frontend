@@ -140,7 +140,7 @@ export default {
     this.currentFilterList =
       utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
       this.currentFilterList;
-    this.getPriceTags();
+    this.initPriceTags();
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
     window.addEventListener("scroll", this.handleDebouncedScroll);

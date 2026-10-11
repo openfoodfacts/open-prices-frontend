@@ -62,11 +62,12 @@ export default {
     },
   },
   mounted() {
-    this.getBadges();
+    this.initBadgeList();
   },
   methods: {
     initBadgeList() {
       this.badgeList = [];
+      this.badgeTotal = null;
       this.badgePage = 0;
       this.getBadges();
     },
