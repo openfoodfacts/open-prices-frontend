@@ -126,7 +126,9 @@ def update_readme_stats(
             new_readme_lines.append("\n")
             for stats_line in stats_lines:
                 new_readme_lines.append(stats_line.rstrip() + "\n")
-            new_readme_lines.append("\n")
+            # Blank line only if content follows (avoid a trailing blank line at EOF, flagged by Prettier)
+            if i < len(readme_lines):
+                new_readme_lines.append("\n")
             # Copy the rest
             while i < len(readme_lines):
                 new_readme_lines.append(readme_lines[i])
