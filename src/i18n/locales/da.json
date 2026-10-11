@@ -700,6 +700,7 @@
 		"RecentLocations": "Ingen nylige placeringer | Seneste placering {recentLocationNumber}| Seneste placeringer {recentLocationNumber}",
 		"Result": "Resultat {resultNumber} | Resultater {resultNumber}",
 		"SearchByName": "Søg efter butik med navn og by",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Find din butiks placering",
 		"Warning": "Søgemaskinen til at finde en butik er i øjeblikket ikke særlig præcis.{newline}Tøv ikke med at tilføje gadenavnet for at indsnævre resultaterne.{newline}Eksempler: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},
