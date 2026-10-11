@@ -700,6 +700,7 @@
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "பெயர் மற்றும் நகரம் மூலம் உங்கள் கடையைத் தேடுங்கள்",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "உங்கள் கடையின் இருப்பிடத்தைக் கண்டறியவும்",
 		"Warning": "கடையைக் கண்டுபிடிப்பதற்கான தேடுபொறி தற்போது மிகவும் துல்லியமாக இல்லை.{newline}முடிவுகளைக் குறைக்க தெருவின் பெயரைச் சேர்க்க தயங்க வேண்டாம்.{newline}எடுத்துக்காட்டுகள்: Carrefour City 15e பாரிஸ் ; சைன்ஸ்பரியின் கேம்டன் லண்டன்"
 	},
