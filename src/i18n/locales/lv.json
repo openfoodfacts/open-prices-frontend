@@ -700,6 +700,7 @@
 		"RecentLocations": "Nav nesenu atrašanās vietu | Nesenā atrašanās vieta {recentLocationNumber}| Nesenās atrašanās vietas {recentLocationNumber}",
 		"Result": "Rezultāts {resultNumber} | Rezultāti {resultNumber}",
 		"SearchByName": "Meklējiet savu veikalu pēc nosaukuma un pilsētas",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Atrodiet sava veikala atrašanās vietu",
 		"Warning": "Meklēšanas sistēma veikala atrašanai pašlaik nav īpaši precīza.{newline}Lūdzu, pievienojiet ielas nosaukumu, lai sašaurinātu rezultātus.{newline}Piemēri: Carrefour City 15e Parīze ; Sainsbury's Camden Londona"
 	},
