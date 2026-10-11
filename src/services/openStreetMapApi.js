@@ -16,7 +16,12 @@ export default {
       method: "GET",
       headers: OP_DEFAULT_HEADERS,
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Nominatim search failed (${response.status})`);
+        }
+        return response.json();
+      })
       .then((data) =>
         data.filter(
           (l) => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type),
@@ -32,7 +37,12 @@ export default {
     return fetch(url, {
       method: "GET",
       headers: OP_DEFAULT_HEADERS,
-    }).then((response) => response.json());
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error(`Nominatim lookup failed (${response.status})`);
+      }
+      return response.json();
+    });
   },
   /**
    * Photon search by query
@@ -52,8 +62,13 @@ export default {
       method: "GET",
       headers: OP_DEFAULT_HEADERS,
     })
-      .then((response) => response.json())
-      .then((data) => data.features)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Photon search failed (${response.status})`);
+        }
+        return response.json();
+      })
+      .then((data) => data.features || [])
       .then((data) =>
         data.filter((l) =>
           filterResultsOnProperties

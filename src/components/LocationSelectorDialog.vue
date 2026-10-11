@@ -150,6 +150,17 @@
               </i18n-t>
             </p>
 
+            <!-- search error -->
+            <v-alert
+              v-if="searchError"
+              data-name="location-search-error-alert"
+              type="error"
+              variant="outlined"
+              density="compact"
+            >
+              {{ $t("LocationSelector.SearchError") }}
+            </v-alert>
+
             <!-- results -->
             <v-sheet v-if="results !== null">
               <v-row v-if="results.length">
@@ -309,6 +320,7 @@ export default {
       },
       loading: false,
       results: null,
+      searchError: false,
       // config
       searchProvider: constants.LOCATION_SEARCH_PROVIDER_LIST[1].key, // photon
       currentDisplay: null, // see mounted
@@ -396,16 +408,24 @@ export default {
     locationOsmSearch() {
       this.$refs.locationOsmSearchInput.blur();
       this.results = null;
+      this.searchError = false;
       this.loading = true;
       // search by id (N12208020359, 12208020359)
       if (utils.isNumber(this.locationOsmSearchForm.q.substring(1))) {
         const id = utils.isNumber(this.locationOsmSearchForm.q.substring(0, 1))
           ? this.locationOsmSearchForm.q
           : this.locationOsmSearchForm.q.substring(1);
-        openStreetMapApi.openstreetmapNominatimLookup(id).then((data) => {
-          this.loading = false;
-          this.results = data;
-        });
+        openStreetMapApi
+          .openstreetmapNominatimLookup(id)
+          .then((data) => {
+            this.results = data;
+          })
+          .catch(() => {
+            this.searchError = true;
+          })
+          .finally(() => {
+            this.loading = false;
+          });
         // search by name
       } else {
         openStreetMapApi
@@ -414,8 +434,13 @@ export default {
             this.searchProvider,
           )
           .then((data) => {
-            this.loading = false;
             this.results = data;
+          })
+          .catch(() => {
+            this.searchError = true;
+          })
+          .finally(() => {
+            this.loading = false;
           });
       }
     },
