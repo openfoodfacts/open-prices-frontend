@@ -700,6 +700,7 @@
 		"RecentLocations": "Ei viimeaikaisia sijainteja | Viimeaikainen sijainti {recentLocationNumber}| Viimeaikaiset sijainnit {recentLocationNumber}",
 		"Result": "Tulos {resultNumber} | Tulokset {resultNumber}",
 		"SearchByName": "Hae kauppaasi nimen ja kaupungin mukaan",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Etsi myymäläsi sijainti",
 		"Warning": "Hakukone kaupan löytämiseksi ei ole tällä hetkellä kovin tarkka.{newline}Älä epäröi lisätä kadun nimeä tulosten rajaamiseksi.{newline}Esimerkkejä: Carrefour City 15e Paris ; Sainsburyn camden Lontoossa"
 	},
