@@ -495,6 +495,7 @@
 		"Search": "ស្វែងរក",
 		"Select": "Select",
 		"Send": "Send",
+		"ServerError": "Error: server error",
 		"Settings": "ការកំណត់",
 		"SHOP_IMPORT": "Shop import",
 		"SignInOFFAccount": "Sign in with your {url} credentials",
@@ -1048,7 +1049,6 @@
 	"SignIn": {
 		"Button": "ចូលគណនី",
 		"Password": "ពាក្យសម្ងាត់",
-		"ServerError": "Error: server error",
 		"Title": "ចូលគណនី",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
@@ -1091,7 +1091,6 @@
 		"MyDashboard": "My dashboard",
 		"MyPrices": "តម្លៃរបស់ខ្ញុំ",
 		"MyProofs": "ភស្តុតាងរបស់ខ្ញុំ",
-		"ProofUpdated": "Proof updated!",
 		"Settings": "ការកំណត់",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",
