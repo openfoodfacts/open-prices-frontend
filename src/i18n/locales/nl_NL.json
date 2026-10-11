@@ -620,6 +620,14 @@
 		"JoinUs": "Doe mee!",
 		"HowToUseTheData": "Gebruik de gegevens"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "Draag bij aan Open Beauty Facts"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "Kies een van je favoriete valuta's",
 		"Currency": "Valuta",
@@ -692,6 +700,7 @@
 		"RecentLocations": "Geen recente locaties | Recente locatie {recentLocationNumber}| Recente locaties {recentLocationNumber}",
 		"Result": "Resultaat {resultNumber} | Resultaten {resultNumber}",
 		"SearchByName": "Zoek uw winkel op naam en plaats",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Vind uw winkellocatie",
 		"Warning": "De zoekmachine om een winkel te vinden is momenteel niet erg nauwkeurig.{newline}Aarzel niet om de straatnaam toe te voegen om de resultaten te verfijnen.{newline}Voorbeelden: Carrefour City 15e Parijs; Sainsbury's Camden Londen"
 	},

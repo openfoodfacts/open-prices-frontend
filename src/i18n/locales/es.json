@@ -620,6 +620,14 @@
 		"JoinUs": "¡Únete a nosotros!",
 		"HowToUseTheData": "Utilice los datos"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "Colabora con Open Food Facts"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "Elige una de tus divisas favoritas",
 		"Currency": "Moneda",
@@ -692,6 +700,7 @@
 		"RecentLocations": "No hay ubicaciones recientes | Ubicación reciente {recentLocationNumber}| Ubicaciones recientes {recentLocationNumber}",
 		"Result": "{resultNumber} resultado | {resultNumber} resultados",
 		"SearchByName": "Busca tu tienda por nombre y ciudad",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Encuentra la ubicación de tu tienda",
 		"Warning": "El motor de búsqueda para encontrar una tienda no es muy preciso.{newline}No dudes en agregar el nombre de la calle para limitar los resultados.{newline}Ejemplos: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},

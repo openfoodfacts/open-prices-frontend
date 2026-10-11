@@ -117,7 +117,7 @@
 		}
 	},
 	"BarcodeScanner": {
-		"CameraError": "The camera could not be started: {error}",
+		"CameraError": "לא ניתן להפעיל את המצלמה: {error}",
 		"Htlm5-qrcode": {
 			"Text": "מופעל על גבי {url}"
 		},
@@ -620,6 +620,14 @@
 		"JoinUs": "מזמינים אותך להצטרף אלינו!",
 		"HowToUseTheData": "שימוש בנתונים"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "תרומה ל־Open Food Facts"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "נא לבחור את אחד המטבעות המועדפים עליך",
 		"Currency": "מטבע",
@@ -692,6 +700,7 @@
 		"RecentLocations": "אין מקומות אחרונים | מקום אחרון {recentLocationNumber}| {recentLocationNumber} מקומות אחרונים",
 		"Result": "תוצאה אחת | {resultNumber} תוצאות",
 		"SearchByName": "חיפוש החנות שלך לפי שם ועיר",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "איתור מקום החנות שלך",
 		"Warning": "מנוע החיפוש לאיתור חנויות לא מדויק במיוחד כרגע.{newline}כדאי להוסיף את שם הרחוב כדי לצמצם את התוצאות.{newline}למשל: ויקטורי אשקלון; שיווק השקמה זכרון יעקב"
 	},

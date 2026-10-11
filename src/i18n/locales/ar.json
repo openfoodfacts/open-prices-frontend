@@ -620,6 +620,14 @@
 		"JoinUs": "انضم إلينا!",
 		"HowToUseTheData": "استخدم البيانات"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "Contribute to Open Food Facts\nالمساهمة فى حقائق الغذاء المفتوح"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "اختر إحدى عملاتك المفضلة",
 		"Currency": "عملة",
@@ -692,6 +700,7 @@
 		"RecentLocations": "لا توجد مواقع حديثة | الموقع الأخير {recentLocationNumber}| المواقع الحديثة {recentLocationNumber}",
 		"Result": "النتيجة {resultNumber} | النتائج {resultNumber}",
 		"SearchByName": "ابحث عن متجرك بالاسم والمدينة",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "ابحث عن موقع متجرك",
 		"Warning": "محرك البحث للعثور على متجر ليس دقيقًا جدًا حاليًا.{newline}لا تتردد في إضافة اسم الشارع لتضييق نطاق النتائج.{newline}أمثلة: كارفور سيتي 15e باريس؛ سينسبري كامدن لندن"
 	},

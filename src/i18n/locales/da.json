@@ -620,6 +620,14 @@
 		"JoinUs": "Vær med!",
 		"HowToUseTheData": "Brug dataene"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "Bidrag til Open Food Facts"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "Vælg en af dine foretrukne valutaer",
 		"Currency": "Valuta",
@@ -692,6 +700,7 @@
 		"RecentLocations": "Ingen nylige placeringer | Seneste placering {recentLocationNumber}| Seneste placeringer {recentLocationNumber}",
 		"Result": "Resultat {resultNumber} | Resultater {resultNumber}",
 		"SearchByName": "Søg efter butik med navn og by",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Find din butiks placering",
 		"Warning": "Søgemaskinen til at finde en butik er i øjeblikket ikke særlig præcis.{newline}Tøv ikke med at tilføje gadenavnet for at indsnævre resultaterne.{newline}Eksempler: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},

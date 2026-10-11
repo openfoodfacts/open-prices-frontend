@@ -620,6 +620,14 @@
 		"JoinUs": "参加しませんか！",
 		"HowToUseTheData": "データを活用する"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "Open Food Facts に貢献する"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "お気に入りの通貨を 1 つ選択してください",
 		"Currency": "通貨",
@@ -692,6 +700,7 @@
 		"RecentLocations": "最近の場所なし | 最近の場所 {recentLocationNumber}| 最近の場所 {recentLocationNumber}",
 		"Result": "結果 {resultNumber} | 結果 {resultNumber}",
 		"SearchByName": "名前と都市でショップを検索",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "ショップの場所を探す",
 		"Warning": "現在、お店を見つけるための検索エンジンの精度はあまり高くありません。{newline}結果を絞り込むために、迷わず通り名を追加してください。{newline}例: カルフール シティ 15e パリ ;セインズベリーズ カムデン ロンドン"
 	},

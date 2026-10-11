@@ -620,6 +620,14 @@
 		"JoinUs": "Pridružite nam se!",
 		"HowToUseTheData": "Koristite podatke"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "Contribute to Open Food Facts"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "Odaberite jednu od svojih omiljenih valuta",
 		"Currency": "Valuta",
@@ -692,6 +700,7 @@
 		"RecentLocations": "Nema nedavnih lokacija | Nedavna lokacija {recentLocationNumber}| Nedavne lokacije {recentLocationNumber}",
 		"Result": "Rezultat {resultNumber} | Rezultati {resultNumber}",
 		"SearchByName": "Search for your shop by name and city",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Find your shop location",
 		"Warning": "Pretraživač za pronalaženje trgovine trenutno nije vrlo precizan.{newline} Ne ustručavajte se dodati naziv ulice kako biste suzili rezultate.{newline} Primjeri: Carrefour City 15e Paris; Sainsbury's Camden London"
 	},

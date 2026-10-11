@@ -620,6 +620,14 @@
 		"JoinUs": "Join us!",
 		"HowToUseTheData": "Use the data"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "Osallistu Open Food Factsiin"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "Valitse yksi suosikkivaluutoistasi",
 		"Currency": "Valuutta",
@@ -692,6 +700,7 @@
 		"RecentLocations": "Ei viimeaikaisia sijainteja | Viimeaikainen sijainti {recentLocationNumber}| Viimeaikaiset sijainnit {recentLocationNumber}",
 		"Result": "Tulos {resultNumber} | Tulokset {resultNumber}",
 		"SearchByName": "Hae kauppaasi nimen ja kaupungin mukaan",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Etsi myymäläsi sijainti",
 		"Warning": "Hakukone kaupan löytämiseksi ei ole tällä hetkellä kovin tarkka.{newline}Älä epäröi lisätä kadun nimeä tulosten rajaamiseksi.{newline}Esimerkkejä: Carrefour City 15e Paris ; Sainsburyn camden Lontoossa"
 	},

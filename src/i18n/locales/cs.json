@@ -117,7 +117,7 @@
 		}
 	},
 	"BarcodeScanner": {
-		"CameraError": "The camera could not be started: {error}",
+		"CameraError": "Fotoaparát se nepodařilo spustit: {error}",
 		"Htlm5-qrcode": {
 			"Text": "poháněno {url}"
 		},
@@ -620,6 +620,14 @@
 		"JoinUs": "Připojte se k nám!",
 		"HowToUseTheData": "Použijte data"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "Přispějte k Open Food Facts"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "Vyberte jednu ze svých oblíbených měn",
 		"Currency": "Měna",
@@ -692,13 +700,14 @@
 		"RecentLocations": "Žádná nedávné poloha | Nedávná poloha {recentLocationNumber}| Nedávné polohy {recentLocationNumber}",
 		"Result": "Výsledek {resultNumber} | Výsledky {resultNumber}",
 		"SearchByName": "Vyhledejte svůj obchod podle názvu a města",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Najít polohu vašeho obchodu",
 		"Warning": "Vyhledávač k nalezení obchodu není v současné době příliš přesný.{newline}Chcete-li zúžit výsledky, neváhejte přidat název ulice.{newline}Příklady: Carrefour City 15e Paris ; Sainsbury's Camden London"
 	},
 	"NearbyPriceFilter": {
 		"ActiveButton": "Nearby ({radius} km)",
 		"Button": "Nearby",
-		"ChooseLocation": "Choose a location",
+		"ChooseLocation": "Vyberte místo",
 		"CurrentPosition": "Aktuální pozice",
 		"GeolocationFailed": "Your position could not be retrieved. Check the browser location permission or choose a location instead.",
 		"GeolocationUnsupported": "Location is not supported by this browser. Choose a location instead.",

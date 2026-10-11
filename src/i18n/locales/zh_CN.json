@@ -620,6 +620,14 @@
 		"JoinUs": "Join us!",
 		"HowToUseTheData": "Use the data"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "为Open Food Facts 做出贡献"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "选择您最喜欢的货币之一",
 		"Currency": "货币",
@@ -692,6 +700,7 @@
 		"RecentLocations": "没有最近的地点 |最近位置 {recentLocationNumber}|最近地点 {recentLocationNumber}",
 		"Result": "结果 {resultNumber} | 结果 {resultNumber}",
 		"SearchByName": "按名称和城市搜索您的商店",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "找到您的商店位置",
 		"Warning": "目前搜索引擎找店铺还不是很精准。{newline}请毫不犹豫地添加街道名称以缩小结果范围。{newline}示例：Carrefour City 15e Paris；塞恩斯伯里卡姆登 伦敦"
 	},
