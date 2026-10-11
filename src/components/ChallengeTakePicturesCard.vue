@@ -8,6 +8,7 @@
         :href="challenge.example_proof_url"
         target="_blank"
         rel="noopener noreferrer"
+        :aria-label="$t('Challenge.StepTakePictures.Title')"
       >
         <v-img :src="challenge.example_proof_url" max-height="200px" />
       </a>

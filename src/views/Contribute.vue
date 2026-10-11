@@ -15,37 +15,39 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-hand-heart" />
-        Other ways to contribute
+        {{ $t("Contribute.OtherWaysToContribute") }}
       </h2>
     </v-col>
     <v-col>
       <ul class="pl-4">
         <li>
-          You have a fidelty card? You can
-          <a
-            :href="OFF_WIKI_GDPR_REQUEST_URL"
-            target="_blank"
-            rel="noopener noreferrer"
-            >make a GDPR request and upload the list of prices</a
-          >
+          <i18n-t keypath="Contribute.FidelityCardGDPRRequest" tag="span">
+            <template #gdpr_request_link>
+              <a
+                :href="OFF_WIKI_GDPR_REQUEST_URL"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ $t("Contribute.GDPRRequestLink") }}</a
+              >
+            </template>
+          </i18n-t>
         </li>
         <li>
-          <router-link to="/challenges"
-            >Participate in one of our challenges</router-link
-          >
+          <router-link to="/challenges">{{
+            $t("Contribute.ParticipateInChallenges")
+          }}</router-link>
         </li>
         <li>
-          <router-link to="/community"
-            >Learn more about the Open Prices project and its
-            community</router-link
-          >
+          <router-link to="/community">{{
+            $t("Contribute.LearnMoreAboutCommunity")
+          }}</router-link>
         </li>
         <li>
           <a
             :href="OFF_CONTRIBUTE_URL"
             target="_blank"
             rel="noopener noreferrer"
-            >Contribute to Open Food Facts</a
+            >{{ $t("Contribute.ContributeToOFF") }}</a
           >
         </li>
       </ul>
