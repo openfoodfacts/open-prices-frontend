@@ -700,6 +700,7 @@
 		"RecentLocations": "Yeni konum yok | Son konum {recentLocationNumber}| Son konumlar {recentLocationNumber}",
 		"Result": "Sonuç {resultNumber} | Sonuçlar {resultNumber}",
 		"SearchByName": "Mağazanızı ada ve şehre göre arayın",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Mağazanızın konumunu bulun",
 		"Warning": "Bir mağaza bulmak için kullanılan arama motoru şu anda çok hassas değildir.{newline}Sonuçları daraltmak için sokak adını eklemekten çekinmeyin.{newline}Örnekler: Carrefour City 15e Paris ; Sainsbury Camden Londra"
 	},
