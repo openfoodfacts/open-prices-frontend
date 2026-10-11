@@ -111,7 +111,6 @@ export default {
         // eslint-disable-next-line no-unused-vars
         .then((response) => {
           // if response.status == 204
-          this.deleteSuccessMessage = true;
           this.$emit("delete");
           this.close();
         })

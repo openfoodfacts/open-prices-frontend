@@ -62,7 +62,7 @@
                   size="small"
                   density="comfortable"
                   :aria-label="$t('Common.Delete')"
-                  @click="removeImage(index)"
+                  @click="deleteReceiptDraftProof"
                 />
                 <v-btn
                   v-else

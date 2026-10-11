@@ -56,7 +56,7 @@
               role="link"
               tabindex="0"
               @click="displayCommentField = true"
-              @keydown.enter="displayOwnerCommentField = true"
+              @keydown.enter="displayCommentField = true"
             >
               {{ $t("Common.AddComment") }}
             </a>

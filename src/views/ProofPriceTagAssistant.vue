@@ -152,9 +152,7 @@
       <v-col cols="12">
         <v-row>
           <v-col
-            v-for="(
-              productPriceForm, index
-            ) in productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError"
+            v-for="productPriceForm in productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError"
             :key="productPriceForm.id"
             cols="12"
             md="6"
@@ -174,7 +172,6 @@
               @updatePriceTagStatus="
                 updatePriceTagStatus($event, productPriceForm)
               "
-              @validatePriceTag="validatePriceTag(index)"
             />
           </v-col>
         </v-row>
