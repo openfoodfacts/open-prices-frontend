@@ -1,4 +1,5 @@
 {
+  "id": "/",
   "name": "Open Prices",
   "short_name": "OpenPrices",
   "description": "An open crowdsourced database of prices",
@@ -12,12 +13,18 @@
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/maskable_icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#f2e9e4",
   "background_color": "#ffffff",
   "scope": "/",
-  "start_url": "https://prices.openfoodfacts.org",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"
 }

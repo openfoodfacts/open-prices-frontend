@@ -1,4 +1,5 @@
 {
+  "id": "/",
   "name": "Open Prices (Local)",
   "short_name": "OpenPrices (Local)",
   "description": "An open crowdsourced database of prices",
@@ -20,8 +21,9 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#f2e9e4",
   "background_color": "#ffffff",
+  "scope": "/",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"
