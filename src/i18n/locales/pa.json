@@ -620,6 +620,14 @@
 		"JoinUs": "Join us!",
 		"HowToUseTheData": "Use the data"
 	},
+	"Contribute": {
+		"OtherWaysToContribute": "Other ways to contribute",
+		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
+		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"ParticipateInChallenges": "Participate in one of our challenges",
+		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ContributeToOFF": "Contribute to Open Food Facts"
+	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
 		"Currency": "ਮੁਦਰਾ",
