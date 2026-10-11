@@ -22,6 +22,24 @@ export default [
       "vue/attribute-hyphenation": "off",
       "vue/v-on-event-hyphenation": "off",
       "vuejs-accessibility/anchor-has-content": "warn",
+      "@intlify/vue-i18n/no-raw-text": [
+        "warn",
+        {
+          // punctuation & symbols only (separators, parentheses, arrows...)
+          ignorePattern: "^[\\p{P}\\p{S}\\s]+$",
+          // proper nouns & file names (not translatable)
+          ignoreText: [
+            "API",
+            "Github",
+            "Hugging Face",
+            "data.gouv",
+            "Open Food Facts Slack (#prices)",
+            "prices.jsonl.gz",
+            "proofs.jsonl.gz",
+            "locations.jsonl.gz",
+          ],
+        },
+      ],
     },
     settings: {
       "vue-i18n": {

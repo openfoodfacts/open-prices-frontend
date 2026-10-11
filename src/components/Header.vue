@@ -92,6 +92,7 @@
     color="error"
     density="compact"
   >
+    <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
     <span>⚠️ This is a development environment ({{ ENV }})</span>
   </v-app-bar>
 
