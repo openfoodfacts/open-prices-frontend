@@ -700,6 +700,7 @@
 		"RecentLocations": "אין מקומות אחרונים | מקום אחרון {recentLocationNumber}| {recentLocationNumber} מקומות אחרונים",
 		"Result": "תוצאה אחת | {resultNumber} תוצאות",
 		"SearchByName": "חיפוש החנות שלך לפי שם ועיר",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "איתור מקום החנות שלך",
 		"Warning": "מנוע החיפוש לאיתור חנויות לא מדויק במיוחד כרגע.{newline}כדאי להוסיף את שם הרחוב כדי לצמצם את התוצאות.{newline}למשל: ויקטורי אשקלון; שיווק השקמה זכרון יעקב"
 	},
