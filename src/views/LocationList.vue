@@ -125,6 +125,7 @@ export default {
   methods: {
     initLocationList() {
       this.locationList = [];
+      this.locationTotal = null;
       this.locationPage = 0;
       this.getLocations();
     },
