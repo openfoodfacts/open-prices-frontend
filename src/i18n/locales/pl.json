@@ -700,6 +700,7 @@
 		"RecentLocations": "Brak ostatnich lokalizacji | Ostatnia lokalizacja {recentLocationNumber}| Ostatnie lokalizacje {recentLocationNumber}",
 		"Result": "Wynik {resultNumber} | Wyniki {resultNumber}",
 		"SearchByName": "Wyszukaj swój sklep według nazwy i miasta",
+		"SearchError": "The location search failed. Please check your connection and try again.",
 		"Title": "Znajdź lokalizację swojego sklepu",
 		"Warning": "Wyszukiwarka umożliwiająca znalezienie sklepu nie jest obecnie zbyt precyzyjna.{newline}Nie wahaj się dodać nazwy ulicy, aby zawęzić wyniki.{newline}Przykłady: Dino Długa 19 Dawidy Bankowe ; Carrefour Legnicka 58 Wrocław"
 	},
