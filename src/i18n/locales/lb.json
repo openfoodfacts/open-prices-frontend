@@ -495,6 +495,7 @@
 		"Search": "Search",
 		"Select": "Select",
 		"Send": "Send",
+		"ServerError": "Error: server error",
 		"Settings": "Astellungen",
 		"SHOP_IMPORT": "Shop import",
 		"SignInOFFAccount": "Sign in with your {url} credentials",
@@ -1048,7 +1049,6 @@
 	"SignIn": {
 		"Button": "Sign in",
 		"Password": "Password",
-		"ServerError": "Error: server error",
 		"Title": "Sign in",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
@@ -1091,7 +1091,6 @@
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
-		"ProofUpdated": "Proof updated!",
 		"Settings": "Astellungen",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",

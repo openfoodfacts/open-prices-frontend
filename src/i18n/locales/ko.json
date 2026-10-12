@@ -495,6 +495,7 @@
 		"Search": "검색",
 		"Select": "Select",
 		"Send": "전송",
+		"ServerError": "Error: server error",
 		"Settings": "설정",
 		"SHOP_IMPORT": "Shop import",
 		"SignInOFFAccount": "Sign in with your {url} credentials",
@@ -1048,7 +1049,6 @@
 	"SignIn": {
 		"Button": "가입하기",
 		"Password": "암호",
-		"ServerError": "Error: server error",
 		"Title": "가입하기",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
@@ -1091,7 +1091,6 @@
 		"MyDashboard": "My dashboard",
 		"MyPrices": "내 가격",
 		"MyProofs": "내 증거",
-		"ProofUpdated": "Proof updated!",
 		"Settings": "설정",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",

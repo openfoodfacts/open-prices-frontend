@@ -495,6 +495,7 @@
 		"Search": "Søk",
 		"Select": "Select",
 		"Send": "Send",
+		"ServerError": "Error: server error",
 		"Settings": "Innstillinger",
 		"SHOP_IMPORT": "Shop import",
 		"SignInOFFAccount": "Sign in with your {url} credentials",
@@ -1048,7 +1049,6 @@
 	"SignIn": {
 		"Button": "Logg på",
 		"Password": "Passord",
-		"ServerError": "Error: server error",
 		"Title": "Logg på",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
@@ -1091,7 +1091,6 @@
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Mine priser",
 		"MyProofs": "Mine bevis",
-		"ProofUpdated": "Proof updated!",
 		"Settings": "Innstillinger",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",

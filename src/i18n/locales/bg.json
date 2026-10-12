@@ -495,6 +495,7 @@
 		"Search": "Търсене",
 		"Select": "Select",
 		"Send": "Изпрати",
+		"ServerError": "Error: server error",
 		"Settings": "Настройки",
 		"SHOP_IMPORT": "Shop import",
 		"SignInOFFAccount": "Sign in with your {url} credentials",
@@ -1048,7 +1049,6 @@
 	"SignIn": {
 		"Button": "Вход",
 		"Password": "Парола",
-		"ServerError": "Error: server error",
 		"Title": "Вход",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
@@ -1091,7 +1091,6 @@
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Моите цени",
 		"MyProofs": "Моите доказателства",
-		"ProofUpdated": "Proof updated!",
 		"Settings": "Настройки",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",

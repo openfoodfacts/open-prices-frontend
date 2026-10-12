@@ -495,6 +495,7 @@
 		"Search": "Tafuta",
 		"Select": "Select",
 		"Send": "Send",
+		"ServerError": "Error: server error",
 		"Settings": "Mipangilio",
 		"SHOP_IMPORT": "Shop import",
 		"SignInOFFAccount": "Sign in with your {url} credentials",
@@ -1048,7 +1049,6 @@
 	"SignIn": {
 		"Button": "Ingia",
 		"Password": "Nenosiri",
-		"ServerError": "Error: server error",
 		"Title": "Ingia",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
@@ -1091,7 +1091,6 @@
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Bei zangu",
 		"MyProofs": "Ushahidi wangu",
-		"ProofUpdated": "Proof updated!",
 		"Settings": "Mipangilio",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",

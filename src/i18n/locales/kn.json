@@ -495,6 +495,7 @@
 		"Search": "ಹುಡುಕಿ",
 		"Select": "Select",
 		"Send": "Send",
+		"ServerError": "Error: server error",
 		"Settings": "ಸೆಟ್ಟಿಂಗ್",
 		"SHOP_IMPORT": "Shop import",
 		"SignInOFFAccount": "Sign in with your {url} credentials",
@@ -1048,7 +1049,6 @@
 	"SignIn": {
 		"Button": "ಸೈನ್ ಇನ್ ಮಾಡಿ",
 		"Password": "ಪಾಸ್‌ವರ್ಡ್",
-		"ServerError": "Error: server error",
 		"Title": "ಸೈನ್ ಇನ್ ಮಾಡಿ",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
@@ -1091,7 +1091,6 @@
 		"MyDashboard": "My dashboard",
 		"MyPrices": "ನನ್ನ ಬೆಲೆಗಳು",
 		"MyProofs": "ನನ್ನ ಪುರಾವೆಗಳು",
-		"ProofUpdated": "Proof updated!",
 		"Settings": "ಸೆಟ್ಟಿಂಗ್",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",
