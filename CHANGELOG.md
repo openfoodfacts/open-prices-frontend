@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.177.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.177.2...v1.177.3) (2026-10-12)
+
+
+### Bug Fixes
+
+* **i18n:** ESLint locale dir path (enables missing keys check) & add 1 missing key ([#2456](https://github.com/openfoodfacts/open-prices-frontend/issues/2456)) ([d36a95b](https://github.com/openfoodfacts/open-prices-frontend/commit/d36a95b290b17637ff1d43c3e58b27f5cb271f96))
+* **Lint:** fix all remaining ESLint warnings (no-raw-text config, translate Contribute page, a11y) ([#2455](https://github.com/openfoodfacts/open-prices-frontend/issues/2455)) ([92e9c25](https://github.com/openfoodfacts/open-prices-frontend/commit/92e9c2543040b8c0610452147cce6f54b7661f7f))
+* **LocationSelector:** handle location search errors gracefully ([#2452](https://github.com/openfoodfacts/open-prices-frontend/issues/2452)) ([9436480](https://github.com/openfoodfacts/open-prices-frontend/commit/9436480337b560456741d7dd2e10c7cf8e322181))
+* props & events mismatches between parent and child components ([#2458](https://github.com/openfoodfacts/open-prices-frontend/issues/2458)) ([db7201b](https://github.com/openfoodfacts/open-prices-frontend/commit/db7201ba91e62714758b1448a018aaa1a70c37b2))
+* **PWA:** fix apple-touch-icon path & align manifests (maskable icon, id, theme_color) ([#2449](https://github.com/openfoodfacts/open-prices-frontend/issues/2449)) ([8749839](https://github.com/openfoodfacts/open-prices-frontend/commit/8749839ca844fb750247769f04217772dc23d8dc))
+* references to undefined properties & methods in some components ([#2457](https://github.com/openfoodfacts/open-prices-frontend/issues/2457)) ([fbf062a](https://github.com/openfoodfacts/open-prices-frontend/commit/fbf062a15c6198ee0076a72df474085ad28a0991))
+* **UserDashboard:** community tab: fix 'My prices' button display condition ([#2453](https://github.com/openfoodfacts/open-prices-frontend/issues/2453)) ([e7c0e25](https://github.com/openfoodfacts/open-prices-frontend/commit/e7c0e259b43dd8e459a9ea4b188f941739f917fd))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#2448](https://github.com/openfoodfacts/open-prices-frontend/issues/2448)) ([7a75854](https://github.com/openfoodfacts/open-prices-frontend/commit/7a75854a8756e5440dff0da639445435e35c38ca))
+* **l10n:** New Crowdin translations to review and merge ([#2462](https://github.com/openfoodfacts/open-prices-frontend/issues/2462)) ([f445f1b](https://github.com/openfoodfacts/open-prices-frontend/commit/f445f1b0b014fbd6a985f8a4fd3b4f32f865aae0))
+* **Views:** always call init* on mounted. fix reset total in some lists ([#2454](https://github.com/openfoodfacts/open-prices-frontend/issues/2454)) ([6fcb4e1](https://github.com/openfoodfacts/open-prices-frontend/commit/6fcb4e1d1ce60c59cd4f363d6d7ff0d6ac75daf2))
+
 ## [1.177.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.177.1...v1.177.2) (2026-10-11)
 
 
