@@ -2,10 +2,13 @@ import constants from "../constants";
 
 /**
  * input: Date object
- * output: '2023-12-25'
+ * output: '2023-12-25' (in the user's local timezone)
  */
 function toDateString(date) {
-  return date.toISOString().substring(0, 10);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
 }
 
 /**
