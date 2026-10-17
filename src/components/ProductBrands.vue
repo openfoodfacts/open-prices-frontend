@@ -39,7 +39,12 @@
     :rel="getEditUrl ? 'noopener' : null"
   >
     <i class="text-lowercase">{{ $t("Common.Brand") }}</i>
-    <v-tooltip activator="parent" :open-on-click="!getEditUrl" open-on-hover location="top">
+    <v-tooltip
+      activator="parent"
+      :open-on-click="!getEditUrl"
+      open-on-hover
+      location="top"
+    >
       {{ $t("ProductCard.BrandMissing") }}
     </v-tooltip>
   </v-chip>

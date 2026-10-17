@@ -2,7 +2,9 @@
   <v-card v-if="product && product.code" data-name="product-robotoff-card">
     <v-card-title class="text-subtitle-1 d-flex align-center pb-0">
       <v-icon icon="mdi-robot-outline" start />
-      <span class="flex-grow-1">{{ $t('CreateOffProduct.EnrichProduct') }}</span>
+      <span class="flex-grow-1">{{
+        $t("CreateOffProduct.EnrichProduct")
+      }}</span>
       <v-btn
         v-if="editUrl"
         size="small"
@@ -15,7 +17,7 @@
         rel="noopener"
         :title="$t('Common.Edit')"
       >
-        {{ $t('Common.Edit') }}
+        {{ $t("Common.Edit") }}
       </v-btn>
     </v-card-title>
     <v-card-text class="pa-2">
@@ -24,48 +26,46 @@
         :img-url="OFF_IMAGE_URL"
         :language-code="userLanguage"
       />
-      <robotoff-question
-        :product-code="product.code"
-      />
+      <robotoff-question :product-code="product.code" />
     </v-card-text>
   </v-card>
 </template>
 
 <script>
-import '@webcomponents/webcomponentsjs/webcomponents-loader.js'
-import '@openfoodfacts/openfoodfacts-webcomponents'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import openFoodFactsApi from '../services/openFoodFactsApi'
-import constants from '../constants'
+import "@webcomponents/webcomponentsjs/webcomponents-loader.js";
+import "@openfoodfacts/openfoodfacts-webcomponents";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openFoodFactsApi from "../services/openFoodFactsApi";
+import constants from "../constants";
 
 export default {
   props: {
     product: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       ROBOTOFF_API_URL: constants.ROBOTOFF_API_URL,
       OFF_IMAGE_URL: constants.OFF_IMAGE_URL,
-    }
+    };
   },
   computed: {
     ...mapStores(useAppStore),
     userLanguage() {
-      return this.appStore.getUserLanguage || 'en'
+      return this.appStore.getUserLanguage || "en";
     },
     editUrl() {
       return openFoodFactsApi.getProductEditUrl(
         this.product.code,
         this.product.source,
-        this.appStore?.getUserCountry || 'fr'
-      )
-    }
-  }
-}
+        this.appStore?.getUserCountry || "fr",
+      );
+    },
+  },
+};
 </script>
 
 <style scoped>

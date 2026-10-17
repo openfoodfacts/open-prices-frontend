@@ -216,16 +216,23 @@ export default {
       return geo_utils.getNearbyFilter(this.$route.query);
     },
     isProductIncomplete() {
-      if (this.productIsCategory || !this.product || !this.product.code || this.productNotFound) {
-        return false
+      if (
+        this.productIsCategory ||
+        !this.product ||
+        !this.product.code ||
+        this.productNotFound
+      ) {
+        return false;
       }
-      const hasBrands = !!(this.product.brands && this.product.brands.trim())
-      const hasQuantity = !!this.product.product_quantity
-      const hasCategories = !!(this.product.categories_tags && this.product.categories_tags.length)
-      return !hasBrands || !hasQuantity || !hasCategories
+      const hasBrands = !!(this.product.brands && this.product.brands.trim());
+      const hasQuantity = !!this.product.product_quantity;
+      const hasCategories = !!(
+        this.product.categories_tags && this.product.categories_tags.length
+      );
+      return !hasBrands || !hasQuantity || !hasCategories;
     },
     showRobotoffCard() {
-      return !this.loading && this.isProductIncomplete
+      return !this.loading && this.isProductIncomplete;
     },
     getPricesParams() {
       let defaultParams = {

@@ -28,7 +28,12 @@
     :rel="getEditUrl ? 'noopener' : null"
   >
     <i>{{ $t("ProductCard.CategoriesLower") }}</i>
-    <v-tooltip activator="parent" :open-on-click="!getEditUrl" open-on-hover location="top">
+    <v-tooltip
+      activator="parent"
+      :open-on-click="!getEditUrl"
+      open-on-hover
+      location="top"
+    >
       {{ $t("ProductCard.CategoriesMissing") }}
     </v-tooltip>
   </v-chip>

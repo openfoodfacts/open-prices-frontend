@@ -14,7 +14,12 @@
     :rel="getEditUrl ? 'noopener' : null"
   >
     <i>{{ productQuantityUnitDisplay }}</i>
-    <v-tooltip activator="parent" :open-on-click="!getEditUrl" open-on-hover location="top">
+    <v-tooltip
+      activator="parent"
+      :open-on-click="!getEditUrl"
+      open-on-hover
+      location="top"
+    >
       {{ $t("ProductCard.QuantityMissing") }}
     </v-tooltip>
   </v-chip>
