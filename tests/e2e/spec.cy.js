@@ -246,3 +246,95 @@ describe("Basic tests", () => {
     cy.contains("Load more").should("not.exist");
   });
 });
+
+describe("Country links", () => {
+  const belgium = "België / Belgique / Belgien";
+  const city = "Bruxelles / Brussel";
+
+  beforeEach(() => {
+    cy.fixture("prices.json").then((data) => {
+      const location = {
+        ...data.items[0].location,
+        osm_address_country: belgium,
+        osm_address_city: city,
+      };
+      cy.intercept("GET", `**/api/v1/locations/${location.id}?*`, {
+        body: location,
+      });
+      cy.intercept("GET", "**/api/v1/prices?*", {
+        body: { items: [], total: 0, page: 1, size: 10, pages: 0 },
+      });
+      cy.intercept("GET", "**/api/v1/locations?*", {
+        body: { items: [location], total: 1, page: 1, size: 10, pages: 1 },
+      }).as("locations");
+    });
+  });
+
+  [
+    belgium,
+    "France",
+    "Schweiz/Suisse/Svizzera/Svizra",
+    "Éire / Ireland",
+  ].forEach((country) => {
+    it(`opens ${country} from the country list`, () => {
+      cy.intercept("GET", "**/api/v1/locations/osm/countries?*", {
+        body: [
+          {
+            name: country,
+            osm_name: country,
+            price_count: 1,
+            location_count: 1,
+          },
+        ],
+      });
+      cy.visit("/countries");
+      cy.contains('[data-name="country-card"]', country).click();
+      cy.location("pathname").should(
+        "eq",
+        `/countries/${encodeURIComponent(country)}`,
+      );
+      cy.wait("@locations").its("request.query").should("include", {
+        osm_address_country__like: country,
+      });
+      cy.get('[data-name="country-card"]').should("contain", country);
+      cy.get('[data-name="location-card"]').should("have.length", 1);
+      cy.reload();
+      cy.wait("@locations").its("request.query").should("include", {
+        osm_address_country__like: country,
+      });
+      cy.get('[data-name="country-card"]').should("contain", country);
+      cy.go("back");
+      cy.location("pathname").should("eq", "/countries");
+    });
+  });
+
+  it("opens country and city chips and the country breadcrumb", () => {
+    const countryPath = `/countries/${encodeURIComponent(belgium)}`;
+    const cityPath = `${countryPath}/cities/${encodeURIComponent(city)}`;
+    cy.visit("/locations/32");
+    cy.contains("a.v-chip", belgium).click();
+    cy.location("pathname").should("eq", countryPath);
+    cy.wait("@locations").its("request.query").should("include", {
+      osm_address_country__like: belgium,
+    });
+    cy.go("back");
+    cy.contains("a.v-chip", city).click();
+    cy.location("pathname").should("eq", cityPath);
+    cy.wait("@locations").its("request.query").should("include", {
+      osm_address_country__like: belgium,
+      osm_address_city__like: city,
+    });
+    cy.get('[data-name="country-card"]').should("contain", city);
+    cy.contains(".v-breadcrumbs a", belgium).click();
+    cy.location("pathname").should("eq", countryPath);
+    cy.wait("@locations");
+    cy.visit(cityPath);
+    cy.wait("@locations").its("request.query").should("include", {
+      osm_address_country__like: belgium,
+      osm_address_city__like: city,
+    });
+    cy.reload();
+    cy.wait("@locations");
+    cy.get('[data-name="country-card"]').should("contain", city);
+  });
+});
