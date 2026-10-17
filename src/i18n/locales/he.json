@@ -622,11 +622,11 @@
 		"HowToUseTheData": "שימוש בנתונים"
 	},
 	"Contribute": {
-		"OtherWaysToContribute": "Other ways to contribute",
+		"OtherWaysToContribute": "דרכים נוספות לתרום",
 		"FidelityCardGDPRRequest": "You have a fidelity card? You can {gdpr_request_link}",
 		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
-		"ParticipateInChallenges": "Participate in one of our challenges",
-		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
+		"ParticipateInChallenges": "השתתפות באחד מהאתגרים שלנו",
+		"LearnMoreAboutCommunity": "למידע נוסף על מיזם Open Prices והקהילה שלו",
 		"ContributeToOFF": "תרומה ל־Open Food Facts"
 	},
 	"ChangeCurrencyDialog": {
