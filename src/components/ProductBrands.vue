@@ -34,9 +34,12 @@
     density="comfortable"
     prepend-icon="mdi-help"
     color="warning"
+    :href="getEditUrl"
+    :target="getEditUrl ? '_blank' : null"
+    :rel="getEditUrl ? 'noopener' : null"
   >
     <i class="text-lowercase">{{ $t("Common.Brand") }}</i>
-    <v-tooltip activator="parent" open-on-click location="top">
+    <v-tooltip activator="parent" :open-on-click="!getEditUrl" open-on-hover location="top">
       {{ $t("ProductCard.BrandMissing") }}
     </v-tooltip>
   </v-chip>
@@ -44,6 +47,9 @@
 
 <script>
 import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openFoodFactsApi from "../services/openFoodFactsApi";
 
 export default {
   components: {
@@ -59,6 +65,14 @@ export default {
       type: String,
       default: null,
     },
+    productCode: {
+      type: String,
+      default: null,
+    },
+    productSource: {
+      type: String,
+      default: "off",
+    },
     readonly: {
       type: Boolean,
       default: false,
@@ -70,8 +84,19 @@ export default {
     };
   },
   computed: {
+    ...mapStores(useAppStore),
     productBrandsList() {
       return this.productBrands.split(",").filter((b) => b.trim());
+    },
+    getEditUrl() {
+      if (this.readonly || !this.productCode) {
+        return null;
+      }
+      return openFoodFactsApi.getProductEditUrl(
+        this.productCode,
+        this.productSource,
+        this.appStore?.getUserCountry || "fr",
+      );
     },
   },
   methods: {

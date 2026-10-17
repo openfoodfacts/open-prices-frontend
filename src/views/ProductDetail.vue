@@ -11,6 +11,12 @@
     </v-col>
   </v-row>
 
+  <v-row v-if="showRobotoffCard" class="mt-0">
+    <v-col cols="12" sm="6">
+      <ProductRobotoffCard :product="product" />
+    </v-col>
+  </v-row>
+
   <v-row v-if="productOrCategoryNotFound" class="mt-0">
     <v-col cols="12" sm="6">
       <template v-if="productNotFound">
@@ -166,6 +172,9 @@ export default {
     PriceChart: defineAsyncComponent(
       () => import("../components/PriceChart.vue"),
     ),
+    ProductRobotoffCard: defineAsyncComponent(
+      () => import("../components/ProductRobotoffCard.vue"),
+    ),
   },
   data() {
     return {
@@ -205,6 +214,18 @@ export default {
     },
     nearbyFilter() {
       return geo_utils.getNearbyFilter(this.$route.query);
+    },
+    isProductIncomplete() {
+      if (this.productIsCategory || !this.product || !this.product.code || this.productNotFound) {
+        return false
+      }
+      const hasBrands = !!(this.product.brands && this.product.brands.trim())
+      const hasQuantity = !!this.product.product_quantity
+      const hasCategories = !!(this.product.categories_tags && this.product.categories_tags.length)
+      return !hasBrands || !hasQuantity || !hasCategories
+    },
+    showRobotoffCard() {
+      return !this.loading && this.isProductIncomplete
     },
     getPricesParams() {
       let defaultParams = {
