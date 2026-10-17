@@ -72,8 +72,8 @@ export default {
           return item.to
             .replace(":id", this.$route.params.id)
             .replace(":username", this.$route.params.username)
-            .replace(":country", this.$route.params.country)
-            .replace(":city", this.$route.params.city);
+            .replace(":country", encodeURIComponent(this.$route.params.country))
+            .replace(":city", encodeURIComponent(this.$route.params.city));
         }
       }
       return item.to;

@@ -134,7 +134,10 @@ export default {
         });
     },
     goToCountry(country) {
-      this.$router.push(`/countries/${country.osm_name}`);
+      this.$router.push({
+        name: "country-detail",
+        params: { country: country.osm_name },
+      });
     },
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList;
