@@ -9,15 +9,26 @@
     density="comfortable"
     prepend-icon="mdi-help"
     color="warning"
+    :href="getEditUrl"
+    :target="getEditUrl ? '_blank' : null"
+    :rel="getEditUrl ? 'noopener' : null"
   >
     <i>{{ productQuantityUnitDisplay }}</i>
-    <v-tooltip activator="parent" open-on-click location="top">
+    <v-tooltip
+      activator="parent"
+      :open-on-click="!getEditUrl"
+      open-on-hover
+      location="top"
+    >
       {{ $t("ProductCard.QuantityMissing") }}
     </v-tooltip>
   </v-chip>
 </template>
 
 <script>
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openFoodFactsApi from "../services/openFoodFactsApi";
 import constants from "../constants";
 
 export default {
@@ -34,8 +45,21 @@ export default {
         constants.PRODUCT_QUANTITY_UNIT_ML,
       ],
     },
+    productCode: {
+      type: String,
+      default: null,
+    },
+    productSource: {
+      type: String,
+      default: "off",
+    },
+    readonly: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
+    ...mapStores(useAppStore),
     productQuantityUnitDisplay() {
       return this.productQuantityUnit || constants.PRODUCT_QUANTITY_UNIT_G;
     },
@@ -57,6 +81,16 @@ export default {
         ]);
       }
       return this.$t("ProductCard.ProductQuantityGram", [this.productQuantity]);
+    },
+    getEditUrl() {
+      if (this.readonly || !this.productCode) {
+        return null;
+      }
+      return openFoodFactsApi.getProductEditUrl(
+        this.productCode,
+        this.productSource,
+        this.appStore?.getUserCountry || "fr",
+      );
     },
   },
 };
