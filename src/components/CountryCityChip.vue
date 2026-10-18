@@ -35,12 +35,16 @@ export default {
       return "";
     },
     getCountryCityUrl() {
-      const countryUrl = `/countries/${this.country}`;
       if (this.type === "country") {
-        return this.country && !this.readonly ? countryUrl : null;
+        return this.country && !this.readonly
+          ? { name: "country-detail", params: { country: this.country } }
+          : null;
       } else if (this.type === "city") {
         return this.city && !this.readonly
-          ? `${countryUrl}/cities/${this.city}`
+          ? {
+              name: "country-city-detail",
+              params: { country: this.country, city: this.city },
+            }
           : null;
       }
       return null;
