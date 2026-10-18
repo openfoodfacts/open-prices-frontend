@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.177.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.177.3...v1.177.4) (2026-10-18)
+
+
+### Bug Fixes
+
+* **Date utils:** use local date instead of UTC date for default date in price/proof forms ([#2466](https://github.com/openfoodfacts/open-prices-frontend/issues/2466)) ([b4ff95e](https://github.com/openfoodfacts/open-prices-frontend/commit/b4ff95efa754067e16bac5fa730f2ec3a1d3fde5))
+* handle special characters in country links ([#2473](https://github.com/openfoodfacts/open-prices-frontend/issues/2473)) ([1e48a16](https://github.com/openfoodfacts/open-prices-frontend/commit/1e48a165bcdc36f27fcba6fdc409c19332f3905f))
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2474](https://github.com/openfoodfacts/open-prices-frontend/issues/2474)) ([4024d22](https://github.com/openfoodfacts/open-prices-frontend/commit/4024d222abf2b7136723d84a2a9c976b30f1345e))
+
 ## [1.177.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.177.2...v1.177.3) (2026-10-12)
 
 
