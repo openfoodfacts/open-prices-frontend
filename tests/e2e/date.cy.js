@@ -17,4 +17,12 @@ describe("Date utils", () => {
       "2024-01-05",
     );
   });
+
+  it("Shows the same day for a date-only string", () => {
+    // only catches the UTC bug when run west of UTC (e.g. TZ=America/New_York)
+    const expected = new Intl.DateTimeFormat(navigator.language, {
+      dateStyle: "short",
+    }).format(new Date(2023, 11, 25));
+    expect(date_utils.prettyDate("2023-12-25")).to.equal(expected);
+  });
 });
