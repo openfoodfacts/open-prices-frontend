@@ -416,6 +416,14 @@ export default {
       if (!locationPromise) return;
       locationPromise
         .then((location) => {
+          // keep a location the user picked while the lookup was pending
+          if (
+            this.proofForm.location_id ||
+            this.proofForm.location_osm_id ||
+            this.proofForm.location_osm_type
+          ) {
+            return;
+          }
           this.proofForm.location_id = location.id;
           this.proofForm.location_osm_id =
             location.type === constants.LOCATION_TYPE_OSM
