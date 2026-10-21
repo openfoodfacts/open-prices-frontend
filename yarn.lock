@@ -2638,9 +2638,9 @@ jackspeak@^3.1.2:
     "@pkgjs/parseargs" "^0.11.0"
 
 joi@^18.0.2:
-  version "18.2.3"
-  resolved "https://registry.yarnpkg.com/joi/-/joi-18.2.3.tgz#efdd1311496cd585730633fc57253a45641a3e85"
-  integrity sha512-N5A3KTWQpPWT4ExxxPlUx7WmykGXRzhNidWhV41d6Abu9YfI2NyWCJuxdPnslJCPWtbRpSVOWSnSS6GakLM/Rg==
+  version "18.3.0"
+  resolved "https://registry.yarnpkg.com/joi/-/joi-18.3.0.tgz#c63eb2f25082fe9c443f48c2a8e5a7a11ce3a5a1"
+  integrity sha512-/RwAK4BAfzcdbdFg073tzq4/xhY6Q7lMd5AmjqTL6pu0QFJdEmtswgm8BvgwXvOKuPNYQ8XrdQrrW/gF65LiNw==
   dependencies:
     "@hapi/address" "^5.1.1"
     "@hapi/formula" "^3.0.2"
