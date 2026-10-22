@@ -118,6 +118,7 @@
 	},
 	"BarcodeScanner": {
 		"CameraError": "The camera could not be started: {error}",
+		"ScanHint": "Keep the barcode horizontal and move closer until it fills the scanning area. If it is not detected, type the digits printed below the barcode.",
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
 		},
