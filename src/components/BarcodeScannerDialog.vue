@@ -35,6 +35,7 @@
         <v-tabs-window v-model="currentDisplay" disabled>
           <v-tabs-window-item value="scan">
             <template v-if="barcodeScannerLibrary === 'html5-qrcode'">
+              <p class="mb-2">{{ $t("BarcodeScanner.ScanHint") }}</p>
               <v-alert
                 v-if="scannerError"
                 type="error"
@@ -46,6 +47,14 @@
                 "
               />
               <div id="reader" width="500px" />
+              <v-btn
+                class="mt-2"
+                variant="text"
+                prepend-icon="mdi-numeric"
+                @click="currentDisplay = 'type'"
+              >
+                {{ $t("Common.BarcodeType") }}
+              </v-btn>
             </template>
             <barcode-scanner
               v-else-if="barcodeScannerLibrary === 'off-barcode-scanner'"
@@ -165,7 +174,7 @@
 <script>
 import "@webcomponents/webcomponentsjs/webcomponents-loader.js";
 import "@openfoodfacts/openfoodfacts-webcomponents";
-import { defineAsyncComponent } from "vue";
+import { defineAsyncComponent, markRaw } from "vue";
 import { mapStores } from "pinia";
 import { useAppStore } from "../store";
 import openPricesApi from "../services/openPricesApi";
@@ -322,11 +331,16 @@ export default {
     createQrcodeScanner() {
       this.scannerStartTimeout = null;
       this.scannerError = null;
-      this.scanner = barcode_scanner_utils.startHtml5QrcodeScanner(
-        "reader",
-        this.barcodeSend,
+      if (this.isUnmounted || !this.qrcodeScannerActive) return;
+      const scanner = markRaw(
+        barcode_scanner_utils.startHtml5QrcodeScanner(
+          "reader",
+          this.barcodeSend,
+        ),
       );
-      this.scanner.started.catch((error) => {
+      this.scanner = scanner;
+      scanner.started.catch((error) => {
+        if (this.scanner !== scanner) return;
         this.scannerError = error?.message || String(error);
         console.error(error);
       });
