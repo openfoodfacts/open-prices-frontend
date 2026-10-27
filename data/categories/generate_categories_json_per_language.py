@@ -40,6 +40,7 @@ PARENT_NODE_ID_LIST = [
     { "id": "en:sausages", "keep_node": True },  # 87
     { "id": "en:pastries", "keep_node": False },  # 73 (parent: en:desserts)
     { "id": "en:mushrooms", "keep_node": True },  # 67
+    { "id": "en:hams", "keep_node": False },  # 61
     { "id": "en:viennoiseries", "keep_node": False },  # 49 (parent: en:snacks)
     { "id": "en:coffees", "keep_node": False },  # 47
     { "id": "en:teas", "keep_node": False },  # 37
