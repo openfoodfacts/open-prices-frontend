@@ -8,14 +8,25 @@
           @click="goToProduct()"
         />
         <template v-if="hasProductSource">
-          <ProductBrands :productBrands="product.brands" :readonly="readonly" />
+          <ProductBrands
+            :productBrands="product.brands"
+            :productCode="product.code"
+            :productSource="product.source"
+            :readonly="readonly"
+          />
           <ProductQuantityChip
             :productQuantity="product.product_quantity"
             :productQuantityUnit="product.product_quantity_unit"
+            :productCode="product.code"
+            :productSource="product.source"
+            :readonly="readonly"
           />
           <template v-if="!hideCategoriesAndLabels">
             <ProductCategoriesChip
               :productCategories="product.categories_tags"
+              :productCode="product.code"
+              :productSource="product.source"
+              :readonly="readonly"
             />
             <ProductLabelsChip :productLabels="product.labels_tags" />
           </template>

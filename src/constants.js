@@ -137,6 +137,8 @@ export default {
   OFF_SEARCHALICIOUS_API_URL: "https://search.openfoodfacts.org",
   OFF_CROWDIN_URL: "https://translate.openfoodfacts.org",
   OFF_HUNGER_GAMES_URL: "https://hunger.openfoodfacts.org",
+  OFF_IMAGE_URL: "https://images.openfoodfacts.org",
+  ROBOTOFF_API_URL: "https://robotoff.openfoodfacts.org",
   OBF_NAME: OBF_NAME,
   OBF_URL: "https://world.openbeautyfacts.org",
   OBF_ICON: OBF_ICON,
