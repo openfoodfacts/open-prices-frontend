@@ -68,6 +68,11 @@ function priceCategoryPerUnit(price, currency, price_per) {
       prettyPrice(price, currency),
     ]);
   }
+  if (price_per === "LITER") {
+    return i18n.global.t("PriceCard.PriceValueDisplayLitre", [
+      prettyPrice(price, currency),
+    ]);
+  }
   // default to 'KILOGRAM'
   return i18n.global.t("PriceCard.PriceValueDisplayKilogram", [
     prettyPrice(price, currency),
