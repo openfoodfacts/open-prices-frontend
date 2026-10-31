@@ -204,6 +204,11 @@ export default {
           value: this.$t("AddPriceSingle.CategoryPricePer.PerUnit"),
           icon: "mdi-numeric-1-circle",
         },
+        {
+          key: "LITER",
+          value: this.$t("AddPriceSingle.CategoryPricePer.PerLiter"),
+          icon: "mdi-cup",
+        },
       ],
       priceDiscountTypeSelectorDisplayList:
         constants.PRICE_DISCOUNT_TYPE_SELECTOR_DISPLAY_LIST,
@@ -267,6 +272,9 @@ export default {
       if (this.proofIsTypeReceipt) {
         if (this.priceForm.price_per === "KILOGRAM") {
           return this.$t("Common.UnitKilogram");
+        }
+        if (this.priceForm.price_per === "LITER") {
+          return this.$t("Common.UnitLitre");
         }
       }
       return null;
