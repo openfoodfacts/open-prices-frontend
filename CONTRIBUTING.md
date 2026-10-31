@@ -68,3 +68,15 @@ yarn install
 git checkout -b <username>/packages-update-YYYY-MM-DD
 git commit -am "chore(deps): Update packages"
 ```
+
+### Testing the optional Tapirscan scanner
+
+Select Tapirscan in the existing barcode scanner preference. It uses a dedicated
+worker and only EAN-13, EAN-8, UPC-A and UPC-E; Auto retains its existing choice.
+Run `yarn cy:run --browser chrome --spec tests/e2e/tapirscan.cy.js` against the dev
+server for permission-denial and early-close tests.
+
+The integration uses the published Tapirscan 1.5.0 package from `yarn.lock`.
+Install dependencies with `yarn install --frozen-lockfile`, then run `yarn build`.
+Camera lifecycle tests simulate permission events; testing on a physical phone
+is still needed.
