@@ -68,3 +68,33 @@ yarn install
 git checkout -b <username>/packages-update-YYYY-MM-DD
 git commit -am "chore(deps): Update packages"
 ```
+
+### Testing the optional Tapirscan scanner
+
+Select Tapirscan in the existing barcode scanner preference. It uses a dedicated
+worker and only EAN-13, EAN-8, UPC-A and UPC-E; Auto retains its existing choice.
+Run `yarn cy:run --browser chrome --spec tests/e2e/tapirscan.cy.js` against the dev
+server for permission-denial and early-close tests.
+
+To test an unreleased scanner, build a local Tapirscan checkout, then install its
+npm tarball in a disposable frontend checkout:
+
+```sh
+# Tapirscan checkout (pinned toolchain required)
+python3 scripts/build_wasm.py
+npm ci --prefix bindings/javascript
+npm run build --prefix bindings/javascript
+(cd bindings/javascript && npm pack)
+# Open Prices checkout
+# Replace the path below with the tarball printed by npm pack.
+yarn add file:/path/to/tapirscan/bindings/javascript/tapirscan-1.5.0.tgz
+yarn build
+```
+
+Record the source commit and tarball SHA-256: development artifacts can share a
+version number with a published package. Do not commit the local `file:` override
+or its lockfile changes. This integration was also checked against development
+commit `980a415b271d58738c6475bba26e56d351f3115c`; separate public-worker smoke
+checks decoded Telepen, MicroPDF417 and rMQR. These formats remain outside the
+product scanner's retail selection. Camera tests use simulated permission events;
+physical-phone camera validation remains necessary.
