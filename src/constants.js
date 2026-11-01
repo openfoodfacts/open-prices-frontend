@@ -629,10 +629,8 @@ export default {
   // Location search (Nominatim & Photon): exclude the results with these OSM values
   // (only the value is compared, whatever the key): places where prices can't be added
   // (administrative areas, roads, residential buildings, parkings...)
-  // https://wiki.openstreetmap.org/wiki/Key:place
-  // https://wiki.openstreetmap.org/wiki/Key:highway
-  // https://wiki.openstreetmap.org/wiki/Buildings
   OSM_SEARCH_RESULT_EXCLUDE_VALUE_LIST: [
+    // https://wiki.openstreetmap.org/wiki/Key:place
     "country",
     "state",
     "region",
@@ -662,8 +660,10 @@ export default {
     "polder",
     "sea",
     "ocean",
+    // https://wiki.openstreetmap.org/wiki/Key:boundary
     "administrative",
     "state_district",
+    // https://wiki.openstreetmap.org/wiki/Key:highway
     "motorway",
     "trunk",
     "primary",
@@ -677,6 +677,7 @@ export default {
     "track",
     "road",
     "footway",
+    // https://wiki.openstreetmap.org/wiki/Buildings
     "apartments",
     "barracks",
     "bungalow",
@@ -686,14 +687,18 @@ export default {
     "ger",
     "house",
     "houseboat",
-    "residential", // 'farm', 'hotel'
+    "residential",
+    // "farm", (farms can sell products)
+    // "hotel", (hotel receipts, and it would also exclude tourism=hotel)
+    // https://wiki.openstreetmap.org/wiki/Key:amenity
     "casino",
     "parking",
     "parking_space",
+    // "fuel", (gas stations, amenity=fuel)
     "charging_station",
     "atm",
     "car_sharing",
-    "yes",
+    "yes", // generic buildings (building=yes)
   ],
   LICENSE_ODBL_NAME: "Open Database License (ODbL)",
   LICENSE_ODBL_URL: "https://opendatacommons.org/licenses/odbl/1.0/",
