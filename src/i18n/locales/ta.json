@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "ஒரு கிலோ விலை",
+			"PerLiter": "Price per liter",
 			"PerUnit": "ஒன்றின் விலை"
 		},
 		"Title": "ஒற்றை விலையைச் சேர்க்கவும்",
