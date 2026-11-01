@@ -91,19 +91,14 @@ function cleanupProductPrice(data) {
 function cleanupCategoryPrice(data) {
   delete data.product_code;
   delete data.product;
-  if (
-    data.origins_tags === null ||
-    (Array.isArray(data.origins_tags) && data.origins_tags == [""])
-  ) {
-    data.origins_tags = [];
-    // backend will default to ['en:unknown']
-  }
-  if (
-    data.labels_tags === null ||
-    (Array.isArray(data.labels_tags) && data.labels_tags == [""])
-  ) {
-    data.labels_tags = [];
-  }
+  // remove empty values (backend will default origins_tags to ['en:unknown'])
+  ["origins_tags", "labels_tags"].forEach((key) => {
+    if (data[key] === null) {
+      data[key] = [];
+    } else if (Array.isArray(data[key])) {
+      data[key] = data[key].filter((tag) => !!tag);
+    }
+  });
   if (!data.category_tag) {
     return Promise.resolve(data);
   }
