@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "每公斤價格",
+			"PerLiter": "Price per liter",
 			"PerUnit": "每單位價格"
 		},
 		"Title": "增加單一價格",
