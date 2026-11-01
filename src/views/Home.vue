@@ -118,12 +118,11 @@ export default {
   },
   methods: {
     getCurrentSurvey() {
-      const now = new Date();
+      // compare 'YYYY-MM-DD' strings (local date), end_date included
+      const today = date_utils.currentDate();
 
       this.currentSurvey = Surveys.find((survey) => {
-        const startDate = new Date(survey.start_date);
-        const endDate = new Date(survey.end_date);
-        return now >= startDate && now <= endDate;
+        return survey.start_date <= today && today <= survey.end_date;
       });
     },
     getCurrentChallenge() {
