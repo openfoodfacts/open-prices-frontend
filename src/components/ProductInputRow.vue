@@ -64,6 +64,14 @@
     <v-col cols="6">
       <div class="text-body-2 required">
         {{ $t("AddPriceSingle.ProductInfo.CategoryLabel") }}
+        <v-icon
+          class="float-right"
+          size="small"
+          icon="mdi-information-outline"
+        />
+        <v-tooltip activator="parent" open-on-click location="top">
+          {{ $t("AddPriceSingle.ProductInfo.CategoryHelpText") }}
+        </v-tooltip>
       </div>
       <v-autocomplete
         v-model="productForm.category_tag"
