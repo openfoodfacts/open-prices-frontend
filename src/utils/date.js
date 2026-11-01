@@ -43,26 +43,6 @@ function dateShort(dateString) {
 }
 
 /**
- * input: '2023-12-25'
- * output: '2023-12-25T00:00:00.000Z'
- */
-function dateStartOfDay(dateString) {
-  let date = new Date(dateString);
-  date.setUTCHours(0, 0, 0, 0);
-  return date.toISOString();
-}
-
-/**
- * input: '2023-12-25'
- * output: '2023-12-25T23:59:59.999Z'
- */
-function dateEndOfDay(dateString) {
-  let date = new Date(dateString);
-  date.setUTCHours(23, 59, 59, 999);
-  return date.toISOString();
-}
-
-/**
  * @returns '2023-11-25' if today is '2023-12-25'
  */
 function oneMonthAgoDate() {
@@ -156,20 +136,6 @@ function prettyRelativeDateTime(dateTimeString, size = null) {
   );
 }
 
-/**
- * input: '2023-12-25', '2023-12-31'
- * output: true if date (or today) is between start and end dates
- */
-function isBetweenTwoDates(
-  startDateString,
-  endDateString,
-  date = currentDateTime(),
-) {
-  const startDate = dateStartOfDay(startDateString);
-  const endDate = dateEndOfDay(endDateString);
-  return startDate <= date && date <= endDate;
-}
-
 function dateType(dateString) {
   if (dateString) {
     if (dateString.match(constants.DATE_FULL_REGEX_MATCH)) {
@@ -196,13 +162,10 @@ export default {
   currentDateTime,
   currentStartOfDay,
   dateShort,
-  dateStartOfDay,
-  dateEndOfDay,
   oneMonthAgoDate,
   prettyDate,
   prettyDateTime,
   offDateTime,
   prettyRelativeDateTime,
-  isBetweenTwoDates,
   dateType,
 };
