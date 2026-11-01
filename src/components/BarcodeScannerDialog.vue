@@ -180,7 +180,6 @@ import openFoodFactsApi from "../services/openFoodFactsApi";
 import constants from "../constants";
 import utils from "../utils.js";
 import barcode_scanner_utils from "../utils/barcodeScanner.js";
-import { startTapirscanScanner } from "../utils/tapirscanScanner.js";
 import proof_utils from "../utils/proof.js";
 
 export default {
@@ -334,13 +333,18 @@ export default {
     createQrcodeScanner() {
       this.scannerStartTimeout = null;
       this.scannerError = null;
-      const start =
-        this.barcodeScannerLibrary === "tapirscan"
-          ? startTapirscanScanner
-          : barcode_scanner_utils.startHtml5QrcodeScanner;
-      this.scanner = start("reader", this.barcodeSend, (error) => {
-        this.scannerError = error?.message || String(error);
-      });
+      if (this.barcodeScannerLibrary === "tapirscan") {
+        this.scanner = barcode_scanner_utils.startTapirscanScanner(
+          "reader",
+          this.barcodeSend,
+          (error) => (this.scannerError = error?.message || String(error)),
+        );
+      } else {
+        this.scanner = barcode_scanner_utils.startHtml5QrcodeScanner(
+          "reader",
+          this.barcodeSend,
+        );
+      }
       this.scanner.started.catch((error) => {
         this.scannerError = error?.message || String(error);
         console.error(error);

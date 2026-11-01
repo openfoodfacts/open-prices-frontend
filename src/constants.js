@@ -525,12 +525,6 @@ export default {
   ],
   BARCODE_SCANNER_DISPLAY_LIST: [
     {
-      key: "tapirscan",
-      value: "Tapirscan",
-      valueSmallScreen: "Tapirscan",
-      icon: "mdi-barcode-scan",
-    },
-    {
       key: "auto",
       value: "Auto",
       valueSmallScreen: "Auto",
@@ -540,6 +534,12 @@ export default {
       key: "off-barcode-scanner",
       value: "Off Barcode Scanner",
       valueSmallScreen: "Off Scanner",
+      icon: "mdi-barcode-scan",
+    },
+    {
+      key: "tapirscan",
+      value: "Tapirscan",
+      valueSmallScreen: "Tapirscan",
       icon: "mdi-barcode-scan",
     },
     {
