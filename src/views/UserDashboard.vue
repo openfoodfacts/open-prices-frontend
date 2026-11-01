@@ -398,7 +398,7 @@ export default {
           // check if the user added a price today
           if (
             data.items.length &&
-            data.items[0].created > date_utils.currentStartOfDay()
+            data.items[0].created > date_utils.currentLocalStartOfDay()
           ) {
             this.getUserPriceCount(true);
           }
@@ -411,7 +411,7 @@ export default {
       this.loading = true;
       const params = { ...this.getPriceParams, size: 1 };
       if (today) {
-        params.created__gte = date_utils.currentStartOfDay();
+        params.created__gte = date_utils.currentLocalStartOfDay();
       }
       return openPricesApi
         .getPrices(params)
@@ -442,7 +442,7 @@ export default {
       this.loading = true;
       const params = { ...this.getProofParams, size: 1 };
       if (today) {
-        params.created__gte = date_utils.currentStartOfDay();
+        params.created__gte = date_utils.currentLocalStartOfDay();
       }
       return openPricesApi
         .getProofs(params)
@@ -466,7 +466,7 @@ export default {
             // check if the user added a proof today
             if (
               data.items.length &&
-              data.items[0].created > date_utils.currentStartOfDay()
+              data.items[0].created > date_utils.currentLocalStartOfDay()
             ) {
               this.getUserProofCount(true);
             }
