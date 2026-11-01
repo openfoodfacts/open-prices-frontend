@@ -13,11 +13,13 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import utils
 
 from openfoodfacts.taxonomy import Taxonomy, TaxonomyNode, get_taxonomy
+from openfoodfacts.types import Flavor
 
 OFF_TAXONOMY_NAME = "category"
+OPF_TAXONOMY_NAME = "category"
 OP_LANGUAGES_FILE = "src/i18n/data/languages.json"
 
-PARENT_NODE_ID_LIST = [
+OFF_PARENT_NODE_ID_LIST = [
     # { "id": "en:snacks", "keep_node": False },  # 823 (including en:viennoiseries)
     { "id": "en:meats", "keep_node": False },  # 774 descendants
     # { "id": "en:cereals-and-their-products", "keep_node": False },  # 682
@@ -57,7 +59,7 @@ PARENT_NODE_ID_LIST = [
     { "id": "en:textured-vegetable-protein", "keep_node": False },  # 2
 ]
 
-EXTRA_NODE_ID_LIST = [
+OFF_EXTRA_NODE_ID_LIST = [
     "en:rolled-oats",
     "en:ginger",
     "en:candies",
@@ -65,7 +67,7 @@ EXTRA_NODE_ID_LIST = [
     "en:acar",
 ]
 
-EXCLUDE_LIST = [
+OFF_EXCLUDE_LIST = [
     "Frozen",  # 314 nodes removed
     "Cooked",  # 163
     "Fresh",  # 153
@@ -75,7 +77,7 @@ EXCLUDE_LIST = [
     "Packaged",  # 1
 ]
 
-EXCLUDE_NODE_ID_LIST = [
+OFF_EXCLUDE_NODE_ID_LIST = [
     "en:vegetables-from-germany",
     "en:vegetables-from-the-netherlands",
     "en:spanish-vegetables",
@@ -90,6 +92,12 @@ EXCLUDE_NODE_ID_LIST = [
     "en:shelf-stable-popcorn",
 ]
 
+# Non-food categories (Open Products Facts taxonomy)
+OPF_PARENT_NODE_ID_LIST = [
+    { "id": "en:fuel", "keep_node": False },  # 5 (heating oil, kerosene, propane...)
+    { "id": "en:tickets", "keep_node": False },  # 2 (event tickets, museum tickets)
+]
+
 script_path = Path(__file__).parent
 repo_path = script_path.parent.parent
 
@@ -99,36 +107,58 @@ README_PATH = repo_path / "data/README.md"
 README_SECTION = "## Categories (with translations)"
 
 
-def filter_categories(taxonomy):
+def filter_categories(
+    taxonomy,
+    parent_node_id_list: list[dict[str, Any]],
+    extra_node_id_list: list[str] | None = None,
+    exclude_node_id_list: list[str] | None = None,
+    exclude_list: list[str] | None = None,
+):
     """
     Rules:
-    - keep only nodes that are descendants of some parent nodes (see PARENT_NODE_ID_LIST) (sometimes including the parent itself)
-    - add extra nodes from EXTRA_NODE_ID_LIST
+    - keep only nodes that are descendants of some parent nodes (see parent_node_id_list) (sometimes including the parent itself)
+    - add extra nodes from extra_node_id_list
     - remove some nodes based on id or name substring
     """
+    extra_node_id_list = extra_node_id_list or []
+    exclude_node_id_list = exclude_node_id_list or []
+    exclude_list = exclude_list or []
     # filter on parent nodes
     PARENT_NODES: list[TaxonomyNode] = utils.get_taxonomy_node_list_by_id_list(
-        taxonomy, [node["id"] for node in PARENT_NODE_ID_LIST]
+        taxonomy, [node["id"] for node in parent_node_id_list]
     )
     # get all descendants for the parent categories
     categories_filtered: list[TaxonomyNode] = utils.get_all_descendants_for_node_list(
-        taxonomy, PARENT_NODES, parent_node_id_list_to_keep=[node["id"] for node in PARENT_NODE_ID_LIST if node["keep_node"]]
+        taxonomy, PARENT_NODES, parent_node_id_list_to_keep=[node["id"] for node in parent_node_id_list if node["keep_node"]]
     )
     # add extra nodes
     categories_filtered.extend(
-        utils.get_taxonomy_node_list_by_id_list(taxonomy, EXTRA_NODE_ID_LIST)
+        utils.get_taxonomy_node_list_by_id_list(taxonomy, extra_node_id_list)
     )
     # exclude
-    # remove nodes in EXCLUDE_NODE_ID_LIST
-    # remove nodes containing some strings in EXCLUDE_LIST
+    # remove nodes in exclude_node_id_list
+    # remove nodes containing some strings in exclude_list
     # We don't filter anymore node IDs that don't start with "en:", as some categories don't have translations in English (e.g. "fr:merguez")
     categories_filtered = [
-        node for node in categories_filtered if node.id not in EXCLUDE_NODE_ID_LIST
+        node for node in categories_filtered if node.id not in exclude_node_id_list
     ]
     categories_filtered = utils.filter_node_list_by_exclude_string_list(
-        categories_filtered, EXCLUDE_LIST
+        categories_filtered, exclude_list
     )
     return categories_filtered
+
+
+def get_categories(taxonomy, source: str, **filter_kwargs) -> list[dict[str, Any]]:
+    """
+    Filter & deduplicate the taxonomy categories, then transform them to a dict list
+    (with a "source" key: "off" or "opf")
+    """
+    categories_filtered = filter_categories(taxonomy, **filter_kwargs)
+    categories_filtered = utils.deduplicate_node_list(categories_filtered)
+    categories = utils.taxonomy_node_list_to_dict_list(categories_filtered, delete_parents=True)
+    for category in categories:
+        category["source"] = source
+    return categories
 
 
 def write_categories_to_files(
@@ -149,6 +179,7 @@ def write_categories_to_files(
                     {
                         "id": category["id"],
                         "name": language_category_name,
+                        "source": category["source"],
                     }
                 )
         # order by name
@@ -189,31 +220,49 @@ def compare_new_categories_with_old_categories():
 
 
 if __name__ == "__main__":
-    print("Step 1: get the full taxonomy")
-    TAXONOMY_FULL: Taxonomy = get_taxonomy(
-        OFF_TAXONOMY_NAME, force_download=True, download_newer=True
+    print("Step 1: get the full taxonomies (OFF & OPF)")
+    OFF_TAXONOMY_FULL: Taxonomy = get_taxonomy(
+        OFF_TAXONOMY_NAME, flavor=Flavor.off, force_download=True, download_newer=True
     )
-    print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
+    print("OFF taxonomy: total number of nodes:", len(OFF_TAXONOMY_FULL))
+    OPF_TAXONOMY_FULL: Taxonomy = get_taxonomy(
+        OPF_TAXONOMY_NAME, flavor=Flavor.opf, force_download=True, download_newer=True
+    )
+    print("OPF taxonomy: total number of nodes:", len(OPF_TAXONOMY_FULL))
 
-    print("Step 2: filter")
-    categories_filtered = filter_categories(TAXONOMY_FULL)
-    print("Categories remaining:", len(categories_filtered))
+    print("Step 2: filter, deduplicate & transform to dict list")
+    off_categories = get_categories(
+        OFF_TAXONOMY_FULL,
+        "off",
+        parent_node_id_list=OFF_PARENT_NODE_ID_LIST,
+        extra_node_id_list=OFF_EXTRA_NODE_ID_LIST,
+        exclude_node_id_list=OFF_EXCLUDE_NODE_ID_LIST,
+        exclude_list=OFF_EXCLUDE_LIST,
+    )
+    print("OFF categories remaining:", len(off_categories))
+    opf_categories = get_categories(
+        OPF_TAXONOMY_FULL,
+        "opf",
+        parent_node_id_list=OPF_PARENT_NODE_ID_LIST,
+    )
+    print("OPF categories remaining:", len(opf_categories))
 
-    print("Step 3: deduplicate")
-    categories_filtered = utils.deduplicate_node_list(categories_filtered)
-    print("Finished deduplicating:", len(categories_filtered))
+    print("Step 3: merge (OFF categories take precedence if the same id exists in both taxonomies)")
+    off_category_id_set = {category["id"] for category in off_categories}
+    opf_categories = [category for category in opf_categories if category["id"] not in off_category_id_set]
+    categories = off_categories + opf_categories
+    print("Categories after merge:", len(categories))
 
-    print("Step 4: transform to dict list & write to files (1 per language)")
-    categories_filtered_to_dict_list = utils.taxonomy_node_list_to_dict_list(list(categories_filtered), delete_parents=True)
+    print("Step 4: write to files (1 per language)")
     OP_LANGUAGES = utils.read_json(repo_path / OP_LANGUAGES_FILE)
-    write_categories_to_files(categories_filtered_to_dict_list, OP_LANGUAGES)
+    write_categories_to_files(categories, OP_LANGUAGES)
     print(f"Wrote to {len(OP_LANGUAGES)} language files")
 
     # --- Update README.md Stats section ---
     stats_lines = [
         f"- Last run: {datetime.date.today()}",
-        f"- Input (Taxonomy): {len(TAXONOMY_FULL)} categories",
-        f"- Output (JSON): {len(categories_filtered)} categories x {len(OP_LANGUAGES)} languages"
+        f"- Input (Taxonomy): {len(OFF_TAXONOMY_FULL)} OFF categories, {len(OPF_TAXONOMY_FULL)} OPF categories",
+        f"- Output (JSON): {len(categories)} categories ({len(off_categories)} OFF, {len(opf_categories)} OPF) x {len(OP_LANGUAGES)} languages"
     ]
     utils.update_readme_stats(
         readme_path=README_PATH,
@@ -223,12 +272,12 @@ if __name__ == "__main__":
 
     # Extra
     # compare_new_categories_with_old_categories()
-    # root_nodes = get_all_root_nodes(TAXONOMY_FULL)
+    # root_nodes = get_all_root_nodes(OFF_TAXONOMY_FULL)
     # print(root_nodes)
     # category_name = "en:coffees"
-    # category_descendants = utils.get_all_descendants_for_node(TAXONOMY_FULL, utils.get_taxonomy_node_list_by_id_list(TAXONOMY_FULL, [category_name])[0])
+    # category_descendants = utils.get_all_descendants_for_node(OFF_TAXONOMY_FULL, utils.get_taxonomy_node_list_by_id_list(OFF_TAXONOMY_FULL, [category_name])[0])
     # print(category_descendants)
     # print(len(category_descendants))
     # for parent_node in PARENT_NODES:
-    #     descendants = utils.get_all_descendants_for_node(TAXONOMY_FULL, parent_node)
+    #     descendants = utils.get_all_descendants_for_node(OFF_TAXONOMY_FULL, parent_node)
     #     print(f"Parent node {parent_node.id} has {len(descendants)} descendants")
