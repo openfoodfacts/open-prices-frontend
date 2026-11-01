@@ -49,23 +49,18 @@ jobs:
       - name: Generate countries
         run: python data/countries/generate_countries_json.py
 
+      - name: Summarize changes (for the PR description)
+        run: |
+          python data/summarize_generated_data_changes.py --output "$RUNNER_TEMP/pr-body.md"
+          cat "$RUNNER_TEMP/pr-body.md" >> "$GITHUB_STEP_SUMMARY"
+
       - name: Create pull request
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "chore(Data): update generated data from taxonomies"
           title: "chore(Data): update generated data from taxonomies"
-          body: |
-            This PR was created automatically by the scheduled `Update Generated Data` workflow.
-
-            Files potentially updated:
-            - `data/README.md`
-            - `src/data/categories/*.json`
-            - `src/data/countries/*.json`
-            - `src/data/labels/*.json`
-            - `src/data/origins/*.json`
-            - `src/i18n/data/languages.json`
-            - `src/data/countries.json`
+          body-path: ${{ runner.temp }}/pr-body.md
           branch: chore/update-generated-data
           delete-branch: true
           add-paths: |
