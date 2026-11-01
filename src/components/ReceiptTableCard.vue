@@ -388,15 +388,6 @@ export default {
         };
       } else {
         // assume schema version 2.0 and above
-        let pricePer = predictedData.price_per;
-        if (
-          predictedData.type === constants.PRICE_TYPE_CATEGORY &&
-          pricePer == "LITER"
-        ) {
-          // On Open Prices, we use KILOGRAM for category prices, even for liquids
-          pricePer = "KILOGRAM";
-        }
-
         let receipt_quantity = predictedData.quantity;
         if (receipt_quantity === undefined || receipt_quantity === null) {
           receipt_quantity = 1;
@@ -415,7 +406,7 @@ export default {
           product_name: predictedData.product_name,
           category_tag: category_tag,
           price: predictedData.price,
-          price_per: pricePer,
+          price_per: predictedData.price_per,
           predicted_product_code: predictedData.predicted_product_code || null,
           receipt_quantity: receipt_quantity,
           price_is_discounted: predictedData.price_is_discounted || null,
@@ -442,7 +433,13 @@ export default {
     itemPriceSuffix(item) {
       let suffix = this.proof.currency;
       if (this.itemIsCategory(item) && item.category_tag) {
-        suffix += "/" + (item.price_per === "UNIT" ? "U" : "KG");
+        if (item.price_per === "UNIT") {
+          suffix += "/U";
+        } else if (item.price_per === "LITER") {
+          suffix += "/L";
+        } else {
+          suffix += "/KG";
+        }
       }
       return suffix;
     },
