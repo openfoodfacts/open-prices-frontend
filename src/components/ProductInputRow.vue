@@ -80,7 +80,7 @@
         hide-details="auto"
       />
     </v-col>
-    <v-col cols="6">
+    <v-col v-if="!productCategoryIsNonFood" cols="6">
       <div class="text-body-2">
         {{ $t("AddPriceSingle.ProductInfo.OriginLabel") }}
       </div>
@@ -98,7 +98,7 @@
         "
       />
     </v-col>
-    <v-col class="pt-0" cols="6">
+    <v-col v-if="!productCategoryIsNonFood" class="pt-0" cols="6">
       <v-switch
         v-for="lt in labelTags"
         :key="lt.id"
@@ -197,6 +197,15 @@ export default {
       return (
         this.productForm &&
         this.productForm.type === constants.PRICE_TYPE_CATEGORY
+      );
+    },
+    productCategoryIsNonFood() {
+      // non-food categories (e.g. fuels, tickets) don't have origins or labels
+      const category = this.categoryTags.find(
+        (ct) => ct.id === this.productForm.category_tag,
+      );
+      return (
+        !!category && category.source === constants.PRICE_CATEGORY_SOURCE_OPF
       );
     },
     productTypeDisplayList() {
