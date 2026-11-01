@@ -624,10 +624,15 @@ export default {
   OSM_PHOTON_URL: "https://photon.komoot.io",
   OSM_PHOTON_SEARCH_URL: "https://photon.komoot.io/api/",
   OSM_PHOTON_ATTRIBUTION: "Komoot Photon (OpenStreetMap)",
-  // https://wiki.openstreetmap.org/wiki/Key:place
-  // https://wiki.openstreetmap.org/wiki/Key:highway
-  // https://wiki.openstreetmap.org/wiki/Buildings
-  NOMINATIM_RESULT_TYPE_EXCLUDE_LIST: [
+  // Photon search: only keep places with these OSM keys
+  // shop & amenity: shops, markets, gas stations, cinemas, theatres...
+  // tourism & leisure: museums, zoos, theme parks, hotels, stadiums, swimming pools, gyms...
+  OSM_PHOTON_SEARCH_TAG_LIST: ["shop", "amenity", "tourism", "leisure"],
+  // Location search (Nominatim & Photon): exclude the results with these OSM values
+  // (only the value is compared, whatever the key): places where prices can't be added
+  // (administrative areas, roads, residential buildings, parkings...)
+  OSM_SEARCH_RESULT_EXCLUDE_VALUE_LIST: [
+    // https://wiki.openstreetmap.org/wiki/Key:place
     "country",
     "state",
     "region",
@@ -657,8 +662,10 @@ export default {
     "polder",
     "sea",
     "ocean",
+    // https://wiki.openstreetmap.org/wiki/Key:boundary
     "administrative",
     "state_district",
+    // https://wiki.openstreetmap.org/wiki/Key:highway
     "motorway",
     "trunk",
     "primary",
@@ -672,6 +679,7 @@ export default {
     "track",
     "road",
     "footway",
+    // https://wiki.openstreetmap.org/wiki/Buildings
     "apartments",
     "barracks",
     "bungalow",
@@ -681,16 +689,18 @@ export default {
     "ger",
     "house",
     "houseboat",
-    "residential", // 'farm', 'hotel'
-    "fuel",
-    "gas",
+    "residential",
+    // "farm", (farms can sell products)
+    // "hotel", (hotel receipts, and it would also exclude tourism=hotel)
+    // https://wiki.openstreetmap.org/wiki/Key:amenity
     "casino",
     "parking",
     "parking_space",
+    // "fuel", (gas stations, amenity=fuel)
     "charging_station",
     "atm",
     "car_sharing",
-    "yes",
+    "yes", // generic buildings (building=yes)
   ],
   LICENSE_ODBL_NAME: "Open Database License (ODbL)",
   LICENSE_ODBL_URL: "https://opendatacommons.org/licenses/odbl/1.0/",
