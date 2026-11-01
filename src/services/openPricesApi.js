@@ -72,40 +72,49 @@ function filterBodyWithAllowedKeys(data, allowedKeys) {
   return filteredData;
 }
 
+/**
+ * Product prices: extra rules
+ */
+function cleanupProductPrice(data) {
+  delete data.price_per;
+  delete data.category_tag;
+  delete data.origins_tags;
+  delete data.labels_tags;
+  return data;
+}
+
+/**
+ * Category prices: extra rules
+ */
+function cleanupCategoryPrice(data) {
+  delete data.product_code;
+  delete data.product;
+  // remove empty values (backend will default origins_tags to ['en:unknown'])
+  ["origins_tags", "labels_tags"].forEach((key) => {
+    if (data[key] === null) {
+      data[key] = [];
+    } else if (Array.isArray(data[key])) {
+      data[key] = data[key].filter((tag) => !!tag);
+    }
+  });
+  return data;
+}
+
 function extraPriceCreateOrUpdateFiltering(data) {
   let filteredData = { ...data };
-  // product only rules
-  if (filteredData.type == constants.PRICE_TYPE_PRODUCT) {
-    delete filteredData.price_per;
-    delete filteredData.category_tag;
-    delete filteredData.origins_tags;
-    delete filteredData.labels_tags;
-  }
-  // category only rules
-  else if (filteredData.type == constants.PRICE_TYPE_CATEGORY) {
-    delete filteredData.product_code;
-    delete filteredData.product;
-    if (
-      filteredData.origins_tags === null ||
-      (Array.isArray(filteredData.origins_tags) &&
-        filteredData.origins_tags == [""])
-    ) {
-      filteredData.origins_tags = [];
-      // backend will default to ['en:unknown']
-    }
-    if (
-      filteredData.labels_tags === null ||
-      (Array.isArray(filteredData.labels_tags) &&
-        filteredData.labels_tags == [""])
-    ) {
-      filteredData.labels_tags = [];
-    }
-  }
   // generic rules
   if (!filteredData.price_is_discounted) {
     filteredData.price_is_discounted = false;
     filteredData.price_without_discount = null;
     filteredData.discount_type = null;
+  }
+  // product only rules
+  if (filteredData.type == constants.PRICE_TYPE_PRODUCT) {
+    filteredData = cleanupProductPrice(filteredData);
+  }
+  // category only rules
+  else if (filteredData.type == constants.PRICE_TYPE_CATEGORY) {
+    filteredData = cleanupCategoryPrice(filteredData);
   }
   return filteredData;
 }
