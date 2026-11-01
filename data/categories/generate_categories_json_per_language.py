@@ -261,8 +261,9 @@ if __name__ == "__main__":
     # --- Update README.md Stats section ---
     stats_lines = [
         f"- Last run: {datetime.date.today()}",
-        f"- Input (Taxonomy): {len(OFF_TAXONOMY_FULL)} OFF categories, {len(OPF_TAXONOMY_FULL)} OPF categories",
-        f"- Output (JSON): {len(categories)} categories ({len(off_categories)} OFF, {len(opf_categories)} OPF) x {len(OP_LANGUAGES)} languages"
+        f"- Input (OFF taxonomy): {len(OFF_TAXONOMY_FULL)} categories",
+        f"- Input (OPF taxonomy): {len(OPF_TAXONOMY_FULL)} categories",
+        f"- Output (JSON): {len(categories)} categories x {len(OP_LANGUAGES)} languages"
     ]
     utils.update_readme_stats(
         readme_path=README_PATH,

@@ -50,8 +50,9 @@ What it does:
 ### Stats
 
 - Last run: 2026-11-01
-- Input (Taxonomy): 14866 categories
-- Output (JSON): 3177 categories x 150 languages
+- Input (OFF taxonomy): 14866 categories
+- Input (OPF taxonomy): 5519 categories
+- Output (JSON): 3233 categories x 150 languages
 
 ## Countries (with translations)
 
