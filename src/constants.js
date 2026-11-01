@@ -626,10 +626,13 @@ export default {
   // shop & amenity: shops, markets, gas stations, cinemas, theatres...
   // tourism & leisure: museums, zoos, theme parks, hotels, stadiums, swimming pools, gyms...
   OSM_PHOTON_SEARCH_TAG_LIST: ["shop", "amenity", "tourism", "leisure"],
+  // Location search (Nominatim & Photon): exclude the results with these OSM values
+  // (only the value is compared, whatever the key): places where prices can't be added
+  // (administrative areas, roads, residential buildings, parkings...)
   // https://wiki.openstreetmap.org/wiki/Key:place
   // https://wiki.openstreetmap.org/wiki/Key:highway
   // https://wiki.openstreetmap.org/wiki/Buildings
-  NOMINATIM_RESULT_TYPE_EXCLUDE_LIST: [
+  OSM_SEARCH_RESULT_EXCLUDE_VALUE_LIST: [
     "country",
     "state",
     "region",
@@ -684,8 +687,6 @@ export default {
     "house",
     "houseboat",
     "residential", // 'farm', 'hotel'
-    "fuel",
-    "gas",
     "casino",
     "parking",
     "parking_space",

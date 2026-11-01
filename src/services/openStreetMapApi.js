@@ -24,7 +24,8 @@ export default {
       })
       .then((data) =>
         data.filter(
-          (l) => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type),
+          (l) =>
+            !constants.OSM_SEARCH_RESULT_EXCLUDE_VALUE_LIST.includes(l.type),
         ),
       );
   },
@@ -74,7 +75,7 @@ export default {
       .then((data) =>
         data.filter((l) =>
           filterResultsOnProperties
-            ? !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(
+            ? !constants.OSM_SEARCH_RESULT_EXCLUDE_VALUE_LIST.includes(
                 l.properties.osm_value,
               )
             : true,
