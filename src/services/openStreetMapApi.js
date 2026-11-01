@@ -46,7 +46,7 @@ export default {
   },
   /**
    * Photon search by query
-   * @param restrictToShop: restrict the search to shop & amenity
+   * @param restrictToShop: restrict the search to some OSM keys (see OSM_PHOTON_SEARCH_TAG_LIST)
    * @param filterResultsOnProperties: filter out results based on their properties.osm_value
    */
   openstreetmapPhotonSearch(
@@ -56,7 +56,9 @@ export default {
   ) {
     let url = `${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&limit=${LOCATION_SEARCH_LIMIT}`;
     if (restrictToShop) {
-      url += "&osm_tag=shop&osm_tag=amenity";
+      url += constants.OSM_PHOTON_SEARCH_TAG_LIST.map(
+        (tag) => `&osm_tag=${tag}`,
+      ).join("");
     }
     return fetch(url, {
       method: "GET",

@@ -622,6 +622,10 @@ export default {
   OSM_PHOTON_URL: "https://photon.komoot.io",
   OSM_PHOTON_SEARCH_URL: "https://photon.komoot.io/api/",
   OSM_PHOTON_ATTRIBUTION: "Komoot Photon (OpenStreetMap)",
+  // Photon search: only keep places with these OSM keys
+  // shop & amenity: shops, markets, gas stations, cinemas, theatres...
+  // tourism & leisure: museums, zoos, theme parks, stadiums, swimming pools, gyms...
+  OSM_PHOTON_SEARCH_TAG_LIST: ["shop", "amenity", "tourism", "leisure"],
   // https://wiki.openstreetmap.org/wiki/Key:place
   // https://wiki.openstreetmap.org/wiki/Key:highway
   // https://wiki.openstreetmap.org/wiki/Buildings
