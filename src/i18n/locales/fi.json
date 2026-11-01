@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Hinta per kg",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Hinta per yksikkö"
 		},
 		"Title": "Lisää yksi hinta",

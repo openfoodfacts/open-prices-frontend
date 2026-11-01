@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Prijs per kg",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Prijs per eenheid"
 		},
 		"Title": "Voeg een enkele prijs toe",

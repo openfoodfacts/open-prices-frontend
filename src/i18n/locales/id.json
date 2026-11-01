@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Harga per kg",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Harga per unit"
 		},
 		"Title": "Tambahkan satu harga",

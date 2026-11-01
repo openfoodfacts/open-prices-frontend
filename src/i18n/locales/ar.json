@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "السعر للكيلوغرام",
+			"PerLiter": "Price per liter",
 			"PerUnit": "سعر الوحدة"
 		},
 		"Title": "أضف سعرًا واحدًا",

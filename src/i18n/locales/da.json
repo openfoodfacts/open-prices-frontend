@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Pris pr kg",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Pris pr. enhed"
 		},
 		"Title": "Tilføj en enkelt pris",

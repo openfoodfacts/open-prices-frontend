@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Τιμή ανά κιλό",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Τιμή ανά μονάδα"
 		},
 		"Title": "Προσθήκη μίας μόνο τιμής",

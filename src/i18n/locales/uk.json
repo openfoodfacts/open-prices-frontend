@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Ціна за кг",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Ціна за одиницю"
 		},
 		"Title": "Додати єдину ціну",

@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Price per kg",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Price per unit"
 		},
 		"Title": "Add a single price",
@@ -357,7 +358,7 @@
 		"HistoryProof": "Proof history",
 		"Image": "Image",
 		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
+		"ImageSelectMultiple": "Select imagesC",
 		"ImageSelected": "Image selected!",
 		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
 		"Images": "Images",

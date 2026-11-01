@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Cena par kg",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Cena par vienību"
 		},
 		"Title": "Pievienot vienu cenu",

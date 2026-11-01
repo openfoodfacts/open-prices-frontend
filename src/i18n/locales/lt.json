@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Kaina už kg",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Kaina už vienetą"
 		},
 		"Title": "Pridėti vieną kainą",

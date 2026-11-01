@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Cijena po kg",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Cijena po jedinici"
 		},
 		"Title": "Dodaj jednaku cijenu",

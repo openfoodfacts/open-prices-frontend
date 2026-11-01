@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Price per kg",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Price per unit"
 		},
 		"Title": "Add a single price",
@@ -1107,7 +1108,7 @@
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
-		"ChangeLanguage": "Change language",
+		"ChangeLanguage": "Vaheta keelt",
 		"CountryLabel": "Riik",
 		"CurrencyLabel": "Valuuta",
 		"BarcodeScanner": "Barcode scanner",

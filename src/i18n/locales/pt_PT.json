@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Preço por kg",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Preço por unidade"
 		},
 		"Title": "Adicionar um preço único",

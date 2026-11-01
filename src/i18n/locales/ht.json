@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Pri pou chak kg",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Pri pou chak inite"
 		},
 		"Title": "Ajoute yon sèl pri",

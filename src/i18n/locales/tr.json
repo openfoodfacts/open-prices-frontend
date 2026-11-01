@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Kg başına fiyat",
+			"PerLiter": "Price per liter",
 			"PerUnit": "Birim fiyat"
 		},
 		"Title": "Tek bir fiyat ekleyin",
