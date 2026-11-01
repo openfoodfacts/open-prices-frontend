@@ -104,6 +104,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "מחיר לק״ג",
+			"PerLiter": "Price per liter",
 			"PerUnit": "מחיר ליחידה"
 		},
 		"Title": "הוספת מחיר בודד",
