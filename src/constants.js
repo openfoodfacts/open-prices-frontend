@@ -164,6 +164,8 @@ export default {
   PRICE_TYPE_PRODUCT_ICON: PRICE_TYPE_PRODUCT_ICON,
   PRICE_TYPE_CATEGORY: PRICE_TYPE_CATEGORY,
   PRICE_TYPE_CATEGORY_ICON: PRICE_TYPE_CATEGORY_ICON,
+  PRICE_CATEGORY_SOURCE_OFF: "off", // food categories (see data/categories)
+  PRICE_CATEGORY_SOURCE_OPF: "opf", // non-food categories (see data/categories)
   PRICE_TYPE_LIST: [
     {
       key: PRICE_TYPE_PRODUCT,

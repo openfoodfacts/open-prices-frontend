@@ -1,5 +1,6 @@
 import { useAppStore } from "../store";
 import constants from "../constants";
+import data_utils from "../utils/data.js";
 
 const PRICE_UPDATE_FIELDS = [
   "type",
@@ -72,42 +73,75 @@ function filterBodyWithAllowedKeys(data, allowedKeys) {
   return filteredData;
 }
 
+/**
+ * Product prices: extra rules
+ */
+function cleanupProductPrice(data) {
+  delete data.price_per;
+  delete data.category_tag;
+  delete data.origins_tags;
+  delete data.labels_tags;
+  return data;
+}
+
+/**
+ * Category prices: extra rules (some depending on the category, e.g. its source)
+ * Returns a Promise (the category list needs to be loaded)
+ */
+function cleanupCategoryPrice(data) {
+  delete data.product_code;
+  delete data.product;
+  if (
+    data.origins_tags === null ||
+    (Array.isArray(data.origins_tags) && data.origins_tags == [""])
+  ) {
+    data.origins_tags = [];
+    // backend will default to ['en:unknown']
+  }
+  if (
+    data.labels_tags === null ||
+    (Array.isArray(data.labels_tags) && data.labels_tags == [""])
+  ) {
+    data.labels_tags = [];
+  }
+  if (!data.category_tag) {
+    return Promise.resolve(data);
+  }
+  const store = useAppStore();
+  return data_utils
+    .getLocaleCategoryTag(store.getUserLanguage, data.category_tag)
+    .then((category) => {
+      // non-food categories (e.g. fuels, tickets) don't have origins or labels
+      // (the inputs are hidden in the form): make sure they are not sent
+      if (category.source === constants.PRICE_CATEGORY_SOURCE_OPF) {
+        data.origins_tags = [];
+        data.labels_tags = [];
+      }
+      return data;
+    })
+    .catch(() => data); // don't block the submission if the categories can't be loaded
+}
+
+/**
+ * Returns a Promise (see cleanupCategoryPrice)
+ */
 function extraPriceCreateOrUpdateFiltering(data) {
   let filteredData = { ...data };
-  // product only rules
-  if (filteredData.type == constants.PRICE_TYPE_PRODUCT) {
-    delete filteredData.price_per;
-    delete filteredData.category_tag;
-    delete filteredData.origins_tags;
-    delete filteredData.labels_tags;
-  }
-  // category only rules
-  else if (filteredData.type == constants.PRICE_TYPE_CATEGORY) {
-    delete filteredData.product_code;
-    delete filteredData.product;
-    if (
-      filteredData.origins_tags === null ||
-      (Array.isArray(filteredData.origins_tags) &&
-        filteredData.origins_tags == [""])
-    ) {
-      filteredData.origins_tags = [];
-      // backend will default to ['en:unknown']
-    }
-    if (
-      filteredData.labels_tags === null ||
-      (Array.isArray(filteredData.labels_tags) &&
-        filteredData.labels_tags == [""])
-    ) {
-      filteredData.labels_tags = [];
-    }
-  }
   // generic rules
   if (!filteredData.price_is_discounted) {
     filteredData.price_is_discounted = false;
     filteredData.price_without_discount = null;
     filteredData.discount_type = null;
   }
-  return filteredData;
+  // product only rules
+  if (filteredData.type == constants.PRICE_TYPE_PRODUCT) {
+    return Promise.resolve(cleanupProductPrice(filteredData));
+  }
+  // category only rules
+  if (filteredData.type == constants.PRICE_TYPE_CATEGORY) {
+    return cleanupCategoryPrice(filteredData);
+  }
+  return Promise.resolve(filteredData);
 }
 
 function extraProofCreateOrUpdateFiltering(data) {
@@ -433,22 +467,25 @@ export default {
   createPrice(inputData, source = null) {
     const store = useAppStore();
     // build body
-    let data = filterBodyWithAllowedKeys(inputData, PRICE_CREATE_FIELDS);
-    data = extraPriceCreateOrUpdateFiltering(data);
-    // update store
-    store.user.last_product_product_used = data.product_code
-      ? constants.PRICE_TYPE_PRODUCT
-      : constants.PRICE_TYPE_CATEGORY;
-    // API call
+    const data = filterBodyWithAllowedKeys(inputData, PRICE_CREATE_FIELDS);
     const endpointWithParams = `/prices?${buildURLParams({ app_page: source })}`;
-    return fetchOpenPrices(
-      endpointWithParams,
-      {
-        method: "POST",
-        body: JSON.stringify(data),
-      },
-      true,
-    ).then((response) => response.json());
+    return extraPriceCreateOrUpdateFiltering(data)
+      .then((filteredData) => {
+        // update store
+        store.user.last_product_product_used = filteredData.product_code
+          ? constants.PRICE_TYPE_PRODUCT
+          : constants.PRICE_TYPE_CATEGORY;
+        // API call
+        return fetchOpenPrices(
+          endpointWithParams,
+          {
+            method: "POST",
+            body: JSON.stringify(filteredData),
+          },
+          true,
+        );
+      })
+      .then((response) => response.json());
   },
 
   getPrices(params = {}) {
@@ -472,18 +509,21 @@ export default {
 
   updatePrice(priceId, inputData = {}) {
     // build body
-    let data = filterBodyWithAllowedKeys(inputData, PRICE_UPDATE_FIELDS);
-    data = extraPriceCreateOrUpdateFiltering(data);
-    // API call
+    const data = filterBodyWithAllowedKeys(inputData, PRICE_UPDATE_FIELDS);
     const endpointWithParams = `/prices/${priceId}?${buildURLParams()}`;
-    return fetchOpenPrices(
-      endpointWithParams,
-      {
-        method: "PATCH",
-        body: JSON.stringify(data),
-      },
-      true,
-    ).then((response) => response.json());
+    return extraPriceCreateOrUpdateFiltering(data)
+      .then((filteredData) =>
+        // API call
+        fetchOpenPrices(
+          endpointWithParams,
+          {
+            method: "PATCH",
+            body: JSON.stringify(filteredData),
+          },
+          true,
+        ),
+      )
+      .then((response) => response.json());
   },
 
   deletePrice(priceId) {
