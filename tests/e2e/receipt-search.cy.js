@@ -29,16 +29,18 @@ function receiptItem(id, productName, price) {
   };
 }
 
-function visitReceipt() {
+function visitReceipt(
+  items = [
+    receiptItem(1, "Milk", 1),
+    receiptItem(2, "Bread", 2),
+    receiptItem(3, "Crème fraîche", 3),
+  ],
+) {
   cy.intercept("GET", "**/api/v1/proofs/42?*", { body: proof });
   cy.intercept("GET", "**/api/v1/receipt-items?*", {
     body: {
       ...emptyPage,
-      items: [
-        receiptItem(1, "Milk", 1),
-        receiptItem(2, "Bread", 2),
-        receiptItem(3, "Crème fraîche", 3),
-      ],
+      items,
       total: 3,
       pages: 1,
     },
@@ -137,4 +139,50 @@ it("deletes only the matched row while the other receipt items are hidden", () =
     .and("contain", "Milk")
     .and("contain", "Crème fraîche")
     .and("not.contain", "Bread");
+});
+
+it("keeps a manually added item visible while replacing its filtered name", () => {
+  visitReceipt();
+  cy.contains("button", "Add new item").click();
+  cy.get(".v-data-table__tr").last().find("input").first().type("Manual milk");
+  cy.get(search).type("Manual milk");
+  cy.get(".v-data-table__tr").should("have.length", 1);
+  cy.get(".v-data-table__tr").find("input").first().clear().type("Yoghurt");
+  cy.get(search).should("have.value", "");
+  cy.get(".v-data-table__tr").should("have.length", 4);
+  cy.get(".v-data-table__tr")
+    .last()
+    .find("input")
+    .first()
+    .should("have.value", "Yoghurt");
+});
+
+it("reuses a loaded product when filtering removes and restores its row", () => {
+  let requests = 0;
+  cy.fixture("product_3011360030498.json").then((product) => {
+    cy.intercept("GET", "**/api/v1/products/code/3011360030498*", (request) => {
+      requests += 1;
+      request.reply(
+        requests === 1 ? { body: product } : { statusCode: 500, body: {} },
+      );
+    }).as("product");
+  });
+  const milk = receiptItem(1, "Milk", 1);
+  milk.predicted_data.type = "PRODUCT";
+  milk.predicted_data.predicted_product_code = "3011360030498";
+  visitReceipt([
+    milk,
+    receiptItem(2, "Bread", 2),
+    receiptItem(3, "Crème fraîche", 3),
+  ]);
+  cy.contains("a", "3011360030498").click();
+  cy.wait("@product");
+  cy.get(".v-data-table").should("contain", "Mayonnaise Classique");
+  cy.get(search).type("Bread");
+  cy.get(".v-data-table").should("not.contain", "Mayonnaise Classique");
+  cy.get(search).clear();
+  cy.get(".v-data-table").should("contain", "Mayonnaise Classique");
+  cy.get(search).type("Bread").clear();
+  cy.get(".v-data-table").should("contain", "Mayonnaise Classique");
+  cy.then(() => expect(requests).to.equal(1));
 });

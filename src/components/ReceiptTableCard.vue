@@ -97,6 +97,7 @@
             density="compact"
             :rules="rules"
             :hide-details="true"
+            @focus="search = ''"
           />
           <p v-else>
             {{ item.product_name }}
