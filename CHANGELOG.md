@@ -1,5 +1,39 @@
 # Changelog
 
+## [1.178.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.177.3...v1.178.0) (2026-11-03)
+
+
+### Features
+
+* **Data:** add non-food categories from the Open Products Facts taxonomy (fuels, tickets), with a new source key ([#2505](https://github.com/openfoodfacts/open-prices-frontend/issues/2505)) ([7996e87](https://github.com/openfoodfacts/open-prices-frontend/commit/7996e876282e6b314ef8d5bd0aa49c2a6c764f54))
+* **Locations:** Photon search: also find tourism & leisure places (museums, zoos, stadiums, swimming pools...) ([#2511](https://github.com/openfoodfacts/open-prices-frontend/issues/2511)) ([8c70c90](https://github.com/openfoodfacts/open-prices-frontend/commit/8c70c90b06123d58973f990a4f07d89d3dd88b05))
+* **Prices:** allow adding raw product prices per liter (price_per LITER) ([#2498](https://github.com/openfoodfacts/open-prices-frontend/issues/2498)) ([7475f09](https://github.com/openfoodfacts/open-prices-frontend/commit/7475f09d9b5a1ce7ca5e391b4424005f7a244b6f))
+* **Prices:** category selector: add an info icon explaining where the list comes from ([#2513](https://github.com/openfoodfacts/open-prices-frontend/issues/2513)) ([6279bfd](https://github.com/openfoodfacts/open-prices-frontend/commit/6279bfd04c60e43dfe976efbf5521f3d5b5e4a33))
+* **Prices:** display raw product prices per liter (price_per LITER) ([#2497](https://github.com/openfoodfacts/open-prices-frontend/issues/2497)) ([7027fce](https://github.com/openfoodfacts/open-prices-frontend/commit/7027fcea63f410b94d0af2eb66fa3bc9fa088a60))
+* **Prices:** hide the origin & labels inputs for non-food categories, and don't send them ([#2509](https://github.com/openfoodfacts/open-prices-frontend/issues/2509)) ([13cc519](https://github.com/openfoodfacts/open-prices-frontend/commit/13cc519173c0d11de5d409583c7b1f13fe04480d))
+
+
+### Bug Fixes
+
+* **Date utils:** show the correct day for date-only strings in prettyDate ([#2479](https://github.com/openfoodfacts/open-prices-frontend/issues/2479)) ([3094bb8](https://github.com/openfoodfacts/open-prices-frontend/commit/3094bb85ef45b9fc43e99d58808867398f881da5))
+* **Date utils:** use local date instead of UTC date for default date in price/proof forms ([#2466](https://github.com/openfoodfacts/open-prices-frontend/issues/2466)) ([b4ff95e](https://github.com/openfoodfacts/open-prices-frontend/commit/b4ff95efa754067e16bac5fa730f2ec3a1d3fde5))
+* handle special characters in country links ([#2473](https://github.com/openfoodfacts/open-prices-frontend/issues/2473)) ([1e48a16](https://github.com/openfoodfacts/open-prices-frontend/commit/1e48a165bcdc36f27fcba6fdc409c19332f3905f))
+* **Home:** show the current survey until the end of its last day (local date) ([#2506](https://github.com/openfoodfacts/open-prices-frontend/issues/2506)) ([3c456ad](https://github.com/openfoodfacts/open-prices-frontend/commit/3c456adafc9f7be7851d12634e5be0fcdd27e947))
+* **User dashboard:** count today's prices & proofs from the start of the user's local day ([#2507](https://github.com/openfoodfacts/open-prices-frontend/issues/2507)) ([e80095d](https://github.com/openfoodfacts/open-prices-frontend/commit/e80095da36f67fa8a2e53ec7bdbe1b0098c58a9e))
+
+
+### Technical
+
+* **Data:** add new parent category 'hams' ([#2489](https://github.com/openfoodfacts/open-prices-frontend/issues/2489)) ([e4541da](https://github.com/openfoodfacts/open-prices-frontend/commit/e4541da1b5cc67db60b852a477617c9a333e470c))
+* **Data:** list the added, removed & renamed entries in the generated data PR description ([#2502](https://github.com/openfoodfacts/open-prices-frontend/issues/2502)) ([6b565f2](https://github.com/openfoodfacts/open-prices-frontend/commit/6b565f2df4339b1aa3cc293d61b2586ae35dc5e1))
+* **Data:** update generated data from taxonomies ([#2474](https://github.com/openfoodfacts/open-prices-frontend/issues/2474)) ([4024d22](https://github.com/openfoodfacts/open-prices-frontend/commit/4024d222abf2b7136723d84a2a9c976b30f1345e))
+* **Data:** update generated data from taxonomies ([#2488](https://github.com/openfoodfacts/open-prices-frontend/issues/2488)) ([28ceaa7](https://github.com/openfoodfacts/open-prices-frontend/commit/28ceaa7b5be46a6c4bbab1e1720b5bed01f2c649))
+* **Data:** update generated data from taxonomies ([#2501](https://github.com/openfoodfacts/open-prices-frontend/issues/2501)) ([2b53851](https://github.com/openfoodfacts/open-prices-frontend/commit/2b53851999dde99d88248592f488fbc68ef1f939))
+* **Date utils:** remove unused dateStartOfDay, dateEndOfDay & isBetweenTwoDates ([#2508](https://github.com/openfoodfacts/open-prices-frontend/issues/2508)) ([a470345](https://github.com/openfoodfacts/open-prices-frontend/commit/a4703450480fcd52c3ee7b2ff682c018400f1eb5))
+* **Forms:** new InfoTooltipIcon component (tooltip bound to a focusable icon), used for the date, currency & category fields ([#2514](https://github.com/openfoodfacts/open-prices-frontend/issues/2514)) ([7805bff](https://github.com/openfoodfacts/open-prices-frontend/commit/7805bff19ad4ecce9952ee9accce3139a8a15888))
+* **l10n:** New Crowdin translations to review and merge ([#2463](https://github.com/openfoodfacts/open-prices-frontend/issues/2463)) ([934e7ae](https://github.com/openfoodfacts/open-prices-frontend/commit/934e7ae265176477ceb4f04b5f6d78b390ba4cd5))
+* **Prices:** improve `extraPriceCreateOrUpdateFiltering()` (split, better remove empty origins & labels) ([#2512](https://github.com/openfoodfacts/open-prices-frontend/issues/2512)) ([3e14f67](https://github.com/openfoodfacts/open-prices-frontend/commit/3e14f67bd27d16d2a69e1e3009e1b629d28334d7))
+
 ## [1.177.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.177.2...v1.177.3) (2026-10-12)
 
 
