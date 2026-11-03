@@ -89,6 +89,7 @@
             inputmode="decimal"
             :rules="priceTotalRules"
             :suffix="proofMetadataForm.currency"
+            persistent-placeholder
             hide-details="auto"
             @update:modelValue="
               (newValue) =>
@@ -112,6 +113,7 @@
             inputmode="decimal"
             :rules="priceOnlineDeliveryCostsRules"
             :suffix="proofMetadataForm.currency"
+            persistent-placeholder
             hide-details="auto"
             @update:modelValue="
               (newValue) =>

@@ -50,6 +50,7 @@
         inputmode="decimal"
         :rules="priceRules"
         :suffix="priceForm.currency"
+        persistent-placeholder
         :hint="getPricePerUnit(priceForm.price)"
         persistent-hint
         @update:modelValue="
@@ -69,6 +70,7 @@
         inputmode="decimal"
         :rules="priceRulesOptional"
         :suffix="priceForm.currency"
+        persistent-placeholder
         :hint="getPricePerUnit(priceForm.price_without_discount)"
         persistent-hint
         @update:modelValue="
@@ -123,6 +125,7 @@
         inputmode="decimal"
         :rules="receiptQuantityRules"
         :suffix="receiptQuantitySuffix"
+        persistent-placeholder
         hide-details="auto"
         @update:modelValue="
           (newValue) =>
