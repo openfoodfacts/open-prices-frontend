@@ -86,7 +86,9 @@
 			"SelectRecentProof": "最近の証拠を選択してください"
 		},
 		"ProductInfo": {
+			"CategoryHelpText": "This list is a selection of categories for products sold without barcode: raw & bulk food (fruits, vegetables, meats...) from Open Food Facts, and a few non-food categories (fuels, tickets...) from Open Products Facts.",
 			"CategoryLabel": "カテゴリー",
+			"CategoryNotFound": "No category found. Missing? Let us know {url}!",
 			"OriginLabel": "起源",
 			"ProductBarcode": "製品バーコード",
 			"Scan": "スキャン",
