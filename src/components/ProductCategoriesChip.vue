@@ -23,9 +23,17 @@
     density="comfortable"
     prepend-icon="mdi-help"
     color="warning"
+    :href="getEditUrl"
+    :target="getEditUrl ? '_blank' : null"
+    :rel="getEditUrl ? 'noopener' : null"
   >
     <i>{{ $t("ProductCard.CategoriesLower") }}</i>
-    <v-tooltip activator="parent" open-on-click location="top">
+    <v-tooltip
+      activator="parent"
+      :open-on-click="!getEditUrl"
+      open-on-hover
+      location="top"
+    >
       {{ $t("ProductCard.CategoriesMissing") }}
     </v-tooltip>
   </v-chip>
@@ -33,6 +41,9 @@
 
 <script>
 import { defineAsyncComponent } from "vue";
+import { mapStores } from "pinia";
+import { useAppStore } from "../store";
+import openFoodFactsApi from "../services/openFoodFactsApi";
 
 export default {
   components: {
@@ -45,6 +56,18 @@ export default {
       type: Array,
       default: () => [],
     },
+    productCode: {
+      type: String,
+      default: null,
+    },
+    productSource: {
+      type: String,
+      default: "off",
+    },
+    readonly: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -52,8 +75,19 @@ export default {
     };
   },
   computed: {
+    ...mapStores(useAppStore),
     hasProductCategories() {
       return this.productCategories && this.productCategories.length;
+    },
+    getEditUrl() {
+      if (this.readonly || !this.productCode) {
+        return null;
+      }
+      return openFoodFactsApi.getProductEditUrl(
+        this.productCode,
+        this.productSource,
+        this.appStore?.getUserCountry || "fr",
+      );
     },
   },
   methods: {
