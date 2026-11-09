@@ -30,6 +30,7 @@
         <LocationInputRow
           class="mt-0"
           :locationForm="proofForm"
+          :existingLocation="prefilledLocation"
           @location="locationObject = $event"
         />
         <ProofImageInputRow
@@ -268,6 +269,7 @@ export default {
       },
       // data
       locationObject: null, // location selected
+      prefilledLocation: null, // see initProofLocationFromUrlParams
       proofDateSuccessMessage: false,
       proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
@@ -365,6 +367,7 @@ export default {
   },
   mounted() {
     this.initProofForm();
+    this.initProofLocationFromUrlParams();
   },
   methods: {
     initProofForm() {
@@ -378,6 +381,74 @@ export default {
         this.proofForm.type = constants.PROOF_TYPE_RECEIPT;
       }
       this.proofForm.currency = this.appStore.getUserLastCurrencyUsed;
+      this.initProofMetadataFromUrlParams();
+    },
+    initProofMetadataFromUrlParams() {
+      // e.g. ?date=2024-01-31&currency=EUR (invalid values are ignored)
+      const { date, currency } = this.$route.query;
+      if (typeof date === "string" && this.isValidPastDate(date)) {
+        this.proofForm.date = date;
+      }
+      if (
+        typeof currency === "string" &&
+        Intl.supportedValuesOf("currency").includes(currency.toUpperCase())
+      ) {
+        this.proofForm.currency = currency.toUpperCase();
+      }
+    },
+    initProofLocationFromUrlParams() {
+      // e.g. ?location_osm_type=NODE&location_osm_id=123 or ?location_id=1
+      const { location_id, location_osm_type, location_osm_id } =
+        this.$route.query;
+      let locationPromise = null;
+      if (
+        typeof location_osm_type === "string" &&
+        ["NODE", "WAY", "RELATION"].includes(location_osm_type.toUpperCase()) &&
+        /^\d+$/.test(location_osm_id)
+      ) {
+        locationPromise = openPricesApi.getLocationByOsmTypeAndId(
+          location_osm_type,
+          location_osm_id,
+        );
+      } else if (/^\d+$/.test(location_id)) {
+        locationPromise = openPricesApi.getLocationById(location_id);
+      }
+      if (!locationPromise) return;
+      locationPromise
+        .then((location) => {
+          // keep a location the user picked while the lookup was pending
+          if (
+            this.proofForm.location_id ||
+            this.proofForm.location_osm_id ||
+            this.proofForm.location_osm_type
+          ) {
+            return;
+          }
+          this.proofForm.location_id = location.id;
+          this.proofForm.location_osm_id =
+            location.type === constants.LOCATION_TYPE_OSM
+              ? location.osm_id
+              : null;
+          this.proofForm.location_osm_type =
+            location.type === constants.LOCATION_TYPE_OSM
+              ? location.osm_type
+              : "";
+          this.locationObject = location;
+          this.prefilledLocation = location;
+        })
+        .catch((error) => {
+          // unknown location: ignore, the user can still pick one
+          console.log(error);
+        });
+    },
+    isValidPastDate(dateString) {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(dateString)) return false;
+      const [year, month, day] = dateString.split("-").map(Number);
+      // reject impossible dates (e.g. 2024-02-30) and future dates
+      return (
+        date_utils.toDateString(new Date(year, month - 1, day)) ===
+          dateString && dateString <= date_utils.currentDate()
+      );
     },
     handleProofImageList() {
       if (this.proofImageList.length === 0) {
