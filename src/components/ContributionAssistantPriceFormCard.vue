@@ -20,6 +20,14 @@
             max-height="200px"
             contain
           />
+          <v-switch
+            v-if="canToggleProofImage"
+            v-model="showFullProof"
+            :label="$t('ContributionAssistant.ShowFullProof')"
+            density="compact"
+            color="primary"
+            hide-details
+          />
         </v-col>
       </v-row>
       <v-row v-if="showProductNameField">
@@ -210,14 +218,27 @@ export default {
     return {
       PRICE_TAG_STATUS_ERROR_LIST: constants.PRICE_TAG_STATUS_ERROR_LIST,
       // data
+      showFullProof: false,
       productFormFilled: false,
       pricePriceFormFilled: false,
     };
   },
   computed: {
     ...mapStores(useAppStore),
+    canToggleProofImage() {
+      return (
+        this.productPriceForm.image_path &&
+        this.productPriceForm.proof?.file_path &&
+        this.productPriceForm.image_path !==
+          this.productPriceForm.proof.file_path
+      );
+    },
     getImageFullUrl() {
-      return proof_utils.getImageFullUrl(this.productPriceForm.image_path);
+      const imagePath =
+        this.showFullProof && this.canToggleProofImage
+          ? this.productPriceForm.proof.file_path
+          : this.productPriceForm.image_path;
+      return proof_utils.getImageFullUrl(imagePath);
     },
     priceTagIsTypeProduct() {
       return this.productPriceForm.type === constants.PRICE_TYPE_PRODUCT;
@@ -277,6 +298,11 @@ export default {
       } else {
         return this.$t("Common.Error");
       }
+    },
+  },
+  watch: {
+    productPriceForm() {
+      this.showFullProof = false;
     },
   },
   methods: {
