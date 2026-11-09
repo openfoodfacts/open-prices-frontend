@@ -37,21 +37,22 @@ export default {
     },
   },
   computed: {
+    // 'YYYY-MM-DDT00:00:00' (no offset) is parsed as local midnight
+    startDate() {
+      return new Date(`${this.challenge.start_date}T00:00:00`);
+    },
+    endDate() {
+      return new Date(`${this.challenge.end_date}T00:00:00`);
+    },
     nbDays() {
       return (
-        Math.round(
-          (new Date(this.challenge.end_date) -
-            new Date(this.challenge.start_date)) /
-            (1000 * 60 * 60 * 24),
-        ) + 1
+        Math.round((this.endDate - this.startDate) / (1000 * 60 * 60 * 24)) + 1
       );
     },
     todayIndex() {
       let today = new Date();
       today.setHours(0, 0, 0, 0);
-      return Math.round(
-        (today - new Date(this.challenge.start_date)) / (1000 * 60 * 60 * 24),
-      );
+      return Math.round((today - this.startDate) / (1000 * 60 * 60 * 24));
     },
     daysLeftText() {
       const daysLeft = this.nbDays - this.todayIndex;
