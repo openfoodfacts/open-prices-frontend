@@ -37,12 +37,11 @@ export default {
     },
   },
   computed: {
-    // 'YYYY-MM-DDT00:00:00' (no offset) is parsed as local midnight
     startDate() {
-      return new Date(`${this.challenge.start_date}T00:00:00`);
+      return date_utils.fromDateString(this.challenge.start_date);
     },
     endDate() {
-      return new Date(`${this.challenge.end_date}T00:00:00`);
+      return date_utils.fromDateString(this.challenge.end_date);
     },
     nbDays() {
       return (
