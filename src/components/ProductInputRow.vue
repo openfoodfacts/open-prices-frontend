@@ -283,7 +283,10 @@ export default {
       : this.productForm.product_code
         ? constants.PRICE_TYPE_PRODUCT
         : this.appStore.user.last_product_product_used;
-    if (this.productForm.product_code) {
+    if (
+      this.productForm.product_code &&
+      this.productForm.product?.code !== this.productForm.product_code
+    ) {
       this.getProduct(this.productForm.product_code);
     }
   },
