@@ -26,15 +26,6 @@ function currentDateTime() {
 }
 
 /**
- * output: '2023-12-25T00:00:00.000Z'
- */
-function currentStartOfDay() {
-  let today = new Date();
-  today.setUTCHours(0, 0, 0, 0);
-  return today.toISOString();
-}
-
-/**
  * output: '2023-12-24T23:00:00.000Z' (start of the day in the user's local timezone, here Europe/Paris)
  */
 function currentLocalStartOfDay() {
@@ -173,7 +164,6 @@ export default {
   toDateString,
   currentDate,
   currentDateTime,
-  currentStartOfDay,
   currentLocalStartOfDay,
   dateShort,
   oneMonthAgoDate,
