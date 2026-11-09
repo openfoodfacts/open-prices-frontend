@@ -57,22 +57,20 @@ export default {
     isNew() {
       // a challenge usually lasts 1 month
       // new = first 7 days of the challenge
-      const today = new Date();
-      const startDate = new Date(this.challenge.start_date);
-      const sevenDaysFromStartDate = new Date(
-        startDate.getTime() + 7 * 24 * 60 * 60 * 1000,
-      );
-      return today <= sevenDaysFromStartDate;
+      // 'YYYY-MM-DDT00:00:00' (no offset) is parsed as local midnight
+      const now = new Date();
+      const eighthDay = new Date(`${this.challenge.start_date}T00:00:00`);
+      eighthDay.setDate(eighthDay.getDate() + 7);
+      return now < eighthDay;
     },
     isEndingSoon() {
       // a challenge usually lasts 1 month
-      // ending soon = last 7 days of the challenge
-      const today = new Date();
-      const endDate = new Date(this.challenge.end_date);
-      const sevenDaysBeforeEndDate = new Date(
-        endDate.getTime() - 7 * 24 * 60 * 60 * 1000,
-      );
-      return today >= sevenDaysBeforeEndDate;
+      // ending soon = last 7 days of the challenge (end_date included)
+      // 'YYYY-MM-DDT00:00:00' (no offset) is parsed as local midnight
+      const now = new Date();
+      const seventhToLastDay = new Date(`${this.challenge.end_date}T00:00:00`);
+      seventhToLastDay.setDate(seventhToLastDay.getDate() - 6);
+      return now >= seventhToLastDay;
     },
     getUrl() {
       return `/challenge`;
