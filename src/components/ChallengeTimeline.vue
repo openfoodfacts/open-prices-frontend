@@ -37,21 +37,21 @@ export default {
     },
   },
   computed: {
+    startDate() {
+      return date_utils.fromDateString(this.challenge.start_date);
+    },
+    endDate() {
+      return date_utils.fromDateString(this.challenge.end_date);
+    },
     nbDays() {
       return (
-        Math.round(
-          (new Date(this.challenge.end_date) -
-            new Date(this.challenge.start_date)) /
-            (1000 * 60 * 60 * 24),
-        ) + 1
+        Math.round((this.endDate - this.startDate) / (1000 * 60 * 60 * 24)) + 1
       );
     },
     todayIndex() {
       let today = new Date();
       today.setHours(0, 0, 0, 0);
-      return Math.round(
-        (today - new Date(this.challenge.start_date)) / (1000 * 60 * 60 * 24),
-      );
+      return Math.round((today - this.startDate) / (1000 * 60 * 60 * 24));
     },
     daysLeftText() {
       const daysLeft = this.nbDays - this.todayIndex;
