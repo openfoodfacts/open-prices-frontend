@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.178.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.178.0...v1.178.1) (2026-11-09)
+
+
+### Bug Fixes
+
+* **Challenges:** promo banner: compute 'new' & 'ending soon' from the user's local dates ([#2522](https://github.com/openfoodfacts/open-prices-frontend/issues/2522)) ([dbf3353](https://github.com/openfoodfacts/open-prices-frontend/commit/dbf335319e1db7e83d6bea9802ae181bbf6f40c2))
+* **Challenges:** timeline: compute the current day from the user's local dates ([#2523](https://github.com/openfoodfacts/open-prices-frontend/issues/2523)) ([1c58b59](https://github.com/openfoodfacts/open-prices-frontend/commit/1c58b59f42ee7d25847151949b6322876c17f353))
+* **Home:** count today's prices from the start of the user's local day ([#2521](https://github.com/openfoodfacts/open-prices-frontend/issues/2521)) ([d9b99a5](https://github.com/openfoodfacts/open-prices-frontend/commit/d9b99a5a23cd98b38e6cad0432fc9aaf207ece9b))
+
+
+### Technical
+
+* **Data:** update generated data from taxonomies ([#2520](https://github.com/openfoodfacts/open-prices-frontend/issues/2520)) ([0110f51](https://github.com/openfoodfacts/open-prices-frontend/commit/0110f51e84a11c61238ecf1985a58bd8071e9156))
+* **l10n:** New Crowdin translations to review and merge ([#2518](https://github.com/openfoodfacts/open-prices-frontend/issues/2518)) ([3e71413](https://github.com/openfoodfacts/open-prices-frontend/commit/3e714130d8bbb39807c48480fb1d59c4c67d18b4))
+
 ## [1.178.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.177.3...v1.178.0) (2026-11-03)
 
 
