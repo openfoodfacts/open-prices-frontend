@@ -541,6 +541,12 @@ export default {
       icon: "mdi-barcode-scan",
     },
     {
+      key: "tapirscan",
+      value: "Tapirscan",
+      valueSmallScreen: "Tapirscan",
+      icon: "mdi-barcode-scan",
+    },
+    {
       key: "html5-qrcode",
       value: "Html5-Qrcode",
       valueSmallScreen: "Html5-Qrcode",

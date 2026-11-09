@@ -28,4 +28,8 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  optimizeDeps: {
+    // pre-bundling breaks the URLs tapirscan uses to load its worker and WASM
+    exclude: ["tapirscan"],
+  },
 });
