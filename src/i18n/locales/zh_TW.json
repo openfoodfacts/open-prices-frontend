@@ -86,7 +86,9 @@
 			"SelectRecentProof": "選擇最近的證明"
 		},
 		"ProductInfo": {
+			"CategoryHelpText": "This list is a selection of categories for products sold without barcode: raw & bulk food (fruits, vegetables, meats...) from Open Food Facts, and a few non-food categories (fuels, tickets...) from Open Products Facts.",
 			"CategoryLabel": "分類 ",
+			"CategoryNotFound": "No category found. Missing? Let us know {url}!",
 			"OriginLabel": "原產地",
 			"ProductBarcode": "產品條碼",
 			"Scan": "掃描",
