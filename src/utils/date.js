@@ -12,6 +12,18 @@ function toDateString(date) {
 }
 
 /**
+ * input: '2023-12-25' (or '2023-12-25T17:08:19.021410+01:00')
+ * output: Date object (local midnight for date-only strings)
+ */
+function fromDateString(dateString) {
+  // 'YYYY-MM-DD' is parsed as UTC midnight by new Date(), build a local date instead
+  const matches = dateString?.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  return matches
+    ? new Date(matches[1], matches[2] - 1, matches[3])
+    : new Date(dateString);
+}
+
+/**
  * output: '2023-12-25'
  */
 function currentDate() {
@@ -56,14 +68,9 @@ function oneMonthAgoDate() {
  * output: '12/25/2023'
  */
 function prettyDate(dateString) {
-  // 'YYYY-MM-DD' is parsed as UTC midnight by new Date(), build a local date instead
-  const matches = dateString?.match(/^(\d{4})-(\d{2})-(\d{2})$/);
-  const date = matches
-    ? new Date(matches[1], matches[2] - 1, matches[3])
-    : new Date(dateString);
   return new Intl.DateTimeFormat(navigator.language, {
     dateStyle: "short",
-  }).format(date);
+  }).format(fromDateString(dateString));
 }
 
 /**
@@ -162,6 +169,7 @@ function dateType(dateString) {
 
 export default {
   toDateString,
+  fromDateString,
   currentDate,
   currentDateTime,
   currentLocalStartOfDay,
