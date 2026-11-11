@@ -86,9 +86,9 @@
 			"SelectRecentProof": "Vælg et nyligt bevis"
 		},
 		"ProductInfo": {
-			"CategoryHelpText": "This list is a selection of categories for products sold without barcode: raw & bulk food (fruits, vegetables, meats...) from Open Food Facts, and a few non-food categories (fuels, tickets...) from Open Products Facts.",
+			"CategoryHelpText": "Denne liste er et udvalg af kategorier for produkter, der sælges uden stregkode: rå og løsvarer (frugt, grøntsager, kød...) fra Open Food Facts, og et par non-food kategorier (brændstoffer, billetter...) fra Open Products Facts.",
 			"CategoryLabel": "Kategori",
-			"CategoryNotFound": "No category found. Missing? Let us know {url}!",
+			"CategoryNotFound": "Ingen kategori fundet. Mangler du den? Giv os besked {url}!",
 			"OriginLabel": "Oprindelse",
 			"ProductBarcode": "Produkt stregkode",
 			"Scan": "Skan",
@@ -106,7 +106,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Pris pr kg",
-			"PerLiter": "Price per liter",
+			"PerLiter": "Pris pr. liter",
 			"PerUnit": "Pris pr. enhed"
 		},
 		"Title": "Tilføj en enkelt pris",
@@ -120,12 +120,12 @@
 		}
 	},
 	"BarcodeScanner": {
-		"CameraError": "The camera could not be started: {error}",
+		"CameraError": "Kameraet kunne ikke tændes: {error}",
 		"Htlm5-qrcode": {
 			"Text": "drevet af {url}"
 		},
-		"SimilarBarcodes": "Similar barcodes",
-		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
+		"SimilarBarcodes": "Lignende stregkoder",
+		"SimilarBarcodesExplanation": "Disse produkter har stregkoder, der minder om den registrerede stregkode. Måske er en af dem det produkt, du leder efter?"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Stregkode",
@@ -148,8 +148,8 @@
 			"line4": "Dette er et samarbejde, selvom du ikke har sendt billeder, kan du stadig hjælpe andre ved at validere."
 		},
 		"StepCategories": {
-			"Title": "Add products to the categories",
-			"line1": "Many products belong to the challenge categories but are not yet categorized as such in {name}, so their prices don't count towards the challenge.",
+			"Title": "Tilføj produkter til kategorierne",
+			"line1": "Mange produkter tilhører udfordringskategorierne, men er endnu ikke kategoriseret som sådan i {name}, så deres priser tæller ikke med i udfordringen.",
 			"line2": "Hunger Games is a game where you confirm the categories our robots have guessed for products. Answering the questions for the challenge categories will add the missing products.",
 			"line3": "Questions are grouped by sub-category, so the game will first show you a list of sub-categories to choose from.",
 			"line4": "Pick a category to start playing!"
@@ -323,8 +323,8 @@
 		"Edit": "Redigér",
 		"End": "Slut",
 		"ErrorServer": "Error: server error",
-		"Favorite": "Favorite",
-		"FavoritesAdd": "Add to favorites",
+		"Favorite": "Favorit",
+		"FavoritesAdd": "Føj til favoritter",
 		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Feltet er påkrævet",
 		"FilterNoun": "Filtrere",
@@ -456,7 +456,7 @@
 		"Private": "Privat",
 		"Privacy": "Privatliv",
 		"ProductCount": "{count} produkter | {count} produkt | {count} produkter",
-		"ProductCreated": "Product created!",
+		"ProductCreated": "Produkt oprettet!",
 		"ProductsCreated": "Produkter oprettet",
 		"ProductFind": "Find produktet",
 		"ProductMissing": "Produkt mangler",
