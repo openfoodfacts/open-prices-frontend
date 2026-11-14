@@ -106,7 +106,7 @@
 		},
 		"CategoryPricePer": {
 			"PerKg": "Valor por kg",
-			"PerLiter": "Price per liter",
+			"PerLiter": "Preço por litro",
 			"PerUnit": "Valor por unidade"
 		},
 		"Title": "Adicionar um único preço",
@@ -323,7 +323,7 @@
 		"Edit": "Editar",
 		"End": "Finalizar",
 		"ErrorServer": "Error: server error",
-		"Favorite": "Favorite",
+		"Favorite": "Favoritar",
 		"FavoritesAdd": "Add to favorites",
 		"FavoritesRemove": "Remove from favorites",
 		"FieldIsRequired": "Campo obrigatório",
