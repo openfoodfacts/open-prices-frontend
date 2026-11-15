@@ -214,10 +214,10 @@ export default {
         });
     },
     removePriceTag(productPriceForm) {
-      this.productPriceForms.splice(
-        this.productPriceForms.indexOf(productPriceForm),
-        1,
-      );
+      const index = this.productPriceForms.indexOf(productPriceForm);
+      // the list may have been reset meanwhile (e.g. filters changed)
+      if (index === -1) return;
+      this.productPriceForms.splice(index, 1);
       this.priceTagList = this.priceTagList.filter(
         (priceTag) => priceTag.id !== productPriceForm.id,
       );
