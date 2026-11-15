@@ -47,6 +47,13 @@
   <v-snackbar v-model="priceSuccessMessage" color="success" :timeout="1000">
     {{ $t("AddPriceMultiple.ProductPriceDetails.PriceUploaded") }}
   </v-snackbar>
+  <v-snackbar
+    v-model="priceTagAlreadyHandledMessage"
+    color="info"
+    :timeout="2000"
+  >
+    {{ $t("Common.PriceTagAlreadyHandled") }}
+  </v-snackbar>
 </template>
 
 <script>
@@ -83,6 +90,7 @@ export default {
       // feedback
       priceRemovedMessage: false,
       priceSuccessMessage: false,
+      priceTagAlreadyHandledMessage: false,
     };
   },
   computed: {
@@ -177,21 +185,46 @@ export default {
     },
     validatePriceTag(index) {
       /**
-       * - create the price (API)
-       * - update the price_tag (API)
+       * - create the price & link it to the price_tag (API)
        * - remove the price_tag (UI)
        */
-      this.productPriceForms[index].loading = true;
-      this.createPrice(this.productPriceForms[index]).then((price) => {
-        this.updatePriceTag(this.productPriceForms[index].id, 1, price.id);
-        this.productPriceForms.splice(index, 1);
-        this.priceTagList.splice(index, 1);
-        this.priceTagTotal -= 1;
-        this.priceSuccessMessage = true;
-        if (this.priceTagList.length === 1) {
-          this.getPriceTags();
-        }
-      });
+      const productPriceForm = this.productPriceForms[index];
+      productPriceForm.loading = true;
+      this.createPrice(productPriceForm)
+        .then(() => {
+          this.priceSuccessMessage = true;
+          this.removePriceTag(productPriceForm);
+        })
+        .catch((error) => {
+          if (error instanceof OpenPricesApiError && error.status === 409) {
+            // already handled (by another user, or by a previous attempt)
+            this.priceTagAlreadyHandledMessage = true;
+            this.removePriceTag(productPriceForm);
+          } else {
+            alert(
+              error instanceof OpenPricesApiError
+                ? `Error: ${error.message}`
+                : this.$t("Common.ServerError"),
+            );
+            console.log(error);
+          }
+        })
+        .finally(() => {
+          productPriceForm.loading = false;
+        });
+    },
+    removePriceTag(productPriceForm) {
+      this.productPriceForms.splice(
+        this.productPriceForms.indexOf(productPriceForm),
+        1,
+      );
+      this.priceTagList = this.priceTagList.filter(
+        (priceTag) => priceTag.id !== productPriceForm.id,
+      );
+      this.priceTagTotal -= 1;
+      if (this.priceTagList.length === 1) {
+        this.getPriceTags();
+      }
     },
     getPriceTags() {
       if (
@@ -247,21 +280,11 @@ export default {
         location_osm_type: productPriceData.proof.location_osm_type,
         proof_id: productPriceData.proof.id,
       };
-      return openPricesApi
-        .createPrice(Object.assign({}, priceData), this.$route.path)
-        .then((data) => {
-          productPriceData.loading = false;
-          return data;
-        })
-        .catch((error) => {
-          alert(
-            error instanceof OpenPricesApiError
-              ? `Error: ${error.message}`
-              : this.$t("Common.ServerError"),
-          );
-          console.log(error);
-          productPriceData.loading = false;
-        });
+      return openPricesApi.createPriceTagPrice(
+        productPriceData.id,
+        Object.assign({}, priceData),
+        this.$route.path,
+      );
     },
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList;
