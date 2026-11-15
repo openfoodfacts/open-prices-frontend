@@ -11,7 +11,7 @@ export const useAppStore = defineStore("app", {
       username: null,
       token: null,
       is_moderator: false,
-      last_product_type_used: constants.PRICE_TYPE_PRODUCT, // or 'CATEGORY'
+      last_product_type_used: constants.PRICE_TYPE_PRODUCT, // or 'PRICE_TYPE_CATEGORY'
       last_currency_used: import.meta.env.VITE_DEFAULT_CURRENCY, // 'EUR'
       favorite_locations: [],
       recent_locations: [],
