@@ -3,1512 +3,2269 @@
         "id": "en:andorra",
         "name": "Andorra",
         "country_code_2": "AD",
-        "osm_name": "Andorra"
+        "osm_name": "Andorra",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:united-arab-emirates",
         "name": "United Arab Emirates",
         "country_code_2": "AE",
-        "osm_name": "الإمارات العربية المتحدة"
+        "osm_name": "الإمارات العربية المتحدة",
+        "currency_codes": [
+            "AED"
+        ]
     },
     {
         "id": "en:afghanistan",
         "name": "Afghanistan",
         "country_code_2": "AF",
-        "osm_name": "افغانستان"
+        "osm_name": "افغانستان",
+        "currency_codes": [
+            "AFN"
+        ]
     },
     {
         "id": "en:antigua-and-barbuda",
         "name": "Antigua and Barbuda",
         "country_code_2": "AG",
-        "osm_name": "Antigua and Barbuda"
+        "osm_name": "Antigua and Barbuda",
+        "currency_codes": [
+            "XCD"
+        ]
     },
     {
         "id": "en:anguilla",
         "name": "Anguilla",
         "country_code_2": "AI",
-        "osm_name": "Anguilla"
+        "osm_name": "Anguilla",
+        "currency_codes": [
+            "XCD"
+        ]
     },
     {
         "id": "en:albania",
         "name": "Albania",
         "country_code_2": "AL",
-        "osm_name": "Shqipëria"
+        "osm_name": "Shqipëria",
+        "currency_codes": [
+            "ALL"
+        ]
     },
     {
         "id": "en:armenia",
         "name": "Armenia",
         "country_code_2": "AM",
-        "osm_name": "Հայաստան"
+        "osm_name": "Հայաստան",
+        "currency_codes": [
+            "AMD"
+        ]
     },
     {
         "id": "en:angola",
         "name": "Angola",
         "country_code_2": "AO",
-        "osm_name": "Angola"
+        "osm_name": "Angola",
+        "currency_codes": [
+            "AOA"
+        ]
     },
     {
         "id": "en:antarctic",
         "name": "Antarctic",
         "country_code_2": "AQ",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": []
     },
     {
         "id": "en:argentina",
         "name": "Argentina",
         "country_code_2": "AR",
-        "osm_name": "Argentina"
+        "osm_name": "Argentina",
+        "currency_codes": [
+            "ARS"
+        ]
     },
     {
         "id": "en:american-samoa",
         "name": "American Samoa",
         "country_code_2": "AS",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:austria",
         "name": "Austria",
         "country_code_2": "AT",
-        "osm_name": "Österreich"
+        "osm_name": "Österreich",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:australia",
         "name": "Australia",
         "country_code_2": "AU",
-        "osm_name": "Australia"
+        "osm_name": "Australia",
+        "currency_codes": [
+            "AUD"
+        ]
     },
     {
         "id": "en:aruba",
         "name": "Aruba",
         "country_code_2": "AW",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "AWG"
+        ]
     },
     {
         "id": "en:aland-islands",
         "name": "Åland Islands",
         "country_code_2": "AX",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:azerbaijan",
         "name": "Azerbaijan",
         "country_code_2": "AZ",
-        "osm_name": "Azərbaycan"
+        "osm_name": "Azərbaycan",
+        "currency_codes": [
+            "AZN"
+        ]
     },
     {
         "id": "en:bosnia-and-herzegovina",
         "name": "Bosnia and Herzegovina",
         "country_code_2": "BA",
-        "osm_name": "Bosna i Hercegovina / Босна и Херцеговина"
+        "osm_name": "Bosna i Hercegovina / Босна и Херцеговина",
+        "currency_codes": [
+            "BAM"
+        ]
     },
     {
         "id": "en:barbados",
         "name": "Barbados",
         "country_code_2": "BB",
-        "osm_name": "Barbados"
+        "osm_name": "Barbados",
+        "currency_codes": [
+            "BBD"
+        ]
     },
     {
         "id": "en:bangladesh",
         "name": "Bangladesh",
         "country_code_2": "BD",
-        "osm_name": "বাংলাদেশ"
+        "osm_name": "বাংলাদেশ",
+        "currency_codes": [
+            "BDT"
+        ]
     },
     {
         "id": "en:belgium",
         "name": "Belgium",
         "country_code_2": "BE",
-        "osm_name": "België / Belgique / Belgien"
+        "osm_name": "België / Belgique / Belgien",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:burkina-faso",
         "name": "Burkina Faso",
         "country_code_2": "BF",
-        "osm_name": "Burkina Faso"
+        "osm_name": "Burkina Faso",
+        "currency_codes": [
+            "XOF"
+        ]
     },
     {
         "id": "en:bulgaria",
         "name": "Bulgaria",
         "country_code_2": "BG",
-        "osm_name": "България"
+        "osm_name": "България",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:bahrain",
         "name": "Bahrain",
         "country_code_2": "BH",
-        "osm_name": "البحرين"
+        "osm_name": "البحرين",
+        "currency_codes": [
+            "BHD"
+        ]
     },
     {
         "id": "en:burundi",
         "name": "Burundi",
         "country_code_2": "BI",
-        "osm_name": "Burundi"
+        "osm_name": "Burundi",
+        "currency_codes": [
+            "BIF"
+        ]
     },
     {
         "id": "en:benin",
         "name": "Benin",
         "country_code_2": "BJ",
-        "osm_name": "Bénin"
+        "osm_name": "Bénin",
+        "currency_codes": [
+            "XOF"
+        ]
     },
     {
         "id": "en:saint-barthelemy",
         "name": "Saint-Barthélemy",
         "country_code_2": "BL",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:bermuda",
         "name": "Bermuda",
         "country_code_2": "BM",
-        "osm_name": "Bermuda"
+        "osm_name": "Bermuda",
+        "currency_codes": [
+            "BMD"
+        ]
     },
     {
         "id": "en:brunei",
         "name": "Brunei",
         "country_code_2": "BN",
-        "osm_name": "Brunei"
+        "osm_name": "Brunei",
+        "currency_codes": [
+            "BND"
+        ]
     },
     {
         "id": "en:bolivia",
         "name": "Bolivia",
         "country_code_2": "BO",
-        "osm_name": "Bolivia"
+        "osm_name": "Bolivia",
+        "currency_codes": [
+            "BOB"
+        ]
     },
     {
         "id": "en:caribbean-netherlands",
         "name": "Caribbean Netherlands",
         "country_code_2": "BQ",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:brazil",
         "name": "Brazil",
         "country_code_2": "BR",
-        "osm_name": "Brasil"
+        "osm_name": "Brasil",
+        "currency_codes": [
+            "BRL"
+        ]
     },
     {
         "id": "en:the-bahamas",
         "name": "The Bahamas",
         "country_code_2": "BS",
-        "osm_name": "The Bahamas"
+        "osm_name": "The Bahamas",
+        "currency_codes": [
+            "BSD"
+        ]
     },
     {
         "id": "en:bhutan",
         "name": "Bhutan",
         "country_code_2": "BT",
-        "osm_name": "འབྲུག་ཡུལ།"
+        "osm_name": "འབྲུག་ཡུལ།",
+        "currency_codes": [
+            "BTN",
+            "INR"
+        ]
     },
     {
         "id": "en:bouvet-island",
         "name": "Bouvet Island",
         "country_code_2": "BV",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "NOK"
+        ]
     },
     {
         "id": "en:botswana",
         "name": "Botswana",
         "country_code_2": "BW",
-        "osm_name": "Botswana"
+        "osm_name": "Botswana",
+        "currency_codes": [
+            "BWP"
+        ]
     },
     {
         "id": "en:belarus",
         "name": "Belarus",
         "country_code_2": "BY",
-        "osm_name": "Беларусь"
+        "osm_name": "Беларусь",
+        "currency_codes": [
+            "BYN"
+        ]
     },
     {
         "id": "en:belize",
         "name": "Belize",
         "country_code_2": "BZ",
-        "osm_name": "Belize"
+        "osm_name": "Belize",
+        "currency_codes": [
+            "BZD"
+        ]
     },
     {
         "id": "en:canada",
         "name": "Canada",
         "country_code_2": "CA",
-        "osm_name": "Canada"
+        "osm_name": "Canada",
+        "currency_codes": [
+            "CAD"
+        ]
     },
     {
         "id": "en:cocos-keeling-islands",
         "name": "Cocos (Keeling) Islands",
         "country_code_2": "CC",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "AUD"
+        ]
     },
     {
         "id": "en:democratic-republic-of-the-congo",
         "name": "Democratic Republic of the Congo",
         "country_code_2": "CD",
-        "osm_name": "République démocratique du Congo"
+        "osm_name": "République démocratique du Congo",
+        "currency_codes": [
+            "CDF"
+        ]
     },
     {
         "id": "en:central-african-republic",
         "name": "Central African Republic",
         "country_code_2": "CF",
-        "osm_name": "Ködörösêse tî Bêafrîka / République centrafricaine"
+        "osm_name": "Ködörösêse tî Bêafrîka / République centrafricaine",
+        "currency_codes": [
+            "XAF"
+        ]
     },
     {
         "id": "en:republic-of-the-congo",
         "name": "Republic of the Congo",
         "country_code_2": "CG",
-        "osm_name": "Congo"
+        "osm_name": "Congo",
+        "currency_codes": [
+            "XAF"
+        ]
     },
     {
         "id": "en:switzerland",
         "name": "Switzerland",
         "country_code_2": "CH",
-        "osm_name": "Schweiz/Suisse/Svizzera/Svizra"
+        "osm_name": "Schweiz/Suisse/Svizzera/Svizra",
+        "currency_codes": [
+            "CHF"
+        ]
     },
     {
         "id": "en:cote-d-ivoire",
         "name": "Côte d'Ivoire",
         "country_code_2": "CI",
-        "osm_name": "Côte d’Ivoire"
+        "osm_name": "Côte d’Ivoire",
+        "currency_codes": [
+            "XOF"
+        ]
     },
     {
         "id": "en:cook-islands",
         "name": "Cook Islands",
         "country_code_2": "CK",
-        "osm_name": "Kūki ʻĀirani"
+        "osm_name": "Kūki ʻĀirani",
+        "currency_codes": [
+            "NZD"
+        ]
     },
     {
         "id": "en:chile",
         "name": "Chile",
         "country_code_2": "CL",
-        "osm_name": "Chile"
+        "osm_name": "Chile",
+        "currency_codes": [
+            "CLP"
+        ]
     },
     {
         "id": "en:cameroon",
         "name": "Cameroon",
         "country_code_2": "CM",
-        "osm_name": "Cameroun"
+        "osm_name": "Cameroun",
+        "currency_codes": [
+            "XAF"
+        ]
     },
     {
         "id": "en:china",
         "name": "China",
         "country_code_2": "CN",
-        "osm_name": "中国"
+        "osm_name": "中国",
+        "currency_codes": [
+            "CNY"
+        ]
     },
     {
         "id": "en:colombia",
         "name": "Colombia",
         "country_code_2": "CO",
-        "osm_name": "Colombia"
+        "osm_name": "Colombia",
+        "currency_codes": [
+            "COP"
+        ]
     },
     {
         "id": "en:costa-rica",
         "name": "Costa Rica",
         "country_code_2": "CR",
-        "osm_name": "Costa Rica"
+        "osm_name": "Costa Rica",
+        "currency_codes": [
+            "CRC"
+        ]
     },
     {
         "id": "en:cuba",
         "name": "Cuba",
         "country_code_2": "CU",
-        "osm_name": "Cuba"
+        "osm_name": "Cuba",
+        "currency_codes": [
+            "CUP"
+        ]
     },
     {
         "id": "en:cape-verde",
         "name": "Cape Verde",
         "country_code_2": "CV",
-        "osm_name": "Cabo Verde"
+        "osm_name": "Cabo Verde",
+        "currency_codes": [
+            "CVE"
+        ]
     },
     {
         "id": "en:curacao",
         "name": "Curaçao",
         "country_code_2": "CW",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "XCG"
+        ]
     },
     {
         "id": "en:christmas-island",
         "name": "Christmas Island",
         "country_code_2": "CX",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "AUD"
+        ]
     },
     {
         "id": "en:cyprus",
         "name": "Cyprus",
         "country_code_2": "CY",
-        "osm_name": "Κύπρος - Kıbrıs"
+        "osm_name": "Κύπρος - Kıbrıs",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:czech-republic",
         "name": "Czech Republic",
         "country_code_2": "CZ",
-        "osm_name": "Česko"
+        "osm_name": "Česko",
+        "currency_codes": [
+            "CZK"
+        ]
     },
     {
         "id": "en:germany",
         "name": "Germany",
         "country_code_2": "DE",
-        "osm_name": "Deutschland"
+        "osm_name": "Deutschland",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:djibouti",
         "name": "Djibouti",
         "country_code_2": "DJ",
-        "osm_name": "Djibouti جيبوتي"
+        "osm_name": "Djibouti جيبوتي",
+        "currency_codes": [
+            "DJF"
+        ]
     },
     {
         "id": "en:denmark",
         "name": "Denmark",
         "country_code_2": "DK",
-        "osm_name": "Danmark"
+        "osm_name": "Danmark",
+        "currency_codes": [
+            "DKK"
+        ]
     },
     {
         "id": "en:dominica",
         "name": "Dominica",
         "country_code_2": "DM",
-        "osm_name": "Dominica"
+        "osm_name": "Dominica",
+        "currency_codes": [
+            "XCD"
+        ]
     },
     {
         "id": "en:dominican-republic",
         "name": "Dominican Republic",
         "country_code_2": "DO",
-        "osm_name": "República Dominicana"
+        "osm_name": "República Dominicana",
+        "currency_codes": [
+            "DOP"
+        ]
     },
     {
         "id": "en:algeria",
         "name": "Algeria",
         "country_code_2": "DZ",
-        "osm_name": "Algérie ⵍⵣⵣⴰⵢⴻⵔ الجزائر"
+        "osm_name": "Algérie ⵍⵣⵣⴰⵢⴻⵔ الجزائر",
+        "currency_codes": [
+            "DZD"
+        ]
     },
     {
         "id": "en:ecuador",
         "name": "Ecuador",
         "country_code_2": "EC",
-        "osm_name": "Ecuador"
+        "osm_name": "Ecuador",
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:estonia",
         "name": "Estonia",
         "country_code_2": "EE",
-        "osm_name": "Eesti"
+        "osm_name": "Eesti",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:egypt",
         "name": "Egypt",
         "country_code_2": "EG",
-        "osm_name": "مصر"
+        "osm_name": "مصر",
+        "currency_codes": [
+            "EGP"
+        ]
     },
     {
         "id": "en:western-sahara",
         "name": "Western Sahara",
         "country_code_2": "EH",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "MAD"
+        ]
     },
     {
         "id": "en:eritrea",
         "name": "Eritrea",
         "country_code_2": "ER",
-        "osm_name": "ኤርትራ Eritrea إرتريا"
+        "osm_name": "ኤርትራ Eritrea إرتريا",
+        "currency_codes": [
+            "ERN"
+        ]
     },
     {
         "id": "en:spain",
         "name": "Spain",
         "country_code_2": "ES",
-        "osm_name": "España"
+        "osm_name": "España",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:ethiopia",
         "name": "Ethiopia",
         "country_code_2": "ET",
-        "osm_name": "ኢትዮጵያ"
+        "osm_name": "ኢትዮጵያ",
+        "currency_codes": [
+            "ETB"
+        ]
     },
     {
         "id": "en:finland",
         "name": "Finland",
         "country_code_2": "FI",
-        "osm_name": "Suomi / Finland"
+        "osm_name": "Suomi / Finland",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:fiji",
         "name": "Fiji",
         "country_code_2": "FJ",
-        "osm_name": "Viti"
+        "osm_name": "Viti",
+        "currency_codes": [
+            "FJD"
+        ]
     },
     {
         "id": "en:falkland-islands",
         "name": "Falkland Islands",
         "country_code_2": "FK",
-        "osm_name": "Falkland Islands"
+        "osm_name": "Falkland Islands",
+        "currency_codes": [
+            "FKP"
+        ]
     },
     {
         "id": "en:federated-states-of-micronesia",
         "name": "Federated States of Micronesia",
         "country_code_2": "FM",
-        "osm_name": "Micronesia"
+        "osm_name": "Micronesia",
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:faroe-islands",
         "name": "Faroe Islands",
         "country_code_2": "FO",
-        "osm_name": "Føroyar"
+        "osm_name": "Føroyar",
+        "currency_codes": [
+            "DKK"
+        ]
     },
     {
         "id": "en:france",
         "name": "France",
         "country_code_2": "FR",
-        "osm_name": "France"
+        "osm_name": "France",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:gabon",
         "name": "Gabon",
         "country_code_2": "GA",
-        "osm_name": "Gabon"
+        "osm_name": "Gabon",
+        "currency_codes": [
+            "XAF"
+        ]
     },
     {
         "id": "en:grenada",
         "name": "Grenada",
         "country_code_2": "GD",
-        "osm_name": "Grenada"
+        "osm_name": "Grenada",
+        "currency_codes": [
+            "XCD"
+        ]
     },
     {
         "id": "en:georgia",
         "name": "Georgia",
         "country_code_2": "GE",
-        "osm_name": "საქართველო"
+        "osm_name": "საქართველო",
+        "currency_codes": [
+            "GEL"
+        ]
     },
     {
         "id": "en:french-guiana",
         "name": "French Guiana",
         "country_code_2": "GF",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:guernsey",
         "name": "Guernsey",
         "country_code_2": "GG",
-        "osm_name": "Guernsey"
+        "osm_name": "Guernsey",
+        "currency_codes": [
+            "GBP"
+        ]
     },
     {
         "id": "en:ghana",
         "name": "Ghana",
         "country_code_2": "GH",
-        "osm_name": "Ghana"
+        "osm_name": "Ghana",
+        "currency_codes": [
+            "GHS"
+        ]
     },
     {
         "id": "en:gibraltar",
         "name": "Gibraltar",
         "country_code_2": "GI",
-        "osm_name": "Gibraltar"
+        "osm_name": "Gibraltar",
+        "currency_codes": [
+            "GIP"
+        ]
     },
     {
         "id": "en:greenland",
         "name": "Greenland",
         "country_code_2": "GL",
-        "osm_name": "Kalaallit Nunaat"
+        "osm_name": "Kalaallit Nunaat",
+        "currency_codes": [
+            "DKK"
+        ]
     },
     {
         "id": "en:gambia",
         "name": "Gambia",
         "country_code_2": "GM",
-        "osm_name": "Gambia"
+        "osm_name": "Gambia",
+        "currency_codes": [
+            "GMD"
+        ]
     },
     {
         "id": "en:guinea",
         "name": "Guinea",
         "country_code_2": "GN",
-        "osm_name": "Guinée"
+        "osm_name": "Guinée",
+        "currency_codes": [
+            "GNF"
+        ]
     },
     {
         "id": "en:guadeloupe",
         "name": "Guadeloupe",
         "country_code_2": "GP",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:equatorial-guinea",
         "name": "Equatorial Guinea",
         "country_code_2": "GQ",
-        "osm_name": "Guinea Ecuatorial"
+        "osm_name": "Guinea Ecuatorial",
+        "currency_codes": [
+            "XAF"
+        ]
     },
     {
         "id": "en:greece",
         "name": "Greece",
         "country_code_2": "GR",
-        "osm_name": "Ελλάς"
+        "osm_name": "Ελλάς",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:south-georgia-and-the-south-sandwich-islands",
         "name": "South Georgia and the South Sandwich Islands",
         "country_code_2": "GS",
-        "osm_name": "South Georgia and the South Sandwich Islands"
+        "osm_name": "South Georgia and the South Sandwich Islands",
+        "currency_codes": [
+            "GBP"
+        ]
     },
     {
         "id": "en:guatemala",
         "name": "Guatemala",
         "country_code_2": "GT",
-        "osm_name": "Guatemala"
+        "osm_name": "Guatemala",
+        "currency_codes": [
+            "GTQ"
+        ]
     },
     {
         "id": "en:guam",
         "name": "Guam",
         "country_code_2": "GU",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:guinea-bissau",
         "name": "Guinea-Bissau",
         "country_code_2": "GW",
-        "osm_name": "Guiné-Bissau"
+        "osm_name": "Guiné-Bissau",
+        "currency_codes": [
+            "XOF"
+        ]
     },
     {
         "id": "en:guyana",
         "name": "Guyana",
         "country_code_2": "GY",
-        "osm_name": "Guyana"
+        "osm_name": "Guyana",
+        "currency_codes": [
+            "GYD"
+        ]
     },
     {
         "id": "en:hong-kong",
         "name": "Hong Kong",
         "country_code_2": "HK",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "HKD"
+        ]
     },
     {
         "id": "en:heard-island-and-mcdonald-islands",
         "name": "Heard Island and McDonald Islands",
         "country_code_2": "HM",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "AUD"
+        ]
     },
     {
         "id": "en:honduras",
         "name": "Honduras",
         "country_code_2": "HN",
-        "osm_name": "Honduras"
+        "osm_name": "Honduras",
+        "currency_codes": [
+            "HNL"
+        ]
     },
     {
         "id": "en:croatia",
         "name": "Croatia",
         "country_code_2": "HR",
-        "osm_name": "Hrvatska"
+        "osm_name": "Hrvatska",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:haiti",
         "name": "Haiti",
         "country_code_2": "HT",
-        "osm_name": "Ayiti"
+        "osm_name": "Ayiti",
+        "currency_codes": [
+            "HTG",
+            "USD"
+        ]
     },
     {
         "id": "en:hungary",
         "name": "Hungary",
         "country_code_2": "HU",
-        "osm_name": "Magyarország"
+        "osm_name": "Magyarország",
+        "currency_codes": [
+            "HUF"
+        ]
     },
     {
         "id": "en:indonesia",
         "name": "Indonesia",
         "country_code_2": "ID",
-        "osm_name": "Indonesia"
+        "osm_name": "Indonesia",
+        "currency_codes": [
+            "IDR"
+        ]
     },
     {
         "id": "en:ireland",
         "name": "Ireland",
         "country_code_2": "IE",
-        "osm_name": "Éire / Ireland"
+        "osm_name": "Éire / Ireland",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:israel",
         "name": "Israel",
         "country_code_2": "IL",
-        "osm_name": "ישראל"
+        "osm_name": "ישראל",
+        "currency_codes": [
+            "ILS"
+        ]
     },
     {
         "id": "en:isle-of-man",
         "name": "Isle of Man",
         "country_code_2": "IM",
-        "osm_name": "Isle of Man"
+        "osm_name": "Isle of Man",
+        "currency_codes": [
+            "GBP"
+        ]
     },
     {
         "id": "en:india",
         "name": "India",
         "country_code_2": "IN",
-        "osm_name": "India"
+        "osm_name": "India",
+        "currency_codes": [
+            "INR"
+        ]
     },
     {
         "id": "en:british-indian-ocean-territory",
         "name": "British Indian Ocean Territory",
         "country_code_2": "IO",
-        "osm_name": "British Indian Ocean Territory"
+        "osm_name": "British Indian Ocean Territory",
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:iraq",
         "name": "Iraq",
         "country_code_2": "IQ",
-        "osm_name": "العراق"
+        "osm_name": "العراق",
+        "currency_codes": [
+            "IQD"
+        ]
     },
     {
         "id": "en:iran",
         "name": "Iran",
         "country_code_2": "IR",
-        "osm_name": "ایران"
+        "osm_name": "ایران",
+        "currency_codes": [
+            "IRR"
+        ]
     },
     {
         "id": "en:iceland",
         "name": "Iceland",
         "country_code_2": "IS",
-        "osm_name": "Ísland"
+        "osm_name": "Ísland",
+        "currency_codes": [
+            "ISK"
+        ]
     },
     {
         "id": "en:italy",
         "name": "Italy",
         "country_code_2": "IT",
-        "osm_name": "Italia"
+        "osm_name": "Italia",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:jersey",
         "name": "Jersey",
         "country_code_2": "JE",
-        "osm_name": "Jersey"
+        "osm_name": "Jersey",
+        "currency_codes": [
+            "GBP"
+        ]
     },
     {
         "id": "en:jamaica",
         "name": "Jamaica",
         "country_code_2": "JM",
-        "osm_name": "Jamaica"
+        "osm_name": "Jamaica",
+        "currency_codes": [
+            "JMD"
+        ]
     },
     {
         "id": "en:jordan",
         "name": "Jordan",
         "country_code_2": "JO",
-        "osm_name": "الأردن"
+        "osm_name": "الأردن",
+        "currency_codes": [
+            "JOD"
+        ]
     },
     {
         "id": "en:japan",
         "name": "Japan",
         "country_code_2": "JP",
-        "osm_name": "日本"
+        "osm_name": "日本",
+        "currency_codes": [
+            "JPY"
+        ]
     },
     {
         "id": "en:kenya",
         "name": "Kenya",
         "country_code_2": "KE",
-        "osm_name": "Kenya"
+        "osm_name": "Kenya",
+        "currency_codes": [
+            "KES"
+        ]
     },
     {
         "id": "en:kyrgyzstan",
         "name": "Kyrgyzstan",
         "country_code_2": "KG",
-        "osm_name": "Кыргызстан"
+        "osm_name": "Кыргызстан",
+        "currency_codes": [
+            "KGS"
+        ]
     },
     {
         "id": "en:cambodia",
         "name": "Cambodia",
         "country_code_2": "KH",
-        "osm_name": "ព្រះរាជាណាចក្រ​កម្ពុជា"
+        "osm_name": "ព្រះរាជាណាចក្រ​កម្ពុជា",
+        "currency_codes": [
+            "KHR"
+        ]
     },
     {
         "id": "en:kiribati",
         "name": "Kiribati",
         "country_code_2": "KI",
-        "osm_name": "Kiribati"
+        "osm_name": "Kiribati",
+        "currency_codes": [
+            "AUD"
+        ]
     },
     {
         "id": "en:comoros",
         "name": "Comoros",
         "country_code_2": "KM",
-        "osm_name": "Comores Komori جزر القمر"
+        "osm_name": "Comores Komori جزر القمر",
+        "currency_codes": [
+            "KMF"
+        ]
     },
     {
         "id": "en:saint-kitts-and-nevis",
         "name": "Saint Kitts and Nevis",
         "country_code_2": "KN",
-        "osm_name": "Saint Kitts and Nevis"
+        "osm_name": "Saint Kitts and Nevis",
+        "currency_codes": [
+            "XCD"
+        ]
     },
     {
         "id": "en:north-korea",
         "name": "North Korea",
         "country_code_2": "KP",
-        "osm_name": "조선민주주의인민공화국"
+        "osm_name": "조선민주주의인민공화국",
+        "currency_codes": [
+            "KPW"
+        ]
     },
     {
         "id": "en:south-korea",
         "name": "South Korea",
         "country_code_2": "KR",
-        "osm_name": "대한민국"
+        "osm_name": "대한민국",
+        "currency_codes": [
+            "KRW"
+        ]
     },
     {
         "id": "en:kuwait",
         "name": "Kuwait",
         "country_code_2": "KW",
-        "osm_name": "الكويت"
+        "osm_name": "الكويت",
+        "currency_codes": [
+            "KWD"
+        ]
     },
     {
         "id": "en:cayman-islands",
         "name": "Cayman Islands",
         "country_code_2": "KY",
-        "osm_name": "Cayman Islands"
+        "osm_name": "Cayman Islands",
+        "currency_codes": [
+            "KYD"
+        ]
     },
     {
         "id": "en:kazakhstan",
         "name": "Kazakhstan",
         "country_code_2": "KZ",
-        "osm_name": "Қазақстан"
+        "osm_name": "Қазақстан",
+        "currency_codes": [
+            "KZT"
+        ]
     },
     {
         "id": "en:laos",
         "name": "Laos",
         "country_code_2": "LA",
-        "osm_name": "ປະເທດລາວ"
+        "osm_name": "ປະເທດລາວ",
+        "currency_codes": [
+            "LAK"
+        ]
     },
     {
         "id": "en:lebanon",
         "name": "Lebanon",
         "country_code_2": "LB",
-        "osm_name": "لبنان"
+        "osm_name": "لبنان",
+        "currency_codes": [
+            "LBP"
+        ]
     },
     {
         "id": "en:saint-lucia",
         "name": "Saint Lucia",
         "country_code_2": "LC",
-        "osm_name": "Saint Lucia"
+        "osm_name": "Saint Lucia",
+        "currency_codes": [
+            "XCD"
+        ]
     },
     {
         "id": "en:liechtenstein",
         "name": "Liechtenstein",
         "country_code_2": "LI",
-        "osm_name": "Liechtenstein"
+        "osm_name": "Liechtenstein",
+        "currency_codes": [
+            "CHF"
+        ]
     },
     {
         "id": "en:sri-lanka",
         "name": "Sri Lanka",
         "country_code_2": "LK",
-        "osm_name": "Sri Lanka"
+        "osm_name": "Sri Lanka",
+        "currency_codes": [
+            "LKR"
+        ]
     },
     {
         "id": "en:liberia",
         "name": "Liberia",
         "country_code_2": "LR",
-        "osm_name": "Liberia"
+        "osm_name": "Liberia",
+        "currency_codes": [
+            "LRD"
+        ]
     },
     {
         "id": "en:lesotho",
         "name": "Lesotho",
         "country_code_2": "LS",
-        "osm_name": "Lesotho"
+        "osm_name": "Lesotho",
+        "currency_codes": [
+            "LSL",
+            "ZAR"
+        ]
     },
     {
         "id": "en:lithuania",
         "name": "Lithuania",
         "country_code_2": "LT",
-        "osm_name": "Lietuva"
+        "osm_name": "Lietuva",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:luxembourg",
         "name": "Luxembourg",
         "country_code_2": "LU",
-        "osm_name": "Lëtzebuerg"
+        "osm_name": "Lëtzebuerg",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:latvia",
         "name": "Latvia",
         "country_code_2": "LV",
-        "osm_name": "Latvija"
+        "osm_name": "Latvija",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:libya",
         "name": "Libya",
         "country_code_2": "LY",
-        "osm_name": "ليبيا"
+        "osm_name": "ليبيا",
+        "currency_codes": [
+            "LYD"
+        ]
     },
     {
         "id": "en:morocco",
         "name": "Morocco",
         "country_code_2": "MA",
-        "osm_name": "Maroc ⵍⵎⵖⵔⵉⴱ المغرب"
+        "osm_name": "Maroc ⵍⵎⵖⵔⵉⴱ المغرب",
+        "currency_codes": [
+            "MAD"
+        ]
     },
     {
         "id": "en:monaco",
         "name": "Monaco",
         "country_code_2": "MC",
-        "osm_name": "Monaco"
+        "osm_name": "Monaco",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:moldova",
         "name": "Moldova",
         "country_code_2": "MD",
-        "osm_name": "Moldova"
+        "osm_name": "Moldova",
+        "currency_codes": [
+            "MDL"
+        ]
     },
     {
         "id": "en:montenegro",
         "name": "Montenegro",
         "country_code_2": "ME",
-        "osm_name": "Crna Gora / Црна Гора"
+        "osm_name": "Crna Gora / Црна Гора",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:saint-martin",
         "name": "Saint Martin",
         "country_code_2": "MF",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:madagascar",
         "name": "Madagascar",
         "country_code_2": "MG",
-        "osm_name": "Madagasikara / Madagascar"
+        "osm_name": "Madagasikara / Madagascar",
+        "currency_codes": [
+            "MGA"
+        ]
     },
     {
         "id": "en:marshall-islands",
         "name": "Marshall Islands",
         "country_code_2": "MH",
-        "osm_name": "Ṃajeḷ"
+        "osm_name": "Ṃajeḷ",
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:north-macedonia",
         "name": "North Macedonia",
         "country_code_2": "MK",
-        "osm_name": "Северна Македонија"
+        "osm_name": "Северна Македонија",
+        "currency_codes": [
+            "MKD"
+        ]
     },
     {
         "id": "en:mali",
         "name": "Mali",
         "country_code_2": "ML",
-        "osm_name": "Mali"
+        "osm_name": "Mali",
+        "currency_codes": [
+            "XOF"
+        ]
     },
     {
         "id": "en:myanmar",
         "name": "Myanmar",
         "country_code_2": "MM",
-        "osm_name": "မြန်မာ"
+        "osm_name": "မြန်မာ",
+        "currency_codes": [
+            "MMK"
+        ]
     },
     {
         "id": "en:mongolia",
         "name": "Mongolia",
         "country_code_2": "MN",
-        "osm_name": "Монгол улс ᠮᠤᠩᠭᠤᠯ ᠤᠯᠤᠰ"
+        "osm_name": "Монгол улс ᠮᠤᠩᠭᠤᠯ ᠤᠯᠤᠰ",
+        "currency_codes": [
+            "MNT"
+        ]
     },
     {
         "id": "en:macau",
         "name": "Macau",
         "country_code_2": "MO",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "MOP"
+        ]
     },
     {
         "id": "en:northern-mariana-islands",
         "name": "Northern Mariana Islands",
         "country_code_2": "MP",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:martinique",
         "name": "Martinique",
         "country_code_2": "MQ",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:mauritania",
         "name": "Mauritania",
         "country_code_2": "MR",
-        "osm_name": "Mauritanie موريتانيا"
+        "osm_name": "Mauritanie موريتانيا",
+        "currency_codes": [
+            "MRU"
+        ]
     },
     {
         "id": "en:montserrat",
         "name": "Montserrat",
         "country_code_2": "MS",
-        "osm_name": "Montserrat"
+        "osm_name": "Montserrat",
+        "currency_codes": [
+            "XCD"
+        ]
     },
     {
         "id": "en:malta",
         "name": "Malta",
         "country_code_2": "MT",
-        "osm_name": "Malta"
+        "osm_name": "Malta",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:mauritius",
         "name": "Mauritius",
         "country_code_2": "MU",
-        "osm_name": "Mauritius / Maurice"
+        "osm_name": "Mauritius / Maurice",
+        "currency_codes": [
+            "MUR"
+        ]
     },
     {
         "id": "en:maldives",
         "name": "Maldives",
         "country_code_2": "MV",
-        "osm_name": "ދިވެހިރާއްޖެ"
+        "osm_name": "ދިވެހިރާއްޖެ",
+        "currency_codes": [
+            "MVR"
+        ]
     },
     {
         "id": "en:malawi",
         "name": "Malawi",
         "country_code_2": "MW",
-        "osm_name": "Malawi"
+        "osm_name": "Malawi",
+        "currency_codes": [
+            "MWK"
+        ]
     },
     {
         "id": "en:mexico",
         "name": "Mexico",
         "country_code_2": "MX",
-        "osm_name": "México"
+        "osm_name": "México",
+        "currency_codes": [
+            "MXN"
+        ]
     },
     {
         "id": "en:malaysia",
         "name": "Malaysia",
         "country_code_2": "MY",
-        "osm_name": "Malaysia"
+        "osm_name": "Malaysia",
+        "currency_codes": [
+            "MYR"
+        ]
     },
     {
         "id": "en:mozambique",
         "name": "Mozambique",
         "country_code_2": "MZ",
-        "osm_name": "Moçambique"
+        "osm_name": "Moçambique",
+        "currency_codes": [
+            "MZN"
+        ]
     },
     {
         "id": "en:namibia",
         "name": "Namibia",
         "country_code_2": "NA",
-        "osm_name": "Namibia"
+        "osm_name": "Namibia",
+        "currency_codes": [
+            "NAD",
+            "ZAR"
+        ]
     },
     {
         "id": "en:new-caledonia",
         "name": "New Caledonia",
         "country_code_2": "NC",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "XPF"
+        ]
     },
     {
         "id": "en:niger",
         "name": "Niger",
         "country_code_2": "NE",
-        "osm_name": "Niger"
+        "osm_name": "Niger",
+        "currency_codes": [
+            "XOF"
+        ]
     },
     {
         "id": "en:norfolk-island",
         "name": "Norfolk Island",
         "country_code_2": "NF",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "AUD"
+        ]
     },
     {
         "id": "en:nigeria",
         "name": "Nigeria",
         "country_code_2": "NG",
-        "osm_name": "Nigeria"
+        "osm_name": "Nigeria",
+        "currency_codes": [
+            "NGN"
+        ]
     },
     {
         "id": "en:nicaragua",
         "name": "Nicaragua",
         "country_code_2": "NI",
-        "osm_name": "Nicaragua"
+        "osm_name": "Nicaragua",
+        "currency_codes": [
+            "NIO"
+        ]
     },
     {
         "id": "en:netherlands",
         "name": "Netherlands",
         "country_code_2": "NL",
-        "osm_name": "Nederland"
+        "osm_name": "Nederland",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:norway",
         "name": "Norway",
         "country_code_2": "NO",
-        "osm_name": "Norge"
+        "osm_name": "Norge",
+        "currency_codes": [
+            "NOK"
+        ]
     },
     {
         "id": "en:nepal",
         "name": "Nepal",
         "country_code_2": "NP",
-        "osm_name": "नेपाल"
+        "osm_name": "नेपाल",
+        "currency_codes": [
+            "NPR"
+        ]
     },
     {
         "id": "en:nauru",
         "name": "Nauru",
         "country_code_2": "NR",
-        "osm_name": "Naoero"
+        "osm_name": "Naoero",
+        "currency_codes": [
+            "AUD"
+        ]
     },
     {
         "id": "en:niue",
         "name": "Niue",
         "country_code_2": "NU",
-        "osm_name": "Niuē"
+        "osm_name": "Niuē",
+        "currency_codes": [
+            "NZD"
+        ]
     },
     {
         "id": "en:new-zealand",
         "name": "New Zealand",
         "country_code_2": "NZ",
-        "osm_name": "New Zealand / Aotearoa"
+        "osm_name": "New Zealand / Aotearoa",
+        "currency_codes": [
+            "NZD"
+        ]
     },
     {
         "id": "en:oman",
         "name": "Oman",
         "country_code_2": "OM",
-        "osm_name": "عمان"
+        "osm_name": "عمان",
+        "currency_codes": [
+            "OMR"
+        ]
     },
     {
         "id": "en:panama",
         "name": "Panama",
         "country_code_2": "PA",
-        "osm_name": "Panamá"
+        "osm_name": "Panamá",
+        "currency_codes": [
+            "PAB",
+            "USD"
+        ]
     },
     {
         "id": "en:peru",
         "name": "Peru",
         "country_code_2": "PE",
-        "osm_name": "Perú"
+        "osm_name": "Perú",
+        "currency_codes": [
+            "PEN"
+        ]
     },
     {
         "id": "en:french-polynesia",
         "name": "French Polynesia",
         "country_code_2": "PF",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "XPF"
+        ]
     },
     {
         "id": "en:papua-new-guinea",
         "name": "Papua New Guinea",
         "country_code_2": "PG",
-        "osm_name": "Papua Niugini"
+        "osm_name": "Papua Niugini",
+        "currency_codes": [
+            "PGK"
+        ]
     },
     {
         "id": "en:philippines",
         "name": "Philippines",
         "country_code_2": "PH",
-        "osm_name": "Philippines"
+        "osm_name": "Philippines",
+        "currency_codes": [
+            "PHP"
+        ]
     },
     {
         "id": "en:pakistan",
         "name": "Pakistan",
         "country_code_2": "PK",
-        "osm_name": "پاکستان"
+        "osm_name": "پاکستان",
+        "currency_codes": [
+            "PKR"
+        ]
     },
     {
         "id": "en:poland",
         "name": "Poland",
         "country_code_2": "PL",
-        "osm_name": "Polska"
+        "osm_name": "Polska",
+        "currency_codes": [
+            "PLN"
+        ]
     },
     {
         "id": "en:saint-pierre-and-miquelon",
         "name": "Saint Pierre and Miquelon",
         "country_code_2": "PM",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:pitcairn",
         "name": "Pitcairn",
         "country_code_2": "PN",
-        "osm_name": "Pitkern Ailen"
+        "osm_name": "Pitkern Ailen",
+        "currency_codes": [
+            "NZD"
+        ]
     },
     {
         "id": "en:puerto-rico",
         "name": "Puerto Rico",
         "country_code_2": "PR",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:state-of-palestine",
         "name": "State of Palestine",
         "country_code_2": "PS",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "ILS",
+            "JOD"
+        ]
     },
     {
         "id": "en:portugal",
         "name": "Portugal",
         "country_code_2": "PT",
-        "osm_name": "Portugal"
+        "osm_name": "Portugal",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:palau",
         "name": "Palau",
         "country_code_2": "PW",
-        "osm_name": "Belau"
+        "osm_name": "Belau",
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:paraguay",
         "name": "Paraguay",
         "country_code_2": "PY",
-        "osm_name": "Paraguay / Paraguái"
+        "osm_name": "Paraguay / Paraguái",
+        "currency_codes": [
+            "PYG"
+        ]
     },
     {
         "id": "en:qatar",
         "name": "Qatar",
         "country_code_2": "QA",
-        "osm_name": "قطر"
+        "osm_name": "قطر",
+        "currency_codes": [
+            "QAR"
+        ]
     },
     {
         "id": "en:reunion",
         "name": "Réunion",
         "country_code_2": "RE",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:romania",
         "name": "Romania",
         "country_code_2": "RO",
-        "osm_name": "România"
+        "osm_name": "România",
+        "currency_codes": [
+            "RON"
+        ]
     },
     {
         "id": "en:serbia",
         "name": "Serbia",
         "country_code_2": "RS",
-        "osm_name": "Србија"
+        "osm_name": "Србија",
+        "currency_codes": [
+            "RSD"
+        ]
     },
     {
         "id": "en:russia",
         "name": "Russia",
         "country_code_2": "RU",
-        "osm_name": "Россия"
+        "osm_name": "Россия",
+        "currency_codes": [
+            "RUB"
+        ]
     },
     {
         "id": "en:rwanda",
         "name": "Rwanda",
         "country_code_2": "RW",
-        "osm_name": "Rwanda"
+        "osm_name": "Rwanda",
+        "currency_codes": [
+            "RWF"
+        ]
     },
     {
         "id": "en:saudi-arabia",
         "name": "Saudi Arabia",
         "country_code_2": "SA",
-        "osm_name": "السعودية"
+        "osm_name": "السعودية",
+        "currency_codes": [
+            "SAR"
+        ]
     },
     {
         "id": "en:solomon-islands",
         "name": "Solomon Islands",
         "country_code_2": "SB",
-        "osm_name": "Solomon Islands"
+        "osm_name": "Solomon Islands",
+        "currency_codes": [
+            "SBD"
+        ]
     },
     {
         "id": "en:seychelles",
         "name": "Seychelles",
         "country_code_2": "SC",
-        "osm_name": "Sesel"
+        "osm_name": "Sesel",
+        "currency_codes": [
+            "SCR"
+        ]
     },
     {
         "id": "en:sudan",
         "name": "Sudan",
         "country_code_2": "SD",
-        "osm_name": "السودان"
+        "osm_name": "السودان",
+        "currency_codes": [
+            "SDG"
+        ]
     },
     {
         "id": "en:sweden",
         "name": "Sweden",
         "country_code_2": "SE",
-        "osm_name": "Sverige"
+        "osm_name": "Sverige",
+        "currency_codes": [
+            "SEK"
+        ]
     },
     {
         "id": "en:singapore",
         "name": "Singapore",
         "country_code_2": "SG",
-        "osm_name": "Singapore"
+        "osm_name": "Singapore",
+        "currency_codes": [
+            "SGD"
+        ]
     },
     {
         "id": "en:saint-helena",
         "name": "Saint Helena",
         "country_code_2": "SH",
-        "osm_name": "Saint Helena, Ascension and Tristan da Cunha"
+        "osm_name": "Saint Helena, Ascension and Tristan da Cunha",
+        "currency_codes": [
+            "SHP"
+        ]
     },
     {
         "id": "en:slovenia",
         "name": "Slovenia",
         "country_code_2": "SI",
-        "osm_name": "Slovenija"
+        "osm_name": "Slovenija",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:svalbard-and-jan-mayen",
         "name": "Svalbard and Jan Mayen",
         "country_code_2": "SJ",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "NOK"
+        ]
     },
     {
         "id": "en:slovakia",
         "name": "Slovakia",
         "country_code_2": "SK",
-        "osm_name": "Slovensko"
+        "osm_name": "Slovensko",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:sierra-leone",
         "name": "Sierra Leone",
         "country_code_2": "SL",
-        "osm_name": "Sierra Leone"
+        "osm_name": "Sierra Leone",
+        "currency_codes": [
+            "SLE"
+        ]
     },
     {
         "id": "en:san-marino",
         "name": "San Marino",
         "country_code_2": "SM",
-        "osm_name": "San Marino"
+        "osm_name": "San Marino",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:senegal",
         "name": "Senegal",
         "country_code_2": "SN",
-        "osm_name": "Sénégal"
+        "osm_name": "Sénégal",
+        "currency_codes": [
+            "XOF"
+        ]
     },
     {
         "id": "en:somalia",
         "name": "Somalia",
         "country_code_2": "SO",
-        "osm_name": "Soomaaliya الصومال"
+        "osm_name": "Soomaaliya الصومال",
+        "currency_codes": [
+            "SOS"
+        ]
     },
     {
         "id": "en:suriname",
         "name": "Suriname",
         "country_code_2": "SR",
-        "osm_name": "Suriname"
+        "osm_name": "Suriname",
+        "currency_codes": [
+            "SRD"
+        ]
     },
     {
         "id": "en:south-sudan",
         "name": "South Sudan",
         "country_code_2": "SS",
-        "osm_name": "South Sudan جنوب السودان"
+        "osm_name": "South Sudan جنوب السودان",
+        "currency_codes": [
+            "SSP"
+        ]
     },
     {
         "id": "en:sao-tome-and-principe",
         "name": "Sao Tomé and Príncipe",
         "country_code_2": "ST",
-        "osm_name": "São Tomé e Príncipe"
+        "osm_name": "São Tomé e Príncipe",
+        "currency_codes": [
+            "STN"
+        ]
     },
     {
         "id": "en:el-salvador",
         "name": "El Salvador",
         "country_code_2": "SV",
-        "osm_name": "El Salvador"
+        "osm_name": "El Salvador",
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:sint-maarten",
         "name": "Sint Maarten",
         "country_code_2": "SX",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "XCG"
+        ]
     },
     {
         "id": "en:syria",
         "name": "Syria",
         "country_code_2": "SY",
-        "osm_name": "سوريا"
+        "osm_name": "سوريا",
+        "currency_codes": [
+            "SYP"
+        ]
     },
     {
         "id": "en:swaziland",
         "name": "Swaziland",
         "country_code_2": "SZ",
-        "osm_name": "Eswatini"
+        "osm_name": "Eswatini",
+        "currency_codes": [
+            "SZL"
+        ]
     },
     {
         "id": "en:turks-and-caicos-islands",
         "name": "Turks and Caicos Islands",
         "country_code_2": "TC",
-        "osm_name": "Turks and Caicos Islands"
+        "osm_name": "Turks and Caicos Islands",
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:chad",
         "name": "Chad",
         "country_code_2": "TD",
-        "osm_name": "Tchad تشاد"
+        "osm_name": "Tchad تشاد",
+        "currency_codes": [
+            "XAF"
+        ]
     },
     {
         "id": "en:french-southern-and-antarctic-lands",
         "name": "French Southern and Antarctic Lands",
         "country_code_2": "TF",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:togo",
         "name": "Togo",
         "country_code_2": "TG",
-        "osm_name": "Togo"
+        "osm_name": "Togo",
+        "currency_codes": [
+            "XOF"
+        ]
     },
     {
         "id": "en:thailand",
         "name": "Thailand",
         "country_code_2": "TH",
-        "osm_name": "ประเทศไทย"
+        "osm_name": "ประเทศไทย",
+        "currency_codes": [
+            "THB"
+        ]
     },
     {
         "id": "en:tajikistan",
         "name": "Tajikistan",
         "country_code_2": "TJ",
-        "osm_name": "Тоҷикистон"
+        "osm_name": "Тоҷикистон",
+        "currency_codes": [
+            "TJS"
+        ]
     },
     {
         "id": "en:tokelau",
         "name": "Tokelau",
         "country_code_2": "TK",
-        "osm_name": "Tokelau"
+        "osm_name": "Tokelau",
+        "currency_codes": [
+            "NZD"
+        ]
     },
     {
         "id": "en:timor-leste",
         "name": "Timor-Leste",
         "country_code_2": "TL",
-        "osm_name": "Timor-Leste"
+        "osm_name": "Timor-Leste",
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:turkmenistan",
         "name": "Turkmenistan",
         "country_code_2": "TM",
-        "osm_name": "Türkmenistan"
+        "osm_name": "Türkmenistan",
+        "currency_codes": [
+            "TMT"
+        ]
     },
     {
         "id": "en:tunisia",
         "name": "Tunisia",
         "country_code_2": "TN",
-        "osm_name": "تونس"
+        "osm_name": "تونس",
+        "currency_codes": [
+            "TND"
+        ]
     },
     {
         "id": "en:tonga",
         "name": "Tonga",
         "country_code_2": "TO",
-        "osm_name": "Tonga"
+        "osm_name": "Tonga",
+        "currency_codes": [
+            "TOP"
+        ]
     },
     {
         "id": "en:turkey",
         "name": "Turkey",
         "country_code_2": "TR",
-        "osm_name": "Türkiye"
+        "osm_name": "Türkiye",
+        "currency_codes": [
+            "TRY"
+        ]
     },
     {
         "id": "en:trinidad-and-tobago",
         "name": "Trinidad and Tobago",
         "country_code_2": "TT",
-        "osm_name": "Trinidad and Tobago"
+        "osm_name": "Trinidad and Tobago",
+        "currency_codes": [
+            "TTD"
+        ]
     },
     {
         "id": "en:tuvalu",
         "name": "Tuvalu",
         "country_code_2": "TV",
-        "osm_name": "Tuvalu"
+        "osm_name": "Tuvalu",
+        "currency_codes": [
+            "AUD"
+        ]
     },
     {
         "id": "en:taiwan",
         "name": "Taiwan",
         "country_code_2": "TW",
-        "osm_name": "臺灣"
+        "osm_name": "臺灣",
+        "currency_codes": [
+            "TWD"
+        ]
     },
     {
         "id": "en:tanzania",
         "name": "Tanzania",
         "country_code_2": "TZ",
-        "osm_name": "Tanzania"
+        "osm_name": "Tanzania",
+        "currency_codes": [
+            "TZS"
+        ]
     },
     {
         "id": "en:ukraine",
         "name": "Ukraine",
         "country_code_2": "UA",
-        "osm_name": "Україна"
+        "osm_name": "Україна",
+        "currency_codes": [
+            "UAH"
+        ]
     },
     {
         "id": "en:uganda",
         "name": "Uganda",
         "country_code_2": "UG",
-        "osm_name": "Uganda"
+        "osm_name": "Uganda",
+        "currency_codes": [
+            "UGX"
+        ]
     },
     {
         "id": "en:united-kingdom",
         "name": "United Kingdom",
         "country_code_2": "UK",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "GBP"
+        ]
     },
     {
         "id": "en:united-states-minor-outlying-islands",
         "name": "United States Minor Outlying Islands",
         "country_code_2": "UM",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:united-states",
         "name": "United States",
         "country_code_2": "US",
-        "osm_name": "United States"
+        "osm_name": "United States",
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:uruguay",
         "name": "Uruguay",
         "country_code_2": "UY",
-        "osm_name": "Uruguay"
+        "osm_name": "Uruguay",
+        "currency_codes": [
+            "UYU"
+        ]
     },
     {
         "id": "en:uzbekistan",
         "name": "Uzbekistan",
         "country_code_2": "UZ",
-        "osm_name": "Oʻzbekiston"
+        "osm_name": "Oʻzbekiston",
+        "currency_codes": [
+            "UZS"
+        ]
     },
     {
         "id": "en:vatican-city",
         "name": "Vatican City",
         "country_code_2": "VA",
-        "osm_name": "Civitas Vaticana - Città del Vaticano"
+        "osm_name": "Civitas Vaticana - Città del Vaticano",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:saint-vincent-and-the-grenadines",
         "name": "Saint Vincent and the Grenadines",
         "country_code_2": "VC",
-        "osm_name": "Saint Vincent and the Grenadines"
+        "osm_name": "Saint Vincent and the Grenadines",
+        "currency_codes": [
+            "XCD"
+        ]
     },
     {
         "id": "en:venezuela",
         "name": "Venezuela",
         "country_code_2": "VE",
-        "osm_name": "Venezuela"
+        "osm_name": "Venezuela",
+        "currency_codes": [
+            "VES"
+        ]
     },
     {
         "id": "en:british-virgin-islands",
         "name": "British Virgin Islands",
         "country_code_2": "VG",
-        "osm_name": "British Virgin Islands"
+        "osm_name": "British Virgin Islands",
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:virgin-islands-of-the-united-states",
         "name": "Virgin Islands of the United States",
         "country_code_2": "VI",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "USD"
+        ]
     },
     {
         "id": "en:vietnam",
         "name": "Vietnam",
         "country_code_2": "VN",
-        "osm_name": "Việt Nam"
+        "osm_name": "Việt Nam",
+        "currency_codes": [
+            "VND"
+        ]
     },
     {
         "id": "en:vanuatu",
         "name": "Vanuatu",
         "country_code_2": "VU",
-        "osm_name": "Vanuatu"
+        "osm_name": "Vanuatu",
+        "currency_codes": [
+            "VUV"
+        ]
     },
     {
         "id": "en:wallis-and-futuna",
         "name": "Wallis and Futuna",
         "country_code_2": "WF",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "XPF"
+        ]
     },
     {
         "id": "en:samoa",
         "name": "Samoa",
         "country_code_2": "WS",
-        "osm_name": "Sāmoa"
+        "osm_name": "Sāmoa",
+        "currency_codes": [
+            "WST"
+        ]
     },
     {
         "id": "en:kosovo",
         "name": "Kosovo",
         "country_code_2": "XK",
-        "osm_name": "Kosova / Kosovo"
+        "osm_name": "Kosova / Kosovo",
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:yemen",
         "name": "Yemen",
         "country_code_2": "YE",
-        "osm_name": "اليمن"
+        "osm_name": "اليمن",
+        "currency_codes": [
+            "YER"
+        ]
     },
     {
         "id": "en:mayotte",
         "name": "Mayotte",
         "country_code_2": "YT",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": [
+            "EUR"
+        ]
     },
     {
         "id": "en:yugoslavia",
         "name": "Yugoslavia",
         "country_code_2": "YU",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": []
     },
     {
         "id": "en:south-africa",
         "name": "South Africa",
         "country_code_2": "ZA",
-        "osm_name": "South Africa"
+        "osm_name": "South Africa",
+        "currency_codes": [
+            "ZAR"
+        ]
     },
     {
         "id": "en:zambia",
         "name": "Zambia",
         "country_code_2": "ZM",
-        "osm_name": "Zambia"
+        "osm_name": "Zambia",
+        "currency_codes": [
+            "ZMW"
+        ]
     },
     {
         "id": "en:zimbabwe",
         "name": "Zimbabwe",
         "country_code_2": "ZW",
-        "osm_name": "Zimbabwe"
+        "osm_name": "Zimbabwe",
+        "currency_codes": [
+            "ZWG",
+            "USD"
+        ]
     },
     {
         "id": "en:world",
         "name": "world",
         "country_code_2": "world",
-        "osm_name": null
+        "osm_name": null,
+        "currency_codes": []
     }
 ]

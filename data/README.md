@@ -87,12 +87,12 @@ What it does:
 
 ### Goal
 
-Create a JSON file with the list of countries (enriched with OSM name)
+Create a JSON file with the list of countries (enriched with OSM name & currencies)
 
 ### Open Food Facts taxonomy
 
 File viewable here: [taxonomies/countries](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/countries.txt)
-Useful node properties: `country_code_2:en:`, `country_code_3:en:`, `language_codes:en:`, `osm_relation:en:`, `wikidata:en:` (not all are filled)
+Useful node properties: `country_code_2:en:`, `country_code_3:en:`, `currency_codes:en:`, `language_codes:en:`, `osm_relation:en:`, `wikidata:en:` (not all are filled)
 
 ### OpenStreetMap csv
 

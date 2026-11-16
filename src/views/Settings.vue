@@ -221,7 +221,7 @@ import { useTheme } from "vuetify";
 import { mapStores } from "pinia";
 import { useAppStore } from "../store";
 import languageList from "../i18n/data/languages.json";
-import countryList from "../i18n/data/countries.json"; // still needed for currencies
+import countryList from "../data/countries.json";
 import localeManager from "../i18n/localeManager.js";
 import constants from "../constants";
 import data_utils from "../utils/data.js";
@@ -244,14 +244,10 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     currencyList() {
+      // from the Open Food Facts countries taxonomy ("currency_codes" property)
       return [
-        ...new Set(
-          countryList
-            .map((country) => country.currency)
-            .flat()
-            .filter((currency) => currency !== null && currency.length !== 0),
-        ),
-      ];
+        ...new Set(countryList.flatMap((country) => country.currency_codes)),
+      ].sort();
     },
   },
   watch: {
