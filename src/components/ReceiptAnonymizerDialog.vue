@@ -1,91 +1,86 @@
 <template>
-  <v-dialog :height="dialogHeight" :width="dialogWidth">
-    <v-row class="mt-0">
-      <v-col>
-        <v-card
-          class="mb-4"
-          :title="$t('ReceiptAnonymize.Title')"
-          prepend-icon="mdi-image"
-          height="100%"
-        >
-          <v-divider />
-          <div v-if="step === 1">
-            <v-card-text>
-              <h2 class="text-h6">
-                {{ $t("ReceiptAnonymize.WaitingForReceiptUpload") }}
-              </h2>
-              <v-progress-linear indeterminate />
-            </v-card-text>
+  <v-dialog scrollable :height="dialogHeight" :width="dialogWidth">
+    <v-card
+      class="d-flex flex-column"
+      :title="$t('ReceiptAnonymize.Title')"
+      prepend-icon="mdi-image"
+      height="100%"
+    >
+      <v-divider />
+      <div v-if="step === 1">
+        <v-card-text>
+          <h2 class="text-h6">
+            {{ $t("ReceiptAnonymize.WaitingForReceiptUpload") }}
+          </h2>
+          <v-progress-linear indeterminate />
+        </v-card-text>
+      </div>
+      <div v-if="step === 2">
+        <v-card-text>
+          <h2 class="text-h6">
+            {{ $t("ReceiptAnonymize.WaitingForAnonymizationPrediction") }}
+          </h2>
+          <v-progress-linear indeterminate />
+        </v-card-text>
+      </div>
+      <div v-else-if="step === 3" class="d-flex flex-column flex-grow-1">
+        <v-card-text class="flex-grow-1 overflow-y-auto" style="min-height: 0">
+          <h2 class="text-h6">
+            {{ $t("ReceiptAnonymize.EditRedactBoxes") }}
+          </h2>
+          <VueZoomable
+            v-if="proofImageSrc"
+            v-model:zoom="zoomLevel"
+            v-model:pan="panLevel"
+            :maxZoom="10"
+            :panEnabled="!imageEditMode"
+            selector="#content"
+          >
+            <div id="content" style="width: 100%">
+              <ContributionAssistantDrawCanvas
+                ref="ContributionAssistantDrawCanvas"
+                :imageSrc="proofImageSrc"
+                :boundingBoxesFromServer="boundingBoxesFromServer"
+                :preventDrawing="!imageEditMode"
+                :removeMode="boxRemoveMode"
+                mode="Redact"
+                @extractedLabels="onProductImageDraw($event)"
+              />
+            </div>
+          </VueZoomable>
+        </v-card-text>
+        <v-divider />
+        <v-card-actions class="justify-space-between">
+          <div class="d-flex flex-wrap align-center ga-2">
+            <v-switch
+              v-model="imageEditMode"
+              density="compact"
+              color="success"
+              :label="$t('ReceiptAnonymize.EnableBoxDrawMode')"
+              :true-value="true"
+              hide-details="auto"
+            />
+            <v-switch
+              v-model="boxRemoveMode"
+              density="compact"
+              color="success"
+              :label="$t('ReceiptAnonymize.EnableBoxRemoveMode')"
+              :true-value="true"
+              hide-details="auto"
+            />
           </div>
-          <div v-if="step === 2">
-            <v-card-text>
-              <h2 class="text-h6">
-                {{ $t("ReceiptAnonymize.WaitingForAnonymizationPrediction") }}
-              </h2>
-              <v-progress-linear indeterminate />
-            </v-card-text>
-          </div>
-          <div v-else-if="step === 3">
-            <v-card-text>
-              <h2 class="text-h6">
-                {{ $t("ReceiptAnonymize.EditRedactBoxes") }}
-              </h2>
-              <VueZoomable
-                v-if="proofImageSrc"
-                v-model:zoom="zoomLevel"
-                v-model:pan="panLevel"
-                :maxZoom="10"
-                :panEnabled="!imageEditMode"
-                selector="#content"
-              >
-                <div id="content" style="width: 100%">
-                  <ContributionAssistantDrawCanvas
-                    ref="ContributionAssistantDrawCanvas"
-                    :imageSrc="proofImageSrc"
-                    :boundingBoxesFromServer="boundingBoxesFromServer"
-                    :preventDrawing="!imageEditMode"
-                    :removeMode="boxRemoveMode"
-                    mode="Redact"
-                    @extractedLabels="onProductImageDraw($event)"
-                  />
-                </div>
-              </VueZoomable>
-            </v-card-text>
-            <v-divider />
-            <v-card-actions>
-              <v-row>
-                <v-col cols="6">
-                  <v-switch
-                    v-model="imageEditMode"
-                    density="compact"
-                    color="success"
-                    :label="$t('ReceiptAnonymize.EnableBoxDrawMode')"
-                    :true-value="true"
-                    hide-details="auto"
-                  />
-                  <v-switch
-                    v-model="boxRemoveMode"
-                    density="compact"
-                    color="success"
-                    :label="$t('ReceiptAnonymize.EnableBoxRemoveMode')"
-                    :true-value="true"
-                    hide-details="auto"
-                  />
-                  <v-btn
-                    color="primary"
-                    variant="flat"
-                    :loading="loading"
-                    @click="save"
-                  >
-                    {{ $t("Common.Save") }}
-                  </v-btn>
-                </v-col>
-              </v-row>
-            </v-card-actions>
-          </div>
-        </v-card>
-      </v-col>
-    </v-row>
+          <v-btn
+            class="flex-shrink-0"
+            color="primary"
+            variant="flat"
+            :loading="loading"
+            @click="save"
+          >
+            {{ $t("Common.Save") }}
+          </v-btn>
+        </v-card-actions>
+      </div>
+    </v-card>
   </v-dialog>
 </template>
 
