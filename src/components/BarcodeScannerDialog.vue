@@ -45,6 +45,33 @@
                   $t('BarcodeScanner.CameraError', { error: scannerError })
                 "
               />
+              <div
+                v-if="cameraList.length > 1"
+                class="d-flex align-center mt-2 mb-2"
+              >
+                <v-select
+                  v-model="selectedCameraId"
+                  :items="cameraList"
+                  item-title="label"
+                  item-value="id"
+                  :label="$t('BarcodeScanner.Camera')"
+                  density="compact"
+                  hide-details
+                  :disabled="isSwitchingCamera"
+                  prepend-inner-icon="mdi-camera-outline"
+                  @update:modelValue="onCameraChange"
+                />
+                <v-btn
+                  class="ml-2"
+                  icon="mdi-camera-flip-outline"
+                  variant="text"
+                  :loading="isSwitchingCamera"
+                  :disabled="isSwitchingCamera"
+                  :title="$t('BarcodeScanner.SwitchCamera')"
+                  :aria-label="$t('BarcodeScanner.SwitchCamera')"
+                  @click="switchCameraNext"
+                />
+              </div>
               <div id="reader" width="500px" />
             </template>
             <barcode-scanner
@@ -215,6 +242,9 @@ export default {
       scannerStartTimeout: null,
       scannerError: null,
       isUnmounted: false,
+      cameraList: [],
+      selectedCameraId: null,
+      isSwitchingCamera: false,
       barcodeManualForm: {
         barcode: "",
       },
@@ -304,6 +334,20 @@ export default {
         this.getProduct(barcode.barcode, false);
       }
     }
+    // init cameras
+    barcode_scanner_utils.getCameras().then((cameras) => {
+      if (this.isUnmounted) return;
+      if (cameras && cameras.length > 0) {
+        this.cameraList = cameras;
+        const preferredCameraId = barcode_scanner_utils.getPreferredCameraId(
+          cameras,
+          this.appStore.user.barcode_scanner_camera_id,
+        );
+        if (preferredCameraId) {
+          this.selectedCameraId = preferredCameraId;
+        }
+      }
+    });
     // init library (the qrcodeScannerActive watcher starts the scanner)
     barcode_scanner_utils
       .getBarcodeScannerLibrary(this.appStore.user.barcode_scanner_library)
@@ -319,23 +363,96 @@ export default {
     this.stopQrcodeScanner();
   },
   methods: {
-    createQrcodeScanner() {
+    createQrcodeScanner(cameraId = null) {
       this.scannerStartTimeout = null;
       this.scannerError = null;
+      const targetCameraId =
+        cameraId ||
+        this.selectedCameraId ||
+        this.appStore.user.barcode_scanner_camera_id;
+      const cameraConfig = targetCameraId || { facingMode: "environment" };
       this.scanner = barcode_scanner_utils.startHtml5QrcodeScanner(
         "reader",
         this.barcodeSend,
+        cameraConfig,
       );
-      this.scanner.started.catch((error) => {
-        this.scannerError = error?.message || String(error);
-        console.error(error);
+      this.scanner.started
+        .then((scannerInstance) => {
+          if (this.isUnmounted || !scannerInstance) return;
+          this.loadCameras(scannerInstance);
+        })
+        .catch((error) => {
+          this.scannerError = error?.message || String(error);
+          console.error(error);
+        });
+    },
+    loadCameras(scannerInstance) {
+      barcode_scanner_utils.getCameras().then((cameras) => {
+        if (this.isUnmounted) return;
+        if (!cameras || cameras.length === 0) return;
+        this.cameraList = cameras;
+
+        let activeDeviceId = null;
+        try {
+          const settings = scannerInstance?.getRunningTrackSettings?.();
+          activeDeviceId = settings?.deviceId;
+        } catch (e) {
+          console.warn(e);
+        }
+
+        if (activeDeviceId && cameras.some((c) => c.id === activeDeviceId)) {
+          this.selectedCameraId = activeDeviceId;
+        } else if (!this.selectedCameraId) {
+          const preferredCameraId = barcode_scanner_utils.getPreferredCameraId(
+            cameras,
+            this.appStore.user.barcode_scanner_camera_id,
+          );
+          this.selectedCameraId = preferredCameraId || cameras[0].id;
+        }
       });
+    },
+    onCameraChange(newCameraId) {
+      if (!newCameraId) return;
+      if (newCameraId === this.selectedCameraId && !this.scannerError) return;
+      this.selectedCameraId = newCameraId;
+      this.appStore.setBarcodeScannerCameraId(newCameraId);
+      this.isSwitchingCamera = true;
+      this.stopQrcodeScanner()
+        .then(() => {
+          if (this.isUnmounted) return;
+          this.createQrcodeScanner(newCameraId);
+        })
+        .finally(() => {
+          this.isSwitchingCamera = false;
+        });
+    },
+    switchCameraNext() {
+      if (
+        !this.cameraList ||
+        this.cameraList.length <= 1 ||
+        this.isSwitchingCamera
+      ) {
+        return;
+      }
+      const currentIndex = this.cameraList.findIndex(
+        (camera) => camera.id === this.selectedCameraId,
+      );
+      const nextIndex =
+        currentIndex >= 0 ? (currentIndex + 1) % this.cameraList.length : 0;
+      const nextCamera = this.cameraList[nextIndex];
+      if (nextCamera) {
+        this.onCameraChange(nextCamera.id);
+      }
     },
     stopQrcodeScanner() {
       window.clearTimeout(this.scannerStartTimeout);
       this.scannerStartTimeout = null;
-      this.scanner?.stop();
-      this.scanner = null;
+      let stopPromise = Promise.resolve();
+      if (this.scanner) {
+        stopPromise = this.scanner.stop();
+        this.scanner = null;
+      }
+      return stopPromise;
     },
     onScanStateChanged(state) {
       if (state.detail.state === "detected") {
