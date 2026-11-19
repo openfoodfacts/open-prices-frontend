@@ -42,6 +42,15 @@ def get_country_osm_name(osm_countries, country_code_2):
     return None
 
 
+def get_country_currency_codes(node):
+    """
+    Taxonomy property "currency_codes" (ISO 4217, comma-separated, main one first)
+    e.g. "BTN,INR" -> ["BTN", "INR"]
+    """
+    currency_codes = node.properties.get("currency_codes", {}).get("en", "")
+    return [code.strip() for code in currency_codes.split(",") if code.strip()]
+
+
 if __name__ == "__main__":
     # Step 1a: get the full taxonomy
     TAXONOMY_FULL: Taxonomy = get_taxonomy(
@@ -65,6 +74,7 @@ if __name__ == "__main__":
             "name": node.get_localized_name("en"),
             "country_code_2": country_code,
             "osm_name": get_country_osm_name(OPENSTREETMAP_COUNTRIES, country_code),
+            "currency_codes": get_country_currency_codes(node),
         }
         countries.append(country_node)
     print("Total number of countries:", len(countries))
