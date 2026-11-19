@@ -49,8 +49,11 @@ describe("Basic tests", () => {
       { fixture: "product_3011360030498_prices.json" },
     );
     cy.intercept(
-      "GET",
-      "http://127.0.0.1:8000/api/v1/prices?app_name=Open+Prices+Web+App&page=1&size=10&order_by=-date&category_tag=en%3Apitted-apricot",
+      {
+        method: "GET",
+        pathname: "/api/v1/prices",
+        query: { category_tag: "en:pitted-apricot" },
+      },
       { fixture: "pitted_apricot_prices.json" },
     );
     cy.intercept(
