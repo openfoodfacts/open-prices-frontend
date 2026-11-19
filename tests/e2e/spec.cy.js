@@ -202,6 +202,28 @@ describe("Basic tests", () => {
     cy.contains("Load more").should("not.exist");
   });
 
+  it("toggles proof previews on a raw product page", () => {
+    cy.intercept("GET", "**/img/0001/TWZOnskQhz.webp", {
+      headers: { "content-type": "image/svg+xml" },
+      body: '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"/>',
+    });
+    cy.visit("/products/en:pitted-apricot");
+    cy.get('[data-name="price-card"]').should("have.length", 2);
+    cy.get('[data-name="price-card"] img[alt="Proof image"]').should(
+      "not.exist",
+    );
+    cy.contains("button", "Show proof images").click();
+    cy.get('[data-name="price-card"]').first().scrollIntoView();
+    cy.get('[data-name="price-card"] img[alt="Proof image"]')
+      .first()
+      .should("have.attr", "src")
+      .and("include", "/img/0001/TWZOnskQhz.webp");
+    cy.contains("button", "Show proof images").click();
+    cy.get('[data-name="price-card"] img[alt="Proof image"]').should(
+      "not.exist",
+    );
+  });
+
   it("displays an unknown raw product page", () => {
     cy.visit("/products/en:aaaaaaaaaaaa");
     cy.contains("Welcome to Open Prices!").should("not.exist");

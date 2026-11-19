@@ -1,5 +1,11 @@
 <template>
   <v-card v-if="price" :id="'price_' + price.id" data-name="price-card">
+    <v-img
+      v-if="proofImageUrl"
+      :src="proofImageUrl"
+      :alt="$t('Common.ProofImage')"
+      height="150"
+    />
     <v-card-text class="pa-2">
       <v-row>
         <v-col v-if="!hideProductImage" class="pr-0" style="max-width: 20%">
@@ -85,6 +91,7 @@ import { mapStores } from "pinia";
 import { useAppStore } from "../store";
 import constants from "../constants";
 import data_utils from "../utils/data.js";
+import proof_utils from "../utils/proof.js";
 
 export default {
   components: {
@@ -109,6 +116,10 @@ export default {
     product: {
       type: Object,
       default: null,
+    },
+    showProofImage: {
+      type: Boolean,
+      default: false,
     },
     hideProductImage: {
       type: Boolean,
@@ -170,6 +181,12 @@ export default {
     };
   },
   computed: {
+    proofImageUrl() {
+      if (!this.showProofImage || !this.price?.proof) return null;
+      const path =
+        this.price.proof.image_thumb_path || this.price.proof.file_path;
+      return path ? proof_utils.getImageFullUrl(path) : null;
+    },
     ...mapStores(useAppStore),
     hasPrice() {
       return !!this.price;
