@@ -119,6 +119,8 @@ export default {
     "https://github.com/openfoodfacts/open-prices/discussions/562",
   APP_GITHUB_CHALLENGE_DISCUSSION_URL:
     "https://github.com/openfoodfacts/open-prices/discussions/509",
+  APP_GITHUB_MISSING_CATEGORIES_URL:
+    "https://github.com/openfoodfacts/open-prices-frontend/issues/1048",
   APP_HUGGING_FACE_URL:
     "https://huggingface.co/datasets/openfoodfacts/open-prices",
   APP_DATA_GOUV_URL: "https://www.data.gouv.fr/fr/datasets/open-prices/",

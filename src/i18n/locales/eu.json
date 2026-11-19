@@ -86,7 +86,9 @@
 			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
+			"CategoryHelpText": "This list is a selection of categories for products sold without barcode: raw & bulk food (fruits, vegetables, meats...) from Open Food Facts, and a few non-food categories (fuels, tickets...) from Open Products Facts.",
 			"CategoryLabel": "Kategoria",
+			"CategoryNotFound": "No category found. Missing? Let us know {url}!",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
 			"Scan": "Eskaneatu",
@@ -628,7 +630,7 @@
 		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
 		"ParticipateInChallenges": "Participate in one of our challenges",
 		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
-		"ContributeToOFF": "Open Beauty Facts-i lagundu"
+		"ContributeToOFF": "Open Food Facts-i lagundu"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",

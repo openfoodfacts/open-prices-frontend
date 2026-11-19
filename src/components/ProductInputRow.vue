@@ -64,6 +64,9 @@
     <v-col cols="6">
       <div class="text-body-2 required">
         {{ $t("AddPriceSingle.ProductInfo.CategoryLabel") }}
+        <InfoTooltipIcon>
+          {{ $t("AddPriceSingle.ProductInfo.CategoryHelpText") }}
+        </InfoTooltipIcon>
       </div>
       <v-autocomplete
         v-model="productForm.category_tag"
@@ -78,7 +81,26 @@
         :item-title="(item) => item.name"
         :item-value="(item) => item.id"
         hide-details="auto"
-      />
+      >
+        <template #no-data>
+          <v-list-item>
+            <i18n-t
+              keypath="AddPriceSingle.ProductInfo.CategoryNotFound"
+              tag="span"
+            >
+              <template #url>
+                <a
+                  :href="APP_GITHUB_MISSING_CATEGORIES_URL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-lowercase"
+                  >{{ $t("Common.Here") }}</a
+                >
+              </template>
+            </i18n-t>
+          </v-list-item>
+        </template>
+      </v-autocomplete>
     </v-col>
     <v-col v-if="!productCategoryIsNonFood" cols="6">
       <div class="text-body-2">
@@ -145,6 +167,9 @@ export default {
     BarcodeScannerDialog: defineAsyncComponent(
       () => import("../components/BarcodeScannerDialog.vue"),
     ),
+    InfoTooltipIcon: defineAsyncComponent(
+      () => import("../components/InfoTooltipIcon.vue"),
+    ),
   },
   props: {
     productForm: {
@@ -183,6 +208,8 @@ export default {
       originTags: [], // list of origins tags for autocomplete  // see mounted
       labelTags: [], // list of labels tags for checkboxes  // see mounted
       barcodeScannerDialog: false,
+      APP_GITHUB_MISSING_CATEGORIES_URL:
+        constants.APP_GITHUB_MISSING_CATEGORIES_URL,
     };
   },
   computed: {
@@ -255,7 +282,7 @@ export default {
       ? this.productForm.type
       : this.productForm.product_code
         ? constants.PRICE_TYPE_PRODUCT
-        : this.appStore.user.last_product_product_used;
+        : this.appStore.user.last_product_type_used;
     if (
       this.productForm.product_code &&
       this.productForm.product?.code !== this.productForm.product_code

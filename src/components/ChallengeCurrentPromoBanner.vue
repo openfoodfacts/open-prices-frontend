@@ -36,6 +36,7 @@
 <script>
 import { defineAsyncComponent } from "vue";
 import constants from "../constants";
+import date_utils from "../utils/date.js";
 
 export default {
   components: {
@@ -57,22 +58,20 @@ export default {
     isNew() {
       // a challenge usually lasts 1 month
       // new = first 7 days of the challenge
-      const today = new Date();
-      const startDate = new Date(this.challenge.start_date);
-      const sevenDaysFromStartDate = new Date(
-        startDate.getTime() + 7 * 24 * 60 * 60 * 1000,
-      );
-      return today <= sevenDaysFromStartDate;
+      const now = new Date();
+      const eighthDay = date_utils.fromDateString(this.challenge.start_date);
+      eighthDay.setDate(eighthDay.getDate() + 7);
+      return now < eighthDay;
     },
     isEndingSoon() {
       // a challenge usually lasts 1 month
-      // ending soon = last 7 days of the challenge
-      const today = new Date();
-      const endDate = new Date(this.challenge.end_date);
-      const sevenDaysBeforeEndDate = new Date(
-        endDate.getTime() - 7 * 24 * 60 * 60 * 1000,
+      // ending soon = last 7 days of the challenge (end_date included)
+      const now = new Date();
+      const seventhToLastDay = date_utils.fromDateString(
+        this.challenge.end_date,
       );
-      return today >= sevenDaysBeforeEndDate;
+      seventhToLastDay.setDate(seventhToLastDay.getDate() - 6);
+      return now >= seventhToLastDay;
     },
     getUrl() {
       return `/challenge`;

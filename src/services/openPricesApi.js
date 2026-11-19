@@ -467,7 +467,7 @@ export default {
     return extraPriceCreateOrUpdateFiltering(data)
       .then((filteredData) => {
         // update store
-        store.user.last_product_product_used = filteredData.product_code
+        store.user.last_product_type_used = filteredData.product_code
           ? constants.PRICE_TYPE_PRODUCT
           : constants.PRICE_TYPE_CATEGORY;
         // API call

@@ -147,7 +147,10 @@ export default {
     getTodayPriceCount() {
       this.loading = true;
       return openPricesApi
-        .getPrices({ created__gte: date_utils.currentStartOfDay(), size: 1 })
+        .getPrices({
+          created__gte: date_utils.currentLocalStartOfDay(),
+          size: 1,
+        })
         .then((data) => {
           this.todayPriceCount = data.total;
         })

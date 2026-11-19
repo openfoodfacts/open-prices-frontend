@@ -49,10 +49,10 @@ What it does:
 
 ### Stats
 
-- Last run: 2026-11-01
-- Input (OFF taxonomy): 14866 categories
-- Input (OPF taxonomy): 5519 categories
-- Output (JSON): 3233 categories x 150 languages
+- Last run: 2026-11-15
+- Input (OFF taxonomy): 14946 categories
+- Input (OPF taxonomy): 5560 categories
+- Output (JSON): 3294 categories x 150 languages
 
 ## Countries (with translations)
 
@@ -79,7 +79,7 @@ What it does:
 
 ### Stats
 
-- Last run: 2026-11-01
+- Last run: 2026-11-15
 - Input (Taxonomy): 268 countries
 - Output (JSON): 252 countries x 150 languages
 
@@ -87,12 +87,12 @@ What it does:
 
 ### Goal
 
-Create a JSON file with the list of countries (enriched with OSM name)
+Create a JSON file with the list of countries (enriched with OSM name & currencies)
 
 ### Open Food Facts taxonomy
 
 File viewable here: [taxonomies/countries](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/countries.txt)
-Useful node properties: `country_code_2:en:`, `country_code_3:en:`, `language_codes:en:`, `osm_relation:en:`, `wikidata:en:` (not all are filled)
+Useful node properties: `country_code_2:en:`, `country_code_3:en:`, `currency_codes:en:`, `language_codes:en:`, `osm_relation:en:`, `wikidata:en:` (not all are filled)
 
 ### OpenStreetMap csv
 
@@ -142,8 +142,8 @@ What it does:
 
 ### Stats
 
-- Last run: 2026-11-01
-- Input (Taxonomy): 3082 labels
+- Last run: 2026-11-15
+- Input (Taxonomy): 3083 labels
 - Output (JSON): 1 labels x 150 languages
 
 ## Languages
@@ -183,6 +183,6 @@ What it does:
 
 ### Stats
 
-- Last run: 2026-11-01
+- Last run: 2026-11-15
 - Input (Taxonomy): 722 origins
 - Output (JSON): 264 origins x 150 languages

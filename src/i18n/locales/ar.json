@@ -86,7 +86,9 @@
 			"SelectRecentProof": "اختر دليلاً حديثاً"
 		},
 		"ProductInfo": {
+			"CategoryHelpText": "This list is a selection of categories for products sold without barcode: raw & bulk food (fruits, vegetables, meats...) from Open Food Facts, and a few non-food categories (fuels, tickets...) from Open Products Facts.",
 			"CategoryLabel": "فئة",
+			"CategoryNotFound": "No category found. Missing? Let us know {url}!",
 			"OriginLabel": "أصل",
 			"ProductBarcode": "الباركود الخاص بالمنتج",
 			"Scan": "مسح",
@@ -628,7 +630,7 @@
 		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
 		"ParticipateInChallenges": "Participate in one of our challenges",
 		"LearnMoreAboutCommunity": "Learn more about the Open Prices project and its community",
-		"ContributeToOFF": "Contribute to Open Food Facts\nالمساهمة فى حقائق الغذاء المفتوح"
+		"ContributeToOFF": "Contribute to Open Food Facts\nالمساهمة فى Open Food Facts"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "اختر إحدى عملاتك المفضلة",

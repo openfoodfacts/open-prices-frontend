@@ -86,7 +86,9 @@
 			"SelectRecentProof": "Selecciona una prueba reciente"
 		},
 		"ProductInfo": {
+			"CategoryHelpText": "This list is a selection of categories for products sold without barcode: raw & bulk food (fruits, vegetables, meats...) from Open Food Facts, and a few non-food categories (fuels, tickets...) from Open Products Facts.",
 			"CategoryLabel": "Categoría",
+			"CategoryNotFound": "No category found. Missing? Let us know {url}!",
 			"OriginLabel": "Origen",
 			"ProductBarcode": "Código de barras del producto",
 			"Scan": "Escanear",
