@@ -274,7 +274,7 @@
 		"Error": "Fejlmelding",
 		"Experiment": "Eksperiment",
 		"Experiments": "Eksperimenter",
-		"Explore": "Udforske",
+		"Explore": "Udforsk",
 		"FromPriceTag": "Fra en prislappe",
 		"FromPriceTags": "Fra prisskilte",
 		"FromReceipt": "Fra en kvittering",
@@ -501,7 +501,7 @@
 		"ServerError": "Error: server error",
 		"Settings": "Indstillinger",
 		"SHOP_IMPORT": "Butik import",
-		"SignInOFFAccount": "Sign in with your {url} credentials",
+		"SignInOFFAccount": "Log ind med dine {url} loginoplysninger",
 		"SignedIn": "Logget ind!",
 		"SignIn": "Log ind",
 		"SignOut": "Log ud",
@@ -572,7 +572,7 @@
 		"WithoutAPrice": "Uden en pris",
 		"Year": "År",
 		"Years": "År",
-		"YearCount": "{count} years | {count} year | {count} years",
+		"YearCount": "{count} år | {count} år | {count} år",
 		"Yes": "Ja",
 		"No": "Nej",
 		"Food": "Fødevare",
@@ -627,7 +627,7 @@
 	"Contribute": {
 		"OtherWaysToContribute": "Andre måder at bidrage på",
 		"FidelityCardGDPRRequest": "Har du et loyalitetskort? Du kan {gdpr_request_link}",
-		"GDPRRequestLink": "make a GDPR request and upload the list of prices",
+		"GDPRRequestLink": "foretage en GDPR-anmodning og upload herefter listen med priser",
 		"ParticipateInChallenges": "Deltag i en af vores udfordringer",
 		"LearnMoreAboutCommunity": "Lær mere om Open Prices-projektet og dets fællesskab",
 		"ContributeToOFF": "Bidrag til Open Food Facts"
@@ -716,12 +716,12 @@
 		"GeolocationFailed": "Din position kunne ikke hentes. Kontroller browserens placeringstilladelse, eller vælg en placering i stedet.",
 		"GeolocationUnsupported": "Placering understøttes ikke af denne browser. Vælg en placering i stedet.",
 		"LocationSourceHelp": "Det valgte sted bruges kun til dets koordinater. Price-adresser kommer fra Open Prices-lokationsdata beriget fra OpenStreetMap.",
-		"MissingCoordinates": "This place has no usable coordinates.",
+		"MissingCoordinates": "Dette sted har ingen brugbare koordinater.",
 		"Radius": "Radius",
 		"RadiusValue": "{radius} km",
-		"SelectedLocation": "Selected location",
+		"SelectedLocation": "Valgt placering",
 		"Title": "Priser i nærheden",
-		"UseCurrentPosition": "Use my position"
+		"UseCurrentPosition": "Brug min position"
 	},
 	"NotFound": {
 		"Subtitle": "Den side, du anmodede om, ser ikke ud til at eksistere...",
@@ -809,7 +809,7 @@
 		"ReceiptAIWarning": "AI vil undersøge din kvittering for at udtrække priser.",
 		"PromoProofPriceTagAddMultiple": "For at uploade flere prismærker (samme butikslokation og dato), klik her!",
 		"PromoReceiptAssistant": "Eksperiment: Prøv den nye kvitteringsassistent til automatisk at udtrække priser fra dine kvitteringer!",
-		"ProofUploadProgressWarning": "Do not close this tab or refresh the page while your pictures are uploading!"
+		"ProofUploadProgressWarning": "Luk ikke denne fane eller opdater siden, mens dine billeder uploades!"
 	},
 	"ProofCard": {
 		"Proof": "Bevis",
@@ -843,14 +843,14 @@
 		"Success": "Bevis redigeret!"
 	},
 	"ReceiptAnonymize": {
-		"Title": "Anonymize a receipt",
+		"Title": "Anonymisér en kvittering",
 		"Save": "Gem",
-		"EditRedactBoxes": "Edit & redact boxes",
-		"EnableBoxDrawMode": "Enable box draw mode",
-		"EnableBoxRemoveMode": "Enable box remove mode",
-		"WaitingForReceiptUpload": "Waiting for receipt upload...",
-		"WaitingForAnonymizationPrediction": "Waiting for anonymization prediction...",
-		"Anonymize": "Anonymize"
+		"EditRedactBoxes": "Rediger felter",
+		"EnableBoxDrawMode": "Aktivér tegnetilstand for bokse",
+		"EnableBoxRemoveMode": "Aktiver boks fjern tilstand",
+		"WaitingForReceiptUpload": "Venter på kvittering upload...",
+		"WaitingForAnonymizationPrediction": "Venter på anonymisering forudsigelse...",
+		"Anonymize": "Anonymiser"
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Tilføj nyt element",
@@ -865,7 +865,7 @@
 		"WaitForExtraction": "Udtrækker automatisk varer fra kvitteringen, vent venligst..."
 	},
 	"ReceiptCrop": {
-		"Title": "Crop a receipt"
+		"Title": "Beskær en kvittering"
 	},
 	"Reuses": {
 		"AlertNew": "Mangler din genbrug? Fortæl os {url}!",
@@ -915,7 +915,7 @@
 			"Title": "Badges"
 		},
 		"Explore": {
-			"Title": "Udforske"
+			"Title": "Udforsk"
 		},
 		"Locations": {
 			"Title": "Placeringer"
@@ -964,7 +964,7 @@
 		},
 		"Home": {
 			"Title": "Hjem",
-			"Help": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more!"
+			"Help": "{op_name} er et projekt, der indsamler og deler priser på produkter over hele verden. Det er et offentligt tilgængeligt datasæt, der kan bruges til forskning, analyse og meget mere!"
 		},
 		"Dashboard": {
 			"Title": "Oversigt"
@@ -1028,14 +1028,14 @@
 		},
 		"Challenges": {
 			"Title": "Udfordringer",
-			"Help": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n\nCheck the ongoing challenges below to participate, or visit the past challenges data."
+			"Help": "Udfordringer er en måde for fællesskabet at fokusere deres indsats og indsamle priser på specifikke produkter. De varer normalt en måned, og bidragydere rangeres efter deres bidrag.\n\nTjek de igangværende udfordringer nedenfor for at deltage, eller besøg data om tidligere udfordringer."
 		},
 		"CommunityChallenge": {
 			"Title": "Fællesskabsudfordring"
 		},
 		"Validate": {
 			"Title": "Bekræftelse",
-			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. When you confirm a price, it's added to the public database and shared with the community.\n\nUnreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
+			"Help": "Efter et par sekunder udtrækkes prismærkeoplysninger automatisk fra de uploadede billeder, men der er stadig behov for hjælp til at validere nøjagtigheden. Dette gøres som en indsats fra fællesskabets side.\n\nFor hver vist prismærke skal du kontrollere, at prisen, stregkoden eller kategorien er korrekte, rette dem om nødvendigt og bekræfte. Når du bekræfter en pris, føjes den til den offentlige database og deles med fællesskabet.\n\nUlæselige eller ugyldige priser kan markeres som fejl. Hvis du er usikker, kan du ignorere prisen og lade en anden bidragyder prøve den."
 		},
 		"ValidatePrices": {
 			"Title": "Validér priser"
@@ -1054,7 +1054,7 @@
 		"Password": "Adgangskode",
 		"Title": "Log ind",
 		"SignInOFFAccount": "Log på med din {url} konto",
-		"SignInWithOpenFoodFactsAuth": "Sign in with {off_name} auth",
+		"SignInWithOpenFoodFactsAuth": "Log ind med {off_name} godkendelse",
 		"UsernameLabel": "Brugernavn",
 		"WrongCredentials": "Fejl: forkerte loginoplysninger"
 	},
@@ -1084,8 +1084,8 @@
 		"LastUpdated": "Sidst opdateret {date}"
 	},
 	"Surveys": {
-		"HelpFeatures": "Help us build the next features in {op_name}!",
-		"SurveyGamification": "Take our 1-minute gamification survey."
+		"HelpFeatures": "Hjælp os med at bygge de næste funktioner i {op_name}!",
+		"SurveyGamification": "Tag vores 1-minuts gamification-undersøgelse."
 	},
 	"UserDashboard": {
 		"LatestPrices": "Seneste priser",
@@ -1114,7 +1114,7 @@
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
 		"BarcodeScanner": "Stregkodescanner",
-		"BarcodeScannerLibrary": "Barcode scanner library",
+		"BarcodeScannerLibrary": "Stregkode scanner bibliotek",
 		"DefaultMode": "Standardtilstand",
 		"FavoriteCurrencies": "Foretrukne valutaer",
 		"CurrencyRequired": "Mindst én valuta er påkrævet",
