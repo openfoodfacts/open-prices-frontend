@@ -12,6 +12,7 @@ describe("Price list", () => {
   it("Shows no empty message when there are prices", () => {
     cy.intercept("GET", /\/api\/v1\/prices\?/, { fixture: "prices.json" });
     cy.visit("/prices");
+    cy.get('[data-name="price-card"]').should("have.length.greaterThan", 0);
     cy.get('[data-name="price-list-empty-alert"]').should("not.exist");
   });
 });
