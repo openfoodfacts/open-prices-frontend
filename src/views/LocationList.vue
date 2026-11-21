@@ -50,6 +50,7 @@ import constants from "../constants";
 import utils from "../utils.js";
 
 export default {
+  name: "LocationList", // needed by KeepAlive (see App.vue)
   components: {
     CountTextChip: defineAsyncComponent(
       () => import("../components/CountTextChip.vue"),
@@ -98,7 +99,9 @@ export default {
   watch: {
     $route(newRoute, oldRoute) {
       // only called when query changes to avoid having an API call when the path changes
+      // skipped when the view is inactive (kept alive): activated() handles it
       if (
+        this.isActive &&
         oldRoute.path === newRoute.path &&
         JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)
       ) {
@@ -106,24 +109,34 @@ export default {
       }
     },
   },
-  mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
-    this.currentType =
-      this.$route.query[constants.TYPE_PARAM] || this.currentType;
-    this.currentOrder =
-      this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
-    this.initLocationList();
-    // load more
+  created() {
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
+  },
+  activated() {
+    // called on mount, and when coming back to the view (kept alive, see App.vue)
+    this.isActive = true;
+    // (re)load only if the route changed since the last load
+    if (this.$route.fullPath !== this.loadedRouteFullPath) {
+      this.currentFilterList = utils.toArray(
+        this.$route.query[constants.FILTER_PARAM],
+      );
+      this.currentType = this.$route.query[constants.TYPE_PARAM] || "";
+      this.currentOrder =
+        this.$route.query[constants.ORDER_PARAM] ||
+        constants.LOCATION_ORDER_LIST[0].key;
+      this.initLocationList();
+    }
+    // load more
     window.addEventListener("scroll", this.handleDebouncedScroll);
   },
-  unmounted() {
+  deactivated() {
+    // called when leaving the view, and on unmount
+    this.isActive = false;
     window.removeEventListener("scroll", this.handleDebouncedScroll);
   },
   methods: {
     initLocationList() {
+      this.loadedRouteFullPath = this.$route.fullPath;
       this.locationList = [];
       this.locationTotal = null;
       this.locationPage = 0;

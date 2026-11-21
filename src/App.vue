@@ -5,7 +5,21 @@
     <v-main>
       <v-container>
         <Breadcrumbs />
-        <router-view />
+        <!-- keep the list views in memory, to avoid re-fetching the data (and losing the loaded pages) when navigating back -->
+        <router-view v-slot="{ Component }">
+          <keep-alive
+            :include="[
+              'PriceList',
+              'ProofList',
+              'LocationList',
+              'ProductList',
+              'CountryList',
+            ]"
+            :max="5"
+          >
+            <component :is="Component" />
+          </keep-alive>
+        </router-view>
       </v-container>
     </v-main>
 
