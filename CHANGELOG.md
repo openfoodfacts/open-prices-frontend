@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.179.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.178.1...v1.179.0) (2026-11-21)
+
+
+### Features
+
+* **Price validation:** create the price & link the price tag in a single API call ([#2534](https://github.com/openfoodfacts/open-prices-frontend/issues/2534)) ([19d51b4](https://github.com/openfoodfacts/open-prices-frontend/commit/19d51b468d4f42812e89f0ed64277b869a941342))
+* **Proof Price Tag Assistant:** create the price & link the price tag in a single API call ([#2533](https://github.com/openfoodfacts/open-prices-frontend/issues/2533)) ([d88b329](https://github.com/openfoodfacts/open-prices-frontend/commit/d88b32947cb4544846e0ad6cba7d4c43abfd334d))
+
+
+### Bug Fixes
+
+* **Price add:** remember the last product type used (store key typo) ([#2536](https://github.com/openfoodfacts/open-prices-frontend/issues/2536)) ([cb4c49a](https://github.com/openfoodfacts/open-prices-frontend/commit/cb4c49abb5f560b1d35f54e538a07f54df10304c))
+
+
+### Technical
+
+* **CodeRabbit:** also review stacked PRs (any base branch) ([#2538](https://github.com/openfoodfacts/open-prices-frontend/issues/2538)) ([102221c](https://github.com/openfoodfacts/open-prices-frontend/commit/102221cdcb3509ca5b6cfdb968dc60bc53a59b1e))
+* **Data:** update generated data from taxonomies ([#2531](https://github.com/openfoodfacts/open-prices-frontend/issues/2531)) ([b03f792](https://github.com/openfoodfacts/open-prices-frontend/commit/b03f7928588cb0d08a15ac1ec01492459b2d27c4))
+* **GitHub:** add a PR template (includes LLM usage disclosure) ([#2535](https://github.com/openfoodfacts/open-prices-frontend/issues/2535)) ([a75e7dc](https://github.com/openfoodfacts/open-prices-frontend/commit/a75e7dc5fbc62118859e57d48ee4ec03eac50514))
+* **Settings:** get the currency list from the countries taxonomy ([#2537](https://github.com/openfoodfacts/open-prices-frontend/issues/2537)) ([2d9616f](https://github.com/openfoodfacts/open-prices-frontend/commit/2d9616ff80a7a7522969a55ed69595e68d1953b9))
+
 ## [1.178.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.178.0...v1.178.1) (2026-11-09)
 
 
