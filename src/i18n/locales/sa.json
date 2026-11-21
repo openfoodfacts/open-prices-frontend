@@ -444,6 +444,7 @@
 		"PricePerMissing": "मूल्यं प्रति लापता",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "मूल्यं पूर्वमेव अपलोड् कृतम्",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "मूल्यं अपलोड् कर्तुं सज्जम्",
 		"PricesAlreadyUploaded": "मूल्यानि पूर्वमेव अपलोड् कृताः",
 		"PricesAll": "सर्वाणि मूल्यानि",
