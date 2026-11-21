@@ -444,6 +444,7 @@
 		"PricePerMissing": "Yo'qolgan uchun narx",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Narx allaqachon yuklangan",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Narx yuklashga tayyor",
 		"PricesAlreadyUploaded": "Narxlar allaqachon yuklangan",
 		"PricesAll": "Barcha narxlar",
