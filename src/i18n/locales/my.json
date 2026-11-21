@@ -444,6 +444,7 @@
 		"PricePerMissing": "တစ်ထည်ချင်း ပျောက်နေသည်။",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "ဈေးတင်ပြီးပြီ။",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "စျေးနှုန်းတင်ရန် အဆင်သင့်ဖြစ်နေပါပြီ။",
 		"PricesAlreadyUploaded": "စျေးနှုန်းများ တင်ပြီးဖြစ်ပါသည်။",
 		"PricesAll": "ဈေးနှုန်းအားလုံး",
