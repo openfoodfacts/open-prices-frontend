@@ -444,6 +444,7 @@
 		"PricePerMissing": "Prìs gach fear a tha a dhìth",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Prìs air a luchdadh suas mu thràth",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Prìs deiseil airson a luchdachadh suas",
 		"PricesAlreadyUploaded": "Prìsean air an luchdachadh suas mu thràth",
 		"PricesAll": "A h-uile prìs",
