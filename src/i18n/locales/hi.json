@@ -444,6 +444,7 @@
 		"PricePerMissing": "प्रति गुमशुदा कीमत",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "मूल्य पहले ही अपलोड किया जा चुका है",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "मूल्य अपलोड करने के लिए तैयार",
 		"PricesAlreadyUploaded": "कीमतें पहले ही अपलोड की जा चुकी हैं",
 		"PricesAll": "सभी कीमतें",
