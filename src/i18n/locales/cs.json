@@ -444,6 +444,7 @@
 		"PricePerMissing": "Cena za chybějící",
 		"PriceDiscountInvalid": "Zlevněná cena je vyšší než plná cena",
 		"PriceAlreadyUploaded": "Cena již nahrána",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Cena připravena k nahrání",
 		"PricesAlreadyUploaded": "Ceny již nahrány",
 		"PricesAll": "Všechny ceny",
