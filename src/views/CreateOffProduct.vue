@@ -164,6 +164,8 @@
               item-value="code"
               density="compact"
               variant="outlined"
+              :rules="[fieldRequired]"
+              required
             />
 
             <div class="text-body-2">
@@ -289,7 +291,7 @@
                   color="primary"
                   variant="flat"
                   type="submit"
-                  :disabled="!productForm.flavor"
+                  :disabled="!productForm.flavor || !productLanguageCode"
                 >
                   {{ $t("CreateOffProduct.CreateProduct") }}
                 </v-btn>
@@ -454,7 +456,9 @@ export default {
       product: null,
       productForm: {},
       flavorList: constants.PRODUCT_SOURCE_LIST,
-      languageList,
+      languageList: languageList.filter(({ code }) =>
+        /^[a-z]{2}(?:[_-]|$)/.test(code),
+      ),
       countryTags: [], // list of country tags for autocomplete  // see mounted
       priceList: [],
       shownProofIndex: 0,
@@ -472,6 +476,16 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    defaultProductLanguage() {
+      const language = this.appStore.getUserLanguage;
+      return this.languageList.some((item) => item.code === language)
+        ? language
+        : "en";
+    },
+    productLanguageCode() {
+      const code = this.productForm.product_language?.split(/[_-]/)[0];
+      return /^[a-z]{2}$/.test(code) ? code : null;
+    },
     stepItemList() {
       return [
         {
@@ -645,9 +659,7 @@ export default {
                 : null,
               stores: stores,
               countries: countries,
-              product_language:
-                lastPrice.location.osm_address_country_code.toLowerCase() ||
-                "en",
+              product_language: this.defaultProductLanguage,
               quantity: "",
               brands: [],
               categories: [],
@@ -658,7 +670,7 @@ export default {
               ...this.productForm,
               product_name: null,
               stores: [],
-              product_language: "en",
+              product_language: this.defaultProductLanguage,
               countries: [],
               quantity: "",
               brands: [],
@@ -700,14 +712,16 @@ export default {
         });
     },
     createProduct() {
+      if (!this.productLanguageCode) return;
       this.step = 3;
       this.loading = true;
       // create product
       let inputData = {
         flavor: this.productForm.flavor,
-        product_language_code: this.productForm.product_language,
+        product_language_code: this.productLanguageCode,
         update_params: {
           ...this.productForm,
+          product_language: this.productLanguageCode,
           categories: this.productForm.categories.join(","),
           stores: this.productForm.stores.join(","),
           countries: this.productForm.countries
@@ -723,7 +737,7 @@ export default {
             inputData = {
               image_data_base64: drawnImageBase64,
               flavor: this.productForm.flavor,
-              product_language_code: this.productForm.product_language,
+              product_language_code: this.productLanguageCode,
             };
             openPricesApi
               .updateOffProductImage(this.productForm.product_code, inputData)
