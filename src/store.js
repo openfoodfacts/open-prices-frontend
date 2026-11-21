@@ -32,6 +32,7 @@ export const useAppStore = defineStore("app", {
       barcode_scanner_default_mode:
         constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key,
       barcode_scanner_library: constants.BARCODE_SCANNER_DISPLAY_LIST[0].key,
+      barcode_scanner_camera_id: null,
     },
   }),
   getters: {
@@ -158,6 +159,9 @@ export const useAppStore = defineStore("app", {
     },
     setPreferedTheme(theme) {
       this.user.preferedTheme = theme;
+    },
+    setBarcodeScannerCameraId(cameraId) {
+      this.user.barcode_scanner_camera_id = cameraId;
     },
   },
   // pinia-plugin-persistedstate
