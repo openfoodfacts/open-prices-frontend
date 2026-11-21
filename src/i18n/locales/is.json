@@ -444,6 +444,7 @@
 		"PricePerMissing": "Verð á hverja vantar",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Verð hefur þegar verið hlaðið upp",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Verð tilbúið til upphleðslu",
 		"PricesAlreadyUploaded": "Verð þegar hlaðið upp",
 		"PricesAll": "Öll verð",
