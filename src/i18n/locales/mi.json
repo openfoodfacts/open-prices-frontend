@@ -444,6 +444,7 @@
 		"PricePerMissing": "Utu mo ia ngaro",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Utu kua tukuna ake",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Kua reri te utu mo te tuku ake",
 		"PricesAlreadyUploaded": "Ko nga utu kua tukuna ake",
 		"PricesAll": "Ngā utu katoa",
