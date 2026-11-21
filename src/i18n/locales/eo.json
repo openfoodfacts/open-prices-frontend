@@ -444,6 +444,7 @@
 		"PricePerMissing": "Prezo por ĉiu mankanta",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Prezo jam alŝutita",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Prezo preta por esti alŝutita",
 		"PricesAlreadyUploaded": "Prezoj jam alŝutitaj",
 		"PricesAll": "Ĉiuj prezoj",
