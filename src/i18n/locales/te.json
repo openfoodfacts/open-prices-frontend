@@ -444,6 +444,7 @@
 		"PricePerMissing": "తప్పిపోయిన ప్రతి దానికి ధర",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "ధర ఇప్పటికే అప్‌లోడ్ చేయబడింది",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "ధర అప్‌లోడ్ చేయడానికి సిద్ధంగా ఉంది",
 		"PricesAlreadyUploaded": "ధరలు ఇప్పటికే అప్‌లోడ్ చేయబడ్డాయి",
 		"PricesAll": "అన్ని ధరలు",
