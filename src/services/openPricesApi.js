@@ -483,6 +483,32 @@ export default {
       .then((response) => response.json());
   },
 
+  createPriceTagPrice(priceTagId, inputData, source = null) {
+    // create the price & link the price tag in a single call
+    // (returns a 409 if the price tag was already handled)
+    const store = useAppStore();
+    // build body
+    const data = filterBodyWithAllowedKeys(inputData, PRICE_CREATE_FIELDS);
+    const endpointWithParams = `/price-tags/${priceTagId}/price?${buildURLParams({ app_page: source })}`;
+    return extraPriceCreateOrUpdateFiltering(data)
+      .then((filteredData) => {
+        // update store
+        store.user.last_product_type_used = filteredData.product_code
+          ? constants.PRICE_TYPE_PRODUCT
+          : constants.PRICE_TYPE_CATEGORY;
+        // API call
+        return fetchOpenPrices(
+          endpointWithParams,
+          {
+            method: "POST",
+            body: JSON.stringify(filteredData),
+          },
+          true,
+        );
+      })
+      .then((response) => response.json());
+  },
+
   getPrices(params = {}) {
     const defaultParams = {
       page: 1,
