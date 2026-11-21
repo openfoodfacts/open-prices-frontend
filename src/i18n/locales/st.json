@@ -444,6 +444,7 @@
 		"PricePerMissing": "Theko ka 'ngoe e sieo",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Theko e se e kentsoe",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Theko e se e loketse ho kenngoa",
 		"PricesAlreadyUploaded": "Litheko li se li kentsoe",
 		"PricesAll": "Litheko tsohle",
