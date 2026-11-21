@@ -444,6 +444,7 @@
 		"PricePerMissing": "ราคาต่อส่วนที่ขาดหาย",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "ราคาอัพโหลดเรียบร้อยแล้ว",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "ราคาพร้อมอัพโหลด",
 		"PricesAlreadyUploaded": "ราคาอัพโหลดเรียบร้อยแล้ว",
 		"PricesAll": "ราคาทั้งหมด",
