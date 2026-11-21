@@ -444,6 +444,7 @@
 		"PricePerMissing": "Vidiny isaky ny tsy hita",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Vidiny efa nampidirina",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Vidiny efa vonona hampiakarina",
 		"PricesAlreadyUploaded": "Vidy efa nampidirina",
 		"PricesAll": "Ny vidiny rehetra",
