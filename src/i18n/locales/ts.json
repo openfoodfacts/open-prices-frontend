@@ -444,6 +444,7 @@
 		"PricePerMissing": "Ntsengo hi ku kayivela",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Ntsengo se wu uploadiwile",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Price ready ku uploadiwa",
 		"PricesAlreadyUploaded": "Minxavo se yi uploadiwile",
 		"PricesAll": "Minxavo hinkwayo",
