@@ -444,6 +444,7 @@
 		"PricePerMissing": "ფასი ერთ ნაკლად",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "ფასი უკვე ატვირთულია",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "ფასი მზადაა ასატვირთად",
 		"PricesAlreadyUploaded": "ფასები უკვე ატვირთულია",
 		"PricesAll": "ყველა ფასი",
