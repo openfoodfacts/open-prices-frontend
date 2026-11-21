@@ -444,6 +444,7 @@
 		"PricePerMissing": "Presyo bawat nawawala",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Na-upload na ang presyo",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Handang ma-upload ang presyo",
 		"PricesAlreadyUploaded": "Na-upload na ang mga presyo",
 		"PricesAll": "Lahat ng presyo",
