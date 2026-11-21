@@ -444,6 +444,7 @@
 		"PricePerMissing": "Priz ar pezh a vank",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Priz pellgarget dija",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Priz prest da vezañ pellgarget",
 		"PricesAlreadyUploaded": "Prizioù pellgarget dija",
 		"PricesAll": "An holl brizioù",
