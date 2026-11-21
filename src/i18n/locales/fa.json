@@ -444,6 +444,7 @@
 		"PricePerMissing": "قیمت به ازای هر عدد گمشده",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "قیمت قبلاً آپلود شده است",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "قیمت آماده بارگذاری است",
 		"PricesAlreadyUploaded": "قیمت‌ها قبلاً بارگذاری شده‌اند",
 		"PricesAll": "همه قیمت‌ها",
