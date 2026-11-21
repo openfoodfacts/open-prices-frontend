@@ -416,7 +416,7 @@
 import { mapStores } from "pinia";
 import { defineAsyncComponent } from "vue";
 import constants from "../constants.js";
-import openPricesApi from "../services/openPricesApi";
+import openPricesApi, { OpenPricesApiError } from "../services/openPricesApi";
 import { useAppStore } from "../store.js";
 import geo_utils from "../utils/geo.js";
 import proof_utils from "../utils/proof.js";
@@ -809,11 +809,20 @@ export default {
           location_osm_type: this.proofObject.location_osm_type,
           proof_id: this.proofObject.id,
         };
-        openPricesApi.createPrice(priceData, this.$route.path).then((price) => {
-          // TODO: error handling
-          this.numberOfPricesAdded += 1;
-          this.updatePriceTag(productPriceForm.id, 1, price.id);
-        });
+        openPricesApi
+          .createPriceTagPrice(productPriceForm.id, priceData, this.$route.path)
+          .then(() => {
+            this.numberOfPricesAdded += 1;
+          })
+          .catch((error) => {
+            if (error instanceof OpenPricesApiError && error.status === 409) {
+              // already handled (by another user)
+              this.numberOfPricesAdded += 1;
+            } else {
+              // TODO: error handling
+              console.log(error);
+            }
+          });
       }
       this.loading = false;
       this.getNextProofSuggestions();
