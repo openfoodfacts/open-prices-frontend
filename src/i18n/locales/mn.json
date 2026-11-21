@@ -444,6 +444,7 @@
 		"PricePerMissing": "Дутуу үнэ",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Үнэ аль хэдийн байршуулсан",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Үнэ байршуулахад бэлэн байна",
 		"PricesAlreadyUploaded": "Үнийг аль хэдийн байршуулсан",
 		"PricesAll": "Бүх үнэ",
