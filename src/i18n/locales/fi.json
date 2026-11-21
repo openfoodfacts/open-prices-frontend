@@ -444,6 +444,7 @@
 		"PricePerMissing": "Hinta per puuttuva",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Hinta on jo ladattu",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Hinta ladattavissa",
 		"PricesAlreadyUploaded": "Hinnat on jo ladattu",
 		"PricesAll": "Kaikki hinnat",
