@@ -444,6 +444,7 @@
 		"PricePerMissing": "Pris pr. manglende",
 		"PriceDiscountInvalid": "Den nedsatte pris er højere end den fulde pris",
 		"PriceAlreadyUploaded": "Prisen er allerede uploadet",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Prisen er klar til at blive uploadet",
 		"PricesAlreadyUploaded": "Priserne er allerede uploadet",
 		"PricesAll": "Alle priser",
