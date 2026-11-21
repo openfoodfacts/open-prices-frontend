@@ -1,8 +1,4 @@
-import {
-  Html5Qrcode,
-  Html5QrcodeScannerState,
-  Html5QrcodeSupportedFormats,
-} from "html5-qrcode";
+import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
 
 const HTML5_QRCODE_DECODER_CONFIG = {
   // product barcodes only: fewer formats for ZXing to try on each frame
@@ -22,6 +18,8 @@ const HTML5_QRCODE_CAMERA_CONFIG = {
   fps: 10,
   qrbox: { width: 250, height: 150 },
 };
+
+let currentScanner;
 
 /**
  * Resolve the barcode scanner library to use ("off-barcode-scanner" or "html5-qrcode")
@@ -50,41 +48,51 @@ function getBarcodeScannerLibrary(userSetting) {
  * Start an html5-qrcode camera scanner inside the element with the given id.
  * Returns:
  * - started: a Promise that rejects if the camera can't be started
- * - stop(): releases the camera, can be called at any time (even while the camera is starting)
+ * - stop(): resolves once the camera is released, even if it is still starting
  */
 function startHtml5QrcodeScanner(elementId, onScanSuccess) {
+  const previousScannerStopped = currentScanner?.stop() || Promise.resolve();
   const scanner = new Html5Qrcode(elementId, HTML5_QRCODE_DECODER_CONFIG);
   let stopRequested = false;
-  let stopCalled = false;
+  let stopPromise;
 
   const stopScanner = () => {
-    if (stopCalled) return;
-    stopCalled = true;
-    scanner.stop().catch((error) => console.error(error));
+    if (!stopPromise) {
+      stopPromise = scanner.stop().catch((error) => console.error(error));
+    }
+    return stopPromise;
   };
 
-  const started = scanner
-    .start(
-      { facingMode: "environment" },
-      HTML5_QRCODE_CAMERA_CONFIG,
-      (decodedText) => onScanSuccess(decodedText),
-      () => {}, // called on every frame without a barcode
+  const started = previousScannerStopped
+    .then(() =>
+      scanner.start(
+        { facingMode: "environment" },
+        HTML5_QRCODE_CAMERA_CONFIG,
+        (decodedText) => {
+          if (!stopRequested) onScanSuccess(decodedText);
+        },
+        () => {}, // called on every frame without a barcode
+      ),
     )
     .then(() => {
       // stop was requested while the camera was starting
-      if (stopRequested) stopScanner();
+      if (stopRequested) return stopScanner();
     });
 
-  return {
+  const session = {
     started,
     stop() {
       stopRequested = true;
-      // html5-qrcode throws if stop() is called before the camera is started
-      if (scanner.getState() !== Html5QrcodeScannerState.NOT_STARTED) {
-        stopScanner();
-      }
+      // Wait for startup before stopping: html5-qrcode throws while it is starting.
+      return started
+        .then(stopScanner, () => {})
+        .then(() => {
+          if (currentScanner === session) currentScanner = null;
+        });
     },
   };
+  currentScanner = session;
+  return session;
 }
 
 export default {
