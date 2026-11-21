@@ -444,6 +444,7 @@
 		"PricePerMissing": "Ҫухалнӑ ҫыннӑн хакӗ",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Хакне ярса панӑ ӗнтӗ",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Хакне ярса пама хатӗр",
 		"PricesAlreadyUploaded": "Хаксем ӗнтӗ ярса панӑ",
 		"PricesAll": "Пур хак та",
