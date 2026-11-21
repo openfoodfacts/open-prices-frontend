@@ -444,6 +444,7 @@
 		"PricePerMissing": "紛失品1個あたりの価格",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "価格はすでにアップロードされています",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "価格はアップロード準備完了です",
 		"PricesAlreadyUploaded": "価格はすでにアップロードされています",
 		"PricesAll": "すべての価格",
