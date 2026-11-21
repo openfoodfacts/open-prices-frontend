@@ -444,6 +444,7 @@
 		"PricePerMissing": "Çmimi për person të zhdukur",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Çmimi është ngarkuar tashmë",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Çmimi gati për t'u ngarkuar",
 		"PricesAlreadyUploaded": "Çmimet janë ngarkuar tashmë.",
 		"PricesAll": "Të gjitha çmimet",
