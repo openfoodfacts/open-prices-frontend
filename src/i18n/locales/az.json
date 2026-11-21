@@ -444,6 +444,7 @@
 		"PricePerMissing": "Bir itkin düşən qiymət",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Qiymət artıq yüklənib",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Qiymət yüklənməyə hazırdır",
 		"PricesAlreadyUploaded": "Qiymətlər artıq yüklənib",
 		"PricesAll": "Bütün qiymətlər",
