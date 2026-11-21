@@ -444,6 +444,7 @@
 		"PricePerMissing": "Ціна за пропуск",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Ціну вже завантажено",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Ціна готова до завантаження",
 		"PricesAlreadyUploaded": "Ціни вже завантажено",
 		"PricesAll": "Всі ціни",
