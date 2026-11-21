@@ -444,6 +444,7 @@
 		"PricePerMissing": "ખૂટતી વસ્તુ દીઠ કિંમત",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "કિંમત પહેલેથી જ અપલોડ કરેલી છે.",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "કિંમત અપલોડ કરવા માટે તૈયાર છે",
 		"PricesAlreadyUploaded": "કિંમતો પહેલેથી જ અપલોડ કરેલી છે.",
 		"PricesAll": "બધી કિંમતો",
