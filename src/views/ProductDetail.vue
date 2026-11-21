@@ -58,6 +58,16 @@
           :currentDisplay="currentDisplay"
           @update:currentDisplay="updateDisplay($event)"
         />
+        <v-btn
+          v-if="currentDisplay === 'list'"
+          size="x-small"
+          prepend-icon="mdi-image-outline"
+          :active="showProofImages"
+          :aria-pressed="showProofImages"
+          @click="showProofImages = !showProofImages"
+        >
+          {{ $t("Common.ShowProofImages") }}
+        </v-btn>
       </template>
     </v-col>
   </v-row>
@@ -77,6 +87,7 @@
             :price="price"
             :product="product"
             :hideProductImage="true"
+            :showProofImage="showProofImages"
             :hideProductTitle="true"
             :hideProductDetailsRow="productIsCategory ? false : true"
             elevation="1"
@@ -184,6 +195,7 @@ export default {
       currentFilterList: [],
       currentOrder: constants.PRICE_ORDER_LIST[2].key, // date
       currentDisplay: constants.DISPLAY_LIST[0].key,
+      showProofImages: false,
     };
   },
   computed: {

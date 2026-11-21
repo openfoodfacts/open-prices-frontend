@@ -49,8 +49,11 @@ describe("Basic tests", () => {
       { fixture: "product_3011360030498_prices.json" },
     );
     cy.intercept(
-      "GET",
-      "http://127.0.0.1:8000/api/v1/prices?app_name=Open+Prices+Web+App&page=1&size=10&order_by=-date&category_tag=en%3Apitted-apricot",
+      {
+        method: "GET",
+        pathname: "/api/v1/prices",
+        query: { category_tag: "en:pitted-apricot" },
+      },
       { fixture: "pitted_apricot_prices.json" },
     );
     cy.intercept(
@@ -200,6 +203,28 @@ describe("Basic tests", () => {
     cy.get('[data-name="category-not-found-alert"]').should("have.length", 0);
     cy.get('[data-name="price-card"]').should("have.length", 2);
     cy.contains("Load more").should("not.exist");
+  });
+
+  it("toggles proof previews on a raw product page", () => {
+    cy.intercept("GET", "**/img/0001/TWZOnskQhz.webp", {
+      headers: { "content-type": "image/svg+xml" },
+      body: '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"/>',
+    });
+    cy.visit("/products/en:pitted-apricot");
+    cy.get('[data-name="price-card"]').should("have.length", 2);
+    cy.get('[data-name="price-card"] img[alt="Proof image"]').should(
+      "not.exist",
+    );
+    cy.contains("button", "Show proof images").click();
+    cy.get('[data-name="price-card"]').first().scrollIntoView();
+    cy.get('[data-name="price-card"] img[alt="Proof image"]')
+      .first()
+      .should("have.attr", "src")
+      .and("include", "/img/0001/TWZOnskQhz.webp");
+    cy.contains("button", "Show proof images").click();
+    cy.get('[data-name="price-card"] img[alt="Proof image"]').should(
+      "not.exist",
+    );
   });
 
   it("displays an unknown raw product page", () => {
