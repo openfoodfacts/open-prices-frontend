@@ -444,6 +444,7 @@
 		"PricePerMissing": "ପ୍ରତି ଅନୁପସ୍ଥିତ ମୂଲ୍ୟ",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "ମୂଲ୍ୟ ପୂର୍ବରୁ ଅପଲୋଡ୍ ହୋଇସାରିଛି",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "ମୂଲ୍ୟ ଅପଲୋଡ୍ ହେବା ପାଇଁ ପ୍ରସ୍ତୁତ",
 		"PricesAlreadyUploaded": "ମୂଲ୍ୟ ପୂର୍ବରୁ ଅପଲୋଡ୍ କରାଯାଇଛି",
 		"PricesAll": "ସମସ୍ତ ମୂଲ୍ୟଗୁଡ଼ିକ",
