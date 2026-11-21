@@ -444,6 +444,7 @@
 		"PricePerMissing": "السعر لكل مفقود",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "السعر تم تحميله بالفعل",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "السعر جاهز للتحميل",
 		"PricesAlreadyUploaded": "الأسعار تم تحميلها بالفعل",
 		"PricesAll": "جميع الأسعار",
