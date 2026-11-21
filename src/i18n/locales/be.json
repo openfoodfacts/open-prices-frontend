@@ -444,6 +444,7 @@
 		"PricePerMissing": "Кошт за адсутнае",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Кошт ужо загружаны",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Кошт гатовы да загрузкі",
 		"PricesAlreadyUploaded": "Цэны ўжо загружаныя",
 		"PricesAll": "Усе цэны",
