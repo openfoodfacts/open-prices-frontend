@@ -444,6 +444,7 @@
 		"PricePerMissing": "Harga setiap hilang",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Harga sudah dimuat naik",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Harga sedia untuk dimuat naik",
 		"PricesAlreadyUploaded": "Harga sudah dimuat naik",
 		"PricesAll": "Semua harga",
