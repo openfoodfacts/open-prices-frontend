@@ -444,6 +444,7 @@
 		"PricePerMissing": "Giá cho mỗi lần mất tích",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Giá đã được tải lên",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Giá đã sẵn sàng để tải lên",
 		"PricesAlreadyUploaded": "Giá đã được tải lên",
 		"PricesAll": "Tất cả giá cả",
