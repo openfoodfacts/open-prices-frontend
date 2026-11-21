@@ -444,6 +444,7 @@
 		"PricePerMissing": "Cijena po nedostajućoj",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Cijena je već postavljena",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Cijena spremna za učitavanje",
 		"PricesAlreadyUploaded": "Cijene su već prenesene",
 		"PricesAll": "Sve cijene",
