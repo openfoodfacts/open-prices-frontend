@@ -444,6 +444,7 @@
 		"PricePerMissing": "يوقاپ كەتكەنلەرنىڭ باھاسى",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "باھاسى ئاللىبۇرۇن يوللاندى",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "يوللاشقا تەييار باھا",
 		"PricesAlreadyUploaded": "باھاسى ئاللىبۇرۇن يوللاندى",
 		"PricesAll": "بارلىق باھالار",

@@ -444,6 +444,7 @@
 		"PricePerMissing": "Hiányzó darabonkénti ár",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Az ár már fel van töltve",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Az ár feltöltésre kész",
 		"PricesAlreadyUploaded": "Az árak már feltöltöttek",
 		"PricesAll": "Minden ár",

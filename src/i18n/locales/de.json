@@ -444,6 +444,7 @@
 		"PricePerMissing": "Preis pro fehlendem",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Preis bereits hochgeladen",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Preis bereit zum Hochladen",
 		"PricesAlreadyUploaded": "Preise bereits hochgeladen",
 		"PricesAll": "Alle Preise",

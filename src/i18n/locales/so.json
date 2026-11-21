@@ -444,6 +444,7 @@
 		"PricePerMissing": "Qiimaha halkii maqan",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Qiimaha mar hore la soo geliyay",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Qiimaha diyaar in la soo geliyo",
 		"PricesAlreadyUploaded": "Qiimaha mar hore la soo galiyay",
 		"PricesAll": "Dhammaan qiimaha",

@@ -444,6 +444,7 @@
 		"PricePerMissing": "Falta den bakoitzeko prezioa",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Prezioa dagoeneko igota",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Prezioa igotzeko prest",
 		"PricesAlreadyUploaded": "Prezioak dagoeneko igota",
 		"PricesAll": "Prezio guztiak",

@@ -444,6 +444,7 @@
 		"PricePerMissing": "每缺失的价格",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "价格已上传。",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "价格信息已准备好上传。",
 		"PricesAlreadyUploaded": "价格已上传",
 		"PricesAll": "所有价格",

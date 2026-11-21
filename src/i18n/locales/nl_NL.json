@@ -444,6 +444,7 @@
 		"PricePerMissing": "",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Prijs al geüpload",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Prijs klaar om te worden geüpload",
 		"PricesAlreadyUploaded": "Prijzen al geüpload",
 		"PricesAll": "Alle prijzen",

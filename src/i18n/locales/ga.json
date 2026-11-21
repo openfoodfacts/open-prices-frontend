@@ -444,6 +444,7 @@
 		"PricePerMissing": "Praghas in aghaidh an easnaimh",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Praghas uaslódáilte cheana féin",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Praghas réidh le huaslódáil",
 		"PricesAlreadyUploaded": "Praghsanna uaslódáilte cheana féin",
 		"PricesAll": "Gach praghas",

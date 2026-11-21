@@ -444,6 +444,7 @@
 		"PricePerMissing": "Գինը մեկ բացակայող անձի համար",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Գինը արդեն վերբեռնված է",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Գինը պատրաստ է վերբեռնման համար",
 		"PricesAlreadyUploaded": "Գները արդեն վերբեռնված են",
 		"PricesAll": "Բոլոր գները",

@@ -444,6 +444,7 @@
 		"PricePerMissing": "Pris fesul coll",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Pris eisoes wedi'i uwchlwytho",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Pris yn barod i'w uwchlwytho",
 		"PricesAlreadyUploaded": "Prisiau eisoes wedi'u llwytho i fyny",
 		"PricesAll": "Pob pris",

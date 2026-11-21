@@ -444,6 +444,7 @@
 		"PricePerMissing": "Tlhwatlhwa ya se se tlhaelang",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Tlhwatlhwa e setse e laisitswe",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Tlhwatlhwa e siametse go laisiwa",
 		"PricesAlreadyUploaded": "Ditlhwatlhwa di setse di laisitswe",
 		"PricesAll": "Ditlhwatlhwa tsotlhe",

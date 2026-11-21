@@ -444,6 +444,7 @@
 		"PricePerMissing": "Missingгалган бәя",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Бәясе йөкләнде",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Йөкләргә әзер бәя",
 		"PricesAlreadyUploaded": "Бәяләр йөкләнде",
 		"PricesAll": "Барлык бәяләр",

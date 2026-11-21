@@ -444,6 +444,7 @@
 		"PricePerMissing": "Τιμή ανά λείπον",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Η τιμή έχει ήδη μεταφορτωθεί.",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Τιμή έτοιμη για μεταφόρτωση",
 		"PricesAlreadyUploaded": "Οι τιμές έχουν ήδη ανεβάσει",
 		"PricesAll": "Όλες οι τιμές",

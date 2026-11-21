@@ -444,6 +444,7 @@
 		"PricePerMissing": "Pretium per deesse",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Pretium iam impositum",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Pretium paratum ad imponendum",
 		"PricesAlreadyUploaded": "Pretia iam immissa",
 		"PricesAll": "Omnia pretia",

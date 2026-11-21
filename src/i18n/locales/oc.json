@@ -444,6 +444,7 @@
 		"PricePerMissing": "Prètz per mancant",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Prètz ja mandat",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Prètz prèst a èsser mandat",
 		"PricesAlreadyUploaded": "Los prètzs ja mandats",
 		"PricesAll": "Totes los prètzs",

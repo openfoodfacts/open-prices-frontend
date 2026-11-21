@@ -444,6 +444,7 @@
 		"PricePerMissing": "Preu per persona desapareguda",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Preu ja carregat",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Preu llest per ser carregat",
 		"PricesAlreadyUploaded": "Preus ja carregats",
 		"PricesAll": "Tots els preus",

@@ -444,6 +444,7 @@
 		"PricePerMissing": "Inani ngokushoda ngakunye",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Intengo isivele ilayishiwe",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Intengo isilungele ukulayishwa",
 		"PricesAlreadyUploaded": "Izintengo sezivele zilayishiwe",
 		"PricesAll": "Zonke izintengo",

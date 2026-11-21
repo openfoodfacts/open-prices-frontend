@@ -444,6 +444,7 @@
 		"PricePerMissing": "ລາຄາຕໍ່ທີ່ຂາດຫາຍໄປ",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "ລາຄາອັບໂຫຼດແລ້ວ",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "ລາຄາພ້ອມອັບໂຫລດ",
 		"PricesAlreadyUploaded": "ລາຄາອັບໂຫຼດແລ້ວ",
 		"PricesAll": "ລາຄາທັງໝົດ",

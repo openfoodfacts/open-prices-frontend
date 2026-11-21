@@ -444,6 +444,7 @@
 		"PricePerMissing": "Bei kwa kila kukosa",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Bei tayari imepakiwa",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Bei tayari kupakiwa",
 		"PricesAlreadyUploaded": "Bei tayari zimepakiwa",
 		"PricesAll": "Bei zote",

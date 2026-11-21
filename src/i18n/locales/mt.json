@@ -444,6 +444,7 @@
 		"PricePerMissing": "Prezz għal kull nieqes",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Prezz diġà mtella'",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Prezz lest biex jittella'",
 		"PricesAlreadyUploaded": "Prezzijiet diġà mtellgħin",
 		"PricesAll": "Il-prezzijiet kollha",

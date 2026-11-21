@@ -444,6 +444,7 @@
 		"PricePerMissing": "ዋጋ በአንድ ይጎድላል",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "ዋጋ አስቀድሞ ተሰቅሏል።",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "ዋጋ ለመሰቀል ዝግጁ ነው።",
 		"PricesAlreadyUploaded": "ዋጋዎች አስቀድመው ተሰቅለዋል።",
 		"PricesAll": "ሁሉም ዋጋዎች",

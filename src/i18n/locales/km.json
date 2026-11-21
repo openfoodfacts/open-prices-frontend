@@ -444,6 +444,7 @@
 		"PricePerMissing": "តម្លៃក្នុងមួយបាត់",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "តម្លៃបានបង្ហោះរួចហើយ",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "តម្លៃរួចរាល់ក្នុងការបង្ហោះ",
 		"PricesAlreadyUploaded": "តម្លៃបានបង្ហោះរួចហើយ",
 		"PricesAll": "តម្លៃទាំងអស់",

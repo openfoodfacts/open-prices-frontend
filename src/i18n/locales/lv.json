@@ -444,6 +444,7 @@
 		"PricePerMissing": "Cena par trūkstošo",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Cena jau augšupielādēta",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Cena ir gatava augšupielādei",
 		"PricesAlreadyUploaded": "Cenas jau augšupielādētas",
 		"PricesAll": "Visas cenas",

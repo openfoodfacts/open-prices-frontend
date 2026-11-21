@@ -444,6 +444,7 @@
 		"PricePerMissing": "누락된 개당 가격",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "가격이 이미 업로드되었습니다",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "가격 업로드 준비 완료",
 		"PricesAlreadyUploaded": "가격이 이미 업로드되었습니다",
 		"PricesAll": "모든 가격은",

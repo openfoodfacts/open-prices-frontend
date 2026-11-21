@@ -444,6 +444,7 @@
 		"PricePerMissing": "Нарх барои гумшуда",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Нарх аллакай бор карда шудааст",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Нарх барои боргузорӣ омода аст",
 		"PricesAlreadyUploaded": "Нархҳо аллакай бор карда шудаанд",
 		"PricesAll": "Ҳамаи нархҳо",

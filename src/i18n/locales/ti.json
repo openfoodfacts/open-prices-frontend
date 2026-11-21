@@ -444,6 +444,7 @@
 		"PricePerMissing": "ዋጋ ንሓደ ዝጎደለ",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "ዋጋ ድሮ ተሰቒሉ ኣሎ።",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "ዋጋ ንኽስቀል ድሉው እዩ።",
 		"PricesAlreadyUploaded": "ዋጋታት ድሮ ተሰቒሎም ኣለዉ።",
 		"PricesAll": "ኩሉ ዋጋታት",

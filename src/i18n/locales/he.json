@@ -444,6 +444,7 @@
 		"PricePerMissing": "מחיר לכל חסר",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "המחיר כבר הועלה",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "המחיר מוכן להעלאה",
 		"PricesAlreadyUploaded": "המחירים כבר הועלו",
 		"PricesAll": "כל המחירים",

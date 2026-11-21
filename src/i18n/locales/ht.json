@@ -444,6 +444,7 @@
 		"PricePerMissing": "Pri pou chak moun ki manke",
 		"PriceDiscountInvalid": "Discounted price is higher than full price",
 		"PriceAlreadyUploaded": "Pri a deja telechaje",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Pri a pare pou telechaje",
 		"PricesAlreadyUploaded": "Pri yo deja telechaje",
 		"PricesAll": "Tout pri yo",

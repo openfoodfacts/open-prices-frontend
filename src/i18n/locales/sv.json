@@ -444,6 +444,7 @@
 		"PricePerMissing": "Prisenhet saknas",
 		"PriceDiscountInvalid": "Det rabatterade priset är högre än ordinarie pris",
 		"PriceAlreadyUploaded": "Priset har redan laddats upp",
+		"PriceTagAlreadyHandled": "Price tag already handled",
 		"PriceReadyToBeUploaded": "Priset är klart att laddas upp",
 		"PricesAlreadyUploaded": "Priserna har redan laddats upp",
 		"PricesAll": "Alla priser",
