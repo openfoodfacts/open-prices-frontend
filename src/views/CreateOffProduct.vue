@@ -76,6 +76,10 @@
                 :currentFilterList="currentFilterList"
                 @update:currentFilterList="updateFilterList($event)"
               />
+              <CountryFilter
+                :currentCountry="currentCountry"
+                @update:currentCountry="updateCountry($event)"
+              />
               <OrderMenu
                 v-if="!usePricesApi"
                 kind="productCreate"
@@ -449,12 +453,16 @@ export default {
     OrderMenu: defineAsyncComponent(
       () => import("../components/OrderMenu.vue"),
     ),
+    CountryFilter: defineAsyncComponent(
+      () => import("../components/CountryFilter.vue"),
+    ),
   },
   data() {
     return {
       step: 1,
       // product missing list
       missingProductsWithPrices: [],
+      currentCountry: null,
       currentOrder: constants.PRODUCT_CREATE_ORDER_LIST[0].key, // -created
       productTotal: 0,
       // product missing form
@@ -530,8 +538,7 @@ export default {
     usePricesApi() {
       // the products API has no owner or country filter
       return (
-        this.currentFilterList.includes("price__owner") ||
-        this.currentFilterList.includes("price_user_country")
+        this.currentFilterList.includes("price__owner") || !!this.currentCountry
       );
     },
     getPricesParams() {
@@ -544,13 +551,9 @@ export default {
       if (this.currentFilterList.includes("price__owner")) {
         defaultParams["owner"] = this.appStore.user.username;
       }
-      // user.country can be null/undefined (older persisted state): skip the filter
-      if (
-        this.currentFilterList.includes("price_user_country") &&
-        this.appStore.getUserCountry
-      ) {
+      if (this.currentCountry) {
         defaultParams["location__osm_address_country_code"] =
-          this.appStore.getUserCountry;
+          this.currentCountry;
       }
       return defaultParams;
     },
@@ -569,6 +572,8 @@ export default {
     },
   },
   mounted() {
+    this.currentCountry =
+      this.$route.query[constants.COUNTRY_PARAM] || this.currentCountry;
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     if (this.$route.query.product_code) {
@@ -871,6 +876,16 @@ export default {
         query: {
           ...this.$route.query,
           [constants.FILTER_PARAM]: newFilterList,
+        },
+      });
+      // this.getMissingProductsWithPrices() will be called in watch $route
+    },
+    updateCountry(countryCode) {
+      this.currentCountry = countryCode;
+      this.$router.push({
+        query: {
+          ...this.$route.query,
+          [constants.COUNTRY_PARAM]: this.currentCountry || undefined,
         },
       });
       // this.getMissingProductsWithPrices() will be called in watch $route
