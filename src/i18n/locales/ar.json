@@ -336,6 +336,7 @@
 		"FilterProductWithPriceCount": "بثمن",
 		"FilterProductWithPriceCountHide": "إخفاء المنتجات مع الأسعار",
 		"FilterProductWithPriceOwner": "اعرض فقط المنتجات التي تحمل أسعاري",
+		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "بدون أسعار",
 		"FilterPriceMoreThan30DaysHide": "إخفاء الأسعار التي يزيد عمرها عن 30 يومًا",
 		"FilterProofWithPriceCountHide": "إخفاء الأدلة مع الأسعار",
