@@ -14,10 +14,10 @@
         :active="!!currentCountry"
         :aria-label="$t('Common.Country')"
       >
-        <span v-if="currentCountry">{{ getCountryLabel(currentCountry) }}</span>
-        <span v-else-if="$vuetify.display.smAndUp">{{
-          $t("Common.Country")
-        }}</span>
+        <span v-if="$vuetify.display.smAndUp">{{ $t("Common.Country") }}</span>
+        <template v-if="currentCountry" #append>
+          {{ getCountryEmoji(currentCountry) }}
+        </template>
       </v-btn>
     </template>
     <v-card min-width="280">
@@ -112,9 +112,6 @@ export default {
     },
     getCountryEmoji(countryCode) {
       return countryCode ? geo_utils.getCountryEmojiFromCode(countryCode) : "";
-    },
-    getCountryLabel(countryCode) {
-      return `${this.getCountryEmoji(countryCode)} ${countryCode}`;
     },
     selectCountry(countryCode) {
       this.menu = false;
