@@ -336,6 +336,7 @@
 		"FilterProductWithPriceCount": "Bir fiyat ile",
 		"FilterProductWithPriceCountHide": "Ürünleri fiyatlarıyla gizle",
 		"FilterProductWithPriceOwner": "Sadece benim fiyat listemde olan ürünleri göster",
+		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Fiyatlar olmadan",
 		"FilterPriceMoreThan30DaysHide": "30 günden eski fiyatları gizle",
 		"FilterProofWithPriceCountHide": "Fiyatları olan kanıtları gizle",
