@@ -74,6 +74,13 @@ function getLocaleCountryTags(locale) {
   return import(`@/data/countries/${locale}.json`);
 }
 
+/**
+ * Product languages per locale
+ */
+function getLocaleLanguageTags(locale) {
+  return import(`@/data/languages/${locale}.json`);
+}
+
 export default {
   getLocaleCategoryTags,
   getLocaleCategoryTag,
@@ -83,4 +90,5 @@ export default {
   getLocaleLabelTags,
   getLocaleLabelTag,
   getLocaleCountryTags,
+  getLocaleLanguageTags,
 };

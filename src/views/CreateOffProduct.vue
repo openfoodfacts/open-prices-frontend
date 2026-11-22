@@ -162,8 +162,8 @@
               <v-autocomplete
                 v-model="productForm.product_language"
                 :items="productLanguageList"
-                item-title="native"
-                item-value="code"
+                item-title="name"
+                item-value="language_code_2"
                 density="compact"
                 variant="outlined"
                 :rules="[fieldRequired]"
@@ -424,24 +424,12 @@ import { defineAsyncComponent } from "vue";
 import { mapStores } from "pinia";
 import { useAppStore } from "../store";
 import openPricesApi from "../services/openPricesApi";
-import languageData from "../i18n/data/languages.json";
 import constants from "../constants";
 import proof_utils from "../utils/proof.js";
 import utils from "../utils";
 import data_utils from "../utils/data.js";
 import geo_utils from "../utils/geo.js";
 import "vue-zoomable/dist/style.css";
-
-// OFF expects 2-letter language codes: keep one entry per language
-// (ex: "nl_BE" & "nl_NL" become "nl")
-const languageList = [
-  ...new Set(languageData.map((language) => language.code.split("_")[0])),
-]
-  .filter((code) => /^[a-z]{2}$/.test(code))
-  .map((code) => ({
-    code: code,
-    native: new Intl.DisplayNames([code], { type: "language" }).of(code),
-  }));
 
 export default {
   components: {
@@ -474,7 +462,7 @@ export default {
       product: null,
       productForm: {},
       flavorList: constants.PRODUCT_SOURCE_LIST,
-      languageList,
+      languageList: [], // list of product languages for autocomplete  // see mounted
       countryTags: [], // list of country tags for autocomplete  // see mounted
       priceList: [],
       shownProofIndex: 0,
@@ -498,7 +486,9 @@ export default {
       const countryLanguageList = geo_utils
         .getCountryLanguageListFromCode(this.productCountryCode)
         .map((code) =>
-          this.languageList.find((language) => language.code === code),
+          this.languageList.find(
+            (language) => language.language_code_2 === code,
+          ),
         )
         .filter(Boolean);
       if (!countryLanguageList.length) return this.languageList;
@@ -567,6 +557,7 @@ export default {
     }
     this.getMissingProductsWithPrices();
     this.setCountryTags();
+    this.setLanguageTags();
     this.getChallenges();
   },
   methods: {
@@ -689,7 +680,6 @@ export default {
               // created by any user, from any location
               product_language: geo_utils.getCountryLanguageFromCode(
                 this.productCountryCode,
-                this.languageList.map((language) => language.code),
               ),
               quantity: "",
               brands: [],
@@ -726,6 +716,15 @@ export default {
         .getLocaleCountryTags(this.appStore.getUserLanguage)
         .then((module) => {
           this.countryTags = module.default.sort((a, b) =>
+            a.name.localeCompare(b.name),
+          );
+        });
+    },
+    setLanguageTags() {
+      data_utils
+        .getLocaleLanguageTags(this.appStore.getUserLanguage)
+        .then((module) => {
+          this.languageList = module.default.sort((a, b) =>
             a.name.localeCompare(b.name),
           );
         });

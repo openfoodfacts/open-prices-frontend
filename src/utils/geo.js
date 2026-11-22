@@ -75,12 +75,13 @@ function getCountryLanguageListFromCode(countryCode) {
 
 /**
  * Get the main language of the country (from the OFF countries taxonomy)
- * Input: country code & allowed language codes (e.g. "BE" & ["en", "fr", "nl"])
- * Output: the first country language that is allowed (e.g. "nl"), or "en"
+ * Input: country code (e.g. "BE")
+ * Output: the first country language with a 2-letter code (e.g. "nl"), or "en"
+ * (OFF expects 2-letter codes for the product main language)
  */
-function getCountryLanguageFromCode(countryCode, languageCodeList) {
+function getCountryLanguageFromCode(countryCode) {
   const language = getCountryLanguageListFromCode(countryCode).find((code) =>
-    languageCodeList.includes(code),
+    /^[a-z]{2}$/.test(code),
   );
   return language || "en";
 }
