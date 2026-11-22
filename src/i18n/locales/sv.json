@@ -336,6 +336,7 @@
 		"FilterProductWithPriceCount": "Med ett pris",
 		"FilterProductWithPriceCountHide": "Dölj produkter med priser",
 		"FilterProductWithPriceOwner": "Visa endast produkter med mina priser",
+		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Utan priser",
 		"FilterPriceMoreThan30DaysHide": "Dölj priser äldre än 30 dagar",
 		"FilterProofWithPriceCountHide": "Dölj underlag med priser",
