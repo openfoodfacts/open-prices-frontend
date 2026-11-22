@@ -462,7 +462,6 @@ export default {
       step: 1,
       // product missing list
       missingProductsWithPrices: [],
-      currentCountry: null,
       currentOrder: constants.PRODUCT_CREATE_ORDER_LIST[0].key, // -created
       productTotal: 0,
       // product missing form
@@ -535,6 +534,10 @@ export default {
         },
       ];
     },
+    currentCountry() {
+      // read from the route (like the nearby filter), to stay in sync on browser back/forward
+      return geo_utils.getCountryFilter(this.$route.query);
+    },
     usePricesApi() {
       // the products API has no owner or country filter
       return (
@@ -572,7 +575,6 @@ export default {
     },
   },
   mounted() {
-    this.currentCountry = geo_utils.getCountryFilter(this.$route.query);
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     if (this.$route.query.product_code) {
@@ -880,11 +882,10 @@ export default {
       // this.getMissingProductsWithPrices() will be called in watch $route
     },
     updateCountry(countryCode) {
-      this.currentCountry = countryCode;
       this.$router.push({
         query: geo_utils.buildCountryFilterQuery(
           this.$route.query,
-          this.currentCountry,
+          countryCode,
         ),
       });
       // this.getMissingProductsWithPrices() will be called in watch $route
