@@ -35,6 +35,8 @@
           item-value="country_code_2"
           density="compact"
           hide-details="auto"
+          clearable
+          persistent-clear
           @update:modelValue="selectCountry($event)"
         >
           <template #item="{ props, item }">
@@ -45,15 +47,6 @@
           </template>
         </v-autocomplete>
       </v-card-text>
-      <v-list v-if="currentCountry" density="compact" class="pt-0">
-        <v-list-item
-          :slim="true"
-          prepend-icon="mdi-close"
-          @click="selectCountry(null)"
-        >
-          {{ $t("Common.Clear") }}
-        </v-list-item>
-      </v-list>
     </v-card>
   </v-menu>
 </template>
