@@ -167,13 +167,13 @@ def write_categories_to_files(
     for language in languages:
         language_code = language["code"]
         language_categories = list()
-        # for each category, get translation (or default to en)
+        # for each category, get translation (or its base language, or default to en)
         # In case the language translation (or the english fallback)
         # is not available, the category is not included in the output
         for category in categories:
-            language_category_name = category["name"].get(language_code)
-            if language_category_name is None:
-                language_category_name = category["name"].get("en")
+            language_category_name = utils.get_name_in_language(
+                category["name"], language_code
+            )
             if language_category_name is not None:
                 language_categories.append(
                     {
