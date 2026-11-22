@@ -336,6 +336,7 @@
 		"FilterProductWithPriceCount": "S cenou",
 		"FilterProductWithPriceCountHide": "Skrýt produkty s cenami",
 		"FilterProductWithPriceOwner": "Zobrazit pouze produkty s mými cenami",
+		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Bez cen",
 		"FilterPriceMoreThan30DaysHide": "Skrýt ceny starší než 30 dní",
 		"FilterProofWithPriceCountHide": "Skrýt doklady s cenami",
