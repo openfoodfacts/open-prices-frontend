@@ -13,6 +13,10 @@
         :currentFilterList="currentFilterList"
         @update:currentFilterList="updateFilterList($event)"
       />
+      <CountryFilter
+        :currentCountry="countryFilter"
+        @update:currentCountry="updateCountryFilter($event)"
+      />
     </v-col>
   </v-row>
 
@@ -63,6 +67,7 @@ import constants from "../constants.js";
 import openPricesApi, { OpenPricesApiError } from "../services/openPricesApi";
 import { useAppStore } from "../store.js";
 import date_utils from "../utils/date.js";
+import geo_utils from "../utils/geo.js";
 import proof_utils from "../utils/proof.js";
 import utils from "../utils.js";
 
@@ -70,6 +75,9 @@ export default {
   components: {
     FilterMenu: defineAsyncComponent(
       () => import("../components/FilterMenu.vue"),
+    ),
+    CountryFilter: defineAsyncComponent(
+      () => import("../components/CountryFilter.vue"),
     ),
     ContributionAssistantPriceFormCard: defineAsyncComponent(
       () => import("../components/ContributionAssistantPriceFormCard.vue"),
@@ -97,11 +105,12 @@ export default {
     currentFilterList() {
       return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
     },
+    countryFilter() {
+      // read from the route (like the nearby filter), to stay in sync on browser back/forward
+      return geo_utils.getCountryFilter(this.$route.query);
+    },
     username() {
       return this.appStore.user.username;
-    },
-    userCountry() {
-      return this.appStore.user.country;
     },
     getApiSize() {
       // reduce size to speed up the loading
@@ -122,13 +131,9 @@ export default {
       if (this.currentFilterList.includes("proof__owner")) {
         defaultParams["proof__owner"] = this.username;
       }
-      // user.country can be null/undefined (older persisted state): skip the filter
-      if (
-        this.currentFilterList.includes("proof_user_country") &&
-        this.userCountry
-      ) {
+      if (this.countryFilter) {
         defaultParams["proof__location__osm_address_country_code"] =
-          this.userCountry;
+          this.countryFilter;
       }
       if (this.currentFilterList.includes("tag_prediction_product_exists")) {
         defaultParams["tags__contains"] = "prediction-product-exists";
@@ -295,6 +300,15 @@ export default {
           ...this.$route.query,
           [constants.FILTER_PARAM]: newFilterList,
         },
+      });
+      // this.initPriceTags() will be called in watch $route
+    },
+    updateCountryFilter(countryCode) {
+      this.$router.push({
+        query: geo_utils.buildCountryFilterQuery(
+          this.$route.query,
+          countryCode,
+        ),
       });
       // this.initPriceTags() will be called in watch $route
     },
