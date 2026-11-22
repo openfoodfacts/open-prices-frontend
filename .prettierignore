@@ -5,6 +5,7 @@ dist/
 src/data/categories/
 src/data/countries/
 src/data/labels/
+src/data/languages/
 src/data/origins/
 src/data/countries.json
 src/i18n/data/languages.json

@@ -146,6 +146,37 @@ What it does:
 - Input (Taxonomy): 3083 labels
 - Output (JSON): 1 labels x 150 languages
 
+## Product languages (with translations)
+
+### Goal
+
+Get the list of languages from the Open Food Facts languages taxonomy, with their names translated.
+These languages are displayed in the product creation form (product main language).
+
+Not to be confused with the app languages below (managed in Crowdin).
+
+### Open Food Facts taxonomy
+
+File viewable here: [taxonomies/languages.txt](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/languages.txt)
+
+### Script
+
+```sh
+python data/languages/generate_product_languages_json_per_language.py
+```
+
+What it does:
+
+1. get the OFF languages taxonomy
+2. keep only languages with a `language_code_2:en:` property (OFF expects 2-letter codes for the product main language)
+3. the result is exported to `/src/data/languages` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
+
+### Stats
+
+- Last run: 2026-11-22
+- Input (Taxonomy): 189 languages
+- Output (JSON): 189 languages x 150 languages
+
 ## Languages
 
 ### Goal

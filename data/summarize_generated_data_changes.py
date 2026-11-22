@@ -19,6 +19,7 @@ DATASET_LIST = [
     {"name": "Categories", "path": "src/data/categories/en.json"},
     {"name": "Countries", "path": "src/data/countries/en.json"},
     {"name": "Labels", "path": "src/data/labels/en.json"},
+    {"name": "Languages", "path": "src/data/languages/en.json"},
     {"name": "Origins", "path": "src/data/origins/en.json"},
 ]
 
@@ -107,6 +108,7 @@ def build_summary(base: str) -> str:
         "- `src/data/categories/*.json`",
         "- `src/data/countries/*.json`",
         "- `src/data/labels/*.json`",
+        "- `src/data/languages/*.json`",
         "- `src/data/origins/*.json`",
         "- `src/i18n/data/languages.json`",
         "- `src/data/countries.json`",

@@ -40,6 +40,9 @@ jobs:
       - name: Generate labels (1 file per language)
         run: python data/labels/generate_labels_json_per_language.py
 
+      - name: Generate product languages (1 file per language)
+        run: python data/languages/generate_product_languages_json_per_language.py
+
       - name: Generate origins (1 file per language)
         run: python data/origins/generate_origins_json_per_language.py
 
