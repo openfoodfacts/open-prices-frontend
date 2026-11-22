@@ -21,27 +21,16 @@
       </v-btn>
     </template>
     <v-card min-width="280">
-      <v-list density="compact">
-        <v-list-item class="d-sm-none text-uppercase" :slim="true" disabled>
+      <v-list density="compact" class="d-sm-none pb-0">
+        <v-list-item class="text-uppercase" :slim="true" disabled>
           {{ $t("Common.Country") }}
         </v-list-item>
-        <v-divider class="d-sm-none" />
-        <v-list-item
-          v-if="userCountry"
-          :slim="true"
-          :active="currentCountry === userCountry"
-          @click="selectCountry(userCountry)"
-        >
-          {{ $t("CountryFilter.MyCountry") }} ({{
-            getCountryLabel(userCountry)
-          }})
-        </v-list-item>
       </v-list>
-      <v-card-text class="pt-0">
+      <v-card-text>
         <v-autocomplete
           :model-value="currentCountry"
           :label="$t('CountryFilter.Search')"
-          :items="countryTags"
+          :items="countryList"
           item-title="name"
           item-value="country_code_2"
           density="compact"
@@ -94,6 +83,18 @@ export default {
     ...mapStores(useAppStore),
     userCountry() {
       return this.appStore.getUserCountry;
+    },
+    countryList() {
+      // the user country first, then all the others
+      const userCountry = this.countryTags.find(
+        (country) => country.country_code_2 === this.userCountry,
+      );
+      if (!userCountry) return this.countryTags;
+      return [
+        userCountry,
+        { type: "divider" },
+        ...this.countryTags.filter((country) => country !== userCountry),
+      ];
     },
   },
   mounted() {
