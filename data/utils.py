@@ -9,6 +9,19 @@ def read_json(filepath):
         return json.load(jsonfile)
 
 
+def get_name_in_language(names: dict, language_code: str) -> str | None:
+    """
+    Get the name in the given language, with fallbacks:
+    the language itself, then its base language (for regional languages),
+    then English
+    e.g. "nl_BE" -> names["nl_BE"], then names["nl"], then names["en"]
+    """
+    for code in [language_code, language_code.split("_")[0], "en"]:
+        if names.get(code):
+            return names[code]
+    return None
+
+
 def get_all_root_nodes(taxonomy: Taxonomy) -> list[TaxonomyNode]:
     return [node for node in taxonomy.iter_nodes() if not node.get_parents_hierarchy()]
 

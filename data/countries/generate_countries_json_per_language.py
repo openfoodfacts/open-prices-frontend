@@ -43,9 +43,9 @@ def write_countries_to_files(countries, languages: list[dict[str, Any]]):
     for language in languages:
         language_code = language['code']
         language_countries = list()
-        # for each country, get translation (or default to en)
+        # for each country, get translation (or its base language, or default to en)
         for country in countries:
-            language_country_name = country['name'][language_code] if (language_code in country['name']) else country['name']['en']
+            language_country_name = utils.get_name_in_language(country['name'], language_code)
             country_code_2 = country['country_code_2']["en"]
             language_countries.append({"id": country['id'], "name": language_country_name, "country_code_2": country_code_2})
         # order by name

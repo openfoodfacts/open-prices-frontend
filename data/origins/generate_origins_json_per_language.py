@@ -67,9 +67,9 @@ def write_origins_to_files(origins, languages: list[dict[str, Any]]):
     for language in languages:
         language_code = language['code']
         language_origins = list()
-        # for each origin, get translation (or default to en)
+        # for each origin, get translation (or its base language, or default to en)
         for origin in origins:
-            language_origin_name = origin['name'][language_code] if (language_code in origin['name']) else origin['name']['en']
+            language_origin_name = utils.get_name_in_language(origin['name'], language_code)
             language_origins.append({"id": origin['id'], "name": language_origin_name})
         # order by name
         language_origins = sorted(language_origins, key=lambda x: x['name'])

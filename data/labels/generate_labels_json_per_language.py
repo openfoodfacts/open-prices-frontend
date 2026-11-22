@@ -49,9 +49,9 @@ def write_labels_to_files(labels, languages: list[dict[str, Any]]):
     for language in languages:
         language_code = language['code']
         language_labels = list()
-        # for each label, get translation (or default to en)
+        # for each label, get translation (or its base language, or default to en)
         for label in labels:
-            language_label_name = label['name'][language_code] if (language_code in label['name']) else label['name']['en']
+            language_label_name = utils.get_name_in_language(label['name'], language_code)
             language_labels.append({"id": label['id'], "name": language_label_name})
         # order by name
         language_labels = sorted(language_labels, key=lambda x: x['name'])
