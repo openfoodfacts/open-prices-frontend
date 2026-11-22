@@ -154,19 +154,22 @@
               :rules="[fieldRequired]"
               required
             />
-            <div class="text-body-2">
-              {{ $t("CreateOffProduct.ProductLanguage") }}
+            <!-- don't overwrite the main language of existing products -->
+            <div v-if="!productExists">
+              <div class="text-body-2">
+                {{ $t("CreateOffProduct.ProductLanguage") }}
+              </div>
+              <v-autocomplete
+                v-model="productForm.product_language"
+                :items="productLanguageList"
+                item-title="native"
+                item-value="code"
+                density="compact"
+                variant="outlined"
+                :rules="[fieldRequired]"
+                required
+              />
             </div>
-            <v-autocomplete
-              v-model="productForm.product_language"
-              :items="productLanguageList"
-              item-title="native"
-              item-value="code"
-              density="compact"
-              variant="outlined"
-              :rules="[fieldRequired]"
-              required
-            />
 
             <div class="text-body-2">
               {{ $t("Common.ProductName") }}
@@ -292,7 +295,8 @@
                   variant="flat"
                   type="submit"
                   :disabled="
-                    !productForm.flavor || !productForm.product_language
+                    !productForm.flavor ||
+                    (!productExists && !productForm.product_language)
                   "
                 >
                   {{ $t("CreateOffProduct.CreateProduct") }}
@@ -755,8 +759,11 @@ export default {
             .join(","),
         },
       };
-      // sent separately (product_language_code), not an OFF field
+      // not an OFF field: sent as "lang" (main language), for new products only
       delete inputData.update_params.product_language;
+      if (!this.productExists) {
+        inputData.update_params.lang = this.productForm.product_language;
+      }
       openPricesApi
         .updateOffProduct(this.productForm.product_code, inputData)
         .then(() => {
