@@ -542,7 +542,11 @@ export default {
       if (this.currentFilterList.includes("price__owner")) {
         defaultParams["owner"] = this.appStore.user.username;
       }
-      if (this.currentFilterList.includes("price_user_country")) {
+      // user.country can be null/undefined (older persisted state): skip the filter
+      if (
+        this.currentFilterList.includes("price_user_country") &&
+        this.appStore.getUserCountry
+      ) {
         defaultParams["location__osm_address_country_code"] =
           this.appStore.getUserCountry;
       }

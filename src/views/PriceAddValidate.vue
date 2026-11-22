@@ -120,7 +120,11 @@ export default {
       if (this.currentFilterList.includes("proof__owner")) {
         defaultParams["proof__owner"] = this.username;
       }
-      if (this.currentFilterList.includes("proof_user_country")) {
+      // user.country can be null/undefined (older persisted state): skip the filter
+      if (
+        this.currentFilterList.includes("proof_user_country") &&
+        this.userCountry
+      ) {
         defaultParams["proof__location__osm_address_country_code"] =
           this.userCountry;
       }
