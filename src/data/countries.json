@@ -6,6 +6,12 @@
         "osm_name": "Andorra",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "ca",
+            "es",
+            "fr",
+            "pt"
         ]
     },
     {
@@ -15,6 +21,9 @@
         "osm_name": "الإمارات العربية المتحدة",
         "currency_codes": [
             "AED"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -24,6 +33,10 @@
         "osm_name": "افغانستان",
         "currency_codes": [
             "AFN"
+        ],
+        "language_codes": [
+            "ps",
+            "prs"
         ]
     },
     {
@@ -33,6 +46,9 @@
         "osm_name": "Antigua and Barbuda",
         "currency_codes": [
             "XCD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -42,6 +58,9 @@
         "osm_name": "Anguilla",
         "currency_codes": [
             "XCD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -51,6 +70,9 @@
         "osm_name": "Shqipëria",
         "currency_codes": [
             "ALL"
+        ],
+        "language_codes": [
+            "sq"
         ]
     },
     {
@@ -60,6 +82,9 @@
         "osm_name": "Հայաստան",
         "currency_codes": [
             "AMD"
+        ],
+        "language_codes": [
+            "hy"
         ]
     },
     {
@@ -69,6 +94,9 @@
         "osm_name": "Angola",
         "currency_codes": [
             "AOA"
+        ],
+        "language_codes": [
+            "pt"
         ]
     },
     {
@@ -76,7 +104,8 @@
         "name": "Antarctic",
         "country_code_2": "AQ",
         "osm_name": null,
-        "currency_codes": []
+        "currency_codes": [],
+        "language_codes": []
     },
     {
         "id": "en:argentina",
@@ -85,6 +114,9 @@
         "osm_name": "Argentina",
         "currency_codes": [
             "ARS"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -94,6 +126,10 @@
         "osm_name": null,
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "en",
+            "sm"
         ]
     },
     {
@@ -103,6 +139,9 @@
         "osm_name": "Österreich",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "de"
         ]
     },
     {
@@ -112,6 +151,9 @@
         "osm_name": "Australia",
         "currency_codes": [
             "AUD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -121,6 +163,10 @@
         "osm_name": null,
         "currency_codes": [
             "AWG"
+        ],
+        "language_codes": [
+            "nl",
+            "pap"
         ]
     },
     {
@@ -130,6 +176,9 @@
         "osm_name": null,
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "sv"
         ]
     },
     {
@@ -139,6 +188,9 @@
         "osm_name": "Azərbaycan",
         "currency_codes": [
             "AZN"
+        ],
+        "language_codes": [
+            "az"
         ]
     },
     {
@@ -148,6 +200,11 @@
         "osm_name": "Bosna i Hercegovina / Босна и Херцеговина",
         "currency_codes": [
             "BAM"
+        ],
+        "language_codes": [
+            "hr",
+            "sr",
+            "bs"
         ]
     },
     {
@@ -157,6 +214,9 @@
         "osm_name": "Barbados",
         "currency_codes": [
             "BBD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -166,6 +226,9 @@
         "osm_name": "বাংলাদেশ",
         "currency_codes": [
             "BDT"
+        ],
+        "language_codes": [
+            "bn"
         ]
     },
     {
@@ -175,6 +238,11 @@
         "osm_name": "België / Belgique / Belgien",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "nl",
+            "fr",
+            "de"
         ]
     },
     {
@@ -184,6 +252,9 @@
         "osm_name": "Burkina Faso",
         "currency_codes": [
             "XOF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -193,6 +264,9 @@
         "osm_name": "България",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "bg"
         ]
     },
     {
@@ -202,6 +276,9 @@
         "osm_name": "البحرين",
         "currency_codes": [
             "BHD"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -211,6 +288,10 @@
         "osm_name": "Burundi",
         "currency_codes": [
             "BIF"
+        ],
+        "language_codes": [
+            "fr",
+            "rn"
         ]
     },
     {
@@ -220,6 +301,9 @@
         "osm_name": "Bénin",
         "currency_codes": [
             "XOF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -229,6 +313,9 @@
         "osm_name": null,
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -238,6 +325,9 @@
         "osm_name": "Bermuda",
         "currency_codes": [
             "BMD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -247,6 +337,9 @@
         "osm_name": "Brunei",
         "currency_codes": [
             "BND"
+        ],
+        "language_codes": [
+            "ms"
         ]
     },
     {
@@ -256,6 +349,12 @@
         "osm_name": "Bolivia",
         "currency_codes": [
             "BOB"
+        ],
+        "language_codes": [
+            "es",
+            "gn",
+            "ay",
+            "qu"
         ]
     },
     {
@@ -265,6 +364,10 @@
         "osm_name": null,
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "nl",
+            "en"
         ]
     },
     {
@@ -274,6 +377,9 @@
         "osm_name": "Brasil",
         "currency_codes": [
             "BRL"
+        ],
+        "language_codes": [
+            "pt"
         ]
     },
     {
@@ -283,6 +389,9 @@
         "osm_name": "The Bahamas",
         "currency_codes": [
             "BSD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -293,6 +402,9 @@
         "currency_codes": [
             "BTN",
             "INR"
+        ],
+        "language_codes": [
+            "dz"
         ]
     },
     {
@@ -302,7 +414,8 @@
         "osm_name": null,
         "currency_codes": [
             "NOK"
-        ]
+        ],
+        "language_codes": []
     },
     {
         "id": "en:botswana",
@@ -311,6 +424,10 @@
         "osm_name": "Botswana",
         "currency_codes": [
             "BWP"
+        ],
+        "language_codes": [
+            "en",
+            "tn"
         ]
     },
     {
@@ -320,6 +437,10 @@
         "osm_name": "Беларусь",
         "currency_codes": [
             "BYN"
+        ],
+        "language_codes": [
+            "ru",
+            "be"
         ]
     },
     {
@@ -329,6 +450,9 @@
         "osm_name": "Belize",
         "currency_codes": [
             "BZD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -338,6 +462,10 @@
         "osm_name": "Canada",
         "currency_codes": [
             "CAD"
+        ],
+        "language_codes": [
+            "en",
+            "fr"
         ]
     },
     {
@@ -347,6 +475,9 @@
         "osm_name": null,
         "currency_codes": [
             "AUD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -356,6 +487,9 @@
         "osm_name": "République démocratique du Congo",
         "currency_codes": [
             "CDF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -365,6 +499,10 @@
         "osm_name": "Ködörösêse tî Bêafrîka / République centrafricaine",
         "currency_codes": [
             "XAF"
+        ],
+        "language_codes": [
+            "fr",
+            "sg"
         ]
     },
     {
@@ -374,6 +512,9 @@
         "osm_name": "Congo",
         "currency_codes": [
             "XAF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -383,6 +524,11 @@
         "osm_name": "Schweiz/Suisse/Svizzera/Svizra",
         "currency_codes": [
             "CHF"
+        ],
+        "language_codes": [
+            "de",
+            "fr",
+            "it"
         ]
     },
     {
@@ -392,6 +538,9 @@
         "osm_name": "Côte d’Ivoire",
         "currency_codes": [
             "XOF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -401,6 +550,9 @@
         "osm_name": "Kūki ʻĀirani",
         "currency_codes": [
             "NZD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -410,6 +562,9 @@
         "osm_name": "Chile",
         "currency_codes": [
             "CLP"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -419,6 +574,10 @@
         "osm_name": "Cameroun",
         "currency_codes": [
             "XAF"
+        ],
+        "language_codes": [
+            "fr",
+            "en"
         ]
     },
     {
@@ -428,6 +587,9 @@
         "osm_name": "中国",
         "currency_codes": [
             "CNY"
+        ],
+        "language_codes": [
+            "zh"
         ]
     },
     {
@@ -437,6 +599,9 @@
         "osm_name": "Colombia",
         "currency_codes": [
             "COP"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -446,6 +611,9 @@
         "osm_name": "Costa Rica",
         "currency_codes": [
             "CRC"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -455,6 +623,9 @@
         "osm_name": "Cuba",
         "currency_codes": [
             "CUP"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -464,6 +635,9 @@
         "osm_name": "Cabo Verde",
         "currency_codes": [
             "CVE"
+        ],
+        "language_codes": [
+            "pt"
         ]
     },
     {
@@ -473,6 +647,11 @@
         "osm_name": null,
         "currency_codes": [
             "XCG"
+        ],
+        "language_codes": [
+            "en",
+            "nl",
+            "pap"
         ]
     },
     {
@@ -482,6 +661,9 @@
         "osm_name": null,
         "currency_codes": [
             "AUD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -491,6 +673,10 @@
         "osm_name": "Κύπρος - Kıbrıs",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "el",
+            "tr"
         ]
     },
     {
@@ -500,6 +686,9 @@
         "osm_name": "Česko",
         "currency_codes": [
             "CZK"
+        ],
+        "language_codes": [
+            "cs"
         ]
     },
     {
@@ -509,6 +698,9 @@
         "osm_name": "Deutschland",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "de"
         ]
     },
     {
@@ -518,6 +710,10 @@
         "osm_name": "Djibouti جيبوتي",
         "currency_codes": [
             "DJF"
+        ],
+        "language_codes": [
+            "ar",
+            "fr"
         ]
     },
     {
@@ -527,6 +723,9 @@
         "osm_name": "Danmark",
         "currency_codes": [
             "DKK"
+        ],
+        "language_codes": [
+            "da"
         ]
     },
     {
@@ -536,6 +735,9 @@
         "osm_name": "Dominica",
         "currency_codes": [
             "XCD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -545,6 +747,9 @@
         "osm_name": "República Dominicana",
         "currency_codes": [
             "DOP"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -554,6 +759,10 @@
         "osm_name": "Algérie ⵍⵣⵣⴰⵢⴻⵔ الجزائر",
         "currency_codes": [
             "DZD"
+        ],
+        "language_codes": [
+            "ar",
+            "fr"
         ]
     },
     {
@@ -563,6 +772,9 @@
         "osm_name": "Ecuador",
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -572,6 +784,9 @@
         "osm_name": "Eesti",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "et"
         ]
     },
     {
@@ -581,6 +796,9 @@
         "osm_name": "مصر",
         "currency_codes": [
             "EGP"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -590,6 +808,10 @@
         "osm_name": null,
         "currency_codes": [
             "MAD"
+        ],
+        "language_codes": [
+            "ar",
+            "es"
         ]
     },
     {
@@ -599,6 +821,11 @@
         "osm_name": "ኤርትራ Eritrea إرتريا",
         "currency_codes": [
             "ERN"
+        ],
+        "language_codes": [
+            "ar",
+            "en",
+            "ti"
         ]
     },
     {
@@ -608,6 +835,12 @@
         "osm_name": "España",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "es",
+            "ca",
+            "eu",
+            "gl"
         ]
     },
     {
@@ -617,6 +850,9 @@
         "osm_name": "ኢትዮጵያ",
         "currency_codes": [
             "ETB"
+        ],
+        "language_codes": [
+            "am"
         ]
     },
     {
@@ -626,6 +862,10 @@
         "osm_name": "Suomi / Finland",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fi",
+            "sv"
         ]
     },
     {
@@ -635,6 +875,10 @@
         "osm_name": "Viti",
         "currency_codes": [
             "FJD"
+        ],
+        "language_codes": [
+            "en",
+            "fj"
         ]
     },
     {
@@ -644,6 +888,9 @@
         "osm_name": "Falkland Islands",
         "currency_codes": [
             "FKP"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -653,6 +900,9 @@
         "osm_name": "Micronesia",
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -662,6 +912,10 @@
         "osm_name": "Føroyar",
         "currency_codes": [
             "DKK"
+        ],
+        "language_codes": [
+            "fo",
+            "da"
         ]
     },
     {
@@ -671,6 +925,9 @@
         "osm_name": "France",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -680,6 +937,9 @@
         "osm_name": "Gabon",
         "currency_codes": [
             "XAF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -689,6 +949,9 @@
         "osm_name": "Grenada",
         "currency_codes": [
             "XCD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -698,6 +961,9 @@
         "osm_name": "საქართველო",
         "currency_codes": [
             "GEL"
+        ],
+        "language_codes": [
+            "ka"
         ]
     },
     {
@@ -707,6 +973,9 @@
         "osm_name": null,
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -716,6 +985,10 @@
         "osm_name": "Guernsey",
         "currency_codes": [
             "GBP"
+        ],
+        "language_codes": [
+            "en",
+            "fr"
         ]
     },
     {
@@ -725,6 +998,9 @@
         "osm_name": "Ghana",
         "currency_codes": [
             "GHS"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -734,6 +1010,9 @@
         "osm_name": "Gibraltar",
         "currency_codes": [
             "GIP"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -743,6 +1022,9 @@
         "osm_name": "Kalaallit Nunaat",
         "currency_codes": [
             "DKK"
+        ],
+        "language_codes": [
+            "kl"
         ]
     },
     {
@@ -752,6 +1034,9 @@
         "osm_name": "Gambia",
         "currency_codes": [
             "GMD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -761,6 +1046,9 @@
         "osm_name": "Guinée",
         "currency_codes": [
             "GNF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -770,6 +1058,9 @@
         "osm_name": null,
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -779,6 +1070,11 @@
         "osm_name": "Guinea Ecuatorial",
         "currency_codes": [
             "XAF"
+        ],
+        "language_codes": [
+            "es",
+            "fr",
+            "pt"
         ]
     },
     {
@@ -788,6 +1084,9 @@
         "osm_name": "Ελλάς",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "el"
         ]
     },
     {
@@ -797,6 +1096,9 @@
         "osm_name": "South Georgia and the South Sandwich Islands",
         "currency_codes": [
             "GBP"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -806,6 +1108,9 @@
         "osm_name": "Guatemala",
         "currency_codes": [
             "GTQ"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -815,6 +1120,10 @@
         "osm_name": null,
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "en",
+            "ch"
         ]
     },
     {
@@ -824,6 +1133,9 @@
         "osm_name": "Guiné-Bissau",
         "currency_codes": [
             "XOF"
+        ],
+        "language_codes": [
+            "pt"
         ]
     },
     {
@@ -833,6 +1145,9 @@
         "osm_name": "Guyana",
         "currency_codes": [
             "GYD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -842,6 +1157,10 @@
         "osm_name": null,
         "currency_codes": [
             "HKD"
+        ],
+        "language_codes": [
+            "zh",
+            "en"
         ]
     },
     {
@@ -851,7 +1170,8 @@
         "osm_name": null,
         "currency_codes": [
             "AUD"
-        ]
+        ],
+        "language_codes": []
     },
     {
         "id": "en:honduras",
@@ -860,6 +1180,9 @@
         "osm_name": "Honduras",
         "currency_codes": [
             "HNL"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -869,6 +1192,9 @@
         "osm_name": "Hrvatska",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "hr"
         ]
     },
     {
@@ -879,6 +1205,10 @@
         "currency_codes": [
             "HTG",
             "USD"
+        ],
+        "language_codes": [
+            "fr",
+            "ht"
         ]
     },
     {
@@ -888,6 +1218,9 @@
         "osm_name": "Magyarország",
         "currency_codes": [
             "HUF"
+        ],
+        "language_codes": [
+            "hu"
         ]
     },
     {
@@ -897,6 +1230,9 @@
         "osm_name": "Indonesia",
         "currency_codes": [
             "IDR"
+        ],
+        "language_codes": [
+            "id"
         ]
     },
     {
@@ -906,6 +1242,10 @@
         "osm_name": "Éire / Ireland",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "en",
+            "ga"
         ]
     },
     {
@@ -915,6 +1255,12 @@
         "osm_name": "ישראל",
         "currency_codes": [
             "ILS"
+        ],
+        "language_codes": [
+            "he",
+            "ar",
+            "ru",
+            "en"
         ]
     },
     {
@@ -924,6 +1270,10 @@
         "osm_name": "Isle of Man",
         "currency_codes": [
             "GBP"
+        ],
+        "language_codes": [
+            "gv",
+            "en"
         ]
     },
     {
@@ -933,6 +1283,10 @@
         "osm_name": "India",
         "currency_codes": [
             "INR"
+        ],
+        "language_codes": [
+            "en",
+            "hi"
         ]
     },
     {
@@ -942,6 +1296,9 @@
         "osm_name": "British Indian Ocean Territory",
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -951,6 +1308,10 @@
         "osm_name": "العراق",
         "currency_codes": [
             "IQD"
+        ],
+        "language_codes": [
+            "ar",
+            "ku"
         ]
     },
     {
@@ -960,6 +1321,9 @@
         "osm_name": "ایران",
         "currency_codes": [
             "IRR"
+        ],
+        "language_codes": [
+            "fa"
         ]
     },
     {
@@ -969,6 +1333,9 @@
         "osm_name": "Ísland",
         "currency_codes": [
             "ISK"
+        ],
+        "language_codes": [
+            "is"
         ]
     },
     {
@@ -978,6 +1345,9 @@
         "osm_name": "Italia",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "it"
         ]
     },
     {
@@ -987,6 +1357,10 @@
         "osm_name": "Jersey",
         "currency_codes": [
             "GBP"
+        ],
+        "language_codes": [
+            "en",
+            "fr"
         ]
     },
     {
@@ -996,6 +1370,9 @@
         "osm_name": "Jamaica",
         "currency_codes": [
             "JMD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1005,6 +1382,9 @@
         "osm_name": "الأردن",
         "currency_codes": [
             "JOD"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -1014,6 +1394,9 @@
         "osm_name": "日本",
         "currency_codes": [
             "JPY"
+        ],
+        "language_codes": [
+            "ja"
         ]
     },
     {
@@ -1023,6 +1406,10 @@
         "osm_name": "Kenya",
         "currency_codes": [
             "KES"
+        ],
+        "language_codes": [
+            "en",
+            "sw"
         ]
     },
     {
@@ -1032,6 +1419,10 @@
         "osm_name": "Кыргызстан",
         "currency_codes": [
             "KGS"
+        ],
+        "language_codes": [
+            "ru",
+            "ky"
         ]
     },
     {
@@ -1041,6 +1432,9 @@
         "osm_name": "ព្រះរាជាណាចក្រ​កម្ពុជា",
         "currency_codes": [
             "KHR"
+        ],
+        "language_codes": [
+            "km"
         ]
     },
     {
@@ -1050,6 +1444,9 @@
         "osm_name": "Kiribati",
         "currency_codes": [
             "AUD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1059,6 +1456,10 @@
         "osm_name": "Comores Komori جزر القمر",
         "currency_codes": [
             "KMF"
+        ],
+        "language_codes": [
+            "ar",
+            "fr"
         ]
     },
     {
@@ -1068,6 +1469,9 @@
         "osm_name": "Saint Kitts and Nevis",
         "currency_codes": [
             "XCD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1077,6 +1481,9 @@
         "osm_name": "조선민주주의인민공화국",
         "currency_codes": [
             "KPW"
+        ],
+        "language_codes": [
+            "ko"
         ]
     },
     {
@@ -1086,6 +1493,9 @@
         "osm_name": "대한민국",
         "currency_codes": [
             "KRW"
+        ],
+        "language_codes": [
+            "ko"
         ]
     },
     {
@@ -1095,6 +1505,9 @@
         "osm_name": "الكويت",
         "currency_codes": [
             "KWD"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -1104,6 +1517,9 @@
         "osm_name": "Cayman Islands",
         "currency_codes": [
             "KYD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1113,6 +1529,10 @@
         "osm_name": "Қазақстан",
         "currency_codes": [
             "KZT"
+        ],
+        "language_codes": [
+            "ru",
+            "kk"
         ]
     },
     {
@@ -1122,6 +1542,9 @@
         "osm_name": "ປະເທດລາວ",
         "currency_codes": [
             "LAK"
+        ],
+        "language_codes": [
+            "lo"
         ]
     },
     {
@@ -1131,6 +1554,9 @@
         "osm_name": "لبنان",
         "currency_codes": [
             "LBP"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -1140,6 +1566,9 @@
         "osm_name": "Saint Lucia",
         "currency_codes": [
             "XCD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1149,6 +1578,9 @@
         "osm_name": "Liechtenstein",
         "currency_codes": [
             "CHF"
+        ],
+        "language_codes": [
+            "de"
         ]
     },
     {
@@ -1158,6 +1590,10 @@
         "osm_name": "Sri Lanka",
         "currency_codes": [
             "LKR"
+        ],
+        "language_codes": [
+            "si",
+            "ta"
         ]
     },
     {
@@ -1167,6 +1603,9 @@
         "osm_name": "Liberia",
         "currency_codes": [
             "LRD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1177,6 +1616,10 @@
         "currency_codes": [
             "LSL",
             "ZAR"
+        ],
+        "language_codes": [
+            "en",
+            "st"
         ]
     },
     {
@@ -1186,6 +1629,9 @@
         "osm_name": "Lietuva",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "lt"
         ]
     },
     {
@@ -1195,6 +1641,12 @@
         "osm_name": "Lëtzebuerg",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fr",
+            "de",
+            "lb",
+            "en"
         ]
     },
     {
@@ -1204,6 +1656,9 @@
         "osm_name": "Latvija",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "lv"
         ]
     },
     {
@@ -1213,6 +1668,9 @@
         "osm_name": "ليبيا",
         "currency_codes": [
             "LYD"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -1222,6 +1680,11 @@
         "osm_name": "Maroc ⵍⵎⵖⵔⵉⴱ المغرب",
         "currency_codes": [
             "MAD"
+        ],
+        "language_codes": [
+            "ar",
+            "fr",
+            "es"
         ]
     },
     {
@@ -1231,6 +1694,9 @@
         "osm_name": "Monaco",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -1240,6 +1706,9 @@
         "osm_name": "Moldova",
         "currency_codes": [
             "MDL"
+        ],
+        "language_codes": [
+            "ro"
         ]
     },
     {
@@ -1249,6 +1718,9 @@
         "osm_name": "Crna Gora / Црна Гора",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "sr"
         ]
     },
     {
@@ -1258,6 +1730,9 @@
         "osm_name": null,
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -1267,6 +1742,10 @@
         "osm_name": "Madagasikara / Madagascar",
         "currency_codes": [
             "MGA"
+        ],
+        "language_codes": [
+            "fr",
+            "mg"
         ]
     },
     {
@@ -1276,6 +1755,10 @@
         "osm_name": "Ṃajeḷ",
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "en",
+            "mh"
         ]
     },
     {
@@ -1285,6 +1768,9 @@
         "osm_name": "Северна Македонија",
         "currency_codes": [
             "MKD"
+        ],
+        "language_codes": [
+            "mk"
         ]
     },
     {
@@ -1294,6 +1780,9 @@
         "osm_name": "Mali",
         "currency_codes": [
             "XOF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -1303,6 +1792,9 @@
         "osm_name": "မြန်မာ",
         "currency_codes": [
             "MMK"
+        ],
+        "language_codes": [
+            "my"
         ]
     },
     {
@@ -1312,6 +1804,9 @@
         "osm_name": "Монгол улс ᠮᠤᠩᠭᠤᠯ ᠤᠯᠤᠰ",
         "currency_codes": [
             "MNT"
+        ],
+        "language_codes": [
+            "mn"
         ]
     },
     {
@@ -1321,6 +1816,10 @@
         "osm_name": null,
         "currency_codes": [
             "MOP"
+        ],
+        "language_codes": [
+            "pt",
+            "zh"
         ]
     },
     {
@@ -1330,6 +1829,10 @@
         "osm_name": null,
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "en",
+            "ch"
         ]
     },
     {
@@ -1339,6 +1842,9 @@
         "osm_name": null,
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -1348,6 +1854,9 @@
         "osm_name": "Mauritanie موريتانيا",
         "currency_codes": [
             "MRU"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -1357,6 +1866,9 @@
         "osm_name": "Montserrat",
         "currency_codes": [
             "XCD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1366,6 +1878,10 @@
         "osm_name": "Malta",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "en",
+            "mt"
         ]
     },
     {
@@ -1375,6 +1891,10 @@
         "osm_name": "Mauritius / Maurice",
         "currency_codes": [
             "MUR"
+        ],
+        "language_codes": [
+            "fr",
+            "en"
         ]
     },
     {
@@ -1384,6 +1904,9 @@
         "osm_name": "ދިވެހިރާއްޖެ",
         "currency_codes": [
             "MVR"
+        ],
+        "language_codes": [
+            "dv"
         ]
     },
     {
@@ -1393,6 +1916,10 @@
         "osm_name": "Malawi",
         "currency_codes": [
             "MWK"
+        ],
+        "language_codes": [
+            "en",
+            "ny"
         ]
     },
     {
@@ -1402,6 +1929,9 @@
         "osm_name": "México",
         "currency_codes": [
             "MXN"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -1411,6 +1941,9 @@
         "osm_name": "Malaysia",
         "currency_codes": [
             "MYR"
+        ],
+        "language_codes": [
+            "ms"
         ]
     },
     {
@@ -1420,6 +1953,9 @@
         "osm_name": "Moçambique",
         "currency_codes": [
             "MZN"
+        ],
+        "language_codes": [
+            "pt"
         ]
     },
     {
@@ -1430,6 +1966,9 @@
         "currency_codes": [
             "NAD",
             "ZAR"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1439,6 +1978,9 @@
         "osm_name": null,
         "currency_codes": [
             "XPF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -1448,6 +1990,9 @@
         "osm_name": "Niger",
         "currency_codes": [
             "XOF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -1457,6 +2002,9 @@
         "osm_name": null,
         "currency_codes": [
             "AUD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1466,6 +2014,9 @@
         "osm_name": "Nigeria",
         "currency_codes": [
             "NGN"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1475,6 +2026,9 @@
         "osm_name": "Nicaragua",
         "currency_codes": [
             "NIO"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -1484,6 +2038,9 @@
         "osm_name": "Nederland",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "nl"
         ]
     },
     {
@@ -1493,6 +2050,9 @@
         "osm_name": "Norge",
         "currency_codes": [
             "NOK"
+        ],
+        "language_codes": [
+            "nb"
         ]
     },
     {
@@ -1502,6 +2062,9 @@
         "osm_name": "नेपाल",
         "currency_codes": [
             "NPR"
+        ],
+        "language_codes": [
+            "ne"
         ]
     },
     {
@@ -1511,6 +2074,9 @@
         "osm_name": "Naoero",
         "currency_codes": [
             "AUD"
+        ],
+        "language_codes": [
+            "na"
         ]
     },
     {
@@ -1520,6 +2086,9 @@
         "osm_name": "Niuē",
         "currency_codes": [
             "NZD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1529,6 +2098,10 @@
         "osm_name": "New Zealand / Aotearoa",
         "currency_codes": [
             "NZD"
+        ],
+        "language_codes": [
+            "en",
+            "mi"
         ]
     },
     {
@@ -1538,6 +2111,9 @@
         "osm_name": "عمان",
         "currency_codes": [
             "OMR"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -1548,6 +2124,9 @@
         "currency_codes": [
             "PAB",
             "USD"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -1557,6 +2136,9 @@
         "osm_name": "Perú",
         "currency_codes": [
             "PEN"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -1566,6 +2148,9 @@
         "osm_name": null,
         "currency_codes": [
             "XPF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -1575,6 +2160,10 @@
         "osm_name": "Papua Niugini",
         "currency_codes": [
             "PGK"
+        ],
+        "language_codes": [
+            "en",
+            "ho"
         ]
     },
     {
@@ -1584,6 +2173,10 @@
         "osm_name": "Philippines",
         "currency_codes": [
             "PHP"
+        ],
+        "language_codes": [
+            "en",
+            "tl"
         ]
     },
     {
@@ -1593,6 +2186,10 @@
         "osm_name": "پاکستان",
         "currency_codes": [
             "PKR"
+        ],
+        "language_codes": [
+            "ur",
+            "en"
         ]
     },
     {
@@ -1602,6 +2199,9 @@
         "osm_name": "Polska",
         "currency_codes": [
             "PLN"
+        ],
+        "language_codes": [
+            "pl"
         ]
     },
     {
@@ -1611,6 +2211,9 @@
         "osm_name": null,
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -1620,6 +2223,9 @@
         "osm_name": "Pitkern Ailen",
         "currency_codes": [
             "NZD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1629,6 +2235,10 @@
         "osm_name": null,
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "es",
+            "en"
         ]
     },
     {
@@ -1639,6 +2249,9 @@
         "currency_codes": [
             "ILS",
             "JOD"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -1648,6 +2261,9 @@
         "osm_name": "Portugal",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "pt"
         ]
     },
     {
@@ -1657,6 +2273,9 @@
         "osm_name": "Belau",
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1666,6 +2285,10 @@
         "osm_name": "Paraguay / Paraguái",
         "currency_codes": [
             "PYG"
+        ],
+        "language_codes": [
+            "es",
+            "gn"
         ]
     },
     {
@@ -1675,6 +2298,9 @@
         "osm_name": "قطر",
         "currency_codes": [
             "QAR"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -1684,6 +2310,9 @@
         "osm_name": null,
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -1693,6 +2322,9 @@
         "osm_name": "România",
         "currency_codes": [
             "RON"
+        ],
+        "language_codes": [
+            "ro"
         ]
     },
     {
@@ -1702,6 +2334,9 @@
         "osm_name": "Србија",
         "currency_codes": [
             "RSD"
+        ],
+        "language_codes": [
+            "sr"
         ]
     },
     {
@@ -1711,6 +2346,9 @@
         "osm_name": "Россия",
         "currency_codes": [
             "RUB"
+        ],
+        "language_codes": [
+            "ru"
         ]
     },
     {
@@ -1720,6 +2358,11 @@
         "osm_name": "Rwanda",
         "currency_codes": [
             "RWF"
+        ],
+        "language_codes": [
+            "en",
+            "fr",
+            "rw"
         ]
     },
     {
@@ -1729,6 +2372,9 @@
         "osm_name": "السعودية",
         "currency_codes": [
             "SAR"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -1738,6 +2384,9 @@
         "osm_name": "Solomon Islands",
         "currency_codes": [
             "SBD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1747,6 +2396,10 @@
         "osm_name": "Sesel",
         "currency_codes": [
             "SCR"
+        ],
+        "language_codes": [
+            "fr",
+            "en"
         ]
     },
     {
@@ -1756,6 +2409,10 @@
         "osm_name": "السودان",
         "currency_codes": [
             "SDG"
+        ],
+        "language_codes": [
+            "ar",
+            "en"
         ]
     },
     {
@@ -1765,6 +2422,9 @@
         "osm_name": "Sverige",
         "currency_codes": [
             "SEK"
+        ],
+        "language_codes": [
+            "sv"
         ]
     },
     {
@@ -1774,6 +2434,12 @@
         "osm_name": "Singapore",
         "currency_codes": [
             "SGD"
+        ],
+        "language_codes": [
+            "en",
+            "ta",
+            "zh",
+            "ms"
         ]
     },
     {
@@ -1783,6 +2449,9 @@
         "osm_name": "Saint Helena, Ascension and Tristan da Cunha",
         "currency_codes": [
             "SHP"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1792,6 +2461,9 @@
         "osm_name": "Slovenija",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "sl"
         ]
     },
     {
@@ -1801,6 +2473,9 @@
         "osm_name": null,
         "currency_codes": [
             "NOK"
+        ],
+        "language_codes": [
+            "nb"
         ]
     },
     {
@@ -1810,6 +2485,9 @@
         "osm_name": "Slovensko",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "sk"
         ]
     },
     {
@@ -1819,6 +2497,9 @@
         "osm_name": "Sierra Leone",
         "currency_codes": [
             "SLE"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1828,6 +2509,9 @@
         "osm_name": "San Marino",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "it"
         ]
     },
     {
@@ -1837,6 +2521,9 @@
         "osm_name": "Sénégal",
         "currency_codes": [
             "XOF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -1846,6 +2533,10 @@
         "osm_name": "Soomaaliya الصومال",
         "currency_codes": [
             "SOS"
+        ],
+        "language_codes": [
+            "so",
+            "ar"
         ]
     },
     {
@@ -1855,6 +2546,9 @@
         "osm_name": "Suriname",
         "currency_codes": [
             "SRD"
+        ],
+        "language_codes": [
+            "nl"
         ]
     },
     {
@@ -1864,6 +2558,9 @@
         "osm_name": "South Sudan جنوب السودان",
         "currency_codes": [
             "SSP"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1873,6 +2570,9 @@
         "osm_name": "São Tomé e Príncipe",
         "currency_codes": [
             "STN"
+        ],
+        "language_codes": [
+            "pt"
         ]
     },
     {
@@ -1882,6 +2582,9 @@
         "osm_name": "El Salvador",
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -1891,6 +2594,10 @@
         "osm_name": null,
         "currency_codes": [
             "XCG"
+        ],
+        "language_codes": [
+            "en",
+            "nl"
         ]
     },
     {
@@ -1900,6 +2607,9 @@
         "osm_name": "سوريا",
         "currency_codes": [
             "SYP"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -1909,6 +2619,10 @@
         "osm_name": "Eswatini",
         "currency_codes": [
             "SZL"
+        ],
+        "language_codes": [
+            "en",
+            "ss"
         ]
     },
     {
@@ -1918,6 +2632,9 @@
         "osm_name": "Turks and Caicos Islands",
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1927,6 +2644,10 @@
         "osm_name": "Tchad تشاد",
         "currency_codes": [
             "XAF"
+        ],
+        "language_codes": [
+            "ar",
+            "fr"
         ]
     },
     {
@@ -1936,6 +2657,9 @@
         "osm_name": null,
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -1945,6 +2669,9 @@
         "osm_name": "Togo",
         "currency_codes": [
             "XOF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -1954,6 +2681,9 @@
         "osm_name": "ประเทศไทย",
         "currency_codes": [
             "THB"
+        ],
+        "language_codes": [
+            "th"
         ]
     },
     {
@@ -1963,6 +2693,10 @@
         "osm_name": "Тоҷикистон",
         "currency_codes": [
             "TJS"
+        ],
+        "language_codes": [
+            "ru",
+            "tg"
         ]
     },
     {
@@ -1972,6 +2706,9 @@
         "osm_name": "Tokelau",
         "currency_codes": [
             "NZD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -1981,6 +2718,9 @@
         "osm_name": "Timor-Leste",
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "pt"
         ]
     },
     {
@@ -1990,6 +2730,9 @@
         "osm_name": "Türkmenistan",
         "currency_codes": [
             "TMT"
+        ],
+        "language_codes": [
+            "tk"
         ]
     },
     {
@@ -1999,6 +2742,9 @@
         "osm_name": "تونس",
         "currency_codes": [
             "TND"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -2008,6 +2754,10 @@
         "osm_name": "Tonga",
         "currency_codes": [
             "TOP"
+        ],
+        "language_codes": [
+            "en",
+            "to"
         ]
     },
     {
@@ -2017,6 +2767,9 @@
         "osm_name": "Türkiye",
         "currency_codes": [
             "TRY"
+        ],
+        "language_codes": [
+            "tr"
         ]
     },
     {
@@ -2026,6 +2779,9 @@
         "osm_name": "Trinidad and Tobago",
         "currency_codes": [
             "TTD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -2035,6 +2791,9 @@
         "osm_name": "Tuvalu",
         "currency_codes": [
             "AUD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -2044,6 +2803,9 @@
         "osm_name": "臺灣",
         "currency_codes": [
             "TWD"
+        ],
+        "language_codes": [
+            "zh"
         ]
     },
     {
@@ -2053,6 +2815,10 @@
         "osm_name": "Tanzania",
         "currency_codes": [
             "TZS"
+        ],
+        "language_codes": [
+            "en",
+            "sw"
         ]
     },
     {
@@ -2062,6 +2828,9 @@
         "osm_name": "Україна",
         "currency_codes": [
             "UAH"
+        ],
+        "language_codes": [
+            "uk"
         ]
     },
     {
@@ -2071,6 +2840,10 @@
         "osm_name": "Uganda",
         "currency_codes": [
             "UGX"
+        ],
+        "language_codes": [
+            "en",
+            "sw"
         ]
     },
     {
@@ -2080,6 +2853,12 @@
         "osm_name": null,
         "currency_codes": [
             "GBP"
+        ],
+        "language_codes": [
+            "en",
+            "cy",
+            "ga",
+            "gd"
         ]
     },
     {
@@ -2089,6 +2868,9 @@
         "osm_name": null,
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -2098,6 +2880,9 @@
         "osm_name": "United States",
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -2107,6 +2892,9 @@
         "osm_name": "Uruguay",
         "currency_codes": [
             "UYU"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -2116,6 +2904,9 @@
         "osm_name": "Oʻzbekiston",
         "currency_codes": [
             "UZS"
+        ],
+        "language_codes": [
+            "uz"
         ]
     },
     {
@@ -2125,6 +2916,10 @@
         "osm_name": "Civitas Vaticana - Città del Vaticano",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "it",
+            "la"
         ]
     },
     {
@@ -2134,6 +2929,9 @@
         "osm_name": "Saint Vincent and the Grenadines",
         "currency_codes": [
             "XCD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -2143,6 +2941,9 @@
         "osm_name": "Venezuela",
         "currency_codes": [
             "VES"
+        ],
+        "language_codes": [
+            "es"
         ]
     },
     {
@@ -2152,6 +2953,9 @@
         "osm_name": "British Virgin Islands",
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -2161,6 +2965,9 @@
         "osm_name": null,
         "currency_codes": [
             "USD"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -2170,6 +2977,9 @@
         "osm_name": "Việt Nam",
         "currency_codes": [
             "VND"
+        ],
+        "language_codes": [
+            "vi"
         ]
     },
     {
@@ -2179,6 +2989,11 @@
         "osm_name": "Vanuatu",
         "currency_codes": [
             "VUV"
+        ],
+        "language_codes": [
+            "fr",
+            "en",
+            "bi"
         ]
     },
     {
@@ -2188,6 +3003,9 @@
         "osm_name": null,
         "currency_codes": [
             "XPF"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -2197,6 +3015,10 @@
         "osm_name": "Sāmoa",
         "currency_codes": [
             "WST"
+        ],
+        "language_codes": [
+            "en",
+            "sm"
         ]
     },
     {
@@ -2206,6 +3028,12 @@
         "osm_name": "Kosova / Kosovo",
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "sq",
+            "sr",
+            "bs",
+            "tr"
         ]
     },
     {
@@ -2215,6 +3043,9 @@
         "osm_name": "اليمن",
         "currency_codes": [
             "YER"
+        ],
+        "language_codes": [
+            "ar"
         ]
     },
     {
@@ -2224,6 +3055,9 @@
         "osm_name": null,
         "currency_codes": [
             "EUR"
+        ],
+        "language_codes": [
+            "fr"
         ]
     },
     {
@@ -2231,7 +3065,8 @@
         "name": "Yugoslavia",
         "country_code_2": "YU",
         "osm_name": null,
-        "currency_codes": []
+        "currency_codes": [],
+        "language_codes": []
     },
     {
         "id": "en:south-africa",
@@ -2240,6 +3075,18 @@
         "osm_name": "South Africa",
         "currency_codes": [
             "ZAR"
+        ],
+        "language_codes": [
+            "en",
+            "zu",
+            "xh",
+            "af",
+            "ve",
+            "ss",
+            "tn",
+            "ts",
+            "st",
+            "nr"
         ]
     },
     {
@@ -2249,6 +3096,9 @@
         "osm_name": "Zambia",
         "currency_codes": [
             "ZMW"
+        ],
+        "language_codes": [
+            "en"
         ]
     },
     {
@@ -2259,13 +3109,19 @@
         "currency_codes": [
             "ZWG",
             "USD"
+        ],
+        "language_codes": [
+            "en",
+            "sn",
+            "nd"
         ]
     },
     {
         "id": "en:world",
-        "name": "world",
+        "name": "World",
         "country_code_2": "world",
         "osm_name": null,
-        "currency_codes": []
+        "currency_codes": [],
+        "language_codes": []
     }
 ]
