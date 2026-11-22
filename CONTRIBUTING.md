@@ -10,9 +10,15 @@ In Crowdin, after selecting the target language, add `open-prices-frontend` as a
 
 ### Installation
 
-If you don't already have Node.js install, we recommend using [`nvm`](https://github.com/nvm-sh/nvm) to manage different node versions.
+If you don't already have Node.js installed, we recommend using [`nvm`](https://github.com/nvm-sh/nvm) to manage different node versions.
 
-We use the [yarn](https://yarnpkg.com/getting-started/install) for package management.
+We use [yarn](https://classic.yarnpkg.com/) (v1, classic) for package management. If you don't have it yet:
+
+```sh
+corepack enable        # Node.js 16.10 to 24 (Corepack is no longer bundled from Node.js 25)
+# or
+npm install -g yarn
+```
 
 ### Run the project
 
