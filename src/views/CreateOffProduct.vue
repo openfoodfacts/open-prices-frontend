@@ -77,8 +77,8 @@
                 @update:currentFilterList="updateFilterList($event)"
               />
               <CountryFilter
-                :currentCountry="currentCountry"
-                @update:currentCountry="updateCountry($event)"
+                :currentCountry="countryFilter"
+                @update:currentCountry="updateCountryFilter($event)"
               />
               <OrderMenu
                 v-if="!usePricesApi"
@@ -534,14 +534,14 @@ export default {
         },
       ];
     },
-    currentCountry() {
+    countryFilter() {
       // read from the route (like the nearby filter), to stay in sync on browser back/forward
       return geo_utils.getCountryFilter(this.$route.query);
     },
     usePricesApi() {
       // the products API has no owner or country filter
       return (
-        this.currentFilterList.includes("price__owner") || !!this.currentCountry
+        this.currentFilterList.includes("price__owner") || !!this.countryFilter
       );
     },
     getPricesParams() {
@@ -554,9 +554,9 @@ export default {
       if (this.currentFilterList.includes("price__owner")) {
         defaultParams["owner"] = this.appStore.user.username;
       }
-      if (this.currentCountry) {
+      if (this.countryFilter) {
         defaultParams["location__osm_address_country_code"] =
-          this.currentCountry;
+          this.countryFilter;
       }
       return defaultParams;
     },
@@ -881,7 +881,7 @@ export default {
       });
       // this.getMissingProductsWithPrices() will be called in watch $route
     },
-    updateCountry(countryCode) {
+    updateCountryFilter(countryCode) {
       this.$router.push({
         query: geo_utils.buildCountryFilterQuery(
           this.$route.query,
