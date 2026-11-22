@@ -336,6 +336,7 @@
 		"FilterProductWithPriceCount": "Uz cijenu",
 		"FilterProductWithPriceCountHide": "Sakrij proizvode s cijenama",
 		"FilterProductWithPriceOwner": "Prikaži samo proizvode s mojim cijenama",
+		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Bez cijena",
 		"FilterPriceMoreThan30DaysHide": "Sakrij cijene starije od 30 dana",
 		"FilterProofWithPriceCountHide": "Sakrij dokaze s cijenama",
