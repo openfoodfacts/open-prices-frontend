@@ -330,6 +330,7 @@ export default {
   ],
   PRODUCT_CREATE_FILTER_LIST: [
     { key: "price__owner", value: "FilterProductWithPriceOwner" },
+    { key: "price_user_country", value: "FilterProductWithPriceUserCountry" },
   ],
   PRICE_FILTER_LIST: [
     { key: "show_last_month", value: "FilterPriceMoreThan30DaysHide" },
