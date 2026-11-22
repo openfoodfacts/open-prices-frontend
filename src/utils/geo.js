@@ -62,15 +62,24 @@ function getCountryEmojiFromCode(countryCode) {
 }
 
 /**
+ * Get the languages of the country (from the OFF countries taxonomy)
+ * Input: country code (e.g. "BE")
+ * Output: language codes, main one first (e.g. ["nl", "fr", "de"])
+ */
+function getCountryLanguageListFromCode(countryCode) {
+  const country = countryData.find(
+    (country) => country.country_code_2 === countryCode?.toUpperCase(),
+  );
+  return country ? country.language_codes : [];
+}
+
+/**
  * Get the main language of the country (from the OFF countries taxonomy)
  * Input: country code & allowed language codes (e.g. "BE" & ["en", "fr", "nl"])
  * Output: the first country language that is allowed (e.g. "nl"), or "en"
  */
 function getCountryLanguageFromCode(countryCode, languageCodeList) {
-  const country = countryData.find(
-    (country) => country.country_code_2 === countryCode?.toUpperCase(),
-  );
-  const language = country?.language_codes.find((code) =>
+  const language = getCountryLanguageListFromCode(countryCode).find((code) =>
     languageCodeList.includes(code),
   );
   return language || "en";
@@ -401,6 +410,7 @@ export default {
   getMapBounds,
   getMapCenter,
   getCountryEmojiFromCode,
+  getCountryLanguageListFromCode,
   getCountryLanguageFromCode,
   getLocationOSMCountryCode,
   getLocationOSMName,

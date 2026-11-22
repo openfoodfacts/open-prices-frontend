@@ -159,7 +159,7 @@
             </div>
             <v-autocomplete
               v-model="productForm.product_language"
-              :items="languageList"
+              :items="productLanguageList"
               item-title="native"
               item-value="code"
               density="compact"
@@ -481,6 +481,7 @@ export default {
       drawnImageSrc: null,
       imageEditMode: false,
       productExists: false,
+      productCountryCode: null, // proof location country, see getProductPrices
       zoomLevel: 1,
       loading: false,
       panLevel: { x: 0, y: 0 },
@@ -488,6 +489,23 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    productLanguageList() {
+      // the proof location country languages first, then all the others
+      const countryLanguageList = geo_utils
+        .getCountryLanguageListFromCode(this.productCountryCode)
+        .map((code) =>
+          this.languageList.find((language) => language.code === code),
+        )
+        .filter(Boolean);
+      if (!countryLanguageList.length) return this.languageList;
+      return [
+        ...countryLanguageList,
+        { type: "divider" },
+        ...this.languageList.filter(
+          (language) => !countryLanguageList.includes(language),
+        ),
+      ];
+    },
     stepItemList() {
       return [
         {
@@ -654,6 +672,8 @@ export default {
               ),
             );
             const lastPrice = this.priceList[0];
+            this.productCountryCode =
+              lastPrice.location.osm_address_country_code;
             this.productForm = {
               ...this.productForm,
               product_name: lastPrice.product_name
@@ -664,7 +684,7 @@ export default {
               // the proof location is the only signal: the product can be
               // created by any user, from any location
               product_language: geo_utils.getCountryLanguageFromCode(
-                lastPrice.location.osm_address_country_code,
+                this.productCountryCode,
                 this.languageList.map((language) => language.code),
               ),
               quantity: "",
@@ -673,6 +693,7 @@ export default {
             };
             this.setShownProof();
           } else {
+            this.productCountryCode = null;
             this.productForm = {
               ...this.productForm,
               product_name: null,
