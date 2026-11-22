@@ -724,6 +724,13 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: routes,
+  scrollBehavior(to, from, savedPosition) {
+    // back/forward: restore the previous scroll position (works best with the views kept alive, see App.vue)
+    if (savedPosition) return savedPosition;
+    // same page, only the query changed (e.g. filters): don't scroll
+    if (to.path === from.path) return false;
+    return { top: 0 };
+  },
 });
 
 /**
