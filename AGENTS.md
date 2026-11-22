@@ -129,6 +129,9 @@ export default {
   - `fix: [description]` for bug fixes (triggers Patch release).
   - `chore: [description]` for dependency updates or routine tasks.
   - `docs: [description]` for documentation changes.
+- **PR Title**: Same convention as commits, with a scope (e.g. `fix(Prices): …`): it becomes the commit message on `main`.
+- **PR Scope**: One topic per PR, keep it small.
+- **PR Description**: Use `.github/pull_request_template.md`, keeping all its sections and checkbox items (don't remove or reword them) and ticking only the ones that apply (with `gh pr create`, fill in a copy and pass it with `--body-file`: `--body` and `--fill` skip the template).
 - **Linting & formatting**: Your code must pass `yarn lint` with 0 warnings (`--max-warnings=0`) and `yarn format:check` before committing. The pre-commit hook runs `yarn lint:fix` then Prettier on staged files, and rejects the commit if warnings remain. CI also checks both.
 
 ## 7. Common Commands (Yarn)
