@@ -492,9 +492,18 @@ export default {
         )
         .filter(Boolean);
       if (!countryLanguageList.length) return this.languageList;
+      const country = this.countryTags.find(
+        (country) =>
+          country.country_code_2 === this.productCountryCode.toUpperCase(),
+      );
       return [
+        // subheader title: see item-title
+        {
+          type: "subheader",
+          name: country ? country.name : this.productCountryCode,
+        },
         ...countryLanguageList,
-        { type: "divider" },
+        { type: "subheader", name: this.$t("CreateOffProduct.OtherLanguages") },
         ...this.languageList.filter(
           (language) => !countryLanguageList.includes(language),
         ),
