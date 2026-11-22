@@ -318,6 +318,29 @@ function hasLocationCoordinates(locationObject) {
   return toFiniteNumber(lat) !== null && toFiniteNumber(lon) !== null;
 }
 
+/**
+ * Country filter: read the country code from the URL query
+ * Input: query (e.g. { country: "fr" }), any case accepted
+ * Output: the uppercase country code (e.g. "FR", like the API), or null
+ */
+function getCountryFilter(query) {
+  const country = query[constants.COUNTRY_PARAM];
+  return typeof country === "string" && country ? country.toUpperCase() : null;
+}
+
+/**
+ * Country filter: write the country code to the URL query
+ * Lowercase (e.g. "?country=fr"), like Hunger Games. Removed if empty
+ */
+function buildCountryFilterQuery(query, countryCode) {
+  return {
+    ...query,
+    [constants.COUNTRY_PARAM]: countryCode
+      ? countryCode.toLowerCase()
+      : undefined,
+  };
+}
+
 function getNearbyFilter(query) {
   const lat = toFiniteNumber(query.lat);
   const lon = toFiniteNumber(query.lon);
@@ -427,6 +450,8 @@ export default {
   getLocationOSMLatLng,
   hasLocationCoordinates,
   NEARBY_FILTER_RADIUS_OPTIONS,
+  getCountryFilter,
+  buildCountryFilterQuery,
   getNearbyFilter,
   buildNearbyFilterQuery,
   getLocationOSMBrandLogoPathName,

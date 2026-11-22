@@ -572,8 +572,7 @@ export default {
     },
   },
   mounted() {
-    this.currentCountry =
-      this.$route.query[constants.COUNTRY_PARAM] || this.currentCountry;
+    this.currentCountry = geo_utils.getCountryFilter(this.$route.query);
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     if (this.$route.query.product_code) {
@@ -883,10 +882,10 @@ export default {
     updateCountry(countryCode) {
       this.currentCountry = countryCode;
       this.$router.push({
-        query: {
-          ...this.$route.query,
-          [constants.COUNTRY_PARAM]: this.currentCountry || undefined,
-        },
+        query: geo_utils.buildCountryFilterQuery(
+          this.$route.query,
+          this.currentCountry,
+        ),
       });
       // this.getMissingProductsWithPrices() will be called in watch $route
     },
