@@ -164,6 +164,8 @@
               item-value="code"
               density="compact"
               variant="outlined"
+              :rules="[fieldRequired]"
+              required
             />
 
             <div class="text-body-2">
@@ -289,7 +291,9 @@
                   color="primary"
                   variant="flat"
                   type="submit"
-                  :disabled="!productForm.flavor"
+                  :disabled="
+                    !productForm.flavor || !productForm.product_language
+                  "
                 >
                   {{ $t("CreateOffProduct.CreateProduct") }}
                 </v-btn>
@@ -416,12 +420,24 @@ import { defineAsyncComponent } from "vue";
 import { mapStores } from "pinia";
 import { useAppStore } from "../store";
 import openPricesApi from "../services/openPricesApi";
-import languageList from "../i18n/data/languages.json";
+import languageData from "../i18n/data/languages.json";
+import countryData from "../data/countries.json";
 import constants from "../constants";
 import proof_utils from "../utils/proof.js";
 import utils from "../utils";
 import data_utils from "../utils/data.js";
 import "vue-zoomable/dist/style.css";
+
+// OFF expects 2-letter language codes: keep one entry per language
+// (ex: "nl_BE" & "nl_NL" become "nl")
+const languageList = [
+  ...new Set(languageData.map((language) => language.code.split("_")[0])),
+]
+  .filter((code) => /^[a-z]{2}$/.test(code))
+  .map((code) => ({
+    code: code,
+    native: new Intl.DisplayNames([code], { type: "language" }).of(code),
+  }));
 
 export default {
   components: {
@@ -632,9 +648,9 @@ export default {
               new Set(
                 this.priceList
                   .map((price) =>
-                    price.location.osm_address_country_code.toUpperCase(),
+                    price.location.osm_address_country_code?.toUpperCase(),
                   )
-                  .flat(),
+                  .filter(Boolean),
               ),
             );
             const lastPrice = this.priceList[0];
@@ -645,9 +661,9 @@ export default {
                 : null,
               stores: stores,
               countries: countries,
-              product_language:
-                lastPrice.location.osm_address_country_code.toLowerCase() ||
-                "en",
+              product_language: this.getLanguageFromCountry(
+                lastPrice.location.osm_address_country_code,
+              ),
               quantity: "",
               brands: [],
               categories: [],
@@ -676,6 +692,17 @@ export default {
             this.productForm.countries = null;
           }
         });
+    },
+    getLanguageFromCountry(countryCode) {
+      // the proof location is the only signal: the product can be
+      // created by any user, from any location
+      const country = countryData.find(
+        (country) => country.country_code_2 === countryCode?.toUpperCase(),
+      );
+      const language = country?.language_codes.find((code) =>
+        this.languageList.some((language) => language.code === code),
+      );
+      return language || "en";
     },
     setCountryTags() {
       data_utils
@@ -715,6 +742,8 @@ export default {
             .join(","),
         },
       };
+      // sent separately (product_language_code), not an OFF field
+      delete inputData.update_params.product_language;
       openPricesApi
         .updateOffProduct(this.productForm.product_code, inputData)
         .then(() => {
