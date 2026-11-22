@@ -138,6 +138,7 @@
               inputmode="decimal"
               :rules="priceRules"
               :suffix="itemPriceSuffix(item)"
+              persistent-placeholder
               :hide-details="true"
               @update:modelValue="
                 (newValue) => (item.price = replaceCommaWithDot(newValue))
