@@ -77,7 +77,7 @@
                 @update:currentFilterList="updateFilterList($event)"
               />
               <OrderMenu
-                v-if="!currentFilterList.includes('price__owner')"
+                v-if="!usePricesApi"
                 kind="productCreate"
                 :currentOrder="currentOrder"
                 @update:currentOrder="updateOrder($event)"
@@ -525,6 +525,13 @@ export default {
         },
       ];
     },
+    usePricesApi() {
+      // the products API has no owner or country filter
+      return (
+        this.currentFilterList.includes("price__owner") ||
+        this.currentFilterList.includes("price_user_country")
+      );
+    },
     getPricesParams() {
       let defaultParams = {
         product__source__isnull: true,
@@ -534,6 +541,10 @@ export default {
       };
       if (this.currentFilterList.includes("price__owner")) {
         defaultParams["owner"] = this.appStore.user.username;
+      }
+      if (this.currentFilterList.includes("price_user_country")) {
+        defaultParams["location__osm_address_country_code"] =
+          this.appStore.getUserCountry;
       }
       return defaultParams;
     },
@@ -580,10 +591,7 @@ export default {
       this.missingProductsWithPrices = [];
       this.loading = true;
       // Use price API in some cases
-      if (
-        this.currentFilterList.includes("price__owner") ||
-        this.currentOrder === "-created"
-      ) {
+      if (this.usePricesApi || this.currentOrder === "-created") {
         // Using prices API lets us do finer filtering, typically limiting to price tags proofs
         return openPricesApi
           .getPrices(this.getPricesParams)
