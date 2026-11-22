@@ -336,6 +336,7 @@
 		"FilterProductWithPriceCount": "価格付き",
 		"FilterProductWithPriceCountHide": "価格付きの商品を非表示にする",
 		"FilterProductWithPriceOwner": "Show only products with my prices",
+		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "価格なし",
 		"FilterPriceMoreThan30DaysHide": "30日以上経過した価格を非表示にする",
 		"FilterProofWithPriceCountHide": "価格の証明を隠す",
