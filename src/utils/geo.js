@@ -1,5 +1,6 @@
 import constants from "../constants";
 import utils from "../utils";
+import countryData from "../data/countries.json";
 
 const NEARBY_FILTER_PARAMETER_NAMES = ["lat", "lon", "radius_km"];
 // the API sets no maximum radius: this list is a UI choice, and the largest
@@ -58,6 +59,21 @@ function getCountryEmojiFromCode(countryCode) {
     .split("")
     .map((char) => 127397 + char.charCodeAt());
   return String.fromCodePoint(...codePoints);
+}
+
+/**
+ * Get the main language of the country (from the OFF countries taxonomy)
+ * Input: country code & allowed language codes (e.g. "BE" & ["en", "fr", "nl"])
+ * Output: the first country language that is allowed (e.g. "nl"), or "en"
+ */
+function getCountryLanguageFromCode(countryCode, languageCodeList) {
+  const country = countryData.find(
+    (country) => country.country_code_2 === countryCode?.toUpperCase(),
+  );
+  const language = country?.language_codes.find((code) =>
+    languageCodeList.includes(code),
+  );
+  return language || "en";
 }
 
 function getLocationOSMName(locationObject) {
@@ -385,6 +401,7 @@ export default {
   getMapBounds,
   getMapCenter,
   getCountryEmojiFromCode,
+  getCountryLanguageFromCode,
   getLocationOSMCountryCode,
   getLocationOSMName,
   getLocationOSMRoad,

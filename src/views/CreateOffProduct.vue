@@ -421,11 +421,11 @@ import { mapStores } from "pinia";
 import { useAppStore } from "../store";
 import openPricesApi from "../services/openPricesApi";
 import languageData from "../i18n/data/languages.json";
-import countryData from "../data/countries.json";
 import constants from "../constants";
 import proof_utils from "../utils/proof.js";
 import utils from "../utils";
 import data_utils from "../utils/data.js";
+import geo_utils from "../utils/geo.js";
 import "vue-zoomable/dist/style.css";
 
 // OFF expects 2-letter language codes: keep one entry per language
@@ -661,8 +661,11 @@ export default {
                 : null,
               stores: stores,
               countries: countries,
-              product_language: this.getLanguageFromCountry(
+              // the proof location is the only signal: the product can be
+              // created by any user, from any location
+              product_language: geo_utils.getCountryLanguageFromCode(
                 lastPrice.location.osm_address_country_code,
+                this.languageList.map((language) => language.code),
               ),
               quantity: "",
               brands: [],
@@ -692,17 +695,6 @@ export default {
             this.productForm.countries = null;
           }
         });
-    },
-    getLanguageFromCountry(countryCode) {
-      // the proof location is the only signal: the product can be
-      // created by any user, from any location
-      const country = countryData.find(
-        (country) => country.country_code_2 === countryCode?.toUpperCase(),
-      );
-      const language = country?.language_codes.find((code) =>
-        this.languageList.some((language) => language.code === code),
-      );
-      return language || "en";
     },
     setCountryTags() {
       data_utils
