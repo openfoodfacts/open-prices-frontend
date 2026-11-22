@@ -1,5 +1,38 @@
 # Changelog
 
+## [1.179.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.178.1...v1.179.0) (2026-11-22)
+
+
+### Features
+
+* **Data:** generate the product languages list from the OFF languages taxonomy ([#2555](https://github.com/openfoodfacts/open-prices-frontend/issues/2555)) ([2896f45](https://github.com/openfoodfacts/open-prices-frontend/commit/2896f45d0e94e63b0dff8c0b450df7a5dfdd335f))
+* **Price validation:** create the price & link the price tag in a single API call ([#2534](https://github.com/openfoodfacts/open-prices-frontend/issues/2534)) ([19d51b4](https://github.com/openfoodfacts/open-prices-frontend/commit/19d51b468d4f42812e89f0ed64277b869a941342))
+* **Proof Price Tag Assistant:** create the price & link the price tag in a single API call ([#2533](https://github.com/openfoodfacts/open-prices-frontend/issues/2533)) ([d88b329](https://github.com/openfoodfacts/open-prices-frontend/commit/d88b32947cb4544846e0ad6cba7d4c43abfd334d))
+
+
+### Bug Fixes
+
+* **CreateOffProduct:** don't overwrite the main language of existing products ([#2549](https://github.com/openfoodfacts/open-prices-frontend/issues/2549)) ([7a53b4e](https://github.com/openfoodfacts/open-prices-frontend/commit/7a53b4e60a2ac4c2cccff5dd5007aefb0e4c7c9d))
+* **CreateOffProduct:** set the default product language from the proof location country ([#2547](https://github.com/openfoodfacts/open-prices-frontend/issues/2547)) ([9db4c36](https://github.com/openfoodfacts/open-prices-frontend/commit/9db4c36fab385eace09254609eaf4dd650e0db37))
+* **Data:** fall back to the base language for regional locales in taxonomy names ([#2554](https://github.com/openfoodfacts/open-prices-frontend/issues/2554)) ([1378725](https://github.com/openfoodfacts/open-prices-frontend/commit/1378725c2d6e3318c879bc86830f95a37e16d2b3))
+* **Inputs:** keep currency and quantity suffixes visible ([#2471](https://github.com/openfoodfacts/open-prices-frontend/issues/2471)) ([932eb19](https://github.com/openfoodfacts/open-prices-frontend/commit/932eb198ef5da23ff2e8bdf373089b25d4595509))
+* **Price add:** remember the last product type used (store key typo) ([#2536](https://github.com/openfoodfacts/open-prices-frontend/issues/2536)) ([cb4c49a](https://github.com/openfoodfacts/open-prices-frontend/commit/cb4c49abb5f560b1d35f54e538a07f54df10304c))
+
+
+### Technical
+
+* **CodeRabbit:** also review stacked PRs (any base branch) ([#2538](https://github.com/openfoodfacts/open-prices-frontend/issues/2538)) ([102221c](https://github.com/openfoodfacts/open-prices-frontend/commit/102221cdcb3509ca5b6cfdb968dc60bc53a59b1e))
+* **CONTRIBUTING:** add yarn install instructions ([#2545](https://github.com/openfoodfacts/open-prices-frontend/issues/2545)) ([8cf598a](https://github.com/openfoodfacts/open-prices-frontend/commit/8cf598a122a577d1525dcd17d51d7029540f4f72))
+* **CreateOffProduct:** list the proof location country languages first ([#2548](https://github.com/openfoodfacts/open-prices-frontend/issues/2548)) ([ada1489](https://github.com/openfoodfacts/open-prices-frontend/commit/ada148968b24acc2dd7c30c96c9c0664db77f38e))
+* **CreateOffProduct:** product language list subheaders (location country, other languages) ([#2557](https://github.com/openfoodfacts/open-prices-frontend/issues/2557)) ([56a6909](https://github.com/openfoodfacts/open-prices-frontend/commit/56a69098ba4513ae1cc2c6639a39c5d24ac4e2e8))
+* **CreateOffProduct:** product language names from the OFF taxonomy ([#2556](https://github.com/openfoodfacts/open-prices-frontend/issues/2556)) ([0ca4def](https://github.com/openfoodfacts/open-prices-frontend/commit/0ca4def8fe40980053c26c3c62813a0d3ad5f3cb))
+* **Data:** add language_codes to the generated countries data ([#2546](https://github.com/openfoodfacts/open-prices-frontend/issues/2546)) ([bf09e5f](https://github.com/openfoodfacts/open-prices-frontend/commit/bf09e5f085d611f50994a505282d81e0c017d382))
+* **Data:** update generated data from taxonomies ([#2531](https://github.com/openfoodfacts/open-prices-frontend/issues/2531)) ([b03f792](https://github.com/openfoodfacts/open-prices-frontend/commit/b03f7928588cb0d08a15ac1ec01492459b2d27c4))
+* **Data:** update generated data from taxonomies ([#2550](https://github.com/openfoodfacts/open-prices-frontend/issues/2550)) ([f7c77f3](https://github.com/openfoodfacts/open-prices-frontend/commit/f7c77f3db5fb22eee77aa91a73fa46c77c342127))
+* **GitHub:** add a PR template (includes LLM usage disclosure) ([#2535](https://github.com/openfoodfacts/open-prices-frontend/issues/2535)) ([a75e7dc](https://github.com/openfoodfacts/open-prices-frontend/commit/a75e7dc5fbc62118859e57d48ee4ec03eac50514))
+* **GitHub:** also run the merge conflict labeler on PR updates ([#2553](https://github.com/openfoodfacts/open-prices-frontend/issues/2553)) ([a9e5592](https://github.com/openfoodfacts/open-prices-frontend/commit/a9e5592896ad27b3eafc8c8c7fd3a180ce400e9b))
+* **Settings:** get the currency list from the countries taxonomy ([#2537](https://github.com/openfoodfacts/open-prices-frontend/issues/2537)) ([2d9616f](https://github.com/openfoodfacts/open-prices-frontend/commit/2d9616ff80a7a7522969a55ed69595e68d1953b9))
+
 ## [1.178.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.178.0...v1.178.1) (2026-11-09)
 
 
