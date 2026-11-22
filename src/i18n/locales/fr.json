@@ -336,6 +336,7 @@
 		"FilterProductWithPriceCount": "Avec un prix",
 		"FilterProductWithPriceCountHide": "Masquer les produits qui ont un prix",
 		"FilterProductWithPriceOwner": "Afficher uniquement des produits provenant de mes prix",
+		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Sans prix",
 		"FilterPriceMoreThan30DaysHide": "Masquer les prix datant de plus de 30 jours",
 		"FilterProofWithPriceCountHide": "Masquer les preuves qui ont un prix",
