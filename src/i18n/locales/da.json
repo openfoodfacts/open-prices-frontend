@@ -336,12 +336,10 @@
 		"FilterProductWithPriceCount": "Med en pris",
 		"FilterProductWithPriceCountHide": "Skjul produkter med priser",
 		"FilterProductWithPriceOwner": "Vis kun produkter med mine priser",
-		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Uden priser",
 		"FilterPriceMoreThan30DaysHide": "Skjul priser, der er ældre end 30 dage",
 		"FilterProofWithPriceCountHide": "Skjul beviser med priser",
 		"FilterPriceTagWithProofOwner": "Vis kun priser fra mine beviser",
-		"FilterPriceTagWithProofUserCountry": "Vis kun priser fra mit land",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Vis kun priser med en gyldig stregkode",
 		"FilterPriceTagWithTagPredictionProductExists": "Vis kun priser med et gyldigt produkt",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Vis kun priser med et gyldigt kategorimærke",
@@ -580,6 +578,9 @@
 		"Food": "Fødevare",
 		"PetFood": "Foder til kæledyr",
 		"Beauty": "Skønhed"
+	},
+	"CountryFilter": {
+		"Search": "Search a country"
 	},
 	"ContributionAssistant": {
 		"Steps": {
