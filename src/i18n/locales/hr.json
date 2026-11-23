@@ -336,12 +336,10 @@
 		"FilterProductWithPriceCount": "Uz cijenu",
 		"FilterProductWithPriceCountHide": "Sakrij proizvode s cijenama",
 		"FilterProductWithPriceOwner": "Prikaži samo proizvode s mojim cijenama",
-		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Bez cijena",
 		"FilterPriceMoreThan30DaysHide": "Sakrij cijene starije od 30 dana",
 		"FilterProofWithPriceCountHide": "Sakrij dokaze s cijenama",
 		"FilterPriceTagWithProofOwner": "Prikaži samo cijene iz mojih probnih otisaka",
-		"FilterPriceTagWithProofUserCountry": "Prikaži samo cijene iz moje zemlje",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Prikaži samo cijene s važećim barkodom",
 		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
@@ -580,6 +578,9 @@
 		"Food": "Hrana",
 		"PetFood": "Hrana za kućne ljubimce",
 		"Beauty": "Ljepota"
+	},
+	"CountryFilter": {
+		"Search": "Search a country"
 	},
 	"ContributionAssistant": {
 		"Steps": {
