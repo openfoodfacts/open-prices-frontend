@@ -336,12 +336,10 @@
 		"FilterProductWithPriceCount": "Dengan harga",
 		"FilterProductWithPriceCountHide": "Sembunyikan produk dengan harga",
 		"FilterProductWithPriceOwner": "Show only products with my prices",
-		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Tanpa harga",
 		"FilterPriceMoreThan30DaysHide": "Sembunyikan harga yang sudah lebih dari 30 hari",
 		"FilterProofWithPriceCountHide": "Sembunyikan bukti dengan harga",
 		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
-		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
 		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
@@ -580,6 +578,9 @@
 		"Food": "Makanan",
 		"PetFood": "Makanan hewan",
 		"Beauty": "Kecantikan"
+	},
+	"CountryFilter": {
+		"Search": "Search a country"
 	},
 	"ContributionAssistant": {
 		"Steps": {
