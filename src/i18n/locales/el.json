@@ -336,12 +336,10 @@
 		"FilterProductWithPriceCount": "Με τιμή",
 		"FilterProductWithPriceCountHide": "Απόκρυψη προϊόντων με τιμές",
 		"FilterProductWithPriceOwner": "Εμφάνιση προϊόντων μόνο με τις τιμές μου",
-		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Χωρίς τιμές",
 		"FilterPriceMoreThan30DaysHide": "Απόκρυψη τιμών παλαιότερων των 30 ημερών",
 		"FilterProofWithPriceCountHide": "Απόκρυψη αποδείξεων με τιμές",
 		"FilterPriceTagWithProofOwner": "Εμφάνιση τιμών μόνο από τις αποδείξεις μου",
-		"FilterPriceTagWithProofUserCountry": "Εμφάνιση τιμών μόνο από τη χώρα μου",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Εμφάνιση τιμών μόνο με έγκυρο γραμμωτό κώδικα",
 		"FilterPriceTagWithTagPredictionProductExists": "Εμφάνιση τιμών μόνο με έγκυρο προϊόν",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Εμφάνιση τιμών μόνο με έγκυρη ετικέτα κατηγορίας",
@@ -580,6 +578,9 @@
 		"Food": "Τροφή",
 		"PetFood": "Τροφή κατοικιδίων",
 		"Beauty": "Ομορφιά"
+	},
+	"CountryFilter": {
+		"Search": "Search a country"
 	},
 	"ContributionAssistant": {
 		"Steps": {
