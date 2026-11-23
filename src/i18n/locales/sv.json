@@ -336,12 +336,10 @@
 		"FilterProductWithPriceCount": "Med ett pris",
 		"FilterProductWithPriceCountHide": "Dölj produkter med priser",
 		"FilterProductWithPriceOwner": "Visa endast produkter med mina priser",
-		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Utan priser",
 		"FilterPriceMoreThan30DaysHide": "Dölj priser äldre än 30 dagar",
 		"FilterProofWithPriceCountHide": "Dölj underlag med priser",
 		"FilterPriceTagWithProofOwner": "Visa endast priser från mina bevis",
-		"FilterPriceTagWithProofUserCountry": "Visa endast priser från mitt land",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Visa endast priser med en giltig streckkod",
 		"FilterPriceTagWithTagPredictionProductExists": "Visa endast priser med en giltig produkt",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Visa endast priser med en giltig kategoritagg",
@@ -580,6 +578,9 @@
 		"Food": "Mat",
 		"PetFood": "Djurmat",
 		"Beauty": "Skönhet"
+	},
+	"CountryFilter": {
+		"Search": "Search a country"
 	},
 	"ContributionAssistant": {
 		"Steps": {
