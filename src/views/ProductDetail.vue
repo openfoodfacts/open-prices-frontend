@@ -180,14 +180,16 @@ export default {
       loading: false,
       // share
       shareLinkCopySuccessMessage: false,
-      // filter, order & display
-      currentFilterList: [],
+      // order & display
       currentOrder: constants.PRICE_ORDER_LIST[2].key, // date
       currentDisplay: constants.DISPLAY_LIST[0].key,
     };
   },
   computed: {
     ...mapStores(useAppStore),
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
     productIsCategory() {
       return this.productId.includes(":");
     },
@@ -249,9 +251,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.currentDisplay =
@@ -321,11 +320,10 @@ export default {
         });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.initPrices() will be called in watch $route

@@ -83,12 +83,14 @@ export default {
       labelProductTotal: null,
       labelProductPage: 0,
       loading: false,
-      // filter & order
-      currentFilterList: [],
+      // order
       currentOrder: constants.PRODUCT_ORDER_LIST[0].key, // price_count
     };
   },
   computed: {
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
     getProductsParams() {
       let defaultParams = {
         labels_tags__contains: this.label.id,
@@ -116,9 +118,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.initLabel();
@@ -158,11 +157,10 @@ export default {
         });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.initLabel() will be called in watch $route

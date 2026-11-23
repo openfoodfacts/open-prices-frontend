@@ -84,8 +84,7 @@ export default {
       priceTagPage: 0, // issue with pagination once the user starts removing/validating price tags...
       loading: false,
       productPriceForms: [],
-      // filter & order
-      currentFilterList: [],
+      // order
       currentOrder: "-proof_id", // order by most recent proof
       // feedback
       priceRemovedMessage: false,
@@ -95,6 +94,9 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
     username() {
       return this.appStore.user.username;
     },
@@ -149,9 +151,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
     this.initPriceTags();
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
@@ -291,11 +290,10 @@ export default {
       );
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.initPriceTags() will be called in watch $route

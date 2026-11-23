@@ -455,7 +455,6 @@ export default {
       step: 1,
       // product missing list
       missingProductsWithPrices: [],
-      currentFilterList: [],
       currentOrder: constants.PRODUCT_CREATE_ORDER_LIST[0].key, // -created
       productTotal: 0,
       // product missing form
@@ -481,6 +480,9 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
     productLanguageList() {
       // the proof location country languages first, then all the others
       const countryLanguageList = geo_utils
@@ -567,9 +569,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     if (this.$route.query.product_code) {
@@ -868,11 +867,10 @@ export default {
       window.location = window.location.pathname;
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.getMissingProductsWithPrices() will be called in watch $route

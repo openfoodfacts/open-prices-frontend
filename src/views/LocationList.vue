@@ -10,7 +10,7 @@
         <FilterMenu
           kind="location"
           :currentFilterList="currentFilterList"
-          :currentType="currentType"
+          :currentType="typeFilter"
           @update:currentFilterList="updateFilterList($event)"
           @update:currentType="toggleLocationType($event)"
         />
@@ -74,13 +74,17 @@ export default {
       locationTotal: null,
       locationPage: 0,
       loading: false,
-      // filter & order
-      currentFilterList: [],
-      currentType: "",
+      // order
       currentOrder: constants.LOCATION_ORDER_LIST[0].key, // price_count
     };
   },
   computed: {
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
+    typeFilter() {
+      return this.$route.query[constants.TYPE_PARAM] || "";
+    },
     getLocationsParams() {
       let defaultParams = {
         order_by: this.currentOrder,
@@ -89,8 +93,8 @@ export default {
       if (this.currentFilterList.includes("hide_price_count_gte_1")) {
         defaultParams["price_count"] = 0;
       }
-      if (this.currentType) {
-        defaultParams[constants.TYPE_PARAM] = this.currentType;
+      if (this.typeFilter) {
+        defaultParams[constants.TYPE_PARAM] = this.typeFilter;
       }
       return defaultParams;
     },
@@ -107,11 +111,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
-    this.currentType =
-      this.$route.query[constants.TYPE_PARAM] || this.currentType;
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.initLocationList();
@@ -149,21 +148,20 @@ export default {
         });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.initLocationList() will be called in watch $route
     },
     toggleLocationType(sourceKey) {
-      this.currentType = this.currentType !== sourceKey ? sourceKey : "";
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.TYPE_PARAM]: this.currentType,
+          [constants.TYPE_PARAM]:
+            this.typeFilter !== sourceKey ? sourceKey : "",
         },
       });
       // this.initLocationList() will be called in watch $route
