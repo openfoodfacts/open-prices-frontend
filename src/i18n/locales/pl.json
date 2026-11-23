@@ -336,12 +336,10 @@
 		"FilterProductWithPriceCount": "Z ceną",
 		"FilterProductWithPriceCountHide": "Ukryj produkty z cenami",
 		"FilterProductWithPriceOwner": "Show only products with my prices",
-		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
-		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
 		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
@@ -580,6 +578,9 @@
 		"Food": "Żywność",
 		"PetFood": "Karma dla zwierząt",
 		"Beauty": "Uroda"
+	},
+	"CountryFilter": {
+		"Search": "Search a country"
 	},
 	"ContributionAssistant": {
 		"Steps": {
