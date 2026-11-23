@@ -336,12 +336,10 @@
 		"FilterProductWithPriceCount": "Con un prezzo",
 		"FilterProductWithPriceCountHide": "Nascondi i prodotti con i prezzi",
 		"FilterProductWithPriceOwner": "Show only products with my prices",
-		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Senza prezzi",
 		"FilterPriceMoreThan30DaysHide": "Nascondi i prezzi più vecchi di 30 giorni",
 		"FilterProofWithPriceCountHide": "Nascondi le prove con i prezzi",
 		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
-		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
 		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
@@ -580,6 +578,9 @@
 		"Food": "Cibo",
 		"PetFood": "Cibo per animali domestici",
 		"Beauty": "Bellezza"
+	},
+	"CountryFilter": {
+		"Search": "Search a country"
 	},
 	"ContributionAssistant": {
 		"Steps": {
