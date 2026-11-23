@@ -336,12 +336,10 @@
 		"FilterProductWithPriceCount": "S cenou",
 		"FilterProductWithPriceCountHide": "Skrýt produkty s cenami",
 		"FilterProductWithPriceOwner": "Zobrazit pouze produkty s mými cenami",
-		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Bez cen",
 		"FilterPriceMoreThan30DaysHide": "Skrýt ceny starší než 30 dní",
 		"FilterProofWithPriceCountHide": "Skrýt doklady s cenami",
 		"FilterPriceTagWithProofOwner": "Zobrazit pouze ceny z mých dokladů",
-		"FilterPriceTagWithProofUserCountry": "Zobrazit pouze ceny z mé země",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Zobrazit pouze ceny s platným čárovým kódem",
 		"FilterPriceTagWithTagPredictionProductExists": "Zobrazit pouze ceny s platným produktem",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Zobrazit pouze ceny s platným štítkem kategorie",
@@ -580,6 +578,9 @@
 		"Food": "Jídlo",
 		"PetFood": "Zvířecí krmivo",
 		"Beauty": "Krása"
+	},
+	"CountryFilter": {
+		"Search": "Search a country"
 	},
 	"ContributionAssistant": {
 		"Steps": {
