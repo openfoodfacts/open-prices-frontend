@@ -535,7 +535,6 @@ export default {
       ];
     },
     countryFilter() {
-      // read from the route (like the nearby filter), to stay in sync on browser back/forward
       return geo_utils.getCountryFilter(this.$route.query);
     },
     usePricesApi() {
