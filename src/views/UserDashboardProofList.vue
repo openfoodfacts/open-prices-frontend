@@ -120,7 +120,6 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    // filters are read from the route, to stay in sync on browser back/forward
     currentFilterList() {
       return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
     },
