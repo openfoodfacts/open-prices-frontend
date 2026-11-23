@@ -76,6 +76,10 @@
                 :currentFilterList="currentFilterList"
                 @update:currentFilterList="updateFilterList($event)"
               />
+              <CountryFilter
+                :currentCountry="countryFilter"
+                @update:currentCountry="updateCountryFilter($event)"
+              />
               <OrderMenu
                 v-if="!usePricesApi"
                 kind="productCreate"
@@ -449,6 +453,9 @@ export default {
     OrderMenu: defineAsyncComponent(
       () => import("../components/OrderMenu.vue"),
     ),
+    CountryFilter: defineAsyncComponent(
+      () => import("../components/CountryFilter.vue"),
+    ),
   },
   data() {
     return {
@@ -527,11 +534,13 @@ export default {
         },
       ];
     },
+    countryFilter() {
+      return geo_utils.getCountryFilter(this.$route.query);
+    },
     usePricesApi() {
       // the products API has no owner or country filter
       return (
-        this.currentFilterList.includes("price__owner") ||
-        this.currentFilterList.includes("price_user_country")
+        this.currentFilterList.includes("price__owner") || !!this.countryFilter
       );
     },
     getPricesParams() {
@@ -544,13 +553,9 @@ export default {
       if (this.currentFilterList.includes("price__owner")) {
         defaultParams["owner"] = this.appStore.user.username;
       }
-      // user.country can be null/undefined (older persisted state): skip the filter
-      if (
-        this.currentFilterList.includes("price_user_country") &&
-        this.appStore.getUserCountry
-      ) {
+      if (this.countryFilter) {
         defaultParams["location__osm_address_country_code"] =
-          this.appStore.getUserCountry;
+          this.countryFilter;
       }
       return defaultParams;
     },
@@ -872,6 +877,15 @@ export default {
           ...this.$route.query,
           [constants.FILTER_PARAM]: newFilterList,
         },
+      });
+      // this.getMissingProductsWithPrices() will be called in watch $route
+    },
+    updateCountryFilter(countryCode) {
+      this.$router.push({
+        query: geo_utils.buildCountryFilterQuery(
+          this.$route.query,
+          countryCode,
+        ),
       });
       // this.getMissingProductsWithPrices() will be called in watch $route
     },
