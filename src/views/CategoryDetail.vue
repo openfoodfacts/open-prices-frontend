@@ -88,12 +88,15 @@ export default {
       categoryProductTotal: null,
       categoryProductPage: 0,
       loading: false,
-      // filter & order
-      currentFilterList: [],
+      // order
       currentOrder: constants.PRODUCT_ORDER_LIST[0].key, // price_count
     };
   },
   computed: {
+    // filters are read from the route, to stay in sync on browser back/forward
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
     getProductsParams() {
       let defaultParams = {
         categories_tags__contains: this.category.id,
@@ -121,9 +124,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.initCategory();
@@ -163,11 +163,10 @@ export default {
         });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.initCategory() will be called in watch $route

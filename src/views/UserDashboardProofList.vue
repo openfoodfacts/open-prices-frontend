@@ -10,8 +10,8 @@
         <FilterMenu
           kind="proof"
           :currentFilterList="currentFilterList"
-          :currentType="currentType"
-          :currentKind="currentKind"
+          :currentType="typeFilter"
+          :currentKind="kindFilter"
           :showKind="true"
           @update:currentFilterList="updateFilterList($event)"
           @update:currentType="toggleProofType($event)"
@@ -113,16 +113,23 @@ export default {
       proofPage: 0,
       proofLocationList: [],
       loading: false,
-      // filter, order & display
-      currentFilterList: [],
-      currentType: "",
-      currentKind: "",
+      // order & display
       currentOrder: constants.PROOF_ORDER_LIST[2].key, // date
       currentDisplay: constants.DISPLAY_LIST[0].key, // list
     };
   },
   computed: {
     ...mapStores(useAppStore),
+    // filters are read from the route, to stay in sync on browser back/forward
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
+    typeFilter() {
+      return this.$route.query[constants.TYPE_PARAM] || "";
+    },
+    kindFilter() {
+      return this.$route.query[constants.KIND_PARAM] || "";
+    },
     username() {
       return this.appStore.user.username;
     },
@@ -135,11 +142,11 @@ export default {
       if (this.currentFilterList.includes("hide_price_count_gte_1")) {
         defaultParams["price_count"] = 0;
       }
-      if (this.currentType) {
-        defaultParams[constants.TYPE_PARAM] = this.currentType;
+      if (this.typeFilter) {
+        defaultParams[constants.TYPE_PARAM] = this.typeFilter;
       }
-      if (this.currentKind) {
-        defaultParams[constants.KIND_PARAM] = this.currentKind;
+      if (this.kindFilter) {
+        defaultParams[constants.KIND_PARAM] = this.kindFilter;
       }
       return defaultParams;
     },
@@ -156,13 +163,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
-    this.currentType =
-      this.$route.query[constants.TYPE_PARAM] || this.currentType;
-    this.currentKind =
-      this.$route.query[constants.KIND_PARAM] || this.currentKind;
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.currentDisplay =
@@ -207,31 +207,29 @@ export default {
         });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.initProofList() will be called in watch $route
     },
     toggleProofType(sourceKey) {
-      this.currentType = this.currentType !== sourceKey ? sourceKey : "";
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.TYPE_PARAM]: this.currentType,
+          [constants.TYPE_PARAM]:
+            this.typeFilter !== sourceKey ? sourceKey : "",
         },
       });
       // this.initProofList() will be called in watch $route
     },
     toggleProofKind(kindKey) {
-      this.currentKind = this.currentKind !== kindKey ? kindKey : "";
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.KIND_PARAM]: this.currentKind,
+          [constants.KIND_PARAM]: this.kindFilter !== kindKey ? kindKey : "",
         },
       });
       // this.initProofList() will be called in watch $route

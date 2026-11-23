@@ -10,8 +10,8 @@
         <FilterMenu
           kind="flag"
           :currentFilterList="currentFilterList"
-          :currentType="currentType"
-          :currentKind="currentKind"
+          :currentType="typeFilter"
+          :currentKind="kindFilter"
           :showKind="true"
           @update:currentFilterList="updateFilterList($event)"
           @update:currentType="toggleFlagType($event)"
@@ -147,24 +147,31 @@ export default {
         { title: "Actions", key: "actions", align: "end", width: "15%" },
       ],
       tablePageLimit: -1, // all items
-      // filter & order
-      currentFilterList: [],
-      currentType: "",
-      currentKind: "",
+      // order
       currentOrder: constants.MODERATION_FLAG_ORDER_LIST[0].key, // created first
     };
   },
   computed: {
+    // filters are read from the route, to stay in sync on browser back/forward
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
+    typeFilter() {
+      return this.$route.query[constants.TYPE_PARAM] || "";
+    },
+    kindFilter() {
+      return this.$route.query[constants.KIND_PARAM] || "";
+    },
     getFlagsParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.flagPage };
       if (!this.currentFilterList.includes("show_closed")) {
         defaultParams["status"] = "OPEN";
       }
-      if (this.currentType) {
-        defaultParams["content_type"] = this.currentType;
+      if (this.typeFilter) {
+        defaultParams["content_type"] = this.typeFilter;
       }
-      if (this.currentKind) {
-        defaultParams["reason"] = this.currentKind;
+      if (this.kindFilter) {
+        defaultParams["reason"] = this.kindFilter;
       }
       return defaultParams;
     },
@@ -181,13 +188,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
-    this.currentType =
-      this.$route.query[constants.TYPE_PARAM] || this.currentType;
-    this.currentKind =
-      this.$route.query[constants.KIND_PARAM] || this.currentKind;
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.initFlagList();
@@ -233,31 +233,29 @@ export default {
         });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.initFlagList() will be called in watch $route
     },
     toggleFlagType(sourceKey) {
-      this.currentType = this.currentType !== sourceKey ? sourceKey : "";
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.TYPE_PARAM]: this.currentType,
+          [constants.TYPE_PARAM]:
+            this.typeFilter !== sourceKey ? sourceKey : "",
         },
       });
       // this.initFlagList() will be called in watch $route
     },
     toggleFlagKind(kindKey) {
-      this.currentKind = this.currentKind !== kindKey ? kindKey : "";
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.KIND_PARAM]: this.currentKind,
+          [constants.KIND_PARAM]: this.kindFilter !== kindKey ? kindKey : "",
         },
       });
       // this.initFlagList() will be called in watch $route

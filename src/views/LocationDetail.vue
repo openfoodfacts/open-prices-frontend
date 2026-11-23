@@ -31,7 +31,7 @@
         <FilterMenu
           kind="price"
           :currentFilterList="currentFilterList"
-          :currentType="currentType"
+          :currentType="typeFilter"
           @update:currentFilterList="updateFilterList($event)"
           @update:currentType="updateCurrentType($event)"
         />
@@ -124,15 +124,20 @@ export default {
       priceTotal: null,
       pricePage: 0,
       loading: false,
-      // filter, order & display
-      currentFilterList: [],
+      // order & display
       currentOrder: constants.PRICE_ORDER_LIST[2].key, // date
       currentDisplay: constants.DISPLAY_LIST[0].key, // list
-      currentType: "",
     };
   },
   computed: {
     ...mapStores(useAppStore),
+    // filters are read from the route, to stay in sync on browser back/forward
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
+    typeFilter() {
+      return this.$route.query[constants.TYPE_PARAM] || "";
+    },
     getPricesParams() {
       let defaultParams = {
         location_id: this.locationId,
@@ -142,8 +147,8 @@ export default {
       if (this.currentFilterList.includes("show_last_month")) {
         defaultParams["date__gte"] = date_utils.oneMonthAgoDate();
       }
-      if (this.currentType) {
-        defaultParams["type"] = this.currentType;
+      if (this.typeFilter) {
+        defaultParams["type"] = this.typeFilter;
       }
       return defaultParams;
     },
@@ -160,11 +165,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
-    this.currentType =
-      this.$route.query[constants.TYPE_PARAM] || this.currentType;
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.currentDisplay =
@@ -212,21 +212,19 @@ export default {
         });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.initPrices() will be called in watch $route
     },
     updateCurrentType(typeKey) {
-      this.currentType = this.currentType !== typeKey ? typeKey : "";
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.TYPE_PARAM]: this.currentType,
+          [constants.TYPE_PARAM]: this.typeFilter !== typeKey ? typeKey : "",
         },
       });
       // this.initPrices() will be called in watch $route

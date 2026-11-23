@@ -10,7 +10,7 @@
         <FilterMenu
           kind="product"
           :currentFilterList="currentFilterList"
-          :currentSource="currentSource"
+          :currentSource="sourceFilter"
           @update:currentFilterList="updateFilterList($event)"
           @update:currentSource="toggleProductSource($event)"
         />
@@ -74,13 +74,18 @@ export default {
       productTotal: null,
       productPage: 0,
       loading: false,
-      // filter & order
-      currentFilterList: [],
-      currentSource: "",
+      // order
       currentOrder: constants.PRODUCT_ORDER_LIST[0].key, // price_count
     };
   },
   computed: {
+    // filters are read from the route, to stay in sync on browser back/forward
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
+    sourceFilter() {
+      return this.$route.query[constants.SOURCE_PARAM] || "";
+    },
     getProductsParams() {
       let defaultParams = {
         order_by: this.currentOrder,
@@ -91,8 +96,8 @@ export default {
       } else if (this.currentFilterList.includes("price_count_0")) {
         defaultParams["price_count"] = 0;
       }
-      if (this.currentSource) {
-        defaultParams["source"] = this.currentSource;
+      if (this.sourceFilter) {
+        defaultParams["source"] = this.sourceFilter;
       }
       return defaultParams;
     },
@@ -109,11 +114,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
-    this.currentSource =
-      this.$route.query[constants.SOURCE_PARAM] || this.currentSource;
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.initProductList();
@@ -151,21 +151,20 @@ export default {
         });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.initProductList() will be called in watch $route
     },
     toggleProductSource(sourceKey) {
-      this.currentSource = this.currentSource !== sourceKey ? sourceKey : "";
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.SOURCE_PARAM]: this.currentSource,
+          [constants.SOURCE_PARAM]:
+            this.sourceFilter !== sourceKey ? sourceKey : "",
         },
       });
       // this.initProductList() will be called in watch $route

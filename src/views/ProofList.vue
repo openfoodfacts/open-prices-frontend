@@ -10,7 +10,7 @@
         <FilterMenu
           kind="proof"
           :currentFilterList="currentFilterList"
-          :currentType="currentType"
+          :currentType="typeFilter"
           @update:currentFilterList="updateFilterList($event)"
           @update:currentType="toggleProofType($event)"
         />
@@ -72,20 +72,25 @@ export default {
       proofTotal: null,
       proofPage: 0,
       loading: false,
-      // filter & order
-      currentFilterList: [],
-      currentType: "",
+      // order
       currentOrder: constants.PROOF_ORDER_LIST[2].key, // -created
     };
   },
   computed: {
+    // filters are read from the route, to stay in sync on browser back/forward
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
+    typeFilter() {
+      return this.$route.query[constants.TYPE_PARAM] || "";
+    },
     getProofsParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.proofPage };
       if (this.currentFilterList.includes("hide_price_count_gte_1")) {
         defaultParams["price_count"] = 0;
       }
-      if (this.currentType) {
-        defaultParams[constants.TYPE_PARAM] = this.currentType;
+      if (this.typeFilter) {
+        defaultParams[constants.TYPE_PARAM] = this.typeFilter;
       }
       return defaultParams;
     },
@@ -102,11 +107,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
-    this.currentType =
-      this.$route.query[constants.TYPE_PARAM] || this.currentType;
     this.initProofList();
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
@@ -139,21 +139,20 @@ export default {
         });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.initProofList() will be called in watch $route
     },
     toggleProofType(sourceKey) {
-      this.currentType = this.currentType !== sourceKey ? sourceKey : "";
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.TYPE_PARAM]: this.currentType,
+          [constants.TYPE_PARAM]:
+            this.typeFilter !== sourceKey ? sourceKey : "",
         },
       });
       // this.initProofList() will be called in watch $route

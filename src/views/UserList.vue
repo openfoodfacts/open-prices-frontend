@@ -63,12 +63,15 @@ export default {
       userTotal: null,
       userPage: 0,
       loading: false,
-      // filter & order
-      currentFilterList: [],
+      // order
       currentOrder: constants.USER_ORDER_LIST[0].key, // price_count
     };
   },
   computed: {
+    // filters are read from the route, to stay in sync on browser back/forward
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
     getUsersParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.userPage };
       if (this.currentFilterList.includes("hide_price_count_gte_1")) {
@@ -89,9 +92,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
     this.currentOrder =
       this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.initUserList();
@@ -126,11 +126,10 @@ export default {
         });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.initUserList() will be called in watch $route

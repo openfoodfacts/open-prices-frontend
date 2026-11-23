@@ -10,7 +10,7 @@
         <FilterMenu
           kind="price"
           :currentFilterList="currentFilterList"
-          :currentType="currentType"
+          :currentType="typeFilter"
           @update:currentFilterList="updateFilterList($event)"
           @update:currentType="togglePriceType($event)"
         />
@@ -79,13 +79,18 @@ export default {
       priceTotal: null,
       pricePage: 0,
       loading: false,
-      // filter & order
-      currentFilterList: [],
-      currentType: "",
+      // order
       currentOrder: constants.PRICE_ORDER_LIST[3].key, // created first
     };
   },
   computed: {
+    // filters are read from the route, to stay in sync on browser back/forward
+    currentFilterList() {
+      return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
+    },
+    typeFilter() {
+      return this.$route.query[constants.TYPE_PARAM] || "";
+    },
     nearbyFilter() {
       return geo_utils.getNearbyFilter(this.$route.query);
     },
@@ -94,8 +99,8 @@ export default {
       if (this.currentFilterList.includes("show_last_month")) {
         defaultParams["date__gte"] = date_utils.oneMonthAgoDate();
       }
-      if (this.currentType) {
-        defaultParams[constants.TYPE_PARAM] = this.currentType;
+      if (this.typeFilter) {
+        defaultParams[constants.TYPE_PARAM] = this.typeFilter;
       }
       if (this.nearbyFilter) {
         Object.assign(defaultParams, this.nearbyFilter);
@@ -115,11 +120,6 @@ export default {
     },
   },
   mounted() {
-    this.currentFilterList =
-      utils.toArray(this.$route.query[constants.FILTER_PARAM]) ||
-      this.currentFilterList;
-    this.currentType =
-      this.$route.query[constants.TYPE_PARAM] || this.currentType;
     this.initPrices();
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
@@ -152,11 +152,10 @@ export default {
         });
     },
     updateFilterList(newFilterList) {
-      this.currentFilterList = newFilterList;
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.FILTER_PARAM]: this.currentFilterList,
+          [constants.FILTER_PARAM]: newFilterList,
         },
       });
       // this.initPrices() will be called in watch $route
@@ -171,11 +170,10 @@ export default {
       // this.initPrices() will be called in watch $route
     },
     togglePriceType(typeKey) {
-      this.currentType = this.currentType !== typeKey ? typeKey : "";
       this.$router.push({
         query: {
           ...this.$route.query,
-          [constants.TYPE_PARAM]: this.currentType,
+          [constants.TYPE_PARAM]: this.typeFilter !== typeKey ? typeKey : "",
         },
       });
       // this.initPrices() will be called in watch $route
