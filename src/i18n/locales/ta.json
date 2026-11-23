@@ -336,12 +336,10 @@
 		"FilterProductWithPriceCount": "ஒரு விலையுடன்",
 		"FilterProductWithPriceCountHide": "விலைகளுடன் கூடிய தயாரிப்புகளை மறை",
 		"FilterProductWithPriceOwner": "Show only products with my prices",
-		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "விலைகள் இல்லாமல்",
 		"FilterPriceMoreThan30DaysHide": "30 நாட்களுக்கு மேலான விலைகளை மறை",
 		"FilterProofWithPriceCountHide": "விலைகளுடன் கூடிய தயாரிப்புகளை மறை",
 		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
-		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
 		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
@@ -580,6 +578,9 @@
 		"Food": "உணவு",
 		"PetFood": "செல்லப்பிராணி உணவு",
 		"Beauty": "Beauty"
+	},
+	"CountryFilter": {
+		"Search": "Search a country"
 	},
 	"ContributionAssistant": {
 		"Steps": {
