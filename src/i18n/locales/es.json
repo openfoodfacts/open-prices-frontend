@@ -336,12 +336,10 @@
 		"FilterProductWithPriceCount": "con precio",
 		"FilterProductWithPriceCountHide": "Ocultar productos con precios",
 		"FilterProductWithPriceOwner": "Mostrar solo productos con mis precios",
-		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Sin precios",
 		"FilterPriceMoreThan30DaysHide": "Ocultar precios de más de 30 días",
 		"FilterProofWithPriceCountHide": "Ocultar pruebas con precios",
 		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
-		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
 		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
@@ -580,6 +578,9 @@
 		"Food": "Alimento",
 		"PetFood": "Alimento para mascotas",
 		"Beauty": "Belleza"
+	},
+	"CountryFilter": {
+		"Search": "Search a country"
 	},
 	"ContributionAssistant": {
 		"Steps": {
