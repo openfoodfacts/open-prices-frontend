@@ -336,12 +336,10 @@
 		"FilterProductWithPriceCount": "Ar cenu",
 		"FilterProductWithPriceCountHide": "Slēpt produktus ar cenām",
 		"FilterProductWithPriceOwner": "Show only products with my prices",
-		"FilterProductWithPriceUserCountry": "Show only products with prices from my country",
 		"FilterProductWithoutPriceCount": "Bez cenām",
 		"FilterPriceMoreThan30DaysHide": "Slēpt cenas, kas vecākas par 30 dienām",
 		"FilterProofWithPriceCountHide": "Slēpt pierādījumus ar cenām",
 		"FilterPriceTagWithProofOwner": "Show only prices from my proofs",
-		"FilterPriceTagWithProofUserCountry": "Show only prices from my country",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Show only prices with a valid barcode",
 		"FilterPriceTagWithTagPredictionProductExists": "Show only prices with a valid product",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Show only prices with a valid category tag",
@@ -580,6 +578,9 @@
 		"Food": "Ēdiens",
 		"PetFood": "Mājdzīvnieku barība",
 		"Beauty": "Skaistums"
+	},
+	"CountryFilter": {
+		"Search": "Search a country"
 	},
 	"ContributionAssistant": {
 		"Steps": {
