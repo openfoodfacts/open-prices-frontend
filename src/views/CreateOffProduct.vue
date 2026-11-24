@@ -462,7 +462,6 @@ export default {
       step: 1,
       // product missing list
       missingProductsWithPrices: [],
-      currentOrder: constants.PRODUCT_CREATE_ORDER_LIST[0].key, // -created
       productTotal: 0,
       // product missing form
       product: null,
@@ -487,6 +486,12 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    currentOrder() {
+      return (
+        this.$route.query[constants.ORDER_PARAM] ||
+        constants.PRODUCT_CREATE_ORDER_LIST[0].key // -created
+      );
+    },
     currentFilterList() {
       return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
     },
@@ -574,8 +579,6 @@ export default {
     },
   },
   mounted() {
-    this.currentOrder =
-      this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     if (this.$route.query.product_code) {
       this.productForm.product_code = this.$route.query.product_code;
       this.onProductCodeSelected();
@@ -891,11 +894,10 @@ export default {
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
-        this.currentOrder = orderKey;
         this.$router.push({
           query: {
             ...this.$route.query,
-            [constants.ORDER_PARAM]: this.currentOrder,
+            [constants.ORDER_PARAM]: orderKey,
           },
         });
         // this.getMissingProductsWithPrices() will be called in watch $route

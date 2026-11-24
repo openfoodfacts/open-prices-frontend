@@ -88,11 +88,15 @@ export default {
       proofTotal: null,
       proofPage: 0,
       loading: false,
-      // order
-      currentOrder: constants.PROOF_ORDER_LIST[2].key,
     };
   },
   computed: {
+    currentOrder() {
+      return (
+        this.$route.query[constants.ORDER_PARAM] ||
+        constants.PROOF_ORDER_LIST[2].key
+      );
+    },
     currentFilterList() {
       return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
     },
@@ -133,8 +137,6 @@ export default {
     },
   },
   mounted() {
-    this.currentOrder =
-      this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.initProofList();
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
@@ -196,11 +198,10 @@ export default {
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
-        this.currentOrder = orderKey;
         this.$router.push({
           query: {
             ...this.$route.query,
-            [constants.ORDER_PARAM]: this.currentOrder,
+            [constants.ORDER_PARAM]: orderKey,
           },
         });
         // this.initProofList() will be called in watch $route
