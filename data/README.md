@@ -18,6 +18,42 @@ Most of the scripts require the [openfoodfacts-python](https://github.com/openfo
 pip install openfoodfacts
 ```
 
+## Brands
+
+### Goal
+
+Get the list of brands from the Open Food Facts brands taxonomies (all flavors: Open Food Facts, Open Beauty Facts, Open Pet Food Facts & Open Products Facts).
+Brands are (mostly) language-independent (`xx:` ids), so there is a single file (no translations).
+
+### Open Food Facts taxonomies
+
+Files viewable here:
+
+- shared: [taxonomies/brands.txt](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/brands.txt)
+- OBF: [taxonomies/beauty/brands.txt](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/beauty/brands.txt)
+- OPF: [taxonomies/product/brands.txt](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/product/brands.txt)
+
+### Script
+
+```sh
+python data/brands/generate_brands_json.py
+```
+
+What it does:
+
+1. get the brands taxonomy of each flavor (OFF, OBF, OPFF & OPF)
+2. merge them (by id). Each brand has a `sources` key, listing the flavors having the brand (e.g. `["off", "obf", "opf"]`)
+3. the result is exported to `/src/data/brands.json`
+
+### Stats
+
+- Last run: 2026-11-24
+- Input (OFF taxonomy): 2916 brands
+- Input (OBF taxonomy): 3286 brands
+- Input (OPFF taxonomy): 26 brands
+- Input (OPF taxonomy): 2961 brands
+- Output (JSON): 3328 brands
+
 ## Categories (with translations)
 
 ### Goal
