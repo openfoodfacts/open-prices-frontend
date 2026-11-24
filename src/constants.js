@@ -389,16 +389,7 @@ export default {
     { key: "-proof_count", value: "OrderProofCountDESC", icon: PROOF_ICON },
   ],
   PRICE_ORDER_LIST: [
-    {
-      key: "price",
-      value: "OrderPriceASC",
-      icon: "mdi-order-numeric-ascending",
-    },
-    {
-      key: "-price",
-      value: "OrderPriceDESC",
-      icon: "mdi-order-numeric-descending",
-    },
+    { key: "price", value: "OrderPriceASC", icon: "mdi-cash" },
     { key: "-date,-created", value: "OrderPriceDateDESC", icon: DATE_ICON },
     {
       key: "-created",

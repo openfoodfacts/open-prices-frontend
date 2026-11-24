@@ -433,6 +433,7 @@ import proof_utils from "../utils/proof.js";
 import utils from "../utils";
 import data_utils from "../utils/data.js";
 import geo_utils from "../utils/geo.js";
+import order_utils from "../utils/order.js";
 import "vue-zoomable/dist/style.css";
 
 export default {
@@ -553,7 +554,11 @@ export default {
         product__source__isnull: true,
         product_id__isnull: false,
         proof__type: constants.PROOF_TYPE_PRICE_TAG,
-        order_by: "-created",
+        // the prices API can't order by proof_count: fallback to the most recent prices
+        order_by:
+          order_utils.getOrderField(this.currentOrder) === "created"
+            ? this.currentOrder
+            : "-created",
       };
       if (this.currentFilterList.includes("price__owner")) {
         defaultParams["owner"] = this.appStore.user.username;
@@ -602,7 +607,10 @@ export default {
       this.missingProductsWithPrices = [];
       this.loading = true;
       // Use price API in some cases
-      if (this.usePricesApi || this.currentOrder === "-created") {
+      if (
+        this.usePricesApi ||
+        order_utils.getOrderField(this.currentOrder) === "created"
+      ) {
         // Using prices API lets us do finer filtering, typically limiting to price tags proofs
         return openPricesApi
           .getPrices(this.getPricesParams)
@@ -677,7 +685,7 @@ export default {
       return openPricesApi
         .getPrices({
           product_code: this.productForm.product_code,
-          order_by: constants.PRICE_ORDER_LIST[2].key,
+          order_by: constants.PRICE_ORDER_LIST[1].key,
         })
         .then((data) => {
           this.priceList = data.items;

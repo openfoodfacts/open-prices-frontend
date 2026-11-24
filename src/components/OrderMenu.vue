@@ -5,7 +5,7 @@
         v-bind="props"
         size="x-small"
         class="mr-2"
-        prepend-icon="mdi-arrow-down"
+        :prepend-icon="getCurrentOrderDirectionIcon"
         :append-icon="getCurrentOrderIcon"
         :active="!!currentOrder"
       >
@@ -24,8 +24,11 @@
         :key="order.key"
         :slim="true"
         :prepend-icon="order.icon"
-        :active="currentOrder === order.key"
-        @click="selectOrder(order.key)"
+        :append-icon="
+          isCurrentOrder(order) ? getCurrentOrderDirectionIcon : undefined
+        "
+        :active="isCurrentOrder(order)"
+        @click="selectOrder(order)"
       >
         {{ $t("Common." + order.value) }}
       </v-list-item>
@@ -35,6 +38,7 @@
 
 <script>
 import constants from "../constants";
+import order_utils from "../utils/order.js";
 
 export default {
   props: {
@@ -74,13 +78,32 @@ export default {
       return this[`${this.kind}OrderList`];
     },
     getCurrentOrderIcon() {
-      let order = this.orderList.find((o) => o.key === this.currentOrder);
+      let order = this.orderList.find((o) => this.isCurrentOrder(o));
       return order ? order.icon : "";
+    },
+    getCurrentOrderDirectionIcon() {
+      return this.currentOrder && !order_utils.isOrderDesc(this.currentOrder)
+        ? "mdi-arrow-up"
+        : "mdi-arrow-down";
     },
   },
   methods: {
+    isCurrentOrder(order) {
+      // same field, whatever the direction (e.g. "-date,-created" & "date,created")
+      return (
+        !!this.currentOrder &&
+        order_utils.getOrderField(order.key) ===
+          order_utils.getOrderField(this.currentOrder)
+      );
+    },
     selectOrder(order) {
-      this.$emit("update:currentOrder", order);
+      // clicking the current order again reverses it
+      this.$emit(
+        "update:currentOrder",
+        this.isCurrentOrder(order)
+          ? order_utils.reverseOrder(this.currentOrder)
+          : order.key,
+      );
     },
   },
 };

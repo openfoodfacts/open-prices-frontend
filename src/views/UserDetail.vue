@@ -138,7 +138,7 @@ export default {
     currentOrder() {
       return (
         this.$route.query[constants.ORDER_PARAM] ||
-        constants.PRICE_ORDER_LIST[2].key // date
+        constants.PRICE_ORDER_LIST[1].key // date
       );
     },
     currentFilterList() {
