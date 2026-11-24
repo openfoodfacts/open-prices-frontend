@@ -17,7 +17,6 @@ from openfoodfacts.taxonomy import get_taxonomy
 
 OFF_TAXONOMY_NAME = "label"
 OP_LANGUAGES_FILE = "src/i18n/data/languages.json"
-OLD_LABELS_FILE = "src/data/labels-tags.json"
 
 KEEP_ONLY = [
     "en:organic"
@@ -60,31 +59,6 @@ def write_labels_to_files(labels, languages: list[dict[str, Any]]):
             json.dump(language_labels, f, ensure_ascii=False)
 
 
-def compare_new_labels_with_old_labels():
-    old_labels = utils.read_json("src/data/labels-tags.json")
-    print("old_labels", len(old_labels))
-
-    new_labels = utils.read_json("src/data/labels/en.json")
-    print("new_labels", len(new_labels))
-
-    # check missing in new
-    label_missing_in_new_list = list()
-    for label in old_labels:
-        found = next((c for c in new_labels if c['id'] == label['id']), None)
-        if not found:
-            label_missing_in_new_list.append(label)
-    print("missing in new", len(label_missing_in_new_list))
-    print(label_missing_in_new_list)
-
-    # check missing in old
-    label_missing_in_old_list = list()
-    for label in old_labels:
-        found = next((c for c in old_labels if c['id'] == label['id']), None)
-        if not found:
-            label_missing_in_old_list.append(label)
-    print("missing in old", len(label_missing_in_old_list))
-
-
 if __name__ == "__main__":
     print("Step 1: get the full taxonomy")
     TAXONOMY_FULL = get_taxonomy(OFF_TAXONOMY_NAME, force_download=True, download_newer=True)
@@ -111,6 +85,3 @@ if __name__ == "__main__":
         section_header=README_SECTION,
         stats_lines=stats_lines
     )
-
-    print("Bonus: compare old & new")
-    compare_new_labels_with_old_labels()
