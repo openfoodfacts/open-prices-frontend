@@ -35,6 +35,10 @@
           @update:currentFilterList="updateFilterList($event)"
           @update:currentType="togglePriceType($event)"
         />
+        <CountryFilter
+          :currentCountry="countryFilter"
+          @update:currentCountry="updateCountryFilter($event)"
+        />
         <OrderMenu
           kind="price"
           :currentOrder="currentOrder"
@@ -88,6 +92,7 @@ import { useAppStore } from "../store";
 import openPricesApi from "../services/openPricesApi";
 import constants from "../constants";
 import date_utils from "../utils/date.js";
+import geo_utils from "../utils/geo.js";
 import utils from "../utils.js";
 
 export default {
@@ -98,6 +103,9 @@ export default {
     ),
     FilterMenu: defineAsyncComponent(
       () => import("../components/FilterMenu.vue"),
+    ),
+    CountryFilter: defineAsyncComponent(
+      () => import("../components/CountryFilter.vue"),
     ),
     OrderMenu: defineAsyncComponent(
       () => import("../components/OrderMenu.vue"),
@@ -134,6 +142,9 @@ export default {
     typeFilter() {
       return this.$route.query[constants.TYPE_PARAM] || "";
     },
+    countryFilter() {
+      return geo_utils.getCountryFilter(this.$route.query);
+    },
     getPricesParams() {
       let defaultParams = {
         owner: this.username,
@@ -145,6 +156,10 @@ export default {
       }
       if (this.typeFilter) {
         defaultParams[constants.TYPE_PARAM] = this.typeFilter;
+      }
+      if (this.countryFilter) {
+        defaultParams["location__osm_address_country_code"] =
+          this.countryFilter;
       }
       return defaultParams;
     },
@@ -213,6 +228,15 @@ export default {
           ...this.$route.query,
           [constants.FILTER_PARAM]: newFilterList,
         },
+      });
+      // this.initPrices() will be called in watch $route
+    },
+    updateCountryFilter(countryCode) {
+      this.$router.push({
+        query: geo_utils.buildCountryFilterQuery(
+          this.$route.query,
+          countryCode,
+        ),
       });
       // this.initPrices() will be called in watch $route
     },
