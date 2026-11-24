@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.180.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.179.0...v1.180.0) (2026-11-24)
+
+
+### Features
+
+* **CreateOffProduct:** filter unknown products by user country ([#2558](https://github.com/openfoodfacts/open-prices-frontend/issues/2558)) ([2dbe191](https://github.com/openfoodfacts/open-prices-frontend/commit/2dbe191cc86115157d7b7eb423c09385a1016b98))
+* **CreateOffProduct:** new country filter, replacing the user country checkbox ([#2564](https://github.com/openfoodfacts/open-prices-frontend/issues/2564)) ([af5a6e1](https://github.com/openfoodfacts/open-prices-frontend/commit/af5a6e1dbd9060a7809f195f620210049323401a))
+* **LocationList:** new country filter ([#2570](https://github.com/openfoodfacts/open-prices-frontend/issues/2570)) ([ce3cfcc](https://github.com/openfoodfacts/open-prices-frontend/commit/ce3cfcc1eea0b8431c37f46374aa1f9ae8d365e6))
+* **PriceAddValidate:** new country filter, replacing the user country checkbox ([#2565](https://github.com/openfoodfacts/open-prices-frontend/issues/2565)) ([47ba013](https://github.com/openfoodfacts/open-prices-frontend/commit/47ba013ee807fb299a6a672b8823e70cd288681e))
+* **PriceList:** new country filter ([#2568](https://github.com/openfoodfacts/open-prices-frontend/issues/2568)) ([c2bf4d5](https://github.com/openfoodfacts/open-prices-frontend/commit/c2bf4d57d715163e2c54102454efa86cdccce252))
+* **ProofList:** new country filter ([#2569](https://github.com/openfoodfacts/open-prices-frontend/issues/2569)) ([df5c493](https://github.com/openfoodfacts/open-prices-frontend/commit/df5c4935a45b5e2be241718716e440e82598d64d))
+
+
+### Bug Fixes
+
+* **filters:** read the filters from the route, to stay in sync on browser back/forward ([#2567](https://github.com/openfoodfacts/open-prices-frontend/issues/2567)) ([f229dd3](https://github.com/openfoodfacts/open-prices-frontend/commit/f229dd364eb5e5b32147cf0b2e0c4fb09b4b1509))
+* **filters:** skip the user country filter when no country is set ([#2562](https://github.com/openfoodfacts/open-prices-frontend/issues/2562)) ([b5607b3](https://github.com/openfoodfacts/open-prices-frontend/commit/b5607b3f5f7d187226c95943cccea67251d8c5f5))
+* **Labeler:** fix concurrency (group by PR number) ([#2571](https://github.com/openfoodfacts/open-prices-frontend/issues/2571)) ([e7643cc](https://github.com/openfoodfacts/open-prices-frontend/commit/e7643ccf12cb5029ac205eb0cf6a77e7bbb19994))
+
+
+### Technical
+
+* **AGENTS:** PR conventions (title with a scope, small PRs, follow the PR template) ([#2559](https://github.com/openfoodfacts/open-prices-frontend/issues/2559)) ([1da96c2](https://github.com/openfoodfacts/open-prices-frontend/commit/1da96c2cbfd0b02fb7ed22aa8e8f02b5b5d90057))
+* **deps:** bump cypress-io/github-action from 7.4.1 to 7.4.8 ([#2500](https://github.com/openfoodfacts/open-prices-frontend/issues/2500)) ([e53c378](https://github.com/openfoodfacts/open-prices-frontend/commit/e53c37802feff5540a208dafc9e4be9484e1c870))
+* **deps:** bump dompurify from 3.4.12 to 3.4.17 ([#2483](https://github.com/openfoodfacts/open-prices-frontend/issues/2483)) ([e14c0c3](https://github.com/openfoodfacts/open-prices-frontend/commit/e14c0c3586288c607c66fb883aa50d2029bb6d1c))
+* **deps:** bump follow-redirects from 1.16.0 to 1.16.3 ([#2526](https://github.com/openfoodfacts/open-prices-frontend/issues/2526)) ([43c0ad6](https://github.com/openfoodfacts/open-prices-frontend/commit/43c0ad69d3d7ce2bd469bd05b02ed641f1fae4ec))
+* **GitHub Actions:** pin actions using workflow lockfile ([#2573](https://github.com/openfoodfacts/open-prices-frontend/issues/2573)) ([7c5cdbe](https://github.com/openfoodfacts/open-prices-frontend/commit/7c5cdbe7a497bc2172c2dfa384561bdaa81a0916))
+* **GitHub Actions:** verify the workflow lockfile ([#2574](https://github.com/openfoodfacts/open-prices-frontend/issues/2574)) ([f464363](https://github.com/openfoodfacts/open-prices-frontend/commit/f464363f9d70b328a64c5a3f0aa9470fc49b5de6))
+
 ## [1.179.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.178.1...v1.179.0) (2026-11-22)
 
 
