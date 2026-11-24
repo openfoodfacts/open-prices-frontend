@@ -147,11 +147,15 @@ export default {
         { title: "Actions", key: "actions", align: "end", width: "15%" },
       ],
       tablePageLimit: -1, // all items
-      // order
-      currentOrder: constants.MODERATION_FLAG_ORDER_LIST[0].key, // created first
     };
   },
   computed: {
+    currentOrder() {
+      return (
+        this.$route.query[constants.ORDER_PARAM] ||
+        constants.MODERATION_FLAG_ORDER_LIST[0].key // created first
+      );
+    },
     currentFilterList() {
       return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
     },
@@ -187,8 +191,6 @@ export default {
     },
   },
   mounted() {
-    this.currentOrder =
-      this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.initFlagList();
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
@@ -261,11 +263,10 @@ export default {
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
-        this.currentOrder = orderKey;
         this.$router.push({
           query: {
             ...this.$route.query,
-            [constants.ORDER_PARAM]: this.currentOrder,
+            [constants.ORDER_PARAM]: orderKey,
           },
         });
         // this.initFlagList() will be called in watch $route

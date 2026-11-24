@@ -63,11 +63,15 @@ export default {
       userTotal: null,
       userPage: 0,
       loading: false,
-      // order
-      currentOrder: constants.USER_ORDER_LIST[0].key, // price_count
     };
   },
   computed: {
+    currentOrder() {
+      return (
+        this.$route.query[constants.ORDER_PARAM] ||
+        constants.USER_ORDER_LIST[0].key // price_count
+      );
+    },
     currentFilterList() {
       return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
     },
@@ -91,8 +95,6 @@ export default {
     },
   },
   mounted() {
-    this.currentOrder =
-      this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.initUserList();
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100);
@@ -135,11 +137,10 @@ export default {
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
-        this.currentOrder = orderKey;
         this.$router.push({
           query: {
             ...this.$route.query,
-            [constants.ORDER_PARAM]: this.currentOrder,
+            [constants.ORDER_PARAM]: orderKey,
           },
         });
         // this.initUserList() will be called in watch $route

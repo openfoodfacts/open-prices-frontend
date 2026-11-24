@@ -122,13 +122,18 @@ export default {
       pricePage: 0,
       priceLocationList: [],
       loading: false,
-      // order & display
-      currentOrder: constants.PRICE_ORDER_LIST[3].key, // created first
+      // display
       currentDisplay: constants.DISPLAY_LIST[0].key, // list
     };
   },
   computed: {
     ...mapStores(useAppStore),
+    currentOrder() {
+      return (
+        this.$route.query[constants.ORDER_PARAM] ||
+        constants.PRICE_ORDER_LIST[3].key // created first
+      );
+    },
     currentFilterList() {
       return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
     },
@@ -178,8 +183,6 @@ export default {
     },
   },
   mounted() {
-    this.currentOrder =
-      this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.currentDisplay =
       this.$route.query[constants.DISPLAY_PARAM] ||
       this.appStore.user.price_list_display_default_mode ||
@@ -259,11 +262,10 @@ export default {
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
-        this.currentOrder = orderKey;
         this.$router.push({
           query: {
             ...this.$route.query,
-            [constants.ORDER_PARAM]: this.currentOrder,
+            [constants.ORDER_PARAM]: orderKey,
           },
         });
         // this.initPriceList() will be called in watch $route

@@ -77,11 +77,15 @@ export default {
       countryList: [],
       countryTotal: null,
       loading: false,
-      // order
-      currentOrder: constants.LOCATION_COUNTRY_ORDER_LIST[1].key, // price_count
     };
   },
   computed: {
+    currentOrder() {
+      return (
+        this.$route.query[constants.ORDER_PARAM] ||
+        constants.LOCATION_COUNTRY_ORDER_LIST[1].key // price_count
+      );
+    },
     currentFilterList() {
       return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
     },
@@ -98,8 +102,6 @@ export default {
     },
   },
   mounted() {
-    this.currentOrder =
-      this.$route.query[constants.ORDER_PARAM] || this.currentOrder;
     this.initCountryList();
   },
   methods: {
@@ -151,11 +153,10 @@ export default {
     },
     updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
-        this.currentOrder = orderKey;
         this.$router.push({
           query: {
             ...this.$route.query,
-            [constants.ORDER_PARAM]: this.currentOrder,
+            [constants.ORDER_PARAM]: orderKey,
           },
         });
         // this.initCountryList() will be called in watch $route
