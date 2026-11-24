@@ -189,36 +189,6 @@ def write_categories_to_files(
             json.dump(language_categories, f, ensure_ascii=False)
 
 
-def compare_new_categories_with_old_categories():
-    with open(OUTPUT_PATH / "category-tags.json") as f:
-        old_categories = json.load(f)
-    print("old_categories", len(old_categories))
-
-    with open(OUTPUT_PATH / "en.json") as f:
-        new_categories = json.load(f)
-    print("new_categories", len(new_categories))
-
-    # check missing in new
-    category_missing_in_new_list = [
-        category
-        for category in old_categories
-        if not any(c["id"] == category["id"] for c in new_categories)
-    ]
-
-    print("missing in new", len(category_missing_in_new_list))
-    for item in category_missing_in_new_list:
-        print(f"{item['id']}: {item['name']}")
-
-    # check missing in old
-    category_missing_in_old_list = [
-        category
-        for category in old_categories
-        if not any(c["id"] == category["id"] for c in old_categories)
-    ]
-
-    print("missing in old", len(category_missing_in_old_list))
-
-
 if __name__ == "__main__":
     print("Step 1: get the full taxonomies (OFF & OPF)")
     OFF_TAXONOMY_FULL: Taxonomy = get_taxonomy(
@@ -272,7 +242,6 @@ if __name__ == "__main__":
     )
 
     # Extra
-    # compare_new_categories_with_old_categories()
     # root_nodes = get_all_root_nodes(OFF_TAXONOMY_FULL)
     # print(root_nodes)
     # category_name = "en:coffees"

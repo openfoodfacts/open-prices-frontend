@@ -17,7 +17,6 @@ from openfoodfacts.taxonomy import get_taxonomy
 
 OFF_TAXONOMY_NAME = "origin"
 OP_LANGUAGES_FILE = "src/i18n/data/languages.json"
-OLD_ORIGINS_FILE = "src/data/origins-tags.json"
 
 WITH_PROPERTIES = [
     "country_code_2"
@@ -78,31 +77,6 @@ def write_origins_to_files(origins, languages: list[dict[str, Any]]):
             json.dump(language_origins, f, ensure_ascii=False)
 
 
-def compare_new_origins_with_old_origins():
-    old_origins = utils.read_json("src/data/origins-tags.json")
-    print("old_origins", len(old_origins))
-
-    new_origins = utils.read_json("src/data/origins/en.json")
-    print("new_origins", len(new_origins))
-
-    # check missing in new
-    origin_missing_in_new_list = list()
-    for origin in old_origins:
-        found = next((c for c in new_origins if c['id'] == origin['id']), None)
-        if not found:
-            origin_missing_in_new_list.append(origin)
-    print("missing in new", len(origin_missing_in_new_list))
-    print(origin_missing_in_new_list)
-
-    # check missing in old
-    origin_missing_in_old_list = list()
-    for origin in old_origins:
-        found = next((c for c in old_origins if c['id'] == origin['id']), None)
-        if not found:
-            origin_missing_in_old_list.append(origin)
-    print("missing in old", len(origin_missing_in_old_list))
-
-
 if __name__ == "__main__":
     print("Step 1: get the full taxonomy")
     TAXONOMY_FULL = get_taxonomy(OFF_TAXONOMY_NAME, force_download=True, download_newer=True)
@@ -129,6 +103,3 @@ if __name__ == "__main__":
         section_header=README_SECTION,
         stats_lines=stats_lines
     )
-
-    print("Bonus: compare old & new")
-    compare_new_origins_with_old_origins()
