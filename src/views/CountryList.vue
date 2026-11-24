@@ -51,6 +51,7 @@
 import { defineAsyncComponent } from "vue";
 import openPricesApi from "../services/openPricesApi";
 import constants from "../constants";
+import order_utils from "../utils/order.js";
 import utils from "../utils.js";
 
 export default {
@@ -122,13 +123,15 @@ export default {
           if (this.currentFilterList.includes("location_count_gte_1")) {
             data = data.filter((country) => country.location_count > 0);
           }
-          // we order client-side
-          if (this.currentOrder === "name") {
-            data.sort((a, b) => a.name.localeCompare(b.name));
-          } else if (this.currentOrder === "-price_count") {
-            data.sort((a, b) => b.price_count - a.price_count);
-          } else if (this.currentOrder === "-location_count") {
-            data.sort((a, b) => b.location_count - a.location_count);
+          // we order client-side (name, price_count or location_count, in both directions)
+          const orderField = order_utils.getOrderField(this.currentOrder);
+          data.sort((a, b) =>
+            orderField === "name"
+              ? a.name.localeCompare(b.name)
+              : a[orderField] - b[orderField],
+          );
+          if (order_utils.isOrderDesc(this.currentOrder)) {
+            data.reverse();
           }
           this.countryList = data;
         })

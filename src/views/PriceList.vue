@@ -87,7 +87,7 @@ export default {
       pricePage: 0,
       loading: false,
       // order
-      currentOrder: constants.PRICE_ORDER_LIST[3].key, // created first
+      currentOrder: constants.PRICE_ORDER_LIST[2].key, // created first
     };
   },
   computed: {
