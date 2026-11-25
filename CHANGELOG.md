@@ -1,5 +1,35 @@
 # Changelog
 
+## [1.182.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.181.0...v1.182.0) (2026-11-25)
+
+
+### Features
+
+* **CategoryDetail:** new Prices tab ([#2589](https://github.com/openfoodfacts/open-prices-frontend/issues/2589)) ([2c572a1](https://github.com/openfoodfacts/open-prices-frontend/commit/2c572a1b673534eed438d33355e8de2a74d6808c))
+* **Home:** new location & contributor count cards ([#2599](https://github.com/openfoodfacts/open-prices-frontend/issues/2599)) ([971fdc7](https://github.com/openfoodfacts/open-prices-frontend/commit/971fdc7fbd5884babcc61b6bf59b5040cef8b0fb))
+* **Home:** new proof count card ([#2598](https://github.com/openfoodfacts/open-prices-frontend/issues/2598)) ([4f212ab](https://github.com/openfoodfacts/open-prices-frontend/commit/4f212ab76ce6df1c0c8ff53505b509078cc3b7f1))
+* **Home:** show today's counts in the price card ([#2595](https://github.com/openfoodfacts/open-prices-frontend/issues/2595)) ([bb6203e](https://github.com/openfoodfacts/open-prices-frontend/commit/bb6203e962336fc0f27b621857008c3db30ede2f))
+* **LabelDetail:** new Prices tab ([#2590](https://github.com/openfoodfacts/open-prices-frontend/issues/2590)) ([69cd813](https://github.com/openfoodfacts/open-prices-frontend/commit/69cd813e3950ac13f3bc8678128c25d1f65ae621))
+* **Stats:** tighter spacing between the stats cards on mobile ([#2601](https://github.com/openfoodfacts/open-prices-frontend/issues/2601)) ([955833a](https://github.com/openfoodfacts/open-prices-frontend/commit/955833a97459d8a71ae9c0a092122e31de636d9b))
+* **UI:** tighter spacing between the cards of the lists on mobile ([#2602](https://github.com/openfoodfacts/open-prices-frontend/issues/2602)) ([fbf96e7](https://github.com/openfoodfacts/open-prices-frontend/commit/fbf96e7bc6695d690ca532b620bb9282544eb207))
+* **UserDashboard:** show today's counts in the total cards ([#2594](https://github.com/openfoodfacts/open-prices-frontend/issues/2594)) ([f99cfcc](https://github.com/openfoodfacts/open-prices-frontend/commit/f99cfccd26718f3e804534e2e5ab1a73c4488ba2))
+
+
+### Bug Fixes
+
+* **UserDashboard:** align the tabs with the cards ([#2593](https://github.com/openfoodfacts/open-prices-frontend/issues/2593)) ([d13976b](https://github.com/openfoodfacts/open-prices-frontend/commit/d13976b442d4bc73f9640aeae93e53041c30e303))
+
+
+### Technical
+
+* **deps:** bump @xmldom/xmldom from 0.9.10 to 0.9.12 ([#2376](https://github.com/openfoodfacts/open-prices-frontend/issues/2376)) ([773b28b](https://github.com/openfoodfacts/open-prices-frontend/commit/773b28b18d4571ca3a121f4cf18c954ecc156316))
+* **deps:** bump axios from 1.18.1 to 1.21.1 ([#2527](https://github.com/openfoodfacts/open-prices-frontend/issues/2527)) ([713fa0b](https://github.com/openfoodfacts/open-prices-frontend/commit/713fa0be1a4e53e539911e6c1923e73a14081483))
+* **deps:** bump brace-expansion from 1.1.16 to 1.1.22 ([#2576](https://github.com/openfoodfacts/open-prices-frontend/issues/2576)) ([3402684](https://github.com/openfoodfacts/open-prices-frontend/commit/3402684901e444eef919c23beb5b961ba5b48642))
+* **deps:** bump js-yaml from 4.3.0 to 4.3.2 ([#2373](https://github.com/openfoodfacts/open-prices-frontend/issues/2373)) ([5dba2f2](https://github.com/openfoodfacts/open-prices-frontend/commit/5dba2f2eccfcdd155732c309274211ed34096d7a))
+* **deps:** bump nanoid from 3.3.16 to 3.3.20 ([#2424](https://github.com/openfoodfacts/open-prices-frontend/issues/2424)) ([85303d9](https://github.com/openfoodfacts/open-prices-frontend/commit/85303d9b956908a8966d4a759f0636f6ad7cad72))
+* **deps:** bump source-map-js from 1.2.1 to 1.2.4 ([#2577](https://github.com/openfoodfacts/open-prices-frontend/issues/2577)) ([4c64ebf](https://github.com/openfoodfacts/open-prices-frontend/commit/4c64ebfde25a3c0c377768030c37aa10dfc28e39))
+* **l10n:** New Crowdin translations to review and merge ([#2530](https://github.com/openfoodfacts/open-prices-frontend/issues/2530)) ([e938f21](https://github.com/openfoodfacts/open-prices-frontend/commit/e938f2187326cee879a9da0008b2504b5968e15c))
+
 ## [1.181.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.180.0...v1.181.0) (2026-11-24)
 
 
