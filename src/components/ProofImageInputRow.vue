@@ -99,7 +99,11 @@
         </v-col>
       </v-row>
 
-      <v-row v-if="showProofImagePreviewList" class="mt-0">
+      <v-row
+        v-if="showProofImagePreviewList"
+        class="mt-0"
+        :dense="$vuetify.display.xs"
+      >
         <v-col
           v-for="(proofImagePreview, index) in proofImagePreviewList"
           :key="proofImagePreview"

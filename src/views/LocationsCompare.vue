@@ -1,6 +1,6 @@
 <template>
   <!-- Location Input Rows -->
-  <v-row v-if="!loading">
+  <v-row v-if="!loading" :dense="$vuetify.display.xs">
     <v-col>
       <LocationCard
         v-if="selectedLocationA && selectedLocationA.id"

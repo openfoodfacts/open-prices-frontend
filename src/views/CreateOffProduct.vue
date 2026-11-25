@@ -88,7 +88,7 @@
               />
             </v-col>
           </v-row>
-          <v-row>
+          <v-row :dense="$vuetify.display.xs">
             <v-col
               v-for="missingProduct in missingProductsWithPrices"
               :key="missingProduct"

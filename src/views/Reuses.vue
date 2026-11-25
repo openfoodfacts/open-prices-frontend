@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col
       v-for="reuse in reusesList"
       :key="reuse.id"

@@ -110,7 +110,7 @@
                 $t("ContributionAssistant.LabelsExtractionSteps.CheckLabels")
               }}
             </h3>
-            <v-row>
+            <v-row :dense="$vuetify.display.xs">
               <v-col
                 v-for="(label, index) in extractedLabels"
                 :key="index"
@@ -150,7 +150,7 @@
   <template v-if="step === 3">
     <v-row>
       <v-col cols="12">
-        <v-row>
+        <v-row :dense="$vuetify.display.xs">
           <v-col
             v-for="productPriceForm in productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError"
             :key="productPriceForm.id"
@@ -183,6 +183,7 @@
         </h3>
         <v-row
           v-if="productPriceFormsWithoutProductOrCategoryAndNoError.length"
+          :dense="$vuetify.display.xs"
         >
           <v-col
             v-for="productPriceForm in productPriceFormsWithoutProductOrCategoryAndNoError"
@@ -211,7 +212,10 @@
         <h3 v-if="productPriceFormsMarkedAsError.length" class="mt-4 mb-4">
           {{ $t("ContributionAssistant.PricesMarkedAsError") }}
         </h3>
-        <v-row v-if="productPriceFormsMarkedAsError.length">
+        <v-row
+          v-if="productPriceFormsMarkedAsError.length"
+          :dense="$vuetify.display.xs"
+        >
           <v-col
             v-for="productPriceForm in productPriceFormsMarkedAsError"
             :key="productPriceForm.id"
@@ -239,7 +243,10 @@
         <h3 v-if="productPriceFormsWithPriceId.length" class="mt-4 mb-4">
           {{ $t("ContributionAssistant.PricesAlreadyAdded") }}
         </h3>
-        <v-row v-if="productPriceFormsWithPriceId.length">
+        <v-row
+          v-if="productPriceFormsWithPriceId.length"
+          :dense="$vuetify.display.xs"
+        >
           <v-col
             v-for="(productPriceForm, index) in productPriceFormsWithPriceId"
             :key="index"
@@ -381,7 +388,7 @@
         <h3 class="mb-4">
           {{ $t("ContributionAssistant.ChooseNextProof") }}
         </h3>
-        <v-row v-if="nextProofSuggestions.length">
+        <v-row v-if="nextProofSuggestions.length" :dense="$vuetify.display.xs">
           <v-col
             v-for="proof in nextProofSuggestions"
             :key="proof"

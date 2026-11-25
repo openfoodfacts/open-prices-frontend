@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" sm="6">
       <v-card :title="$t('Common.DisplayNoun')" prepend-icon="mdi-laptop">
         <v-divider />

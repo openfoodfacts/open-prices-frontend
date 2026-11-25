@@ -15,7 +15,7 @@
     <v-divider />
 
     <v-card-text>
-      <v-row>
+      <v-row :dense="$vuetify.display.xs">
         <v-col
           v-for="productPriceUploaded in proofPriceUploadedList"
           :key="productPriceUploaded"

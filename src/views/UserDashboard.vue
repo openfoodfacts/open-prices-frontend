@@ -43,9 +43,7 @@
         </v-col>
       </v-row>
 
-      <br />
-
-      <v-row>
+      <v-row :dense="$vuetify.display.xs">
         <v-col
           v-for="price in displayedPriceList"
           :key="price"
@@ -102,7 +100,7 @@
 
       <br />
 
-      <v-row>
+      <v-row :dense="$vuetify.display.xs">
         <v-col
           v-for="price in displayedPriceList"
           :key="price"
@@ -159,7 +157,7 @@
 
       <br />
 
-      <v-row>
+      <v-row :dense="$vuetify.display.xs">
         <v-col
           v-for="price in displayedPriceList"
           :key="price"

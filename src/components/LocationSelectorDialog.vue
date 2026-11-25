@@ -29,7 +29,7 @@
         <v-tabs-window v-model="currentDisplay" disabled>
           <v-tabs-window-item value="favorite">
             <template v-if="favoriteLocations.length">
-              <v-row>
+              <v-row :dense="$vuetify.display.xs">
                 <v-col
                   v-for="location in favoriteLocations"
                   :key="getLocationId(location)"
@@ -73,7 +73,7 @@
 
           <v-tabs-window-item value="recent">
             <template v-if="recentLocations.length">
-              <v-row>
+              <v-row :dense="$vuetify.display.xs">
                 <v-col
                   v-for="location in recentLocations"
                   :key="getLocationId(location)"

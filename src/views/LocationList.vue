@@ -27,7 +27,7 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col
       v-for="location in locationList"
       :key="location"

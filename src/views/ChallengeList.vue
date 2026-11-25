@@ -13,7 +13,7 @@
       </h2>
     </v-col>
   </v-row>
-  <v-row class="mt-0">
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col
       v-for="challenge in ongoingChallenges"
       :key="challenge"
@@ -37,7 +37,7 @@
       </h2>
     </v-col>
   </v-row>
-  <v-row class="mt-0">
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col
       v-for="challenge in upcomingChallenges"
       :key="challenge"
@@ -58,7 +58,7 @@
       </h2>
     </v-col>
   </v-row>
-  <v-row class="mt-0">
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col
       v-for="challenge in pastChallenges"
       :key="challenge"

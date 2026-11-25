@@ -51,7 +51,7 @@
 
   <v-window v-model="currentDisplay" disabled>
     <v-window-item value="list">
-      <v-row class="mt-0 mb-1">
+      <v-row class="mt-0 mb-1" :dense="$vuetify.display.xs">
         <v-col
           v-for="price in priceList"
           :key="price"
