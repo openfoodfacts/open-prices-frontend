@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="PRICE_ICON" />
@@ -32,7 +32,7 @@
       />
     </v-col>
   </v-row>
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="stats.price_kind_community_count"
@@ -47,7 +47,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="PRODUCT_ICON" />
@@ -65,7 +65,7 @@
       <StatCard :value="stats.product_count" :subtitle="$t('Stats.Total')" />
     </v-col>
   </v-row>
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" sm="4" md="3" lg="2">
       <StatCard
         :value="
@@ -112,7 +112,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="LOCATION_TYPE_OSM_ICON" />
@@ -144,7 +144,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="PROOF_ICON" />
@@ -184,7 +184,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="USER_ICON" />
@@ -200,7 +200,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="CHALLENGE_ICON" />
@@ -228,7 +228,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="BADGE_ICON" />
@@ -244,7 +244,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="EXPERIMENTS_ICON" />
@@ -265,7 +265,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-tune-vertical" />
@@ -292,7 +292,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-circle-small" />
@@ -325,7 +325,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-circle-small" />

@@ -24,7 +24,7 @@
 
   <v-tabs-window v-if="user" v-model="currentTab" disabled>
     <v-tabs-window-item value="all">
-      <v-row>
+      <v-row :dense="$vuetify.display.xs">
         <v-col cols="6" sm="4" md="3" lg="2">
           <StatCard
             :value="userPriceCount"
@@ -81,7 +81,7 @@
     </v-tabs-window-item>
 
     <v-tabs-window-item value="consumption">
-      <v-row>
+      <v-row :dense="$vuetify.display.xs">
         <v-col cols="6" sm="4" md="3" lg="2">
           <StatCard
             :value="userConsumptionPriceCount"
@@ -138,7 +138,7 @@
     </v-tabs-window-item>
 
     <v-tabs-window-item value="community">
-      <v-row>
+      <v-row :dense="$vuetify.display.xs">
         <v-col cols="6" sm="4" md="3" lg="2">
           <StatCard
             :value="userCommunityPriceCount"

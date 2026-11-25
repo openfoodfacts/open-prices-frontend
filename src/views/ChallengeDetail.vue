@@ -109,7 +109,7 @@
       </h2>
     </v-col>
     <v-col>
-      <v-row>
+      <v-row :dense="$vuetify.display.xs">
         <v-col cols="6" sm="4" md="3" lg="2">
           <StatCard
             :value="challenge.numberOfProofs"
