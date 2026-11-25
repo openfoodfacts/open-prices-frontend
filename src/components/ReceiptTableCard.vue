@@ -7,9 +7,22 @@
     <v-divider />
 
     <v-card-text>
+      <v-text-field
+        v-model="search"
+        data-name="receipt-item-search"
+        :label="$t('Common.Search')"
+        prepend-inner-icon="mdi-magnify"
+        variant="outlined"
+        density="compact"
+        hide-details
+        clearable
+        class="mb-4"
+      />
       <v-data-table
         :headers="headers"
         :items="items"
+        :search="search"
+        :filter-keys="['product_name']"
         :row-props="setTableRowClass"
         :items-per-page="tablePageLimit"
         fixed-header
@@ -84,6 +97,7 @@
             density="compact"
             :rules="rules"
             :hide-details="true"
+            @focus="search = ''"
           />
           <p v-else>
             {{ item.product_name }}
@@ -284,6 +298,7 @@ export default {
   data() {
     return {
       items: [],
+      search: "",
       headers: [
         { title: this.$t("Common.Status"), key: "status" },
         {
@@ -474,6 +489,7 @@ export default {
       this.items.splice(this.items.indexOf(item), 1);
     },
     addItem() {
+      this.search = "";
       this.items.push({
         ...NEW_ITEM,
         manuallyAdded: true,
