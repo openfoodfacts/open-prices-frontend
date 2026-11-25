@@ -32,6 +32,7 @@
         height="100%"
         :productPriceForm="productPriceForm"
         :hideProductBarcodeScannerTab="true"
+        showProofLink
         :loading="productPriceForm.loading"
         @updatePriceTagStatus="updatePriceTagStatus(index, $event)"
         @validatePriceTag="validatePriceTag(index)"

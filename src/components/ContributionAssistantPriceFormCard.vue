@@ -20,6 +20,21 @@
             max-height="200px"
             contain
           />
+          <v-btn
+            v-if="showProofLink && productPriceForm.proof?.id"
+            class="mt-2"
+            size="small"
+            variant="text"
+            prepend-icon="mdi-open-in-new"
+            :to="{
+              name: 'proof-detail',
+              params: { id: productPriceForm.proof.id },
+            }"
+            target="_blank"
+            rel="noopener"
+          >
+            {{ $t("Common.ProofDetails") }}
+          </v-btn>
         </v-col>
       </v-row>
       <v-row v-if="showProductNameField">
@@ -176,6 +191,10 @@ export default {
       default: false,
     },
     hideProductBarcodeScannerTab: {
+      type: Boolean,
+      default: false,
+    },
+    showProofLink: {
       type: Boolean,
       default: false,
     },
