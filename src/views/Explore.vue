@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Common.Search')"
@@ -26,7 +26,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Common.TopProducts')"

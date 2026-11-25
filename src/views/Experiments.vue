@@ -6,7 +6,7 @@
       </h2>
     </v-col>
   </v-row>
-  <v-row class="mt-0">
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Common.LocationsCompare')"
@@ -24,7 +24,7 @@
       </h2>
     </v-col>
   </v-row>
-  <v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Router.ProofPriceTagAssistant.Title')"

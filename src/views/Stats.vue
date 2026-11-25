@@ -1,11 +1,13 @@
 <template>
-  <v-row :dense="$vuetify.display.xs">
-    <v-col cols="12" class="pb-0">
+  <v-row>
+    <v-col>
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="PRICE_ICON" />
         {{ $t("Common.Prices") }}
       </h2>
     </v-col>
+  </v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="stats.price_count"
@@ -47,13 +49,15 @@
     </v-col>
   </v-row>
 
-  <v-row :dense="$vuetify.display.xs">
-    <v-col cols="12" class="pb-0">
+  <v-row>
+    <v-col>
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="PRODUCT_ICON" />
         {{ $t("Common.Products") }}
       </h2>
     </v-col>
+  </v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="stats.product_with_price_count"
@@ -112,13 +116,15 @@
     </v-col>
   </v-row>
 
-  <v-row :dense="$vuetify.display.xs">
-    <v-col cols="12" class="pb-0">
+  <v-row>
+    <v-col>
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="LOCATION_TYPE_OSM_ICON" />
         {{ $t("Common.Locations") }}
       </h2>
     </v-col>
+  </v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="stats.location_count"
@@ -144,13 +150,15 @@
     </v-col>
   </v-row>
 
-  <v-row :dense="$vuetify.display.xs">
-    <v-col cols="12" class="pb-0">
+  <v-row>
+    <v-col>
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="PROOF_ICON" />
         {{ $t("Common.Proofs") }}
       </h2>
     </v-col>
+  </v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="stats.proof_count"
@@ -184,13 +192,15 @@
     </v-col>
   </v-row>
 
-  <v-row :dense="$vuetify.display.xs">
-    <v-col cols="12" class="pb-0">
+  <v-row>
+    <v-col>
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="USER_ICON" />
         {{ $t("Common.Contributors") }}
       </h2>
     </v-col>
+  </v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="stats.user_with_price_count"
@@ -200,13 +210,15 @@
     </v-col>
   </v-row>
 
-  <v-row :dense="$vuetify.display.xs">
-    <v-col cols="12" class="pb-0">
+  <v-row>
+    <v-col>
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="CHALLENGE_ICON" />
         {{ $t("Common.Challenges") }}
       </h2>
     </v-col>
+  </v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="stats.challenge_count"
@@ -228,13 +240,15 @@
     </v-col>
   </v-row>
 
-  <v-row :dense="$vuetify.display.xs">
-    <v-col cols="12" class="pb-0">
+  <v-row>
+    <v-col>
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="BADGE_ICON" />
         {{ $t("Common.Badges") }}
       </h2>
     </v-col>
+  </v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="stats.badge_count"
@@ -244,13 +258,15 @@
     </v-col>
   </v-row>
 
-  <v-row :dense="$vuetify.display.xs">
-    <v-col cols="12" class="pb-0">
+  <v-row>
+    <v-col>
       <h2 class="text-h6">
         <v-icon size="x-small" :icon="EXPERIMENTS_ICON" />
         {{ $t("Common.Experiments") }}
       </h2>
     </v-col>
+  </v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="stats.price_tag_status_linked_to_price_count"
@@ -265,13 +281,15 @@
     </v-col>
   </v-row>
 
-  <v-row :dense="$vuetify.display.xs">
-    <v-col cols="12" class="pb-0">
+  <v-row>
+    <v-col>
       <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-tune-vertical" />
         {{ $t("Common.Miscellaneous") }}
       </h2>
     </v-col>
+  </v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="stats.price_location_country_count"
@@ -292,13 +310,15 @@
     </v-col>
   </v-row>
 
-  <v-row :dense="$vuetify.display.xs">
-    <v-col cols="12" class="pb-0">
+  <v-row>
+    <v-col>
       <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-circle-small" />
         {{ $t("Stats.PricesPerSource") }}
       </h2>
     </v-col>
+  </v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="stats.price_source_web_count.toString()"
@@ -325,13 +345,15 @@
     </v-col>
   </v-row>
 
-  <v-row :dense="$vuetify.display.xs">
-    <v-col cols="12" class="pb-0">
+  <v-row>
+    <v-col>
       <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-circle-small" />
         {{ $t("Stats.ProofsPerSource") }}
       </h2>
     </v-col>
+  </v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="stats.proof_source_web_count.toString()"

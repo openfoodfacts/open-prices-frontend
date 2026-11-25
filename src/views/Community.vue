@@ -77,11 +77,13 @@
   </v-row>
 
   <v-row>
-    <v-col cols="12" class="pb-0">
+    <v-col>
       <h2 class="text-h6">
         {{ $t("Common.ReusesKnown") }}
       </h2>
     </v-col>
+  </v-row>
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col
       v-for="reuse in reusesList"
       :key="reuse.id"

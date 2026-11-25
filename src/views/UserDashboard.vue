@@ -43,8 +43,6 @@
         </v-col>
       </v-row>
 
-      <br />
-
       <v-row :dense="$vuetify.display.xs">
         <v-col
           v-for="price in displayedPriceList"
