@@ -759,6 +759,7 @@
 	},
 	"PriceList": {
 		"LoadMore": "Load more",
+		"NoPriceMatchingFilters": "No prices match the current filters.",
 		"Title": "Latest prices"
 	},
 	"PriceRules": {

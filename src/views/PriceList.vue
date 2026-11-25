@@ -44,6 +44,19 @@
     </v-col>
   </v-row>
 
+  <v-row v-if="!loading && priceTotal === 0" class="mt-0">
+    <v-col cols="12">
+      <v-alert
+        data-name="price-list-empty-alert"
+        type="info"
+        variant="outlined"
+        density="compact"
+      >
+        {{ $t("PriceList.NoPriceMatchingFilters") }}
+      </v-alert>
+    </v-col>
+  </v-row>
+
   <v-row v-if="loading">
     <v-col align="center">
       <v-progress-circular indeterminate :size="30" />
