@@ -24,24 +24,11 @@
 
   <v-tabs-window v-if="user" v-model="currentTab" disabled>
     <v-tabs-window-item value="all">
-      <v-row v-if="displayTodayStats">
-        <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard
-            :value="userTodayPriceCount"
-            :subtitle="$t('Common.PricesToday')"
-          />
-        </v-col>
-        <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard
-            :value="userTodayProofCount"
-            :subtitle="$t('Common.ProofsToday')"
-          />
-        </v-col>
-      </v-row>
       <v-row>
         <v-col cols="6" sm="4" md="3" lg="2">
           <StatCard
             :value="userPriceCount"
+            :todayValue="userTodayPriceCount"
             :subtitle="$t('Common.Prices')"
             :to="getUserDashboardPriceUrl"
           />
@@ -49,6 +36,7 @@
         <v-col cols="6" sm="4" md="3" lg="2">
           <StatCard
             :value="userProofCount"
+            :todayValue="userTodayProofCount"
             :subtitle="$t('Common.Proofs')"
             :to="getUserDashboardProofUrl"
           />
@@ -93,24 +81,11 @@
     </v-tabs-window-item>
 
     <v-tabs-window-item value="consumption">
-      <v-row v-if="displayTodayStats">
-        <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard
-            :value="userTodayConsumptionPriceCount"
-            :subtitle="$t('Common.PricesToday')"
-          />
-        </v-col>
-        <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard
-            :value="userTodayConsumptionProofCount"
-            :subtitle="$t('Common.ProofsToday')"
-          />
-        </v-col>
-      </v-row>
       <v-row>
         <v-col cols="6" sm="4" md="3" lg="2">
           <StatCard
             :value="userConsumptionPriceCount"
+            :todayValue="userTodayConsumptionPriceCount"
             :subtitle="$t('Common.Prices')"
             :to="getUserDashboardPriceUrl"
           />
@@ -118,6 +93,7 @@
         <v-col cols="6" sm="4" md="3" lg="2">
           <StatCard
             :value="userConsumptionProofCount"
+            :todayValue="userTodayConsumptionProofCount"
             :subtitle="$t('Common.Proofs')"
             :to="getUserDashboardProofUrl"
           />
@@ -162,24 +138,11 @@
     </v-tabs-window-item>
 
     <v-tabs-window-item value="community">
-      <v-row v-if="displayTodayStats">
-        <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard
-            :value="userTodayCommunityPriceCount"
-            :subtitle="$t('Common.PricesToday')"
-          />
-        </v-col>
-        <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard
-            :value="userTodayCommunityProofCount"
-            :subtitle="$t('Common.ProofsToday')"
-          />
-        </v-col>
-      </v-row>
       <v-row>
         <v-col cols="6" sm="4" md="3" lg="2">
           <StatCard
             :value="userCommunityPriceCount"
+            :todayValue="userTodayCommunityPriceCount"
             :subtitle="$t('Common.Prices')"
             :to="getUserDashboardPriceUrl"
           />
@@ -187,6 +150,7 @@
         <v-col cols="6" sm="4" md="3" lg="2">
           <StatCard
             :value="userCommunityProofCount"
+            :todayValue="userTodayCommunityProofCount"
             :subtitle="$t('Common.Proofs')"
             :to="getUserDashboardProofUrl"
           />
@@ -283,21 +247,6 @@ export default {
     },
     userIsModerator() {
       return this.appStore.user.is_moderator;
-    },
-    displayTodayStats() {
-      if (this.currentTab === "consumption") {
-        return (
-          this.userTodayConsumptionPriceCount > 0 ||
-          this.userTodayConsumptionProofCount > 0
-        );
-      } else if (this.currentTab === "community") {
-        return (
-          this.userTodayCommunityPriceCount > 0 ||
-          this.userTodayCommunityProofCount > 0
-        );
-      }
-      // all
-      return this.userTodayPriceCount > 0 || this.userTodayProofCount > 0;
     },
     displayedPriceList() {
       if (this.currentTab === "consumption") {
