@@ -34,7 +34,7 @@
 
         <v-tabs-window v-model="currentDisplay" disabled>
           <v-tabs-window-item value="scan">
-            <template v-if="barcodeScannerLibrary === 'html5-qrcode'">
+            <template v-if="usesCameraScanner">
               <v-alert
                 v-if="scannerError"
                 type="error"
@@ -148,6 +148,13 @@
                 >{{ HTML5_QRCODE_NAME }}</a
               >
               <a
+                v-else-if="barcodeScannerLibrary === 'tapirscan'"
+                href="https://github.com/kleinicke/tapirscan"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ TAPIRSCAN_NAME }}</a
+              >
+              <a
                 v-else
                 :href="BARCODE_SCANNER_URL"
                 target="_blank"
@@ -224,6 +231,7 @@ export default {
       currentDisplay: null, // see mounted
       HTML5_QRCODE_URL: "https://github.com/mebjas/html5-qrcode",
       HTML5_QRCODE_NAME: "html5-qrcode",
+      TAPIRSCAN_NAME: "Tapirscan",
       BARCODE_SCANNER_URL:
         "https://github.com/openfoodfacts/openfoodfacts-webcomponents",
       BARCODE_SCANNER_NAME: "openfoodfacts-webcomponents",
@@ -253,6 +261,9 @@ export default {
       if (!this.barcodeManualForm.barcode) return "0";
       return this.barcodeManualForm.barcode.length.toString();
     },
+    usesCameraScanner() {
+      return ["html5-qrcode", "tapirscan"].includes(this.barcodeScannerLibrary);
+    },
     qrcodeScannerActive() {
       // the scan tab and the library are set independently (v-tabs selects a tab on mount,
       // the library is resolved asynchronously): start the scanner once both are known
@@ -260,7 +271,7 @@ export default {
         this.currentDisplay ===
           constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key &&
         !this.hideBarcodeScannerTab &&
-        this.barcodeScannerLibrary === "html5-qrcode"
+        this.usesCameraScanner
       );
     },
   },
@@ -322,10 +333,18 @@ export default {
     createQrcodeScanner() {
       this.scannerStartTimeout = null;
       this.scannerError = null;
-      this.scanner = barcode_scanner_utils.startHtml5QrcodeScanner(
-        "reader",
-        this.barcodeSend,
-      );
+      if (this.barcodeScannerLibrary === "tapirscan") {
+        this.scanner = barcode_scanner_utils.startTapirscanScanner(
+          "reader",
+          this.barcodeSend,
+          (error) => (this.scannerError = error?.message || String(error)),
+        );
+      } else {
+        this.scanner = barcode_scanner_utils.startHtml5QrcodeScanner(
+          "reader",
+          this.barcodeSend,
+        );
+      }
       this.scanner.started.catch((error) => {
         this.scannerError = error?.message || String(error);
         console.error(error);
