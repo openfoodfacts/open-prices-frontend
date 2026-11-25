@@ -24,6 +24,13 @@
         :todayValue="todayPriceCount"
       />
     </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard
+        :value="totalProofCount"
+        :subtitle="$t('Common.Proofs')"
+        :todayValue="todayProofCount"
+      />
+    </v-col>
     <v-col v-if="currentSurvey" cols="12" class="pt-0">
       <SurveyBanner :survey="currentSurvey" />
     </v-col>
@@ -96,6 +103,8 @@ export default {
       latestPriceList: [],
       todayPriceCount: 0,
       totalPriceCount: null,
+      todayProofCount: 0,
+      totalProofCount: null,
       loading: false,
       currentSurvey: null,
       currentChallenge: null,
@@ -114,6 +123,8 @@ export default {
   mounted() {
     this.getPrices();
     this.getTodayPriceCount();
+    this.getProofCount();
+    this.getProofCount(true);
     this.getCurrentSurvey();
     this.getCurrentChallenge();
   },
@@ -158,6 +169,19 @@ export default {
         .finally(() => {
           this.loading = false;
         });
+    },
+    getProofCount(today = false) {
+      const params = { size: 1 };
+      if (today) {
+        params.created__gte = date_utils.currentLocalStartOfDay();
+      }
+      return openPricesApi.getProofs(params).then((data) => {
+        if (today) {
+          this.todayProofCount = data.total;
+        } else {
+          this.totalProofCount = data.total;
+        }
+      });
     },
   },
 };
