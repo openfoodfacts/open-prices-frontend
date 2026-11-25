@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.181.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.180.0...v1.181.0) (2026-11-24)
+
+
+### Features
+
+* **Challenge:** prices & proofs: new country filter ([#2583](https://github.com/openfoodfacts/open-prices-frontend/issues/2583)) ([dcd08b8](https://github.com/openfoodfacts/open-prices-frontend/commit/dcd08b8ea70cb6a9ae9b8c0d0aa0fb493b88f8e4))
+* **OrderMenu:** reverse the order by clicking the selected option again ([#2587](https://github.com/openfoodfacts/open-prices-frontend/issues/2587)) ([beafe7b](https://github.com/openfoodfacts/open-prices-frontend/commit/beafe7bcd9cdeeac8fbe67f381afc469088f00d8))
+* **UserDashboard:** prices & proofs: new country filter ([#2581](https://github.com/openfoodfacts/open-prices-frontend/issues/2581)) ([d288c7c](https://github.com/openfoodfacts/open-prices-frontend/commit/d288c7c59b4f5e16af041946c3798116b40d0b59))
+* **UserDetail:** prices & proofs: new country filter ([#2582](https://github.com/openfoodfacts/open-prices-frontend/issues/2582)) ([f01f5c0](https://github.com/openfoodfacts/open-prices-frontend/commit/f01f5c046b6224e0d9bc31626e375083f054174d))
+
+
+### Bug Fixes
+
+* **Order:** read the order from the route, to stay in sync on browser back/forward ([#2584](https://github.com/openfoodfacts/open-prices-frontend/issues/2584)) ([838ad9f](https://github.com/openfoodfacts/open-prices-frontend/commit/838ad9f92a95ea895f33200712bacbeef2a75dc7))
+
+
+### Technical
+
+* **Data:** remove the legacy *-tags.json files ([#2591](https://github.com/openfoodfacts/open-prices-frontend/issues/2591)) ([e7191a0](https://github.com/openfoodfacts/open-prices-frontend/commit/e7191a0783a25aa9049baaa9fb369c31a8d8588d))
+
 ## [1.180.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.179.0...v1.180.0) (2026-11-24)
 
 
