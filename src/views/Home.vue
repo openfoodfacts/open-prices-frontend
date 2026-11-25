@@ -18,10 +18,11 @@
   </v-row>
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="todayPriceCount" :subtitle="$t('Common.Today')" />
-    </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="totalPriceCount" :subtitle="$t('Common.Total')" />
+      <StatCard
+        :value="totalPriceCount"
+        :subtitle="$t('Common.Prices')"
+        :todayValue="todayPriceCount"
+      />
     </v-col>
     <v-col v-if="currentSurvey" cols="12" class="pt-0">
       <SurveyBanner :survey="currentSurvey" />
@@ -93,7 +94,7 @@ export default {
       APP_HOME_ICONS: constants.APP_HOME_ICONS,
       // data
       latestPriceList: [],
-      todayPriceCount: null,
+      todayPriceCount: 0,
       totalPriceCount: null,
       loading: false,
       currentSurvey: null,
