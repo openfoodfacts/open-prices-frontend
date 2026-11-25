@@ -9,9 +9,12 @@ export default defineConfig({
     vue({
       template: {
         compilerOptions: {
-          // declare barcode-scanner webcomponent as custom element
+          // declare openfoodfacts webcomponents as custom elements
           // See https://github.com/openfoodfacts/openfoodfacts-webcomponents for source
-          isCustomElement: (tag) => tag === "barcode-scanner",
+          isCustomElement: (tag) =>
+            tag === "barcode-scanner" ||
+            tag.startsWith("robotoff-") ||
+            tag.startsWith("off-"),
         },
       },
     }),
