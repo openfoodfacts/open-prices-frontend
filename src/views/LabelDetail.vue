@@ -5,17 +5,21 @@
     </v-col>
   </v-row>
 
-  <v-tabs v-model="currentTab" :grow="!$vuetify.display.smAndUp">
-    <v-tab
-      v-for="tab in tabItems"
-      :key="tab.key"
-      :value="tab.key"
-      :prepend-icon="tab.icon"
-      :data-name="`${tab.key}-label-tab`"
-    >
-      {{ $t(`Common.${tab.value}`) }}
-    </v-tab>
-  </v-tabs>
+  <v-row class="mt-0">
+    <v-col>
+      <v-tabs v-model="currentTab" :grow="!$vuetify.display.smAndUp">
+        <v-tab
+          v-for="tab in tabItems"
+          :key="tab.key"
+          :value="tab.key"
+          :prepend-icon="tab.icon"
+          :data-name="`${tab.key}-label-tab`"
+        >
+          {{ $t(`Common.${tab.value}`) }}
+        </v-tab>
+      </v-tabs>
+    </v-col>
+  </v-row>
 
   <v-tabs-window v-model="currentTab" disabled>
     <v-tabs-window-item value="products">
