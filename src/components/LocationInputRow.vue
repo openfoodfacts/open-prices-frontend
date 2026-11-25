@@ -103,6 +103,11 @@ export default {
       );
     },
   },
+  watch: {
+    existingLocation() {
+      this.initLocationForm();
+    },
+  },
   mounted() {
     this.initLocationForm();
   },
