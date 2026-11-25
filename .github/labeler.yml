@@ -4,25 +4,83 @@ GitHub Actions:
   - changed-files:
       - any-glob-to-any-file: ".github/**/*"
 
+🧪 Tests:
+  - changed-files:
+      - any-glob-to-any-file: "tests/**/*"
+      - any-glob-to-any-file: "cypress.config.js"
+
+📚 Documentation:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: "*.md"
+          - all-globs-to-all-files: "!CHANGELOG.md"
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file: "package.json"
+      - any-glob-to-any-file: "yarn.lock"
+
 Price addition:
   - changed-files:
-      - any-glob-to-any-file: "src/views/PriceAddHome.vue"
-      - any-glob-to-any-file: "src/views/PriceAddSingle.vue"
-      - any-glob-to-any-file: "src/views/PriceAddMultiple.vue"
+      - any-glob-to-any-file: "src/views/PriceAdd*.vue"
+      - any-glob-to-any-file: "src/components/PriceAddLink.vue"
+      - any-glob-to-any-file: "src/components/PriceAlreadyUploadedListCard.vue"
+      - any-glob-to-any-file: "src/components/PriceInputRow.vue"
+
+📷 Proofs:
+  - changed-files:
+      - any-glob-to-any-file: "src/views/Proof*.vue"
+      - any-glob-to-any-file: "src/components/Proof*.vue"
+      - any-glob-to-any-file: "src/utils/proof.js"
 
 Brands:
   - changed-files:
       - any-glob-to-any-file: "src/views/BrandDetail.vue"
+      - any-glob-to-any-file: "src/components/Brand*.vue"
+      - any-glob-to-any-file: "src/components/ProductBrands*.vue"
 
 📍 Locations:
   - changed-files:
-      - any-glob-to-any-file: "src/views/LocationList.vue"
-      - any-glob-to-any-file: "src/views/LocationDetail.vue"
+      - any-glob-to-any-file: "src/views/Location*.vue"
+      - any-glob-to-any-file: "src/components/Location*.vue"
+
+🗺️ Maps:
+  - changed-files:
+      - any-glob-to-any-file: "src/components/LeafletMap.vue"
+      - any-glob-to-any-file: "src/utils/geo.js"
+
+OpenStreetMap:
+  - changed-files:
+      - any-glob-to-any-file: "src/views/LocationOSMDetail.vue"
+      - any-glob-to-any-file: "src/components/LocationOSM*.vue"
+      - any-glob-to-any-file: "src/components/OpenStreetMapLink.vue"
+      - any-glob-to-any-file: "src/services/openStreetMapApi.js"
 
 🥫 Product page:
   - changed-files:
       - any-glob-to-any-file: "src/views/ProductList.vue"
       - any-glob-to-any-file: "src/views/ProductDetail.vue"
+
+Product card:
+  - changed-files:
+      - any-glob-to-any-file: "src/components/ProductCard.vue"
+      - any-glob-to-any-file: "src/components/ProductDetailsRow.vue"
+
+Product not found:
+  - changed-files:
+      - any-glob-to-any-file: "src/components/ProductNotFoundAlert.vue"
+
+Missing product creation:
+  - changed-files:
+      - any-glob-to-any-file: "src/views/CreateOffProduct.vue"
+      - any-glob-to-any-file: "src/components/CreateOpenFoodFactsProductPromoBanner.vue"
+
+🍊 Open Food Facts:
+  - changed-files:
+      - any-glob-to-any-file: "src/views/CreateOffProduct.vue"
+      - any-glob-to-any-file: "src/components/CreateOpenFoodFactsProductPromoBanner.vue"
+      - any-glob-to-any-file: "src/components/OpenFoodFacts*.vue"
+      - any-glob-to-any-file: "src/services/openFoodFactsApi.js"
 
 🔍 Search:
   - changed-files:
@@ -31,11 +89,19 @@ Brands:
 Stats:
   - changed-files:
       - any-glob-to-any-file: "src/views/Stats.vue"
+      - any-glob-to-any-file: "src/components/StatCard.vue"
+      - any-glob-to-any-file: "src/components/StatsLastUpdatedAlert.vue"
+      - any-glob-to-any-file: "src/components/RankingTableCard.vue"
 
 User:
   - changed-files:
       - any-glob-to-any-file: "src/views/UserList.vue"
       - any-glob-to-any-file: "src/views/UserDetail.vue"
+      - any-glob-to-any-file: "src/views/UserBadgeList.vue"
+      - any-glob-to-any-file: "src/views/UserProofList.vue"
+      - any-glob-to-any-file: "src/views/SignIn.vue"
+      - any-glob-to-any-file: "src/components/User*.vue"
+      - any-glob-to-any-file: "src/services/keycloakService.js"
 
 User dashboard:
   - changed-files:
@@ -56,22 +122,94 @@ Translations:
           - all-globs-to-all-files: "!src/i18n/locales/en.json"
 
 Challenges:
-  - all:
-      - changed-files:
-          - any-glob-to-any-file: "src/components/ChallengeCard.vue"
+  - changed-files:
+      - any-glob-to-any-file: "src/views/Challenge*.vue"
+      - any-glob-to-any-file: "src/components/Challenge*.vue"
 
-Receipt assistant:
-  - all:
-      - changed-files:
-          - any-glob-to-any-file: "src/views/ReceiptAssistant.vue"
-          - any-glob-to-any-file: "src/components/ReceiptTableCard.vue"
+👾 Gamification:
+  - changed-files:
+      - any-glob-to-any-file: "src/views/Badge*.vue"
+      - any-glob-to-any-file: "src/views/UserBadgeList.vue"
+      - any-glob-to-any-file: "src/components/BadgeCard.vue"
+
+👮 Moderation:
+  - changed-files:
+      - any-glob-to-any-file: "src/views/ModerationDashboard.vue"
+      - any-glob-to-any-file: "src/components/Moderation*.vue"
+
+Home page:
+  - changed-files:
+      - any-glob-to-any-file: "src/views/Home.vue"
+
+Reuse:
+  - changed-files:
+      - any-glob-to-any-file: "src/views/Reuses.vue"
+      - any-glob-to-any-file: "src/components/Reuse*.vue"
+      - any-glob-to-any-file: "src/data/reuses.json"
+
+barcode scanner:
+  - changed-files:
+      - any-glob-to-any-file: "src/components/BarcodeScannerDialog.vue"
+      - any-glob-to-any-file: "src/utils/barcodeScanner.js"
+
+Barcodes:
+  - changed-files:
+      - any-glob-to-any-file: "src/components/ProductBarcode*.vue"
+      - any-glob-to-any-file: "src/utils/barcode.js"
+
+currencies:
+  - changed-files:
+      - any-glob-to-any-file: "src/views/CurrencyDetail.vue"
+      - any-glob-to-any-file: "src/components/Currency*.vue"
+      - any-glob-to-any-file: "src/components/ChangeCurrencyDialog.vue"
+
+Origins:
+  - changed-files:
+      - any-glob-to-any-file: "src/components/OriginTagChip.vue"
+      - any-glob-to-any-file: "src/data/origins/**/*"
+      - any-glob-to-any-file: "src/data/origins-tags.json"
+
+taxonomies:
+  - changed-files:
+      - any-glob-to-any-file: "src/data/categories/**/*"
+      - any-glob-to-any-file: "src/data/countries/**/*"
+      - any-glob-to-any-file: "src/data/labels/**/*"
+      - any-glob-to-any-file: "src/data/languages/**/*"
+      - any-glob-to-any-file: "src/data/origins/**/*"
+      - any-glob-to-any-file: "src/data/*-tags.json"
+      - any-glob-to-any-file: "src/data/countries.json"
+
+Experiment:
+  - changed-files:
+      - any-glob-to-any-file: "src/views/Experiments.vue"
+
+📣 User feedback:
+  - changed-files:
+      - any-glob-to-any-file: "src/components/SurveyBanner.vue"
+      - any-glob-to-any-file: "src/data/surveys.json"
+
+Local Storage:
+  - changed-files:
+      - any-glob-to-any-file: "src/store.js"
+
+static content:
+  - changed-files:
+      - any-glob-to-any-file: "src/views/About.vue"
+      - any-glob-to-any-file: "src/views/Community.vue"
+      - any-glob-to-any-file: "src/views/Contribute.vue"
+      - any-glob-to-any-file: "src/views/Explore.vue"
+
+receipt assistant:
+  - changed-files:
+      - any-glob-to-any-file: "src/views/ReceiptAssistant.vue"
+      - any-glob-to-any-file: "src/components/Receipt*.vue"
 
 contribution assistant:
-  - all:
-      - changed-files:
-          - any-glob-to-any-file: "src/views/ProofPriceTagAssistant.vue"
+  - changed-files:
+      - any-glob-to-any-file: "src/views/ProofPriceTagAssistant.vue"
+      - any-glob-to-any-file: "src/components/ContributionAssistant*.vue"
+      - any-glob-to-any-file: "src/utils/draw.js"
 
 price validation assistant:
-  - all:
-      - changed-files:
-          - any-glob-to-any-file: "src/views/PriceValidationAssistant.vue"
+  - changed-files:
+      - any-glob-to-any-file: "src/views/PriceAddValidate.vue"
