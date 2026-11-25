@@ -11,16 +11,22 @@
     </v-col>
   </v-row>
 
-  <v-row>
-    <v-tabs v-if="user" v-model="currentTab" :grow="!$vuetify.display.smAndUp">
-      <v-tab v-for="item in tabItems" :key="item.key" :value="item.key">
-        <v-icon :icon="item.icon" :start="item.key !== 'all'" />
-        <span v-if="item.key !== 'all'">{{ $t("Common." + item.value) }}</span>
-      </v-tab>
-    </v-tabs>
+  <v-row class="mt-0">
+    <v-col>
+      <v-tabs
+        v-if="user"
+        v-model="currentTab"
+        :grow="!$vuetify.display.smAndUp"
+      >
+        <v-tab v-for="item in tabItems" :key="item.key" :value="item.key">
+          <v-icon :icon="item.icon" :start="item.key !== 'all'" />
+          <span v-if="item.key !== 'all'">{{
+            $t("Common." + item.value)
+          }}</span>
+        </v-tab>
+      </v-tabs>
+    </v-col>
   </v-row>
-
-  <br />
 
   <v-tabs-window v-if="user" v-model="currentTab" disabled>
     <v-tabs-window-item value="all">
