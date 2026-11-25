@@ -33,8 +33,20 @@ export const useAppStore = defineStore("app", {
         constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key,
       barcode_scanner_library: constants.BARCODE_SCANNER_DISPLAY_LIST[0].key,
     },
+    stats: {
+      total: null, // see openPricesApi.getStats
+    },
   }),
   getters: {
+    getValidTotalStats: (state) => {
+      // valid until the next backend refresh (see TOTAL_STATS_REFRESH_INTERVAL_HOURS)
+      const totalStats = state.stats?.total;
+      if (!totalStats?.updated) return null;
+      const expiresAt =
+        new Date(totalStats.updated).getTime() +
+        constants.TOTAL_STATS_REFRESH_INTERVAL_HOURS * 60 * 60 * 1000;
+      return Date.now() < expiresAt ? totalStats : null;
+    },
     getFavoriteLocations: (state) => {
       return state.user.favorite_locations || [];
     },
@@ -158,6 +170,9 @@ export const useAppStore = defineStore("app", {
     },
     setPreferedTheme(theme) {
       this.user.preferedTheme = theme;
+    },
+    setTotalStats(totalStats) {
+      this.stats = { ...this.stats, total: totalStats };
     },
   },
   // pinia-plugin-persistedstate
