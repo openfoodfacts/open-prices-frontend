@@ -820,10 +820,23 @@ export default {
   },
 
   getStats() {
+    // the total stats are kept in the store until their next backend refresh
+    const store = useAppStore();
+    const totalStats = store.getValidTotalStats;
+    if (totalStats) {
+      return Promise.resolve(totalStats);
+    }
     const endpointWithParams = `/stats?${buildURLParams()}`;
     return fetchOpenPrices(endpointWithParams, {
       method: "GET",
-    }).then((response) => response.json());
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data && data.updated) {
+          store.setTotalStats(data);
+        }
+        return data;
+      });
   },
 
   getPriceStats(params = {}) {

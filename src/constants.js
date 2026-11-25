@@ -106,6 +106,9 @@ export default {
   APP_NAME: "Open Prices",
   APP_DESCRIPTION: "An open crowdsourced database of prices",
   APP_URL: import.meta.env.VITE_OPEN_PRICES_APP_URL,
+  // total stats (/stats): refreshed by the backend every X hours (update_total_stats_task)
+  // they are kept in the store until their next refresh
+  TOTAL_STATS_REFRESH_INTERVAL_HOURS: 24,
   APP_API_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/api/docs`,
   APP_USER_AGENT: "Open Prices Web App",
   APP_HOME_ICONS: "🏷🍊💲",
