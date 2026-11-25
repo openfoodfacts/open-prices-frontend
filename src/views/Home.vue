@@ -16,7 +16,7 @@
       </i18n-t>
     </v-col>
   </v-row>
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard
         :value="totalPriceCount"
@@ -40,6 +40,8 @@
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="totalUserCount" :subtitle="$t('Common.Contributors')" />
     </v-col>
+  </v-row>
+  <v-row>
     <v-col v-if="currentSurvey" cols="12" class="pt-0">
       <SurveyBanner :survey="currentSurvey" />
     </v-col>
