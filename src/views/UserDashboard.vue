@@ -11,7 +11,7 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
+  <v-row class="mt-0 mb-0">
     <v-col>
       <v-tabs
         v-if="user"
@@ -104,8 +104,6 @@
         </v-col>
       </v-row>
 
-      <br />
-
       <v-row :dense="$vuetify.display.xs">
         <v-col
           v-for="price in displayedPriceList"
@@ -160,8 +158,6 @@
           />
         </v-col>
       </v-row>
-
-      <br />
 
       <v-row :dense="$vuetify.display.xs">
         <v-col
