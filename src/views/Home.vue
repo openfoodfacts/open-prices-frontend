@@ -31,6 +31,15 @@
         :todayValue="todayProofCount"
       />
     </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard
+        :value="totalLocationCount"
+        :subtitle="$t('Common.Locations')"
+      />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="totalUserCount" :subtitle="$t('Common.Contributors')" />
+    </v-col>
     <v-col v-if="currentSurvey" cols="12" class="pt-0">
       <SurveyBanner :survey="currentSurvey" />
     </v-col>
@@ -104,7 +113,9 @@ export default {
       todayPriceCount: 0,
       totalPriceCount: null,
       todayProofCount: 0,
-      totalProofCount: null,
+      totalProofCount: null, // see getTotalStats
+      totalLocationCount: null, // see getTotalStats
+      totalUserCount: null, // see getTotalStats
       loading: false,
       currentSurvey: null,
       currentChallenge: null,
@@ -123,8 +134,8 @@ export default {
   mounted() {
     this.getPrices();
     this.getTodayPriceCount();
-    this.getProofCount();
-    this.getProofCount(true);
+    this.getTodayProofCount();
+    this.getTotalStats();
     this.getCurrentSurvey();
     this.getCurrentChallenge();
   },
@@ -170,17 +181,22 @@ export default {
           this.loading = false;
         });
     },
-    getProofCount(today = false) {
-      const params = { size: 1 };
-      if (today) {
-        params.created__gte = date_utils.currentLocalStartOfDay();
-      }
-      return openPricesApi.getProofs(params).then((data) => {
-        if (today) {
+    getTodayProofCount() {
+      return openPricesApi
+        .getProofs({
+          created__gte: date_utils.currentLocalStartOfDay(),
+          size: 1,
+        })
+        .then((data) => {
           this.todayProofCount = data.total;
-        } else {
-          this.totalProofCount = data.total;
-        }
+        });
+    },
+    getTotalStats() {
+      // 1 call for the slow-changing totals (refreshed daily by the backend)
+      return openPricesApi.getStats().then((data) => {
+        this.totalProofCount = data.proof_count;
+        this.totalLocationCount = data.location_with_price_count;
+        this.totalUserCount = data.user_with_price_count;
       });
     },
   },
