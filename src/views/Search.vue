@@ -41,7 +41,7 @@
         <i>{{ $t("ProductDetail.ProductNotFound") }}</i>
       </p>
 
-      <v-row v-if="productTotal > 0" class="mt-0">
+      <v-row v-if="productTotal > 0" class="mt-0" :dense="$vuetify.display.xs">
         <v-col
           v-for="product in productList"
           :key="product"

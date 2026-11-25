@@ -109,7 +109,7 @@
               <p class="mb-2">
                 {{ $t("BarcodeScanner.SimilarBarcodesExplanation") }}
               </p>
-              <v-row>
+              <v-row :dense="$vuetify.display.xs">
                 <v-col
                   v-for="similarProduct in productSimilarBarcodeResultList"
                   :key="similarProduct.code"

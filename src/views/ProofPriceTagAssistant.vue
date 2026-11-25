@@ -381,7 +381,7 @@
         <h3 class="mb-4">
           {{ $t("ContributionAssistant.ChooseNextProof") }}
         </h3>
-        <v-row v-if="nextProofSuggestions.length">
+        <v-row v-if="nextProofSuggestions.length" :dense="$vuetify.display.xs">
           <v-col
             v-for="proof in nextProofSuggestions"
             :key="proof"

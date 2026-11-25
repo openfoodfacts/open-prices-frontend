@@ -50,7 +50,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row :dense="$vuetify.display.xs">
     <v-col
       v-for="price in latestPriceList"
       :key="price"

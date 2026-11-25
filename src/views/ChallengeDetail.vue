@@ -199,7 +199,10 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="challenge?.latestContributions?.length">
+  <v-row
+    v-if="challenge?.latestContributions?.length"
+    :dense="$vuetify.display.xs"
+  >
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         {{ $t("Challenge.MostRecentContributions") }}

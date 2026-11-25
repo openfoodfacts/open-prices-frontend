@@ -19,7 +19,7 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
+  <v-row class="mt-0" :dense="$vuetify.display.xs">
     <v-col
       v-for="badgeUser in badgeUserList"
       :key="badgeUser.user_id"
