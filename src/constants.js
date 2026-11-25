@@ -550,6 +550,10 @@ export default {
       icon: PRICE_TYPE_CATEGORY_ICON,
     },
   ],
+  PRODUCT_PRICE_TAB_LIST: [
+    { key: "products", value: "Products", icon: PRODUCT_ICON },
+    { key: "prices", value: "Prices", icon: PRICE_ICON },
+  ],
   USER_DASHBOARD_TAB_LIST: [
     { key: "all", value: "All", icon: "mdi-home" },
     {
