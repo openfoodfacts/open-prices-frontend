@@ -21,9 +21,6 @@
     <v-tabs-window-item value="products">
       <v-row class="mt-1">
         <v-col>
-          <h2 class="text-h6 d-inline mr-1">
-            {{ $t("Common.TopProducts") }}
-          </h2>
           <template v-if="!productLoading">
             <LoadedCountChip
               :loadedCount="labelProductList.length"
@@ -67,9 +64,6 @@
     <v-tabs-window-item value="prices">
       <v-row class="mt-1">
         <v-col>
-          <h2 class="text-h6 d-inline mr-1">
-            {{ $t("Common.LatestPrices") }}
-          </h2>
           <template v-if="!priceLoading">
             <LoadedCountChip
               :loadedCount="labelPriceList.length"
