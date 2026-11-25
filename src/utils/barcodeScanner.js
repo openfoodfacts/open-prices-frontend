@@ -24,6 +24,98 @@ const HTML5_QRCODE_CAMERA_CONFIG = {
 };
 
 /**
+ * Assign a priority score to a camera based on its label.
+ * Lower score = higher priority.
+ * Standard rear cameras = 0
+ * Ultra-wide rear cameras = 1
+ * Front / selfie cameras = 2
+ */
+function getCameraScore(camera) {
+  const label = (camera.label || "").toLowerCase();
+  const isFront =
+    label.includes("front") ||
+    label.includes("user") ||
+    label.includes("selfie");
+  if (isFront) {
+    return 2;
+  }
+  const isUltraWide =
+    label.includes("ultra") || label.includes("0.5x") || label.includes("0.5");
+  if (isUltraWide) {
+    return 1;
+  }
+  return 0;
+}
+
+/**
+ * Sort cameras prioritizing non-ultra-wide rear cameras.
+ */
+function sortCameras(cameras) {
+  if (!cameras || !cameras.length) return [];
+  return [...cameras].sort((a, b) => getCameraScore(a) - getCameraScore(b));
+}
+
+/**
+ * Pick the best camera ID, favoring a saved preference or the primary rear camera.
+ */
+function getPreferredCameraId(cameras, savedCameraId) {
+  if (!cameras || !cameras.length) return null;
+  if (savedCameraId && cameras.some((c) => c.id === savedCameraId)) {
+    return savedCameraId;
+  }
+  const sorted = sortCameras(cameras);
+  return sorted[0]?.id || null;
+}
+
+/**
+ * Query available camera devices.
+ * Returns a Promise that resolves to an array of { id: string, label: string }.
+ */
+function getCameras() {
+  if (navigator?.mediaDevices?.enumerateDevices) {
+    return navigator.mediaDevices
+      .enumerateDevices()
+      .then((devices) => {
+        const videoDevices = devices
+          .filter((device) => device.kind === "videoinput")
+          .map((device, index) => ({
+            id: device.deviceId,
+            label: device.label || `Camera ${index + 1}`,
+          }));
+        if (
+          videoDevices.length > 0 &&
+          videoDevices.some((d) => d.label && !d.label.startsWith("Camera "))
+        ) {
+          return sortCameras(videoDevices);
+        }
+        return Html5Qrcode.getCameras()
+          .then((html5Cameras) => {
+            const list =
+              html5Cameras && html5Cameras.length > 0
+                ? html5Cameras
+                : videoDevices;
+            return sortCameras(list);
+          })
+          .catch(() => sortCameras(videoDevices));
+      })
+      .catch(() => {
+        return Html5Qrcode.getCameras()
+          .then((cameras) => sortCameras(cameras))
+          .catch((error) => {
+            console.warn(error);
+            return [];
+          });
+      });
+  }
+  return Html5Qrcode.getCameras()
+    .then((cameras) => sortCameras(cameras))
+    .catch((error) => {
+      console.warn(error);
+      return [];
+    });
+}
+
+/**
  * Resolve the barcode scanner library to use ("off-barcode-scanner" or "html5-qrcode")
  * from the user setting ("auto", or one of the libraries)
  */
@@ -52,42 +144,54 @@ function getBarcodeScannerLibrary(userSetting) {
  * - started: a Promise that rejects if the camera can't be started
  * - stop(): releases the camera, can be called at any time (even while the camera is starting)
  */
-function startHtml5QrcodeScanner(elementId, onScanSuccess) {
+function startHtml5QrcodeScanner(
+  elementId,
+  onScanSuccess,
+  cameraIdOrConfig = { facingMode: "environment" },
+) {
   const scanner = new Html5Qrcode(elementId, HTML5_QRCODE_DECODER_CONFIG);
   let stopRequested = false;
   let stopCalled = false;
 
   const stopScanner = () => {
-    if (stopCalled) return;
+    if (stopCalled) return Promise.resolve();
     stopCalled = true;
-    scanner.stop().catch((error) => console.error(error));
+    return scanner.stop().catch((error) => console.error(error));
   };
 
   const started = scanner
     .start(
-      { facingMode: "environment" },
+      cameraIdOrConfig,
       HTML5_QRCODE_CAMERA_CONFIG,
       (decodedText) => onScanSuccess(decodedText),
       () => {}, // called on every frame without a barcode
     )
     .then(() => {
       // stop was requested while the camera was starting
-      if (stopRequested) stopScanner();
+      if (stopRequested) {
+        return stopScanner().then(() => null);
+      }
+      return scanner;
     });
 
   return {
+    scanner,
     started,
     stop() {
       stopRequested = true;
       // html5-qrcode throws if stop() is called before the camera is started
       if (scanner.getState() !== Html5QrcodeScannerState.NOT_STARTED) {
-        stopScanner();
+        return stopScanner();
       }
+      return Promise.resolve();
     },
   };
 }
 
 export default {
   getBarcodeScannerLibrary,
+  getCameras,
+  getPreferredCameraId,
+  sortCameras,
   startHtml5QrcodeScanner,
 };

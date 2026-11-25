@@ -120,12 +120,14 @@
 		}
 	},
 	"BarcodeScanner": {
+		"Camera": "Camera",
 		"CameraError": "The camera could not be started: {error}",
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
 		},
 		"SimilarBarcodes": "Similar barcodes",
-		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?"
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for?",
+		"SwitchCamera": "Switch camera"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Barcode",
