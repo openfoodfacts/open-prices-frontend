@@ -582,6 +582,7 @@
 		"Search": "Search a country"
 	},
 	"ContributionAssistant": {
+		"ShowFullProof": "Show full proof",
 		"Steps": {
 			"ProofSelect": "1. Proof selection",
 			"LabelsExtraction": "2. Labels extraction",
