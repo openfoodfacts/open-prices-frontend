@@ -12,7 +12,11 @@
         </v-list-subheader>
         <v-divider />
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
-        <OpenFoodFactsLink facet="brand" :value="brand" display="list-item" />
+        <OpenFoodFactsLink
+          facet="brand"
+          :value="getOpenFoodFactsBrandValue"
+          display="list-item"
+        />
       </v-list>
     </v-menu>
   </v-btn>
@@ -49,6 +53,10 @@ export default {
   computed: {
     getShareLinkUrl() {
       return `/brands/${this.brand}`;
+    },
+    getOpenFoodFactsBrandValue() {
+      // Open Food Facts brand facet URLs: without the "xx:" prefix (e.g. /brand/albert-heijn)
+      return this.brand ? this.brand.replace(/^xx:/, "") : this.brand;
     },
   },
 };

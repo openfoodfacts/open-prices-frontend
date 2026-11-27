@@ -1,7 +1,11 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <BrandCard :brand="brandId" :productCount="brandProductTotal" />
+      <BrandCard
+        :brand="brandId"
+        :brandName="brandName"
+        :productCount="brandProductTotal"
+      />
     </v-col>
   </v-row>
 
@@ -94,9 +98,19 @@ export default {
     currentFilterList() {
       return utils.toArray(this.$route.query[constants.FILTER_PARAM]);
     },
+    brandName() {
+      // the brand as typed, from the first product (brands & brands_tags are in the same order)
+      const product = this.brandProductList[0];
+      if (!product || !product.brands || !product.brands_tags) return null;
+      const brandNames = product.brands.split(",").filter((b) => b.trim());
+      const brandIndex = product.brands_tags.indexOf(this.brandId);
+      if (brandNames.length !== product.brands_tags.length || brandIndex < 0)
+        return null;
+      return brandNames[brandIndex].trim();
+    },
     getProductsParams() {
       let defaultParams = {
-        brands__like: this.brandId,
+        brands_tags__contains: this.brandId, // e.g. "xx:albert-heijn"
         order_by: `${this.currentOrder}`,
         page: this.brandProductPage,
       };
