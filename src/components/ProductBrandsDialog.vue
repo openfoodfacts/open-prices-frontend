@@ -10,9 +10,10 @@
       <v-card-text>
         <BrandChip
           v-for="brand in brands"
-          :key="brand"
+          :key="brand.name"
           class="mr-2 mb-2"
-          :brand="brand"
+          :brand="brand.name"
+          :brandTag="brand.tag"
           :readonly="readonly"
         />
       </v-card-text>
@@ -32,7 +33,7 @@ export default {
   props: {
     brands: {
       type: Array,
-      default: () => [],
+      default: () => [], // [{ name, tag }], see ProductBrands
     },
     readonly: {
       type: Boolean,
