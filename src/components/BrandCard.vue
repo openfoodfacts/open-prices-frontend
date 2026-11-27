@@ -1,5 +1,9 @@
 <template>
-  <v-card :title="brand" prepend-icon="mdi-factory" data-name="brand-card">
+  <v-card
+    :title="brandName || brand"
+    prepend-icon="mdi-factory"
+    data-name="brand-card"
+  >
     <v-card-text>
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
@@ -28,7 +32,11 @@ export default {
   props: {
     brand: {
       type: String,
-      default: null,
+      default: null, // brand tag, e.g. "xx:albert-heijn"
+    },
+    brandName: {
+      type: String,
+      default: null, // brand as typed, e.g. "Albert Heijn"
     },
     productCount: {
       type: Number,
