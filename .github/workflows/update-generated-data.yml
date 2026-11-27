@@ -31,6 +31,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install openfoodfacts
 
+      - name: Generate brands
+        run: python data/brands/generate_brands_json.py
+
       - name: Generate categories (1 file per language)
         run: python data/categories/generate_categories_json_per_language.py
 

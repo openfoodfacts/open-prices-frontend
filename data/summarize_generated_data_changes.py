@@ -16,6 +16,7 @@ from pathlib import Path
 
 
 DATASET_LIST = [
+    {"name": "Brands", "path": "src/data/brands.json"},
     {"name": "Categories", "path": "src/data/categories/en.json"},
     {"name": "Countries", "path": "src/data/countries/en.json"},
     {"name": "Labels", "path": "src/data/labels/en.json"},
@@ -105,6 +106,7 @@ def build_summary(base: str) -> str:
         "## Files potentially updated",
         "",
         "- `data/README.md`",
+        "- `src/data/brands.json`",
         "- `src/data/categories/*.json`",
         "- `src/data/countries/*.json`",
         "- `src/data/labels/*.json`",
