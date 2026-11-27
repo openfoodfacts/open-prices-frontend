@@ -11,6 +11,10 @@ export default {
       type: String,
       required: true,
     },
+    brandTag: {
+      type: String,
+      default: null, // e.g. "xx:albert-heijn" (from product.brands_tags)
+    },
     readonly: {
       type: Boolean,
       default: false,
@@ -18,7 +22,9 @@ export default {
   },
   computed: {
     getBrandUrl() {
-      return this.brand && !this.readonly ? `/brands/${this.brand}` : null;
+      return this.brandTag && !this.readonly
+        ? `/brands/${this.brandTag}`
+        : null;
     },
   },
 };

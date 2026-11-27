@@ -3,8 +3,9 @@
     <template v-if="productBrandsList.length <= 2">
       <BrandChip
         v-for="brand in productBrandsList"
-        :key="brand"
-        :brand="brand"
+        :key="brand.name"
+        :brand="brand.name"
+        :brandTag="brand.tag"
         :readonly="readonly"
       />
     </template>
@@ -59,6 +60,10 @@ export default {
       type: String,
       default: null,
     },
+    productBrandsTags: {
+      type: Array,
+      default: () => [],
+    },
     readonly: {
       type: Boolean,
       default: false,
@@ -71,7 +76,16 @@ export default {
   },
   computed: {
     productBrandsList() {
-      return this.productBrands.split(",").filter((b) => b.trim());
+      // display the brands as typed, link to their tags (e.g. "xx:albert-heijn")
+      // both lists are in the same order. If their lengths differ (e.g. parent brands
+      // added to the tags), the tags can't be matched: no link
+      const brandNames = this.productBrands.split(",").filter((b) => b.trim());
+      const brandTags = this.productBrandsTags || [];
+      const brandTagsMatch = brandNames.length === brandTags.length;
+      return brandNames.map((name, index) => ({
+        name,
+        tag: brandTagsMatch ? brandTags[index] : null,
+      }));
     },
   },
   methods: {

@@ -8,7 +8,11 @@
           @click="goToProduct()"
         />
         <template v-if="hasProductSource">
-          <ProductBrands :productBrands="product.brands" :readonly="readonly" />
+          <ProductBrands
+            :productBrands="product.brands"
+            :productBrandsTags="product.brands_tags"
+            :readonly="readonly"
+          />
           <ProductQuantityChip
             :productQuantity="product.product_quantity"
             :productQuantityUnit="product.product_quantity_unit"
